@@ -65,6 +65,7 @@ h4 {
 p {
   font-size: 14px;
   line-height: 1.7;
+  color: #5c6466;
 }
 
 span,
@@ -73,6 +74,7 @@ td {
   font-size: 14px;
   text-decoration: none;
   line-height: 1.7;
+  color: #5c6466;
 }
 
 a {
@@ -128,6 +130,40 @@ body {
   cursor: pointer;
 }
 
+.color_main {
+  color: #552b8d;
+}
+
+.no_drop {
+  cursor: no-drop;
+}
+
+/* Using Font Awesome 6 Icons CSS Pseudo-elements 開始 */
+.icon::before {
+  display: none;
+}
+
+.icon-solid::before {
+  font: var(--fa-font-solid);
+}
+
+.icon-regular::before {
+  font: var(--fa-font-regular);
+}
+
+.icon-light::before {
+  font: var(--fa-font-light);
+}
+
+.icon-duotone::before {
+  font: var(--fa-font-duotone);
+}
+
+.icon-brands::before {
+  font: var(--fa-font-brands);
+}
+
+/* Using Font Awesome 6 Icons CSS Pseudo-elements 結束 */
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 32px;
@@ -182,16 +218,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1400px) {
-  h1 {
-    font-size: 40px;
-  }
-  h3 {
-    font-size: 28px;
-  }
-  h4 {
-    font-size: 27px;
-  }
+@media screen and (min-width: 1200px) {
   p {
     font-size: 19px;
   }
@@ -206,6 +233,33 @@ body {
   input,
   label {
     font-size: 19px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  h1 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 27px;
+  }
+  p {
+    font-size: 20px;
+  }
+  span,
+  th,
+  td {
+    font-size: 20px;
+  }
+  a {
+    font-size: 20px;
+  }
+  input,
+  label {
+    font-size: 20px;
   }
 }
 
@@ -239,130 +293,6 @@ main .quiz_area .quiz_area_top {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-}
-
-main .quiz_area .quiz_area_top .player_area {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: calc(90% - 70px);
-  padding: 15px 20px;
-  background-color: #d9c9ee;
-  border-radius: 10px;
-  /* input range 主體樣式 */
-  /* input range 聲音樣式 */
-}
-
-main .quiz_area .quiz_area_top .player_area .play_area {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 20px;
-}
-
-main .quiz_area .quiz_area_top .player_area .play_area label {
-  margin-right: 10px;
-  color: #552b8d;
-}
-
-main .quiz_area .quiz_area_top .player_area .play_area .fa-play {
-  color: #552b8d;
-  margin-right: 10px;
-}
-
-main .quiz_area .quiz_area_top .player_area .sound_area {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-width: 130px;
-}
-
-main .quiz_area .quiz_area_top .player_area .sound_area .icon_volume {
-  color: #552b8d;
-  margin-right: 10px;
-}
-
-main .quiz_area .quiz_area_top .player_area .form-range {
-  width: 80%;
-}
-
-main .quiz_area .quiz_area_top .player_area input[type="range"] {
-  -webkit-appearance: none;
-  width: 100%;
-  position: relative;
-  border-radius: 10px;
-  cursor: pointer;
-  /* input range 原點focus */
-  /* input range 移動距離 */
-  /* input range 原點樣式 */
-  /* input range 進度條樣式 */
-}
-
-main .quiz_area .quiz_area_top .player_area input[type="range"]:focus::-webkit-slider-thumb {
-  background-color: #3d1f66;
-}
-
-main .quiz_area .quiz_area_top .player_area input[type="range"]:before {
-  position: absolute;
-  content: "";
-  width: var(--range);
-  height: 100%;
-  background-color: #552b8d;
-  border-radius: 10px;
-}
-
-main .quiz_area .quiz_area_top .player_area input[type="range"]::-webkit-slider-thumb {
-  width: 15px;
-  height: 15px;
-  border-radius: 100%;
-  border: none;
-  -webkit-appearance: none;
-  background-color: #552b8d;
-  z-index: 1;
-  position: relative;
-  -webkit-transition: 0.5s all ease;
-  transition: 0.5s all ease;
-  -webkit-transform: translate(0%, -50%);
-          transform: translate(0%, -50%);
-  top: 50%;
-}
-
-main .quiz_area .quiz_area_top .player_area input[type="range"]::-webkit-slider-runnable-track {
-  background-color: #f7f8f8;
-  height: 5px;
-  border-radius: 10px;
-}
-
-main .quiz_area .quiz_area_top .player_area input[id="soundRange"]:before {
-  position: absolute;
-  content: "";
-  width: var(--soundRange);
-  height: 100%;
-  background-color: #f7f8f8;
-  border-radius: 10px;
-  right: 0;
-}
-
-main .quiz_area .quiz_area_top .player_area input[id="soundRange"]::-webkit-slider-runnable-track {
-  background-color: #552b8d;
-  height: 5px;
-  border-radius: 10px;
 }
 
 main .quiz_area .quiz_area_top .quiz_progress_area {
@@ -401,7 +331,7 @@ main .quiz_area .quiz_area_top .quiz_progress_area .quiz_progress svg {
 
 main .quiz_area .quiz_area_top .quiz_progress_area .quiz_progress svg .quiz_progress_background {
   fill: none;
-  stroke: #d9c9ee;
+  stroke: #bda2e2;
   stroke-width: 2px;
 }
 
@@ -417,16 +347,171 @@ main .quiz_area .quiz_area_top .quiz_progress_area .quiz_progress svg .quiz_prog
   transition: stroke-dashoffset 1s ease-in-out;
 }
 
+main .quiz_area .answer_area {
+  margin: 40px auto;
+  padding: 40px 2.5%;
+  border: 1px solid #552b8d;
+}
+
+main .quiz_area .answer_area .player_area {
+  background-color: #d2d5d6;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+main .quiz_area .answer_area .player_area .fa-play,
+main .quiz_area .answer_area .player_area .fa-volume-high {
+  color: #5c6466;
+}
+
+main .quiz_area .answer_area .player_area label {
+  color: #5c6466;
+}
+
+main .quiz_area .answer_area .player_area .sound_area {
+  background-color: #eceeee;
+  position: relative;
+}
+
+main .player_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(90% - 70px);
+  padding: 15px 20px;
+  background-color: #cbb5e8;
+  border-radius: 10px;
+  /* input range 主體樣式 */
+  /* input range 聲音樣式 */
+}
+
+main .player_area .play_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+main .player_area .play_area label {
+  margin-right: 10px;
+  color: #552b8d;
+}
+
+main .player_area .play_area .fa-play {
+  margin-right: 10px;
+}
+
+main .player_area .sound_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 165px;
+  padding: 5px 10px;
+  background-color: #e7dcf4;
+  border-radius: 50px;
+}
+
+main .player_area .sound_area .icon_volume {
+  margin-right: 10px;
+}
+
+main .player_area .sound_area .fa-volume-high {
+  margin-right: 10px;
+}
+
+main .player_area .form-range {
+  width: 80%;
+}
+
+main .player_area input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+  /* input range 原點focus */
+  /* input range 移動距離 */
+  /* input range 原點樣式 */
+  /* input range 進度條樣式 */
+}
+
+main .player_area input[type="range"]:focus::-webkit-slider-thumb {
+  background-color: #3d1f66;
+}
+
+main .player_area input[type="range"]:before {
+  position: absolute;
+  content: "";
+  width: var(--range);
+  height: 100%;
+  background-color: #552b8d;
+  border-radius: 10px;
+}
+
+main .player_area input[type="range"]::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  border: none;
+  -webkit-appearance: none;
+  background-color: #552b8d;
+  z-index: 1;
+  position: relative;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  top: 50%;
+}
+
+main .player_area input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #f7f8f8;
+  height: 5px;
+  border-radius: 10px;
+}
+
+main .player_area input[name="soundRange"]:before {
+  position: absolute;
+  content: "";
+  width: var(--soundRange);
+  height: 100%;
+  background-color: #f7f8f8;
+  border-radius: 10px;
+  right: 0;
+}
+
+main .player_area input[name="soundRange"]::-webkit-slider-runnable-track {
+  background-color: #552b8d;
+  height: 5px;
+  border-radius: 10px;
+}
+
 @media screen and (min-width: 768px) {
-  main .quiz_area .quiz_area_top .player_area {
-    width: calc(90% - 100px);
-  }
   main .quiz_area .quiz_area_top .quiz_progress_area .quiz_progress {
     width: 100px;
     height: 100px;
   }
   main .quiz_area .quiz_area_top .quiz_progress_area .quiz_progress .quiz_progress_value {
     font-size: 20px;
+  }
+  main .quiz_area .player_area {
+    width: calc(90% - 100px);
   }
 }
 
@@ -436,7 +521,7 @@ main .quiz_area .quiz_area_top .quiz_progress_area .quiz_progress svg .quiz_prog
         -ms-flex-align: center;
             align-items: center;
   }
-  main .quiz_area .quiz_area_top .player_area {
+  main .player_area {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -447,8 +532,130 @@ main .quiz_area .quiz_area_top .quiz_progress_area .quiz_progress svg .quiz_prog
     width: calc(95% - 100px);
     padding: 5px 20px;
   }
-  main .quiz_area .quiz_area_top .player_area .play_area {
+  main .player_area .play_area {
     margin-bottom: 0px;
+  }
+}
+
+main .player_area {
+  /* input range 示意圖播放樣式 */
+  /* input range 示意圖聲音樣式 */
+}
+
+main .player_area input[name="playRangeSchematic"] {
+  cursor: auto;
+  /* input range 假原點樣式 */
+  /* input range 原點樣式 */
+}
+
+main .player_area input[name="playRangeSchematic"]:before {
+  width: 50%;
+  background-color: #5c6466;
+}
+
+main .player_area input[name="playRangeSchematic"]::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #5c6466;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+main .player_area input[name="playRangeSchematic"]::-webkit-slider-thumb {
+  display: none;
+}
+
+main .player_area input[name="soundRangeSchematic"] {
+  cursor: auto;
+  /* input range 假原點樣式 */
+  /* input range 原點樣式 */
+}
+
+main .player_area input[name="soundRangeSchematic"]:before {
+  width: 35%;
+  background-color: #f7f8f8;
+  right: 0;
+  -webkit-animation: adjustment_progress_example 3s ease-in infinite;
+          animation: adjustment_progress_example 3s ease-in infinite;
+}
+
+main .player_area input[name="soundRangeSchematic"]::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #5c6466;
+  right: 65%;
+  top: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  -webkit-animation: adjustment_point_example 3s ease-in infinite;
+          animation: adjustment_point_example 3s ease-in infinite;
+}
+
+main .player_area input[name="soundRangeSchematic"]::-webkit-slider-thumb {
+  display: none;
+}
+
+main .player_area input[name="soundRangeSchematic"]::-webkit-slider-runnable-track {
+  background-color: #5c6466;
+}
+
+@-webkit-keyframes adjustment_progress_example {
+  0% {
+    width: 45%;
+  }
+  50% {
+    width: 0%;
+  }
+  100% {
+    width: 45%;
+  }
+}
+
+@keyframes adjustment_progress_example {
+  0% {
+    width: 45%;
+  }
+  50% {
+    width: 0%;
+  }
+  100% {
+    width: 45%;
+  }
+}
+
+@-webkit-keyframes adjustment_point_example {
+  0% {
+    right: 45%;
+  }
+  50% {
+    right: 0%;
+    -webkit-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
+  }
+  100% {
+    right: 45%;
+  }
+}
+
+@keyframes adjustment_point_example {
+  0% {
+    right: 45%;
+  }
+  50% {
+    right: 0%;
+    -webkit-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
+  }
+  100% {
+    right: 45%;
   }
 }
 /*# sourceMappingURL=CCCDstyles.css.map */
