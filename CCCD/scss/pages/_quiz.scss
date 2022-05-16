@@ -97,7 +97,7 @@ main {
     .play_area {
       display: flex;
       align-items: center;
-      margin-bottom: 20px;
+      flex-wrap: wrap;
 
       label {
         margin-right: 10px;
@@ -149,7 +149,7 @@ main {
       &:before {
         position: absolute;
         content: "";
-        width: var(--range);
+        width: var(--playRange);
         height: 100%;
         background-color: $color-main;
         border-radius: 10px;
@@ -176,6 +176,11 @@ main {
         height: 5px;
         border-radius: 10px;
       }
+    }
+
+    /* input range 播放樣式 */
+    input[name="playRange"] {
+      margin-top: 15px;
     }
 
     /* input range 聲音樣式 */
@@ -228,7 +233,20 @@ main {
 
 }
 
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+  main{
+    .player_area {  
+      .play_area {
+        flex-wrap: nowrap;
+      }
+
+          /* input range 播放樣式 */
+    input[name="playRange"] {
+      margin-top: 0px;
+    }
+    }
+  }
+}
 
 @media screen and (min-width: 1200px) {
   main {
