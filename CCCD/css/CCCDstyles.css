@@ -562,6 +562,10 @@ main .answer_area .player_area {
   margin: 20px auto;
 }
 
+main .answer_area .answer_area_instructions {
+  margin-top: 20px;
+}
+
 main .player_area {
   /* input range 示意圖播放樣式 */
   /* input range 示意圖聲音樣式 */
