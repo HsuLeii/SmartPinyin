@@ -406,6 +406,7 @@ main .player_area .play_area {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 main .player_area .play_area label {
