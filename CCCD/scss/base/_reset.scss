@@ -68,6 +68,14 @@ a {
     color: $color-default-gray;
 }
 
+ruby{
+    letter-spacing: 1.8;
+}
+
+rt{
+    transform: translateY(-35%);
+}
+
 input,
 label {
     font-size: 14px;

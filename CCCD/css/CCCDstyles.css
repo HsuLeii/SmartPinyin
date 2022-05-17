@@ -85,6 +85,15 @@ a {
   color: #5c6466;
 }
 
+ruby {
+  letter-spacing: 1.8;
+}
+
+rt {
+  -webkit-transform: translateY(-35%);
+          transform: translateY(-35%);
+}
+
 input,
 label {
   font-size: 14px;
@@ -834,15 +843,11 @@ main .player_area .animation_play_example::after {
 
 /*播放進度說明頁*/
 main .answer_area .description_area {
-  margin: 0px auto 40px;
+  margin: 0px auto 60px;
 }
 
 main .answer_area .description_area .description_area_instructions {
   margin-top: 10px;
-}
-
-main .answer_area .topic_area {
-  margin-top: 60px;
 }
 
 main .answer_area .topic_area .topic {
