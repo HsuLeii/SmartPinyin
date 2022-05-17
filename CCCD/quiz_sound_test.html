@@ -24,12 +24,26 @@
         <div class="header_logo">
             <img src="image/logo/SmartPinyin.svg" alt="">
         </div>
+
+        <div class="quiz_progress_area">
+            <div class="quiz_progress_title">
+                <p>測驗進度</p>
+            </div>
+            <div class="quiz_progress">
+                <p id="progress_value" class="quiz_progress_value">60%</p>
+                <svg viewBox="-1 -1 35 35">
+                    <circle cx="16" cy="16" r="15.9155" class="quiz_progress_background"></circle>
+                    <circle cx="16" cy="16" r="15.9155" id="progress_bar" class="quiz_progress_bar"
+                        style="stroke-dasharray: 60 100;"></circle>
+                </svg>
+            </div>
+        </div>
     </header>
     <!-- ------- ------- ------- ------- ------- ------- ------- -->
     <main>
         <div class="quiz_area">
             <div class="quiz_area_top col-11">
-                <div class="player_area">
+                <div class="player_area col-12">
                     <div class="play_area col-12 col-xl-9 col-xxl-10">
                         <i class="fa-solid fa-play cursor color_main"></i>
                         <label for="playRange" class="form-label">
@@ -47,24 +61,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="quiz_progress_area">
-                    <div class="quiz_progress_title">
-                        <p>測驗進度</p>
-                    </div>
-                    <div class="quiz_progress">
-                        <p id="progress_value" class="quiz_progress_value">60%</p>
-                        <svg viewBox="-1 -1 35 35">
-                            <circle cx="16" cy="16" r="15.9155" class="quiz_progress_background"></circle>
-                            <circle cx="16" cy="16" r="15.9155" id="progress_bar" class="quiz_progress_bar" style="stroke-dasharray: 60 100;"></circle>
-                        </svg>
-                    </div>
-                </div>
-                
             </div>
             <div class="answer_area col-11">
-                <div class="answer_area_title">
+                <div class="answer_area_title text_center">
                     <h3>
                         功能說明
+                    </h3>
+                    <h3 class="hebrew" dir="rtl">
+                        תיאור פונקציה
                     </h3>
                 </div>
                 <div class="player_area">
@@ -82,14 +86,17 @@
                         <input disabled type="range" id="soundRangeSchematic" name="soundRangeSchematic" class="animation_sound_example" min="0" max="100" value="50">
                     </div>
                 </div>
-                <div class="answer_area_instructions">
+                <div class="answer_area_instructions text_center">
                     <p>
-                        請聽聽看聲音大小，你可以調整聲音大小。(簡體-音檔+文字)<br/>
-                        請聽聽看聲音大小，你可以調整聲音大小。(希伯來文-音檔+文字)                    
+                        請聽聽看聲音大小，你可以調整聲音大小
+                    </p>
+                    <p class="hebrew" dir="rtl">
+                        נא להקשיב לעוצמת הקול, אתה יכול לכוונן את עוצמת הקול                    
                     </p>
                 </div>
             </div>
         </div>
+        <a href="quiz_play_test.html">下一頁(之後要刪除)</a>
     </main>
     <!-- ------- ------- ------- ------- ------- ------- ------- -->
     <footer class="footer">

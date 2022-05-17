@@ -135,8 +135,8 @@ body {
   color: #552b8d;
 }
 
-.no_drop {
-  cursor: no-drop;
+.text_center {
+  text-align: center;
 }
 
 /* Using Font Awesome 6 Icons CSS Pseudo-elements 開始 */
@@ -273,13 +273,91 @@ body {
 }
 
 header {
-  padding: 20px 5%;
-  border-bottom: 1px solid #552b8d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 5% 0px;
 }
 
 header .header_logo {
-  width: 45%;
+  width: 60%;
   max-width: 350px;
+}
+
+header .quiz_progress_area {
+  color: #552b8d;
+}
+
+header .quiz_progress_area .quiz_progress_title {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+header .quiz_progress_area .quiz_progress {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+}
+
+header .quiz_progress_area .quiz_progress .quiz_progress_value {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+header .quiz_progress_area .quiz_progress svg {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotateY(-180deg);
+          transform: translate(-50%, -50%) rotateY(-180deg);
+  overflow: initial;
+}
+
+header .quiz_progress_area .quiz_progress svg .quiz_progress_background {
+  fill: none;
+  stroke: #bda2e2;
+  stroke-width: 2px;
+}
+
+header .quiz_progress_area .quiz_progress svg .quiz_progress_bar {
+  fill: none;
+  stroke: #552b8d;
+  stroke-dasharray: 100 100;
+  stroke-dashoffset: 100;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  -webkit-transition: stroke-dashoffset 1s ease-in-out;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  header .header_logo {
+    width: 45%;
+  }
+  header .quiz_progress_area .quiz_progress {
+    width: 100px;
+    height: 100px;
+  }
+  header .quiz_progress_area .quiz_progress .quiz_progress_value {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header {
+    border-bottom: 1px solid #552b8d;
+    padding: 20px 5% 20px;
+  }
 }
 
 /*pages*/
@@ -296,62 +374,10 @@ main .quiz_area .quiz_area_top {
           align-items: flex-start;
 }
 
-main .quiz_area .quiz_area_top .quiz_progress_area {
-  color: #552b8d;
-}
-
-main .quiz_area .quiz_area_top .quiz_progress_area .quiz_progress_title {
-  text-align: center;
-  margin-bottom: 5px;
-}
-
-main .quiz_area .quiz_area_top .quiz_progress_area .quiz_progress {
-  position: relative;
-  width: 70px;
-  height: 70px;
-}
-
-main .quiz_area .quiz_area_top .quiz_progress_area .quiz_progress .quiz_progress_value {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-main .quiz_area .quiz_area_top .quiz_progress_area .quiz_progress svg {
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%) rotateY(-180deg);
-          transform: translate(-50%, -50%) rotateY(-180deg);
-  overflow: initial;
-}
-
-main .quiz_area .quiz_area_top .quiz_progress_area .quiz_progress svg .quiz_progress_background {
-  fill: none;
-  stroke: #bda2e2;
-  stroke-width: 2px;
-}
-
-main .quiz_area .quiz_area_top .quiz_progress_area .quiz_progress svg .quiz_progress_bar {
-  fill: none;
-  stroke: #552b8d;
-  stroke-dasharray: 100 100;
-  stroke-dashoffset: 100;
-  stroke-dashoffset: 0px;
-  stroke-linecap: round;
-  stroke-width: 2px;
-  -webkit-transition: stroke-dashoffset 1s ease-in-out;
-  transition: stroke-dashoffset 1s ease-in-out;
-}
-
 main .quiz_area .answer_area {
   margin: 40px auto;
-  padding: 40px 2.5%;
-  border: 1px solid #552b8d;
+  padding: 15px 2.5%;
+  max-width: 1200px;
 }
 
 main .quiz_area .answer_area .player_area {
@@ -388,10 +414,11 @@ main .player_area {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: calc(90% - 70px);
   padding: 15px 20px;
   background-color: #cbb5e8;
   border-radius: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
   /* input range 主體樣式 */
   /* input range 播放樣式 */
   /* input range 聲音樣式 */
@@ -511,15 +538,8 @@ main .player_area input[name="soundRange"]::-webkit-slider-runnable-track {
 }
 
 @media screen and (min-width: 768px) {
-  main .quiz_area .quiz_area_top .quiz_progress_area .quiz_progress {
-    width: 100px;
-    height: 100px;
-  }
-  main .quiz_area .quiz_area_top .quiz_progress_area .quiz_progress .quiz_progress_value {
-    font-size: 20px;
-  }
-  main .quiz_area .player_area {
-    width: calc(90% - 100px);
+  main .quiz_area .answer_area {
+    padding: 30px 2.5%;
   }
 }
 
@@ -550,7 +570,6 @@ main .player_area input[name="soundRange"]::-webkit-slider-runnable-track {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: calc(95% - 100px);
     padding: 5px 20px;
   }
   main .player_area .play_area {
@@ -560,10 +579,6 @@ main .player_area input[name="soundRange"]::-webkit-slider-runnable-track {
 
 main .answer_area .player_area {
   margin: 20px auto;
-}
-
-main .answer_area .answer_area_instructions {
-  margin-top: 20px;
 }
 
 main .player_area {
@@ -754,6 +769,7 @@ main .player_area .animation_play_example::after {
   }
 }
 
+/*聲音說明頁*/
 main .player_area {
   /* 音檔進度動態 */
 }
@@ -815,4 +831,119 @@ main .player_area .animation_play_example::after {
     right: calc(50% - 10px);
   }
 }
+
+/*播放進度說明頁*/
+main .answer_area .description_area {
+  margin: 0px auto 40px;
+}
+
+main .answer_area .description_area .description_area_instructions {
+  margin-top: 10px;
+}
+
+main .answer_area .topic_area {
+  margin-top: 60px;
+}
+
+main .answer_area .topic_area .topic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+main .answer_area .topic_area .topic .topic_number {
+  margin-right: 10px;
+}
+
+main .answer_area .topic_area .topic .topic_img {
+  width: 90%;
+  max-width: 300px;
+}
+
+main .answer_area .topic_area .answer_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 30.38px;
+}
+
+main .answer_area .topic_area .answer_list .form-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+main .answer_area .topic_area .answer_list .form-check .form-check-input {
+  width: 14px;
+  height: 14px;
+  margin-left: 0;
+  margin-top: 0;
+  margin-right: 5px;
+  border: 1px solid #5c6466;
+}
+
+main .answer_area .topic_area .answer_list .form-check .form-check-input:checked {
+  background: radial-gradient(#552b8d 0%, #552b8d 40%, transparent 50%, transparent);
+  border-color: #552b8d;
+}
+
+main .answer_area .topic_area .answer_list .form-check .form-check-input:checked ~ label {
+  color: #552b8d;
+}
+
+main .answer_area .topic_area .answer_list .form-check .form-check-input:checked[type=radio] {
+  background-image: transparent;
+}
+
+main .answer_area .topic_area .answer_list .form-check .form-check-input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@media screen and (min-width: 768px) {
+  main .answer_area .topic_area .answer_list {
+    margin-left: 31.23px;
+  }
+  main .answer_area .topic_area .answer_list .form-check .form-check-input {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  main .answer_area .topic_area .answer_list {
+    margin-left: 32.97px;
+  }
+  main .answer_area .topic_area .answer_list .form-check .form-check-input {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main .answer_area .topic_area .answer_list .form-check .form-check-input {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  main .answer_area .topic_area .answer_list {
+    margin-left: 36.44px;
+  }
+  main .answer_area .topic_area .answer_list .form-check .form-check-input {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/*測驗說明頁*/
 /*# sourceMappingURL=CCCDstyles.css.map */

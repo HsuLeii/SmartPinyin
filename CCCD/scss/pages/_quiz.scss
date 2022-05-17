@@ -5,62 +5,12 @@ main {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-
-      .quiz_progress_area {
-        color: $color-main;
-
-        .quiz_progress_title {
-          text-align: center;
-          margin-bottom: 5px;
-        }
-
-        .quiz_progress {
-          position: relative;
-          width: 70px;
-          height: 70px;
-
-          .quiz_progress_value {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-          }
-
-          svg {
-            position: absolute;
-            width: 100%;
-            z-index: 1;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%) rotateY(-180deg);
-            overflow: initial;
-
-            .quiz_progress_background {
-              fill: none;
-              stroke: lighten($color-main, 40%);
-              stroke-width: 2px;
-            }
-
-            .quiz_progress_bar {
-              fill: none;
-              stroke: $color-main;
-              stroke-dasharray: 100 100;
-              stroke-dashoffset: 100;
-              stroke-dashoffset: 0px;
-              stroke-linecap: round;
-              stroke-width: 2px;
-              transition: stroke-dashoffset 1s ease-in-out;
-            }
-          }
-        }
-      }
-
     }
 
     .answer_area {
       margin: 40px auto;
-      padding: 40px 2.5%;
-      border: 1px solid $color-main;
+      padding: 15px 2.5%;
+      max-width: 1200px;
 
       .player_area {
         background-color: lighten($color-default-gray, 45%);
@@ -89,10 +39,11 @@ main {
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: column;
-    width: calc(90% - 70px);
     padding: 15px 20px;
     background-color: lighten($color-main, 45%);
     border-radius: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
 
     .play_area {
       display: flex;
@@ -213,21 +164,8 @@ main {
 @media screen and (min-width: 768px) {
   main {
     .quiz_area {
-      .quiz_area_top {
-        .quiz_progress_area {
-          .quiz_progress {
-            width: 100px;
-            height: 100px;
-
-            .quiz_progress_value {
-              font-size: 20px;
-            }
-          }
-        }
-      }
-
-      .player_area {
-        width: calc(90% - 100px);
+      .answer_area {
+        padding: 30px 2.5%;
       }
     }
   }
@@ -260,7 +198,6 @@ main {
     .player_area {
       align-items: center;
       flex-direction: row;
-      width: calc(95% - 100px);
       padding: 5px 20px;
 
       .play_area {

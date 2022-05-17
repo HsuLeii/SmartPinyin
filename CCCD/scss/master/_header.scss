@@ -1,8 +1,85 @@
 header{
-    padding: 20px 5%;
-    border-bottom: 1px solid $color-main;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5% 0px;
+
     .header_logo{
-        width: 45%;
+        width: 60%;
         max-width: 350px;
+    }
+    .quiz_progress_area {
+        color: $color-main;
+
+        .quiz_progress_title {
+          text-align: center;
+          margin-bottom: 5px;
+        }
+
+        .quiz_progress {
+          position: relative;
+          width: 70px;
+          height: 70px;
+          margin: 0 auto;
+
+          .quiz_progress_value {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          svg {
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) rotateY(-180deg);
+            overflow: initial;
+
+            .quiz_progress_background {
+              fill: none;
+              stroke: lighten($color-main, 40%);
+              stroke-width: 2px;
+            }
+
+            .quiz_progress_bar {
+              fill: none;
+              stroke: $color-main;
+              stroke-dasharray: 100 100;
+              stroke-dashoffset: 100;
+              stroke-dashoffset: 0px;
+              stroke-linecap: round;
+              stroke-width: 2px;
+              transition: stroke-dashoffset 1s ease-in-out;
+            }
+          }
+        }
+      }
+}
+
+@media screen and (min-width: 768px) {
+    header{
+        .header_logo{
+            width: 45%;
+        }
+
+        .quiz_progress_area {
+            .quiz_progress {
+              width: 100px;
+              height: 100px;
+  
+              .quiz_progress_value {
+                font-size: 20px;
+              }
+            }
+          }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    header{
+        border-bottom: 1px solid $color-main;
+        padding: 20px 5% 20px;
     }
 }
