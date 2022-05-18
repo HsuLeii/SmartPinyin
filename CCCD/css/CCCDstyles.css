@@ -86,7 +86,8 @@ a {
 }
 
 ruby {
-  letter-spacing: 1.8;
+  letter-spacing: 1.8px;
+  line-height: 3;
 }
 
 rt {
@@ -389,6 +390,10 @@ main .quiz_area .answer_area {
   max-width: 1200px;
 }
 
+main .quiz_area .answer_area .answer_area_instructions {
+  margin-bottom: 30px;
+}
+
 main .quiz_area .answer_area .player_area {
   background-color: #d2d5d6;
   margin-bottom: 20px;
@@ -416,9 +421,8 @@ main .player_area {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -586,262 +590,6 @@ main .player_area input[name="soundRange"]::-webkit-slider-runnable-track {
   }
 }
 
-main .answer_area .player_area {
-  margin: 20px auto;
-}
-
-main .player_area {
-  /* input range 示意圖播放樣式 */
-  /* input range 示意圖聲音樣式 */
-  /* 調整聲音動態 */
-  /* 音檔進度動態 */
-}
-
-main .player_area .sound_area {
-  position: relative;
-}
-
-main .player_area .sound_area .icon_hand_pointer {
-  position: absolute;
-  right: calc(50% - 10px);
-  top: 50%;
-  z-index: 1;
-  color: #5c6466;
-  -webkit-animation: adjustment_hand_point_example 3s ease-in infinite;
-          animation: adjustment_hand_point_example 3s ease-in infinite;
-}
-
-main .player_area input[name="playRangeSchematic"] {
-  cursor: auto;
-  margin-top: 15px;
-  /* input range 假原點樣式 */
-  /* input range 原點樣式 */
-}
-
-main .player_area input[name="playRangeSchematic"]:before {
-  width: 50%;
-  background-color: #5c6466;
-}
-
-main .player_area input[name="playRangeSchematic"]::after {
-  position: absolute;
-  content: "";
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: #5c6466;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-main .player_area input[name="playRangeSchematic"]::-webkit-slider-thumb {
-  display: none;
-}
-
-main .player_area input[name="soundRangeSchematic"] {
-  cursor: auto;
-  /* input range 假原點樣式 */
-  /* input range 原點樣式 */
-}
-
-main .player_area input[name="soundRangeSchematic"]:before {
-  width: 35%;
-  background-color: #f7f8f8;
-  right: 0;
-}
-
-main .player_area input[name="soundRangeSchematic"]::after {
-  position: absolute;
-  content: "";
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: #5c6466;
-  right: 35%;
-  top: 50%;
-  -webkit-transform: translate(50%, -50%);
-          transform: translate(50%, -50%);
-}
-
-main .player_area input[name="soundRangeSchematic"]::-webkit-slider-thumb {
-  display: none;
-}
-
-main .player_area input[name="soundRangeSchematic"]::-webkit-slider-runnable-track {
-  background-color: #5c6466;
-}
-
-main .player_area .animation_sound_example:before {
-  -webkit-animation: adjustment_progress_example 3s ease-in infinite;
-          animation: adjustment_progress_example 3s ease-in infinite;
-}
-
-main .player_area .animation_sound_example::after {
-  -webkit-animation: adjustment_point_example 3s ease-in infinite;
-          animation: adjustment_point_example 3s ease-in infinite;
-}
-
-main .player_area .animation_play_example:before {
-  -webkit-animation: adjustment_progress_example 3s ease-in infinite;
-          animation: adjustment_progress_example 3s ease-in infinite;
-}
-
-main .player_area .animation_play_example::after {
-  -webkit-animation: adjustment_point_example 3s ease-in infinite;
-          animation: adjustment_point_example 3s ease-in infinite;
-}
-
-@-webkit-keyframes adjustment_progress_example {
-  0% {
-    width: 45%;
-  }
-  50% {
-    width: 0%;
-  }
-  100% {
-    width: 45%;
-  }
-}
-
-@keyframes adjustment_progress_example {
-  0% {
-    width: 45%;
-  }
-  50% {
-    width: 0%;
-  }
-  100% {
-    width: 45%;
-  }
-}
-
-@-webkit-keyframes adjustment_point_example {
-  0% {
-    right: 45%;
-  }
-  50% {
-    right: 0%;
-    -webkit-transform: translate(0%, -50%);
-            transform: translate(0%, -50%);
-  }
-  100% {
-    right: 45%;
-  }
-}
-
-@keyframes adjustment_point_example {
-  0% {
-    right: 45%;
-  }
-  50% {
-    right: 0%;
-    -webkit-transform: translate(0%, -50%);
-            transform: translate(0%, -50%);
-  }
-  100% {
-    right: 45%;
-  }
-}
-
-@-webkit-keyframes adjustment_hand_point_example {
-  0% {
-    right: calc(50% - 10px);
-  }
-  50% {
-    right: 10px;
-  }
-  100% {
-    right: calc(50% - 10px);
-  }
-}
-
-@keyframes adjustment_hand_point_example {
-  0% {
-    right: calc(50% - 10px);
-  }
-  50% {
-    right: 10px;
-  }
-  100% {
-    right: calc(50% - 10px);
-  }
-}
-
-@media screen and (min-width: 992px) {
-  main .player_area {
-    /* input range 示意圖播放樣式 */
-  }
-  main .player_area input[name="playRangeSchematic"] {
-    margin-top: 0px;
-  }
-}
-
-/*聲音說明頁*/
-main .player_area {
-  /* 音檔進度動態 */
-}
-
-main .player_area .animation_play_example:before {
-  -webkit-animation: adjustment_play_progress_example 5s ease-in infinite;
-          animation: adjustment_play_progress_example 5s ease-in infinite;
-}
-
-main .player_area .animation_play_example::after {
-  -webkit-animation: adjustment_play_point_example 5s ease-in infinite;
-          animation: adjustment_play_point_example 5s ease-in infinite;
-}
-
-@-webkit-keyframes adjustment_play_progress_example {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes adjustment_play_progress_example {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@-webkit-keyframes adjustment_play_point_example {
-  0% {
-    left: 0%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-@keyframes adjustment_play_point_example {
-  0% {
-    left: 0%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-@keyframes adjustment_hand_point_example {
-  0% {
-    right: calc(50% - 10px);
-  }
-  50% {
-    right: 10px;
-  }
-  100% {
-    right: calc(50% - 10px);
-  }
-}
-
-/*播放進度說明頁*/
 main .answer_area .description_area {
   margin: 0px auto 60px;
 }
@@ -872,25 +620,19 @@ main .answer_area .topic_area .answer_list {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: 30.38px;
+  padding-left: 30.38px;
 }
 
 main .answer_area .topic_area .answer_list .form-check {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-left: 0;
-  margin-bottom: 0;
+  margin-bottom: 25px;
 }
 
 main .answer_area .topic_area .answer_list .form-check .form-check-input {
   width: 14px;
   height: 14px;
+  margin-top: calc(14px * 0.7 / 2);
   margin-left: 0;
-  margin-top: 0;
   margin-right: 5px;
   border: 1px solid #5c6466;
 }
@@ -913,23 +655,70 @@ main .answer_area .topic_area .answer_list .form-check .form-check-input:focus {
           box-shadow: none;
 }
 
+main .answer_area .topic_area .answer_list .form-check .form-check-label {
+  width: calc(100% - 14px - 5px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main .answer_area .topic_area .answer_list .form-check .form-check-label .answer_options {
+  margin-right: 5px;
+}
+
+main .answer_area .topic_area.multiple_choice_image .answer_list .form-check {
+  width: 100%;
+}
+
+main .answer_area .topic_area.multiple_choice_image .answer_list .form-check .form-check-input {
+  margin-top: 0;
+}
+
+main .answer_area .topic_area.multiple_choice_image .answer_list .form-check .form-check-label {
+  line-height: 1;
+}
+
+main .answer_area .topic_area.multiple_choice_image .answer_list .form-check .form-check-label ruby {
+  margin-right: 5px;
+}
+
+@media screen and (min-width: 576px) {
+  main .answer_area .topic_area.multiple_choice_image .answer_list .form-check {
+    width: 45%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   main .answer_area .topic_area .answer_list {
-    margin-left: 31.23px;
+    padding-left: 31.23px;
   }
   main .answer_area .topic_area .answer_list .form-check .form-check-input {
     width: 15px;
     height: 15px;
+    margin-top: calc(15px * 0.7 / 2);
+  }
+  main .answer_area .topic_area .answer_list .form-check .form-check-label {
+    width: calc(100% - 15px - 5px);
   }
 }
 
 @media screen and (min-width: 992px) {
   main .answer_area .topic_area .answer_list {
-    margin-left: 32.97px;
+    padding-left: 32.97px;
   }
   main .answer_area .topic_area .answer_list .form-check .form-check-input {
     width: 17px;
     height: 17px;
+    margin-top: calc(17px * 0.7 / 2);
+  }
+  main .answer_area .topic_area .answer_list .form-check .form-check-label {
+    width: calc(100% - 17px - 5px);
+  }
+  main .answer_area .topic_area.multiple_choice_image .answer_list .form-check {
+    width: 30%;
   }
 }
 
@@ -937,16 +726,24 @@ main .answer_area .topic_area .answer_list .form-check .form-check-input:focus {
   main .answer_area .topic_area .answer_list .form-check .form-check-input {
     width: 19px;
     height: 19px;
+    margin-top: calc(19px * 0.7 / 2);
+  }
+  main .answer_area .topic_area .answer_list .form-check .form-check-label {
+    width: calc(100% - 19px - 5px);
   }
 }
 
 @media screen and (min-width: 1400px) {
   main .answer_area .topic_area .answer_list {
-    margin-left: 36.44px;
+    padding-left: 36.44px;
   }
   main .answer_area .topic_area .answer_list .form-check .form-check-input {
     width: 20px;
     height: 20px;
+    margin-top: calc(20px * 0.7 / 2);
+  }
+  main .answer_area .topic_area .answer_list .form-check .form-check-label {
+    width: calc(100% - 20px - 5px);
   }
 }
 

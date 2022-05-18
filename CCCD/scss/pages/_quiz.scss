@@ -12,6 +12,10 @@ main {
       padding: 15px 2.5%;
       max-width: 1200px;
 
+      .answer_area_instructions{
+        margin-bottom: 30px;
+      }
+
       .player_area {
         background-color: lighten($color-default-gray, 45%);
         margin-bottom: 20px;
@@ -37,7 +41,7 @@ main {
   .player_area {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: column;
     padding: 15px 20px;
     background-color: lighten($color-main, 45%);

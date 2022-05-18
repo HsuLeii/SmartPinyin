@@ -43,8 +43,8 @@
     <main>
         <div class="quiz_area">
             <div class="quiz_area_top col-11">
-                <div class="player_area col-12">
-                    <div class="play_area col-12 col-xl-9 col-xxl-10">
+                <div class="player_area col-12 col-xl-9 col-xxl-7">
+                    <div class="play_area col-12 col-xl-9">
                         <i class="fa-solid fa-play cursor color_main"></i>
                         <label for="playRange" class="form-label">
                             00:00/04:30
@@ -89,14 +89,13 @@
                 $(".icon_volume").removeClass("fa-volume-high");
                 $(".icon_volume").removeClass("fa-volume-low");
                 $(".icon_volume").addClass("fa-volume-xmark");
-                
+
             } else if (value < 45) {
                 $(".icon_volume").removeClass("fa-volume-xmark");
                 $(".icon_volume").removeClass("fa-volume-high");
                 $(".icon_volume").addClass(" fa-volume-low");
 
-            }
-            else {
+            } else {
                 $(".icon_volume").removeClass("fa-volume-low");
                 $(".icon_volume").removeClass("fa-volume-xmark");
                 $(".icon_volume").addClass("fa-volume-high");
