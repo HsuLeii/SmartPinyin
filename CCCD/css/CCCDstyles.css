@@ -414,6 +414,27 @@ main .quiz_area .answer_area .player_area .sound_area {
   position: relative;
 }
 
+main .quiz_area .button_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 40px;
+}
+
+main .quiz_area .button_area a {
+  color: #f7f8f8;
+  padding: 3px 20px;
+  border-radius: 10px;
+  background-color: #552b8d;
+}
+
+main .quiz_area .button_area a:hover {
+  background-color: #3d1f66;
+}
+
 main .player_area {
   display: -webkit-box;
   display: -ms-flexbox;

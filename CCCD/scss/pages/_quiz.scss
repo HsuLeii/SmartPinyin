@@ -36,6 +36,23 @@ main {
         }
       }
     }
+
+    .button_area{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+
+      a{
+        color: $color-bg;
+        padding: 3px 20px;
+        border-radius: 10px;
+        background-color: $color-main;
+
+        &:hover{
+          background-color: darken($color-main, 10%);
+        }
+      }
+    }
   }
 
   .player_area {
