@@ -888,6 +888,9 @@ main .answer_area .topic_area.multiple_choice_image .answer_list .form-check .fo
   main .answer_area .topic_area .answer_list {
     padding-left: 31.23px;
   }
+  main .answer_area .topic_area .answer_list .form-check {
+    margin-bottom: 50px;
+  }
   main .answer_area .topic_area .answer_list .form-check .form-check-input {
     width: 15px;
     height: 15px;
