@@ -8,16 +8,6 @@ main {
             }
         }
 
-        .quiz_number{
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: flex-end;
-
-            .quiz_number_title{
-                    color: $color-main;
-            }
-        }
-
         .topic_area {
             .topic {
                 display: flex;

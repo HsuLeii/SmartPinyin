@@ -21,23 +21,6 @@
 
 <body>
     <header>
-        <div class="header_logo">
-            <img src="image/logo/SmartPinyin.svg" alt="">
-        </div>
-
-        <div class="quiz_progress_area">
-            <div class="quiz_progress_title">
-                <p>測驗進度</p>
-            </div>
-            <div class="quiz_progress">
-                <p id="progress_value" class="quiz_progress_value">60%</p>
-                <svg viewBox="-1 -1 35 35">
-                    <circle cx="16" cy="16" r="15.9155" class="quiz_progress_background"></circle>
-                    <circle cx="16" cy="16" r="15.9155" id="progress_bar" class="quiz_progress_bar"
-                        style="stroke-dasharray: 60 100;"></circle>
-                </svg>
-            </div>
-        </div>
     </header>
     <!-- ------- ------- ------- ------- ------- ------- ------- -->
     <main>
@@ -134,53 +117,18 @@
     <footer class="footer">
     </footer>
 
+    <!-- player range JS -->
+    <script src="js/range.js"></script>
     <!-- ------- ------- ------- ------- ------- ------- ------- -->
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap-5.1.1.min.js"></script>
     <script src="js/fontawesome-free-6.1.1.min.js"></script>
     <script>
-        //取得播放range
-        var playRange = document.getElementById("playRange");
-        //取得播放距離
-        var playRangeWidth = (value) => {
-            document.documentElement.style.setProperty("--playRange", value + "%");
-        }
-
-        //取得聲音range
-        var soundRange = document.getElementById("soundRange");
-        //取得聲音距離
-        var soundRangeWidth = (value) => {
-            document.documentElement.style.setProperty("--soundRange", 100 - value + "%");
-            if (value < 1) {
-                $(".icon_volume").removeClass("fa-volume-high");
-                $(".icon_volume").removeClass("fa-volume-low");
-                $(".icon_volume").addClass("fa-volume-xmark");
-
-            } else if (value < 45) {
-                $(".icon_volume").removeClass("fa-volume-xmark");
-                $(".icon_volume").removeClass("fa-volume-high");
-                $(".icon_volume").addClass(" fa-volume-low");
-
-            } else {
-                $(".icon_volume").removeClass("fa-volume-low");
-                $(".icon_volume").removeClass("fa-volume-xmark");
-                $(".icon_volume").addClass("fa-volume-high");
-            }
-        }
-
-        //更改播放距離顏色
-        function updatePlayRangeProperty() {
-            playRangeWidth(playRange.value);
-        }
-
-        function updateSoundRangeProperty() {
-            soundRangeWidth(soundRange.value);
-        }
-
-        playRange.addEventListener("input", updatePlayRangeProperty);
-        soundRange.addEventListener("input", updateSoundRangeProperty);
+        $(document).ready(function () {
+            //nowPage (此頁必留)
+            $('header').load('header.html');
+        });
     </script>
-
 </body>
 
 </html>

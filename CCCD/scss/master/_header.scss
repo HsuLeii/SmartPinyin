@@ -4,15 +4,19 @@ header{
     padding: 20px 5% 0px;
 
     .header_logo{
-        width: 60%;
+        width: 40%;
         max-width: 350px;
     }
     .quiz_progress_area {
         color: $color-main;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
 
         .quiz_progress_title {
           text-align: center;
           margin-bottom: 5px;
+          margin-right: 10px;
         }
 
         .quiz_progress {
@@ -58,11 +62,19 @@ header{
       }
 }
 
+@media screen and (min-width: 576px) {
+  header{
+    .header_logo{
+        width: 45%;
+    }
+    .quiz_progress_area {
+      flex-direction: row;
+    }
+}
+}
+
 @media screen and (min-width: 768px) {
     header{
-        .header_logo{
-            width: 45%;
-        }
 
         .quiz_progress_area {
             .quiz_progress {
