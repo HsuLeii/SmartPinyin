@@ -327,8 +327,8 @@ header .quiz_progress_area .quiz_progress svg {
   z-index: 1;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%) rotateY(-180deg);
-          transform: translate(-50%, -50%) rotateY(-180deg);
+  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+          transform: translate(-50%, -50%) rotate(-90deg);
   overflow: initial;
 }
 
@@ -814,6 +814,20 @@ main .answer_area .description_area {
 
 main .answer_area .description_area .description_area_instructions {
   margin-top: 10px;
+}
+
+main .answer_area .quiz_number {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main .answer_area .quiz_number .quiz_number_title {
+  color: #552b8d;
 }
 
 main .answer_area .topic_area .topic {

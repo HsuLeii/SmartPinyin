@@ -34,7 +34,7 @@ header{
             z-index: 1;
             left: 50%;
             top: 50%;
-            transform: translate(-50%, -50%) rotateY(-180deg);
+            transform: translate(-50%, -50%) rotate(-90deg);
             overflow: initial;
 
             .quiz_progress_background {
