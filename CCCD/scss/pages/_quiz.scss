@@ -159,6 +159,12 @@ main {
     /* input range 聲音樣式 */
     input[name="soundRange"] {
 
+      &:hover{
+        ~.icon_hand_pointer{
+          opacity: 0;
+        }
+      }
+
       &:before {
         position: absolute;
         content: "";

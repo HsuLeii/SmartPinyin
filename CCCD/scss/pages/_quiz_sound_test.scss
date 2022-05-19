@@ -1,14 +1,16 @@
 main {
-    .answer_area{
-        .player_area{
+    .answer_area {
+        .player_area {
             margin: 20px auto;
         }
     }
+
     .player_area {
 
-        .sound_area{
+        .sound_area {
             position: relative;
-            .icon_hand_pointer{
+
+            .icon_hand_pointer {
                 position: absolute;
                 right: calc(50% - 10px);
                 top: 50%;
@@ -155,7 +157,7 @@ main {
 @media screen and (min-width: 992px) {
     main {
         .player_area {
-    
+
             /* input range 示意圖播放樣式 */
             input[name="playRangeSchematic"] {
                 margin-top: 0px;

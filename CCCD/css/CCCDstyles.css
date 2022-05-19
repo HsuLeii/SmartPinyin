@@ -555,6 +555,10 @@ main .player_area input[name="playRange"] {
   margin-top: 15px;
 }
 
+main .player_area input[name="soundRange"]:hover ~ .icon_hand_pointer {
+  opacity: 0;
+}
+
 main .player_area input[name="soundRange"]:before {
   position: absolute;
   content: "";
