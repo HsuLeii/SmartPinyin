@@ -27,7 +27,7 @@
         <div class="quiz_area">
             <div class="quiz_area_top col-11">
                 <div class="player_area col-12 col-xl-9 col-xxl-7">
-                    <div class="play_area col-12 col-xl-9">
+                    <div class="play_area col-12 col-xl-9">                        
                         <i class="fa-solid fa-play cursor color_main"></i>
                         <label for="playRange" class="form-label">
                             00:00/04:30
@@ -41,50 +41,69 @@
                         <input type="range" id="soundRange" name="soundRange" min="0" max="100" value="100">
                     </div>
                 </div>
+                
+
             </div>
-            
             <div class="answer_area col-11">
+
+                <div class="description_area hebrew" dir="rtl">
+                    <div class="description_area_title">
+                        <h3>
+                            תיאור ודוגמאות
+                        </h3>
+                    </div>
+                    <div class="description_area_instructions">
+                        <p>
+                            בחלק זה, לכל שאלה יש תמונה ותשמעו ביטוי או משפט.<br />
+                            נא לשפוט מה נכון או לא לפי מה שאתה שומע.<br />
+                            קרא כל שאלה פעמיים, השהה לשלוש שניות לאחר הקריאה הראשונה, ולאחר מכן חזור על הפעם
+                            השנייה.<br />
+                            לאחר הקריאה השנייה, השהה לשלוש שניות והמשך לשאלה הבאה. (פשוט - קובץ שמע + טקסט)<br />
+                        </p>
+                    </div>
+                </div>
+
+                <div class="description_area">
+                    <div class="description_area_title">
+                        <h3>
+                            說明及範例
+                        </h3>
+                    </div>
+                    <div class="description_area_instructions">
+                        <p>
+                            在這個部分，每题都有一張圖片，你會聽到一個短語或句子。<br />
+                            請根據聽到的內容判斷對錯。<br />
+                            每題念兩次，第一次唸完以後先停三秒，再念第二次。<br />
+                            第二次唸完以後停三秒，就繼續下一題。（簡體-音檔+文字）<br />
+                        </p>
+                    </div>
+                </div>
+
                 <div class="topic_area">
                     <div class="topic">
                         <div class="topic_number"><h4>1.</h4></div>
+                        <div class="topic_img col-11"><img src="image/test/440x292.jpg" alt=""></div>
                     </div>
-                    <div class="answer_list col-12">
+                    <div class="answer_list col-11">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="multiple_choice" id="answer_one">
+                            <input class="form-check-input" type="radio" name="true_false" id="answer_one">
                             <label class="form-check-label" for="answer_one">
                                 <div class="answer_options">
                                     (A)
                                 </div>
                                 <div class="answer_content">
-                                    <ruby>
-                                        星期一 <rt> xīng qíyī2 </rt>
-                                    </ruby>
+                                        是
                                 </div>
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="multiple_choice" id="answer_two">
+                            <input class="form-check-input" type="radio" name="true_false" id="answer_two">
                             <label class="form-check-label" for="answer_two">
                                 <div class="answer_options">
                                     (B)
                                 </div>
                                 <div class="answer_content">
-                                    <ruby>
-                                        星期二 <rt> xīng qíèr </rt>
-                                    </ruby>
-                                </div>
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="multiple_choice" id="answer_three">
-                            <label class="form-check-label" for="answer_three">
-                                <div class="answer_options">
-                                    (C)
-                                </div>
-                                <div class="answer_content">
-                                    <ruby>
-                                        星期三 <rt> xīng qísān </rt>
-                                    </ruby>
+                                        否
                                 </div>
                             </label>
                         </div>
@@ -92,8 +111,7 @@
                 </div>
             </div>
         </div>
-        <a href="quiz_part_four.html">下一頁第四部份(之後要刪除)</a><br/>
-        <a href="quiz_end.html">下一頁測驗結束(之後要刪除)</a>
+        <a href="true_false_image_example_2.html">下一頁(之後要刪除)</a>
     </main>
     <!-- ------- ------- ------- ------- ------- ------- ------- -->
     <footer class="footer">
