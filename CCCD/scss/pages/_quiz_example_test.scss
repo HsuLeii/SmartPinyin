@@ -59,6 +59,7 @@ main {
 
                         &[disabled],
                         &:disabled{
+                            opacity: 1;
                             ~.form-check-label{
                                 opacity: 1;
                             }
