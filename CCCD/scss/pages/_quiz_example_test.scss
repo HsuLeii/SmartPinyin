@@ -56,6 +56,13 @@ main {
                         &:focus {
                             box-shadow: none;
                         }
+
+                        &[disabled],
+                        &:disabled{
+                            ~.form-check-label{
+                                opacity: 1;
+                            }
+                        }
                     }
 
                     .form-check-label {

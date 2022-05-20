@@ -893,6 +893,10 @@ main .answer_area .topic_area .answer_list .form-check .form-check-input:focus {
           box-shadow: none;
 }
 
+main .answer_area .topic_area .answer_list .form-check .form-check-input[disabled] ~ .form-check-label, main .answer_area .topic_area .answer_list .form-check .form-check-input:disabled ~ .form-check-label {
+  opacity: 1;
+}
+
 main .answer_area .topic_area .answer_list .form-check .form-check-label {
   width: calc(100% - 14px - 5px);
   display: -webkit-box;
