@@ -894,11 +894,11 @@ main .answer_area .topic_area .answer_list .form-check .form-check-input:focus {
 }
 
 main .answer_area .topic_area .answer_list .form-check .form-check-input[disabled], main .answer_area .topic_area .answer_list .form-check .form-check-input:disabled {
-  opacity: 1;
+  opacity: 1.0;
 }
 
 main .answer_area .topic_area .answer_list .form-check .form-check-input[disabled] ~ .form-check-label, main .answer_area .topic_area .answer_list .form-check .form-check-input:disabled ~ .form-check-label {
-  opacity: 1;
+  opacity: 1.0;
 }
 
 main .answer_area .topic_area .answer_list .form-check .form-check-label {
