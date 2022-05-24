@@ -31,6 +31,15 @@ main {
                 .form-check {
                     padding-left: 0;
                     margin-bottom: 25px;
+                    background: $color-main-grayLight;
+                    padding: 5px 10px;
+                    border-radius: 10px;
+                    border: 4px solid $color-main-grayLight;
+
+                    &.check {
+                        background-color: transparent;
+                        border: 4px solid $color-main;
+                    }
 
                     .form-check-input {
                         width: 14px;
