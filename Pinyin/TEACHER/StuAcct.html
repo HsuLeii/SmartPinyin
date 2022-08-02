@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="zh-tw">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="SmartPinyin中文智能聽說系統-拼音">
+<meta name="author" content="SmartPinyin中文智能聽說系統-拼音, National Taiwan Normal University, NTNU, College of Education e-Learning Lab. NTNU">
+<title>SmartPinyin中文智能聽說系統-拼音</title>
+<link rel="shortcut icon" type="image/x-icon" href="../Content/images/SP.ico">
+<link rel="stylesheet" type="text/css" href="../Content/css/bootstrap-lg.min.css">
+<link rel="stylesheet" type="text/css" href="../Content/css/ie10-viewport-bug-workaround.css">
+<link rel="stylesheet" type="text/css" href="../Content/widgets/fontawesome-free-5.15.3-web/css/all.css">
+
+<!-- this page widgets CSS --> 
+<!-- bootstrap-fileinput -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.min.css" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../Content/widgets/bootstrap-fileinput-master/css/fileinput-K.css">
+<!-- bs-stepper -->
+<link rel="stylesheet" type="text/css" href="../Content/widgets/bs-stepper-master/src/css/bs-stepper-SP.css">
+<!-- datatables -->
+<link rel="stylesheet" type="text/css" href="../Content/widgets/DataTables/datatables.min.css">
+
+<!-- my core CSS -->
+<link rel="stylesheet" type="text/css" href="../Content/css/SPstyles.css">
+</head>
+
+<body>
+<header>
+
+</header>
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<main> 
+  <!-- page-banner start -->
+  <div class="page-banner classMgt">
+    <div class="container-fluid">
+      <div class="page-banner__text">
+        <div class="row">
+          <div class="col-xs-12 col-lg-12 col-xl-10 col-xl-offset-1">
+            <div class="row">
+              <div class="col-xs-12">
+                <h2>學生帳號建立</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- page-banner end --> 
+  
+  <!--search-panel start-->
+  <div class="search-panel">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-lg-12 col-xl-10 col-xl-offset-1">
+          <div class="form-inline">
+            <div class="form-group">
+              <label for="">年度：</label>
+              <select class="form-control noRadius">
+                <option>請選擇...</option>
+                <option>2021</option>
+                <option>2020</option>
+                <option>2019</option>
+                <option>2018</option>
+                <option>2017</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="">課程名稱/班級：</label>
+              <input type="text" class="form-control noRadius" id="" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="">姓名：</label>
+              <input type="text" class="form-control noRadius" id="" placeholder="">
+            </div>
+            <button type="submit" class="btn btn-main-blue noRadius">搜尋</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--search-panel end--> 
+  
+  <!--學生名單 start-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-lg-12 col-xl-10 col-xl-offset-1"> 
+        <!--function-panel start-->
+        <div class="function-panel">
+          <button class="btn btn-main-purple" data-toggle="modal" data-target="#modal-insertNote">手動新增</button>
+          <button class="btn btn-main-purple" data-toggle="modal" data-target="#modal-insertBat" data-backdrop="static" data-keyboard="false">批次匯入</button>
+          <button class="btn btn-main-purple" id="demo-btnEdit">編輯</button>
+        </div>
+        <!--function-panel end--> 
+        <!--table start-->
+        <table class="table table-bordered table-hover table-style-default table-bg-white table-thead-gray table-minWidth-lg" id="StuAcct-table">
+          <thead>
+            <tr>
+              <th style="display: none;">ID</th>
+              <th>年度</th>
+              <th>課程名稱/班級</th>
+              <th>學號</th>
+              <th>姓名</th>
+              <th>性別</th>
+              <th>國籍</th>
+              <th>母語</th>
+              <th>帳號</th>
+              <th>密碼</th>
+              <th class="td-update text-center">修改</th>
+              <th class="td-delete text-center">刪除</th>
+            </tr>
+          </thead>
+          <tbody>
+              
+          </tbody>
+        </table>
+        <!--table end-->
+        <div class="text-center" id="demo-insertBtns">
+          <button type="button" class="btn btn-main-purple-white btn-lg" onclick="deleteInsertField()">取消</button>
+          <button type="button" class="btn btn-main-purple btn-lg" onclick="showHasData()">確定</button>
+        </div>
+        <div class="text-center" id="demo-updateBtns" style="display: none;">
+          <button type="button" class="btn btn-main-purple-white btn-lg" onclick="updateField()">取消</button>
+          <button type="button" class="btn btn-main-purple btn-lg" onclick="updateField()">確定</button>
+        </div>  
+        <!-- --> 
+      </div>
+      <!-- 右邊內容end --> 
+    </div>
+  </div>
+  <!--學生名單 end--> 
+</main>
+<!-- Modal#modal-insertNote start -->
+<div class="modal fade modal-insertNote" id="modal-insertNote" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content noRadius">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">手動新增說明</h4>
+      </div>
+      <div class="modal-body">
+        <div class="insertNote-content">
+          <h5 class="text-blue">年度</h5>
+          <p>您可以輸入課程/班級的所屬年度，方便課程/班級管理。</p>
+          <br>
+          <h5 class="text-blue">課程名稱/班級</h5>
+          <p>1.此欄位可以輸入學校課名，格式不限，例如「商業華語」或「Business Chinese」。</p>
+          <p>2.此欄位也可以輸入班級，格式不限。建議包含年級資訊，例如「五年一班」或「5A」。</p>
+          <br>
+          <h5 class="text-blue">學號</h5>
+          <p>非必填欄位，您可以輸入學生學號，方便核對學生身份。</p>
+          <br>
+          <h5 class="text-blue">帳號</h5>
+          <p>帳號請使用email。</p>
+          <br>
+          <h5 class="text-blue">密碼</h5>
+          <p>密碼8到12個字元，且英文和數字混和。</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="text-center">
+          <button type="button" class="btn btn-main-purple" onclick="showInsertField()">確定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal#modal-insertNote end --> 
+<!-- Modal#modal-insertBat start -->
+<div class="modal fade modal-insertBat" id="modal-insertBat" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content noRadius">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="">批次匯入學生名單</h4>
+      </div>
+      <div class="modal-body"> 
+        <!-- -->
+        <div class="bs-stepper">
+          <div class="bs-stepper-header" role="tablist">
+            <div class="step" data-target="#step1">
+              <button type="button" class="step-trigger" role="tab"> <span class="bs-stepper-circle">1</span> <span class="bs-stepper-label">製作學生名單</span> </button>
+            </div>
+            <div class="line"></div>
+            <div class="step" data-target="#step2">
+              <button type="button" class="step-trigger" role="tab"> <span class="bs-stepper-circle">2</span> <span class="bs-stepper-label">上傳名單檔案</span> </button>
+            </div>
+          </div>
+          <div class="bs-stepper-content">
+            <div id="step1" class="content" role="tabpanel"> 
+              <!-- -->
+              <div class="insertBat-stepContent step1">
+                <div class="flex-center">
+                  <div class="pb-5">
+                    <p>請依<a id="HL_DownSampleList" class="link-border link-main-red" href="" target="_blank">範例格式</a>製作學生名單，並存成xlsx檔。</p>
+                    <br>
+                    <div class="text-muted">
+                      <p>注意：</p>
+                      <p>1.帳號請使用email。</p>
+                      <p>2.密碼8到12個字元，且英文和數字混和。</p>
+                      <p>3.學號非必填欄位，您可以輸入學生學號，方便核對學生身份。</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="insertBat-stepContent__btns">
+                  <button type="button" class="btn btn-main-purple" onclick="stepper.next()">下一步</button>
+                </div>
+              </div>
+              <!-- --> 
+            </div>
+            <div id="step2" class="content" role="tabpanel"> 
+              <!-- -->
+              <div class="insertBat-stepContent step2">
+                <div class="flex-center">
+                  <div class="pb-5">
+                    <p>學生名單完成後，上傳檔案。</p>
+                    <input id="file-studentsAccount" name="file-studentsAccount" type="file" class="fileUpload-file">
+                  </div>
+                </div>
+                <div class="insertBat-stepContent__btns">
+                  <button type="button" class="btn btn-main-purple-white" onclick="stepper.previous()">上一步</button>
+                  <button type="button" class="btn btn-main-purple" onclick="simulateSubmit()">上傳</button>
+                </div>
+                <!-- --> 
+              </div>
+            </div>
+          </div>
+          <!-- --> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal#modal-insertBat end --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<script src="../Script/jquery.min.js"></script> 
+<script src="../Script/bootstrap.min.js"></script> 
+<script src="../Script/ie10-viewport-bug-workaround.js"></script> 
+<!-- widgets js --> 
+<!--bs-stepper--> 
+<script src="../Content/widgets/bs-stepper-master/src/js/bs-stepper.min.js"></script> 
+<!--bootstrap-fileinput--> 
+<script src="../Content/widgets/bootstrap-fileinput-master/js/fileinput.min.js"></script> 
+<script src="../Content/widgets/bootstrap-fileinput-master/js/locales/zh-TW.js"></script> 
+<script src="../Content/widgets/bootstrap-fileinput-master/themes/gly/theme.js"></script> 
+<!--datatables--> 
+<script src="../Content/widgets/DataTables/datatables.min.js"></script> 
+<script>
+$.fn.fileinput.defaults.theme = 'gly';    
+$(document).ready(function() {
+	//nowPage (此頁必留)
+	$('.navTab-StuAcct').addClass('active');
+    $('header').load('_header.html', function(){
+        $('.navTab-StuAcct').addClass('active');//nowPage
+        $('.navTab-Tindex a').attr('href', 'Tindex.html?data=1'); //for demo 連結到有資料的教師首頁，可刪除
+    });
+    
+    //bs-stepper
+	var stepper = new Stepper($('.bs-stepper')[0]);
+    
+    //上傳圖片(請依需求改寫，樣式不改寫即可) 
+	$(".fileUpload-file").fileinput({
+		language: 'zh-TW',                              //工程師設定
+		allowedFileExtensions : ['xlsx', 'xsl'],        //工程師設定
+		maxFileSize : 500, 								//工程師設定
+		maxFilesNum : 1,                                //工程師設定
+		showUpload: false,                              //是否顯示上傳按鈕
+        autoReplace: true,                              //是否自動替換當前圖片
+        uploadAsync: true,                              //工程師設定
+        uploadUrl: "",                                  //工程師設定
+        deleteUrl: "",                                  //工程師設定
+        dropZoneEnabled: false,                         //是否顯示拖拽區域
+        showPreview: false,                             //是否顯示文件預覽區
+		previewClass: "file-eMstyle noRadius", 			//預覽區class
+		showClose: false, 								//預覽區close
+		mainClass: "file-caption-fontFamily",			//按鈕欄位class
+		captionClass: "noRadius",						//檔案標題欄位class
+		browseClass: "btn btn-default-gray noRadius", 	//按鈕class
+		layoutTemplates :{
+			footer: '', 								//預覽區footer資訊
+		},
+	});
+    
+    //datatables (請工程師改依需求新增項目或改寫，勿修改樣式即可)  
+	$('#StuAcct-table').DataTable({
+		responsive: false,
+		searching: true,
+		pageLength: 20,
+		pagingType: "simple_numbers",
+        stateSave: true,
+        /*columnDefs: [
+						{ "targets": 0 , "data": "id",     "width": "0px", "visible": false,},//#
+						{ "targets": 1 , "data": "year",   "width": "60px", },//年度
+						{ "targets": 2 , "data": "class",  "width": "180px",},//課程名稱/班級
+						{ "targets": 3 , "data": "number", "width": "80px", },//學號
+						{ "targets": 4 , "data": "name",   "width": "150px",},//姓名
+						{ "targets": 5 , "data": "gender", "width": "60px", },//性別
+                        { "targets": 6 , "data": "countr", "width": "60px", },//國籍
+                        { "targets": 7 , "data": "tongue", "width": "60px", },//母語
+                        { "targets": 8 , "data": "account","width": "240px",},//帳號
+                        { "targets": 9 , "data": "pd",     "width": "120px",},//密碼
+                        { "targets": 10 ,"data": "update", "width": "80px", "bSortable": false},//修改
+                        { "targets": 11 ,"data": "delete", "width": "80px", "bSortable": false},//刪除
+					 ],	*/
+        dom: '<""r<"table-responsive"t>p>',
+        language: {
+            url: '../Content/widgets/DataTables/lang/Chinese-traditional.json'
+        },
+    });
+}); 
+    
+//bs-stepper(請依需求改寫)    
+var stepperElem = document.querySelector('.bs-stepper');
+var stepper = new Stepper(stepperElem);
+var done = false;
+var currStep = 1;
+history.pushState(currStep, '');
+//切換到步驟前觸發，呼叫e.preventDefault()可阻止切換
+stepperElem.addEventListener("show.bs-stepper", function (e) {
+  if (done) { //若程序完成，不再切換
+	e.preventDefault();
+	return;
+  }
+});
+//切換到步驟後觸發，e.detail.indexStep為目前步驟序號(從0開始)
+stepperElem.addEventListener("shown.bs-stepper", function (e) {
+  var idx = e.detail.indexStep + 1;
+  currStep = idx;
+  //pushState()記下歷程以支援瀏覽器回上頁功能
+  history.pushState(idx, '');
+})
+//瀏覽器上一頁下一頁觸發
+window.onpopstate = function (e) {
+  if (e.state && e.state != currStep)
+	stepper.to(e.state);
+};
+//模擬送出表單，註記已完成，不再允許切換步驟
+function simulateSubmit() {
+  done = true;
+  //do something...
+	$('.modal-insertBat').modal('hide');
+    showHasData();	
+}    
+</script> 
+<script>
+//以下↓ demo學生帳號建立頁面流程  可刪除
+//預設 無資料    
+$('#demo-btnEdit').attr('disabled','disabled');//編輯按鈕disabled
+$('#demo-tbody-empty').show().siblings('tbody').hide();     
+$('#StuAcct-table .td-update, #StuAcct-table .td-delete').hide();//修改刪除欄位hide 
+$('#demo-insertBtns').hide();  //確認修改hide
+
+    
+function showInsertField() {//顯示手動新增欄位 
+    $('#demo-btnEdit').attr('disabled','disabled');//編輯按鈕disabled
+    $('#modal-insertNote').modal('hide');  
+    var insertTr = $('<tr class="insertField">'+
+              '<td style="display: none;">#</td>'+
+              '<td><input type="text" class="form-control noRadius form-disabled-noBorder"></td>'+
+              '<td><input type="text" class="form-control noRadius form-disabled-noBorder"></td>'+
+              '<td><input type="text" class="form-control noRadius form-disabled-noBorder"></td>'+
+              '<td><input type="text" class="form-control noRadius form-disabled-noBorder"></td>'+
+              '<td><select class="form-control noRadius">'+
+                  '<option>請選擇...</option>'+
+                  '<option>男</option>'+
+                  '<option>女</option>'+
+                  '<option>其他</option>'+
+                '</select></td>'+
+              '<td><input type="text" class="form-control noRadius form-disabled-noBorder"></td>'+
+              '<td><input type="text" class="form-control noRadius form-disabled-noBorder"></td>'+
+              '<td><input type="email" class="form-control noRadius form-disabled-noBorder"></td>'+
+              '<td><input type="text" class="form-control noRadius form-disabled-noBorder"></td>'+
+              '<td class="td-update text-center" style="display:none;"></td>'+
+              '<td class="td-delete text-center" style="display:none;"></td>'+
+            '</tr>')
+    $('#StuAcct-table').DataTable().row.add(insertTr[0]).draw();
+    $('#demo-insertBtns').show();  
+} 
+function deleteInsertField() {  //取消新增欄位  
+    $('#StuAcct-table').DataTable().row(':last').remove().draw();
+    var _num = $('#StuAcct-table tbody tr.insertField').length;
+    if(_num == 0){
+        $('#demo-insertBtns').hide();
+    }
+}    
+function showHasData() { //顯示有資料  
+    $('.function-panel button').removeAttr('disabled');//有資料按鈕皆可按
+
+    var dataTr = $('<tr>'+
+              '<td style="display: none;">1</td>'+
+              '<td><input type="text" class="form-control noRadius form-disabled-noBorder" value="2021" disabled></td>'+
+              '<td><input type="text" class="form-control noRadius form-disabled-noBorder" value="初級華語" disabled></td>'+
+              '<td><input type="text" class="form-control noRadius form-disabled-noBorder" value="210531" disabled></td>'+
+              '<td><input type="text" class="form-control noRadius form-disabled-noBorder" value="Doris Smith" disabled></td>'+
+              '<td><select class="form-control noRadius form-disabled-noBorder" disabled>'+
+                  '<option>請選擇...</option>'+
+                  '<option>男</option>'+
+                  '<option selected>女</option>'+
+                  '<option>其他</option>'+
+                '</select></td>'+
+              '<td><input type="text" class="form-control noRadius form-disabled-noBorder" value="美國" disabled></td>'+
+              '<td><input type="text" class="form-control noRadius form-disabled-noBorder" value="英文" disabled></td>'+
+              '<td>mst002@gmail.com</td>'+
+              '<td><input type="text" class="form-control noRadius form-disabled-noBorder" value="1234567890" disabled></td>'+
+              '<td class="td-update text-center" style="display:none;"><button type="button" class="btn btn-info noRadius btn-xs">修改</button></td>'+
+              '<td class="td-delete text-center" style="display:none;"><button type="button" class="btn btn-danger noRadius btn-xs">刪除</button></td>'+
+            '</tr>')
+    $('#StuAcct-table').DataTable().row.add(dataTr[0]).draw();
+
+    $('#StuAcct-table').DataTable().row('.insertField').remove().draw();
+    $('#demo-insertBtns').hide(); 
+} 
+  
+    
+$('#demo-btnEdit').click(function(){//編輯 顯示修改刪除按鈕
+    $('.function-panel button').attr('disabled','disabled');
+    $('#StuAcct-table .td-update, #StuAcct-table .td-delete').show();
+    $('#demo-updateBtns').show();
+    $('#demo-updateBtns').on('click', 'button', function (){//確定/取消修改
+        $('.function-panel button').removeAttr('disabled');
+        $('#StuAcct-table .td-update, #StuAcct-table .td-delete').hide();
+        $('#demo-updateBtns').hide();
+    }); 
+});
+    
+$('#StuAcct-table tbody').on('click', '.td-update button', function (){//修改
+    var row = $("#StuAcct-table tr").index($(this).closest("tr"));
+    $(this).attr('disabled','disabled');
+    $(this).parents('tr').find('input, select').removeAttr('disabled');
+    $('#demo-updateBtns').show();
+    $('#demo-updateBtns').on('click', 'button', function (){//確定/取消修改
+         $('#StuAcct-table').find('tr').eq(row).find('.td-update button').removeAttr('disabled');
+         $('#StuAcct-table').find('tr').eq(row).find('input, select').attr('disabled','disabled');
+         $('#demo-updateBtns').hide();
+         $('.function-panel button').removeAttr('disabled');
+    }); 
+});  
+    
+$('#StuAcct-table tbody').on('click', '.td-delete button', function (){//刪除   
+    var _nowRow = $('#StuAcct-table tr').index($(this).closest('tr'));
+    var _nowAccount = $('#StuAcct-table').find('tr').eq(_nowRow).find('td').eq(7).text();
+    if (window.confirm('是否確定刪除 '+_nowAccount+' ?')) { 
+        $('#StuAcct-table').DataTable().row( $(this).parents('tr') ).remove().draw();
+        $('#StuAcct-table .td-update, #StuAcct-table .td-delete').hide();
+        $('.function-panel button').removeAttr('disabled');
+        $('#demo-updateBtns').hide();
+    }
+    
+});  
+</script>
+</body>
+</html>

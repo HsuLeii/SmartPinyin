@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="zh-tw">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="SmartPinyin中文智能聽說系統-拼音">
+<meta name="author" content="SmartPinyin中文智能聽說系統-拼音, National Taiwan Normal University, NTNU, College of Education e-Learning Lab. NTNU">
+<title>SmartPinyin中文智能聽說系統-拼音</title>
+<link rel="shortcut icon" type="image/x-icon" href="../Content/images/SP.ico">
+<link rel="stylesheet" type="text/css" href="../Content/css/bootstrap-lg.min.css">
+<link rel="stylesheet" type="text/css" href="../Content/css/ie10-viewport-bug-workaround.css">
+<link rel="stylesheet" type="text/css" href="../Content/widgets/fontawesome-free-5.15.3-web/css/all.css">
+
+<!-- this page widgets CSS --> 
+<!-- bootstrap-fileinput -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.min.css" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../Content/widgets/bootstrap-fileinput-master/css/fileinput-K.css">
+<!-- bs-stepper -->
+<link rel="stylesheet" type="text/css" href="../Content/widgets/bs-stepper-master/src/css/bs-stepper-SP.css">
+<!-- datatables -->
+<link rel="stylesheet" type="text/css" href="../Content/widgets/DataTables/datatables.min.css">
+
+<!-- my core CSS -->
+<link rel="stylesheet" type="text/css" href="../Content/css/SPstyles.css">
+</head>
+
+<body>
+<header> </header>
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<main> 
+  <!-- page-banner start -->
+  <div class="page-banner classMgt">
+    <div class="container-fluid">
+      <div class="page-banner__text">
+        <div class="row">
+          <div class="col-xs-12 col-lg-12 col-xl-10 col-xl-offset-1">
+            <div class="row">
+              <div class="col-xs-12">
+                <h2>自編題目</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- page-banner end --> 
+  
+  <!--search-panel start-->
+  <div class="search-panel">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-lg-12 col-xl-10 col-xl-offset-1">
+          <div class="form-inline">
+            <div class="form-group">
+              <label for="">測驗名稱：</label>
+              <input type="text" class="form-control noRadius" id="search-quizName" placeholder="">
+            </div>
+            <button type="button" class="btn btn-main-blue noRadius" onClick="">搜尋</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--search-panel end--> 
+  
+  <!--測驗清單 start-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-lg-12 col-xl-10 col-xl-offset-1"> 
+        <!--function-panel start-->
+        <div class="function-panel">
+          <button class="btn btn-main-purple" data-toggle="modal" data-target="#modal-insertQuiz">新增測驗</button>
+        </div>
+        <!--function-panel end--> 
+        <!--table start-->
+        <table class="table table-bordered table-hover table-style-default table-bg-white table-thead-gray table-minWidth-lg" id="quizList-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>測驗名稱</th>
+              <th>已編制題數</th>
+              <th>測驗連結網址</th>
+              <th>QR Code</th>
+              <th>預覽</th>
+              <th>編輯</th>  
+              <th>刪除</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        <!--table end--> 
+      </div>
+      <!-- 右邊內容end --> 
+    </div>
+  </div>
+  <!--測驗清單 end--> 
+</main>
+<!-- Modal#modal-insertQuiz start -->
+<div class="modal fade modal-large modal-insertQuiz" id="modal-insertQuiz" tabindex="-1" role="dialog" aria-labelledby="modal-insertQuizLabel"  data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content noRadius">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">新增測驗</h4>
+      </div>
+      <div class="modal-body"> 
+        <!-- step1 start -->
+        <div class="quiz step1 py-5">
+          <div class="form-horizontal form-style-2">
+            <div class="form-group">
+              <label for="" class="col-sm-3 col-lg-4 control-label pr-0"><span class="text-red">*</span>測驗名稱：</label>
+              <div class="col-sm-7 col-lg-4">
+                <input type="text" class="form-control noRadius" id="quizName" placeholder="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- step1 end --> 
+        <!-- step2 start -->
+        <div class="quiz step2">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="speak active"><a href="#speak" aria-controls="speak" role="tab" data-toggle="tab">發音測驗</a></li>
+            <li role="presentation" class="listen"><a href="#listen" aria-controls="listen" role="tab" data-toggle="tab">聽力測驗</a></li>
+          </ul>
+          <div class="tab-content"> 
+            <!-- 發音測驗 start-->
+            <div role="tabpanel" class="tab-pane active speak" id="speak">
+              <div class="mb-1">
+                <button class="btn btn-main-yellow btn-xs noRadius"><i class="fas fa-plus"></i>&nbsp;新增發音題目</button>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-bordered table-hover table-style-default table-bg-white table-thead-gray table-minWidth-lg mb-1" id="">
+                  <thead>
+                    <tr>
+                      <th>題號</th>
+                      <th>題目生詞</th>
+                      <th>題目拼音</th>
+                      <th>答案</th>
+                      <th>刪除</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td><input type="text" class="form-control noRadius" id="" placeholder="題目生詞"></td>
+                      <td><input type="text" class="form-control noRadius" id="" placeholder="題目拼音"></td>
+                      <td>---</td>
+                      <td><button class="btn btn-danger btn-xs noRadius"><i class="far fa-trash-alt"></i></button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="text-right">
+                <button class="btn btn-main-yellow btn-xs noRadius"><i class="fas fa-plus"></i>&nbsp;新增發音題目</button>
+              </div>
+            </div>
+            <!-- 發音測驗 end--> 
+            <!-- 聽力測驗 start-->
+            <div role="tabpanel" class="tab-pane listen" id="listen">
+              <div class="mb-1">
+                <button class="btn btn-main-sky btn-xs noRadius"><i class="fas fa-plus"></i>&nbsp;新增聽力題目</button>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-bordered table-hover table-style-default table-bg-white table-thead-gray table-minWidth-lg mb-1" id="">
+                  <thead>
+                    <tr>
+                      <th>題號</th>
+                      <th>題目拼音</th>
+                      <th>選項A.</th>
+                      <th>選項B</th>
+                      <th>選項C.</th>
+                      <th>答案</th>
+                      <th>刪除</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td><input type="text" class="form-control noRadius" id="" placeholder="請輸入題目拼音"  value=""></td>
+                      <td><input type="text" class="form-control noRadius" id="" placeholder="請輸入文字/拼音/文字+拼音" value=""></td>
+                      <td><input type="text" class="form-control noRadius" id="" placeholder="請輸入文字/拼音/文字+拼音" value=""></td>
+                      <td><input type="text" class="form-control noRadius" id="" placeholder="請輸入文字/拼音/文字+拼音" value=""></td>
+                      <td><select class="form-control noRadius">
+                          <option>請選擇...</option>
+                          <option>A</option>
+                          <option>B</option>
+                          <option>C</option>
+                        </select></td>
+                      <td><button class="btn btn-danger btn-xs noRadius"><i class="far fa-trash-alt"></i></button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="text-right">
+                <button class="btn btn-main-sky btn-xs noRadius"><i class="fas fa-plus"></i>&nbsp;新增聽力題目</button>
+              </div>
+            </div>
+            <!-- 聽力測驗 end--> 
+          </div>
+        </div>
+        <!-- step2 end --> 
+      </div>
+      <div class="modal-footer">
+        <div class="row">
+          <div class="col-lg-4 text-left py-1"> <small>題目顯示：</small>
+            <div class="checkbox icheck-main-purple icheck-inline">
+              <input type="checkbox" id="showWords" />
+              <label for="showWords">文字</label>
+            </div>
+            <div class="checkbox icheck-main-purple icheck-inline">
+              <input type="checkbox" id="showPinyin" />
+              <label for="showPinyin">拼音</label>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center">
+            <button type="button" class="btn btn-main-purple btn-lg" onclick="goInsertQuiz()">確定新增測驗</button>
+          </div>
+          <div class="col-lg-4 text-right py-1"><small>已建立發音&nbsp;<strong class="text-purple">n</strong>&nbsp;題，聽力&nbsp;<strong class="text-purple">n</strong>&nbsp;題</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal#modal-insertQuiz end --> 
+
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<script src="../Script/jquery.min.js"></script> 
+<script src="../Script/bootstrap.min.js"></script> 
+<script src="../Script/ie10-viewport-bug-workaround.js"></script> 
+<!-- widgets js --> 
+<!--datatables--> 
+<script src="../Content/widgets/DataTables/datatables.min.js"></script> 
+<script>   
+$(document).ready(function() {
+    //nowPage (此頁必留)
+	$('.navTab-quiz').addClass('active');
+    $('header').load('_header.html', function(){
+        $('.navTab-quiz').addClass('active');//nowPage
+    });
+    
+    //DataTable(請依需求改寫，樣式不改寫即可) 
+  $('#quizList-table').DataTable({
+    responsive: false,
+    searching: true,
+    pageLength: 20,
+    pagingType: "simple_numbers",
+    dom: '<r<"table-responsive"t>p>',
+    language: {
+      url: '../Content/widgets/DataTables/lang/Chinese-traditional.json'
+    },
+    //ajax: '../Content/js/quizList-1.txt',
+    columnDefs: [
+      { //#
+        targets: 0, 
+        visible: false,
+        data: 'id' 
+      },
+      { //測驗名稱
+        targets: 1,
+        data: 'quizName'
+      },   
+      { //已編制題數
+        targets: 2,
+        data: 'topics'
+      },
+      { //測驗連結網址
+        targets: 3,
+        data: 'link',
+        render: function (data, type, row, meta) {
+            return '<div class="input-group">'+
+                      '<input type="text" class="form-control noRadius" value="'+data+'" id="copyLink">'+
+                      '<span class="input-group-btn">'+
+                        '<button class="btn btn-default noRadius text-gray" type="button" onClick="goCopy()"><i class="fas fa-copy"></i></button>'+
+                      '</span>'+
+                    '</div>';
+        }  
+      },
+      { //QR Code
+        targets: 4,
+        data: 'qrcode', 
+        render: function (data, type, row, meta) {
+           return '<a class="text-sky" href="../Content/images/temp/qrcode.png" download="qrcode.png"><i class="fas fa-qrcode"></i>&nbsp下載QR碼</a>';
+        }   
+         
+      },
+      { //預覽
+        targets: 5,
+        className: 'text-center',
+        render: function (data, type, row, meta) {
+            return '<button class="btn btn-main-blue btn-xs noRadius"><i class="far fa-eye"></i></button>';
+        }  
+      },
+      { //編輯
+        targets: 6,
+        className: 'text-center',  
+        render: function (data, type, row, meta) {
+            return '<button class="btn btn-main-blue btn-xs noRadius"><i class="fas fa-pen"></i></button>';
+        } 
+      },   
+      { //刪除
+        targets: 7,
+        className: 'text-center',
+        render: function (data, type, row, meta) {
+             return '<button class="btn btn-danger btn-xs noRadius"><i class="far fa-trash-alt"></i></button>';
+        }
+      },
+    ],
+  
+  });   
+});
+</script> 
+<script>
+//以下↓ demo學生帳號建立頁面流程  可刪除   
+function goInsertQuiz(){ //新增測驗
+    alert('成功新增測驗。');
+    $('#modal-insertQuiz').modal('hide');
+    $('#quizList-table').DataTable().ajax.url('../Content/js/quizList-1.txt').load(); 
+}
+    
+function goCopy(){
+    var _copy = $('#copyLink');
+    _copy.select();
+    document.execCommand('Copy');
+    $('body').append('<div class="copyMsg"><span>連結已複製</span></div>');
+    
+    var interval = setInterval(function() {
+        $('.copyMsg').remove();
+    }, 3000);
+}    
+</script>
+</body>
+</html>

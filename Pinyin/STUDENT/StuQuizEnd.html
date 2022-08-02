@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SmartPinyin中文智能聽說系統-拼音">
+    <meta name="author"
+        content="SmartPinyin中文智能聽說系統-拼音, National Taiwan Normal University, NTNU, College of Education e-Learning Lab. NTNU">
+    <title>SmartPinyin中文智能聽說系統-拼音</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../Content/images/SP.ico">
+    <link rel="stylesheet" type="text/css" href="../Content/css/bootstrap-lg.min.css">
+    <link rel="stylesheet" type="text/css" href="../Content/css/ie10-viewport-bug-workaround.css">
+    <link rel="stylesheet" type="text/css" href="../Content/widgets/fontawesome-free-5.15.3-web/css/all.css">
+
+    <!-- this page widgets CSS -->
+    <!-- bootstrap-fileinput -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../Content/widgets/bootstrap-fileinput-master/css/fileinput-K.css">
+    <!-- bs-stepper -->
+    <link rel="stylesheet" type="text/css" href="../Content/widgets/bs-stepper-master/src/css/bs-stepper-SP.css">
+    <!-- datatables -->
+    <link rel="stylesheet" type="text/css" href="../Content/widgets/DataTables/datatables.min.css">
+
+    <!-- my core CSS -->
+    <link rel="stylesheet" type="text/css" href="../Content/css/SPstyles.css">
+</head>
+
+<body>
+    <header>
+      </header>
+    <!-- ------- ------- ------- ------- ------- ------- ------- -->
+    <main>
+        <!-- page-banner start -->
+        <div class="page-banner classMgt">
+            <div class="container-fluid">
+                <div class="page-banner__text">
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-12 col-xl-10 col-xl-offset-1">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h2>測驗畫面</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- page-banner end -->
+
+        <!--search-panel start-->
+        <div class="search-panel">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-lg-12 col-xl-10 col-xl-offset-1">
+                        <div>姓名：小明</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--search-panel end-->
+
+        <!--測驗清單 start-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-lg-12 col-xl-10 col-xl-offset-1">
+
+                    <!--student-quiz start-->
+                    <div class="student-quiz">
+                        <div class="student-quiz-title submit-answer">
+                            您已提交答案
+                        </div>
+                        <div class="student-quiz-button">
+                            <a href="../oldweb/paper_customTest_simple.html" class="btn btn-main-purple">查看成績</a>
+                          </div>
+                    </div>
+                    <!--student-quiz end-->
+                </div>
+                <!-- 右邊內容end -->
+            </div>
+        </div>
+        <!--測驗清單 end-->
+    </main>
+    <!-- ------- ------- ------- ------- ------- ------- ------- -->
+    <!-- ------- ------- ------- ------- ------- ------- ------- -->
+    <!-- ------- ------- ------- ------- ------- ------- ------- -->
+    <script src="../Script/jquery.min.js"></script>
+    <script src="../Script/bootstrap.min.js"></script>
+    <script src="../Script/ie10-viewport-bug-workaround.js"></script>
+    <!-- widgets js -->
+    <!--datatables-->
+    <script src="../Content/widgets/DataTables/datatables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //nowPage (此頁必留)
+            // $('.navTab-quiz').addClass('active');
+            $('header').load('header.html', function () {
+                // $('.navTab-quiz').addClass('active'); //nowPage
+            });
+        });
+    </script>
+
+</body>
+
+</html>

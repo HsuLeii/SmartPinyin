@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+@import "base/color";
+@import "base/stu-color";
+@import "base/reset";
+@import "base/lang";
+
+@import "master/header";
+@import "master/footer";
+
+@import "mixins/buttons";
+@import "mixins/icheckColor";
+@import "mixins/linkeffect";
+
+@import "mend/a";
+@import "mend/btn";
+@import "mend/container";
+@import "mend/custom-i";
+@import "mend/embed";
+@import "mend/flex";
+@import "mend/form";
+@import "mend/grid";
+@import "mend/jumbotron";
+@import "mend/modal";
+@import "mend/responsive";
+@import "mend/spacing";
+
+@import "modules/Dradio";
+@import "modules/editUnit-icon";
+@import "modules/fileinput";
+@import "modules/icheck";
+@import "modules/iconSVG";
+@import "modules/keyframes";
+@import "modules/link";
+@import "modules/more";
+@import "modules/navbar-toggle";
+@import "modules/page-banner";
+@import "modules/page-banner";
+@import "modules/rwd-table";
+@import "modules/search-panel";
+@import "modules/show_hide_password";
+@import "modules/sidebar-right";
+@import "modules/sidebar";
+@import "modules/table";
+@import "modules/ui";
+@import "modules/pagination";
+@import "modules/datatables";
+
+/*pages promote*/
+@import "pages/index";
+@import "pages/login";
+@import "pages/register";
+@import "pages/agreement";
+
+/*pages teacher*/
+@import "pages/Tindex";
+@import "pages/classMgt";
+@import "pages/quiz";
+
+/*pages student*/
+@import "pages/StuQuiz";
+
+

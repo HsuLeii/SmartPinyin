@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>測驗報表|中文智能聽說系統-拼音</title>
+<link href="css/paper.css" rel="stylesheet" type="text/css">
+
+<!-- fancybox --> 
+<script src="js/jquery.min.js">
+</script><script src="js/fancybox/jquery.fancybox.js"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox.css">
+<script>
+$(document).ready(function() {
+	$('.fancybox').fancybox({
+		width:600,
+        height:140,
+		autoSize: false
+	});
+});
+</script> 
+<!-- -->
+</head>
+
+<body>
+<div class="paper">
+  <h1>中文智能聽說系統-拼音</h1>
+  <div class="forH2Bg">
+    <h2 class="speaking">測驗報表</h2>
+  </div>
+  <div class="block1">
+    <div class="block2">
+      <div class="block3"> 
+        <!-- content START --> 
+        <!--基本資料 start-->
+        <div class="paperData">
+          <table>
+            <tr>
+              <td>姓名：海倫</td>
+              <td>測驗名稱：測驗1</td>
+              <td>測驗時間：2022/04/07</td>
+            </tr>
+          </table>
+        </div>
+        <!--基本資料 end--> 
+        
+        <!-- 發音測驗結果 start -->
+        <div class="SpeakingResult block4">
+          <div class="block4Title">發音測驗結果</div>
+          <table class="table2">
+            <thead>
+              <tr class="shortTh">
+                <th width="10%">題號</th>
+                <th width="30%">題目</th>
+                <th width="30%">題目拼音</th>
+                <th width="30%">結果</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1</th>
+                <td>郵局</td>
+                <td>you2ju2</td>
+                <td class="goodBg"><img src="images/paper/good.png" alt="good" width="89" height="50"></td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>郵局</td>
+                <td>you2ju2</td>
+                <td class="goodBg"><img src="images/paper/good.png" alt="good" width="89" height="50"></td>
+              </tr>
+              <tr>
+                <th>3</th>
+                <td>郵局</td>
+                <td>you2ju2</td>
+                <td class="goodBg"></td>
+              </tr>
+              <tr>
+                <th>4</th>
+                <td>郵局</td>
+                <td>you2ju2</td>
+                <td class="goodBg"></td>
+              </tr>
+              <tr>
+                <th>5</th>
+                <td>郵局</td>
+                <td>you2ju2</td>
+                <td class="goodBg"><img src="images/paper/good.png" alt="good" width="89" height="50"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- 發音測驗結果 end --> 
+          <br><br>
+        <!-- 聽力測驗結果 start -->
+        <div class="SpeakingResult block4">
+          <div class="block4Title">聽力測驗結果</div>
+          <table class="table2">
+            <thead>
+              <tr class="shortTh">
+                <th width="10%">題號</th>
+                <th width="30%">題目</th>
+                <th width="30%">答案</th>
+                <th width="30%">結果</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1</th>
+                <td>you2ju2</td>
+                <td>A</td>
+                <td class="goodBg"><img src="images/paper/good.png" alt="good" width="89" height="50"></td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>you2ju2</td>
+                <td>A</td>
+                <td class="goodBg"><img src="images/paper/good.png" alt="good" width="89" height="50"></td>
+              </tr>
+              <tr>
+                <th>3</th>
+                <td>you2ju2</td>
+                <td>A</td>
+                <td class="goodBg"></td>
+              </tr>
+              <tr>
+                <th>4</th>
+                <td>you2ju2</td>
+                <td>A</td>
+                <td class="goodBg"><img src="images/paper/good.png" alt="good" width="89" height="50"></td>
+              </tr>
+              <tr>
+                <th>5</th>
+                <td>you2ju2</td>
+                <td>A</td>
+                <td class="goodBg"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- 聽力測驗結果 end --> 
+          <br><br>
+
+      </div>
+      <!-- content END --> 
+    </div>
+  </div>
+  <div class="footer">
+    <div>
+      <div>國立臺灣師範大學心測中心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;版權所有 ▪ 翻印必究</div>
+    </div>
+  </div>
+</div>
+
+<!-- moreContent START-->
+<div id="moreContent" style="display:none;">
+  <table width="100%" border="0">
+    <tr>
+      <th colspan="2"><div class="block4Title">待加強</div></th>
+    </tr>
+    <tr>
+      <td width="10%" align="center">韻母</td>
+      <td class="note"><div>a, ai, an, ang, ao, e, ei, en, eng, er, i, -i, ia, ian, iang, iao, ie, in, ing, iong, iu, o, ong, ou, u, ua, uai, uan, uang, ui, un, uo, u, uan, ue, un</div></td>
+    </tr>
+  </table>
+</div>
+<!-- moreContent END --> 
+
+<script>
+$(function(){
+    //for print：第一頁分頁外框
+    $('.scoreChart + br').after('<div class="print-footer forPage"><div><div></div></div></div>'+
+                                '<div class="print-header forPage"><div><div></div></div></div>');
+    //口說列印時 隱藏您的發音、正確發音
+    $('.SpeakingResult').addClass('hidePronounce');
+    //for print：.SpeakingResult table分頁外框
+    var _totalNum = $('.table2 tbody tr').length;
+    $('.table2 tbody tr:nth-child(20n)').each(function(){
+        var _qNum = $(this).index()+1;
+        if(_qNum != _totalNum){
+            $(this).addClass('print-separatePage');
+        }
+    });
+    $('.print-separatePage').after('<div class="print-footer forTable"><div><div><div><div></div></div></div></div></div>'+
+                                                                '<div class="print-header forTable"><div><div><div><div></div></div></div></div></div>'+
+                                                                '<div class="print-header-thead"><span>題號</span><span>題目</span><span>您的發音</span><span>正確發音</span><span>聲母辨識</span><span>韻母辨識</span><span>聲調辨識</span></div>'); 
+}); 
+</script>
+</body>
+</html>

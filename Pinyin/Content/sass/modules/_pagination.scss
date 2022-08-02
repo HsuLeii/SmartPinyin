@@ -1,0 +1,31 @@
+.pagination{
+    font-size: .8rem;
+    > .paginate_button{ 
+        >a, >span{
+            margin: 0 5px;
+            color: $color-default-black;
+        }
+        >a:hover{
+            background-color: lighten($color-main-sky, 50%);
+            color: $color-default-black;    
+        }
+    }
+    > .paginate_button.disabled{
+        >a, >span{
+            border-color: transparent !important;
+            background-color: transparent;
+            color: lighten($color-default-gray, 10%);
+            &:hover{
+                background-color: transparent;
+            }
+        }
+    }
+    > .paginate_button.active{
+         >a, >span{
+            color: $color-main-blue;
+            background-color: transparent;
+            border-color: transparent;
+             font-weight: 500;
+        }   
+    }
+}

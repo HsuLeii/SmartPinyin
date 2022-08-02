@@ -1,0 +1,70 @@
+.quiz.step2{
+    .nav.nav-tabs{
+        display: table; 
+        margin: 0 auto;
+        border-bottom-color: transparent;
+        li{
+            margin-bottom: -2px; 
+            a{
+                color: $color-default-gray;
+                border-bottom: 1px solid #ddd;
+            }
+            &.active a{
+                color: $color-default-black;
+                border-bottom: 1px solid transparent;
+            }
+        }
+        li.speak a{
+            background-color: lighten($color-main-yellow, 40%);
+            &:hover{background-color:lighten($color-main-yellow, 35%);} 
+        }
+        li.speak.active a, li.speak.active a:hover{
+            background-color: lighten($color-main-yellow, 40%);
+        }
+        li.listen a{
+            background-color: lighten($color-main-sky, 50%);
+            &:hover{background-color: lighten($color-main-sky, 45%); } 
+        }
+        li.listen.active a, li.listen.active a:hover{
+            background-color: lighten($color-main-sky, 50%);
+        }
+    }
+    .tab-content{
+        margin: 0 -15px -15px -15px;
+        border-top: 1px solid #ddd;
+        .tab-pane{
+            padding: 15px;
+        }
+        .tab-pane.speak {
+            background-color: lighten($color-main-yellow, 40%);
+        }
+        .tab-pane.listen {
+            background-color: lighten($color-main-sky, 50%);
+        }
+    }
+}
+
+.modal-insertQuiz{
+    .modal-footer{
+        .checkbox{
+            vertical-align: middle;
+            margin-top: 5px !important;
+        }
+    }
+}
+
+.copyMsg{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right:0;
+    text-align: center;
+    >span{
+        padding: 5px 15px 15px 15px;
+        background-color: rgba(0,0,0, .75);
+        color: #FFF;
+        font-size: .8rem;
+        border-radius: 6px 6px 0 0;
+    }
+}

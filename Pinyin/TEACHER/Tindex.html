@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="zh-tw">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="SmartPinyin中文智能聽說系統-拼音">
+<meta name="author" content="SmartPinyin中文智能聽說系統-拼音, National Taiwan Normal University, NTNU, College of Education e-Learning Lab. NTNU">
+<title>SmartPinyin中文智能聽說系統-拼音</title>
+<link rel="shortcut icon" type="image/x-icon" href="../Content/images/SP.ico">
+<link rel="stylesheet" type="text/css" href="../Content/css/bootstrap-lg.min.css">
+<link rel="stylesheet" type="text/css" href="../Content/css/ie10-viewport-bug-workaround.css">
+<link rel="stylesheet" type="text/css" href="../Content/widgets/fontawesome-free-5.15.3-web/css/all.css">
+
+<!-- this page widgets CSS --> 
+<!-- datatables -->
+<link rel="stylesheet" type="text/css" href="../Content/widgets/DataTables/datatables.min.css">
+
+<!-- my core CSS -->
+
+<link rel="stylesheet" type="text/css" href="../Content/css/SPstyles.css">
+</head>
+<body>
+<header>
+</header>
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<main>     
+  <!-- 基本資料 start -->
+  <div class="Tdata">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 col-xl-10 col-xl-offset-1 flex-center-sm">
+          <div class="col-xs-12 col-sm-3 col-lg-2">
+            <div class="Tdata__photo"> 張花花在這 
+              <!--<img src="../Content/images/temp/team-Tphoto.jpg">--> 
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-9 col-lg-10">
+            <div class="Tdata__data">
+              <h2>教師基本資料
+                <button type="button" class="btn btn-main-blue pull-right Tdata__btn" data-toggle="modal" data-target="#modal-editTData"> 編輯基本資料 </button>
+              </h2>
+              <div class="form-horizontal">
+                <div class="form-group">
+                  <div class="col-sm-2 col-lg-1 control-label pr-0"> 帳號 </div>
+                  <div class="col-sm-10 col-lg-11">
+                    <label>flower23456flower23456@teacher.net</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-2 col-lg-1 control-label pr-0"> 姓名 </div>
+                  <div class="col-sm-10 col-lg-11">
+                    <label>張花花</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-2 col-lg-1 control-label pr-0"> 任教學校 </div>
+                  <div class="col-sm-10 col-lg-11">
+                    <label>UCLA</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 基本資料 end --> 
+  <!--您管理的班級資料 start -->
+  <div class="mgtClass py-4">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 col-xl-10 col-xl-offset-1">
+          <h2 class="base-h2-text-black">您管理的班級資料</h2>
+          <div class="TindexBlock noData">
+            <h3 class="text-red text-center">你尚無班級管理資料 </h3>
+            <div class="text-center"><a href="StuAcct.html" class="btn btn-lg btn-blueGradual btn-radius50">建立學生資料&nbsp;<i class="fas fa-chevron-right"></i></a></div>
+          </div>
+          <div class="TindexBlock hasData"> 
+            <!--table start-->
+            <table class="table table-bordered table-hover table-style-default table-bg-white table-thead-gradual table-minWidth-sm" id="mgtClass-table">
+              <thead>
+                <tr>
+                  <th style="display:none;">ID</th>
+                  <th>學校</th>
+                  <th>年度</th>
+                  <th>課程名稱/班級</th>
+                  <th>人數</th>
+                  <th>工具列</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="display:none;">1</td>
+                  <td>UCLA</td>
+                  <td>2021</td>
+                  <td>初級華語初級華語初級華語初級華語</td>
+                  <td>1</td>
+                  <td><button type="button" class="btn btn-main-blue btn-xs" data-toggle="modal" data-target="#modal-viewClass">查看班級</button></td>
+                </tr>
+                <tr>
+                  <td style="display:none;">2</td>
+                  <td>UCLA</td>
+                  <td>2021</td>
+                  <td>華語生活會話</td>
+                  <td>2</td>
+                  <td><button type="button" class="btn btn-main-blue btn-xs" data-toggle="modal" data-target="#modal-viewClass">查看班級</button></td>
+                </tr>
+                <tr>
+                  <td style="display:none;">3</td>
+                  <td>UCLA</td>
+                  <td>2021</td>
+                  <td>華語生活會話</td>
+                  <td>2</td>
+                  <td><button type="button" class="btn btn-main-blue btn-xs" data-toggle="modal" data-target="#modal-viewClass">查看班級</button></td>
+                </tr>
+                <tr>
+                  <td style="display:none;">4</td>
+                  <td>UCLA</td>
+                  <td>2021</td>
+                  <td>華語生活會話</td>
+                  <td>2</td>
+                  <td><button type="button" class="btn btn-main-blue btn-xs" data-toggle="modal" data-target="#modal-viewClass">查看班級</button></td>
+                </tr>
+                <tr>
+                  <td style="display:none;">5</td>
+                  <td>UCLA</td>
+                  <td>2021</td>
+                  <td>華語生活會話</td>
+                  <td>2</td>
+                  <td><button type="button" class="btn btn-main-blue btn-xs" data-toggle="modal" data-target="#modal-viewClass">查看班級</button></td>
+                </tr>
+                <tr>
+                  <td style="display:none;">6</td>
+                  <td>UCLA</td>
+                  <td>2021</td>
+                  <td>華語生活會話</td>
+                  <td>2</td>
+                  <td><button type="button" class="btn btn-main-blue btn-xs" data-toggle="modal" data-target="#modal-viewClass">查看班級</button></td>
+                </tr>
+                <tr>
+                  <td style="display:none;">1</td>
+                  <td>UCLA</td>
+                  <td>2021</td>
+                  <td>初級華語</td>
+                  <td>1</td>
+                  <td><button type="button" class="btn btn-main-blue btn-xs" data-toggle="modal" data-target="#modal-viewClass">查看班級</button></td>
+                </tr>
+                <tr>
+                  <td style="display:none;">2</td>
+                  <td>UCLA</td>
+                  <td>2021</td>
+                  <td>華語生活會話</td>
+                  <td>2</td>
+                  <td><button type="button" class="btn btn-main-blue btn-xs" data-toggle="modal" data-target="#modal-viewClass">查看班級</button></td>
+                </tr>
+                <tr>
+                  <td style="display:none;">3</td>
+                  <td>UCLA</td>
+                  <td>2021</td>
+                  <td>華語生活會話</td>
+                  <td>2</td>
+                  <td><button type="button" class="btn btn-main-blue btn-xs" data-toggle="modal" data-target="#modal-viewClass">查看班級</button></td>
+                </tr>
+                <tr>
+                  <td style="display:none;">4</td>
+                  <td>UCLA</td>
+                  <td>2021</td>
+                  <td>華語生活會話</td>
+                  <td>2</td>
+                  <td><button type="button" class="btn btn-main-blue btn-xs" data-toggle="modal" data-target="#modal-viewClass">查看班級</button></td>
+                </tr>
+                <tr>
+                  <td style="display:none;">5</td>
+                  <td>UCLA</td>
+                  <td>2021</td>
+                  <td>華語生活會話</td>
+                  <td>2</td>
+                  <td><button type="button" class="btn btn-main-blue btn-xs" data-toggle="modal" data-target="#modal-viewClass">查看班級</button></td>
+                </tr>
+                <tr>
+                  <td style="display:none;">6</td>
+                  <td>UCLA</td>
+                  <td>2021</td>
+                  <td>華語生活會話</td>
+                  <td>2</td>
+                  <td><button type="button" class="btn btn-main-blue btn-xs" data-toggle="modal" data-target="#modal-viewClass">查看班級</button></td>
+                </tr>
+                <tr>
+                  <td style="display:none;">1</td>
+                  <td>UCLA</td>
+                  <td>2021</td>
+                  <td>初級華語</td>
+                  <td>1</td>
+                  <td><button type="button" class="btn btn-main-blue btn-xs" data-toggle="modal" data-target="#modal-viewClass">查看班級</button></td>
+                </tr>
+                <tr>
+                  <td style="display:none;">2</td>
+                  <td>UCLA</td>
+                  <td>2021</td>
+                  <td>華語生活會話</td>
+                  <td>2</td>
+                  <td><button type="button" class="btn btn-main-blue btn-xs" data-toggle="modal" data-target="#modal-viewClass">查看班級</button></td>
+                </tr>
+                <tr>
+                  <td style="display:none;">3</td>
+                  <td>UCLA</td>
+                  <td>2021</td>
+                  <td>華語生活會話</td>
+                  <td>2</td>
+                  <td><button type="button" class="btn btn-main-blue btn-xs" data-toggle="modal" data-target="#modal-viewClass">查看班級</button></td>
+                </tr>
+                <tr>
+                  <td style="display:none;">4</td>
+                  <td>UCLA</td>
+                  <td>2021</td>
+                  <td>華語生活會話</td>
+                  <td>2</td>
+                  <td><button type="button" class="btn btn-main-blue btn-xs" data-toggle="modal" data-target="#modal-viewClass">查看班級</button></td>
+                </tr>
+                <tr>
+                  <td style="display:none;">5</td>
+                  <td>UCLA</td>
+                  <td>2021</td>
+                  <td>華語生活會話</td>
+                  <td>2</td>
+                  <td><button type="button" class="btn btn-main-blue btn-xs" data-toggle="modal" data-target="#modal-viewClass">查看班級</button></td>
+                </tr>
+                <tr>
+                  <td style="display:none;">6</td>
+                  <td>UCLA</td>
+                  <td>2021</td>
+                  <td>華語生活會話</td>
+                  <td>2</td>
+                  <td><button type="button" class="btn btn-main-blue btn-xs" data-toggle="modal" data-target="#modal-viewClass">查看班級</button></td>
+                </tr>
+              </tbody>
+            </table>
+            <!--table end--> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--您管理的班級資料 end --> 
+  <hr>
+  <!--成績查詢/學習檢視 start -->
+  <div class="scoreLearning py-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-lg-6 col-xl-5 col-xl-offset-1">
+          <h2 class="base-h2-text-black">近期學生成績</h2>
+          <div class="TindexBlock noData">
+            <div class="row">
+              <div class="col-sm-4 col-md-12 col-lg-4"><img src="../Content/images/Tindex/img-computer.png" class="img-responsive center-block" alt=""/></div>
+              <div class="col-sm-8 col-md-12 col-lg-8">
+                <h3 class="text-red">尚無學生成績資料</h3>
+                <p>可快速查看最近一周進行聽力或口說測驗的班級</p>
+              </div>
+            </div>
+          </div>
+          <div class="TindexBlock hasData">
+            <div> 
+              <!-- Nav tabs -->
+              <ul class="nav nav-pills Tindex-score__tab" role="tablist">
+                <li role="presentation" class="active"><a href="#listen" aria-controls="listen" role="tab" data-toggle="tab">聽力</a></li>
+                <li role="presentation"><a href="#speak" aria-controls="speak" role="tab" data-toggle="tab">口說</a></li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active fade in" id="listen">
+                  <div class="scoreLearning-item score">
+                    <div class="row">
+                      <div class="col-sm-8">
+                        <ul>
+                          <li><span>學校：</span>
+                            <label>UCLA</label>
+                          </li>
+                          <li><span>年度：</span>
+                            <label>2021</label>
+                          </li>
+                          <li><span>課程名稱/班級：</span>
+                            <label>華語生活會話</label>
+                          </li>
+                          <li><span>人數：</span>
+                            <label>10</label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <button type="button" class="btn btn-lg btn-block btn-bg-sky" data-toggle="modal" data-target="#modal-viewClass"><span>查看班級成績</span><i class="fas fa-chart-line"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="scoreLearning-item score">
+                    <div class="row">
+                      <div class="col-sm-8">
+                        <ul>
+                          <li><span>學校：</span>
+                            <label>UCLA</label>
+                          </li>
+                          <li><span>年度：</span>
+                            <label>2021</label>
+                          </li>
+                          <li><span>課程名稱/班級：</span>
+                            <label>華語生活會話華語生活會話華語生活會話</label>
+                          </li>
+                          <li><span>人數：</span>
+                            <label>10</label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <button type="button" class="btn btn-lg btn-block btn-bg-sky" data-toggle="modal" data-target="#modal-viewClass"><span>查看班級成績</span><i class="fas fa-chart-line"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="speak">
+                  <div class="scoreLearning-item score">
+                    <div class="row">
+                      <div class="col-sm-8">
+                        <ul>
+                          <li><span>學校：</span>
+                            <label>UCLA</label>
+                          </li>
+                          <li><span>年度：</span>
+                            <label>2020</label>
+                          </li>
+                          <li><span>課程名稱/班級：</span>
+                            <label>初級華語</label>
+                          </li>
+                          <li><span>人數：</span>
+                            <label>5</label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <button type="button" class="btn btn-lg btn-block btn-bg-yellow" data-toggle="modal" data-target="#modal-viewClass"><span>查看班級成績</span><i class="fas fa-chart-line"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="scoreLearning-item score">
+                    <div class="row">
+                      <div class="col-sm-8">
+                        <ul>
+                          <li><span>學校：</span>
+                            <label>UCLA</label>
+                          </li>
+                          <li><span>年度：</span>
+                            <label>2022</label>
+                          </li>
+                          <li><span>課程名稱/班級：</span>
+                            <label>初級華語</label>
+                          </li>
+                          <li><span>人數：</span>
+                            <label>1</label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <button type="button" class="btn btn-lg btn-block btn-bg-yellow" data-toggle="modal" data-target="#modal-viewClass"><span>查看班級成績</span><i class="fas fa-chart-line"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-5">
+          <h2 class="base-h2-text-black">學生學習狀態</h2>
+          <div class="TindexBlock noData">
+            <div class="row">
+              <div class="col-sm-4 col-md-12 col-lg-4"><img src="../Content/images/Tindex/img-books.png" class="img-responsive center-block" alt=""/></div>
+              <div class="col-sm-8 col-md-12 col-lg-8">
+                <h3 class="text-red">尚無學生學習資料</h3>
+                <p>可快速查看最近一周曾登入系統的班級</p>
+              </div>
+            </div>
+          </div>
+          <div class="TindexBlock hasData">
+            <div class="scoreLearning-item learning">
+              <div class="row">
+                <div class="col-sm-8">
+                  <ul>
+                    <li><span>學校：</span>
+                      <label>UCLA</label>
+                    </li>
+                    <li><span>年度：</span>
+                      <label>2021</label>
+                    </li>
+                    <li><span>課程名稱/班級：</span>
+                      <label>初級華語</label>
+                    </li>
+                    <li><span>人數：</span>
+                      <label>10</label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  <button type="button" class="btn btn-lg btn-block btn-bg-blue" data-toggle="modal" data-target="#modal-viewClass"><span>查看班級學習</span><i class="fas fa-clipboard-list"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="scoreLearning-item learning">
+              <div class="row">
+                <div class="col-sm-8">
+                  <ul>
+                    <li><span>學校：</span>
+                      <label>UCLA</label>
+                    </li>
+                    <li><span>年度：</span>
+                      <label>2021</label>
+                    </li>
+                    <li><span>課程名稱/班級：</span>
+                      <label>初級華語</label>
+                    </li>
+                    <li><span>人數：</span>
+                      <label>10</label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  <button type="button" class="btn btn-lg btn-block btn-bg-blue" data-toggle="modal" data-target="#modal-viewClass"><span>查看班級學習</span><i class="fas fa-clipboard-list"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--成績查詢/學習檢視 end --> 
+</main>
+
+<!-- Modal#modal-editTData start-->
+<div class="modal fade modal-style1" id="modal-editTData" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-horizontal form-style-1">
+          <div class="form-group">
+            <label for="" class="col-sm-3 control-label"><span class="text-red">*</span>帳號</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control noRadius input-lg" placeholder="請輸入信箱" value="flower23456flower23456@student.net" disabled>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="col-sm-3 control-label"><span class="text-red">*</span>密碼</label>
+            <div class="col-sm-8">
+              <div class="input-group show_hide_password">
+                <input type="password" class="form-control input-lg noRadius hidePD" id="" placeholder="請輸入密碼" value="00000000">
+                <div class="input-group-addon noRadius"> <a role="button"><i class="fas fa-eye-slash"></i></a> </div>
+              </div>
+            </div>
+            <div class="col-sm-8 col-sm-offset-3">
+              <div class="has-error help-block" style="display: none;">請輸入8~12為英數字混和的密碼。</div>
+              <!-- 建議搭配<div class="form-group has-error"> 或 <div class="col-sm-8 col-sm-offset-3 has-error"> --> 
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="col-sm-3 control-label"><span class="text-red">*</span>確認密碼</label>
+            <div class="col-sm-8">
+              <input type="password" class="form-control noRadius input-lg" placeholder="請再次輸入密碼">
+            </div>
+            <div class="col-sm-8 col-sm-offset-3">
+              <div class="help-block" style="display: none;">確認密碼與密碼需相同。</div>
+              <!-- 建議搭配<div class="form-group has-error"> 或 <div class="col-sm-8 col-sm-offset-3 has-error"> --> 
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="col-sm-3 control-label"><span class="text-red">*</span>名稱</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control noRadius input-lg" placeholder="請輸入您的名稱" value="張花花">
+            </div>
+            <div class="col-sm-8 col-sm-offset-3">
+              <div class="help-block" style="display: none;">名稱請勿超過x字。</div>
+              <!-- 建議搭配<div class="form-group has-error"> 或 <div class="col-sm-8 col-sm-offset-3 has-error"> --> 
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="col-sm-3 control-label"><span class="text-red">*</span>身份</label>
+            <div class="col-sm-8">
+              <div class="for-Dradio">
+                <div class="Dradio-main-purple radio-inline">
+                  <input type="radio" id="student" name="identity" disabled="">
+                  <label for="student">學生</label>
+                </div>
+                <div class="Dradio-main-purple radio-inline">
+                  <input type="radio" id="teacher" name="identity" checked="checked">
+                  <label for="teacher">老師</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8 col-sm-offset-3">
+              <div class="help-block" style="display: none;"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="col-sm-3 control-label"><span class="text-red">*</span>任教學校</label>
+            <div class="col-sm-8">
+              <div class="row">
+                <div class="col-sm-6 pr-sm-1">
+                  <input type="text" class="form-control noRadius input-lg" placeholder="國家" value="臺灣">
+                </div>
+                <div class="col-sm-6 pl-sm-1">
+                  <input type="text" class="form-control noRadius input-lg" placeholder="校名" value="國立臺灣師範大學">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8 col-sm-offset-3">
+              <div class="help-block" style="display: none;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-main-purple-white" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-main-purple">確定修改</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal#modal-editTData end--> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<script src="../Script/jquery.min.js"></script> 
+<script src="../Script/bootstrap.min.js"></script> 
+<script src="../Script/ie10-viewport-bug-workaround.js"></script> 
+<!-- widgets js --> 
+<!--密碼顯示/隱藏--> 
+<script src="../Content/js/show_hide_password.js"></script> 
+<!--datatables--> 
+<script src="../Content/widgets/DataTables/datatables.min.js"></script> 
+<script>
+$(document).ready(function() {
+	//nowPage (此頁必留)
+	$('.navTab-Tindex').addClass('active');
+    $('header').load('_header.html', function(){
+        $('.navTab-Tindex').addClass('active');//nowPage
+    });
+    
+    //datatables (請工程師依需求新增或改寫項目，勿修改樣式即可)  
+	$('#mgtClass-table').DataTable({
+		responsive: true,
+		searching: true,
+		pageLength: 4,
+		pagingType: "simple_numbers",
+        dom: '<"mgtClass-block"fr<"table-responsive"t>p>',
+        language: {
+            url: '../Content/widgets/DataTables/lang/Chinese-traditional.json'//工程師可依需求改寫或新增
+        }
+    });
+   
+    //demo 從[學生帳號管理]頁面連自此頁時，為有資料畫面(可刪除)
+    $search= document.location.search;
+    if($search=="?data=1"){
+        $('.TindexBlock.noData').hide();
+    }else{
+        $('.TindexBlock.hasData').hide();
+    }
+}); 
+</script>
+</body>
+</html>

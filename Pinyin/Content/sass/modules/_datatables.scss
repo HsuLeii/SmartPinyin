@@ -1,0 +1,78 @@
+.dataTables_wrapper{
+    .table-responsive{
+        table{
+            width: calc(100% - 1px) !important;
+        }
+    }    
+}
+table.dataTable{
+    box-sizing: border-box;
+    td{
+        word-break:break-all;
+        .form-control{
+            width: 100%;
+        }
+    }
+}
+
+
+
+table.dataTable thead>tr>th.sorting_asc, 
+table.dataTable thead>tr>th.sorting_desc, 
+table.dataTable thead>tr>th.sorting, 
+table.dataTable thead>tr>td.sorting_asc, 
+table.dataTable thead>tr>td.sorting_desc, 
+table.dataTable thead>tr>td.sorting {
+    padding-right: .4rem;
+}
+
+table.dataTable thead .sorting:after, 
+table.dataTable thead .sorting_asc:after, 
+table.dataTable thead .sorting_desc:after, 
+table.dataTable thead .sorting_asc_disabled:after, 
+table.dataTable thead .sorting_desc_disabled:after {
+    position: relative;
+    bottom:0;
+    right: 0;
+    left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+table.dataTable thead .sorting::after {
+    opacity: 0.2;
+}
+table.dataTable thead .sorting_asc:after {
+    color: $color-main-sky;
+}
+table.dataTable thead .sorting_desc:after {
+    color: $color-main-sky;
+}
+.table-bordered>thead>tr>th, 
+.table-bordered>thead>tr>td {
+    border-bottom-width: 1px;
+}
+
+/*with .table-thead-gradual*/
+table.dataTable.table-thead-gradual thead .sorting::after {
+    opacity: 0.75;
+}
+table.dataTable.table-thead-gradual thead .sorting_asc:after {
+    color: #FFF;
+    opacity: 0.95;
+}
+table.dataTable.table-thead-gradual thead .sorting_desc:after {
+    color: #FFF;
+    opacity: 0.95;
+}
+/*with .table-thead-gray*/
+table.dataTable.table-thead-gray thead .sorting::after {
+    opacity: 0.25;
+}
+table.dataTable.table-thead-gray thead .sorting_asc:after {
+    color: $color-default-gray;
+    opacity: 0.5;
+}
+table.dataTable.table-thead-gray thead .sorting_desc:after {
+    color: $color-default-gray;
+    opacity: 0.5;
+}

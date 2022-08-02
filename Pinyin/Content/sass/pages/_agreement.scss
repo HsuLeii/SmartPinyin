@@ -1,0 +1,113 @@
+.agreement{
+    h2 {
+        text-align: center;
+        img{
+            margin: 0 auto;
+            width: 80%;
+            height: auto;
+            @media screen and (min-width: 576px) {
+            width: 60%;    
+            }
+            @media screen and (min-width: 992px) {
+            width: 50%;    
+            }
+            @media screen and (min-width: 1200px) {
+            width: 40%;    
+            }
+        }
+    }
+    .agreement-block{
+        border: 1px solid #ddd;
+        background-color: #FFF;
+        padding: 0px 15px;
+        font-size: 0.85rem;
+        line-height: 1.6;
+        min-height: 200px;
+        height: auto;
+        overflow: auto; 
+        @media screen and (min-width: 992px) {
+        padding: 0px 30px;    
+        }
+        &::-webkit-scrollbar{ width: 10px; background-color: transparent;}
+        &::-moz-scrollbar{ width: 10px; background-color: transparent;}
+        &::-ms-scrollbar{ width: 10px; background-color: transparent;}
+        &::-o-scrollbar{ width: 10px; background-color: transparent;}
+        &::scrollbar{ width: 10px; background-color: transparent;}
+        
+        &::-webkit-scrollbar-track { background-color: #ccc;} 
+        &::-moz-scrollbar-track { background-color: #ccc;} 
+        &::-ms-scrollbar-track { background-color: #ccc;} 
+        &::-o-scrollbar-track { background-color: #ccc;} 
+        &::scrollbar-track { background-color: #ccc;} 
+        
+        &::-webkit-scrollbar-thumb { background-color: $color-main-purple; border-radius: 10px;} 
+        &::-moz-scrollbar-thumb { background-color: $color-main-purple; border-radius: 10px;}
+        &::-ms-scrollbar-thumb { background-color: $color-main-purple; border-radius: 10px;}
+        &::-o-scrollbar-thumb { background-color: $color-main-purple; border-radius: 10px;}
+        &::scrollbar-thumb { background-color: $color-main-purple; border-radius: 10px;}
+        
+        &::-webkit-scrollbar-thumb:hover { background-color: darken($color-main-purple, 10%); }
+        &::-moz-scrollbar-thumb:hover { background-color: darken($color-main-purple, 10%); }
+        &::-ms-scrollbar-thumb:hover { background-color: darken($color-main-purple, 10%); }
+        &::-o-scrollbar-thumb:hover { background-color: darken($color-main-purple, 10%); }
+        &::scrollbar-thumb:hover { background-color: darken($color-main-purple, 10%); }    
+    }
+    .agreement-tools{ 
+        .checkbox{
+            label{
+                font-size:0.85em;
+             }
+        }
+        .btn{
+            margin: 5px 10px;
+        }
+    }
+    .tooltip-inner{
+        font-size: .8rem;
+    }
+}
+
+.agreement{
+    .agreement-block{
+        h4{
+            margin-top: 1em*1.6*1.5;  
+            margin-bottom: 1em*0.8;
+        }
+        ul{
+            list-style: none;
+            li{
+                list-style: none;
+                padding-left: 1.0em;
+                text-indent: -1.0em;
+                margin-bottom: 1em*0.8;
+                
+                >ul{
+                    padding: 0;
+                    >li{
+                        margin-bottom: 0;
+                        padding-left: 2.3em;
+                        text-indent: -2.3em;
+                    }
+                }
+            }
+        }
+        a.text-blue{
+            text-decoration: none;
+            color: $color-main-blue;
+            box-shadow: 0 1px $color-main-blue;
+            &:hover{
+                color: darken($color-main-blue, 10%);
+                box-shadow: 0 1px darken($color-main-blue, 10%);
+            }
+        }
+        a.text-sky{
+            text-decoration: none;
+            color: $color-main-sky;
+            box-shadow: 0 1px $color-main-sky;
+            &:hover{
+                color: $color-main-blue;
+                box-shadow: 0 1px $color-main-blue;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.page-banner{
+	background-color: $color-main-purple;
+    background-image: url("../images/navi-main-line.png");
+	background-repeat:repeat-y;
+	background-size:100% 100%;
+	background-position:center center;
+	> [class*="container"]{ 
+		position:relative;
+		.page-banner__text{
+			color:#FFF;
+			min-height:calc(1.4rem + 20px + 10px + 10px);
+			text-align:center;
+			display: table;
+			width:100%;
+			> div{ 
+				display: table-cell;
+				vertical-align:middle;
+			}
+			h2{
+				font-size:1.4rem;
+				font-weight:400;
+				text-align:left;
+                margin-top: 20px;
+                margin-bottom: 20px;
+			}
+			p {
+				text-align:left;
+			}
+		}
+	}
+}
+

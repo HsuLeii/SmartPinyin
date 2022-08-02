@@ -1,0 +1,267 @@
+.Tdata{
+	border-bottom:1px solid #ddd;
+	padding:1.5rem 0 1.5rem 0;
+	background-color: #FFF;
+	.Tdata__photo{
+		width:120px;
+		height:120px;
+		border-radius:100%;
+		border:1px solid #ddd;
+		background-color:$color-main-purple;
+		color:#FFF;
+		font-size:30px;
+		font-weight:500;
+		letter-spacing:.1em;
+		text-align:center;
+		line-height:120px;
+		overflow:hidden;
+		margin:0 0 1rem 0;
+		@media screen and (min-width: 768px) {
+		margin:1.5rem auto 1.5rem auto;	
+		}
+		> img{
+			display:block;
+			min-width:100%;
+			min-height:100%;
+			width:100%;
+			height:100%;
+			max-width:100%;
+			max-height:100%;
+		}
+	}
+	.Tdata__data{
+		h2{ 
+			font-size:1.1rem;
+			font-weight:400;
+			margin-top:0;
+			margin-bottom:1rem;
+		}
+		.form-group{
+			font-size:.85rem;
+			margin-bottom: .5rem;
+			.control-label{
+				text-align:left;
+				padding-top:0;
+				font-weight: 400;
+			}
+			label{
+				word-wrap:break-word;
+				@media screen and (max-width: 767px) {
+					display:inline-block;
+					padding-left:2rem;
+				}
+			}
+		}
+		.Tdata__btn{
+            border-radius: 50px;
+			@media screen and (max-width: 374px) {
+				margin-right:-15px;
+				margin-top:-.25rem;
+			}
+		}
+	}
+}
+
+.TindexBlock{
+    min-height: 300px;
+    h3{
+        margin-bottom: 20px;
+        white-space: nowrap;
+    }
+    &.noData{
+        background-color: #FFF;
+        border:1px solid #ddd;
+    }
+    &.hasData{
+        background-color: transparent;
+        border:1px solid transparent;
+        min-height: auto;
+        height: auto;
+    }
+}
+
+.mgtClass{
+    .TindexBlock{
+        &.noData{
+            background-image: url("../images/Tindex/img-teacher-inLeft.png"), url("../images/Tindex/img-student-inRight.png");
+            background-repeat: no-repeat, no-repeat;
+            background-position: left bottom, right bottom;
+            background-size: 50% auto, 50% auto;
+            @media screen and (min-width: 768px) {
+            background-size: 45% auto, 45% auto;    
+            }
+            @media screen and (min-width: 1200px) {
+            background-size: auto auto, auto auto;    
+            }
+        }
+        h3{
+            margin-top: 70px;
+            @media screen and (min-width: 1200px) {
+            margin-top: 100px;    
+            }
+        }
+        .btn-mgtClass{
+            border-radius: 50px;
+            .fa-chevron-right{
+                border: 2px solid #FFF;
+                width: 1.5rem;
+                height: 1.5rem; 
+                line-height: calc(1.5rem - 4px);
+                border-radius: 100%;
+            }
+        }
+    }
+    .mgtClass-block{ 
+     .dataTables_filter{ 
+            padding-bottom: 10px;
+            text-align: right;
+            @media screen and (min-width: 540px) {
+            height: 47px;
+            margin-top: -47px - 1px;
+            }
+            label{
+                font-size: .85rem;
+            }
+            .form-control{
+                border-radius:  0;
+            }
+        }
+       .table{
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        
+        .dataTables_paginate{
+            background-color: #f7f8f8;
+            text-align: center;
+            padding-top: 10px; 
+        }
+    }
+    .mgtClass-pagination{
+        border-top: 1px solid #ddd;
+        background-color: #f7f8f8;
+        margin:0  -1px -1px -1px;
+        
+    }
+}
+.scoreLearning{
+    .TindexBlock{
+        &.noData{
+            padding: 50px;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+            @media screen and (min-width: 1200px) {
+                >.row{
+                    display: flex;
+                    align-items: center; 
+                    justify-content: center;
+                }
+            }
+        }
+        &.hasData{
+            padding:0px;
+        }
+    }
+}
+
+.btn-blueGradual{
+    background-image: url("../images/index/banner-trial-bg.png");
+    background-repeat: repeat-y;
+    background-size: 100% 100%; 
+    border: none;
+    color: #FFF;
+    &:hover{
+        position: relative;
+        background-image: url("../images/navi-main-line.png");
+        color: #FFF;
+    }
+} 
+.btn-radius50{
+    border-radius: 50px;  
+}
+.btn-blueGradual.btn-radius50{
+    &:hover{
+        position: relative;
+        &::after{
+            border-radius: 50px; 
+        }
+    }
+}
+
+.Tindex-score__tab{/* background-color: rgba(255,0,4, .1);*/
+    text-align: left;
+    margin-top: -55px;
+    li{
+        float: right;
+        a{
+            background-color: #999;
+            font-size: .85rem;
+            padding: 5px 10px;
+            margin: 10px 0px 10px 10px;
+            color: #fff;
+            &:hover{
+               background-color: #666;
+            }
+        }
+    }
+    li.active{
+        a[href="#listen"]{
+            background-image: url("../images/Tindex/btn-bg-sky.png");
+        }
+        a[href="#speak"]{
+            background-image: url("../images/Tindex/btn-bg-yellow.png");
+        }
+    }
+}
+.scoreLearning-item{
+    background-color: #FFF;
+    border: 1px solid #ddd;
+    font-size: .85rem;
+    padding: 15px;
+    margin-bottom: 15px;
+    ul{
+        margin: 0;
+        padding: 0;
+        li{
+            list-style: none;
+            list-style-position: inside;
+            width: 100%;
+            white-space:nowrap; 
+            overflow:hidden;
+            text-overflow:ellipsis;
+            >span{ 
+                color: $color-default-black;
+                font-weight: 400;
+                display: inline-block;
+            }
+            >label{
+                color: $color-default-gray;
+            }
+        }
+    }
+    .btn{
+        white-space: pre-line !important;
+        font-size: 1rem;
+        font-weight: 400;
+        position: relative;
+        overflow: hidden;
+        @media screen and (min-width: 768px) {
+        min-height: .85rem*1.5*4;    
+        }
+        >span{
+            position: relative;
+            z-index: 2;
+        }
+        >i{
+            position: absolute;
+            bottom:-5px;
+            left: 0;
+            color: rgba(255,255,255, .25);
+            font-size: .85rem*1.5*3;
+            z-index: 1;
+            transform:rotate(-15deg);
+            text-shadow: none;
+        }
+    }   
+}
