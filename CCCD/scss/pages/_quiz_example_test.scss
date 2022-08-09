@@ -9,10 +9,11 @@ main {
         }
 
         .topic_area {
+            border: 2px solid $color-main;
+
             .topic {
                 display: flex;
                 margin-bottom: 20px;
-                border: 2px solid $color-main;
                 border-radius: 10px;
                 padding: 20px;
 
@@ -124,7 +125,7 @@ main {
         .next_page{
             display: flex;
             justify-content: center;
-            margin: 30px auto 0px;
+            margin: 30px auto;
 
             svg{
                 background-color: $color-main;
@@ -164,9 +165,7 @@ main {
     main {
         .answer_area {
             .topic_area {
-                .topic {
-                    border: 4px solid $color-main;
-                }
+                border: 4px solid $color-main;
 
                 .answer_list {
                     padding-left: 31.23px;
