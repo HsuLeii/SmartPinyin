@@ -871,6 +871,8 @@ main .answer_area .description_area .description_area_instructions {
 
 main .answer_area .topic_area {
   border: 2px solid #552b8d;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 main .answer_area .topic_area .topic {
@@ -878,8 +880,6 @@ main .answer_area .topic_area .topic {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
-  border-radius: 10px;
-  padding: 20px;
 }
 
 main .answer_area .topic_area .topic .topic_number {

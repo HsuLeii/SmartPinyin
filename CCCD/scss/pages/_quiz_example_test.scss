@@ -10,12 +10,12 @@ main {
 
         .topic_area {
             border: 2px solid $color-main;
+            border-radius: 10px;
+            padding: 20px;
 
             .topic {
                 display: flex;
                 margin-bottom: 20px;
-                border-radius: 10px;
-                padding: 20px;
 
                 .topic_number {
                     margin-right: 10px;
