@@ -658,6 +658,7 @@ main .quiz_area .answer_area .topic_area.multiple_topics_area .subtopic_number {
 main .quiz_area .answer_area .topic_area.multiple_topics_area .answer_list {
   width: 100%;
   max-width: calc(100% - 31.41px);
+  padding-left: 10px;
 }
 
 @media screen and (min-width: 768px) {
