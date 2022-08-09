@@ -51,6 +51,11 @@ main {
                         margin-left: 0;
                         margin-right: 5px;
                         border: 1px solid $color-default-gray;
+                        cursor: pointer;
+
+                        &~label {
+                            cursor: pointer;
+                        }
 
                         &:checked {
                             background: radial-gradient($color-main 0%, $color-main 40%, transparent 50%, transparent);
@@ -72,8 +77,12 @@ main {
                         &[disabled],
                         &:disabled{
                             opacity: 1.0;
+                            cursor: auto;
                             ~.form-check-label{
                                 opacity: 1.0;
+                            }
+                            ~label {
+                                cursor: auto;
                             }
                         }
                     }

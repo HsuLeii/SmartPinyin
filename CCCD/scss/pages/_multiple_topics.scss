@@ -1,0 +1,50 @@
+main {
+  .quiz_area {
+    .answer_area {
+      .topic_area{
+        &.multiple_topics_area{
+            display: flex;
+            flex-wrap: wrap;
+
+            .topic{
+                width: 100%;
+            }
+            .subtopic_number{
+                padding: 12px 0px;
+            }
+
+            .answer_list{
+                width: 100%;
+                max-width: calc(100% - 31.41px);
+            }
+        }
+      }
+    }
+  }
+}
+
+
+
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 768px) {
+    main {
+        .quiz_area {
+          .answer_area {
+            .topic_area{
+              &.multiple_topics_area{
+                  .subtopic_number{
+                      padding: 14px 0px;
+                  }
+              }
+            }
+          }
+        }
+      }
+}
+
+@media screen and (min-width: 992px) {}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1400px) {}

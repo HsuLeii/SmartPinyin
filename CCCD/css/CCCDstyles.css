@@ -639,6 +639,34 @@ main .player_area input[name="soundRange"]::-webkit-slider-runnable-track {
   }
 }
 
+main .quiz_area .answer_area .topic_area.multiple_topics_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .quiz_area .answer_area .topic_area.multiple_topics_area .topic {
+  width: 100%;
+}
+
+main .quiz_area .answer_area .topic_area.multiple_topics_area .subtopic_number {
+  padding: 12px 0px;
+}
+
+main .quiz_area .answer_area .topic_area.multiple_topics_area .answer_list {
+  width: 100%;
+  max-width: calc(100% - 31.41px);
+}
+
+@media screen and (min-width: 768px) {
+  main .quiz_area .answer_area .topic_area.multiple_topics_area .subtopic_number {
+    padding: 14px 0px;
+  }
+}
+
+/*多個題目頁*/
 main .answer_area .player_area {
   margin: 20px auto;
 }
@@ -889,6 +917,11 @@ main .answer_area .topic_area .answer_list .form-check .form-check-input {
   margin-left: 0;
   margin-right: 5px;
   border: 1px solid #5c6466;
+  cursor: pointer;
+}
+
+main .answer_area .topic_area .answer_list .form-check .form-check-input ~ label {
+  cursor: pointer;
 }
 
 main .answer_area .topic_area .answer_list .form-check .form-check-input:checked {
@@ -911,10 +944,15 @@ main .answer_area .topic_area .answer_list .form-check .form-check-input:focus {
 
 main .answer_area .topic_area .answer_list .form-check .form-check-input[disabled], main .answer_area .topic_area .answer_list .form-check .form-check-input:disabled {
   opacity: 1.0;
+  cursor: auto;
 }
 
 main .answer_area .topic_area .answer_list .form-check .form-check-input[disabled] ~ .form-check-label, main .answer_area .topic_area .answer_list .form-check .form-check-input:disabled ~ .form-check-label {
   opacity: 1.0;
+}
+
+main .answer_area .topic_area .answer_list .form-check .form-check-input[disabled] ~ label, main .answer_area .topic_area .answer_list .form-check .form-check-input:disabled ~ label {
+  cursor: auto;
 }
 
 main .answer_area .topic_area .answer_list .form-check .form-check-label {
