@@ -110,23 +110,23 @@ main {
                     }
                 }
             }
+        }
 
-            .next_page{
-                display: flex;
-                justify-content: center;
-                margin: 30px auto 0px;
+        .next_page{
+            display: flex;
+            justify-content: center;
+            margin: 30px auto 0px;
 
+            svg{
+                background-color: $color-main;
+                color: white;
+                padding: 10px;
+                border-radius: 50%;
+            }
+
+            &:hover{
                 svg{
-                    background-color: $color-main;
-                    color: white;
-                    padding: 10px;
-                    border-radius: 50%;
-                }
-
-                &:hover{
-                    svg{
-                        background-color: darken($color-main, 10%);
-                    }
+                    background-color: darken($color-main, 10%);
                 }
             }
         }

@@ -40,7 +40,7 @@ main {
     .button_area{
       display: flex;
       justify-content: center;
-      margin-bottom: 40px;
+      margin: 40px auto;
 
       a{
         color: $color-bg;

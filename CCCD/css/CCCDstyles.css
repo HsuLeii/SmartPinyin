@@ -445,7 +445,7 @@ main .quiz_area .button_area {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 40px;
+  margin: 40px auto;
 }
 
 main .quiz_area .button_area a {
@@ -947,7 +947,7 @@ main .answer_area .topic_area.multiple_choice_image .answer_list .form-check .fo
   margin-right: 5px;
 }
 
-main .answer_area .topic_area .next_page {
+main .answer_area .next_page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -957,14 +957,14 @@ main .answer_area .topic_area .next_page {
   margin: 30px auto 0px;
 }
 
-main .answer_area .topic_area .next_page svg {
+main .answer_area .next_page svg {
   background-color: #552b8d;
   color: white;
   padding: 10px;
   border-radius: 50%;
 }
 
-main .answer_area .topic_area .next_page:hover svg {
+main .answer_area .next_page:hover svg {
   background-color: #3d1f66;
 }
 
