@@ -55,6 +55,7 @@ main {
                         &.sample_answer {
                             background: radial-gradient($color-main 0%, $color-main 40%, transparent 50%, transparent);
                             border-color: $color-main;
+                            cursor: default;
 
                             ~label {
                                 color: $color-main;

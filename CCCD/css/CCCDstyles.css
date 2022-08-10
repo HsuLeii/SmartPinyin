@@ -926,6 +926,7 @@ main .answer_area .topic_area .answer_list .form-check .form-check-input {
 main .answer_area .topic_area .answer_list .form-check .form-check-input.sample_answer {
   background: radial-gradient(#552b8d 0%, #552b8d 40%, transparent 50%, transparent);
   border-color: #552b8d;
+  cursor: default;
 }
 
 main .answer_area .topic_area .answer_list .form-check .form-check-input.sample_answer ~ label {
