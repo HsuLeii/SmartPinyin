@@ -460,6 +460,7 @@ main .player_area {
   padding: 15px 20px;
   background-color: #cbb5e8;
   border-radius: 10px;
+  width: 100%;
   max-width: 950px;
   margin: 0 auto;
   /* input range 主體樣式 */

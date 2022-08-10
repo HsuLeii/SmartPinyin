@@ -26,7 +26,7 @@
     <main>
         <div class="quiz_area">
             <div class="quiz_area_top col-11">
-                <div class="player_area col-12 col-xl-9 col-xxl-7">
+                <div class="player_area">
                     <div class="play_area col-12 col-xl-9">                        
                         <i class="fa-solid fa-play cursor color_main"></i>
                         <label for="playRange" class="form-label">
@@ -57,14 +57,14 @@
                     </div>
                 </div>
 
-                <div class="topic_area">
+                <div class="topic_area example_topic">
                     <div class="topic">
                         <div class="topic_number"><h4>1.</h4></div>
                         <div class="topic_text col-11"><h4>他眼睛不舒服。</h4></div>
                     </div>
                     <div class="answer_list col-11">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="true_false" id="answer_one" checked>
+                        <div class="form-check form-check-inline check">
+                            <input class="form-check-input sample_answer" type="radio" name="true_false" id="answer_one" disabled>
                             <label class="form-check-label" for="answer_one">
                                 <div class="answer_content">
                                         V
@@ -80,11 +80,12 @@
                             </label>
                         </div>
                     </div>
-                    <div class="next_page">
-                        <a href="true_false_text.html">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
+                </div>
+
+                <div class="next_page">
+                    <a href="true_false_text.html">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
