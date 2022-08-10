@@ -52,6 +52,15 @@ main {
                         border: 1px solid $color-default-gray;
                         cursor: pointer;
 
+                        &.sample_answer {
+                            background: radial-gradient($color-main 0%, $color-main 40%, transparent 50%, transparent);
+                            border-color: $color-main;
+
+                            ~label {
+                                color: $color-main;
+                            }
+                        }
+
                         &~label {
                             cursor: pointer;
                         }
