@@ -1,23 +1,36 @@
 main {
   .quiz_area {
     .answer_area {
-      .topic_area{
-        &.multiple_topics_area{
-            display: flex;
-            flex-wrap: wrap;
+      .topic_area {
+        &.multiple_topics_area {
+          display: flex;
+          flex-wrap: wrap;
 
-            .topic{
-                width: 100%;
-            }
-            .subtopic_number{
-                padding: 12px 0px;
-                margin: 12px 0px;
+          .topic {
+            width: 100%;
+          }
+
+          .multiple_topics_item{
+            width: 100%;
+
+            .quiz_area_top{
+              margin: 40px auto 0px;
             }
 
-            .answer_list{
+            .multiple_answer_area {
+              display: flex;
+  
+              .subtopic_number {
+                padding: 11px 0px;
+                margin: 5px 0px;
+              }
+  
+              .answer_list {
                 width: 100%;
                 max-width: calc(100% - 31.41px);
                 padding-left: 10px;
+              }
+            }
             }
         }
       }
@@ -30,20 +43,24 @@ main {
 @media screen and (min-width: 576px) {}
 
 @media screen and (min-width: 768px) {
-    main {
-        .quiz_area {
-          .answer_area {
-            .topic_area{
-              &.multiple_topics_area{
-                  .subtopic_number{
-                      padding: 14px 0px;
-                      margin: 25px 0px;
-                  }
+  main {
+    .quiz_area {
+      .answer_area {
+        .topic_area {
+          &.multiple_topics_area {
+            .multiple_topics_item{
+              .multiple_answer_area {
+                .subtopic_number {
+                  padding: 12px 0px;
+                  margin: 10px 0px;
+                }
               }
             }
           }
         }
       }
+    }
+  }
 }
 
 @media screen and (min-width: 992px) {}

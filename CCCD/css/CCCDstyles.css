@@ -410,7 +410,7 @@ main .quiz_area .quiz_area_top {
 
 main .quiz_area .answer_area {
   margin: 40px auto;
-  padding: 15px 2.5%;
+  padding: 15px 0%;
   max-width: 1200px;
 }
 
@@ -419,23 +419,8 @@ main .quiz_area .answer_area .answer_area_instructions {
 }
 
 main .quiz_area .answer_area .player_area {
-  background-color: #d2d5d6;
   margin-bottom: 20px;
   width: 100%;
-}
-
-main .quiz_area .answer_area .player_area .fa-play,
-main .quiz_area .answer_area .player_area .fa-volume-high {
-  color: #5c6466;
-}
-
-main .quiz_area .answer_area .player_area label {
-  color: #5c6466;
-}
-
-main .quiz_area .answer_area .player_area .sound_area {
-  background-color: #eceeee;
-  position: relative;
 }
 
 main .quiz_area .button_area {
@@ -475,7 +460,7 @@ main .player_area {
   padding: 15px 20px;
   background-color: #cbb5e8;
   border-radius: 10px;
-  max-width: 1200px;
+  max-width: 950px;
   margin: 0 auto;
   /* input range 主體樣式 */
   /* input range 播放樣式 */
@@ -601,7 +586,7 @@ main .player_area input[name="soundRange"]::-webkit-slider-runnable-track {
 
 @media screen and (min-width: 768px) {
   main .quiz_area .answer_area {
-    padding: 30px 2.5%;
+    padding: 30px 0%;
   }
 }
 
@@ -651,21 +636,35 @@ main .quiz_area .answer_area .topic_area.multiple_topics_area .topic {
   width: 100%;
 }
 
-main .quiz_area .answer_area .topic_area.multiple_topics_area .subtopic_number {
-  padding: 12px 0px;
-  margin: 12px 0px;
+main .quiz_area .answer_area .topic_area.multiple_topics_area .multiple_topics_item {
+  width: 100%;
 }
 
-main .quiz_area .answer_area .topic_area.multiple_topics_area .answer_list {
+main .quiz_area .answer_area .topic_area.multiple_topics_area .multiple_topics_item .quiz_area_top {
+  margin: 40px auto 0px;
+}
+
+main .quiz_area .answer_area .topic_area.multiple_topics_area .multiple_topics_item .multiple_answer_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .quiz_area .answer_area .topic_area.multiple_topics_area .multiple_topics_item .multiple_answer_area .subtopic_number {
+  padding: 11px 0px;
+  margin: 5px 0px;
+}
+
+main .quiz_area .answer_area .topic_area.multiple_topics_area .multiple_topics_item .multiple_answer_area .answer_list {
   width: 100%;
   max-width: calc(100% - 31.41px);
   padding-left: 10px;
 }
 
 @media screen and (min-width: 768px) {
-  main .quiz_area .answer_area .topic_area.multiple_topics_area .subtopic_number {
-    padding: 14px 0px;
-    margin: 25px 0px;
+  main .quiz_area .answer_area .topic_area.multiple_topics_area .multiple_topics_item .multiple_answer_area .subtopic_number {
+    padding: 12px 0px;
+    margin: 10px 0px;
   }
 }
 
@@ -872,8 +871,6 @@ main .answer_area .description_area .description_area_instructions {
 }
 
 main .answer_area .topic_area {
-  border: 2px solid #552b8d;
-  border-radius: 10px;
   padding: 20px;
 }
 
@@ -904,7 +901,7 @@ main .answer_area .topic_area .answer_list {
 
 main .answer_area .topic_area .answer_list .form-check {
   padding-left: 0;
-  margin: 12px 0px;
+  margin: 5px 0px;
   background: #f5f5f5;
   padding: 10px;
   border-radius: 10px;
@@ -950,7 +947,7 @@ main .answer_area .topic_area .answer_list .form-check .form-check-input:focus {
 
 main .answer_area .topic_area .answer_list .form-check .form-check-input[disabled], main .answer_area .topic_area .answer_list .form-check .form-check-input:disabled {
   opacity: 1.0;
-  cursor: auto;
+  cursor: default;
 }
 
 main .answer_area .topic_area .answer_list .form-check .form-check-input[disabled] ~ .form-check-label, main .answer_area .topic_area .answer_list .form-check .form-check-input:disabled ~ .form-check-label {
@@ -958,7 +955,7 @@ main .answer_area .topic_area .answer_list .form-check .form-check-input[disable
 }
 
 main .answer_area .topic_area .answer_list .form-check .form-check-input[disabled] ~ label, main .answer_area .topic_area .answer_list .form-check .form-check-input:disabled ~ label {
-  cursor: auto;
+  cursor: default;
 }
 
 main .answer_area .topic_area .answer_list .form-check .form-check-label {
@@ -991,6 +988,11 @@ main .answer_area .topic_area.multiple_choice_image .answer_list .form-check .fo
   margin-right: 5px;
 }
 
+main .answer_area .topic_area.example_topic {
+  border: 2px solid #552b8d;
+  border-radius: 10px;
+}
+
 main .answer_area .next_page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1019,14 +1021,11 @@ main .answer_area .next_page:hover svg {
 }
 
 @media screen and (min-width: 768px) {
-  main .answer_area .topic_area {
-    border: 4px solid #552b8d;
-  }
   main .answer_area .topic_area .answer_list {
     padding-left: 31.23px;
   }
   main .answer_area .topic_area .answer_list .form-check {
-    margin: 25px 0px;
+    margin: 10px 0px;
     border: 4px solid #f5f5f5;
   }
   main .answer_area .topic_area .answer_list .form-check.check {
@@ -1039,6 +1038,9 @@ main .answer_area .next_page:hover svg {
   }
   main .answer_area .topic_area .answer_list .form-check .form-check-label {
     width: calc(100% - 15px - 5px);
+  }
+  main .answer_area .topic_area.example_topic {
+    border: 4px solid #552b8d;
   }
 }
 

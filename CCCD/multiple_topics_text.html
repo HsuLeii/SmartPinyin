@@ -26,7 +26,7 @@
     <main>
         <div class="quiz_area">
             <div class="quiz_area_top col-11">
-                <div class="player_area col-12 col-xl-9 col-xxl-7">
+                <div class="player_area col-12">
                     <div class="play_area col-12 col-xl-9">
                         <i class="fa-solid fa-play cursor color_main"></i>
                         <label for="playRange" class="form-label">
@@ -45,207 +45,240 @@
             </div>
             <div class="answer_area col-11">
                 <div class="topic_area multiple_topics_area">
-                    <div class="subtopic_number">
-                        <p>
-                            (1)
-                        </p>
-                    </div>
-                    <div class="answer_list">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="multiple_choice_one" id="answer_one">
-                            <label class="form-check-label" for="answer_one">
-                                <div class="answer_options">
-                                    (A)
-                                </div>
-                                <div class="answer_content">
-                                    買手機
-                                </div>
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="multiple_choice_one" id="answer_two">
-                            <label class="form-check-label" for="answer_two">
-                                <div class="answer_options">
-                                    (B)
-                                </div>
-                                <div class="answer_content">
-                                    去親戚家
-                                </div>
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="multiple_choice_one" id="answer_three">
-                            <label class="form-check-label" for="answer_three">
-                                <div class="answer_options">
-                                    (C)
-                                </div>
-                                <div class="answer_content">
-                                    繳電話費
-                                </div>
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="multiple_choice_one" id="answer_four">
-                            <label class="form-check-label" for="answer_four">
-                                <div class="answer_options">
-                                    (D)
-                                </div>
-                                <div class="answer_content">
-                                    找吳老師
-                                </div>
-                            </label>
+                    <div class="topic">
+                        <div class="topic_number">
+                            <h4>1.</h4>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="quiz_area">
-            <div class="quiz_area_top col-11">
-                <div class="player_area col-12 col-xl-9 col-xxl-7">
-                    <div class="play_area col-12 col-xl-9">
-                        <i class="fa-solid fa-play cursor color_main"></i>
-                        <label for="playRange" class="form-label">
-                            00:00/04:30
-                        </label>
-                        <input type="range" id="playRange" name="playRange" min="0" max="100" value="0">
+                    <div class="multiple_topics_item">
+                        <div class="quiz_area_top col-11">
+                            <div class="player_area col-12">
+                                <div class="play_area col-12 col-xl-9">
+                                    <i class="fa-solid fa-play cursor color_main"></i>
+                                    <label for="playRange" class="form-label">
+                                        00:00/04:30
+                                    </label>
+                                    <input type="range" id="playRange" name="playRange" min="0" max="100" value="0">
+                                </div>
+                                <div class="sound_area col-8 col-sm-4 col-lg-3 ">
+                                    <i class="fa-solid fa-volume-high icon_volume cursor color_main"></i>
+                                    <label for="soundRange" class="form-label">
+                                    </label>
+                                    <input type="range" id="soundRange" name="soundRange" min="0" max="100" value="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="multiple_answer_area">
+                            <div class="subtopic_number">
+                                <p>
+                                    (1)
+                                </p>
+                            </div>
+                            <div class="answer_list">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="multiple_choice_one"
+                                        id="answer_one">
+                                    <label class="form-check-label" for="answer_one">
+                                        <div class="answer_options">
+                                            (A)
+                                        </div>
+                                        <div class="answer_content">
+                                            買手機
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="multiple_choice_one"
+                                        id="answer_two">
+                                    <label class="form-check-label" for="answer_two">
+                                        <div class="answer_options">
+                                            (B)
+                                        </div>
+                                        <div class="answer_content">
+                                            去親戚家
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="multiple_choice_one"
+                                        id="answer_three">
+                                    <label class="form-check-label" for="answer_three">
+                                        <div class="answer_options">
+                                            (C)
+                                        </div>
+                                        <div class="answer_content">
+                                            繳電話費
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="multiple_choice_one"
+                                        id="answer_four">
+                                    <label class="form-check-label" for="answer_four">
+                                        <div class="answer_options">
+                                            (D)
+                                        </div>
+                                        <div class="answer_content">
+                                            找吳老師
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="sound_area col-8 col-sm-4 col-lg-3 ">
-                        <i class="fa-solid fa-volume-high icon_volume cursor color_main"></i>
-                        <label for="soundRange" class="form-label">
-                        </label>
-                        <input type="range" id="soundRange" name="soundRange" min="0" max="100" value="100">
-                    </div>
-                </div>
 
-            </div>
-            <div class="answer_area col-11">
-                <div class="topic_area multiple_topics_area">
-                    <div class="subtopic_number">
-                        <p>
-                            (2)
-                        </p>
+                    <div class="multiple_topics_item">
+                        <div class="quiz_area_top col-11">
+                            <div class="player_area col-12">
+                                <div class="play_area col-12 col-xl-9">
+                                    <i class="fa-solid fa-play cursor color_main"></i>
+                                    <label for="playRange" class="form-label">
+                                        00:00/04:30
+                                    </label>
+                                    <input type="range" id="playRange" name="playRange" min="0" max="100" value="0">
+                                </div>
+                                <div class="sound_area col-8 col-sm-4 col-lg-3 ">
+                                    <i class="fa-solid fa-volume-high icon_volume cursor color_main"></i>
+                                    <label for="soundRange" class="form-label">
+                                    </label>
+                                    <input type="range" id="soundRange" name="soundRange" min="0" max="100" value="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="multiple_answer_area">
+                            <div class="subtopic_number">
+                                <p>
+                                    (2)
+                                </p>
+                            </div>
+                            <div class="answer_list">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="multiple_choice_two"
+                                        id="answer_five">
+                                    <label class="form-check-label" for="answer_five">
+                                        <div class="answer_options">
+                                            (A)
+                                        </div>
+                                        <div class="answer_content">
+                                            買手機
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="multiple_choice_two"
+                                        id="answer_six">
+                                    <label class="form-check-label" for="answer_six">
+                                        <div class="answer_options">
+                                            (B)
+                                        </div>
+                                        <div class="answer_content">
+                                            去親戚家
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="multiple_choice_two"
+                                        id="answer_seven">
+                                    <label class="form-check-label" for="answer_seven">
+                                        <div class="answer_options">
+                                            (C)
+                                        </div>
+                                        <div class="answer_content">
+                                            繳電話費
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="multiple_choice_two"
+                                        id="answer_eight">
+                                    <label class="form-check-label" for="answer_eight">
+                                        <div class="answer_options">
+                                            (D)
+                                        </div>
+                                        <div class="answer_content">
+                                            找吳老師
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="answer_list">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="multiple_choice_two" id="answer_five">
-                            <label class="form-check-label" for="answer_five">
-                                <div class="answer_options">
-                                    (A)
-                                </div>
-                                <div class="answer_content">
-                                    買手機
-                                </div>
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="multiple_choice_two" id="answer_six">
-                            <label class="form-check-label" for="answer_six">
-                                <div class="answer_options">
-                                    (B)
-                                </div>
-                                <div class="answer_content">
-                                    去親戚家
-                                </div>
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="multiple_choice_two" id="answer_seven">
-                            <label class="form-check-label" for="answer_seven">
-                                <div class="answer_options">
-                                    (C)
-                                </div>
-                                <div class="answer_content">
-                                    繳電話費
-                                </div>
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="multiple_choice_two" id="answer_eight">
-                            <label class="form-check-label" for="answer_eight">
-                                <div class="answer_options">
-                                    (D)
-                                </div>
-                                <div class="answer_content">
-                                    找吳老師
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="quiz_area">
-            <div class="quiz_area_top col-11">
-                <div class="player_area col-12 col-xl-9 col-xxl-7">
-                    <div class="play_area col-12 col-xl-9">
-                        <i class="fa-solid fa-play cursor color_main"></i>
-                        <label for="playRange" class="form-label">
-                            00:00/04:30
-                        </label>
-                        <input type="range" id="playRange" name="playRange" min="0" max="100" value="0">
-                    </div>
-                    <div class="sound_area col-8 col-sm-4 col-lg-3 ">
-                        <i class="fa-solid fa-volume-high icon_volume cursor color_main"></i>
-                        <label for="soundRange" class="form-label">
-                        </label>
-                        <input type="range" id="soundRange" name="soundRange" min="0" max="100" value="100">
-                    </div>
-                </div>
-
-            </div>
-            <div class="answer_area col-11">
-                <div class="topic_area multiple_topics_area">
-                    <div class="subtopic_number">
-                        <p>
-                            (3)
-                        </p>
-                    </div>
-                    <div class="answer_list">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="multiple_choice_three" id="answer_nine">
-                            <label class="form-check-label" for="answer_nine">
-                                <div class="answer_options">
-                                    (A)
+                    <div class="multiple_topics_item">
+                        <div class="quiz_area_top col-11">
+                            <div class="player_area col-12">
+                                <div class="play_area col-12 col-xl-9">
+                                    <i class="fa-solid fa-play cursor color_main"></i>
+                                    <label for="playRange" class="form-label">
+                                        00:00/04:30
+                                    </label>
+                                    <input type="range" id="playRange" name="playRange" min="0" max="100" value="0">
                                 </div>
-                                <div class="answer_content">
-                                    買手機
+                                <div class="sound_area col-8 col-sm-4 col-lg-3 ">
+                                    <i class="fa-solid fa-volume-high icon_volume cursor color_main"></i>
+                                    <label for="soundRange" class="form-label">
+                                    </label>
+                                    <input type="range" id="soundRange" name="soundRange" min="0" max="100" value="100">
                                 </div>
-                            </label>
+                            </div>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="multiple_choice_three" id="answer_ten">
-                            <label class="form-check-label" for="answer_ten">
-                                <div class="answer_options">
-                                    (B)
+                        <div class="multiple_answer_area">
+                            <div class="subtopic_number">
+                                <p>
+                                    (3)
+                                </p>
+                            </div>
+                            <div class="answer_list">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="multiple_choice_three"
+                                        id="answer_nine">
+                                    <label class="form-check-label" for="answer_nine">
+                                        <div class="answer_options">
+                                            (A)
+                                        </div>
+                                        <div class="answer_content">
+                                            買手機
+                                        </div>
+                                    </label>
                                 </div>
-                                <div class="answer_content">
-                                    去親戚家
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="multiple_choice_three"
+                                        id="answer_ten">
+                                    <label class="form-check-label" for="answer_ten">
+                                        <div class="answer_options">
+                                            (B)
+                                        </div>
+                                        <div class="answer_content">
+                                            去親戚家
+                                        </div>
+                                    </label>
                                 </div>
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="multiple_choice_three" id="answer_eleven">
-                            <label class="form-check-label" for="answer_eleven">
-                                <div class="answer_options">
-                                    (C)
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="multiple_choice_three"
+                                        id="answer_eleven">
+                                    <label class="form-check-label" for="answer_eleven">
+                                        <div class="answer_options">
+                                            (C)
+                                        </div>
+                                        <div class="answer_content">
+                                            繳電話費
+                                        </div>
+                                    </label>
                                 </div>
-                                <div class="answer_content">
-                                    繳電話費
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="multiple_choice_three"
+                                        id="answer_twelve">
+                                    <label class="form-check-label" for="answer_twelve">
+                                        <div class="answer_options">
+                                            (D)
+                                        </div>
+                                        <div class="answer_content">
+                                            找吳老師
+                                        </div>
+                                    </label>
                                 </div>
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="multiple_choice_three" id="answer_twelve">
-                            <label class="form-check-label" for="answer_twelve">
-                                <div class="answer_options">
-                                    (D)
-                                </div>
-                                <div class="answer_content">
-                                    找吳老師
-                                </div>
-                            </label>
+                            </div>
                         </div>
                     </div>
                 </div>
