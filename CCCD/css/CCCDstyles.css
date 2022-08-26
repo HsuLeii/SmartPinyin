@@ -465,6 +465,7 @@ main .player_area {
   margin: 0 auto;
   /* input range 主體樣式 */
   /* input range 播放樣式 */
+  /* 播放完畢時，100%進度顯示 */
   /* input range 聲音樣式 */
 }
 
@@ -521,22 +522,12 @@ main .player_area input[type="range"] {
   border-radius: 10px;
   cursor: pointer;
   /* input range 原點focus */
-  /* input range 移動距離 */
   /* input range 原點樣式 */
   /* input range 進度條樣式 */
 }
 
 main .player_area input[type="range"]:focus::-webkit-slider-thumb {
   background-color: #3d1f66;
-}
-
-main .player_area input[type="range"]:before {
-  position: absolute;
-  content: "";
-  width: var(--playRange);
-  height: 100%;
-  background-color: #552b8d;
-  border-radius: 10px;
 }
 
 main .player_area input[type="range"]::-webkit-slider-thumb {
@@ -563,6 +554,24 @@ main .player_area input[type="range"]::-webkit-slider-runnable-track {
 
 main .player_area input[name="playRange"] {
   margin-top: 15px;
+}
+
+main .player_area input[name="playRange"]:before {
+  position: absolute;
+  content: "";
+  width: var(--playRange);
+  height: 100%;
+  background-color: #552b8d;
+  border-radius: 10px;
+}
+
+main .player_area input[name="playRange0"]:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #552b8d;
+  border-radius: 10px;
 }
 
 main .player_area input[name="soundRange"]:hover ~ .icon_hand_pointer {
