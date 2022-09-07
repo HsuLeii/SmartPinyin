@@ -9,7 +9,18 @@ main {
         }
 
         .topic_area {
-            padding: 20px;    
+            padding: 20px;
+            
+            &.new_style{
+                background-color: $new_color;
+                border-radius: 10px;
+
+                .answer_list{
+                    .form-check {
+                        border: 2px solid $new_color;
+                    }
+                }
+            }
 
             .topic {
                 display: flex;
@@ -29,11 +40,11 @@ main {
                 display: flex;
                 flex-wrap: wrap;
                 padding-left: 30.38px;
+                flex-direction: column;
 
                 .form-check {
                     padding-left: 0;
                     margin: 5px 0px;
-                    background: $color-main-grayLight;
                     padding: 10px;
                     border-radius: 10px;
                     border: 2px solid $color-main-grayLight;
@@ -44,13 +55,14 @@ main {
                     }
 
                     .form-check-input {
-                        width: 14px;
-                        height: 14px;
-                        margin-top: calc(14px * 0.7 / 2);
+                        width: 19px;
+                        height: 19px;
+                        margin-top: calc(19px * 0.7 / 2);
                         margin-left: 0;
                         margin-right: 5px;
                         border: 1px solid $color-default-gray;
                         cursor: pointer;
+                        background-color: transparent;
 
                         &.sample_answer {
                             background: radial-gradient($color-main 0%, $color-main 40%, transparent 50%, transparent);
@@ -97,7 +109,7 @@ main {
                     }
 
                     .form-check-label {
-                        width: calc(100% - 14px - 5px);
+                        width: calc(100% - 19px - 5px);
                         display: flex;
                         align-items: flex-start;
 
@@ -130,15 +142,24 @@ main {
             }
 
             &.example_topic{
-                border: 2px solid $color-main;
+                border: 2px solid $border_color;
                 border-radius: 10px;
+
+                &.new_style{
+                    border: 0px solid transparent;
+                }
             }
+
+            
         }
 
         .next_page{
             display: flex;
             justify-content: center;
             margin: 30px auto;
+            a{
+                font-size: 29px;
+            }
 
             svg{
                 background-color: $color-main;
@@ -179,6 +200,15 @@ main {
         .answer_area {
             .topic_area {
 
+                &.new_style{
+                    background-color: $new_color;
+                    .answer_list{
+                        .form-check {
+                            border: 4px solid $new_color;
+                        }
+                    }
+                }
+
                 .answer_list {
                     padding-left: 31.23px;
 
@@ -191,20 +221,26 @@ main {
                         }
     
                         .form-check-input {
-                            width: 15px;
-                            height: 15px;
-                            margin-top: calc(15px * 0.7 / 2);
+                            width: 20px;
+                            height: 20px;
+                            margin-top: calc(20px * 0.7 / 2);
                         }
     
                         .form-check-label {
-                            width: calc(100% - 15px - 5px);
+                            width: calc(100% - 20px - 5px);
     
                         }
                     }
                 }
 
                 &.example_topic{
-                    border: 4px solid $color-main;    
+                    border: 4px solid $border_color;    
+                }
+            }
+
+            .next_page{
+                a{
+                    font-size: 30px;
                 }
             }
         }
@@ -222,13 +258,13 @@ main {
                     .form-check {
     
                         .form-check-input {
-                            width: 17px;
-                            height: 17px;
-                            margin-top: calc(17px * 0.7 / 2);
+                            width: 22px;
+                            height: 22px;
+                            margin-top: calc(22px * 0.7 / 2);
                         }
     
                         .form-check-label {
-                            width: calc(100% - 17px - 5px);
+                            width: calc(100% - 22px - 5px);
     
                         }
                     }
@@ -240,6 +276,12 @@ main {
                             width: 30%;
                         }
                     }
+                }
+            }
+
+            .next_page{
+                a{
+                    font-size: 32px;
                 }
             }
         }
@@ -256,15 +298,21 @@ main {
                     .form-check {
 
                         .form-check-input {
-                            width: 19px;
-                            height: 19px;
-                            margin-top: calc(19px * 0.7 / 2);
+                            width: 24px;
+                            height: 24px;
+                            margin-top: calc(24px * 0.7 / 2);
                         }
     
                         .form-check-label {
-                            width: calc(100% - 19px - 5px);
+                            width: calc(100% - 24px - 5px);
                         }
                     }
+                }
+            }
+
+            .next_page{
+                a{
+                    font-size: 34px;
                 }
             }
         }
@@ -282,15 +330,21 @@ main {
                     .form-check {
 
                         .form-check-input {
-                            width: 20px;
-                            height: 20px;
-                            margin-top: calc(20px * 0.7 / 2);
+                            width: 25px;
+                            height: 25px;
+                            margin-top: calc(25px * 0.7 / 2);
                         }
     
                         .form-check-label {
-                            width: calc(100% - 20px - 5px);
+                            width: calc(100% - 25px - 5px);
                         }
                     }
+                }
+            }
+
+            .next_page{
+                a{
+                    font-size: 35px;
                 }
             }
         }
