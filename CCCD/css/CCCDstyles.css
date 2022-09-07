@@ -46,24 +46,27 @@ figure {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 h1 {
   font-size: 30px;
   line-height: 1.7;
+  font-weight: bold;
 }
 
 h3 {
   font-size: 26px;
   line-height: 1.7;
   color: #552b8d;
+  font-weight: bold;
 }
 
 h4 {
   font-size: 25px;
   line-height: 1.5;
   color: #552b8d;
+  font-weight: bold;
 }
 
 p {
@@ -926,6 +929,11 @@ main .answer_area .next_page svg {
 
 main .answer_area .next_page:hover svg {
   background-color: #3d1f66;
+}
+
+main .example_text {
+  font-weight: bold;
+  color: #0066cc;
 }
 
 @media screen and (min-width: 576px) {
