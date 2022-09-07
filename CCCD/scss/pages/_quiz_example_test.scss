@@ -132,14 +132,9 @@ main {
             }
 
             &.example_topic{
-                border: 2px solid $border_color;
-                border-radius: 10px;
-
-                &.new_style{
                     border: 0px solid transparent;
                     background-color: $new_color;
                 border-radius: 10px;
-                }
             }
 
             
