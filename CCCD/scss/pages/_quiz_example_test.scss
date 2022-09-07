@@ -10,17 +10,6 @@ main {
 
         .topic_area {
             padding: 20px;
-            
-            &.new_style{
-                background-color: $new_color;
-                border-radius: 10px;
-
-                .answer_list{
-                    .form-check {
-                        border: 2px solid $new_color;
-                    }
-                }
-            }
 
             .topic {
                 display: flex;
@@ -47,7 +36,7 @@ main {
                     margin: 5px 0px;
                     padding: 10px;
                     border-radius: 10px;
-                    border: 2px solid $color-main-grayLight;
+                    border: 2px solid transparent;
 
                     &.check {
                         background-color: transparent;
@@ -123,6 +112,7 @@ main {
 
             &.multiple_choice_image {
                 .answer_list {
+                    flex-direction: row;
                     .form-check {
                         width: 100%;
 
@@ -147,6 +137,8 @@ main {
 
                 &.new_style{
                     border: 0px solid transparent;
+                    background-color: $new_color;
+                border-radius: 10px;
                 }
             }
 
@@ -200,21 +192,12 @@ main {
         .answer_area {
             .topic_area {
 
-                &.new_style{
-                    background-color: $new_color;
-                    .answer_list{
-                        .form-check {
-                            border: 4px solid $new_color;
-                        }
-                    }
-                }
-
                 .answer_list {
                     padding-left: 31.23px;
 
                     .form-check {
                         margin: 10px 0px;
-                        border: 4px solid $color-main-grayLight;
+                        border: 4px solid transparent;
 
                         &.check {
                             border: 4px solid $color-main;
