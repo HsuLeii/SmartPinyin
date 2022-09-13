@@ -20,123 +20,30 @@
 </head>
 
 <body>
-    <header>
-    </header>
     <!-- ------- ------- ------- ------- ------- ------- ------- -->
     <main>
         <div class="experience_index">
-            <div class="quiz_area_top col-11">
-                <div class="player_area">
-                    <div class="play_area col-12 col-xl-9">
-                        <i class="fa-solid fa-play cursor color_main"></i>
-                        <label for="playRange" class="form-label">
-                            00:00/04:30
-                        </label>
-                        <input type="range" id="playRange" name="playRange" min="0" max="100" value="0">
-                    </div>
-                    <div class="sound_area col-8 col-sm-4 col-lg-3 ">
-                        <i class="fa-solid fa-volume-high icon_volume cursor color_main"></i>
-                        <label for="soundRange" class="form-label">
-                        </label>
-                        <input type="range" id="soundRange" name="soundRange" min="0" max="100" value="100">
-                    </div>
+            <div class="experience_bg"></div>
+            <div class="experience_header">
+                <div class="container">
+                        <div class="experience_logo">
+                                <img src="image/logo/SmartPinyin_white.svg" class="img-responsive header-logo" alt="SmartReading適性閱讀">
+                        </div>
                 </div>
-
             </div>
-            <div class="answer_area col-11">
-                <div class="description_area hebrew" dir="rtl">
-                    <div class="description_area_title">
-                        <h3>
-                            תיאור ודוגמאות
-                        </h3>
-                    </div>
-                    <div class="description_area_instructions">
-                        <p>
-                            בחלק זה תשמעו שיחה בין שני אנשים לאחר השיחה תתקיים שאלה לכל שאלה ארבע אפשרויות (א) (ב) (ג) (ד) יופיע גם התוכן של ארבע אפשרויות אלו עכשיו על הנושא.<br />
-                            נא לבחור את התשובה המתאימה בהתאם לשאלה.<br />
-                        </p>
-                    </div>
-                </div>
 
-                <div class="description_area">
-                    <div class="description_area_title">
-                        <h3>
-                            說明及範例
-                        </h3>
-                    </div>
-                    <div class="description_area_instructions">
-                        <p>
-                            在這個部分，你會聽到兩個人的對話，對話結束後有一個問題，每個問題都有(A)(B)(C)(D)四個選項，這四個選項的內容也會出現在題本上。<br />
-                            請根據問題選出合適的答案。<br />
-                        </p>
-                    </div>
-                </div>
-
-                <div class="topic_area example_topic">
-                    <div class="topic">
-                        <div class="topic_number"><h4>1.</h4></div>
-                    </div>
-                    <div class="answer_list col-12">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="multiple_choice" id="answer_one" disabled>
-                            <label class="form-check-label" for="answer_one">
-                                <div class="answer_options">
-                                    (A)
-                                </div>
-                                <div class="answer_content">
-                                    買手機
-                                </div>
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="multiple_choice" id="answer_two" disabled>
-                            <label class="form-check-label" for="answer_two">
-                                <div class="answer_options">
-                                    (B)
-                                </div>
-                                <div class="answer_content">
-                                    去親戚家
-                                </div>
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="multiple_choice" id="answer_three" disabled>
-                            <label class="form-check-label" for="answer_three">
-                                <div class="answer_options">
-                                    (C)
-                                </div>
-                                <div class="answer_content">
-                                    繳電話費
-                                </div>
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="multiple_choice" id="answer_four" disabled>
-                            <label class="form-check-label" for="answer_four">
-                                <div class="answer_options">
-                                    (D)
-                                </div>
-                                <div class="answer_content">
-                                    找吳老師
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="next_page">
-                    <a href="multiple_choice_example_2.html">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+            <div class="experience_content">
+                <div class="container">
+                        <h3>Hi，歡迎進行SmartReading線上體驗。</h3>
+                        <a class="experience_btn" href="Guide.html" role="button"><i class="fa fa-arrow-circle-right fa-4x" aria-hidden="true"></i></a>
+                        <p class="slogan">透過適性閱讀，培養自律自主的閱讀者！</p>
+                        <p class="slogan-en">Adaptive reading for self-regulated readers!</p>
                 </div>
             </div>
         </div>
     </main>
     <!-- ------- ------- ------- ------- ------- ------- ------- -->
-    <footer class="footer">
-    </footer>
-
-    <!-- player range JS -->
-    <script src="js/range.js"></script>
+    
     <!-- ------- ------- ------- ------- ------- ------- ------- -->
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap-5.1.1.min.js"></script>
