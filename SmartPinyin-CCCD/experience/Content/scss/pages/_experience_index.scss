@@ -18,7 +18,7 @@ main {
       width: 100%;
 
       .container {
-        background-color: rgba(241, 241, 241, 0.5);
+        background-color: $color-experience-index-bg;
 
         .experience_logo {
 
@@ -35,7 +35,7 @@ main {
       text-align: center;
 
       .container {
-        background-color: rgba(241, 241, 241, 0.5);
+        background-color: $color-experience-index-bg;
         padding:40px 5%;
         height: calc(100% - 75px);
         min-height: calc(100vh - 75px);

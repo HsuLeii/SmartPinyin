@@ -16,6 +16,8 @@
 /*rgb( 20,168, 59)*/
 /*rgb(219, 96, 14)*/
 /*rgb(243,160,125)*/
+/*experience*/
+/*rgba(241, 241, 241, 0.5);*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
 body,
 div,
@@ -305,7 +307,7 @@ main .experience_index .experience_header {
 }
 
 main .experience_index .experience_header .container {
-  background-color: rgba(241, 241, 241, 0.5);
+  background-color: #f1f1f180;
 }
 
 main .experience_index .experience_header .container .experience_logo img {
@@ -319,7 +321,7 @@ main .experience_index .experience_content {
 }
 
 main .experience_index .experience_content .container {
-  background-color: rgba(241, 241, 241, 0.5);
+  background-color: #f1f1f180;
   padding: 40px 5%;
   height: calc(100% - 75px);
   min-height: calc(100vh - 75px);
