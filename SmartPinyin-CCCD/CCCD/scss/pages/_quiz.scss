@@ -1,0 +1,255 @@
+main {
+  .quiz_area {
+    .quiz_area_top {
+      margin: 40px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .answer_area {
+      margin: 40px auto;
+      padding: 15px 0%;
+      max-width: 1200px;
+
+      .answer_area_instructions {
+        margin-bottom: 30px;
+      }
+
+      .player_area {
+        margin-bottom: 20px;
+        width: 100%;
+      }
+
+      // .player_area {
+      //   background-color: lighten($color-default-gray, 45%);
+      //   margin-bottom: 20px;
+      //   width: 100%;
+
+      //   .fa-play,
+      //   .fa-volume-high {
+      //     color: $color-default-gray;
+      //   }
+
+      //   label {
+      //     color: $color-default-gray;
+      //   }
+
+      //   .sound_area {
+      //     background-color: lighten($color-default-gray, 55%);
+      //     position: relative;
+      //   }
+      // }
+    }
+
+    .button_area {
+      display: flex;
+      justify-content: center;
+      margin: 40px auto;
+
+      a {
+        color: $color-bg;
+        padding: 3px 20px;
+        border-radius: 10px;
+        background-color: $color-main;
+
+        &:hover {
+          background-color: darken($color-main, 10%);
+        }
+      }
+    }
+  }
+
+  .player_area {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 15px 20px;
+    background-color: lighten($color-main, 45%);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+
+    .play_area {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+
+      label {
+        margin-right: 10px;
+        color: $color-main;
+      }
+
+      .fa-play {
+        margin-right: 10px;
+      }
+    }
+
+    .sound_area {
+      display: flex;
+      align-items: center;
+      max-width: 165px;
+      padding: 5px 10px;
+      background-color: lighten($color-main, 55%);
+      border-radius: 50px;
+
+      .icon_volume {
+        margin-right: 10px;
+      }
+
+      .fa-volume-high {
+        margin-right: 10px;
+      }
+    }
+
+    .form-range {
+      width: 80%;
+    }
+
+    /* input range 主體樣式 */
+    input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      position: relative;
+      border-radius: 10px;
+      cursor: pointer;
+
+      /* input range 原點focus */
+      &:focus {
+        &::-webkit-slider-thumb {
+          background-color: darken($color-main, 10%);
+        }
+      }
+
+      /* input range 原點樣式 */
+      &::-webkit-slider-thumb {
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        border: none;
+        -webkit-appearance: none;
+        background-color: $color-main;
+        z-index: 1;
+        position: relative;
+        transition: 0.5s all ease;
+        transform: translate(0%, -50%);
+        top: 50%;
+      }
+
+      /* input range 進度條樣式 */
+      &::-webkit-slider-runnable-track {
+        background-color: $color-bg;
+        height: 5px;
+        border-radius: 10px;
+      }
+    }
+
+    /* input range 播放樣式 */
+    input[name="playRange"] {
+      margin-top: 15px;
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: var(--playRange);
+        height: 100%;
+        background-color: $color-main;
+        border-radius: 10px;
+      }
+    }
+
+    /* 播放完畢時，100%進度顯示 */
+    input[name="playRange0"] {
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: $color-main;
+        border-radius: 10px;
+      }
+    }
+
+    /* input range 聲音樣式 */
+    input[name="soundRange"] {
+
+      &:hover {
+        ~.icon_hand_pointer {
+          opacity: 0;
+        }
+      }
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: var(--soundRange);
+        height: 100%;
+        background-color: $color-bg;
+        border-radius: 10px;
+        right: 0;
+      }
+
+      &::-webkit-slider-runnable-track {
+        background-color: $color-main;
+        height: 5px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+
+
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 768px) {
+  main {
+    .quiz_area {
+      .answer_area {
+        padding: 30px 0%;
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+  main {
+    .player_area {
+      .play_area {
+        flex-wrap: nowrap;
+      }
+
+      /* input range 播放樣式 */
+      input[name="playRange"] {
+        margin-top: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    .quiz_area {
+      .quiz_area_top {
+        align-items: center;
+      }
+    }
+
+    .player_area {
+      align-items: center;
+      flex-direction: row;
+      padding: 5px 20px;
+
+      .play_area {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {}

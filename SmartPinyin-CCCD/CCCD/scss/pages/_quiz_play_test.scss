@@ -1,0 +1,61 @@
+main {
+
+    .player_area {
+
+        /* 音檔進度動態 */
+        .animation_play_example {
+            &:before {
+                animation: adjustment_play_progress_example 5s ease-in infinite;
+            }
+
+            &::after {
+                animation: adjustment_play_point_example 5s ease-in infinite;
+            }
+        }
+    }
+}
+
+@keyframes adjustment_play_progress_example {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes adjustment_play_point_example {
+    0% {
+        left: 0%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes adjustment_hand_point_example {
+    0% {
+        right: calc(50% - 10px);
+    }
+
+    50% {
+        right: 10px;
+    }
+
+    100% {
+        right: calc(50% - 10px);
+    }
+}
+
+
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 992px) {}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1400px) {}

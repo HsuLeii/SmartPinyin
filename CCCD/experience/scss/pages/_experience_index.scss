@@ -1,0 +1,103 @@
+main {
+  .experience_index {
+
+    .experience_bg {
+      background-image: url(../../image/bg/bg_index.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .experience_header {
+      width: 100%;
+
+      .container {
+        background-color: rgba(241, 241, 241, 0.5);
+
+        .experience_logo {
+
+          img {
+            height: 45px;
+            margin: 20px 0px;
+          }
+        }
+      }
+    }
+
+    .experience_content {
+      width: 100%;
+      text-align: center;
+
+      .container {
+        background-color: rgba(241, 241, 241, 0.5);
+        padding:40px 5%;
+        height: calc(100% - 75px);
+        min-height: calc(100vh - 75px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3 {
+          color: $color-main;
+        }
+
+        .experience_btn {
+          display: block;
+          margin: 40px auto;
+          color: $color-main;
+          &:hover{
+            color: darken($color-main, 10%);
+          }
+        }
+
+        p {
+          color: $color-main;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 768px) {
+  main {
+    .experience_index {
+
+      .experience_header {
+
+        .container {
+
+          .experience_logo {
+
+            img {
+              height: 70px;
+              margin: 15px 0px;
+            }
+          }
+        }
+      }
+
+      .experience_content {
+
+        .container {
+          padding:80px 10%;
+          height: calc(100% - 100px);
+          min-height: calc(100vh - 100px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1400px) {}

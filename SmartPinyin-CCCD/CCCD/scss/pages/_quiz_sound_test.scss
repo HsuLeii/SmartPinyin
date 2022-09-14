@@ -1,0 +1,172 @@
+main {
+    .answer_area {
+        .player_area {
+            margin: 20px auto;
+        }
+    }
+
+    .player_area {
+
+        .sound_area {
+            position: relative;
+
+            .icon_hand_pointer {
+                position: absolute;
+                right: calc(50% - 10px);
+                top: 50%;
+                z-index: 1;
+                color: $color-default-gray;
+                animation: adjustment_hand_point_example 3s ease-in infinite;
+            }
+        }
+
+        /* input range 示意圖播放樣式 */
+        input[name="playRangeSchematic"] {
+            cursor: auto;
+            margin-top: 15px;
+
+            &:before {
+                width: 50%;
+                background-color: $color-default-gray;
+            }
+
+            /* input range 假原點樣式 */
+            &::after {
+                position: absolute;
+                content: "";
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: $color-default-gray;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            /* input range 原點樣式 */
+            &::-webkit-slider-thumb {
+                display: none;
+            }
+        }
+
+        /* input range 示意圖聲音樣式 */
+        input[name="soundRangeSchematic"] {
+            cursor: auto;
+
+            &:before {
+                width: 35%;
+                background-color: $color-bg;
+                right: 0;
+            }
+
+            /* input range 假原點樣式 */
+            &::after {
+                position: absolute;
+                content: "";
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: $color-default-gray;
+                right: 35%;
+                top: 50%;
+                transform: translate(50%, -50%);
+            }
+
+            /* input range 原點樣式 */
+            &::-webkit-slider-thumb {
+                display: none;
+            }
+
+            &::-webkit-slider-runnable-track {
+                background-color: $color-default-gray;
+            }
+        }
+
+        /* 調整聲音動態 */
+        .animation_sound_example {
+            &:before {
+                animation: adjustment_progress_example 3s ease-in infinite;
+            }
+
+            &::after {
+                animation: adjustment_point_example 3s ease-in infinite;
+            }
+        }
+
+        /* 音檔進度動態 */
+        .animation_play_example {
+            &:before {
+                animation: adjustment_progress_example 3s ease-in infinite;
+            }
+
+            &::after {
+                animation: adjustment_point_example 3s ease-in infinite;
+            }
+        }
+    }
+}
+
+@keyframes adjustment_progress_example {
+    0% {
+        width: 45%;
+    }
+
+    50% {
+        width: 0%;
+    }
+
+    100% {
+        width: 45%;
+    }
+}
+
+@keyframes adjustment_point_example {
+    0% {
+        right: 45%;
+    }
+
+    50% {
+        right: 0%;
+        transform: translate(0%, -50%);
+    }
+
+    100% {
+        right: 45%;
+    }
+}
+
+@keyframes adjustment_hand_point_example {
+    0% {
+        right: calc(50% - 10px);
+    }
+
+    50% {
+        right: 10px;
+    }
+
+    100% {
+        right: calc(50% - 10px);
+    }
+}
+
+
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 992px) {
+    main {
+        .player_area {
+
+            /* input range 示意圖播放樣式 */
+            input[name="playRangeSchematic"] {
+                margin-top: 0px;
+            }
+
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1400px) {}

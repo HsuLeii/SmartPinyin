@@ -1,0 +1,295 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+figure {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 1.7;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 26px;
+    line-height: 1.7;
+    color: $color-main;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 25px;
+    line-height: 1.5;
+    color: $color-main;
+    font-weight: bold;
+}
+
+p {
+    font-size: 19px;
+    line-height: 1.7;
+    color: $color-default-black;
+}
+
+span,
+th,
+td {
+    font-size: 19px;
+    text-decoration: none;
+    line-height: 1.7;
+    color: $color-default-black;
+}
+
+a {
+    font-size: 19px;
+    text-decoration: none;
+    line-height: 1.7;
+    color: $color-default-black;
+}
+
+ruby{
+    letter-spacing: 1.8px;
+    line-height: 3;
+}
+
+rt{
+    transform: translateY(-35%);
+}
+
+input,
+label {
+    font-size: 19px;
+    line-height: 1.7;
+    color: $color-default-black;
+}
+
+input[type=file]::file-selector-button {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    padding: 0;
+    border-width: 0px;
+    border-style: none;
+    background-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: grey;
+    opacity: 0.5;
+    cursor: auto;
+}
+
+*,
+body {
+    font-family: 'Noto Sans SC', 'Microsoft JhengHei', 'Noto Sans TC', 'Microsoft YaHei',  'PingFang TC', 'PingFang SC',  'Heiti TC', 'Heiti SC',  'LiHei Pro','STXihei', sans-serif;
+    letter-spacing: 1.5px;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: $color-bg;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+.color_main{
+    color: $color-main;
+}
+
+.text_center{
+    text-align: center;
+}
+
+  /* Using Font Awesome 6 Icons CSS Pseudo-elements 開始 */
+.icon{
+    &::before {
+      display: none;
+    }
+  }
+  .icon-solid{
+    &::before {
+      font: var(--fa-font-solid);
+    }
+  }
+  .icon-regular{
+    &::before {
+      font: var(--fa-font-regular);
+    }
+  }
+  
+  .icon-light{
+    &::before {
+      font: var(--fa-font-light);
+    }
+  }
+  .icon-duotone{
+    &::before {
+      font: var(--fa-font-duotone);
+    }
+  }
+  .icon-brands{
+    &::before {
+      font: var(--fa-font-brands);
+    }
+  }
+  /* Using Font Awesome 6 Icons CSS Pseudo-elements 結束 */
+
+@media screen and (min-width: 576px){
+
+}
+
+@media screen and (min-width: 768px){
+    h1 {
+        font-size: 37px;
+    }
+
+    h3 {
+        font-size: 27px;
+    }
+
+    h4 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    span,
+    th,
+    td {
+        font-size: 20px;
+    }
+
+    a {
+        font-size: 20px;
+    }
+
+    input,
+    label {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    h1 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 29px;
+    }
+
+    h4 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 22px;
+    }
+
+    span,
+    th,
+    td {
+        font-size: 22px;
+    }
+
+    a {
+        font-size: 22px;
+    }
+
+    input,
+    label {
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+
+    p {
+        font-size: 24px;
+    }
+
+    span,
+    th,
+    td {
+        font-size: 24px;
+    }
+
+    a {
+        font-size: 24px;
+    }
+
+    input,
+    label {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    h1 {
+        font-size: 45px;
+    }
+
+    h3 {
+        font-size: 33px;
+    }
+
+    h4 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 25px;
+    }
+
+    span,
+    th,
+    td {
+        font-size: 25px;
+    }
+
+    a {
+        font-size: 25px;
+    }
+
+    input,
+    label {
+        font-size: 25px;
+    }
+}
