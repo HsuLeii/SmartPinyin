@@ -418,12 +418,12 @@ body {
         page-break-after: always;
       }
     
-    .page {
+      .page {
         /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
         /* page-break-after: always;  碰到此元素會直接換頁 */
         page-break-inside: avoid;
         position: relative;
-        background: linear-gradient(90deg, $main_color 38%, $white 0%);
+        background: linear-gradient(90deg, lighten($main_color, 40%) 38%, $white 0%);
         max-width: 1024px;
         width: 1024px;
         height: 1448px;
@@ -477,6 +477,10 @@ body {
                 .date,
                 .language {
                     margin-bottom: 30px;
+    
+                    h4{
+                        color: $main_color;
+                    }
     
                     p {
                         color: $white;
@@ -551,6 +555,7 @@ body {
                 .item_content {
                     background-color: $white;
                     border-radius: 15px;
+                    @extend %boxShadow_gray;
                     overflow: hidden;
                     width: 85%;
                     margin-left: -5%;
@@ -558,7 +563,7 @@ body {
                     .content_title {
                         padding: 5px 10px 5px 10%;
                     }
-
+    
                     .content_introduce{
                         padding: 5px 10px 5px 10%;
                     }
@@ -724,11 +729,11 @@ body {
         .chartbar_area {
             flex-wrap: wrap;
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
             width: 100%;
             position: relative;
-            bottom: 80px;
+            bottom: 50px;
     
             .srscore,
             .cefr_level,
@@ -743,6 +748,7 @@ body {
                 justify-content: center;
                 flex-direction: column;
                 z-index: 2;
+                margin: 0 5%;
     
                 &:after {
                     position: absolute;
