@@ -115,7 +115,7 @@ body {
 .page .report_title .text_content h3 {
   border-bottom: 5px solid #fff;
   margin: 10px auto;
-  font-size: 42px;
+  font-size: 44px;
 }
 
 .page .report_title .text_content .chinese_title {
@@ -431,7 +431,7 @@ body {
     /* page-break-after: always;  碰到此元素會直接換頁 */
     page-break-inside: avoid;
     position: relative;
-    background: linear-gradient(90deg, #552b8d 38%, #fff 0%);
+    background: linear-gradient(90deg, #bda2e2 38%, #fff 0%);
     max-width: 1024px;
     width: 1024px;
     height: 1448px;
@@ -459,7 +459,7 @@ body {
   .page .report_title .text_content h3 {
     border-bottom: 5px solid #fff;
     margin: 10px auto;
-    font-size: 42px;
+    font-size: 44px;
   }
   .page .report_title .text_content .chinese_title {
     font-size: 34px;
@@ -477,6 +477,11 @@ body {
   .page .report_title .material .date,
   .page .report_title .material .language {
     margin-bottom: 30px;
+  }
+  .page .report_title .material .name h4,
+  .page .report_title .material .date h4,
+  .page .report_title .material .language h4 {
+    color: #552b8d;
   }
   .page .report_title .material .name p,
   .page .report_title .material .date p,
@@ -621,11 +626,11 @@ body {
   .page .chartbar_area {
     flex-wrap: wrap;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 100%;
     position: relative;
-    bottom: 80px;
+    bottom: 50px;
   }
   .page .chartbar_area .srscore,
   .page .chartbar_area .cefr_level,
@@ -640,6 +645,7 @@ body {
     justify-content: center;
     flex-direction: column;
     z-index: 2;
+    margin: 0 5%;
   }
   .page .chartbar_area .srscore:after,
   .page .chartbar_area .cefr_level:after,
