@@ -10,7 +10,7 @@ body {
     /* page-break-after: always;  碰到此元素會直接換頁 */
     page-break-inside: avoid;
     position: relative;
-    background: linear-gradient(90deg, lighten($main_color, 40%) 38%, $white 0%);
+    background: linear-gradient(90deg, $light_main_color 38%, $white 0%);
     max-width: 1024px;
     width: 1024px;
     height: 1448px;
@@ -423,7 +423,7 @@ body {
         /* page-break-after: always;  碰到此元素會直接換頁 */
         page-break-inside: avoid;
         position: relative;
-        background: linear-gradient(90deg, lighten($main_color, 40%) 38%, $white 0%);
+        background: linear-gradient(90deg, $light_main_color 38%, $white 0%);
         max-width: 1024px;
         width: 1024px;
         height: 1448px;
