@@ -32,7 +32,7 @@
         padding: 20px 0 0;
         border-radius: 20px;
 
-        &.daccPage_chart_table{
+        &.daccPage_chart_table {
             background-color: transparent;
         }
 
@@ -44,10 +44,10 @@
         .daccPage_table {
             text-align: center;
             margin: 20px auto 40px;
-            
-            table{
+
+            table {
                 border-radius: 20px;
-            overflow: hidden;
+                overflow: hidden;
             }
 
             &.table_responsive {
@@ -111,6 +111,7 @@
 
                         td {
                             padding: 5px;
+
                             .dacc_icon_readinSkills {
                                 font-size: 14px;
                                 display: inline-block;
@@ -163,9 +164,9 @@
                             .daccPage_table_btn {
                                 background-color: $main_color;
                                 padding: 5px;
-    border: 0px;
-    border-radius: 10px;
-    cursor: pointer;
+                                border: 0px;
+                                border-radius: 10px;
+                                cursor: pointer;
 
 
                                 p {
@@ -235,7 +236,7 @@
                     margin: 0 auto;
                     background-image: url(../image/report/chart_dimensions_bg.svg);
                     background-repeat: no-repeat;
-                    background-position: left 60px bottom 45px;
+                    background-position: right bottom 45px;
                     background-size: calc(100% - 70px) 280px;
 
                     .chart_overall_x {
@@ -264,8 +265,7 @@
 
 @media screen and (max-width: 1400px) {}
 
-@media screen and (max-width: 1200px) {
-}
+@media screen and (max-width: 1200px) {}
 
 @media screen and (max-width: 1024px) {
     .main {
@@ -273,6 +273,7 @@
             .tittle {
                 width: 90%;
             }
+
             .frame_effect {
                 width: 90%;
                 padding: 35px 0px;
@@ -281,7 +282,6 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-}
+@media screen and (max-width: 768px) {}
 
 @media screen and (max-width: 499px) {}
