@@ -34,27 +34,55 @@ figure {
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 21px;
+    line-height: 1.7;
     font-weight: bold;
-    line-height: 1.5;
-    color: $white;
-}
-
-p{
-  font-size: 17px;
-  color: $grey;
-  font-weight: bold;
+    color: $main_color;
 }
 
 h4 {
-    font-size: 22px;
+    font-size: 19px;
+    line-height: 1.5;
     font-weight: bold;
-    color: $grey;
-    line-height: 1.6;
+    color: $main_color;
+}
+
+p {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+span,
+th,
+td {
+    font-size: 13px;
+    text-decoration: none;
+    line-height: 1.7;
+}
+
+a {
+    font-size: 13px;
+    text-decoration: none;
+    line-height: 1.7;
 }
 
 img {
     width: 100%;
+}
+
+button {
+    padding: 0;
+    border-width: 0px;
+    border-style: none;
+    background-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: $grey;
+    opacity: 0.5;
+    cursor: auto;
 }
 
 *,
@@ -62,4 +90,53 @@ body {
     font-family: 'Noto Sans', 'Noto Sans TC', 'Noto Sans SC', 'Microsoft JhengHei', 'Noto Sans TC', 'Microsoft YaHei', 'PingFang TC', 'PingFang SC', 'Heiti TC', 'Heiti SC', 'LiHei Pro', 'STXihei', sans-serif;
     letter-spacing: 1.5px;
     box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px){
+
+    h3 {
+        font-size: 23px;
+    }
+
+    h4 {
+        font-size: 21px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    span,
+    th,
+    td {
+        font-size: 15px;
+    }
+
+    a {
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+    h3 {
+        font-size: 25px;
+    }
+
+    h4 {
+        font-size: 23px;
+    }
+    p {
+        font-size: 17px;
+    }
+
+    span,
+    th,
+    td {
+        font-size: 17px;
+    }
+
+    a {
+        font-size: 17px;
+    }
 }

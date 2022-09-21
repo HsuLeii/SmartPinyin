@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*rgb(241, 241, 255)*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500;700;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 body {
@@ -41,27 +42,55 @@ figure {
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 21px;
+  line-height: 1.7;
   font-weight: bold;
-  line-height: 1.5;
-  color: #fff;
-}
-
-p {
-  font-size: 17px;
-  color: #595757;
-  font-weight: bold;
+  color: #552b8d;
 }
 
 h4 {
-  font-size: 22px;
+  font-size: 19px;
+  line-height: 1.5;
   font-weight: bold;
-  color: #595757;
-  line-height: 1.6;
+  color: #552b8d;
+}
+
+p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+span,
+th,
+td {
+  font-size: 13px;
+  text-decoration: none;
+  line-height: 1.7;
+}
+
+a {
+  font-size: 13px;
+  text-decoration: none;
+  line-height: 1.7;
 }
 
 img {
   width: 100%;
+}
+
+button {
+  padding: 0;
+  border-width: 0px;
+  border-style: none;
+  background-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #595757;
+  opacity: 0.5;
+  cursor: auto;
 }
 
 *,
@@ -71,9 +100,141 @@ body {
   box-sizing: border-box;
 }
 
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 23px;
+  }
+  h4 {
+    font-size: 21px;
+  }
+  p {
+    font-size: 15px;
+  }
+  span,
+  th,
+  td {
+    font-size: 15px;
+  }
+  a {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h3 {
+    font-size: 25px;
+  }
+  h4 {
+    font-size: 23px;
+  }
+  p {
+    font-size: 17px;
+  }
+  span,
+  th,
+  td {
+    font-size: 17px;
+  }
+  a {
+    font-size: 17px;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 5% 0px;
+}
+
+header .header_logo {
+  width: 40%;
+  max-width: 350px;
+}
+
+header .quiz_progress_area {
+  color: #552b8d;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+header .quiz_progress_area .quiz_progress_title {
+  text-align: center;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+
+header .quiz_progress_area .quiz_progress {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+}
+
+header .quiz_progress_area .quiz_progress .quiz_progress_value {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header .quiz_progress_area .quiz_progress svg {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  overflow: initial;
+}
+
+header .quiz_progress_area .quiz_progress svg .quiz_progress_background {
+  fill: none;
+  stroke: #bda2e2;
+  stroke-width: 2px;
+}
+
+header .quiz_progress_area .quiz_progress svg .quiz_progress_bar {
+  fill: none;
+  stroke: #552b8d;
+  stroke-dasharray: 100 100;
+  stroke-dashoffset: 100;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+@media screen and (min-width: 576px) {
+  header .header_logo {
+    width: 45%;
+  }
+  header .quiz_progress_area {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header .quiz_progress_area .quiz_progress {
+    width: 100px;
+    height: 100px;
+  }
+  header .quiz_progress_area .quiz_progress .quiz_progress_value {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header {
+    border-bottom: 1px solid #552b8d;
+    padding: 20px 5% 20px;
+    background-color: #f1f1ff;
+  }
+}
+
 /*pages*/
 body {
-  background-color: #EFE8E0;
+  background-color: #f7f8f8;
   counter-reset: page-number;
   /* 初始化，名字可自訂，數值為0 */
   -webkit-print-color-adjust: exact;
@@ -105,6 +266,25 @@ body {
   left: 0;
   font-size: 30px;
   text-align: center;
+}
+
+.page h3 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.page p {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.page h4 {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.6;
 }
 
 .page .report_title {
@@ -417,7 +597,7 @@ body {
 
 @media print {
   body {
-    background-color: #EFE8E0;
+    background-color: #f7f8f8;
     counter-reset: page-number;
     /* 初始化，名字可自訂，數值為0 */
     -webkit-print-color-adjust: exact;
@@ -704,4 +884,468 @@ body {
 }
 
 /*報表下載*/
+.main.diagnosis .tittle {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.main.diagnosis .frame_effect {
+  margin: 0 auto;
+  padding: 60px 0px;
+  width: 80%;
+}
+
+.main.diagnosis .frame_effect .folder {
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket {
+  width: 65%;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #552b8d;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background-color: #fff;
+  width: 100%;
+  position: relative;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_logo h3 {
+  margin: 0px 50px;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_logo img {
+  height: 120px;
+  width: auto;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_logo .wave_line_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  min-width: 5px;
+  max-width: 5px;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_logo .wave_line_left .wave_line_internal {
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle at 0 50%, #f7f8f8 50%, #fff 0);
+  background-size: 0.3rem 0.7rem;
+  background-repeat: repeat-y;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_logo .wave_line_right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  min-width: 5px;
+  max-width: 5px;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_logo .wave_line_right .wave_line_internal {
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle at 0 50%, #fff 50%, #f7f8f8 0);
+  background-size: 0.3rem 0.7rem;
+  background-repeat: repeat-y;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_text {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  padding: 20px;
+  position: relative;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_text .ticket_title {
+  width: 173px;
+  font-size: 65px;
+  font-weight: bold;
+  color: #552b8d;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_text .dcec_introduce_text {
+  width: calc(95% - 173px);
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_text .dcec_introduce_text p {
+  color: #fff;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_text .wave_line_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  min-width: 5px;
+  max-width: 5px;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_text .wave_line_left .wave_line_internal {
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle at 0 50%, #f7f8f8 50%, #552b8d 0);
+  background-size: 0.3rem 0.7rem;
+  background-repeat: repeat-y;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_text .wave_line_right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  min-width: 5px;
+  max-width: 5px;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_text .wave_line_right .wave_line_internal {
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle at 0 50%, #552b8d 50%, #f7f8f8 0);
+  background-size: 0.3rem 0.7rem;
+  background-repeat: repeat-y;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket.dcec_ticket_right {
+  width: 35%;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket.dcec_ticket_right .dcec_text {
+  display: block;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket.dcec_ticket_right .dcec_text p {
+  text-align: center;
+  color: #fff;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket.dcec_ticket_right .dcec_text button {
+  width: auto;
+  display: block;
+  margin: 20px auto 0px;
+}
+
+.main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket.dcec_ticket_right .dcec_text button p {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #000;
+}
+
+.main.diagnosis .frame_effect .folder canvas {
+  position: initial;
+}
+
+.main .dcecPage_chart {
+  width: 100%;
+  margin: 0px auto;
+  background-color: #f7f8f8;
+}
+
+.main .dcecPage_chart h3 {
+  width: 100%;
+  text-align: center;
+}
+
+.main .dcecPage_chart .dcecPage_table {
+  text-align: center;
+  margin: 20px auto 40px;
+}
+
+.main .dcecPage_chart .dcecPage_table.table_responsive {
+  overflow-x: scroll;
+}
+
+.main .dcecPage_chart .dcecPage_table.table_responsive::-webkit-scrollbar {
+  background: transparent;
+  height: 8px;
+  width: 12px;
+}
+
+.main .dcecPage_chart .dcecPage_table.table_responsive::-webkit-scrollbar-thumb {
+  border: none;
+  box-shadow: none;
+  background: #552b8d;
+  border-radius: 4px;
+  min-height: 40px;
+}
+
+.main .dcecPage_chart .dcecPage_table.table_responsive::-webkit-scrollbar-track {
+  margin: 3px 0;
+}
+
+.main .dcecPage_chart .dcecPage_table .table {
+  min-width: 1130px;
+  margin: 0 auto;
+}
+
+.main .dcecPage_chart .dcecPage_table .table thead tr {
+  background-color: #552b8d;
+  color: #fff;
+}
+
+.main .dcecPage_chart .dcecPage_table .table thead tr:nth-child(1) td:nth-child(1), .main .dcecPage_chart .dcecPage_table .table thead tr:nth-child(1) td:nth-child(2), .main .dcecPage_chart .dcecPage_table .table thead tr:nth-child(1) td:nth-child(3), .main .dcecPage_chart .dcecPage_table .table thead tr:nth-child(1) td:nth-child(4) {
+  width: 10%;
+}
+
+.main .dcecPage_chart .dcecPage_table .table thead tr:nth-child(1) td:nth-child(5) {
+  height: 55px;
+}
+
+.main .dcecPage_chart .dcecPage_table .table thead tr:nth-child(2) td {
+  width: 10%;
+  height: 55px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  padding: 5px 0px;
+  vertical-align: top;
+}
+
+.main .dcecPage_chart .dcecPage_table .table thead tr td {
+  padding: 5px;
+}
+
+.main .dcecPage_chart .dcecPage_table .table thead tr td .dcec_icon_readinSkills {
+  font-size: 14px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  color: #fff;
+  vertical-align: text-bottom;
+  margin-bottom: 2px;
+}
+
+.main .dcecPage_chart .dcecPage_table .table thead tr td .dcec_icon_readinSkills.skill_word {
+  background-color: #2783be;
+}
+
+.main .dcecPage_chart .dcecPage_table .table thead tr td .dcec_icon_readinSkills.skill_superficiall {
+  background-color: #d4655c;
+}
+
+.main .dcecPage_chart .dcecPage_table .table thead tr td .dcec_icon_readinSkills.skill_textual {
+  background-color: #e1b539;
+}
+
+.main .dcecPage_chart .dcecPage_table .table thead tr td .dcec_icon_readinSkills.skill_analysis {
+  background-color: #3f9979;
+}
+
+.main .dcecPage_chart .dcecPage_table .table tbody tr {
+  background-color: #e7dcf4;
+  color: #552b8d;
+  height: 60px;
+}
+
+.main .dcecPage_chart .dcecPage_table .table tbody tr td {
+  border-color: #000;
+  padding: 5px;
+}
+
+.main .dcecPage_chart .dcecPage_table .table tbody tr td .dcec_icon_times {
+  display: inline-block;
+  border: 1px solid #552b8d;
+  width: 22px;
+  height: 22px;
+  line-height: 18px;
+  border-radius: 50%;
+}
+
+.main .dcecPage_chart .dcecPage_table .table tbody tr td .dcecPage_table_btn {
+  background-color: #552b8d;
+  padding: 5px;
+  border: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.main .dcecPage_chart .dcecPage_table .table tbody tr td .dcecPage_table_btn p {
+  color: #fff;
+}
+
+.main .dcecPage_chart .data_page_scroll {
+  overflow-x: scroll;
+  margin: 20px auto 40px;
+}
+
+.main .dcecPage_chart .data_page_scroll::-webkit-scrollbar {
+  background: transparent;
+  height: 8px;
+  width: 12px;
+}
+
+.main .dcecPage_chart .data_page_scroll::-webkit-scrollbar-thumb {
+  border: none;
+  box-shadow: none;
+  background: #552b8d;
+  border-radius: 4px;
+  min-height: 40px;
+}
+
+.main .dcecPage_chart .data_page_scroll::-webkit-scrollbar-track {
+  margin: 3px 0;
+}
+
+.main .dcecPage_chart .data_page_scroll .dcecPage_chart_control {
+  position: relative;
+  padding: 40px 0px 0px;
+  margin: 0px auto 10px;
+  width: 1130px;
+}
+
+.main .dcecPage_chart .data_page_scroll .dcecPage_chart_control canvas {
+  position: initial;
+}
+
+.main .dcecPage_chart .data_page_scroll .dcecPage_chart_control .chart_overall_x {
+  position: absolute;
+  z-index: 3;
+  bottom: -8px;
+  right: -5px;
+  font-size: 14px;
+  color: #000;
+}
+
+.main .dcecPage_chart .data_page_scroll .dcecPage_chart_control .chart_overall_y {
+  position: absolute;
+  z-index: 3;
+  top: 0px;
+  left: 0;
+  font-size: 14px;
+  color: #000;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.main .dcecPage_chart .data_page_scroll .dcecPage_chart_control.dcecPage_chart_control_dimensions {
+  position: relative;
+  margin: 0 auto;
+  background-image: url(../image/report/chart_dimensions_bg.svg);
+  background-repeat: no-repeat;
+  background-position: right bottom 28px;
+  background-size: calc(100% - 70px) 280px;
+}
+
+.main .dcecPage_chart .data_page_scroll .dcecPage_chart_control.dcecPage_chart_control_dimensions .chart_overall_x {
+  bottom: 0px;
+}
+
+.main .dcecPage_chart .data_page_scroll .dcecPage_chart_control.dcecPage_chart_control_dimensions .chart_dimensions_label {
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  top: 0px;
+  left: 70px;
+  width: calc(100% - 70px);
+}
+
+.main .dcecPage_chart .data_page_scroll .dcecPage_chart_control.dcecPage_chart_control_dimensions .chart_dimensions_label p {
+  width: 25%;
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .main.diagnosis .frame_effect .folder .folder_content .top_information {
+    margin-bottom: 60px;
+    flex-direction: column;
+  }
+  .main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket {
+    width: 100%;
+  }
+  .main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_logo {
+    padding: 15px;
+  }
+  .main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_text {
+    padding: 10px 20px;
+  }
+  .main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_text .ticket_title {
+    width: 148px;
+    font-size: 55px;
+  }
+  .main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_text .dcec_introduce_text {
+    width: calc(95% - 148px);
+  }
+  .main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket.dcec_ticket_right {
+    width: 100%;
+    border-top: 1.5px dashed #000;
+  }
+  .main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket.dcec_ticket_right .dcec_logo img {
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main.diagnosis .tittle {
+    width: 90%;
+  }
+  .main.diagnosis .frame_effect {
+    width: 90%;
+    padding: 35px 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main.diagnosis .frame_effect .folder .folder_content .top_information {
+    margin-bottom: 60px;
+    flex-direction: column;
+  }
+  .main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket {
+    width: 100%;
+  }
+  .main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_logo {
+    padding: 15px;
+  }
+  .main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_logo h3 {
+    margin: 0px 20px;
+  }
+  .main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_logo img {
+    height: 60px;
+  }
+  .main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_text {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_text .ticket_title {
+    width: auto;
+    font-size: 30px;
+  }
+  .main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket .dcec_text .dcec_introduce_text {
+    width: 100%;
+  }
+  .main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket.dcec_ticket_right .dcec_logo img {
+    height: 60px;
+  }
+  .main.diagnosis .frame_effect .folder .folder_content .top_information .dcec_ticket.dcec_ticket_right .dcec_text button {
+    margin: 10px auto 0;
+  }
+}
+
+/*報表頁面*/
 /*# sourceMappingURL=CCCD_report_styles.css.map */

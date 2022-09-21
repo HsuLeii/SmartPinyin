@@ -4,5 +4,8 @@
 @import "base/lang";
 @import "base/reset";
 
+@import "master/header";
+
 /*pages*/
 @import "pages/CCCD_report";/*報表下載*/
+@import "pages/diagnosis";/*報表頁面*/
