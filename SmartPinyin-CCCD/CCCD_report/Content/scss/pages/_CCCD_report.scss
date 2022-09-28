@@ -614,8 +614,9 @@ body {
                     .number_mark {
                         position: absolute;
                         left: -5%;
-                        top: -15%;
-                        width: 40%;
+                        top: 0%;
+                        width: 45%;
+                        transform: translate(0px , -50%);
                     }
                 }
 
