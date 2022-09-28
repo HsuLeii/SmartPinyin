@@ -592,11 +592,18 @@ body {
     width: 35%;
     z-index: 2;
     margin: 15px 0 0;
+    padding: 0;
+    background-color: transparent;
+  }
+  .page .report_title img {
+    width: 100%;
+    max-width: none;
   }
   .page .report_title .text_content h3 {
     border-bottom: 5px solid #fff;
     margin: 10px auto;
     font-size: 42px;
+    display: block;
   }
   .page .report_title .text_content .chinese_title {
     font-size: 33px;
@@ -609,11 +616,13 @@ body {
   }
   .page .report_title .material {
     margin-top: 20px;
+    display: block;
   }
   .page .report_title .material .name,
   .page .report_title .material .date,
   .page .report_title .material .language {
-    margin-bottom: 30px;
+    margin: 15px 0px;
+    display: block;
   }
   .page .report_title .material .name h4,
   .page .report_title .material .date h4,
@@ -634,6 +643,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: none;
+    padding: 0;
   }
   .page .test_content .item {
     display: flex;
@@ -778,6 +789,7 @@ body {
     width: 100%;
     position: relative;
     bottom: 50px;
+    max-width: none;
   }
   .page .chartbar_area .srscore,
   .page .chartbar_area .cefr_level,
@@ -826,6 +838,7 @@ body {
     bottom: 0px;
     left: 0px;
     z-index: 1;
+    padding: 0;
   }
   .page .bottom_text:before {
     position: absolute;
