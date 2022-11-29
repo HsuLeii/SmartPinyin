@@ -118,65 +118,61 @@
     });
   </script>
 
-<script>
-  $(document).ready(function(){
-   let constraints = {
+  <script>
+    $(document).ready(function () {
+      let constraints = {
         name: {
-            presence: true,
-            
+          presence: true,
         },
         namber: {
-            presence: true,
-            
+          presence: true,
         },
-    };
+      };
 
-    $('.btn').click(function (e) {
+      $('.btn').click(function (e) {
         e.preventDefault()
         let form = $(".quizName")
         handleSubmit(form, constraints)
-    })
+      })
 
-    function handleSubmit(form) {
+      function handleSubmit(form) {
         let errors = validate(form, constraints);
         // then we update the form to reflect the results
         showErrors(form, errors || {});
         if (!errors) {
-          
+
         }
-    }
-  
+      }
+
       // Updates the inputs with the validation errors
-    function showErrors(form, errors) {
+      function showErrors(form, errors) {
         $(form).find('input,textarea').each(function (index, inputsField) {
-            showErrorsForInput(inputsField, errors && errors[inputsField.name]);
+          showErrorsForInput(inputsField, errors && errors[inputsField.name]);
         })
-    }
-  
-    // Shows the errors for a specific input
-    function showErrorsForInput(input, errors) {
+      }
+
+      // Shows the errors for a specific input
+      function showErrorsForInput(input, errors) {
         // This is the root of the input
         let parent = $(input).parent()
         // Find where the error messages will be insert into
         $(parent).find('.message')
         // First we remove any old messages and resets the classes
-      
+
         // If we have errors
         if (errors) {
-            // we first mark the group has having errors
-            $(parent).find('input,textarea').addClass('invalid')
-            // then we append all the errors
-            $(parent).find('small').html('此為必填欄位。');
+          // we first mark the group has having errors
+          $(parent).find('input,textarea').addClass('invalid')
+          // then we append all the errors
+          $(parent).find('small').html('此為必填欄位。');
         } else {
-            // otherwise we simply mark it as success
-            $(parent).find('input,textarea').addClass('valid')
+          // otherwise we simply mark it as success
+          $(parent).find('input,textarea').addClass('valid')
           $(parent).find('small').html('');
         }
-    }
-  
-
-})
-</script>
+      }
+    })
+  </script>
 
 </body>
 
