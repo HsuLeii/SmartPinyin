@@ -101,6 +101,10 @@ body {
     box-sizing: border-box;
 }
 
+body { 
+    padding-top: 4.1rem;
+}
+
 cursor{
     cursor: pointer;
 }
@@ -139,6 +143,10 @@ cursor{
     input,
     label {
         font-size: 15px;
+    }
+
+    body { 
+        padding-top: 5.6rem;
     }
 }
 
