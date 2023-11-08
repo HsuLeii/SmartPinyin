@@ -37,17 +37,38 @@
     </header>
 
     <main>
-        <div class="slide_area">
-            <div class="slide_img">
-                <img src="../Content/image/photo/slide/select_page.png" alt="">
+        <form action="">
+            <div class="main consent_area">
+                <div class="consent_tittle">
+                    <h5>
+                        研究參與者知情同意書<br/>
+                        Authorization and Consent Form
+                    </h5>
+                </div>
+                <div class="consent_content">
+                    <p>
+                        本研究是___計畫。口說測驗大約需要花費＿＿，您會在線上測驗系統根據題目以說話的方式回答問題。您有權隨時停止作答或要求退出研究。本測驗採記名作答，會在2023年12月將您所填寫的可辨識個人資料去除。研究資料不會被辨識出特定個人，未來可能發表於學術著作，以及用來建置英語寫作之公開語料庫。
+                        <br/>
+                        This study is a ___ project. The oral test is expected to take approximately ____, and you will
+                        respond to questions in a spoken manner using the online testing system. You have the right to
+                        stop answering at any time or request to withdraw from the study. The test is conducted with
+                        identifiable responses, but personally identifiable information will be removed by December
+                        2023. Research data will not be identifiable to specific individuals and may be published in
+                        academic works and used to build a publicly accessible corpus for English writing in the future.
+                    </p>
+                </div>
             </div>
-            <div class="slide_text">
-                <h3>SmartTalking中文聽說學習平台<br/>聽說測驗</h3>
+            <div class="consent_input">
+                <input type="checkbox" value="remember-me" id="consent_input" class="consent_input_checkbox">
+                <label for="consent_input">
+                    <p class="consent_input_text">我以理解本測驗的相關事項，並同意進行測驗以供學術研究使用</p>
+                </label>
             </div>
-        </div>
-        <div class="main select_page_area">
-            
-        </div>
+
+            <button class="button solid_color button_consent" type="submit"
+          onclick="location.href='TEST/select_page.html'">送出</button>
+        </form>
+
     </main>
 
     <!-- JS -->
@@ -62,7 +83,6 @@
             $("header").load("header.html", function () {});
         });
     </script>
-
 </body>
 
 </html>
