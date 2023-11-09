@@ -1,8 +1,9 @@
-$header_bg: #EFE8E0;
+$header_bg: #f1f1ff;
+$color-header-bg:		#f1f1ff; /*rgb(241, 241, 255)*/
 $body_bg: #fff4ee;
 
 /*main*/
-$main_color:             #552b8c;
+$main_color:             #552b8d;
 $main_color_brown:	  	 #58391C;
 $main_color_grey:	  	 #20221f;
 
@@ -23,12 +24,16 @@ $light_yellow: #fff2cc;
 
 /*green*/
 $bright_green:#7b2cbf;
-$light_green:#ddecc5;
+$light_green:#E6BBFF;
 $frog_green:#8FC31F;
 $green_one: #6b8430;
 $green_two: #4F772D;
 $green_three: #31572C;
 $green_four: #132A13;
+
+/*purple*/
+$bright_purple:#7b2cbf;
+$light_purple:#E6BBFF;
 
 /*grade*/
 $first_grade: #FFD000;

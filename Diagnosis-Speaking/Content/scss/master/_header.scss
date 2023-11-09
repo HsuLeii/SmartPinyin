@@ -1,4 +1,5 @@
 header{
+    border-bottom: 1px solid $main-color;
     .navbar {
         width: 90%;
         margin: 0 auto;
@@ -131,7 +132,7 @@ header{
 @media screen and (min-width: 500px){
     header{
         .navbar {
-            padding: 20px 0;
+            padding: 0;
         }
     }
 }

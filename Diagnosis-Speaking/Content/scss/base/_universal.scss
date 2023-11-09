@@ -3,9 +3,11 @@ body {
 }
 
 main {
-    .main{
+    .main {
+        margin: 0 auto;
         max-width: 1200px;
     }
+
     .input_area {
         margin: 30px auto;
         display: flex;
@@ -39,25 +41,25 @@ main {
                 width: 100%;
                 max-width: 500px;
                 border-radius: 50px;
-                border: 1px solid $bright_green;
+                border: 1px solid $bright_purple;
                 border-radius: 5px;
                 margin: 30px auto;
                 cursor: pointer;
 
                 &.solid_color {
-                    background-color: $bright_green;
+                    background-color: $bright_purple;
                     color: $white;
 
                     &:hover {
                         transform: scale(1.05);
-                        background-color: darken($bright_green, 5%);
+                        background-color: darken($bright_purple, 5%);
                     }
                 }
 
-                &:focus{
+                &:focus {
                     border-bottom: 0;
                 }
-                
+
             }
         }
     }
@@ -68,20 +70,20 @@ main {
         width: 100%;
         max-width: 500px;
         border-radius: 50px;
-        border: 1px solid $bright_green;
+        border: 1px solid $bright_purple;
         margin: 30px auto;
 
-        p{
+        p {
             font-weight: 500;
         }
 
         &.solid_color {
-            background-color: $bright_green;
+            background-color: $bright_purple;
             color: $white;
 
             &:hover {
                 transform: scale(1.05);
-                background-color: darken($bright_green, 5%);
+                background-color: darken($bright_purple, 5%);
             }
         }
 
@@ -99,23 +101,124 @@ main {
         }
     }
 
-    .slide_area{
+    .slide_area {
         position: relative;
-        .slide_img{
-        }
-        .slide_text{
+
+        .slide_text {
             width: 90%;
             position: absolute;
-            bottom: 0;
             left: 5%;
-            transform: translate(0 , -20px);
-            h3{
+            top: 50%;
+            transform: translate(0, -50%);
+
+            p {
                 color: $white;
+                font-weight: bold;
+                font-size: 20px;
             }
         }
     }
-}
 
+    .select_page_link {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: $main-color;
+        border-radius: 30px;
+        margin: 40px auto;
+        padding: 20px 40px;
+        text-align: center;
+        color: $white;
+        transform: scale(0.9);
+        width: 100%;
+        max-width: 400px;
+
+        &.small_btn{
+
+            &::before{
+                left: auto;
+                right: 0;
+                transform: translate(-40px, 0);
+            }
+
+            .select_page_btn{
+                flex-direction: row;
+                justify-content: space-between;
+
+                .select_page_btn_icon{
+                    margin: 0;
+                }
+            }
+
+            &:hover {
+    
+                &::before {
+                    transform: translate(0, 0);
+                }
+            }
+        }
+
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: $bright_purple;
+            border-radius: 50%;
+            left: 50%;
+            bottom: 20px;
+            transform: translate(-50%, 0);
+        }
+
+        .select_page_btn {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .select_page_btn_icon {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                border: 1px solid $white;
+                background-color: $white;
+                border-radius: 50%;
+                margin: 15px 0 0;
+                color: $main_color;
+            }
+        }
+
+        &:hover {
+            transform: scale(1);
+
+            &::before {
+                width: 100%;
+                height: 100%;
+                border-radius: 30px;
+                bottom: 0;
+                z-index: -1;
+                transition: 0.3s;
+            }
+
+            .select_page_btn {
+                .select_page_btn_icon {
+                    background-color: transparent;
+                    color: $white;
+                    transition: 0.3s;
+                }
+            }
+        }
+
+        &:focus {
+            border: 1.5px solid $main_color;
+            box-shadow: 5px 5px 5px rgba(darken($main_color, 20%), .5);
+        }
+    }
+}
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -125,23 +228,20 @@ input:-webkit-autofill:focus {
     -webkit-box-shadow: 0 0 0px 1000px $white inset !important;
 }
 
-@keyframes progress {
-    0% {
-      background-position: 0 0
-    }
-    100% {
-      background-position: 1rem 0
-    }
-  }
-
-@media screen and (min-width: 515px) {
+@media screen and (min-width: 500px) {
     main {
+        .slide_area {
+            .slide_text {
+                p {
+                    font-size: 25px;
+                }
+            }
+        }
     }
 }
 
 @media screen and (min-width: 576px) {
-    main {
-    }
+    main {}
 }
 
 @media screen and (min-width: 768px) {
@@ -149,9 +249,47 @@ input:-webkit-autofill:focus {
         .button {
             padding: 12px 20px;
         }
+
+        .slide_area {
+            .slide_text {
+                p {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .select_page_link {
+            width: 45%;
+        }
     }
 }
 
 @media screen and (min-width: 992px) {}
 
-@media screen and (min-width: 1400px) {}
+@media screen and (min-width: 1200px) {
+    main {
+        .slide_area {
+            .slide_text {
+                top: auto;
+                bottom: 0;
+                transform: translate(0, -20px);
+
+                p {
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    main {
+        .slide_area {
+            .slide_text {
+                p {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
