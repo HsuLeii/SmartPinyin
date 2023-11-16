@@ -1,13 +1,12 @@
 main {
-    .test_area {
-        .end_content{
-            .end_content_img{
-                width: 60%;
-                max-width: 350px;
-                height: auto;
-                margin: 50px auto;
-            }
+    .start_page {
 
+        &.end_page{
+            position: relative;
+
+            .select_page_link{
+                position: relative;
+            }
             .fireworks_area {
                 position: fixed;
                 top: 50%;
@@ -17,9 +16,7 @@ main {
                 height: 100vh;
                 z-index: -1;
                 transition: width 2s;
-                display: none;
-                overflow: hidden;
-
+    
                 .fireworks_img {
                     position: absolute;
                     top: 50%;
@@ -29,6 +26,7 @@ main {
                 }
             }
         }
+        
     }
 }
 
@@ -36,15 +34,6 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-    main {
-        .test_area {
-            .end_content{
-                .end_content_img{
-                    width: 80%;
-                }
-            }
-        }
-    }
 }
 
 @media screen and (min-width: 992px) {

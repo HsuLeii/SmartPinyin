@@ -1,6 +1,5 @@
 main {
     .start_page{
-        width: 80%;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -11,6 +10,7 @@ main {
                 display: flex;
                 justify-content: center;
                 text-align: center;
+                color: $main_color;
             }
         }
 
@@ -18,7 +18,6 @@ main {
             margin: 40px auto 0;
             p{
                 display: flex;
-                justify-content: center;
             }
         }
 

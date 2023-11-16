@@ -1,0 +1,423 @@
+main {
+
+    .re-record_page {
+
+        .re-record_tittle,
+        .re-record_text {
+            display: flex;
+            justify-content: center;
+            color: darken($main_color, 15%);
+            margin: 0 auto 30px;
+        }
+
+        .re-record_area {
+            .table {
+                border: 1px solid darken($main_color, 15%);
+                margin: 0;
+
+                thead {
+                    .re-record_header {
+                        display: flex;
+                        justify-content: flex-end;
+                        background-color: $main_color;
+                        border-bottom: 0;
+                        flex-wrap: wrap;
+
+                        .re-record_header_text {
+                            display: flex;
+                            justify-content: center;
+                            color: $white;
+                            padding: 8px 5px;
+
+                            &.re-record_header_time {
+                                border-left: 1px solid;
+                            }
+
+                            &.re-record_header_files {
+                                border-left: 1px solid;
+                            }
+
+                        }
+                    }
+                }
+
+                tbody {
+                    &.re-record_body {
+                        border-top: 0;
+                        background-color: $white;
+
+                        .re-record_item {
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            border-top: 1px solid $main_color_grey;
+
+                            .re-record_item_content {
+                                padding: 15px 8px;
+
+                                &.re-record_item_icon {
+                                    width: 37.5px;
+                                    text-align: center;
+                                    border: 0px;
+                                    line-height: 0;
+                                    padding: 0;
+                                    cursor: pointer;
+
+                                    .fa-circle-check {
+                                        color: $disabled;
+                                        font-size: 20px;
+                                    }
+                                }
+
+                                &.re-record_item_text {
+                                    display: flex;
+                                    justify-content: center;
+                                    color: $main_color_grey;
+                                    word-break: break-word;
+
+                                    &.re-record_item_time {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        justify-content: center;
+                                    }
+                                }
+
+                                &.re-record_item_files {
+                                    .player_area {
+                                        display: flex;
+                                        align-items: flex-start;
+                                        justify-content: space-around;
+                                        flex-direction: column;
+                                        padding: 15px 20px;
+                                        background-color: lighten($main_color, 45%);
+                                        border-radius: 10px;
+                                        width: 100%;
+                                        max-width: 950px;
+                                        margin: 0 auto;
+
+                                        .play_area {
+                                            width: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                            flex-wrap: wrap;
+                                            margin: 0 0 20px 0;
+
+                                            label {
+                                                margin: 0 10px 0 0;
+                                                color: $main_color;
+                                            }
+
+                                            .player_btn {
+                                                margin: 0 10px 0 0;
+                                                i{
+                                                    color: $main_color;
+                                                }
+
+                                                &.play{
+                                                    i{
+                                                        &::before{
+                                                            content: "";
+                                                        }
+
+                                                        &::after{
+                                                            content: "\f04c";
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .sound_area {
+                                            display: flex;
+                                            align-items: center;
+                                            max-width: 165px;
+                                            padding: 5px 10px;
+                                            background-color: lighten($main_color, 55%);
+                                            border-radius: 50px;
+
+                                            .icon_volume {
+                                                margin: 0 10px 0 0;
+                                                color: $main_color;
+                                            }
+                                        }
+
+                                        .form-range {
+                                            width: 80%;
+                                        }
+
+                                        /* input range 主體樣式 */
+                                        input[type="range"] {
+                                            -webkit-appearance: none;
+                                            width: 100%;
+                                            position: relative;
+                                            border-radius: 10px;
+                                            cursor: pointer;
+
+                                            /* input range 原點focus */
+                                            &:focus {
+                                                &::-webkit-slider-thumb {
+                                                    background-color: darken($main_color, 10%);
+                                                }
+                                            }
+
+                                            /* input range 原點樣式 */
+                                            &::-webkit-slider-thumb {
+                                                width: 15px;
+                                                height: 15px;
+                                                border-radius: 100%;
+                                                border: none;
+                                                -webkit-appearance: none;
+                                                background-color: $main_color;
+                                                z-index: 1;
+                                                position: relative;
+                                                transition: 0.5s all ease;
+                                                transform: translate(0%, -50%);
+                                                top: 50%;
+                                            }
+
+                                            /* input range 進度條樣式 */
+                                            &::-webkit-slider-runnable-track {
+                                                background-color: $white;
+                                                height: 5px;
+                                                border-radius: 10px;
+                                            }
+                                        }
+
+                                        /* input range 播放樣式 */
+                                        input[name="playRange"] {
+                                            margin: 15px 0 0;
+
+                                            &:before {
+                                                position: absolute;
+                                                content: "";
+                                                width: var(--playRange);
+                                                height: 100%;
+                                                background-color: $main_color;
+                                                border-radius: 10px;
+                                            }
+                                        }
+
+                                        /* 播放完畢時，100%進度顯示 */
+                                        input[name="playRange0"] {
+
+                                            &:before {
+                                                position: absolute;
+                                                content: "";
+                                                width: 100%;
+                                                height: 100%;
+                                                background-color: $main_color;
+                                                border-radius: 10px;
+                                            }
+                                        }
+
+                                        /* input range 聲音樣式 */
+                                        input[name="soundRange"] {
+
+                                            &:hover {
+                                                ~.icon_hand_pointer {
+                                                    opacity: 0;
+                                                }
+                                            }
+
+                                            &:before {
+                                                position: absolute;
+                                                content: "";
+                                                width: var(--soundRange);
+                                                height: 100%;
+                                                background-color: $white;
+                                                border-radius: 10px;
+                                                right: 0;
+                                            }
+
+                                            &::-webkit-slider-runnable-track {
+                                                background-color: $main_color;
+                                                height: 5px;
+                                                border-radius: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.check {
+                                background-color: $test_bg;
+                                .re-record_item_content{
+                                    &.re-record_item_icon {
+                                        .fa-circle-check {
+                                            color: $bright_purple;
+                                        }
+                                    }
+    
+                                    &.re-record_item_text {
+                                        color: $dark_purple;
+                                    }
+                                }
+                                
+                            }
+
+                            &::before,
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                width: 1px;
+                                height: 100%;
+                                background-color: darken($main_color, 15%);
+                                bottom: 0;
+                            }
+
+                            &::before {
+                                left: 37.5px;
+                            }
+
+                            &::after {
+                                left: calc(37.5px / 2 + 20%);
+                            }
+
+                            &:nth-child(1) {
+                                border-top: 0px;
+                            }
+
+                        }
+                    }
+                }
+
+                .re-record_header_time,
+                .re-record_item_time {
+                    width: calc(20% - 37.5px / 2);
+                }
+
+                .re-record_header_files,
+                .re-record_item_files {
+                    width: calc(80% - 37.5px / 2);
+                }
+            }
+        }
+
+        .re-record_btn{
+            display: flex;
+            flex-direction: column;
+            .select_page_link{
+                margin: 40px auto 0;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 768px) {
+    main {
+
+        .re-record_page {
+            .re-record_area {
+                .table {
+
+                    tbody {
+                        &.re-record_body {
+
+                            .re-record_item {
+
+                                .re-record_item_content {
+                                    padding: 25px 15px;
+
+                                    &.re-record_item_icon {
+                                        width: 66.5px;
+
+                                        .fa-circle-check {
+                                            font-size: 35px;
+                                        }
+                                    }
+
+                                    &.re-record_item_files {
+                                        .player_area {
+                                            position: relative;
+
+                                            .play_area {
+                                                margin: 0px;
+                                            }
+    
+                                            .sound_area {
+                                                position: absolute;
+                                                right: 20px;
+                                                top: 15px;
+                                            }
+                                        }
+                                    }
+
+                                }
+
+                                &::before {
+                                    left: 66.5px;
+                                }
+
+                                &::after {
+                                    left: calc(66.5px / 2 + 20%);
+                                }
+                            }
+                        }
+                    }
+
+                    .re-record_header_time,
+                .re-record_item_time {
+                    width: calc(20% - 66.5px / 2);
+                }
+
+                .re-record_header_files,
+                .re-record_item_files {
+                    width: calc(80% - 66.5px / 2);
+                }
+                }
+            }
+
+            .re-record_btn{
+                flex-direction: row;
+                justify-content: center;
+                .select_page_link{
+                    margin: 40px 0 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+
+        .re-record_page {
+            .re-record_area {
+                .table {
+
+                    tbody {
+                        &.re-record_body {
+
+                            .re-record_item {
+
+                                .re-record_item_content {
+
+                                    &.re-record_item_files {
+                                        .player_area {
+                                            /* input range 播放樣式 */
+                                        input[name="playRange"] {
+                                            margin: 0;
+                                            width: calc(100% - 10px - 27px - 135px - 165px);
+                                        }
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {}

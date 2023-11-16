@@ -5,20 +5,20 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>漢字詞系列</title>
-    <meta name="description" content="漢字詞系列" />
+    <title>SmartTalking中文聽說學習平台</title>
+    <meta name="description" content="SmartTalking中文聽說學習平台" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="漢字詞系列" />
-    <meta property="og:site_name" content="漢字詞系列" />
+    <meta property="og:title" content="SmartTalking中文聽說學習平台" />
+    <meta property="og:site_name" content="SmartTalking中文聽說學習平台" />
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <!-- 之後改成正式網址的連結 -->
     <meta property="og:image" content="https://hsuleii.github.io/smartreading/CCS/Content/image/main/og_image.jpg" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="漢字詞系列" />
+    <meta name="twitter:title" content="SmartTalking中文聽說學習平台" />
     <!-- 之後改成正式網址的連結 -->
     <meta name="twitter:image" content="https://hsuleii.github.io/smartreading/CCS/Content/image/main/og_image.jpg" />
-    <meta itemprop="name" content="漢字詞系列">
+    <meta itemprop="name" content="SmartTalking中文聽說學習平台">
     <!-- 之後改成正式網址的連結 -->
     <meta itemprop="image" content="https://hsuleii.github.io/smartreading/CCS/Content/image/main/og_image.jpg">
     <link rel="shortcut icon" type="image/x-icon" href="../Content/image/favicon.ico" />
@@ -37,40 +37,33 @@
     </header>
 
     <main>
-        <div class="test_area">
-            <div class="report_selector_tittle">
-                <h3>測驗結束</h3>
+        <div class="main start_page end_page">
+            <div class="start_page_tittle">
+                <h4>
+                    你好棒！全部做完了！
+                </h4>
             </div>
 
-            <div class="end_content">
-                <div class="end_content_img">
-                    <img src="../Content/image/photo/frog/tongue.png" alt="">
-                </div>
-
-                <div class="report_selector_text">
-                    <h4>你好棒！全部做完了！</h4>
-                </div>
-
-                <form action="/CCS2023/Award/ViewScoreReport" method="post">
-                    <input type="hidden" id="recordId" name="recordId" value="3586">
-                    <input type="hidden" id="culture" name="culture" value="zh-TW">
-
-                    <div class="">
-                        <div class="">
-                            <input type="submit" value="檢視成績報告" class="button solid_color">
-                        </div>
-                    </div>
-                    <input name="__RequestVerificationToken" type="hidden"
-                        value="CfDJ8N4FdXl-WJpDgyRUqckL25HsWUOSu_j_4WTgnyA3UPfGB5n49SSXCKc_Yq_BbI_ElwelKLToBy-TowBt5GI-GjwiHtjqyNnoKlw8VT9Z3FJiva2Kxb-QScF6aem6lq2HfGh0m0PIcwMzv0myHbZe07jw8xDvnYYKOLzf_y0hIIxIHXKy_oKQN_ZajxzjYM7VyA">
-                </form>
-
-                <div class="fireworks_area">
-                    <div class="fireworks_img">
-                        <img src="../Content/image/photo/fireworks/fireworks.png" alt="">
-                    </div>
-                </div>
+            <div class="start_page_text">
+                <p>
+                    測驗時間：完成測驗
+                </p>
             </div>
 
+            <a href="recording_test.html"class="select_page_link small_btn disabled">
+                <div class="select_page_btn">
+                    開始測驗
+                    <div class="select_page_btn_icon">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </a>
+
+            <div class="fireworks_area">
+                <div class="fireworks_img">
+                    <img src="../Content/image/photo/fireworks/fireworks.png" alt="">
+                </div>
+            </div>
         </div>
     </main>
 
@@ -84,15 +77,6 @@
     <script>
         $(document).ready(function () {
             $("header").load("header.html", function () {});
-        });
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $(".fireworks_area").show();
-            setTimeout(function () {
-                $(".fireworks_area").fadeOut();
-            }, 5000);
         });
     </script>
 
