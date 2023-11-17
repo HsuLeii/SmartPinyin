@@ -339,8 +339,11 @@ main .login_area .register_btn a:hover { color: #552b8d; border-bottom: 1px soli
 
 main .select_page_area { width: 80%; margin: 60px auto 40px; }
 
+main .select_page_area .select_page_btn_area .select_page_link .select_page_btn { font-size: 21px; }
+
 @media screen and (min-width: 768px) { main .select_page_area { width: 80%; margin: 60px auto 0; }
-  main .select_page_area .select_page_btn_area { display: flex; } }
+  main .select_page_area .select_page_btn_area { display: flex; }
+  main .select_page_area .select_page_btn_area .select_page_link .select_page_btn { font-size: 25px; } }
 
 main .quiz_page { margin: 80px auto; }
 
@@ -450,7 +453,9 @@ main .quiz_instructions { margin: 80px auto; }
 
 main .quiz_instructions .start_page_text { margin: 40px auto 20px; }
 
-main .quiz_instructions .test_area { padding: 0px; background-color: transparent; border: 0px; }
+main .quiz_instructions .test_area { background-color: transparent; border: 0px; }
+
+main .quiz_instructions .test_area.test_area_instructions { border: 1px solid #552b8d; background-color: #f3e6f5; }
 
 main .quiz_instructions .test_area .instructions_item { position: relative; }
 
@@ -484,6 +489,8 @@ main .quiz_instructions .test_area .instructions_item .video_instructions { widt
 
 @media screen and (min-width: 768px) { main .quiz_instructions .test_area .instructions_item .instructions { width: 210px; }
   main .quiz_instructions .test_area .instructions_item .instructions.instructions_video_play { width: 195px; }
+  main .quiz_instructions .test_area .instructions_item .instructions.instructions_next { left: auto; top: auto; transform: translate(calc(-100% - 5px), -50%); right: 0; bottom: 0; transform: translate(5px, calc(100% + 10px)); }
+  main .quiz_instructions .test_area .instructions_item .instructions.instructions_next::after { top: 0; right: 0; transform: translate(-100%, -100%); border-left: 7px solid transparent; border-right: 7px solid transparent; border-bottom: 7px solid #240046; }
   main .quiz_instructions .test_area .next_page_btn { margin: 50px 0 0 auto; display: flex; justify-content: flex-end; }
   main .quiz_instructions .test_area .next_page_btn .test_area_answer_btn .icon_btn { width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; }
   main .quiz_instructions .test_area .next_page_btn .test_area_answer_btn .icon_btn i { font-size: 30px; }

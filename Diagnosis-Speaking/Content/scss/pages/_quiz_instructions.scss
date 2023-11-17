@@ -1,14 +1,19 @@
 main {
     .quiz_instructions {
         margin: 80px auto;
-        .start_page_text{
+
+        .start_page_text {
             margin: 40px auto 20px;
         }
 
         .test_area {
-            padding: 0px;
-                background-color: transparent;
-                border: 0px;
+            background-color: transparent;
+            border: 0px;
+
+            &.test_area_instructions {
+                border: 1px solid $main_color;
+                background-color: $test_bg;
+            }
 
             .instructions_item {
                 position: relative;
@@ -84,7 +89,6 @@ main {
 
                         &::after {
                             right: 0;
-                            ;
                             top: 50%;
                             transform: translate(100%, -50%);
                             border-left: 7px solid $dark_purple;
@@ -108,14 +112,14 @@ main {
                     }
                 }
 
-                .video_instructions{
+                .video_instructions {
                     width: 100%;
                     max-width: 500px;
                     margin: 0 auto;
                     position: absolute;
                     left: 50%;
                     bottom: 0;
-                    transform: translate(-50% , 0);
+                    transform: translate(-50%, 0);
                 }
             }
 
@@ -132,10 +136,28 @@ main {
             .test_area {
                 .instructions_item {
                     .instructions {
-                        width: 210px;    
+                        width: 210px;
 
                         &.instructions_video_play {
                             width: 195px;
+                        }
+
+                        &.instructions_next {
+                            left: auto;
+                            top: auto;
+                            transform: translate(calc(-100% - 5px), -50%);
+                            right: 0;
+                            bottom: 0;
+                            transform: translate(5px, calc(100% + 10px));
+    
+                            &::after {
+                                top: 0;
+                                right: 0;
+                                transform: translate(-100%, -100%);
+                                border-left: 7px solid transparent;
+                                border-right: 7px solid transparent;
+                                border-bottom: 7px solid $dark_purple;
+                            }
                         }
                     }
                 }
@@ -144,7 +166,7 @@ main {
                     margin: 50px 0 0 auto;
                     display: flex;
                     justify-content: flex-end;
-        
+
                     .test_area_answer_btn {
                         .icon_btn {
                             width: 50px;
@@ -152,7 +174,7 @@ main {
                             display: flex;
                             justify-content: center;
                             align-items: center;
-        
+
                             i {
                                 font-size: 30px;
                             }
@@ -160,14 +182,14 @@ main {
                     }
                 }
 
-                &.test_area_instructions{
+                &.test_area_instructions {
                     .next_page_btn {
                         margin: 0;
                     }
                 }
             }
         }
-    
+
     }
 }
 
