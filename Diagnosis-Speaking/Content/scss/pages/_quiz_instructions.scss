@@ -6,185 +6,212 @@ main {
             margin: 40px auto 20px;
         }
 
-        .test_area {
-            background-color: transparent;
-            border: 0px;
+        .instructions_area{
+            background-color: $test_bg;
+            border-radius: 30px;
+            border: 2px solid $main_color;
 
-            &.test_area_instructions {
+            .instructions_area_item{
+                width: 94%;
                 border: 1px solid $main_color;
-                background-color: $test_bg;
-            }
+                background-color: $white;
+                padding: 20px;
+                margin: 40px auto;
+                border-radius: 30px;
 
-            .instructions_item {
-                position: relative;
+                .test_area {
+                    padding: 0;
 
-                .instructions {
-                    position: absolute;
-                    z-index: 5;
-                    width: 115px;
-                    background-color: $dark_purple;
-                    border-radius: 10px;
-                    padding: 5px;
-                    display: flex;
-                    justify-content: center;
-
-                    p {
-                        color: $white;
-                        text-align: left;
-                    }
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                    }
-
-                    &.instructions_video_play {
-                        width: 160px;
-                        left: 0;
-                        bottom: 0;
-                        transform: translate(2%, 28%);
-
-                        &::after {
-                            top: 0;
-                            left: 0;
-                            transform: translate(100%, -100%);
-                            border-left: 7px solid transparent;
-                            border-right: 7px solid transparent;
-                            border-bottom: 7px solid $dark_purple;
+                    .instructions_item {
+                        position: relative;
+        
+                        .instructions {
+                            position: absolute;
+                            z-index: 5;
+                            width: 115px;
+                            background-color: $dark_purple;
+                            border-radius: 10px;
+                            padding: 5px;
+                            display: flex;
+                            justify-content: center;
+        
+                            p {
+                                color: $white;
+                                text-align: left;
+                            }
+        
+                            &::after {
+                                content: "";
+                                position: absolute;
+                            }
+        
+                            &.instructions_video_play {
+                                width: 160px;
+                                left: 0;
+                                bottom: 0;
+                                transform: translate(2%, 28%);
+        
+                                &::after {
+                                    top: 0;
+                                    left: 0;
+                                    transform: translate(100%, -100%);
+                                    border-left: 7px solid transparent;
+                                    border-right: 7px solid transparent;
+                                    border-bottom: 7px solid $dark_purple;
+                                }
+                            }
+        
+                            &.instructions_mic {
+                                right: 0;
+                                transform: translate(calc(0% - 20px), 5px);
+        
+                                &::after {
+                                    top: 0;
+                                    right: 0;
+                                    transform: translate(calc(-100% - 15px), -100%);
+                                    border-left: 7px solid transparent;
+                                    border-right: 7px solid transparent;
+                                    border-bottom: 7px solid $dark_purple;
+                                }
+                            }
+        
+                            &.instructions_play {
+                                left: 0%;
+                                transform: translate(calc(0% + 20px), 5px);
+        
+                                &::after {
+                                    top: 0;
+                                    left: 0;
+                                    transform: translate(calc(100% + 15px), -100%);
+                                    border-left: 7px solid transparent;
+                                    border-right: 7px solid transparent;
+                                    border-bottom: 7px solid $dark_purple;
+                                }
+                            }
+        
+                            &.instructions_next {
+                                left: 0;
+                                top: 50%;
+                                transform: translate(calc(-100% - 5px), -50%);
+        
+                                &::after {
+                                    right: 0;
+                                    top: 50%;
+                                    transform: translate(100%, -50%);
+                                    border-left: 7px solid $dark_purple;
+                                    border-top: 7px solid transparent;
+                                    border-bottom: 7px solid transparent;
+                                }
+                            }
+        
+                            &.instructions_sound {
+                                left: 50%;
+                                transform: translate(-50%, 5px);
+        
+                                &::after {
+                                    top: 0;
+                                    left: 50%;
+                                    transform: translate(-50%, -100%);
+                                    border-left: 7px solid transparent;
+                                    border-right: 7px solid transparent;
+                                    border-bottom: 7px solid $dark_purple;
+                                }
+                            }
                         }
-                    }
-
-                    &.instructions_mic {
-                        right: 0;
-                        transform: translate(calc(0% - 20px), 5px);
-
-                        &::after {
-                            top: 0;
-                            right: 0;
-                            transform: translate(calc(-100% - 15px), -100%);
-                            border-left: 7px solid transparent;
-                            border-right: 7px solid transparent;
-                            border-bottom: 7px solid $dark_purple;
-                        }
-                    }
-
-                    &.instructions_play {
-                        left: 0%;
-                        transform: translate(calc(0% + 20px), 5px);
-
-                        &::after {
-                            top: 0;
-                            left: 0;
-                            transform: translate(calc(100% + 15px), -100%);
-                            border-left: 7px solid transparent;
-                            border-right: 7px solid transparent;
-                            border-bottom: 7px solid $dark_purple;
-                        }
-                    }
-
-                    &.instructions_next {
-                        left: 0;
-                        top: 50%;
-                        transform: translate(calc(-100% - 5px), -50%);
-
-                        &::after {
-                            right: 0;
-                            top: 50%;
-                            transform: translate(100%, -50%);
-                            border-left: 7px solid $dark_purple;
-                            border-top: 7px solid transparent;
-                            border-bottom: 7px solid transparent;
-                        }
-                    }
-
-                    &.instructions_sound {
-                        left: 50%;
-                        transform: translate(-50%, 5px);
-
-                        &::after {
-                            top: 0;
+        
+                        .video_instructions {
+                            width: 100%;
+                            max-width: 500px;
+                            margin: 0 auto;
+                            position: absolute;
                             left: 50%;
-                            transform: translate(-50%, -100%);
-                            border-left: 7px solid transparent;
-                            border-right: 7px solid transparent;
-                            border-bottom: 7px solid $dark_purple;
+                            bottom: 0;
+                            transform: translate(-50%, 0);
                         }
                     }
-                }
-
-                .video_instructions {
-                    width: 100%;
-                    max-width: 500px;
-                    margin: 0 auto;
-                    position: absolute;
-                    left: 50%;
-                    bottom: 0;
-                    transform: translate(-50%, 0);
+        
                 }
             }
 
+            .test_area {
+                background-color: transparent;
+                border: 0px;
+            }
         }
     }
-
 }
 
-@media screen and (min-width: 576px) {}
+@media screen and (min-width: 500px) {
+    main {
+        .quiz_instructions {
+            .instructions_area{
+                .instructions_area_item{
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
 
 @media screen and (min-width: 768px) {
     main {
         .quiz_instructions {
-            .test_area {
-                .instructions_item {
-                    .instructions {
-                        width: 210px;
-
-                        &.instructions_video_play {
-                            width: 195px;
-                        }
-
-                        &.instructions_next {
-                            left: auto;
-                            top: auto;
-                            transform: translate(calc(-100% - 5px), -50%);
-                            right: 0;
-                            bottom: 0;
-                            transform: translate(5px, calc(100% + 10px));
-    
-                            &::after {
-                                top: 0;
-                                right: 0;
-                                transform: translate(-100%, -100%);
-                                border-left: 7px solid transparent;
-                                border-right: 7px solid transparent;
-                                border-bottom: 7px solid $dark_purple;
+            .instructions_area{
+                .instructions_area_item{
+                    .test_area {
+                        .instructions_item {
+                            .instructions {
+                                width: 210px;
+        
+                                &.instructions_video_play {
+                                    width: 195px;
+                                }
+        
+                                &.instructions_next {
+                                    left: auto;
+                                    top: auto;
+                                    transform: translate(calc(-100% - 5px), -50%);
+                                    right: 0;
+                                    bottom: 0;
+                                    transform: translate(5px, calc(100% + 10px));
+            
+                                    &::after {
+                                        top: 0;
+                                        right: 0;
+                                        transform: translate(-100%, -100%);
+                                        border-left: 7px solid transparent;
+                                        border-right: 7px solid transparent;
+                                        border-bottom: 7px solid $dark_purple;
+                                    }
+                                }
                             }
                         }
-                    }
-                }
-
-                .next_page_btn {
-                    margin: 50px 0 0 auto;
-                    display: flex;
-                    justify-content: flex-end;
-
-                    .test_area_answer_btn {
-                        .icon_btn {
-                            width: 50px;
-                            height: 50px;
+        
+                        .next_page_btn {
+                            margin: 50px 0 0 auto;
                             display: flex;
-                            justify-content: center;
-                            align-items: center;
-
-                            i {
-                                font-size: 30px;
+                            justify-content: flex-end;
+        
+                            .test_area_answer_btn {
+                                .icon_btn {
+                                    width: 50px;
+                                    height: 50px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+        
+                                    i {
+                                        font-size: 30px;
+                                    }
+                                }
                             }
                         }
-                    }
-                }
-
-                &.test_area_instructions {
-                    .next_page_btn {
-                        margin: 0;
+        
+                        &.test_area_instructions {
+                            .next_page_btn {
+                                margin: 0;
+                            }
+                        }
                     }
                 }
             }

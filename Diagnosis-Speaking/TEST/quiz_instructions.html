@@ -38,148 +38,157 @@
 
     <main>
         <div class="main quiz_instructions quiz_page">
-            <div class="start_page_text">
-                <h4>操作說明一</h4>
-                <div class="start_page_text_item">
-                    <span>•</span>
-                    <p>
-                        請根據動畫的內容回答問題，每題播放兩次，每題回答時間如下
-                    </p>
-                </div>
-            </div>
-
-            <div class="test_area test_area_instructions">
-                <div class="test_area_content">
-                    <p>
-                        1.(<span class="red">作答時間：10秒/1分鐘</span>)
-                    </p>
-                    <div class="test_area_topic instructions_item">
-                        <video class="topic_video" style="pointer-events: none;" poster="../Content/image/photo/video/cover.png" controls>
-                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                        </video>
-                        <div class="video_instructions">
-                            <div class="instructions instructions_video_play">
-                                <p>播放鍵：播放題目</p>
-                            </div>
+            <div class="instructions_area">
+                <div class="instructions_area_item">
+                    <div class="start_page_text">
+                        <h4>操作說明一</h4>
+                        <div class="start_page_text_item">
+                            <span>•</span>
+                            <p>
+                                請根據動畫的內容回答問題，每題播放兩次，每題回答時間如下
+                            </p>
                         </div>
                     </div>
-                    <div class="test_area_time">
-                        <h5>00:10</h5>
-                    </div>
-                    <div class="test_area_answer">
-                        <button class="test_area_answer_btn instructions_item" disabled>
-                            <span class="icon_btn mic_btn"><i class="fa-solid fa-microphone-lines"></i></span>
-                            <div class="instructions instructions_mic">
-                                <p>錄音鍵：回答問題</p>
+        
+                    <div class="test_area">
+                        <div class="test_area_content">
+                            <p>
+                                1.(<span class="red">作答時間：10秒/1分鐘</span>)
+                            </p>
+                            <div class="test_area_topic instructions_item">
+                                <video class="topic_video" style="pointer-events: none;" poster="../Content/image/photo/video/cover.png" controls>
+                                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                </video>
+                                <div class="video_instructions">
+                                    <div class="instructions instructions_video_play">
+                                        <p>播放鍵：播放題目</p>
+                                    </div>
+                                </div>
                             </div>
-                        </button>
-                        <button class="test_area_answer_btn instructions_item" disabled>
-                            <span class="icon_btn play_btn"><i class="fa-solid fa-play"></i></span>
-                            <div class="instructions instructions_play">
-                                <p>播放錄音鍵</p>
+                            <div class="test_area_time">
+                                <h5>00:10</h5>
                             </div>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="next_page_btn">
-                    <button class="test_area_answer_btn instructions_item" disabled>
-                        <span class="icon_btn next_btn"><i class="fa-solid fa-arrow-right"></i></span>
-                        <div class="instructions instructions_next">
-                            <p>下一題</p>
+                            <div class="test_area_answer">
+                                <button class="test_area_answer_btn instructions_item" disabled>
+                                    <span class="icon_btn mic_btn"><i class="fa-solid fa-microphone-lines"></i></span>
+                                    <div class="instructions instructions_mic">
+                                        <p>錄音鍵：回答問題</p>
+                                    </div>
+                                </button>
+                                <button class="test_area_answer_btn instructions_item" disabled>
+                                    <span class="icon_btn play_btn"><i class="fa-solid fa-play"></i></span>
+                                    <div class="instructions instructions_play">
+                                        <p>播放錄音鍵</p>
+                                    </div>
+                                </button>
+                            </div>
                         </div>
-                    </button>
-                </div>
-            </div>
-
-            <div class="start_page_text">
-                <div class="start_page_text_item">
-                    <h4>操作說明二</h4>
-                </div>
-
-                <div class="start_page_text_item">
-                    <span>•</span>
-                    <p>
-                        聽題目回答問題，每題播放兩次，每題回答時間如下。
-                    </p>
-                </div>
-
-                <div class="start_page_text_item">
-                    <span>•</span>
-                    <p>
-                        按「<span class="icon_btn sound_btn disable"><i class="fa-solid fa-volume-high"></i></span>」播放題目。
-                    </p>
-                </div>
-                
-                <div class="start_page_text_item">
-                    <span>•</span>
-                    <p>
-                        按「<span class="icon_btn mic_btn disable"><i class="fa-solid fa-microphone-lines"></i></span>」回答問題。
-                    </p>
-                </div>
-
-                <div class="start_page_text_item">
-                    <span>•</span>
-                    <p>按「<span class="icon_btn play_btn disable"><i class="fa-solid fa-play"></i></span>」，確認您說話的音量正常且聲音清楚。</p>
-                </div>
-
-                <div class="start_page_text_item">
-                    <span>•</span>
-                    <p>
-                        按「<span class="icon_btn next_btn disable"><i class="fa-solid fa-arrow-right"></i></span>」進行下一題。
-                    </p>
-                </div>
-            </div>
-
-            <div class="test_area test_area_instructions">
-                <div class="test_area_content">
-                    <p>
-                        1.(<span class="red">作答時間：10秒/1分鐘</span>)
-                    </p>
-                    <div class="test_area_topic instructions_item">
-                        <button class="test_area_answer_btn instructions_item" disabled>
-                            <span class="icon_btn sound_btn"><i class="fa-solid fa-volume-high"></i></span>
-                            <div class="instructions instructions_sound">
-                                <p>播放鍵：聽題目</p>
-                            </div>
-                        </button>
-                    </div>
-                    <div class="test_area_time">
-                        <h5>00:10</h5>
-                    </div>
-                    <div class="test_area_answer">
-                        <button class="test_area_answer_btn instructions_item" disabled>
-                            <span class="icon_btn mic_btn"><i class="fa-solid fa-microphone-lines"></i></span>
-                            <div class="instructions instructions_mic">
-                                <p>錄音鍵：回答問題</p>
-                            </div>
-                        </button>
-                        <button class="test_area_answer_btn instructions_item" disabled>
-                            <span class="icon_btn play_btn"><i class="fa-solid fa-play"></i></span>
-                            <div class="instructions instructions_play">
-                                <p>播放錄音鍵</p>
-                            </div>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="next_page_btn">
-                    <button class="test_area_answer_btn instructions_item" disabled>
-                        <span class="icon_btn next_btn"><i class="fa-solid fa-arrow-right"></i></span>
-                        <div class="instructions instructions_next">
-                            <p>下一題</p>
+        
+                        <div class="next_page_btn">
+                            <button class="test_area_answer_btn instructions_item" disabled>
+                                <span class="icon_btn next_btn"><i class="fa-solid fa-arrow-right"></i></span>
+                                <div class="instructions instructions_next">
+                                    <p>下一題</p>
+                                </div>
+                            </button>
                         </div>
-                    </button>
+                    </div>
                 </div>
-            </div>
+    
+                <div class="instructions_area_item">
+                    <div class="start_page_text">
+                        <div class="start_page_text_item">
+                            <h4>操作說明二</h4>
+                        </div>
+        
+                        <div class="start_page_text_item">
+                            <span>•</span>
+                            <p>
+                                聽題目回答問題，每題播放兩次，每題回答時間如下。
+                            </p>
+                        </div>
+        
+                        <div class="start_page_text_item">
+                            <span>•</span>
+                            <p>
+                                按「<span class="icon_btn sound_btn disable"><i class="fa-solid fa-volume-high"></i></span>」播放題目。
+                            </p>
+                        </div>
+                        
+                        <div class="start_page_text_item">
+                            <span>•</span>
+                            <p>
+                                按「<span class="icon_btn mic_btn disable"><i class="fa-solid fa-microphone-lines"></i></span>」回答問題。
+                            </p>
+                        </div>
+        
+                        <div class="start_page_text_item">
+                            <span>•</span>
+                            <p>按「<span class="icon_btn play_btn disable"><i class="fa-solid fa-play"></i></span>」，確認您說話的音量正常且聲音清楚。</p>
+                        </div>
+        
+                        <div class="start_page_text_item">
+                            <span>•</span>
+                            <p>
+                                按「<span class="icon_btn next_btn disable"><i class="fa-solid fa-arrow-right"></i></span>」進行下一題。
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="test_area">
+                        <div class="test_area_content">
+                            <p>
+                                1.(<span class="red">作答時間：10秒/1分鐘</span>)
+                            </p>
+                            <div class="test_area_topic instructions_item">
+                                <button class="test_area_answer_btn instructions_item" disabled>
+                                    <span class="icon_btn sound_btn"><i class="fa-solid fa-volume-high"></i></span>
+                                    <div class="instructions instructions_sound">
+                                        <p>播放鍵：聽題目</p>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="test_area_time">
+                                <h5>00:10</h5>
+                            </div>
+                            <div class="test_area_answer">
+                                <button class="test_area_answer_btn instructions_item" disabled>
+                                    <span class="icon_btn mic_btn"><i class="fa-solid fa-microphone-lines"></i></span>
+                                    <div class="instructions instructions_mic">
+                                        <p>錄音鍵：回答問題</p>
+                                    </div>
+                                </button>
+                                <button class="test_area_answer_btn instructions_item" disabled>
+                                    <span class="icon_btn play_btn"><i class="fa-solid fa-play"></i></span>
+                                    <div class="instructions instructions_play">
+                                        <p>播放錄音鍵</p>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+        
+                        <div class="next_page_btn">
+                            <button class="test_area_answer_btn instructions_item" disabled>
+                                <span class="icon_btn next_btn"><i class="fa-solid fa-arrow-right"></i></span>
+                                <div class="instructions instructions_next">
+                                    <p>下一題</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="test_area">
-                <div class="next_page_btn">
-                    <a href="quiz_video.html" class="test_area_answer_btn instructions_item">
-                        <span class="icon_btn next_btn"><i class="fa-solid fa-arrow-right"></i></span>
-                    </a>
+                <div class="test_area">
+                    <div class="next_page_btn">
+                        <a href="quiz_video.html" class="test_area_answer_btn instructions_item">
+                            <span class="icon_btn next_btn"><i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                    </div>
                 </div>
             </div>
+            
+
+            
 
         </div>
     </main>
