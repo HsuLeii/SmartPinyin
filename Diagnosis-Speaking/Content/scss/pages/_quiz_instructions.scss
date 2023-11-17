@@ -34,10 +34,16 @@ main {
                             padding: 5px;
                             display: flex;
                             justify-content: center;
+                            border: 1.5px solid $white;
         
                             p {
                                 color: $white;
                                 text-align: left;
+                            }
+
+                            &::before {
+                                content: "";
+                                position: absolute;
                             }
         
                             &::after {
@@ -50,7 +56,16 @@ main {
                                 left: 0;
                                 bottom: 0;
                                 transform: translate(2%, 28%);
-        
+
+                                &::before {
+                                    top: 0;
+                                    left: 0;
+                                    transform: translate(calc(100% - 6px), calc(-100% ));
+                                    border-left: 9px solid transparent;
+                                    border-right: 9px solid transparent;
+                                    border-bottom: 9px solid $white;
+                                }
+
                                 &::after {
                                     top: 0;
                                     left: 0;
@@ -63,7 +78,16 @@ main {
         
                             &.instructions_mic {
                                 right: 0;
-                                transform: translate(calc(0% - 20px), 5px);
+                                transform: translate(calc(0% - 20px), 0);
+
+                                &::before {
+                                    top: 0;
+                                    right: 0;
+                                    transform: translate(calc(-100% - 15px + 6px), -100%);
+                                    border-left: 9px solid transparent;
+                                    border-right: 9px solid transparent;
+                                    border-bottom: 9px solid $white;
+                                }
         
                                 &::after {
                                     top: 0;
@@ -77,7 +101,16 @@ main {
         
                             &.instructions_play {
                                 left: 0%;
-                                transform: translate(calc(0% + 20px), 5px);
+                                transform: translate(calc(0% + 20px), 0);
+
+                                &::before {
+                                    top: 0;
+                                    left: 0;
+                                    transform: translate(calc(100% + 15px - 6px), -100%);
+                                    border-left: 9px solid transparent;
+                                    border-right: 9px solid transparent;
+                                    border-bottom: 9px solid $white;
+                                }
         
                                 &::after {
                                     top: 0;
@@ -92,7 +125,16 @@ main {
                             &.instructions_next {
                                 left: 0;
                                 top: 50%;
-                                transform: translate(calc(-100% - 5px), -50%);
+                                transform: translate(-100%, -50%);
+
+                                &::before {
+                                    right: 0;
+                                    top: 50%;
+                                    transform: translate(100%, -50%);
+                                    border-left: 9px solid $white;
+                                    border-top: 9px solid transparent;
+                                    border-bottom: 9px solid transparent;
+                                }
         
                                 &::after {
                                     right: 0;
@@ -106,7 +148,16 @@ main {
         
                             &.instructions_sound {
                                 left: 50%;
-                                transform: translate(-50%, 5px);
+                                transform: translate(-50%, 0);
+
+                                &::before {
+                                    top: 0;
+                                    left: 50%;
+                                    transform: translate(-50%, -100%);
+                                    border-left: 9px solid transparent;
+                                    border-right: 9px solid transparent;
+                                    border-bottom: 9px solid $white;
+                                }
         
                                 &::after {
                                     top: 0;
@@ -166,22 +217,25 @@ main {
                                 &.instructions_video_play {
                                     width: 195px;
                                 }
-        
-                                &.instructions_next {
-                                    left: auto;
-                                    top: auto;
-                                    transform: translate(calc(-100% - 5px), -50%);
-                                    right: 0;
-                                    bottom: 0;
-                                    transform: translate(5px, calc(100% + 10px));
+
+                                &.instructions_mic {
+    
+                                    &::before {
+                                        transform: translate(calc(-47.25px + 2px), -100%);
+                                    }
             
                                     &::after {
-                                        top: 0;
-                                        right: 0;
-                                        transform: translate(-100%, -100%);
-                                        border-left: 7px solid transparent;
-                                        border-right: 7px solid transparent;
-                                        border-bottom: 7px solid $dark_purple;
+                                        transform: translate(-47.25px, -100%);
+                                    }
+                                }
+            
+                                &.instructions_play {
+                                    &::before {
+                                        transform: translate(calc(47.25px - 2px), -100%);
+                                    }
+            
+                                    &::after {
+                                        transform: translate(47.25px , -100%);
                                     }
                                 }
                             }
