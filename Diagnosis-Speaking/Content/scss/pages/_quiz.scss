@@ -22,7 +22,7 @@ main {
                     display: flex;
                     justify-content: center;
                     .topic_video{
-                        width: 90%;
+                        width: 100%;
                         margin: 0 auto;
                     }
 
@@ -102,6 +102,10 @@ main {
                 .test_area_content {
         
                     .test_area_topic {
+
+                        .topic_video{
+                            width: 90%;
+                        }
     
                         &.topic_photo{
                             flex-direction: row;
