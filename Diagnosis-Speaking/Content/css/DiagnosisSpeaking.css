@@ -141,7 +141,7 @@ main .select_page_link.disabled { background-color: #ADADAD; opacity: 0.5; curso
 
 main .select_page_link.disabled::before { background-color: transparent; transition: 0s; }
 
-main .select_page_link.disabled .select_page_btn .select_page_btn_icon { background-color: #fff; color: #552b8d; transition: 0s; }
+main .select_page_link.disabled .select_page_btn .select_page_btn_icon { background-color: #fff; color: #ADADAD; transition: 0s; }
 
 main .select_page_link.disabled:hover { transform: scale(0.9); }
 
@@ -232,13 +232,13 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 header { border-bottom: 1px solid #552b8d; background-color: #f1f1ff; }
 
-header .navbar { width: 90%; margin: 0 auto; padding: 10px 0; }
+header .navbar { width: 90%; margin: 0 auto; padding: 0; }
 
 header .navbar .container-fluid { position: relative; padding: 0 !important; }
 
 header .navbar .container-fluid .navbar-brand { width: 120px; padding: 0; margin: 0; }
 
-header .navbar .container-fluid .navbar-toggler { position: relative; cursor: pointer; z-index: 5; padding: 0; border-radius: 5px; box-shadow: none; width: 45px; height: 45px; background-color: #552b8d; }
+header .navbar .container-fluid .navbar-toggler { position: relative; cursor: pointer; z-index: 5; padding: 0; border-radius: 5px; box-shadow: none; width: 45px; height: 45px; background-color: #552b8d; margin: 15px 0; }
 
 header .navbar .container-fluid .navbar-toggler span { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 30px; height: 3px; margin: 0px; background: #fff; transition: 350ms ease all; z-index: 5; }
 
@@ -260,7 +260,7 @@ header .navbar .container-fluid .navbar-toggler .icon-bar + .icon-bar { margin-t
 
 header .navbar .container-fluid .navbar-toggler:hover .icon-bar { background-color: #fff; }
 
-header .navbar .container-fluid .navbar-collapse { position: absolute; top: 100%; width: 100%; flex-grow: initial; margin: 20px 0; }
+header .navbar .container-fluid .navbar-collapse { position: absolute; top: 100%; width: 100%; flex-grow: initial; margin: 20px 0; right: 0; }
 
 header .navbar .container-fluid .navbar-collapse .navbar-nav { background-color: #fff; box-shadow: 0 2px 6px #552b8d40; border-radius: 20px; padding: 40px 30px; position: relative; z-index: 1; }
 
@@ -299,45 +299,53 @@ header .quiz_progress_area .quiz_progress svg .quiz_progress_bar { fill: none; s
 @media screen and (min-width: 992px) { header .navbar .container-fluid .navbar-brand { width: 300px; }
   header .quiz_progress_area { margin: 20px 20px 20px 0; } }
 
-main .login_area { max-width: 500px; margin: 40px auto; width: 80%; }
+main .login_area { background-image: url(../image/photo/login/login_bg.png); background-repeat: no-repeat; background-size: contain; min-height: calc(100vh - 75px); }
 
-main .login_area .login_img { width: 80%; margin: 0 10%; }
+main .login_area .login_form { width: 100%; max-width: 500px; padding: 40px 10%; background-color: rgba(255, 244, 238, 0.6); height: 100%; }
 
-main .login_area .login_title { color: #552b8d; margin: 30px auto 0; }
+main .login_area .login_form .login_img { width: 80%; margin: 0 10%; }
 
-main .login_area .login_title h3 { text-align: center; }
+main .login_area .login_form .login_title { color: #20221f; margin: 30px auto 0; }
 
-main .login_area .input_area { flex-direction: row; align-items: center; justify-content: space-between; }
+main .login_area .login_form .input_area { flex-direction: row; align-items: center; justify-content: space-between; margin: 15px auto; }
 
-main .login_area .input_area .input-group-text.icon_password, main .login_area .input_area .input-group-text.icon_user { padding: 10px; background-color: #552b8d; border-radius: 50%; cursor: pointer; }
+main .login_area .login_form .input_area .input-group-text { position: absolute; background-color: transparent; border: 0px; padding: 5px 15px; border-radius: 0; }
 
-main .login_area .input_area .input-group-text.icon_password i, main .login_area .input_area .input-group-text.icon_user i { color: #fff; }
+main .login_area .login_form .input_area .input-group-text.icon_password, main .login_area .login_form .input_area .input-group-text.icon_user { cursor: pointer; border-right: 1px solid #20221f; }
 
-main .login_area .input_area .form-control { padding: 10px 45px 10px 15px; width: calc(100% - 50px); }
+main .login_area .login_form .input_area .input-group-text.icon_password i, main .login_area .login_form .input_area .input-group-text.icon_user i { color: #20221f; }
 
-main .login_area .input_area .password_input { width: 100%; }
+main .login_area .login_form .input_area .input-group-text.icon_eye { right: 0; }
 
-main .login_area .save_password { display: flex; justify-content: flex-end; }
+main .login_area .login_form .input_area .input-group-text.icon_eye:focus ~ .form-control { border: 0; box-shadow: none; color: #552b8d; outline: solid calc( 1em * 2 / 16) rgba(85, 43, 141, 0.6); }
 
-main .login_area .save_password .save_password_checkbox { position: absolute; opacity: 0; }
+main .login_area .login_form .input_area .form-control { padding: 10px 45px 10px 55px; }
 
-main .login_area .save_password .save_password_checkbox + label { color: #20221f; display: flex; align-items: center; position: relative; cursor: pointer; padding: 0; }
+main .login_area .login_form .input_area .form-control:focus { border: 0; box-shadow: none; color: #552b8d; outline: solid calc( 1em * 2 / 16) rgba(85, 43, 141, 0.6); }
 
-main .login_area .save_password .save_password_checkbox + label:before { content: ''; margin-right: 10px; display: inline-block; vertical-align: text-top; width: 20px; height: 20px; background: #fff; border: 1px solid #20221f; }
+main .login_area .login_form .input_area .password_input { width: 100%; }
 
-main .login_area .save_password .save_password_checkbox:hover + label { color: #552b8d; }
+main .login_area .login_form .save_password { display: flex; justify-content: flex-end; }
 
-main .login_area .save_password .save_password_checkbox:hover + label:before { border: 1px solid #552b8d; }
+main .login_area .login_form .save_password .save_password_checkbox { position: absolute; opacity: 0; }
 
-main .login_area .save_password .save_password_checkbox:checked + label:before { border: 1px solid #552b8d; background-color: #552b8d; }
+main .login_area .login_form .save_password .save_password_checkbox + label { color: #20221f; display: flex; align-items: center; position: relative; cursor: pointer; padding: 0; }
 
-main .login_area .save_password .save_password_checkbox:checked + label:after { font-family: 'FontAwesome', sans-serif; content: '\f00c'; position: absolute; color: #fff; width: 20px; font-size: 15px; text-align: center; }
+main .login_area .login_form .save_password .save_password_checkbox + label:before { content: ''; margin-right: 10px; display: inline-block; vertical-align: text-top; width: 20px; height: 20px; background: #fff; border: 1px solid #20221f; }
 
-main .login_area .register_btn { display: flex; justify-content: center; margin: 60px auto 0; }
+main .login_area .login_form .save_password .save_password_checkbox:hover + label { color: #552b8d; }
 
-main .login_area .register_btn a { color: #20221f; border-bottom: 0px solid transparent; }
+main .login_area .login_form .save_password .save_password_checkbox:hover + label:before { border: 1px solid #552b8d; }
 
-main .login_area .register_btn a:hover { color: #552b8d; border-bottom: 1px solid #552b8d; }
+main .login_area .login_form .save_password .save_password_checkbox:checked + label:before { border: 1px solid #552b8d; background-color: #552b8d; }
+
+main .login_area .login_form .save_password .save_password_checkbox:checked + label:after { font-family: 'FontAwesome', sans-serif; content: '\f00c'; position: absolute; color: #fff; width: 20px; font-size: 15px; text-align: center; }
+
+main .login_area .login_form .register_btn { display: flex; justify-content: center; margin: 60px auto 0; color: #20221f; }
+
+main .login_area .login_form .register_btn a { color: #552b8d; border-bottom: 0px solid transparent; }
+
+main .login_area .login_form .register_btn a:hover { color: #552b8d; border-bottom: 1px solid #552b8d; }
 
 main .select_page_area { width: 80%; margin: 60px auto 40px; }
 
@@ -514,6 +522,7 @@ main .quiz_instructions .instructions_area .test_area { background-color: transp
   main .quiz_instructions .instructions_area .instructions_area_item .test_area .instructions_item .instructions.instructions_mic::after { transform: translate(-47.25px, -100%); }
   main .quiz_instructions .instructions_area .instructions_area_item .test_area .instructions_item .instructions.instructions_play::before { transform: translate(calc(47.25px - 2px), -100%); }
   main .quiz_instructions .instructions_area .instructions_area_item .test_area .instructions_item .instructions.instructions_play::after { transform: translate(47.25px, -100%); }
+  main .quiz_instructions .instructions_area .instructions_area_item .test_area .instructions_item .video_instructions { left: 55%; max-width: none; }
   main .quiz_instructions .instructions_area .instructions_area_item .test_area .next_page_btn { margin: 50px 0 0 auto; display: flex; justify-content: flex-end; }
   main .quiz_instructions .instructions_area .instructions_area_item .test_area .next_page_btn .test_area_answer_btn .icon_btn { width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; }
   main .quiz_instructions .instructions_area .instructions_area_item .test_area .next_page_btn .test_area_answer_btn .icon_btn i { font-size: 30px; }
