@@ -1,33 +1,46 @@
 main {
 
     .login_area {
+        position: relative;
         background-image: url(../image/photo/login/login_bg.png);
         background-repeat: no-repeat;
         background-size: contain;
+        background-position: center;
         min-height: calc(100vh - 75px);
 
-        .login_form{
+        &::before {
+            content: "";
+            position: absolute;
             width: 100%;
-            max-width: 500px;
-            padding: 40px 10%;
-            background-color: rgba($body_bg, .6);
             height: 100%;
-            .login_img{
+            background-color: rgba($body_bg, .6);
+        }
+
+        .login_form {
+            position: relative;
+            width: 80%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px 0;
+
+            .login_img {
+                display: block;
                 width: 80%;
-                margin: 0 10%;
+                margin: 0 auto;
+                max-width: 300px;
             }
-    
+
             .login_title {
                 color: $main_color_grey;
                 margin: 30px auto 0;
             }
-    
+
             .input_area {
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
                 margin: 15px auto;
-    
+
                 .input-group-text {
                     position: absolute;
                     background-color: transparent;
@@ -39,49 +52,53 @@ main {
                     &.icon_user {
                         cursor: pointer;
                         border-right: 1px solid $main_color_grey;
-    
+
                         i {
                             color: $main_color_grey;
                         }
                     }
 
-                    &.icon_eye{
+                    &.icon_eye {
                         right: 0;
-                        &:focus{
-                            &~.form-control{
-                                border: 0;
+
+                        &:focus {
+                            &~.form-control {
+                                border-color: transparent;
                                 box-shadow: none;
                                 color: $main_color;
-                                outline: solid calc( 1em * 2 / 16) rgba($main_color, .6);
-        
+                                outline: solid calc(1em * 2 / 16) rgba($main_color, .6);
+
                             }
                         }
                     }
                 }
-    
+
                 .form-control {
                     padding: 10px 45px 10px 55px;
+                    border-radius: 5px;
+                    border-color: $grey;
 
-                    &:focus{
-                        border: 0;
+                    &:focus {
+                        border-color: transparent;
                         box-shadow: none;
                         color: $main_color;
-                        outline: solid calc( 1em * 2 / 16) rgba($main_color, .6);
+                        outline: solid calc(1em * 2 / 16) rgba($main_color, .6);
                     }
                 }
-    
+
                 .password_input {
                     width: 100%;
                 }
             }
-    
-            .save_password{
+
+            .save_password {
                 display: flex;
                 justify-content: flex-end;
+
                 .save_password_checkbox {
                     position: absolute;
                     opacity: 0;
-        
+
                     &+label {
                         color: $main_color_grey;
                         display: flex;
@@ -89,7 +106,7 @@ main {
                         position: relative;
                         cursor: pointer;
                         padding: 0;
-        
+
                         &:before {
                             content: '';
                             margin-right: 10px;
@@ -101,23 +118,24 @@ main {
                             border: 1px solid $main_color_grey;
                         }
                     }
-    
+
                     &:hover {
                         &+label {
                             color: $main_color;
+
                             &:before {
                                 border: 1px solid $main_color;
                             }
                         }
                     }
-    
+
                     &:checked {
                         &+label {
                             &:before {
                                 border: 1px solid $main_color;
                                 background-color: $main_color;
                             }
-    
+
                             &:after {
                                 font-family: 'FontAwesome', sans-serif;
                                 content: '\f00c';
@@ -131,35 +149,102 @@ main {
                     }
                 }
             }
-            
-            .register_btn{
+
+            .button_login {
+                border-radius: 5px;
+            }
+
+            .register_btn {
                 display: flex;
                 justify-content: center;
                 margin: 60px auto 0;
                 color: $main_color_grey;
-                a{
+
+                a {
                     color: $main_color;
                     border-bottom: 0px solid transparent;
-    
-                    &:hover{
+
+                    &:hover {
                         color: $main-color;
                         border-bottom: 1px solid $main-color;
                     }
                 }
             }
         }
-
-        
     }
 }
 
 
-@media screen and (min-width: 576px) {}
+@media screen and (min-width: 576px) {
+    main {
 
-@media screen and (min-width: 768px) {}
+        .login_area {
 
-@media screen and (min-width: 992px) {}
+            .login_form {
+                padding: 80px 0;
+            }
+        }
+    }
+}
 
-@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 768px) {
+    main {
+
+        .login_area {
+            min-height: calc(100vh - 104px);
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    main {
+
+        .login_area {
+            background-size: 450px;
+            background-position: left center;
+            display: flex;
+            align-items: center;
+            padding: 60px 0;
+    
+            &::before {
+                display: none;
+            }
+    
+            .login_form {
+                padding: 0 5%;
+                margin: 0 0 0 auto;
+            }
+    
+    
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+
+        .login_area {
+            background-size: 500px;
+            background-position: 5% center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+
+        .login_area {
+
+            .login_form {
+                padding: 60px 5%;
+                background-color: $white;
+                border-radius: 10px;
+            }
+        }
+    }
+}
 
 @media screen and (min-width: 1400px) {}
