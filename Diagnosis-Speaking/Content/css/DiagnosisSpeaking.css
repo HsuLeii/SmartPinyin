@@ -111,6 +111,8 @@ main .input_area .form-control:focus { border-color: transparent; box-shadow: no
 
 main .input_area .form-control:focus ~ .icon_item i { color: #552b8d; }
 
+main .input_area .form-control:focus p { color: #552b8d !important; }
+
 main .input_area .form-control.show .icon_down { transform: translate(0, -50%) rotate(180deg); color: #552b8d; }
 
 main .input_area .form-control::placeholder { color: grey; opacity: 1; /* Firefox */ }
@@ -154,6 +156,8 @@ main .input_area .dropdown-menu li { border-radius: 5px; }
 main .input_area .dropdown-menu li a { border-radius: 5px; padding: 10px 15px; }
 
 main .input_area .dropdown-menu li a:hover { background-color: #552b8d; color: #fff; }
+
+main .input_area .dropdown-menu li a.check { background-color: #552b8d; color: #fff; }
 
 main .button { display: block; padding: 8px 10px; width: 100%; max-width: 500px; border-radius: 5px; border: 1px solid #7b2cbf; margin: 30px auto; }
 

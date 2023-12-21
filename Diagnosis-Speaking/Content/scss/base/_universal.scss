@@ -106,6 +106,10 @@ main {
                                 color: $main_color;
                             }
                         }
+
+                        p{
+                            color: $main_color !important;
+                        }
                     }
 
                     &.show{
@@ -174,9 +178,8 @@ main {
                         height: 100%;
                         cursor: pointer;
                     }
-        
+
                     &:focus {
-        
                         &~i{
                             color: $main_color;
                         }
@@ -203,7 +206,7 @@ main {
                     left: 0;
                     top: 50%;
                     transform: translate(0px, -50%);
-                    
+
                     &.icon_item{
                         i{
                             position: initial;
@@ -251,6 +254,11 @@ main {
                         padding: 10px 15px;
 
                         &:hover{
+                            background-color: $main_color;
+                            color: $white;
+                        }
+
+                        &.check{
                             background-color: $main_color;
                             color: $white;
                         }
