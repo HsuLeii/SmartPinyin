@@ -50,20 +50,20 @@
                     </div>
 
                     <div class="input_area">
-                        <input type="text" id="inputAccount" name="account" class="form-control" placeholder="請輸入你的帳號"
-                            required autofocus>
+                        <input type="text" id="inputAccount" name="account" class="form-control" value="20231221" placeholder="請輸入你的帳號"
+                            required autofocus readonly>
                         <label for="inputAccount" class="input-group-text icon_item">
                             <i class="fa-solid fa-user"></i>
                         </label>
                     </div>
 
                     <div class="input_area show_hide_password">
-                        <input type="password" id="Password" class="form-control input_password" value=""
-                            placeholder="請輸入密碼">
+                        <input type="password" id="Password" class="form-control input_password" value="20231221"
+                            placeholder="請輸入密碼" readonly>
                         <label for="Password" class="input-group-text icon_item">
                             <i class="fa-solid fa-lock"></i>
                         </label>
-                        <div class="input-group-text icon_eye">
+                        <div class="input-group-text icon_eye" style="display:none;">
                             <i class="fas fa-eye-slash"></i>
                         </div>
                     </div>
@@ -172,7 +172,7 @@
                     <div class="input_area">
                         <div class="form-control form-control-birthday icon icon-regular">
                             <input type="date" onchange="birthdayFunction()" id="birthday" value="2023-06-19"
-                                name="birthday" class="birthday_input">
+                                name="birthday" class="birthday_input" readonly>
                             <i class="fa-regular fa-calendar"></i>
                             <label class="input-group-text icon_item">
                                 <i class="fa-solid fa-cake-candles"></i>

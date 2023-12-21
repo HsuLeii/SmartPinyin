@@ -12,10 +12,10 @@ main {
     .input_area {
         display: flex;
         flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                margin: 15px auto;
-                position: relative;
+        align-items: center;
+        justify-content: space-between;
+        margin: 15px auto;
+        position: relative;
 
         input {
             &:read-only {
@@ -30,16 +30,23 @@ main {
                     border-bottom: 1px solid $main_color_grey;
                     color: $main_color_grey;
                     box-shadow: none;
+                    outline: none;
 
                     &::placeholder {
                         color: transparent;
+                    }
+
+                    &~.icon_item {
+                        i {
+                            color: $main_color_grey;
+                        }
                     }
                 }
 
                 &.solid_color {
                     background-color: $bright_purple;
                     color: $white;
-        
+
                     &:hover {
                         transform: scale(1.05);
                         background-color: darken($bright_purple, 5%);
@@ -83,52 +90,54 @@ main {
             }
         }
 
-        .form-control{
+        .form-control {
             padding: 10px 45px 10px 62.5px;
-                    border-radius: 5px;
-                    border-color: $grey;
+            border-radius: 5px;
+            border-color: $grey;
 
-                    .icon_down{
-                        top: 50%;
-                        right: 0;
-                        transform: translate(0 , -50%);
-                        transition: 0.3s;
-                    }
+            .icon_down {
+                top: 50%;
+                right: 0;
+                transform: translate(0, -50%);
+                transition: 0.3s;
+            }
 
-                    &:focus {
-                        border-color: transparent;
-                        box-shadow: none;
+            &:focus {
+                border-color: transparent;
+                box-shadow: none;
+                color: $main_color;
+                outline: solid calc(1em * 2 / 16) rgba($main_color, .6);
+
+                &~.icon_item {
+                    i {
                         color: $main_color;
-                        outline: solid calc(1em * 2 / 16) rgba($main_color, .6);
-
-                        &~.icon_item{
-                            i{
-                                color: $main_color;
-                            }
-                        }
-
-                        p{
-                            color: $main_color !important;
-                        }
                     }
+                }
 
-                    &.show{
-                        .icon_down{
-                            transform: translate(0 , -50%) rotate(180deg);
-                            color: $main_color;
-                        }
-                    }
+                p {
+                    color: $main_color !important;
+                }
+            }
+
+            &.show {
+                .icon_down {
+                    transform: translate(0, -50%) rotate(180deg);
+                    color: $main_color;
+                }
+            }
 
             &::placeholder {
                 color: $grey;
-                opacity: 1; /* Firefox */
-              }
-              
-            &::-ms-input-placeholder { /* Edge 12 -18 */
+                opacity: 1;
+                /* Firefox */
+            }
+
+            &::-ms-input-placeholder {
+                /* Edge 12 -18 */
                 color: $grey;
-              }
-        
-              &.form-control-birthday {
+            }
+
+            &.form-control-birthday {
                 padding: 0;
                 // input{
                 //     &::-webkit-datetime-edit-text,
@@ -138,8 +147,8 @@ main {
                 //         display: none;
                 //     }
                 // }
-                
-        
+
+
                 i {
                     position: absolute;
                     right: 15px;
@@ -147,7 +156,7 @@ main {
                     transform: translate(0, -50%);
                     color: $main_color_grey;
                 }
-        
+
                 .birthday_input {
                     color: $grey;
                     width: 100%;
@@ -156,19 +165,21 @@ main {
                     position: relative;
                     z-index: 1;
                     padding: 10px 0 10px 62.5px;
-        
-                    &::-webkit-date-and-time-value{ text-align:left; }
-        
+
+                    &::-webkit-date-and-time-value {
+                        text-align: left;
+                    }
+
                     &:valid {
                         border: 0;
                     }
-        
+
                     &:required:invalid {
                         &::-webkit-datetime-edit {
                             color: transparent;
                         }
                     }
-        
+
                     &::-webkit-calendar-picker-indicator {
                         position: absolute;
                         top: 0;
@@ -180,16 +191,16 @@ main {
                     }
 
                     &:focus {
-                        &~i{
+                        &~i {
                             color: $main_color;
                         }
 
-                        &~.icon_item{
-                            i{
+                        &~.icon_item {
+                            i {
                                 color: $main_color;
                             }
                         }
-        
+
                         &::-webkit-datetime-edit-text,
                         &::-webkit-datetime-edit-day-field,
                         &::-webkit-datetime-edit-month-field,
@@ -199,27 +210,66 @@ main {
                             border: 0px;
                         }
                     }
-        
+
                 }
 
-                .input-group-text{
+                .input-group-text {
                     left: 0;
                     top: 50%;
                     transform: translate(0px, -50%);
 
-                    &.icon_item{
-                        i{
+                    &.icon_item {
+                        i {
                             position: initial;
-                            transform: translate(0 , 0);
+                            transform: translate(0, 0);
                         }
                     }
                 }
+
+                &:read-only {
+                    border: 0px solid $main_color_grey;
+                    border-bottom: 1px solid $main_color_grey;
+                    border-radius: 0;
+                    background-color: transparent;
+                    cursor: auto;
+
+                    .birthday_input {
+
+                        &::-webkit-datetime-edit-text,
+                        &::-webkit-datetime-edit-day-field,
+                        &::-webkit-datetime-edit-month-field,
+                        &::-webkit-datetime-edit-year-field {
+                            color: $main_color_grey;
+                        }
+
+                        &:focus {
+                            &~i {
+                                color: $main_color_grey;
+                            }
+
+                            &~.icon_item {
+                                i {
+                                    color: $main_color_grey;
+                                }
+                            }
+
+                            &::-webkit-datetime-edit-text,
+                            &::-webkit-datetime-edit-day-field,
+                            &::-webkit-datetime-edit-month-field,
+                            &::-webkit-datetime-edit-year-field {
+                                background-color: transparent;
+                                color: $main_color_grey;
+                            }
+                        }
+
+                    }
+                }
             }
-        
-              p{
-              color: $grey;
-              text-align: left;
-              }
+
+            p {
+                color: $grey;
+                text-align: left;
+            }
         }
 
         &.input-group-submit {
@@ -239,7 +289,7 @@ main {
             width: 100%;
         }
 
-        .dropdown-menu{
+        .dropdown-menu {
             width: calc(100% - 62.5px);
             border-radius: 5px;
             inset: 0px 0 auto auto !important;
@@ -247,23 +297,24 @@ main {
             overflow-y: scroll;
             max-height: 200px;
 
-            li{
+            li {
                 border-radius: 5px;
-                    a{
-                        border-radius: 5px;
-                        padding: 10px 15px;
 
-                        &:hover{
-                            background-color: $main_color;
-                            color: $white;
-                        }
+                a {
+                    border-radius: 5px;
+                    padding: 10px 15px;
 
-                        &.check{
-                            background-color: $main_color;
-                            color: $white;
-                        }
+                    &:hover {
+                        background-color: $main_color;
+                        color: $white;
                     }
-                
+
+                    &.check {
+                        background-color: $main_color;
+                        color: $white;
+                    }
+                }
+
             }
         }
     }
@@ -422,7 +473,7 @@ main {
             border: 2px solid $main_color;
         }
 
-        &.disabled{
+        &.disabled {
             background-color: $disabled;
             opacity: 0.5;
             cursor: auto;
@@ -451,13 +502,13 @@ main {
         }
     }
 
-    .test_area_answer_btn{
-        &:disabled{
-            &:hover{
-                .icon_btn{
+    .test_area_answer_btn {
+        &:disabled {
+            &:hover {
+                .icon_btn {
                     transform: scale(0.9);
                     box-shadow: none;
-        
+
                     &.sound_btn {
                         background-color: $sound_color;
                     }
@@ -465,11 +516,11 @@ main {
                     &.mic_btn {
                         background-color: $mic_color;
                     }
-            
+
                     &.play_btn {
                         background-color: $play_color;
                     }
-            
+
                     &.next_btn {
                         background-color: $next_color;
                     }
@@ -477,9 +528,10 @@ main {
             }
         }
 
-        &:hover{
-            .icon_btn{
+        &:hover {
+            .icon_btn {
                 transform: scale(1);
+
                 &.sound_btn {
                     background-color: darken($sound_color, 5%);
                 }
@@ -487,32 +539,34 @@ main {
                 &.mic_btn {
                     background-color: darken($mic_color, 5%);
                 }
-        
+
                 &.play_btn {
                     background-color: darken($play_color, 5%);
                 }
-        
+
                 &.next_btn {
                     background-color: darken($next_color, 5%);
                 }
             }
-            
+
         }
 
-        &:focus{
-            .icon_btn{
+        &:focus {
+            .icon_btn {
                 border: 2px solid $main_color;
-                &.disable{
+
+                &.disable {
                     border: 0;
                 }
-                }
+            }
         }
 
-        &.play{
-            .icon_btn{
-                &.sound_btn{
+        &.play {
+            .icon_btn {
+                &.sound_btn {
                     .fa-volume-high {
                         position: relative;
+
                         &::before {
                             opacity: 0;
                         }
@@ -533,13 +587,13 @@ main {
                     }
                 }
 
-                &.mic_btn{
-                    .fa-microphone-lines{
+                &.mic_btn {
+                    .fa-microphone-lines {
                         animation: recording 1500ms infinite;
                     }
                 }
 
-                &.play_btn{
+                &.play_btn {
                     .fa-play {
                         &::before {
                             content: "";
@@ -551,7 +605,7 @@ main {
                     }
                 }
             }
-            
+
         }
     }
 
@@ -583,30 +637,32 @@ main {
         }
     }
 
-    .start_page_text{
+    .start_page_text {
         margin: 40px 0 0;
 
-        h4{
+        h4 {
             color: $main_color;
         }
 
-        .start_page_text_item{
+        .start_page_text_item {
             display: flex;
             margin: 8px 0;
-            p{
+
+            p {
                 display: block;
+
                 .icon_btn {
-                        width: 30px;
-                        height: 30px;
-                        margin: 0 5px;
-                    }
-                
+                    width: 30px;
+                    height: 30px;
+                    margin: 0 5px;
+                }
+
             }
         }
-        
+
     }
 
-    .red{
+    .red {
         color: $mic_color;
     }
 }
@@ -637,9 +693,11 @@ input:-webkit-autofill:focus {
     0% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.3;
     }
+
     100% {
         opacity: 1;
     }
@@ -658,8 +716,7 @@ input:-webkit-autofill:focus {
     }
 }
 
-@media screen and (min-width: 576px) {
-}
+@media screen and (min-width: 576px) {}
 
 @media screen and (min-width: 768px) {
     main {
@@ -679,23 +736,23 @@ input:-webkit-autofill:focus {
             width: 45%;
         }
 
-        .start_page_text{
-            .start_page_text_item{
-                p{
+        .start_page_text {
+            .start_page_text_item {
+                p {
                     .icon_btn {
                         width: 34px;
                         height: 34px;
                     }
                 }
             }
-            
+
         }
 
-        .test_area_answer_btn{
-    
-            &.play{
-                .icon_btn{
-                    &.sound_btn{
+        .test_area_answer_btn {
+
+            &.play {
+                .icon_btn {
+                    &.sound_btn {
                         .fa-volume-high {
                             &::after {
                                 width: 68.85px;
@@ -704,7 +761,7 @@ input:-webkit-autofill:focus {
                         }
                     }
                 }
-                
+
             }
         }
     }

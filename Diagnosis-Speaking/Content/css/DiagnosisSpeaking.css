@@ -85,9 +85,11 @@ main .input_area { display: flex; flex-direction: row; align-items: center; just
 
 main .input_area input:read-only { border: 0px solid #20221f; border-bottom: 1px solid #20221f; border-radius: 0; background-color: transparent; cursor: auto; }
 
-main .input_area input:read-only:focus { border: 0px solid #20221f; border-bottom: 1px solid #20221f; color: #20221f; box-shadow: none; }
+main .input_area input:read-only:focus { border: 0px solid #20221f; border-bottom: 1px solid #20221f; color: #20221f; box-shadow: none; outline: none; }
 
 main .input_area input:read-only:focus::placeholder { color: transparent; }
+
+main .input_area input:read-only:focus ~ .icon_item i { color: #20221f; }
 
 main .input_area input:read-only.solid_color { background-color: #7b2cbf; color: #fff; }
 
@@ -142,6 +144,16 @@ main .input_area .form-control.form-control-birthday .birthday_input:focus::-web
 main .input_area .form-control.form-control-birthday .input-group-text { left: 0; top: 50%; transform: translate(0px, -50%); }
 
 main .input_area .form-control.form-control-birthday .input-group-text.icon_item i { position: initial; transform: translate(0, 0); }
+
+main .input_area .form-control.form-control-birthday:read-only { border: 0px solid #20221f; border-bottom: 1px solid #20221f; border-radius: 0; background-color: transparent; cursor: auto; }
+
+main .input_area .form-control.form-control-birthday:read-only .birthday_input::-webkit-datetime-edit-text, main .input_area .form-control.form-control-birthday:read-only .birthday_input::-webkit-datetime-edit-day-field, main .input_area .form-control.form-control-birthday:read-only .birthday_input::-webkit-datetime-edit-month-field, main .input_area .form-control.form-control-birthday:read-only .birthday_input::-webkit-datetime-edit-year-field { color: #20221f; }
+
+main .input_area .form-control.form-control-birthday:read-only .birthday_input:focus ~ i { color: #20221f; }
+
+main .input_area .form-control.form-control-birthday:read-only .birthday_input:focus ~ .icon_item i { color: #20221f; }
+
+main .input_area .form-control.form-control-birthday:read-only .birthday_input:focus::-webkit-datetime-edit-text, main .input_area .form-control.form-control-birthday:read-only .birthday_input:focus::-webkit-datetime-edit-day-field, main .input_area .form-control.form-control-birthday:read-only .birthday_input:focus::-webkit-datetime-edit-month-field, main .input_area .form-control.form-control-birthday:read-only .birthday_input:focus::-webkit-datetime-edit-year-field { background-color: transparent; color: #20221f; }
 
 main .input_area .form-control p { color: grey; text-align: left; }
 
