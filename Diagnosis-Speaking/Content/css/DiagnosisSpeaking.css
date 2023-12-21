@@ -81,7 +81,7 @@ body { background-color: #fff4ee; }
 
 main .main { margin: 0 auto; width: 80%; max-width: 1200px; }
 
-main .input_area { margin: 30px auto; display: flex; flex-direction: column; position: relative; }
+main .input_area { display: flex; flex-direction: row; align-items: center; justify-content: space-between; margin: 15px auto; position: relative; }
 
 main .input_area input:read-only { border: 0px solid #20221f; border-bottom: 1px solid #20221f; border-radius: 0; background-color: transparent; cursor: auto; }
 
@@ -89,11 +89,73 @@ main .input_area input:read-only:focus { border: 0px solid #20221f; border-botto
 
 main .input_area input:read-only:focus::placeholder { color: transparent; }
 
+main .input_area input:read-only.solid_color { background-color: #7b2cbf; color: #fff; }
+
+main .input_area input:read-only.solid_color:hover { transform: scale(1.05); background-color: #6e27aa; }
+
+main .input_area .input-group-text { position: absolute; background-color: transparent; border: 0px; padding: 5px 15px; border-radius: 0; }
+
+main .input_area .input-group-text.icon_item { width: 57.5px; display: flex; justify-content: center; cursor: pointer; border-right: 1px solid #20221f; }
+
+main .input_area .input-group-text.icon_item i { color: #20221f; }
+
+main .input_area .input-group-text.icon_eye { right: 0; cursor: pointer; }
+
+main .input_area .input-group-text.icon_eye:focus ~ .form-control { border-color: transparent; box-shadow: none; color: #552b8d; outline: solid calc(1em * 2 / 16) rgba(85, 43, 141, 0.6); }
+
+main .input_area .form-control { padding: 10px 45px 10px 62.5px; border-radius: 5px; border-color: grey; }
+
+main .input_area .form-control .icon_down { top: 50%; right: 0; transform: translate(0, -50%); transition: 0.3s; }
+
+main .input_area .form-control:focus { border-color: transparent; box-shadow: none; color: #552b8d; outline: solid calc(1em * 2 / 16) rgba(85, 43, 141, 0.6); }
+
+main .input_area .form-control:focus ~ .icon_item i { color: #552b8d; }
+
+main .input_area .form-control.show .icon_down { transform: translate(0, -50%) rotate(180deg); color: #552b8d; }
+
+main .input_area .form-control::placeholder { color: grey; opacity: 1; /* Firefox */ }
+
+main .input_area .form-control::-ms-input-placeholder { /* Edge 12 -18 */ color: grey; }
+
+main .input_area .form-control.form-control-birthday { padding: 0; }
+
+main .input_area .form-control.form-control-birthday i { position: absolute; right: 15px; top: 50%; transform: translate(0, -50%); color: #20221f; }
+
+main .input_area .form-control.form-control-birthday .birthday_input { color: grey; width: 100%; outline: 0; background-color: transparent !important; position: relative; z-index: 1; padding: 10px 0 10px 62.5px; }
+
+main .input_area .form-control.form-control-birthday .birthday_input::-webkit-date-and-time-value { text-align: left; }
+
+main .input_area .form-control.form-control-birthday .birthday_input:valid { border: 0; }
+
+main .input_area .form-control.form-control-birthday .birthday_input:required:invalid::-webkit-datetime-edit { color: transparent; }
+
+main .input_area .form-control.form-control-birthday .birthday_input::-webkit-calendar-picker-indicator { position: absolute; top: 0; left: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer; }
+
+main .input_area .form-control.form-control-birthday .birthday_input:focus ~ i { color: #552b8d; }
+
+main .input_area .form-control.form-control-birthday .birthday_input:focus ~ .icon_item i { color: #552b8d; }
+
+main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-text, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-day-field, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-month-field, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-year-field { background-color: #552b8d; color: #fff; border: 0px; }
+
+main .input_area .form-control.form-control-birthday .input-group-text { left: 0; top: 50%; transform: translate(0px, -50%); }
+
+main .input_area .form-control.form-control-birthday .input-group-text.icon_item i { position: initial; transform: translate(0, 0); }
+
+main .input_area .form-control p { color: grey; text-align: left; }
+
 main .input_area.input-group-submit .button { display: block; width: 100%; max-width: 500px; border-radius: 50px; border: 1px solid #7b2cbf; border-radius: 5px; margin: 30px auto; cursor: pointer; }
 
-main .input_area.input-group-submit .button:focus { border-bottom: 0; }
+main .input_area .password_input { width: 100%; }
 
-main .button { display: block; padding: 8px 10px; width: 100%; max-width: 500px; border-radius: 50px; border: 1px solid #7b2cbf; margin: 30px auto; }
+main .input_area .dropdown-menu { width: calc(100% - 62.5px); border-radius: 5px; inset: 0px 0 auto auto !important; padding: 0; overflow-y: scroll; max-height: 200px; }
+
+main .input_area .dropdown-menu li { border-radius: 5px; }
+
+main .input_area .dropdown-menu li a { border-radius: 5px; padding: 10px 15px; }
+
+main .input_area .dropdown-menu li a:hover { background-color: #552b8d; color: #fff; }
+
+main .button { display: block; padding: 8px 10px; width: 100%; max-width: 500px; border-radius: 5px; border: 1px solid #7b2cbf; margin: 30px auto; }
 
 main .button p { font-weight: 500; }
 
@@ -113,7 +175,7 @@ main .slide_area .slide_text { width: 90%; position: absolute; left: 5%; top: 50
 
 main .slide_area .slide_text p { color: #fff; font-weight: bold; font-size: 20px; }
 
-main .select_page_link { position: relative; display: flex; justify-content: center; flex-direction: column; background-color: #552b8d; border-radius: 30px; margin: 40px auto; padding: 20px 40px; text-align: center; color: #fff; transform: scale(0.9); width: 100%; max-width: 400px; border: 2px solid transparent; }
+main .select_page_link { position: relative; display: flex; justify-content: center; flex-direction: column; background-color: #552b8d; border-radius: 5px; margin: 40px auto; padding: 20px 40px; text-align: center; color: #fff; transform: scale(0.9); width: 100%; max-width: 400px; border: 2px solid transparent; }
 
 main .select_page_link.small_btn::before { left: auto; right: 0; transform: translate(-40px, 0); }
 
@@ -131,7 +193,7 @@ main .select_page_link .select_page_btn .select_page_btn_icon { position: relati
 
 main .select_page_link:hover { transform: scale(1); }
 
-main .select_page_link:hover::before { width: 100%; height: 100%; border-radius: 30px; bottom: 0; z-index: -1; transition: 0.3s; }
+main .select_page_link:hover::before { width: 100%; height: 100%; border-radius: 5px; bottom: 0; z-index: -1; transition: 0.3s; }
 
 main .select_page_link:hover .select_page_btn .select_page_btn_icon { background-color: transparent; color: #fff; transition: 0.3s; }
 
@@ -145,7 +207,7 @@ main .select_page_link.disabled .select_page_btn .select_page_btn_icon { backgro
 
 main .select_page_link.disabled:hover { transform: scale(0.9); }
 
-main .select_page_link.disabled:focus { border: 0px; box-shadow: none; }
+main .select_page_link.disabled:focus { border: 2px solid transparent; box-shadow: none; }
 
 main .test_area_answer_btn:disabled:hover .icon_btn { transform: scale(0.9); box-shadow: none; }
 
@@ -309,24 +371,6 @@ main .login_area .login_form .login_img { display: block; width: 80%; margin: 0 
 
 main .login_area .login_form .login_title { color: #20221f; margin: 30px auto 0; }
 
-main .login_area .login_form .input_area { flex-direction: row; align-items: center; justify-content: space-between; margin: 15px auto; }
-
-main .login_area .login_form .input_area .input-group-text { position: absolute; background-color: transparent; border: 0px; padding: 5px 15px; border-radius: 0; }
-
-main .login_area .login_form .input_area .input-group-text.icon_password, main .login_area .login_form .input_area .input-group-text.icon_user { cursor: pointer; border-right: 1px solid #20221f; }
-
-main .login_area .login_form .input_area .input-group-text.icon_password i, main .login_area .login_form .input_area .input-group-text.icon_user i { color: #20221f; }
-
-main .login_area .login_form .input_area .input-group-text.icon_eye { right: 0; }
-
-main .login_area .login_form .input_area .input-group-text.icon_eye:focus ~ .form-control { border-color: transparent; box-shadow: none; color: #552b8d; outline: solid calc(1em * 2 / 16) rgba(85, 43, 141, 0.6); }
-
-main .login_area .login_form .input_area .form-control { padding: 10px 45px 10px 55px; border-radius: 5px; border-color: grey; }
-
-main .login_area .login_form .input_area .form-control:focus { border-color: transparent; box-shadow: none; color: #552b8d; outline: solid calc(1em * 2 / 16) rgba(85, 43, 141, 0.6); }
-
-main .login_area .login_form .input_area .password_input { width: 100%; }
-
 main .login_area .login_form .save_password { display: flex; justify-content: flex-end; }
 
 main .login_area .login_form .save_password .save_password_checkbox { position: absolute; opacity: 0; }
@@ -355,13 +399,55 @@ main .login_area .login_form .register_btn a:hover { color: #552b8d; border-bott
 
 @media screen and (min-width: 768px) { main .login_area { min-height: calc(100vh - 104px); } }
 
-@media screen and (min-width: 992px) { main .login_area { background-size: 450px; background-position: left center; display: flex; align-items: center; padding: 60px 0; }
+@media screen and (min-width: 992px) { main .login_area { background-size: 390px; background-position: 5% center; display: flex; align-items: center; padding: 60px 5%; }
   main .login_area::before { display: none; }
-  main .login_area .login_form { padding: 0 5%; margin: 0 0 0 auto; } }
+  main .login_area .login_form { padding: 60px 5%; margin: 0 0 0 auto; border-radius: 10px; background-color: #fff; } }
 
-@media screen and (min-width: 1024px) { main .login_area { background-size: 500px; background-position: 5% center; max-width: 1200px; margin: 0 auto; padding: 0 5%; } }
+@media screen and (min-width: 1024px) { main .login_area { background-size: 420px; max-width: 1200px; margin: 0 auto; } }
 
-@media screen and (min-width: 1200px) { main .login_area .login_form { padding: 60px 5%; background-color: #fff; border-radius: 10px; } }
+@media screen and (min-width: 1200px) { main .login_area { background-size: 500px; } }
+
+main .register_area .register_form { width: 80%; max-width: 500px; margin: 0 auto; padding: 40px 0; }
+
+main .register_area .register_form .login_img { display: block; width: 80%; margin: 0 auto; max-width: 300px; }
+
+main .register_area .register_form .login_title { color: #20221f; margin: 30px auto 0; }
+
+main .register_area .register_form .save_password { display: flex; justify-content: flex-end; }
+
+main .register_area .register_form .save_password .save_password_checkbox { position: absolute; opacity: 0; }
+
+main .register_area .register_form .save_password .save_password_checkbox + label { color: #20221f; display: flex; align-items: center; position: relative; cursor: pointer; padding: 0; }
+
+main .register_area .register_form .save_password .save_password_checkbox + label:before { content: ''; margin-right: 10px; display: inline-block; vertical-align: text-top; width: 20px; height: 20px; background: #fff; border: 1px solid #20221f; }
+
+main .register_area .register_form .save_password .save_password_checkbox:hover + label { color: #552b8d; }
+
+main .register_area .register_form .save_password .save_password_checkbox:hover + label:before { border: 1px solid #552b8d; }
+
+main .register_area .register_form .save_password .save_password_checkbox:checked + label:before { border: 1px solid #552b8d; background-color: #552b8d; }
+
+main .register_area .register_form .save_password .save_password_checkbox:checked + label:after { font-family: 'FontAwesome', sans-serif; content: '\f00c'; position: absolute; color: #fff; width: 20px; font-size: 15px; text-align: center; }
+
+main .register_area .register_form .button_login { border-radius: 5px; }
+
+main .register_area .register_form .register_btn { display: flex; justify-content: center; margin: 60px auto 0; color: #20221f; }
+
+main .register_area .register_form .register_btn a { color: #552b8d; border-bottom: 0px solid transparent; }
+
+main .register_area .register_form .register_btn a:hover { color: #552b8d; border-bottom: 1px solid #552b8d; }
+
+@media screen and (min-width: 576px) { main .login_area .login_form { padding: 80px 0; } }
+
+@media screen and (min-width: 768px) { main .login_area { min-height: calc(100vh - 104px); } }
+
+@media screen and (min-width: 992px) { main .login_area { background-size: 390px; background-position: 5% center; display: flex; align-items: center; padding: 60px 5%; }
+  main .login_area::before { display: none; }
+  main .login_area .login_form { padding: 60px 5%; margin: 0 0 0 auto; border-radius: 10px; background-color: #fff; } }
+
+@media screen and (min-width: 1024px) { main .login_area { background-size: 420px; max-width: 1200px; margin: 0 auto; } }
+
+@media screen and (min-width: 1200px) { main .login_area { background-size: 500px; } }
 
 main .select_page_area { width: 80%; margin: 60px auto 40px; }
 
@@ -373,7 +459,7 @@ main .select_page_area .select_page_btn_area .select_page_link .select_page_btn 
 
 main .quiz_page { margin: 80px auto; max-width: 1500px; }
 
-main .quiz_page .test_area { margin: 0 auto; width: 100%; padding: 20px; background-color: #f3e6f5; border-radius: 30px; border: 2px solid #552b8d; }
+main .quiz_page .test_area { margin: 0 auto; width: 100%; padding: 20px; background-color: #f3e6f5; border-radius: 5px; border: 2px solid #552b8d; }
 
 main .quiz_page .test_area .test_area_content { display: flex; flex-direction: column; justify-content: center; align-items: center; }
 
@@ -480,9 +566,9 @@ main .quiz_instructions { margin: 80px auto; }
 
 main .quiz_instructions .start_page_text { margin: 40px auto 20px; }
 
-main .quiz_instructions .instructions_area { background-color: #f3e6f5; border-radius: 30px; border: 2px solid #552b8d; }
+main .quiz_instructions .instructions_area { background-color: #f3e6f5; border-radius: 5px; border: 2px solid #552b8d; }
 
-main .quiz_instructions .instructions_area .instructions_area_item { width: 94%; border: 1px solid #552b8d; background-color: #fff; padding: 20px; margin: 40px auto; border-radius: 30px; }
+main .quiz_instructions .instructions_area .instructions_area_item { width: 94%; border: 1px solid #552b8d; background-color: #fff; padding: 20px; margin: 40px auto; border-radius: 5px; }
 
 main .quiz_instructions .instructions_area .instructions_area_item .test_area { padding: 0; }
 
@@ -570,7 +656,7 @@ main .re-record_page .re-record_area .table tbody.re-record_body .re-record_item
 
 main .re-record_page .re-record_area .table tbody.re-record_body .re-record_item .re-record_item_content.re-record_item_text.re-record_item_time { display: flex; flex-wrap: wrap; justify-content: center; }
 
-main .re-record_page .re-record_area .table tbody.re-record_body .re-record_item .re-record_item_content.re-record_item_files .player_area { display: flex; align-items: flex-start; justify-content: space-around; flex-direction: column; padding: 15px 20px; background-color: #cbb5e8; border-radius: 10px; width: 95%; max-width: 750px; margin: 0 auto; /* input range 主體樣式 */ /* input range 播放樣式 */ /* 播放完畢時，100%進度顯示 */ /* input range 聲音樣式 */ }
+main .re-record_page .re-record_area .table tbody.re-record_body .re-record_item .re-record_item_content.re-record_item_files .player_area { display: flex; align-items: flex-start; justify-content: space-around; flex-direction: column; padding: 15px 20px; background-color: #cbb5e8; border-radius: 5px; width: 95%; max-width: 750px; margin: 0 auto; /* input range 主體樣式 */ /* input range 播放樣式 */ /* 播放完畢時，100%進度顯示 */ /* input range 聲音樣式 */ }
 
 main .re-record_page .re-record_area .table tbody.re-record_body .re-record_item .re-record_item_content.re-record_item_files .player_area .play_area { width: 100%; display: flex; align-items: center; flex-wrap: wrap; margin: 0 0 20px 0; }
 

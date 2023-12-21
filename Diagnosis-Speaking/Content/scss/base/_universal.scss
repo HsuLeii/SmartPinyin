@@ -10,10 +10,12 @@ main {
     }
 
     .input_area {
-        margin: 30px auto;
         display: flex;
-        flex-direction: column;
-        position: relative;
+        flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin: 15px auto;
+                position: relative;
 
         input {
             &:read-only {
@@ -33,7 +35,188 @@ main {
                         color: transparent;
                     }
                 }
+
+                &.solid_color {
+                    background-color: $bright_purple;
+                    color: $white;
+        
+                    &:hover {
+                        transform: scale(1.05);
+                        background-color: darken($bright_purple, 5%);
+                    }
+                }
             }
+        }
+
+        .input-group-text {
+            position: absolute;
+            background-color: transparent;
+            border: 0px;
+            padding: 5px 15px;
+            border-radius: 0;
+
+            &.icon_item {
+                width: 57.5px;
+                display: flex;
+                justify-content: center;
+                cursor: pointer;
+                border-right: 1px solid $main_color_grey;
+
+                i {
+                    color: $main_color_grey;
+                }
+            }
+
+            &.icon_eye {
+                right: 0;
+                cursor: pointer;
+
+                &:focus {
+                    &~.form-control {
+                        border-color: transparent;
+                        box-shadow: none;
+                        color: $main_color;
+                        outline: solid calc(1em * 2 / 16) rgba($main_color, .6);
+
+                    }
+                }
+            }
+        }
+
+        .form-control{
+            padding: 10px 45px 10px 62.5px;
+                    border-radius: 5px;
+                    border-color: $grey;
+
+                    .icon_down{
+                        top: 50%;
+                        right: 0;
+                        transform: translate(0 , -50%);
+                        transition: 0.3s;
+                    }
+
+                    &:focus {
+                        border-color: transparent;
+                        box-shadow: none;
+                        color: $main_color;
+                        outline: solid calc(1em * 2 / 16) rgba($main_color, .6);
+
+                        &~.icon_item{
+                            i{
+                                color: $main_color;
+                            }
+                        }
+                    }
+
+                    &.show{
+                        .icon_down{
+                            transform: translate(0 , -50%) rotate(180deg);
+                            color: $main_color;
+                        }
+                    }
+
+            &::placeholder {
+                color: $grey;
+                opacity: 1; /* Firefox */
+              }
+              
+            &::-ms-input-placeholder { /* Edge 12 -18 */
+                color: $grey;
+              }
+        
+              &.form-control-birthday {
+                padding: 0;
+                // input{
+                //     &::-webkit-datetime-edit-text,
+                //     &::-webkit-datetime-edit-day-field,
+                //     &::-webkit-datetime-edit-month-field,
+                //     &::-webkit-datetime-edit-year-field {
+                //         display: none;
+                //     }
+                // }
+                
+        
+                i {
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    color: $main_color_grey;
+                }
+        
+                .birthday_input {
+                    color: $grey;
+                    width: 100%;
+                    outline: 0;
+                    background-color: transparent !important;
+                    position: relative;
+                    z-index: 1;
+                    padding: 10px 0 10px 62.5px;
+        
+                    &::-webkit-date-and-time-value{ text-align:left; }
+        
+                    &:valid {
+                        border: 0;
+                    }
+        
+                    &:required:invalid {
+                        &::-webkit-datetime-edit {
+                            color: transparent;
+                        }
+                    }
+        
+                    &::-webkit-calendar-picker-indicator {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                        width: 100%;
+                        height: 100%;
+                        cursor: pointer;
+                    }
+        
+                    &:focus {
+        
+                        &~i{
+                            color: $main_color;
+                        }
+
+                        &~.icon_item{
+                            i{
+                                color: $main_color;
+                            }
+                        }
+        
+                        &::-webkit-datetime-edit-text,
+                        &::-webkit-datetime-edit-day-field,
+                        &::-webkit-datetime-edit-month-field,
+                        &::-webkit-datetime-edit-year-field {
+                            background-color: $main_color;
+                            color: $white;
+                            border: 0px;
+                        }
+                    }
+        
+                }
+
+                .input-group-text{
+                    left: 0;
+                    top: 50%;
+                    transform: translate(0px, -50%);
+                    
+                    &.icon_item{
+                        i{
+                            position: initial;
+                            transform: translate(0 , 0);
+                        }
+                    }
+                }
+            }
+        
+              p{
+              color: $grey;
+              text-align: left;
+              }
         }
 
         &.input-group-submit {
@@ -46,11 +229,33 @@ main {
                 border-radius: 5px;
                 margin: 30px auto;
                 cursor: pointer;
+            }
+        }
 
-                &:focus {
-                    border-bottom: 0;
-                }
+        .password_input {
+            width: 100%;
+        }
 
+        .dropdown-menu{
+            width: calc(100% - 62.5px);
+            border-radius: 5px;
+            inset: 0px 0 auto auto !important;
+            padding: 0;
+            overflow-y: scroll;
+            max-height: 200px;
+
+            li{
+                border-radius: 5px;
+                    a{
+                        border-radius: 5px;
+                        padding: 10px 15px;
+
+                        &:hover{
+                            background-color: $main_color;
+                            color: $white;
+                        }
+                    }
+                
             }
         }
     }
@@ -60,7 +265,7 @@ main {
         padding: 8px 10px;
         width: 100%;
         max-width: 500px;
-        border-radius: 50px;
+        border-radius: 5px;
         border: 1px solid $bright_purple;
         margin: 30px auto;
 
@@ -116,7 +321,7 @@ main {
         justify-content: center;
         flex-direction: column;
         background-color: $main-color;
-        border-radius: 30px;
+        border-radius: 5px;
         margin: 40px auto;
         padding: 20px 40px;
         text-align: center;
@@ -190,7 +395,7 @@ main {
             &::before {
                 width: 100%;
                 height: 100%;
-                border-radius: 30px;
+                border-radius: 5px;
                 bottom: 0;
                 z-index: -1;
                 transition: 0.3s;
@@ -232,7 +437,7 @@ main {
             }
 
             &:focus {
-                border: 0px;
+                border: 2px solid transparent;
                 box-shadow: none;
             }
         }
