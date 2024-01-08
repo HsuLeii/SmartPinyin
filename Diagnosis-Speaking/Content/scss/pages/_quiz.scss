@@ -36,6 +36,20 @@ main {
                             margin: 15px auto;
                             max-width: 700px;
                         }
+
+                        .test_topic_text{
+                            display: none;
+                            margin: 15px auto;
+                            max-width: 700px;
+                            padding: 5px 10px;
+                            background-color: $white;
+                            border: 1px solid $main_color;
+                            border-radius: 5px;
+
+                            &.show{
+                                display: block;
+                            }
+                        }
                     }
                 }
     
@@ -53,7 +67,7 @@ main {
                         .icon_btn {
                             width: 75px;
                             height: 75px;
-                            margin: 0 20px;
+                            margin: 0 5px;
                             display: flex;
                             justify-content: center;
                             align-items: center;
@@ -112,6 +126,10 @@ main {
     
                             .test_topic_img{
                                 margin: 0;
+                            }
+
+                            .test_topic_text{
+                                margin: 0 15px;
                             }
                         }
                     }

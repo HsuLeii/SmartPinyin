@@ -487,11 +487,15 @@ main .quiz_page .test_area .test_area_content .test_area_topic.topic_photo { dis
 
 main .quiz_page .test_area .test_area_content .test_area_topic.topic_photo .test_topic_img { margin: 15px auto; max-width: 700px; }
 
+main .quiz_page .test_area .test_area_content .test_area_topic.topic_photo .test_topic_text { display: none; margin: 15px auto; max-width: 700px; padding: 5px 10px; background-color: #fff; border: 1px solid #552b8d; border-radius: 5px; }
+
+main .quiz_page .test_area .test_area_content .test_area_topic.topic_photo .test_topic_text.show { display: block; }
+
 main .quiz_page .test_area .test_area_content .test_area_time { margin: 20px auto; }
 
 main .quiz_page .test_area .test_area_content .test_area_time h5 { color: #552b8d; }
 
-main .quiz_page .test_area .test_area_content .test_area_topic .test_area_answer_btn .icon_btn, main .quiz_page .test_area .test_area_content .test_area_answer .test_area_answer_btn .icon_btn { width: 75px; height: 75px; margin: 0 20px; display: flex; justify-content: center; align-items: center; }
+main .quiz_page .test_area .test_area_content .test_area_topic .test_area_answer_btn .icon_btn, main .quiz_page .test_area .test_area_content .test_area_answer .test_area_answer_btn .icon_btn { width: 75px; height: 75px; margin: 0 5px; display: flex; justify-content: center; align-items: center; }
 
 main .quiz_page .test_area .test_area_content .test_area_topic .test_area_answer_btn .icon_btn i, main .quiz_page .test_area .test_area_content .test_area_answer .test_area_answer_btn .icon_btn i { font-size: 50px; }
 
@@ -504,6 +508,7 @@ main .quiz_page .test_area .next_page_btn .test_area_answer_btn .icon_btn i { fo
 @media screen and (min-width: 768px) { main .quiz_page .test_area .test_area_content .test_area_topic .topic_video { width: 90%; }
   main .quiz_page .test_area .test_area_content .test_area_topic.topic_photo { flex-direction: row; }
   main .quiz_page .test_area .test_area_content .test_area_topic.topic_photo .test_topic_img { margin: 0; }
+  main .quiz_page .test_area .test_area_content .test_area_topic.topic_photo .test_topic_text { margin: 0 15px; }
   main .quiz_page .test_area .test_area_content .test_area_time { margin: 30px auto; }
   main .quiz_page .test_area .test_area_content .test_area_topic .test_area_answer_btn .icon_btn, main .quiz_page .test_area .test_area_content .test_area_answer .test_area_answer_btn .icon_btn { width: 105px; height: 105px; }
   main .quiz_page .test_area .test_area_content .test_area_topic .test_area_answer_btn .icon_btn i, main .quiz_page .test_area .test_area_content .test_area_answer .test_area_answer_btn .icon_btn i { font-size: 60px; }
