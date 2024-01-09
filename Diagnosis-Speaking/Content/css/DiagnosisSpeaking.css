@@ -544,11 +544,17 @@ main .consent_input .consent_input_checkbox:hover + label { color: #552b8d; }
 
 main .consent_input .consent_input_checkbox:hover + label:before { border: 1px solid #552b8d; }
 
+main .consent_input .consent_input_checkbox:checked + label { color: #552b8d; }
+
 main .consent_input .consent_input_checkbox:checked + label:before { border: 1px solid #552b8d; background-color: #552b8d; }
 
 main .consent_input .consent_input_checkbox:checked + label:after { font-family: 'FontAwesome', sans-serif; content: '\f00c'; position: absolute; color: #fff; width: 20px; font-size: 15px; text-align: center; }
 
 main .button_consent { width: 80%; max-width: 300px; }
+
+main .button_consent:disabled { background-color: #ADADAD; border: 1px solid #ADADAD; }
+
+main .button_consent:disabled:hover { transform: scale(1); background-color: #ADADAD; }
 
 @media screen and (min-width: 500px) { main .consent_area .consent_content { max-height: calc(80vh - 65px - 60px - 55px - 60px); } }
 

@@ -13,14 +13,17 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <!-- 之後改成正式網址的連結 -->
-    <meta property="og:image" content="https://hsuleii.github.io/SmartPinyin/Diagnosis-Speaking/Content/image/main/og_image.jpg" />
+    <meta property="og:image"
+        content="https://hsuleii.github.io/SmartPinyin/Diagnosis-Speaking/Content/image/main/og_image.jpg" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="SmartTalking中文聽說學習平台" />
     <!-- 之後改成正式網址的連結 -->
-    <meta name="twitter:image" content="https://hsuleii.github.io/SmartPinyin/Diagnosis-Speaking/Content/image/main/og_image.jpg" />
+    <meta name="twitter:image"
+        content="https://hsuleii.github.io/SmartPinyin/Diagnosis-Speaking/Content/image/main/og_image.jpg" />
     <meta itemprop="name" content="SmartTalking中文聽說學習平台">
     <!-- 之後改成正式網址的連結 -->
-    <meta itemprop="image" content="https://hsuleii.github.io/SmartPinyin/Diagnosis-Speaking/Content/image/main/og_image.jpg">
+    <meta itemprop="image"
+        content="https://hsuleii.github.io/SmartPinyin/Diagnosis-Speaking/Content/image/main/og_image.jpg">
     <link rel="shortcut icon" type="image/x-icon" href="../Content/image/favicon.ico" />
 
 
@@ -41,14 +44,14 @@
             <div class="main consent_area">
                 <div class="consent_tittle">
                     <h5>
-                        研究參與者知情同意書<br/>
+                        研究參與者知情同意書<br />
                         Authorization and Consent Form
                     </h5>
                 </div>
                 <div class="consent_content">
                     <p>
                         本研究是___計畫。口說測驗大約需要花費＿＿，您會在線上測驗系統根據題目以說話的方式回答問題。您有權隨時停止作答或要求退出研究。本測驗採記名作答，會在2023年12月將您所填寫的可辨識個人資料去除。研究資料不會被辨識出特定個人，未來可能發表於學術著作，以及用來建置英語寫作之公開語料庫。
-                        <br/>
+                        <br />
                         This study is a ___ project. The oral test is expected to take approximately ____, and you will
                         respond to questions in a spoken manner using the online testing system. You have the right to
                         stop answering at any time or request to withdraw from the study. The test is conducted with
@@ -65,8 +68,8 @@
                 </label>
             </div>
 
-            <button class="button solid_color button_consent" type="button"
-          onclick="location.href='select_page.html'">送出</button>
+            <button class="button solid_color button_consent" type="button" onclick="location.href='select_page.html'"
+                disabled>送出</button>
         </form>
 
     </main>
@@ -81,6 +84,16 @@
     <script>
         $(document).ready(function () {
             $("header").load("header.html", function () {});
+        });
+
+        var checkBox = document.getElementById("consent_input");
+
+        $(".consent_input").click(function () {
+            if (checkBox.checked == true) {
+                $(".button_consent").attr('disabled', false);
+            } else {
+                $(".button_consent").attr('disabled', true);
+            }
         });
     </script>
 </body>

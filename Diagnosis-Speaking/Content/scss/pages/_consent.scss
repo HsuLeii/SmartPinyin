@@ -60,6 +60,7 @@ main {
 
             &:checked {
                 &+label {
+                    color: $main_color;
                     &:before {
                         border: 1px solid $main_color;
                         background-color: $main_color;
@@ -82,6 +83,16 @@ main {
     .button_consent{
         width: 80%;
         max-width: 300px;
+
+        &:disabled{
+            background-color: $disabled;
+            border: 1px solid $disabled;
+
+            &:hover {
+                transform: scale(1);
+                background-color: $disabled;
+            }
+        }
     }
 }
 
