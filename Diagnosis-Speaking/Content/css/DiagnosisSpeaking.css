@@ -565,7 +565,7 @@ main .button_consent:disabled:hover { transform: scale(1); background-color: #AD
   main .consent_area .consent_content { max-height: calc(80vh - 65px - 90px - 55px - 45px); }
   main .button_consent { margin: 50px auto 0; } }
 
-main .start_page { display: flex; justify-content: center; flex-direction: column; margin: 80px auto; }
+main .start_page { display: flex; justify-content: center; flex-direction: column; margin: 95px auto; position: relative; }
 
 main .start_page .start_page_tittle h4 { display: flex; justify-content: center; text-align: center; color: #552b8d; }
 
@@ -579,9 +579,19 @@ main .start_page .start_page_btn:hover { background-color: #7b2cbf; }
 
 main .start_page .start_page_btn:focus { border: 1.5px solid #552b8d; box-shadow: 5px 5px 5px rgba(38, 19, 63, 0.5); }
 
+main .start_page .return_btn { position: absolute; top: 0; left: 0; transform: translate(0%, calc(-100% - 15px)); }
+
+main .start_page .return_btn i { color: #20221f; font-size: 30px; }
+
+main .start_page .return_btn:hover i { font-size: 35px; }
+
 @media screen and (min-width: 768px) { main .select_page_area { width: 80%; margin: 60px auto 0; }
   main .select_page_area .select_page_btn_area { display: flex; }
   main .select_page_area .select_page_btn_area .select_page_link { width: 45%; } }
+
+@media screen and (min-width: 1024px) { main .start_page .return_btn { transform: translate(-100%, calc(-100% - 15px)); }
+  main .start_page .return_btn i { color: #20221f; font-size: 40px; }
+  main .start_page .return_btn:hover i { font-size: 45px; } }
 
 main .recording_test_page { margin: 80px auto; }
 

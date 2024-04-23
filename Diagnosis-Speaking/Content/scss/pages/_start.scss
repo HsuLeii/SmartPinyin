@@ -3,7 +3,8 @@ main {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        margin: 80px auto;
+        margin: 95px auto;
+        position: relative;
 
         .start_page_tittle{
             h4{
@@ -36,6 +37,23 @@ main {
                 box-shadow: 5px 5px 5px rgba(darken($main_color, 20%), .5);
             }
         }
+
+        .return_btn{
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(0% , calc(-100% - 15px));
+            i{
+                color: $main_color_grey;
+                font-size: 30px;
+            }
+
+            &:hover{
+                i{
+                    font-size: 35px;
+                }
+            }
+        }
     }
 }
 
@@ -62,6 +80,25 @@ main {
 
 @media screen and (min-width: 992px) {}
 
-@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 1024px) {
+    main {
+        .start_page{
+    
+            .return_btn{
+                transform: translate(-100% , calc(-100% - 15px));
+                i{
+                    color: $main_color_grey;
+                    font-size: 40px;
+                }
+    
+                &:hover{
+                    i{
+                        font-size: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media screen and (min-width: 1400px) {}
