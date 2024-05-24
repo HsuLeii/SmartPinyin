@@ -44,7 +44,7 @@ main {
             left: 0;
             transform: translate(0% , calc(-100% - 15px));
             i{
-                color: $main_color_grey;
+                color: $main_color;
                 font-size: 30px;
             }
 
@@ -87,7 +87,6 @@ main {
             .return_btn{
                 transform: translate(-100% , calc(-100% - 15px));
                 i{
-                    color: $main_color_grey;
                     font-size: 40px;
                 }
     
