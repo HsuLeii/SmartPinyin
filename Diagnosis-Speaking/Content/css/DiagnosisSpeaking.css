@@ -417,7 +417,7 @@ main .login_area .login_form .register_btn a:hover { color: #314675; border-bott
 
 @media screen and (min-width: 992px) { main .login_area { background-size: 390px; background-position: 5% center; display: flex; align-items: center; padding: 60px 5%; }
   main .login_area::before { display: none; }
-  main .login_area .login_form { padding: 60px 5%; margin: 0 0 0 auto; border-radius: 10px; background-color: #fff; } }
+  main .login_area .login_form { padding: 60px 5%; margin: 0 0 0 auto; border-radius: 10px; background-color: #fff; box-shadow: 5px 5px 10px 3px #552b8d25; } }
 
 @media screen and (min-width: 1024px) { main .login_area { background-size: 420px; max-width: 1200px; margin: 0 auto; } }
 
