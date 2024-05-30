@@ -39,6 +39,7 @@ main {
                             p {
                                 color: $white;
                                 text-align: left;
+                                font-size: 12px;
                             }
 
                             &::before {
@@ -52,10 +53,10 @@ main {
                             }
         
                             &.instructions_video_play {
-                                width: 160px;
+                                width: 230px;
                                 left: 0;
                                 bottom: 0;
-                                transform: translate(2%, 28%);
+                                transform: translate(2%, 70%);
 
                                 &::before {
                                     top: 0;
@@ -77,8 +78,9 @@ main {
                             }
         
                             &.instructions_mic {
+                                width: 160px;
                                 right: 0;
-                                transform: translate(calc(0% - 20px), 0);
+                                transform: translate(0 , 0);
 
                                 &::before {
                                     top: 0;
@@ -100,8 +102,9 @@ main {
                             }
         
                             &.instructions_play {
+                                width: 130px;
                                 left: 0%;
-                                transform: translate(calc(0% + 20px), 0);
+                                transform: translate(0 , 0);
 
                                 &::before {
                                     top: 0;
@@ -123,30 +126,31 @@ main {
                             }
         
                             &.instructions_next {
-                                left: 0;
-                                top: 50%;
-                                transform: translate(-100%, -50%);
+                                width: 135px;
+                                right: 0;
+                                transform: translate(0 , 0);
 
                                 &::before {
+                                    top: 0;
                                     right: 0;
-                                    top: 50%;
-                                    transform: translate(100%, -50%);
-                                    border-left: 9px solid $white;
-                                    border-top: 9px solid transparent;
-                                    border-bottom: 9px solid transparent;
+                                    transform: translate(calc(-100% + 5px), -100%);
+                                    border-left: 9px solid transparent;
+                                    border-right: 9px solid transparent;
+                                    border-bottom: 9px solid $white;
                                 }
         
                                 &::after {
+                                    top: 0;
                                     right: 0;
-                                    top: 50%;
-                                    transform: translate(100%, -50%);
-                                    border-left: 7px solid $dark_purple;
-                                    border-top: 7px solid transparent;
-                                    border-bottom: 7px solid transparent;
+                                    transform: translate(calc(-100% - 1px), -100%);
+                                    border-left: 7px solid transparent;
+                                    border-right: 7px solid transparent;
+                                    border-bottom: 7px solid $dark_purple;
                                 }
                             }
         
                             &.instructions_sound {
+                                width: 230px;
                                 left: 50%;
                                 transform: translate(-50%, 0);
 
@@ -198,6 +202,36 @@ main {
             .instructions_area{
                 .instructions_area_item{
                     width: 80%;
+                    .test_area {
+                        .instructions_item {
+                            .instructions {
+
+                                p{
+                                    font-size: 13px;
+                                }
+
+                                &.instructions_video_play {
+                                    width: 245px;
+                                }
+            
+                                &.instructions_mic {
+                                    width: 200px;
+                                }
+            
+                                &.instructions_play {
+                                    width: 140px;
+                                }
+            
+                                &.instructions_next {
+                                    width: 135px;
+                                }
+            
+                                &.instructions_sound {
+                                    width: 245px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -213,12 +247,13 @@ main {
                         .instructions_item {
                             .instructions {
                                 width: 210px;
-        
-                                &.instructions_video_play {
-                                    width: 195px;
+
+                                p{
+                                    font-size: 16px;
                                 }
 
                                 &.instructions_mic {
+                                    width: 335px;
     
                                     &::before {
                                         transform: translate(calc(-47.25px + 2px), -100%);
@@ -230,6 +265,7 @@ main {
                                 }
             
                                 &.instructions_play {
+                                    width: 165px;
                                     &::before {
                                         transform: translate(calc(47.25px - 2px), -100%);
                                     }
