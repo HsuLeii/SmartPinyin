@@ -2,1243 +2,341 @@
 /*rgb(241, 241, 255)*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500;700;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-body {
-  font-family: 'Noto Sans', 'Noto Sans TC', 'Noto Sans SC', 'Microsoft JhengHei', 'Noto Sans TC', 'Microsoft YaHei', 'PingFang TC', 'PingFang SC', 'Heiti TC', 'Heiti SC', 'LiHei Pro', 'STXihei', sans-serif;
-}
+body { font-family: 'Noto Sans', 'Noto Sans TC', 'Noto Sans SC', 'Microsoft JhengHei', 'Noto Sans TC', 'Microsoft YaHei', 'PingFang TC', 'PingFang SC', 'Heiti TC', 'Heiti SC', 'LiHei Pro', 'STXihei', sans-serif; }
 
-.page .test_content .item .item_content {
-  box-shadow: 1px 1px 5px #4b4b4b45;
-}
+.page .test_content .item .item_content { box-shadow: 1px 1px 5px #4b4b4b45; }
 
-body,
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-code,
-form,
-fieldset,
-legend,
-input,
-textarea,
-p,
-blockquote,
-th,
-td,
-figure {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, figure { margin: 0; padding: 0; list-style: none; }
 
-h3 {
-  font-size: 21px;
-  line-height: 1.7;
-  font-weight: bold;
-  color: #552b8d;
-}
+h3 { font-size: 21px; line-height: 1.7; font-weight: bold; color: #324774; }
 
-h4 {
-  font-size: 19px;
-  line-height: 1.5;
-  font-weight: bold;
-  color: #552b8d;
-}
+h4 { font-size: 19px; line-height: 1.5; font-weight: bold; color: #324774; }
 
-p {
-  font-size: 13px;
-  line-height: 1.7;
-  font-weight: bold;
-}
+p { font-size: 13px; line-height: 1.7; font-weight: bold; }
 
-span,
-th,
-td {
-  font-size: 13px;
-  text-decoration: none;
-  line-height: 1.7;
-  font-weight: bold;
-}
+span, th, td { font-size: 13px; text-decoration: none; line-height: 1.7; font-weight: bold; }
 
-a {
-  font-size: 13px;
-  text-decoration: none;
-  line-height: 1.7;
-}
+a { font-size: 13px; text-decoration: none; line-height: 1.7; }
 
-img {
-  width: 100%;
-}
+img { width: 100%; }
 
-button {
-  padding: 0;
-  border-width: 0px;
-  border-style: none;
-  background-color: transparent;
-  border-radius: 10px;
-  cursor: pointer;
-}
+button { padding: 0; border-width: 0px; border-style: none; background-color: transparent; border-radius: 10px; cursor: pointer; }
 
-button:disabled {
-  background-color: #595757;
-  opacity: 0.5;
-  cursor: auto;
-}
+button:disabled { background-color: #595757; opacity: 0.5; cursor: auto; }
 
-*,
-body {
-  font-family: 'Noto Sans', 'Noto Sans TC', 'Noto Sans SC', 'Microsoft JhengHei', 'Noto Sans TC', 'Microsoft YaHei', 'PingFang TC', 'PingFang SC', 'Heiti TC', 'Heiti SC', 'LiHei Pro', 'STXihei', sans-serif;
-  letter-spacing: 1.5px;
-  box-sizing: border-box;
-}
+*, body { font-family: 'Noto Sans', 'Noto Sans TC', 'Noto Sans SC', 'Microsoft JhengHei', 'Noto Sans TC', 'Microsoft YaHei', 'PingFang TC', 'PingFang SC', 'Heiti TC', 'Heiti SC', 'LiHei Pro', 'STXihei', sans-serif; letter-spacing: 1.5px; box-sizing: border-box; }
 
-@media screen and (min-width: 768px) {
-  h3 {
-    font-size: 23px;
-  }
-  h4 {
-    font-size: 21px;
-  }
-  p {
-    font-size: 15px;
-  }
-  span,
-  th,
-  td {
-    font-size: 15px;
-  }
-  a {
-    font-size: 15px;
-  }
-}
+@media screen and (min-width: 768px) { h3 { font-size: 23px; }
+  h4 { font-size: 21px; }
+  p { font-size: 15px; }
+  span, th, td { font-size: 15px; }
+  a { font-size: 15px; } }
 
-@media screen and (min-width: 1200px) {
-  h3 {
-    font-size: 25px;
-  }
-  h4 {
-    font-size: 23px;
-  }
-  p {
-    font-size: 17px;
-  }
-  span,
-  th,
-  td {
-    font-size: 17px;
-  }
-  a {
-    font-size: 17px;
-  }
-}
+@media screen and (min-width: 1200px) { h3 { font-size: 25px; }
+  h4 { font-size: 23px; }
+  p { font-size: 17px; }
+  span, th, td { font-size: 17px; }
+  a { font-size: 17px; } }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 5% 0px;
-}
+header { display: flex; justify-content: space-between; padding: 20px 5% 0px; }
 
-header .header_logo {
-  width: 40%;
-  max-width: 350px;
-}
+header .header_logo { width: 40%; max-width: 350px; }
 
-@media screen and (min-width: 576px) {
-  header .header_logo {
-    width: 45%;
-  }
-}
+@media screen and (min-width: 576px) { header .header_logo { width: 45%; } }
 
-@media screen and (min-width: 1200px) {
-  header {
-    border-bottom: 1px solid #552b8d;
-    padding: 20px 5% 20px;
-    background-color: #f1f1ff;
-  }
-}
+@media screen and (min-width: 1200px) { header { border-bottom: 1px solid #324774; padding: 20px 5% 20px; background-color: #f1f1ff; } }
 
 /*pages*/
-body {
-  background-color: #f7f8f8;
-  counter-reset: page-number;
-  /* 初始化，名字可自訂，數值為0 */
-  -webkit-print-color-adjust: exact;
-}
+body { background-color: #f7f8f8; counter-reset: page-number; /* 初始化，名字可自訂，數值為0 */ -webkit-print-color-adjust: exact; }
 
-.page {
-  /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
-  /* page-break-after: always;  碰到此元素會直接換頁 */
-  page-break-inside: avoid;
-  position: relative;
-  max-width: 1024px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  overflow: hidden;
-}
+.page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; width: 100%; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; overflow: hidden; }
 
-.page:after {
-  /* content: counter(page-number); 取用該名字的計數器 */
-  /*counter-increment: page-number 1;  增加計數器數值 */
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  font-size: 30px;
-  text-align: center;
-}
+.page:after { /* content: counter(page-number); 取用該名字的計數器 */ /*counter-increment: page-number 1;  增加計數器數值 */ position: absolute; right: 0; bottom: 0; left: 0; font-size: 30px; text-align: center; }
 
-.page h3 {
-  font-size: 18px;
-  line-height: 1.5;
-  color: #fff;
-}
+.page h3 { font-size: 18px; line-height: 1.5; color: #fff; }
 
-.page p {
-  font-size: 13px;
-  line-height: 1.5;
-}
+.page p { font-size: 13px; line-height: 1.5; }
 
-.page h4 {
-  font-size: 16px;
-  line-height: 1.6;
-}
+.page h4 { font-size: 16px; line-height: 1.6; }
 
-.page .report_title {
-  width: 100%;
-  z-index: 2;
-  background-color: #bda2e2;
-  padding: 20px 5%;
-}
+.page .report_title { width: 100%; z-index: 2; background-color: #45bbbd; padding: 20px 5%; }
 
-.page .report_title img {
-  width: 45%;
-  max-width: 200px;
-}
+.page .report_title img { width: 45%; max-width: 200px; }
 
-.page .report_title .text_content h3 {
-  border-bottom: 5px solid #fff;
-  margin: 10px auto;
-  padding: 10px 0px;
-  font-size: 40px;
-  display: inline-block;
-}
+.page .report_title .text_content h3 { border-bottom: 5px solid #fff; margin: 10px auto; padding: 10px 0px; font-size: 40px; display: inline-block; }
 
-.page .report_title .text_content .chinese_title {
-  font-size: 32px;
-  margin-bottom: 10px;
-  color: #fff;
-}
+.page .report_title .text_content .chinese_title { font-size: 32px; margin-bottom: 10px; color: #fff; }
 
-.page .report_title .text_content .english_title {
-  color: #fff;
-}
+.page .report_title .text_content .english_title { color: #fff; }
 
-.page .report_title .material {
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-}
+.page .report_title .material { margin-top: 20px; display: flex; flex-wrap: wrap; }
 
-.page .report_title .material .name,
-.page .report_title .material .date,
-.page .report_title .material .language {
-  margin: 8px 15px 8px 0px;
-  display: flex;
-}
+.page .report_title .material .name, .page .report_title .material .date, .page .report_title .material .language { margin: 8px 15px 8px 0px; display: flex; }
 
-.page .report_title .material .name h4,
-.page .report_title .material .date h4,
-.page .report_title .material .language h4 {
-  color: #552b8d;
-}
+.page .report_title .material .name h4, .page .report_title .material .date h4, .page .report_title .material .language h4 { color: #45bbbd; }
 
-.page .report_title .material .name p,
-.page .report_title .material .date p,
-.page .report_title .material .language p {
-  color: #fff;
-  padding-bottom: 2px;
-  border-bottom: 1px solid #fff;
-  font-size: 19px;
-}
+.page .report_title .material .name p, .page .report_title .material .date p, .page .report_title .material .language p { color: #fff; padding-bottom: 2px; border-bottom: 1px solid #fff; font-size: 19px; }
 
-.page .test_content {
-  width: 100%;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 20px 5%;
-  max-width: 768px;
-}
+.page .test_content { width: 100%; z-index: 2; display: flex; flex-direction: column; justify-content: flex-start; padding: 20px 5%; max-width: 768px; }
 
-.page .test_content .item {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 9px;
-}
+.page .test_content .item { display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 9px; }
 
-.page .test_content .item .fraction_area {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  margin: 15px auto;
-}
+.page .test_content .item .fraction_area { display: flex; justify-content: flex-end; width: 100%; margin: 15px auto; }
 
-.page .test_content .item .fraction_area .fraction,
-.page .test_content .item .fraction_area .average {
-  display: flex;
-  align-items: center;
-  margin: 5px 0;
-}
+.page .test_content .item .fraction_area .fraction, .page .test_content .item .fraction_area .average { display: flex; align-items: center; margin: 5px 0; }
 
-.page .test_content .item .fraction_area .fraction p:nth-child(2),
-.page .test_content .item .fraction_area .average p:nth-child(2) {
-  padding: 5px 10px;
-  border-radius: 5px;
-}
+.page .test_content .item .fraction_area .fraction p:nth-child(2), .page .test_content .item .fraction_area .average p:nth-child(2) { padding: 5px 10px; border-radius: 5px; }
 
-.page .test_content .item .fraction_area .fraction p.score,
-.page .test_content .item .fraction_area .average p.score {
-  font-size: 18px;
-  margin-left: 5px;
-}
+.page .test_content .item .fraction_area .fraction p.score, .page .test_content .item .fraction_area .average p.score { font-size: 18px; margin-left: 5px; }
 
-.page .test_content .item .fraction_area .fraction p:nth-child(2) {
-  color: #fff;
-}
+.page .test_content .item .fraction_area .fraction p:nth-child(2) { color: #fff; }
 
-.page .test_content .item .fraction_area .average {
-  margin: 5px 0 5px 2.5%;
-}
+.page .test_content .item .fraction_area .average { margin: 5px 0 5px 2.5%; }
 
-.page .test_content .item .title_mark {
-  position: relative;
-  width: 15%;
-  max-width: 80px;
-  z-index: 1;
-}
+.page .test_content .item .title_mark { position: relative; width: 15%; max-width: 80px; z-index: 1; }
 
-.page .test_content .item .title_mark .number_mark {
-  position: absolute;
-  left: -5%;
-  top: 0%;
-  width: 45%;
-  transform: translate(0px, -50%);
-}
+.page .test_content .item .title_mark .number_mark { position: absolute; left: -5%; top: 0%; width: 45%; transform: translate(0px, -50%); }
 
-.page .test_content .item .item_content {
-  background-color: #fff;
-  border-radius: 5px;
-  width: 90%;
-  margin-left: -5%;
-}
+.page .test_content .item .item_content { background-color: #fff; border-radius: 5px; width: 90%; margin-left: -5%; }
 
-.page .test_content .item .item_content .content_title {
-  padding: 5px 10px 5px 10%;
-  border-radius: 5px 5px 0 0;
-  border-bottom: 0 !important;
-}
+.page .test_content .item .item_content .content_title { padding: 5px 10px 5px 10%; border-radius: 5px 5px 0 0; border-bottom: 0 !important; }
 
-.page .test_content .item .item_content .content_introduce {
-  padding: 5px 10px 5px 10%;
-  border-radius: 0 0 5px 5px;
-  background-color: #fff;
-  border-top: 0 !important;
-}
+.page .test_content .item .item_content .content_introduce { padding: 5px 10px 5px 10%; border-radius: 0 0 5px 5px; background-color: #fff; border-top: 0 !important; }
 
-.page .test_content .item.first_item .fraction_area .fraction p:nth-child(2) {
-  background-color: #2783be;
-  border: 1.5px solid #2783be;
-}
+.page .test_content .item.first_item .fraction_area .fraction p:nth-child(2) { background-color: #2783be; border: 1.5px solid #2783be; }
 
-.page .test_content .item.first_item .fraction_area .average p:nth-child(2) {
-  color: #2783be;
-  border: 1.5px solid #2783be;
-}
+.page .test_content .item.first_item .fraction_area .average p:nth-child(2) { color: #2783be; border: 1.5px solid #2783be; }
 
-.page .test_content .item.first_item .item_content .content_title {
-  background-color: #2783be;
-  border: 1px solid #2783be;
-}
+.page .test_content .item.first_item .item_content .content_title { background-color: #2783be; border: 1px solid #2783be; }
 
-.page .test_content .item.first_item .item_content .content_introduce {
-  border: 1px solid #2783be;
-}
+.page .test_content .item.first_item .item_content .content_introduce { border: 1px solid #2783be; }
 
-.page .test_content .item.two_item .fraction_area .fraction p:nth-child(2) {
-  background-color: #d4655c;
-  border: 1.5px solid #d4655c;
-}
+.page .test_content .item.two_item .fraction_area .fraction p:nth-child(2) { background-color: #d4655c; border: 1.5px solid #d4655c; }
 
-.page .test_content .item.two_item .fraction_area .average p:nth-child(2) {
-  color: #d4655c;
-  border: 1.5px solid #d4655c;
-}
+.page .test_content .item.two_item .fraction_area .average p:nth-child(2) { color: #d4655c; border: 1.5px solid #d4655c; }
 
-.page .test_content .item.two_item .item_content .content_title {
-  background-color: #d4655c;
-  border: 1px solid #d4655c;
-}
+.page .test_content .item.two_item .item_content .content_title { background-color: #d4655c; border: 1px solid #d4655c; }
 
-.page .test_content .item.two_item .item_content .content_introduce {
-  border: 1px solid #d4655c;
-}
+.page .test_content .item.two_item .item_content .content_introduce { border: 1px solid #d4655c; }
 
-.page .test_content .item.three_item .fraction_area .fraction p:nth-child(2) {
-  background-color: #e1b539;
-  border: 1.5px solid #e1b539;
-}
+.page .test_content .item.three_item .fraction_area .fraction p:nth-child(2) { background-color: #e1b539; border: 1.5px solid #e1b539; }
 
-.page .test_content .item.three_item .fraction_area .average p:nth-child(2) {
-  color: #e1b539;
-  border: 1.5px solid #e1b539;
-}
+.page .test_content .item.three_item .fraction_area .average p:nth-child(2) { color: #e1b539; border: 1.5px solid #e1b539; }
 
-.page .test_content .item.three_item .item_content .content_title {
-  background-color: #e1b539;
-  border: 1px solid #e1b539;
-}
+.page .test_content .item.three_item .item_content .content_title { background-color: #e1b539; border: 1px solid #e1b539; }
 
-.page .test_content .item.three_item .item_content .content_introduce {
-  border: 1px solid #e1b539;
-}
+.page .test_content .item.three_item .item_content .content_introduce { border: 1px solid #e1b539; }
 
-.page .test_content .item.four_item .fraction_area .fraction p:nth-child(2) {
-  background-color: #3f9979;
-  border: 1.5px solid #3f9979;
-}
+.page .test_content .item.four_item .fraction_area .fraction p:nth-child(2) { background-color: #3f9979; border: 1.5px solid #3f9979; }
 
-.page .test_content .item.four_item .fraction_area .average p:nth-child(2) {
-  color: #3f9979;
-  border: 1.5px solid #3f9979;
-}
+.page .test_content .item.four_item .fraction_area .average p:nth-child(2) { color: #3f9979; border: 1.5px solid #3f9979; }
 
-.page .test_content .item.four_item .item_content .content_title {
-  background-color: #3f9979;
-  border: 1px solid #3f9979;
-}
+.page .test_content .item.four_item .item_content .content_title { background-color: #3f9979; border: 1px solid #3f9979; }
 
-.page .test_content .item.four_item .item_content .content_introduce {
-  border: 1px solid #3f9979;
-}
+.page .test_content .item.four_item .item_content .content_introduce { border: 1px solid #3f9979; }
 
-.page .test_content .item.five_item .fraction_area .fraction p:nth-child(2) {
-  background-color: #675f91;
-  border: 1.5px solid #675f91;
-}
+.page .test_content .item.five_item .fraction_area .fraction p:nth-child(2) { background-color: #675f91; border: 1.5px solid #675f91; }
 
-.page .test_content .item.five_item .fraction_area .average p:nth-child(2) {
-  color: #675f91;
-  border: 1.5px solid #675f91;
-}
+.page .test_content .item.five_item .fraction_area .average p:nth-child(2) { color: #675f91; border: 1.5px solid #675f91; }
 
-.page .test_content .item.five_item .item_content .content_title {
-  background-color: #675f91;
-  border: 1px solid #675f91;
-}
+.page .test_content .item.five_item .item_content .content_title { background-color: #675f91; border: 1px solid #675f91; }
 
-.page .test_content .item.five_item .item_content .content_introduce {
-  border: 1px solid #675f91;
-}
+.page .test_content .item.five_item .item_content .content_introduce { border: 1px solid #675f91; }
 
-.page .chartbar_area {
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 20px 5%;
-  max-width: 768px;
-}
+.page .chartbar_area { flex-wrap: wrap; display: flex; justify-content: center; align-items: center; width: 100%; padding: 20px 5%; max-width: 768px; }
 
-.page .chartbar_area .srscore,
-.page .chartbar_area .cefr_level,
-.page .chartbar_area .actfl_level {
-  position: relative;
-  width: 45%;
-  background-color: #f7ae00;
-  border-radius: 50%;
-  max-width: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  z-index: 2;
-  margin: 10px 2.5%;
-}
+.page .chartbar_area .srscore, .page .chartbar_area .cefr_level, .page .chartbar_area .actfl_level { position: relative; width: 45%; background-color: #f7ae00; border-radius: 50%; max-width: 250px; display: flex; align-items: center; justify-content: center; flex-direction: column; z-index: 2; margin: 10px 2.5%; }
 
-.page .chartbar_area .srscore:after,
-.page .chartbar_area .cefr_level:after,
-.page .chartbar_area .actfl_level:after {
-  position: absolute;
-  content: "";
-  border: 2px dotted #552b8c;
-  width: 100%;
-  height: 100%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  padding: 3px;
-  border-radius: 50%;
-}
+.page .chartbar_area .srscore:after, .page .chartbar_area .cefr_level:after, .page .chartbar_area .actfl_level:after { position: absolute; content: ""; border: 2px dotted #324774; width: 100%; height: 100%; left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 3px; border-radius: 50%; }
 
-.page .chartbar_area .srscore h3,
-.page .chartbar_area .cefr_level h3,
-.page .chartbar_area .actfl_level h3 {
-  text-align: center;
-}
+.page .chartbar_area .srscore h3, .page .chartbar_area .cefr_level h3, .page .chartbar_area .actfl_level h3 { text-align: center; }
 
-.page .chartbar_area .srscore p,
-.page .chartbar_area .cefr_level p,
-.page .chartbar_area .actfl_level p {
-  text-align: center;
-  color: #552b8d;
-}
+.page .chartbar_area .srscore p, .page .chartbar_area .cefr_level p, .page .chartbar_area .actfl_level p { text-align: center; color: #324774; }
 
-.page .bottom_text {
-  width: 100%;
-  z-index: 1;
-  padding: 20px 0 0;
-}
+.page .bottom_text { width: 100%; z-index: 1; padding: 20px 0 0; }
 
-.page .bottom_text p {
-  margin: 0 auto;
-  padding: 10px 5%;
-  text-align: center;
-  color: #fff;
-}
+.page .bottom_text p { margin: 0 auto; padding: 10px 5%; text-align: center; color: #fff; }
 
-.page .bottom_text p:nth-child(1) {
-  background-color: #552b8d;
-}
+.page .bottom_text p:nth-child(1) { background-color: #324774; }
 
-@page {
-  /*size: portrait;  直向 */
+@page { /*size: portrait;  直向 */
   /*size: landscape;  橫向 */
   /*size: A4;  紙張大小 */
   size: A4 portrait;
   /* 混合使用 */
   min-height: 100vh;
   margin: 0;
-  /* 邊界與內容的距離 */
-}
+  /* 邊界與內容的距離 */ }
 
-@media print {
-  body {
-    background-color: #f7f8f8;
-    counter-reset: page-number;
-    /* 初始化，名字可自訂，數值為0 */
-    -webkit-print-color-adjust: exact;
-  }
-  section {
-    width: 100vw;
-    height: 100vh;
-    page-break-after: always;
-  }
-  .page {
-    /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
-    /* page-break-after: always;  碰到此元素會直接換頁 */
-    page-break-inside: avoid;
-    position: relative;
-    background: linear-gradient(90deg, #bda2e2 38%, #fff 0%);
-    max-width: 1024px;
-    width: 1024px;
-    height: 1448px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding-top: 15px;
-    overflow: hidden;
-  }
-  .page:after {
-    /* content: counter(page-number); 取用該名字的計數器 */
-    /*counter-increment: page-number 1;  增加計數器數值 */
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    font-size: 30px;
-    text-align: center;
-  }
-  .page h3 {
-    font-size: 20px;
-    line-height: 1.5;
-    color: #fff;
-  }
-  .page p {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  .page h4 {
-    font-size: 22px;
-    line-height: 1.6;
-  }
-  .page .report_title {
-    width: 35%;
-    z-index: 2;
-    margin: 15px 0 0;
-    padding: 0;
-    background-color: transparent;
-  }
-  .page .report_title img {
-    width: 100%;
-    max-width: none;
-  }
-  .page .report_title .text_content h3 {
-    border-bottom: 5px solid #fff;
-    margin: 10px auto;
-    font-size: 42px;
-    display: block;
-  }
-  .page .report_title .text_content .chinese_title {
-    font-size: 33px;
-    margin-bottom: 10px;
-    color: #fff;
-  }
-  .page .report_title .text_content .english_title {
-    font-size: 15px;
-    color: #fff;
-  }
-  .page .report_title .material {
-    margin-top: 20px;
-    display: block;
-  }
-  .page .report_title .material .name,
-  .page .report_title .material .date,
-  .page .report_title .material .language {
-    margin: 15px 0px;
-    display: block;
-  }
-  .page .report_title .material .name h4,
-  .page .report_title .material .date h4,
-  .page .report_title .material .language h4 {
-    color: #552b8d;
-  }
-  .page .report_title .material .name p,
-  .page .report_title .material .date p,
-  .page .report_title .material .language p {
-    color: #fff;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #fff;
-  }
-  .page .test_content {
-    width: 60%;
-    z-index: 2;
-    height: calc(100% - 417px);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    max-width: none;
-    padding: 0;
-  }
-  .page .test_content .item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    margin-bottom: 9px;
-  }
-  .page .test_content .item .fraction_area {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    margin: 15px auto 5px;
-  }
-  .page .test_content .item .fraction_area .fraction,
-  .page .test_content .item .fraction_area .average {
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-  }
-  .page .test_content .item .fraction_area .fraction p:nth-child(2),
-  .page .test_content .item .fraction_area .average p:nth-child(2) {
-    padding: 5px 10px;
-    border-radius: 5px;
-  }
-  .page .test_content .item .fraction_area .fraction p.score,
-  .page .test_content .item .fraction_area .average p.score {
-    font-size: 18px;
-    margin-left: 5px;
-  }
-  .page .test_content .item .fraction_area .fraction p:nth-child(2) {
-    color: #fff;
-  }
-  .page .test_content .item .title_mark {
-    position: relative;
-    width: 15%;
-    max-width: 80px;
-    z-index: 1;
-  }
-  .page .test_content .item .title_mark .number_mark {
-    position: absolute;
-    left: -5%;
-    top: 0%;
-    width: 45%;
-    transform: translate(0px, -50%);
-  }
-  .page .test_content .item .item_content {
-    background-color: #fff;
-    border-radius: 5px;
-    width: 85%;
-    margin-left: -5%;
-  }
-  .page .test_content .item .item_content .content_title {
-    padding: 5px 10px 5px 10%;
-    border-radius: 5px 5px 0 0;
-    border-bottom: 0 !important;
-  }
-  .page .test_content .item .item_content .content_introduce {
-    padding: 5px 10px 5px 10%;
-    border-radius: 0 0 5px 5px;
-    background-color: #fff;
-    border-top: 0 !important;
-  }
-  .page .test_content .item.first_item .fraction_area .fraction p:nth-child(2) {
-    background-color: #2783be;
-    border: 1.5px solid #2783be;
-  }
-  .page .test_content .item.first_item .fraction_area .average p:nth-child(2) {
-    color: #2783be;
-    border: 1.5px solid #2783be;
-  }
-  .page .test_content .item.first_item .item_content .content_title {
-    background-color: #2783be;
-    border: 1px solid #2783be;
-  }
-  .page .test_content .item.first_item .item_content .content_introduce {
-    border: 1px solid #2783be;
-  }
-  .page .test_content .item.two_item .fraction_area .fraction p:nth-child(2) {
-    background-color: #d4655c;
-    border: 1.5px solid #d4655c;
-  }
-  .page .test_content .item.two_item .fraction_area .average p:nth-child(2) {
-    color: #d4655c;
-    border: 1.5px solid #d4655c;
-  }
-  .page .test_content .item.two_item .item_content .content_title {
-    background-color: #d4655c;
-    border: 1px solid #d4655c;
-  }
-  .page .test_content .item.two_item .item_content .content_introduce {
-    border: 1px solid #d4655c;
-  }
-  .page .test_content .item.three_item .fraction_area .fraction p:nth-child(2) {
-    background-color: #e1b539;
-    border: 1.5px solid #e1b539;
-  }
-  .page .test_content .item.three_item .fraction_area .average p:nth-child(2) {
-    color: #e1b539;
-    border: 1.5px solid #e1b539;
-  }
-  .page .test_content .item.three_item .item_content .content_title {
-    background-color: #e1b539;
-    border: 1px solid #e1b539;
-  }
-  .page .test_content .item.three_item .item_content .content_introduce {
-    border: 1px solid #e1b539;
-  }
-  .page .test_content .item.four_item .fraction_area .fraction p:nth-child(2) {
-    background-color: #3f9979;
-    border: 1.5px solid #3f9979;
-  }
-  .page .test_content .item.four_item .fraction_area .average p:nth-child(2) {
-    color: #3f9979;
-    border: 1.5px solid #3f9979;
-  }
-  .page .test_content .item.four_item .item_content .content_title {
-    background-color: #3f9979;
-    border: 1px solid #3f9979;
-  }
-  .page .test_content .item.four_item .item_content .content_introduce {
-    border: 1px solid #3f9979;
-  }
-  .page .test_content .item.five_item .fraction_area .fraction p:nth-child(2) {
-    background-color: #675f91;
-    border: 1.5px solid #675f91;
-  }
-  .page .test_content .item.five_item .fraction_area .average p:nth-child(2) {
-    color: #675f91;
-    border: 1.5px solid #675f91;
-  }
-  .page .test_content .item.five_item .item_content .content_title {
-    background-color: #675f91;
-    border: 1px solid #675f91;
-  }
-  .page .test_content .item.five_item .item_content .content_introduce {
-    border: 1px solid #675f91;
-  }
-  .page .chartbar_area {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    bottom: 50px;
-    max-width: none;
-  }
-  .page .chartbar_area .srscore,
-  .page .chartbar_area .cefr_level,
-  .page .chartbar_area .actfl_level {
-    position: relative;
-    width: 29%;
-    background-color: #f7ae00;
-    border-radius: 50%;
-    max-width: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 2;
-    margin: 0 2%;
-  }
-  .page .chartbar_area .srscore:after,
-  .page .chartbar_area .cefr_level:after,
-  .page .chartbar_area .actfl_level:after {
-    position: absolute;
-    content: "";
-    border: 2px dotted #552b8c;
-    width: 100%;
-    height: 100%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding: 6px;
-    border-radius: 50%;
-  }
-  .page .chartbar_area .srscore h3,
-  .page .chartbar_area .cefr_level h3,
-  .page .chartbar_area .actfl_level h3 {
-    text-align: center;
-  }
-  .page .chartbar_area .srscore p,
-  .page .chartbar_area .cefr_level p,
-  .page .chartbar_area .actfl_level p {
-    text-align: center;
-    color: #552b8d;
-    font-size: 22px;
-  }
-  .page .bottom_text {
-    width: 100%;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    z-index: 1;
-    padding: 0;
-  }
-  .page .bottom_text:before {
-    position: absolute;
-    content: "";
-    width: 1024px;
-    height: 1024px;
-    top: -512px;
-    background: #fff;
-    border-radius: 50%;
-    z-index: -1;
-  }
-  .page .bottom_text p {
-    margin: 0 auto;
-    padding: 10px 5%;
-    text-align: center;
-    color: #fff;
-  }
-  .page .bottom_text p:nth-child(1) {
-    background-color: #552b8d;
-  }
-}
+@media print { body { background-color: #f7f8f8; counter-reset: page-number; /* 初始化，名字可自訂，數值為0 */ -webkit-print-color-adjust: exact; }
+  section { width: 100vw; height: 100vh; page-break-after: always; }
+  .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; background: linear-gradient(90deg, #324774 38%, #fff 0%); max-width: 1024px; width: 1024px; height: 1448px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; padding-top: 15px; overflow: hidden; }
+  .page:after { /* content: counter(page-number); 取用該名字的計數器 */ /*counter-increment: page-number 1;  增加計數器數值 */ position: absolute; right: 0; bottom: 0; left: 0; font-size: 30px; text-align: center; }
+  .page h3 { font-size: 20px; line-height: 1.5; color: #fff; }
+  .page p { font-size: 16px; line-height: 1.5; }
+  .page h4 { font-size: 22px; line-height: 1.6; }
+  .page .report_title { width: 35%; z-index: 2; margin: 15px 0 0; padding: 0; background-color: transparent; }
+  .page .report_title img { width: 100%; max-width: none; }
+  .page .report_title .text_content h3 { border-bottom: 5px solid #fff; margin: 10px auto; font-size: 42px; display: block; }
+  .page .report_title .text_content .chinese_title { font-size: 33px; margin-bottom: 10px; color: #fff; }
+  .page .report_title .text_content .english_title { font-size: 15px; color: #fff; }
+  .page .report_title .material { margin-top: 20px; display: block; }
+  .page .report_title .material .name, .page .report_title .material .date, .page .report_title .material .language { margin: 15px 0px; display: block; }
+  .page .report_title .material .name h4, .page .report_title .material .date h4, .page .report_title .material .language h4 { color: #45bbbd; }
+  .page .report_title .material .name p, .page .report_title .material .date p, .page .report_title .material .language p { color: #fff; padding-bottom: 10px; border-bottom: 1px solid #fff; }
+  .page .test_content { width: 60%; z-index: 2; height: calc(100% - 417px); display: flex; flex-direction: column; justify-content: flex-start; max-width: none; padding: 0; }
+  .page .test_content .item { display: flex; flex-wrap: wrap; justify-content: flex-end; margin-bottom: 9px; }
+  .page .test_content .item .fraction_area { display: flex; width: 100%; justify-content: flex-end; margin: 15px auto 5px; }
+  .page .test_content .item .fraction_area .fraction, .page .test_content .item .fraction_area .average { display: flex; align-items: center; margin-left: 10px; }
+  .page .test_content .item .fraction_area .fraction p:nth-child(2), .page .test_content .item .fraction_area .average p:nth-child(2) { padding: 5px 10px; border-radius: 5px; }
+  .page .test_content .item .fraction_area .fraction p.score, .page .test_content .item .fraction_area .average p.score { font-size: 18px; margin-left: 5px; }
+  .page .test_content .item .fraction_area .fraction p:nth-child(2) { color: #fff; }
+  .page .test_content .item .title_mark { position: relative; width: 15%; max-width: 80px; z-index: 1; }
+  .page .test_content .item .title_mark .number_mark { position: absolute; left: -5%; top: 0%; width: 45%; transform: translate(0px, -50%); }
+  .page .test_content .item .item_content { background-color: #fff; border-radius: 5px; width: 85%; margin-left: -5%; }
+  .page .test_content .item .item_content .content_title { padding: 5px 10px 5px 10%; border-radius: 5px 5px 0 0; border-bottom: 0 !important; }
+  .page .test_content .item .item_content .content_introduce { padding: 5px 10px 5px 10%; border-radius: 0 0 5px 5px; background-color: #fff; border-top: 0 !important; }
+  .page .test_content .item.first_item .fraction_area .fraction p:nth-child(2) { background-color: #2783be; border: 1.5px solid #2783be; }
+  .page .test_content .item.first_item .fraction_area .average p:nth-child(2) { color: #2783be; border: 1.5px solid #2783be; }
+  .page .test_content .item.first_item .item_content .content_title { background-color: #2783be; border: 1px solid #2783be; }
+  .page .test_content .item.first_item .item_content .content_introduce { border: 1px solid #2783be; }
+  .page .test_content .item.two_item .fraction_area .fraction p:nth-child(2) { background-color: #d4655c; border: 1.5px solid #d4655c; }
+  .page .test_content .item.two_item .fraction_area .average p:nth-child(2) { color: #d4655c; border: 1.5px solid #d4655c; }
+  .page .test_content .item.two_item .item_content .content_title { background-color: #d4655c; border: 1px solid #d4655c; }
+  .page .test_content .item.two_item .item_content .content_introduce { border: 1px solid #d4655c; }
+  .page .test_content .item.three_item .fraction_area .fraction p:nth-child(2) { background-color: #e1b539; border: 1.5px solid #e1b539; }
+  .page .test_content .item.three_item .fraction_area .average p:nth-child(2) { color: #e1b539; border: 1.5px solid #e1b539; }
+  .page .test_content .item.three_item .item_content .content_title { background-color: #e1b539; border: 1px solid #e1b539; }
+  .page .test_content .item.three_item .item_content .content_introduce { border: 1px solid #e1b539; }
+  .page .test_content .item.four_item .fraction_area .fraction p:nth-child(2) { background-color: #3f9979; border: 1.5px solid #3f9979; }
+  .page .test_content .item.four_item .fraction_area .average p:nth-child(2) { color: #3f9979; border: 1.5px solid #3f9979; }
+  .page .test_content .item.four_item .item_content .content_title { background-color: #3f9979; border: 1px solid #3f9979; }
+  .page .test_content .item.four_item .item_content .content_introduce { border: 1px solid #3f9979; }
+  .page .test_content .item.five_item .fraction_area .fraction p:nth-child(2) { background-color: #675f91; border: 1.5px solid #675f91; }
+  .page .test_content .item.five_item .fraction_area .average p:nth-child(2) { color: #675f91; border: 1.5px solid #675f91; }
+  .page .test_content .item.five_item .item_content .content_title { background-color: #675f91; border: 1px solid #675f91; }
+  .page .test_content .item.five_item .item_content .content_introduce { border: 1px solid #675f91; }
+  .page .chartbar_area { flex-wrap: wrap; display: flex; justify-content: center; align-items: center; width: 100%; position: relative; bottom: 50px; max-width: none; }
+  .page .chartbar_area .srscore, .page .chartbar_area .cefr_level, .page .chartbar_area .actfl_level { position: relative; width: 29%; background-color: #f7ae00; border-radius: 50%; max-width: 250px; display: flex; align-items: center; justify-content: center; flex-direction: column; z-index: 2; margin: 0 2%; }
+  .page .chartbar_area .srscore:after, .page .chartbar_area .cefr_level:after, .page .chartbar_area .actfl_level:after { position: absolute; content: ""; border: 2px dotted #324774; width: 100%; height: 100%; left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 6px; border-radius: 50%; }
+  .page .chartbar_area .srscore h3, .page .chartbar_area .cefr_level h3, .page .chartbar_area .actfl_level h3 { text-align: center; }
+  .page .chartbar_area .srscore p, .page .chartbar_area .cefr_level p, .page .chartbar_area .actfl_level p { text-align: center; color: #324774; font-size: 22px; }
+  .page .bottom_text { width: 100%; position: absolute; bottom: 0px; left: 0px; z-index: 1; padding: 0; }
+  .page .bottom_text:before { position: absolute; content: ""; width: 1024px; height: 1024px; top: -512px; background: #fff; border-radius: 50%; z-index: -1; }
+  .page .bottom_text p { margin: 0 auto; padding: 10px 5%; text-align: center; color: #fff; }
+  .page .bottom_text p:nth-child(1) { background-color: #324774; } }
 
-@media screen and (min-width: 576px) {
-  .page h3 {
-    font-size: 19px;
-  }
-  .page p {
-    font-size: 15px;
-  }
-  .page h4 {
-    font-size: 17px;
-  }
-  .page .test_content .item {
-    justify-content: flex-end;
-  }
-  .page .chartbar_area .srscore,
-  .page .chartbar_area .cefr_level,
-  .page .chartbar_area .actfl_level {
-    width: 29%;
-    margin: 0 2%;
-  }
-}
+@media screen and (min-width: 576px) { .page h3 { font-size: 19px; }
+  .page p { font-size: 15px; }
+  .page h4 { font-size: 17px; }
+  .page .test_content .item { justify-content: flex-end; }
+  .page .chartbar_area .srscore, .page .chartbar_area .cefr_level, .page .chartbar_area .actfl_level { width: 29%; margin: 0 2%; } }
 
-@media screen and (min-width: 1024px) {
-  .page {
-    /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
-    /* page-break-after: always;  碰到此元素會直接換頁 */
-    background: linear-gradient(90deg, #bda2e2 38%, #fff 0%);
-    height: 1448px;
-    padding-top: 15px;
-  }
-  .page:after {
-    /* content: counter(page-number); 取用該名字的計數器 */
-    /*counter-increment: page-number 1;  增加計數器數值 */
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    font-size: 30px;
-    text-align: center;
-  }
-  .page h3 {
-    font-size: 20px;
-  }
-  .page p {
-    font-size: 16px;
-  }
-  .page h4 {
-    font-size: 22px;
-  }
-  .page .report_title {
-    width: 35%;
-    margin: 15px 0 0;
-    padding: 0;
-    background-color: transparent;
-  }
-  .page .report_title img {
-    width: 100%;
-    max-width: none;
-  }
-  .page .report_title .text_content h3 {
-    font-size: 42px;
-    display: block;
-  }
-  .page .report_title .text_content .chinese_title {
-    font-size: 33px;
-  }
-  .page .report_title .text_content .english_title {
-    font-size: 15px;
-  }
-  .page .report_title .material {
-    display: block;
-  }
-  .page .report_title .material .name,
-  .page .report_title .material .date,
-  .page .report_title .material .language {
-    margin: 15px 0px;
-    display: block;
-  }
-  .page .test_content {
-    width: 60%;
-    height: calc(100% - 417px);
-    max-width: none;
-    padding: 0;
-  }
-  .page .test_content .item .fraction_area {
-    margin: 15px auto 5px;
-  }
-  .page .test_content .item .item_content {
-    width: 85%;
-  }
-  .page .chartbar_area {
-    position: relative;
-    bottom: 50px;
-    max-width: none;
-  }
-  .page .chartbar_area .srscore:after,
-  .page .chartbar_area .cefr_level:after,
-  .page .chartbar_area .actfl_level:after {
-    padding: 6px;
-  }
-  .page .chartbar_area .srscore p,
-  .page .chartbar_area .cefr_level p,
-  .page .chartbar_area .actfl_level p {
-    font-size: 22px;
-  }
-  .page .bottom_text {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    padding: 0;
-  }
-  .page .bottom_text:before {
-    position: absolute;
-    content: "";
-    width: 1024px;
-    height: 1024px;
-    top: -512px;
-    background: #fff;
-    border-radius: 50%;
-    z-index: -1;
-  }
-}
+@media screen and (min-width: 1024px) { .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ background: linear-gradient(90deg, #324774 38%, #fff 0%); height: 1448px; padding-top: 15px; }
+  .page:after { /* content: counter(page-number); 取用該名字的計數器 */ /*counter-increment: page-number 1;  增加計數器數值 */ position: absolute; right: 0; bottom: 0; left: 0; font-size: 30px; text-align: center; }
+  .page h3 { font-size: 20px; }
+  .page p { font-size: 16px; }
+  .page h4 { font-size: 22px; }
+  .page .report_title { width: 35%; margin: 15px 0 0; padding: 0; background-color: transparent; }
+  .page .report_title img { width: 100%; max-width: none; }
+  .page .report_title .text_content h3 { font-size: 42px; display: block; }
+  .page .report_title .text_content .chinese_title { font-size: 33px; }
+  .page .report_title .text_content .english_title { font-size: 15px; }
+  .page .report_title .material { display: block; }
+  .page .report_title .material .name, .page .report_title .material .date, .page .report_title .material .language { margin: 15px 0px; display: block; }
+  .page .test_content { width: 60%; height: calc(100% - 417px); max-width: none; padding: 0; }
+  .page .test_content .item .fraction_area { margin: 15px auto 5px; }
+  .page .test_content .item .item_content { width: 85%; }
+  .page .chartbar_area { position: relative; bottom: 50px; max-width: none; }
+  .page .chartbar_area .srscore:after, .page .chartbar_area .cefr_level:after, .page .chartbar_area .actfl_level:after { padding: 6px; }
+  .page .chartbar_area .srscore p, .page .chartbar_area .cefr_level p, .page .chartbar_area .actfl_level p { font-size: 22px; }
+  .page .bottom_text { position: absolute; bottom: 0px; left: 0px; padding: 0; }
+  .page .bottom_text:before { position: absolute; content: ""; width: 1024px; height: 1024px; top: -512px; background: #fff; border-radius: 50%; z-index: -1; } }
 
 /*報表下載*/
-.main.diagnosis .tittle {
-  margin: 0 auto;
-  width: 80%;
-}
+.main.diagnosis .tittle { margin: 0 auto; width: 80%; }
 
-.main.diagnosis .frame_effect {
-  margin: 60px auto;
-  padding: 60px;
-  width: 80%;
-  border-radius: 20px;
-  background-color: #f3e6f5;
-}
+.main.diagnosis .frame_effect { margin: 60px auto; padding: 60px; width: 80%; border-radius: 20px; background-color: #f3e6f5; }
 
-.main.diagnosis .frame_effect .folder {
-  width: 95%;
-  max-width: 1400px;
-  margin: 0 auto;
-}
+.main.diagnosis .frame_effect .folder { width: 95%; max-width: 1400px; margin: 0 auto; }
 
-.main.diagnosis .frame_effect .folder canvas {
-  position: initial;
-}
+.main.diagnosis .frame_effect .folder canvas { position: initial; }
 
-.main .daccPage_chart {
-  width: 100%;
-  margin: 0px auto;
-  background-color: #f7f8f8;
-  padding: 20px 0 0;
-  border-radius: 20px;
-}
+.main .daccPage_chart { width: 100%; margin: 0px auto; background-color: #f7f8f8; padding: 20px 0 0; border-radius: 20px; }
 
-.main .daccPage_chart.daccPage_chart_table {
-  background-color: transparent;
-}
+.main .daccPage_chart.daccPage_chart_table { background-color: transparent; }
 
-.main .daccPage_chart h3 {
-  width: 100%;
-  text-align: center;
-}
+.main .daccPage_chart h3 { width: 100%; text-align: center; }
 
-.main .daccPage_chart .daccPage_table {
-  text-align: center;
-  margin: 20px auto 40px;
-}
+.main .daccPage_chart .daccPage_table { text-align: center; margin: 20px auto 40px; }
 
-.main .daccPage_chart .daccPage_table table {
-  border-radius: 20px;
-  overflow: hidden;
-}
+.main .daccPage_chart .daccPage_table table { border-radius: 20px; overflow: hidden; }
 
-.main .daccPage_chart .daccPage_table.table_responsive {
-  overflow-x: scroll;
-}
+.main .daccPage_chart .daccPage_table.table_responsive { overflow-x: scroll; }
 
-.main .daccPage_chart .daccPage_table.table_responsive::-webkit-scrollbar {
-  background: transparent;
-  height: 8px;
-  width: 12px;
-}
+.main .daccPage_chart .daccPage_table.table_responsive::-webkit-scrollbar { background: transparent; height: 8px; width: 12px; }
 
-.main .daccPage_chart .daccPage_table.table_responsive::-webkit-scrollbar-thumb {
-  border: none;
-  box-shadow: none;
-  background: #552b8d;
-  border-radius: 4px;
-  min-height: 40px;
-}
+.main .daccPage_chart .daccPage_table.table_responsive::-webkit-scrollbar-thumb { border: none; box-shadow: none; background: #324774; border-radius: 4px; min-height: 40px; }
 
-.main .daccPage_chart .daccPage_table.table_responsive::-webkit-scrollbar-track {
-  margin: 3px 0;
-}
+.main .daccPage_chart .daccPage_table.table_responsive::-webkit-scrollbar-track { margin: 3px 0; }
 
-.main .daccPage_chart .daccPage_table .table {
-  min-width: 1130px;
-  margin: 0 auto;
-}
+.main .daccPage_chart .daccPage_table .table { min-width: 1130px; margin: 0 auto; }
 
-.main .daccPage_chart .daccPage_table .table thead tr {
-  background-color: #552b8d;
-  color: #fff;
-}
+.main .daccPage_chart .daccPage_table .table thead tr { background-color: #324774; color: #fff; }
 
-.main .daccPage_chart .daccPage_table .table thead tr:nth-child(1) td:nth-child(1), .main .daccPage_chart .daccPage_table .table thead tr:nth-child(1) td:nth-child(2), .main .daccPage_chart .daccPage_table .table thead tr:nth-child(1) td:nth-child(3), .main .daccPage_chart .daccPage_table .table thead tr:nth-child(1) td:nth-child(4) {
-  width: 10%;
-}
+.main .daccPage_chart .daccPage_table .table thead tr:nth-child(1) td:nth-child(1), .main .daccPage_chart .daccPage_table .table thead tr:nth-child(1) td:nth-child(2), .main .daccPage_chart .daccPage_table .table thead tr:nth-child(1) td:nth-child(3), .main .daccPage_chart .daccPage_table .table thead tr:nth-child(1) td:nth-child(4) { width: 10%; }
 
-.main .daccPage_chart .daccPage_table .table thead tr:nth-child(1) td:nth-child(5) {
-  height: 55px;
-}
+.main .daccPage_chart .daccPage_table .table thead tr:nth-child(1) td:nth-child(5) { height: 55px; }
 
-.main .daccPage_chart .daccPage_table .table thead tr:nth-child(2) td {
-  width: 10%;
-  height: 55px;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  padding: 5px 0px;
-  vertical-align: top;
-}
+.main .daccPage_chart .daccPage_table .table thead tr:nth-child(2) td { width: 10%; height: 55px; border-top: none; border-right: none; border-left: none; padding: 5px 0px; vertical-align: top; }
 
-.main .daccPage_chart .daccPage_table .table thead tr td {
-  padding: 5px;
-}
+.main .daccPage_chart .daccPage_table .table thead tr td { padding: 5px; }
 
-.main .daccPage_chart .daccPage_table .table thead tr td .dacc_icon_readinSkills {
-  font-size: 14px;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  border-radius: 50%;
-  color: #fff;
-  vertical-align: text-bottom;
-  margin-bottom: 2px;
-}
+.main .daccPage_chart .daccPage_table .table thead tr td .dacc_icon_readinSkills { font-size: 14px; display: inline-block; width: 20px; height: 20px; line-height: 20px; border-radius: 50%; color: #fff; vertical-align: text-bottom; margin-bottom: 2px; }
 
-.main .daccPage_chart .daccPage_table .table thead tr td .dacc_icon_readinSkills.skill_word {
-  background-color: #2783be;
-}
+.main .daccPage_chart .daccPage_table .table thead tr td .dacc_icon_readinSkills.skill_word { background-color: #2783be; }
 
-.main .daccPage_chart .daccPage_table .table thead tr td .dacc_icon_readinSkills.skill_superficiall {
-  background-color: #d4655c;
-}
+.main .daccPage_chart .daccPage_table .table thead tr td .dacc_icon_readinSkills.skill_superficiall { background-color: #d4655c; }
 
-.main .daccPage_chart .daccPage_table .table thead tr td .dacc_icon_readinSkills.skill_textual {
-  background-color: #e1b539;
-}
+.main .daccPage_chart .daccPage_table .table thead tr td .dacc_icon_readinSkills.skill_textual { background-color: #e1b539; }
 
-.main .daccPage_chart .daccPage_table .table thead tr td .dacc_icon_readinSkills.skill_analysis {
-  background-color: #3f9979;
-}
+.main .daccPage_chart .daccPage_table .table thead tr td .dacc_icon_readinSkills.skill_analysis { background-color: #3f9979; }
 
-.main .daccPage_chart .daccPage_table .table tbody tr {
-  background-color: #f7f8f8;
-  color: #552b8d;
-  height: 60px;
-}
+.main .daccPage_chart .daccPage_table .table tbody tr { background-color: #f7f8f8; color: #324774; height: 60px; }
 
-.main .daccPage_chart .daccPage_table .table tbody tr td {
-  padding: 5px;
-}
+.main .daccPage_chart .daccPage_table .table tbody tr td { padding: 5px; }
 
-.main .daccPage_chart .daccPage_table .table tbody tr td .dacc_icon_times {
-  display: inline-block;
-  border: 1px solid #552b8d;
-  width: 22px;
-  height: 22px;
-  line-height: 18px;
-  border-radius: 50%;
-}
+.main .daccPage_chart .daccPage_table .table tbody tr td .dacc_icon_times { display: inline-block; border: 1px solid #324774; width: 22px; height: 22px; line-height: 18px; border-radius: 50%; }
 
-.main .daccPage_chart .daccPage_table .table tbody tr td .daccPage_table_btn {
-  background-color: #552b8d;
-  padding: 5px;
-  border: 0px;
-  border-radius: 10px;
-  cursor: pointer;
-}
+.main .daccPage_chart .daccPage_table .table tbody tr td .daccPage_table_btn { background-color: #324774; padding: 5px; border: 0px; border-radius: 10px; cursor: pointer; }
 
-.main .daccPage_chart .daccPage_table .table tbody tr td .daccPage_table_btn p {
-  color: #fff;
-}
+.main .daccPage_chart .daccPage_table .table tbody tr td .daccPage_table_btn p { color: #fff; }
 
-.main .daccPage_chart .data_page_scroll {
-  overflow-x: scroll;
-  margin: 20px auto 40px;
-}
+.main .daccPage_chart .data_page_scroll { overflow-x: scroll; margin: 20px auto 40px; }
 
-.main .daccPage_chart .data_page_scroll::-webkit-scrollbar {
-  background: transparent;
-  height: 8px;
-  width: 12px;
-}
+.main .daccPage_chart .data_page_scroll::-webkit-scrollbar { background: transparent; height: 8px; width: 12px; }
 
-.main .daccPage_chart .data_page_scroll::-webkit-scrollbar-thumb {
-  border: none;
-  box-shadow: none;
-  background: #552b8d;
-  border-radius: 4px;
-  min-height: 40px;
-}
+.main .daccPage_chart .data_page_scroll::-webkit-scrollbar-thumb { border: none; box-shadow: none; background: #324774; border-radius: 4px; min-height: 40px; }
 
-.main .daccPage_chart .data_page_scroll::-webkit-scrollbar-track {
-  margin: 3px 0;
-}
+.main .daccPage_chart .data_page_scroll::-webkit-scrollbar-track { margin: 3px 0; }
 
-.main .daccPage_chart .data_page_scroll .daccPage_chart_control {
-  position: relative;
-  padding: 40px 0px 0px;
-  margin: 0px auto 10px;
-  width: 1130px;
-}
+.main .daccPage_chart .data_page_scroll .daccPage_chart_control { position: relative; padding: 40px 0px 0px; margin: 0px auto 10px; width: 1130px; }
 
-.main .daccPage_chart .data_page_scroll .daccPage_chart_control canvas {
-  position: initial;
-}
+.main .daccPage_chart .data_page_scroll .daccPage_chart_control canvas { position: initial; }
 
-.main .daccPage_chart .data_page_scroll .daccPage_chart_control .chart_overall_x {
-  position: absolute;
-  z-index: 3;
-  bottom: -8px;
-  right: -5px;
-  font-size: 14px;
-  color: #000;
-}
+.main .daccPage_chart .data_page_scroll .daccPage_chart_control .chart_overall_x { position: absolute; z-index: 3; bottom: -8px; right: -5px; font-size: 14px; color: #000; }
 
-.main .daccPage_chart .data_page_scroll .daccPage_chart_control .chart_overall_y {
-  position: absolute;
-  z-index: 3;
-  top: 0px;
-  left: 0;
-  font-size: 14px;
-  color: #000;
-  text-align: left;
-  padding-left: 10px;
-}
+.main .daccPage_chart .data_page_scroll .daccPage_chart_control .chart_overall_y { position: absolute; z-index: 3; top: 0px; left: 0; font-size: 14px; color: #000; text-align: left; padding-left: 10px; }
 
-.main .daccPage_chart .data_page_scroll .daccPage_chart_control.daccPage_chart_control_dimensions {
-  position: relative;
-  margin: 0 auto;
-  background-image: url(../image/report/chart_dimensions_bg.svg);
-  background-repeat: no-repeat;
-  background-position: right bottom 28px;
-  background-size: calc(100% - 70px) 280px;
-}
+.main .daccPage_chart .data_page_scroll .daccPage_chart_control.daccPage_chart_control_dimensions { position: relative; margin: 0 auto; background-image: url(../image/report/chart_dimensions_bg.svg); background-repeat: no-repeat; background-position: right bottom 28px; background-size: calc(100% - 70px) 280px; }
 
-.main .daccPage_chart .data_page_scroll .daccPage_chart_control.daccPage_chart_control_dimensions .chart_overall_x {
-  bottom: 0px;
-}
+.main .daccPage_chart .data_page_scroll .daccPage_chart_control.daccPage_chart_control_dimensions .chart_overall_x { bottom: 0px; }
 
-.main .daccPage_chart .data_page_scroll .daccPage_chart_control.daccPage_chart_control_dimensions .chart_dimensions_label {
-  position: absolute;
-  display: flex;
-  z-index: 1;
-  top: 0px;
-  left: 70px;
-  width: calc(100% - 70px);
-}
+.main .daccPage_chart .data_page_scroll .daccPage_chart_control.daccPage_chart_control_dimensions .chart_dimensions_label { position: absolute; display: flex; z-index: 1; top: 0px; left: 70px; width: calc(100% - 70px); }
 
-.main .daccPage_chart .data_page_scroll .daccPage_chart_control.daccPage_chart_control_dimensions .chart_dimensions_label p {
-  width: 25%;
-  text-align: center;
-  color: #552b8d;
-}
+.main .daccPage_chart .data_page_scroll .daccPage_chart_control.daccPage_chart_control_dimensions .chart_dimensions_label p { width: 25%; text-align: center; color: #324774; }
 
-@media screen and (max-width: 1024px) {
-  .main.diagnosis .tittle {
-    width: 90%;
-  }
-  .main.diagnosis .frame_effect {
-    width: 90%;
-    padding: 35px 0px;
-  }
-}
+@media screen and (max-width: 1024px) { .main.diagnosis .tittle { width: 90%; }
+  .main.diagnosis .frame_effect { width: 90%; padding: 35px 0px; } }
 
 /*報表頁面*/
-/*# sourceMappingURL=CCCD_report_styles.css.map */
