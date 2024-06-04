@@ -765,6 +765,10 @@ main .re-record_page .re-record_btn { display: flex; flex-direction: column; }
 
 main .re-record_page .re-record_btn .select_page_link { margin: 40px auto 0; }
 
+main .re-record_page .re-record_btn .select_page_link::before { bottom: auto; }
+
+main .re-record_page .re-record_btn .select_page_link .select_page_btn p { text-align: left; width: calc(100% - 50px); }
+
 @media screen and (min-width: 768px) { main .re-record_page .re-record_area .table tbody.re-record_body .re-record_item .re-record_item_content { padding: 25px 18px; }
   main .re-record_page .re-record_area .table tbody.re-record_body .re-record_item .re-record_item_content.re-record_item_icon .fa-circle-check { font-size: 35px; }
   main .re-record_page .re-record_area .table tbody.re-record_body .re-record_item .re-record_item_content.re-record_item_files .player_area { position: relative; }
@@ -775,8 +779,8 @@ main .re-record_page .re-record_btn .select_page_link { margin: 40px auto 0; }
   main .re-record_page .re-record_area .table .re-record_header_icon, main .re-record_page .re-record_area .table .re-record_item_icon { width: 65px; }
   main .re-record_page .re-record_area .table .re-record_header_time, main .re-record_page .re-record_area .table .re-record_item_time { width: 65px; }
   main .re-record_page .re-record_area .table .re-record_header_files, main .re-record_page .re-record_area .table .re-record_item_files { width: calc(100% - 130px); }
-  main .re-record_page .re-record_btn { flex-direction: row; justify-content: center; }
-  main .re-record_page .re-record_btn .select_page_link { margin: 40px 0 0; } }
+  main .re-record_page .re-record_btn { justify-content: center; }
+  main .re-record_page .re-record_btn .select_page_link { width: 100%; margin: 40px auto 0; } }
 
 @media screen and (min-width: 992px) { main .re-record_page .re-record_area .table tbody.re-record_body .re-record_item .re-record_item_content { padding: 25px 18px; }
   main .re-record_page .re-record_area .table tbody.re-record_body .re-record_item .re-record_item_content.re-record_item_icon .fa-circle-check { font-size: 45px; }
@@ -784,7 +788,9 @@ main .re-record_page .re-record_btn .select_page_link { margin: 40px auto 0; }
   main .re-record_page .re-record_area .table tbody.re-record_body .re-record_item::after { left: calc(100px * 2); }
   main .re-record_page .re-record_area .table .re-record_header_icon, main .re-record_page .re-record_area .table .re-record_item_icon { width: 100px; }
   main .re-record_page .re-record_area .table .re-record_header_time, main .re-record_page .re-record_area .table .re-record_item_time { width: 100px; }
-  main .re-record_page .re-record_area .table .re-record_header_files, main .re-record_page .re-record_area .table .re-record_item_files { width: calc(100% - 200px); } }
+  main .re-record_page .re-record_area .table .re-record_header_files, main .re-record_page .re-record_area .table .re-record_item_files { width: calc(100% - 200px); }
+  main .re-record_page .re-record_btn { flex-direction: row; }
+  main .re-record_page .re-record_btn .select_page_link { margin: 40px 0 0; } }
 
 @media screen and (min-width: 1200px) { main .re-record_page .re-record_area .table tbody.re-record_body .re-record_item .re-record_item_content.re-record_item_files .player_area { width: 80%; /* input range 播放樣式 */ }
   main .re-record_page .re-record_area .table tbody.re-record_body .re-record_item .re-record_item_content.re-record_item_files .player_area input[name="playRange"] { margin: 0; width: calc(100% - 10px - 27px - 135px - 165px); } }
