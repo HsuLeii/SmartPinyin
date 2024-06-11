@@ -90,7 +90,7 @@ body {
                 display: flex;
 
                 h4 {
-                    color: $light_main_color;
+                    color: $main_color;
                 }
 
                 p {
@@ -460,7 +460,7 @@ body {
         /* page-break-after: always;  碰到此元素會直接換頁 */
         page-break-inside: avoid;
         position: relative;
-        background: linear-gradient(90deg, $main_color 38%, $white 0%);
+        background: linear-gradient(90deg, $light_main_color 38%, $white 0%);
         max-width: 1024px;
         width: 1024px;
         height: 1448px;
@@ -470,6 +470,14 @@ body {
         flex-wrap: wrap;
         padding-top: 15px;
         overflow: hidden;
+
+        &.report_one{
+            background: linear-gradient(90deg, #6b8dd9 38%, $white 0%);
+        }
+
+        &.report_two{
+            background: linear-gradient(90deg, #5c8eff 38%, $white 0%);
+        }
 
         &:after {
             /* content: counter(page-number); 取用該名字的計數器 */
@@ -543,7 +551,7 @@ body {
                     display: block;
 
                     h4 {
-                        color: $light_main_color;
+                        color: $main_color;
                     }
 
                     p {
@@ -936,9 +944,17 @@ body {
     .page {
         /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
         /* page-break-after: always;  碰到此元素會直接換頁 */
-        background: linear-gradient(90deg, $main_color 38%, $white 0%);
+        background: linear-gradient(90deg, $light_main_color 38%, $white 0%);
         height: 1448px;
         padding-top: 15px;
+
+        &.report_one{
+            background: linear-gradient(90deg, #6b8dd9 38%, $white 0%);
+        }
+
+        &.report_two{
+            background: linear-gradient(90deg, #5c8eff 38%, $white 0%);
+        }
     
         &:after {
             /* content: counter(page-number); 取用該名字的計數器 */

@@ -59,7 +59,7 @@ body { background-color: #f7f8f8; counter-reset: page-number; /* 初始化，名
 
 .page h4 { font-size: 16px; line-height: 1.6; }
 
-.page .report_title { width: 100%; z-index: 2; background-color: #45bbbd; padding: 20px 5%; }
+.page .report_title { width: 100%; z-index: 2; background-color: #759cf3; padding: 20px 5%; }
 
 .page .report_title img { width: 45%; max-width: 200px; }
 
@@ -73,7 +73,7 @@ body { background-color: #f7f8f8; counter-reset: page-number; /* 初始化，名
 
 .page .report_title .material .name, .page .report_title .material .date, .page .report_title .material .language { margin: 8px 15px 8px 0px; display: flex; }
 
-.page .report_title .material .name h4, .page .report_title .material .date h4, .page .report_title .material .language h4 { color: #45bbbd; }
+.page .report_title .material .name h4, .page .report_title .material .date h4, .page .report_title .material .language h4 { color: #324774; }
 
 .page .report_title .material .name p, .page .report_title .material .date p, .page .report_title .material .language p { color: #fff; padding-bottom: 2px; border-bottom: 1px solid #fff; font-size: 19px; }
 
@@ -147,7 +147,7 @@ body { background-color: #f7f8f8; counter-reset: page-number; /* 初始化，名
 
 .page .chartbar_area .srscore, .page .chartbar_area .cefr_level, .page .chartbar_area .actfl_level { position: relative; width: 45%; background-color: #f7ae00; border-radius: 50%; max-width: 250px; display: flex; align-items: center; justify-content: center; flex-direction: column; z-index: 2; margin: 10px 2.5%; }
 
-.page .chartbar_area .srscore:after, .page .chartbar_area .cefr_level:after, .page .chartbar_area .actfl_level:after { position: absolute; content: ""; border: 2px dotted #324774; width: 100%; height: 100%; left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 3px; border-radius: 50%; }
+.page .chartbar_area .srscore:after, .page .chartbar_area .cefr_level:after, .page .chartbar_area .actfl_level:after { position: absolute; content: ""; border: 2px dotted #293c65; width: 100%; height: 100%; left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 3px; border-radius: 50%; }
 
 .page .chartbar_area .srscore h3, .page .chartbar_area .cefr_level h3, .page .chartbar_area .actfl_level h3 { text-align: center; }
 
@@ -170,7 +170,9 @@ body { background-color: #f7f8f8; counter-reset: page-number; /* 初始化，名
 
 @media print { body { background-color: #f7f8f8; counter-reset: page-number; /* 初始化，名字可自訂，數值為0 */ -webkit-print-color-adjust: exact; }
   section { width: 100vw; height: 100vh; page-break-after: always; }
-  .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; background: linear-gradient(90deg, #324774 38%, #fff 0%); max-width: 1024px; width: 1024px; height: 1448px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; padding-top: 15px; overflow: hidden; }
+  .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; background: linear-gradient(90deg, #759cf3 38%, #fff 0%); max-width: 1024px; width: 1024px; height: 1448px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; padding-top: 15px; overflow: hidden; }
+  .page.report_one { background: linear-gradient(90deg, #6b8dd9 38%, #fff 0%); }
+  .page.report_two { background: linear-gradient(90deg, #5c8eff 38%, #fff 0%); }
   .page:after { /* content: counter(page-number); 取用該名字的計數器 */ /*counter-increment: page-number 1;  增加計數器數值 */ position: absolute; right: 0; bottom: 0; left: 0; font-size: 30px; text-align: center; }
   .page h3 { font-size: 20px; line-height: 1.5; color: #fff; }
   .page p { font-size: 16px; line-height: 1.5; }
@@ -182,7 +184,7 @@ body { background-color: #f7f8f8; counter-reset: page-number; /* 初始化，名
   .page .report_title .text_content .english_title { font-size: 15px; color: #fff; }
   .page .report_title .material { margin-top: 20px; display: block; }
   .page .report_title .material .name, .page .report_title .material .date, .page .report_title .material .language { margin: 15px 0px; display: block; }
-  .page .report_title .material .name h4, .page .report_title .material .date h4, .page .report_title .material .language h4 { color: #45bbbd; }
+  .page .report_title .material .name h4, .page .report_title .material .date h4, .page .report_title .material .language h4 { color: #324774; }
   .page .report_title .material .name p, .page .report_title .material .date p, .page .report_title .material .language p { color: #fff; padding-bottom: 10px; border-bottom: 1px solid #fff; }
   .page .test_content { width: 60%; z-index: 2; height: calc(100% - 417px); display: flex; flex-direction: column; justify-content: flex-start; max-width: none; padding: 0; }
   .page .test_content .item { display: flex; flex-wrap: wrap; justify-content: flex-end; margin-bottom: 9px; }
@@ -218,7 +220,7 @@ body { background-color: #f7f8f8; counter-reset: page-number; /* 初始化，名
   .page .test_content .item.five_item .item_content .content_introduce { border: 1px solid #675f91; }
   .page .chartbar_area { flex-wrap: wrap; display: flex; justify-content: center; align-items: center; width: 100%; position: relative; bottom: 50px; max-width: none; }
   .page .chartbar_area .srscore, .page .chartbar_area .cefr_level, .page .chartbar_area .actfl_level { position: relative; width: 29%; background-color: #f7ae00; border-radius: 50%; max-width: 250px; display: flex; align-items: center; justify-content: center; flex-direction: column; z-index: 2; margin: 0 2%; }
-  .page .chartbar_area .srscore:after, .page .chartbar_area .cefr_level:after, .page .chartbar_area .actfl_level:after { position: absolute; content: ""; border: 2px dotted #324774; width: 100%; height: 100%; left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 6px; border-radius: 50%; }
+  .page .chartbar_area .srscore:after, .page .chartbar_area .cefr_level:after, .page .chartbar_area .actfl_level:after { position: absolute; content: ""; border: 2px dotted #293c65; width: 100%; height: 100%; left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 6px; border-radius: 50%; }
   .page .chartbar_area .srscore h3, .page .chartbar_area .cefr_level h3, .page .chartbar_area .actfl_level h3 { text-align: center; }
   .page .chartbar_area .srscore p, .page .chartbar_area .cefr_level p, .page .chartbar_area .actfl_level p { text-align: center; color: #324774; font-size: 22px; }
   .page .bottom_text { width: 100%; position: absolute; bottom: 0px; left: 0px; z-index: 1; padding: 0; }
@@ -232,7 +234,9 @@ body { background-color: #f7f8f8; counter-reset: page-number; /* 初始化，名
   .page .test_content .item { justify-content: flex-end; }
   .page .chartbar_area .srscore, .page .chartbar_area .cefr_level, .page .chartbar_area .actfl_level { width: 29%; margin: 0 2%; } }
 
-@media screen and (min-width: 1024px) { .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ background: linear-gradient(90deg, #324774 38%, #fff 0%); height: 1448px; padding-top: 15px; }
+@media screen and (min-width: 1024px) { .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ background: linear-gradient(90deg, #759cf3 38%, #fff 0%); height: 1448px; padding-top: 15px; }
+  .page.report_one { background: linear-gradient(90deg, #6b8dd9 38%, #fff 0%); }
+  .page.report_two { background: linear-gradient(90deg, #5c8eff 38%, #fff 0%); }
   .page:after { /* content: counter(page-number); 取用該名字的計數器 */ /*counter-increment: page-number 1;  增加計數器數值 */ position: absolute; right: 0; bottom: 0; left: 0; font-size: 30px; text-align: center; }
   .page h3 { font-size: 20px; }
   .page p { font-size: 16px; }
