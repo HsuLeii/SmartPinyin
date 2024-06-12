@@ -479,6 +479,14 @@ body {
             background: linear-gradient(90deg, #5c8eff 38%, $white 0%);
         }
 
+        &.report_three{
+            background: linear-gradient(90deg, #0378c8 38%, $white 0%);
+        }
+
+        &.report_four{
+            background: linear-gradient(90deg, #0285cb 38%, $white 0%);
+        }
+
         &:after {
             /* content: counter(page-number); 取用該名字的計數器 */
             /*counter-increment: page-number 1;  增加計數器數值 */

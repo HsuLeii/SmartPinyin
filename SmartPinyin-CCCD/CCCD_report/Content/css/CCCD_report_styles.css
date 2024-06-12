@@ -173,6 +173,8 @@ body { background-color: #f7f8f8; counter-reset: page-number; /* 初始化，名
   .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; background: linear-gradient(90deg, #759cf3 38%, #fff 0%); max-width: 1024px; width: 1024px; height: 1448px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; padding-top: 15px; overflow: hidden; }
   .page.report_one { background: linear-gradient(90deg, #6b8dd9 38%, #fff 0%); }
   .page.report_two { background: linear-gradient(90deg, #5c8eff 38%, #fff 0%); }
+  .page.report_three { background: linear-gradient(90deg, #0378c8 38%, #fff 0%); }
+  .page.report_four { background: linear-gradient(90deg, #0285cb 38%, #fff 0%); }
   .page:after { /* content: counter(page-number); 取用該名字的計數器 */ /*counter-increment: page-number 1;  增加計數器數值 */ position: absolute; right: 0; bottom: 0; left: 0; font-size: 30px; text-align: center; }
   .page h3 { font-size: 20px; line-height: 1.5; color: #fff; }
   .page p { font-size: 16px; line-height: 1.5; }
