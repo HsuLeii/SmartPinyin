@@ -255,7 +255,7 @@ main {
             .test_area {
                 .test_area_left {
                     .test_area_left_tittle {
-                        margin: 10px 0;
+                        margin: 15px 0;
                     }
     
                     .test_area_left_options {
@@ -522,13 +522,17 @@ main {
                 justify-content: space-between;
                 .test_area_left {
                     width: 20%;
-                    .test_area_left_tittle {
-                        margin: 10px 0;
-                    }
                 }
     
                 .test_area_right {
                     width: 80%;
+
+                    .test_area_right_nav {
+    
+                        .test_area_right_nav_item {
+                            padding: 10px 15px;
+                        }
+                    }
     
                     .test_area_content {
                         border-radius: 0 5px 5px 5px;
