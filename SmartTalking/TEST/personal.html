@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SmartTalking中文聽說學習平台</title>
+    <meta name="description" content="SmartTalking中文聽說學習平台" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SmartTalking中文聽說學習平台" />
+    <meta property="og:site_name" content="SmartTalking中文聽說學習平台" />
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <!-- 之後改成正式網址的連結 -->
+    <meta property="og:image"
+        content="https://hsuleii.github.io/SmartPinyin/Diagnosis-Speaking/Content/image/main/og_image.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="SmartTalking中文聽說學習平台" />
+    <!-- 之後改成正式網址的連結 -->
+    <meta name="twitter:image"
+        content="https://hsuleii.github.io/SmartPinyin/Diagnosis-Speaking/Content/image/main/og_image.jpg" />
+    <meta itemprop="name" content="SmartTalking中文聽說學習平台">
+    <!-- 之後改成正式網址的連結 -->
+    <meta itemprop="image"
+        content="https://hsuleii.github.io/SmartPinyin/Diagnosis-Speaking/Content/image/main/og_image.jpg">
+    <link rel="shortcut icon" type="image/x-icon" href="../Content/image/favicon.ico" />
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../Content/css/bootstrap-5.1.1.min.css" />
+
+    <!-- my core CSS -->
+    <link rel="stylesheet" href="../Content/css/DiagnosisSpeaking.css" />
+</head>
+
+<body>
+    <!-- ------- ------- ------- ------- ------- ------- ------- -->
+    <header>
+    </header>
+
+    <main>
+        <div class="register_area">
+            <div class="register_form">
+                <form class="information_area" action="/CCS2023/NewTest/Start" method="post">
+
+                    <img id="logo" class="login_img" src="../Content/image/logo/logo.svg" alt="">
+                    <div class="login_title">
+                        <h3>修改個人資料</h3>
+                    </div>
+
+                    <div class="input_area">
+                        <input type="text" id="inputAccount" name="account" class="form-control" value="20231221" placeholder="請輸入你的帳號"
+                            required autofocus readonly>
+                        <label for="inputAccount" class="input-group-text icon_item">
+                            <i class="fa-solid fa-user"></i>
+                        </label>
+                    </div>
+
+                    <div class="input_area show_hide_password">
+                        <input type="password" id="Password" class="form-control input_password" value="20231221"
+                            placeholder="請輸入密碼" readonly>
+                        <label for="Password" class="input-group-text icon_item">
+                            <i class="fa-solid fa-lock"></i>
+                        </label>
+                        <div class="input-group-text icon_eye" style="display:none;">
+                            <i class="fas fa-eye-slash"></i>
+                        </div>
+                    </div>
+
+                    <div class="input_area">
+
+
+                        <button type="button" id="country" class="form-control" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <p id="quiz_mode_text">基隆市</p>
+
+                            <div class="input-group-text icon_down">
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
+                        </button>
+
+                        <label for="country" class="input-group-text icon_item">
+                            <i class="fa-solid fa-city"></i>
+                        </label>
+
+                        <ul class="dropdown-menu" data-popper-placement="bottom-start">
+                            <li><a id="item0" class="dropdown-item quiz_mode_li check" href="#">基隆市</a></li>
+                            <li><a id="item1" class="dropdown-item quiz_mode_li" href="#">臺北市</a></li>
+                            <li><a id="item2" class="dropdown-item quiz_mode_li" href="#">新北市</a></li>
+                            <li><a id="item3" class="dropdown-item quiz_mode_li" href="#">桃園市</a></li>
+                            <li><a id="item4" class="dropdown-item quiz_mode_li" href="#">新竹縣</a></li>
+                            <li><a id="item5" class="dropdown-item quiz_mode_li" href="#">新竹市</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="input_area">
+                        <button type="button" id="township" class="form-control" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <p>請選擇鄉鎮市區</p>
+
+                            <div class="input-group-text icon_down">
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
+                        </button>
+
+                        <label for="township" class="input-group-text icon_item">
+                            <i class="fa-solid fa-city"></i>
+                        </label>
+
+                        <ul class="dropdown-menu" data-popper-placement="bottom-start">
+                            <li><a id="item1" class="dropdown-item quiz_mode_li" href="#"></a></li>
+                            <li><a id="item2" class="dropdown-item quiz_mode_li" href="#"></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="input_area">
+                        <button type="button" id="school" class="form-control" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <p>請選擇學校名稱</p>
+
+                            <div class="input-group-text icon_down">
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
+                        </button>
+
+                        <label for="school" class="input-group-text icon_item">
+                            <i class="fa-solid fa-school-flag"></i>
+                        </label>
+
+                        <ul class="dropdown-menu" data-popper-placement="bottom-start">
+                            <li><a id="item1" class="dropdown-item quiz_mode_li" href="#"></a></li>
+                            <li><a id="item2" class="dropdown-item quiz_mode_li" href="#"></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="input_area">
+                        <button type="button" id="class" value="請選擇班級名稱" class="form-control" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <p>請選擇班級名稱</p>
+
+                            <div class="input-group-text icon_down">
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
+                        </button>
+
+                        <label for="class" class="input-group-text icon_item">
+                            <i class="fa-solid fa-school-flag"></i>
+                        </label>
+
+                        <ul class="dropdown-menu" data-popper-placement="bottom-start">
+                            <li><a id="item1" class="dropdown-item quiz_mode_li" href="#"></a></li>
+                            <li><a id="item2" class="dropdown-item quiz_mode_li" href="#"></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="input_area">
+                        <input type="text" id="StudentNumber" class="form-control" value="123" placeholder="請輸入學生號碼">
+                        <label for="StudentNumber" class="input-group-text icon_item">
+                            <i class="fa-solid fa-user-pen"></i>
+                        </label>
+                    </div>
+
+                    <div class="input_area">
+                        <input type="text" id="StudentName" class="form-control" value="名字" placeholder="請輸入學生姓名">
+                        <label for="StudentName" class="input-group-text icon_item">
+                            <i class="fa-solid fa-user-pen"></i>
+                        </label>
+                    </div>
+
+                    <div class="input_area">
+                        <div class="form-control form-control-birthday icon icon-regular">
+                            <input type="date" onchange="birthdayFunction()" id="birthday" value="2023-06-19"
+                                name="birthday" class="birthday_input" readonly>
+                            <i class="fa-regular fa-calendar"></i>
+                            <label class="input-group-text icon_item">
+                                <i class="fa-solid fa-cake-candles"></i>
+                            </label>
+                        </div>
+
+
+                    </div>
+
+                    <div class="input_area input-group-submit">
+                        <input id="submit" type="submit" value="儲存" class="button solid_color button_login">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+    <!-- JS -->
+    <script src="../Content/js/jquery-3.5.1.min.js"></script>
+    <script src="../Content/js/fontawesome-free-6.1.1.min.js"></script>
+    <script src="../Content/js/bootstrap@5.3.2.bundle.min.js"></script>
+
+    <!-- this page widgets JS -->
+    <script src="../Content/js/show_hide_password.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("header").load("header.html", function () {});
+        });
+    </script>
+
+    <script>
+        var item0 = $("#item0").text();
+        var item1 = $("#item1").text();
+        var item2 = $("#item2").text();
+        var item3 = $("#item3").text();
+        var item4 = $("#item4").text();
+        var item5 = $("#item5").text();
+
+        // 更改顯示顏色
+        $(".quiz_mode_li").click(function () {
+            $(this).parents().parents(".dropdown-menu").siblings(".form-control").children("#quiz_mode_text")
+                .css("color", "#20221f");
+        });
+
+        // 更改顯示顏色(生日input)
+        function birthdayFunction() {
+            $(".birthday_input").css("color", "#20221f");
+        }
+
+        $("#item0").click(function () {
+            document.getElementById("quiz_mode_text").innerHTML = item0;
+            $(".quiz_mode_li").removeClass("check");
+            $(this).addClass("check");
+        });
+
+        $("#item1").click(function () {
+            document.getElementById("quiz_mode_text").innerHTML = item1;
+            $(".quiz_mode_li").removeClass("check");
+            $(this).addClass("check");
+        });
+
+        $("#item2").click(function () {
+            document.getElementById("quiz_mode_text").innerHTML = item2;
+            $(".quiz_mode_li").removeClass("check");
+            $(this).addClass("check");
+        });
+
+        $("#item3").click(function () {
+            document.getElementById("quiz_mode_text").innerHTML = item3;
+            $(".quiz_mode_li").removeClass("check");
+            $(this).addClass("check");
+        });
+
+        $("#item4").click(function () {
+            document.getElementById("quiz_mode_text").innerHTML = item4;
+            $(".quiz_mode_li").removeClass("check");
+            $(this).addClass("check");
+        });
+
+        $("#item5").click(function () {
+            document.getElementById("quiz_mode_text").innerHTML = item5;
+            $(".quiz_mode_li").removeClass("check");
+            $(this).addClass("check");
+        });
+    </script>
+
+</body>
+
+</html>

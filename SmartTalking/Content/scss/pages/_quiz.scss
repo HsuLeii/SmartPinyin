@@ -1,0 +1,183 @@
+main {
+    .quiz_page{
+        margin: 80px auto;
+        max-width: 1500px;
+        .test_area {
+            margin: 0 auto;
+            width: 100%;
+            padding: 20px;
+                background-color: $test_bg;
+                border-radius: 5px;
+                border: 2px solid $main_color;
+    
+            .test_area_content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+    
+                .test_area_topic {
+                    width: 100%;
+                    margin: 20px auto;
+                    display: flex;
+                    justify-content: center;
+                    .topic_video{
+                        width: 100%;
+                        margin: 0 auto;
+                    }
+
+                    &.topic_photo{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        .test_topic_img{
+                            margin: 15px auto;
+                            max-width: 700px;
+                        }
+
+                        .test_topic_text{
+                            display: none;
+                            margin: 15px auto;
+                            max-width: 700px;
+                            padding: 5px 10px;
+                            background-color: $white;
+                            border: 1px solid $main_color;
+                            border-radius: 5px;
+
+                            &.show{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+    
+                .test_area_time {
+                    margin: 20px auto;
+
+                    h5{
+                        color: $main_color;
+                    }
+                }
+    
+                .test_area_topic,
+                .test_area_answer {
+                    .test_area_answer_btn {
+                        .icon_btn {
+                            width: 75px;
+                            height: 75px;
+                            margin: 0 5px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            
+    
+                            i {
+                                font-size: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .next_page_btn {
+                margin: 50px 0 0 auto;
+                display: flex;
+                justify-content: flex-end;
+    
+                .test_area_answer_btn {
+                    .icon_btn {
+                        width: 50px;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        i {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        .quiz_page{
+            .test_area {
+    
+                .test_area_content {
+        
+                    .test_area_topic {
+
+                        .topic_video{
+                            width: 90%;
+                        }
+    
+                        &.topic_photo{
+                            flex-direction: row;
+    
+                            .test_topic_img{
+                                margin: 0;
+                            }
+
+                            .test_topic_text{
+                                margin: 0 15px;
+                            }
+                        }
+                    }
+
+                    .test_area_time {
+                        margin: 30px auto;
+                    }
+                    .test_area_topic,
+                    .test_area_answer {
+                        .test_area_answer_btn {
+                            .icon_btn {
+                                width: 105px;
+                                height: 105px;
+        
+                                i {
+                                    font-size: 60px;
+                                }
+                            }
+                        }
+                    }
+                }
+        
+                .next_page_btn {
+                    margin: 0;
+                    .test_area_answer_btn {
+                        .icon_btn {
+                            width: 60px;
+                            height: 60px;
+        
+                            i {
+                                font-size: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+
+}
+
+@media screen and (min-width: 1400px) {
+
+}

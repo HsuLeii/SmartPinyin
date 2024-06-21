@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">
+            <img src="../Content/image/logo/logo.svg" alt="SmartPinyin">
+        </a>
+        <div class="header_right">
+            <div class="quiz_progress_area">
+                <div class="quiz_progress_title">
+                    <p>測驗進度</p>
+                </div>
+                <div class="quiz_progress">
+                    <p id="progress_value" class="quiz_progress_value">11/16</p>
+                    <svg viewBox="-1 -1 35 35">
+                        <circle cx="16" cy="16" r="15.9155" class="quiz_progress_background"></circle>
+                        <circle cx="16" cy="16" r="15.9155" id="progress_bar" class="quiz_progress_bar" style="stroke-dasharray: 10 100;"></circle>
+                    </svg>
+                </div>
+            </div>
+            <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="personal.html">修改個人資料</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="../login.html">
+                            <i class="fa-solid fa-arrow-right-to-bracket"></i> 登出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    //選單按鈕
+    $(".navbar-toggler").click(function () {
+      $(this).toggleClass("open");
+    });
+  </script>
