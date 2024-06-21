@@ -37,75 +37,98 @@
     </header>
 
     <main>
-        <div class="main recording_test_page quiz_page">
+        <div class="main quiz_page">
             <div class="start_page_text">
-                <h4>
-                    錄音測試
-                </h4>
-
-                <div class="start_page_text_item">
-                    <span>•</span>
                     <p>
-                        在安靜的空間做此測驗。
+                        <span>
+                            第一課 
+                        </span>
+                        <span>
+                            新同學
+                        </span>
                     </p>
-                </div>
-
-                <div class="start_page_text_item">
-                    <span>•</span>
-                    <p>
-                        按錄音「<span class="icon_btn mic_btn disable"><i class="fa-solid fa-microphone-lines"></i></span>」並說你的名字。
-                    </p>
-                </div>
-
-                <div class="start_page_text_item">
-                    <span>•</span>
-                    <p>
-                        錄音時，系統會開始倒數計時且錄音無法中斷。
-                    </p>
-                </div>
-
-                <div class="start_page_text_item">
-                    <span>•</span>
-                    <p>按「<span class="icon_btn play_btn disable"><i class="fa-solid fa-play"></i></span>」，確認錄製的音量正常且聲音清楚。</p>
-                </div>
-
-                <div class="start_page_text_item">
-                    <span>•</span>
-                    <p>
-                        測試完畢，點選「<span class="icon_btn next_btn disable"><i class="fa-solid fa-arrow-right"></i></span>」進行測驗。
-                    </p>
-                </div>
-
-                <p>
-                    ※請確認錄音權限。(手機、平板請到[設定]進行相關設定，設定 > 隱私權 > 麥克風)。
-                </p>
-
-                <p class="red">
-                    ※若想重新測試，請按[錄製檔案]重新錄製
-                </p>
-                
             </div>
 
             <div class="test_area">
-                <div class="test_area_content">
-                    <div class="test_area_time">
-                        <h5>00:10</h5>
+                <div class="test_area_left">
+                    <div class="test_area_left_tittle">
+                        <p>
+                            全方位中文：
+                        </p>
                     </div>
-                    <div class="test_area_answer">
-                        <button id="micBtn" class="test_area_answer_btn instructions_item">
-                            <span class="icon_btn mic_btn"><i class="fa-solid fa-microphone-lines"></i></span>
-                        </button>
-                        <button id="playBtn" class="test_area_answer_btn instructions_item">
-                            <span class="icon_btn play_btn"><i class="fa-solid fa-play"></i></span>
-                        </button>
+                    <div class="test_area_left_options">
+                        <div class="test_area_left_options_item">
+                            <a href="">
+                                全方位中文 1
+                            </a>
+                        </div>
+                        <div class="test_area_left_options_item">
+                            <a href="">
+                                全方位中文 2
+                            </a>
+                        </div>
+                        <div class="test_area_left_options_item active">
+                            <a href="">
+                                全方位中文 3
+                            </a>
+                        </div>
                     </div>
                 </div>
-                
-
-                <div class="next_page_btn">
-                    <a href="quiz_instructions.html" class="test_area_answer_btn instructions_item">
-                        <span class="icon_btn next_btn"><i class="fa-solid fa-arrow-right"></i></span>
-                    </a>
+                <div class="test_area_right">
+                    <div class="test_area_right_nav">
+                        <div class="test_area_right_nav_item">
+                            <p>
+                                聆聽課文
+                            </p>
+                        </div>
+                        <div class="test_area_right_nav_item">
+                            <p>
+                                課文朗讀
+                            </p>
+                        </div>
+                        <div class="test_area_right_nav_item active">
+                            <p>
+                                AI對話
+                            </p>
+                        </div>
+                        <div class="test_area_right_nav_item">
+                            <p>
+                                學習歷程
+                            </p>
+                        </div>
+                    </div>
+                    <div class="test_area_content">
+                        <div class="dialogue_area">
+                            <div class="dialogue_block dialogue_left">
+                                <div class="dialogue_avatar">
+                                    <img src="../Content/image/photo/avatar/robot.svg" alt="">
+                                </div>
+                                <div class="dialog_box">
+                                    <div class="dialog_box_icon">
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+                                    <div class="sound_bar play_animation">
+                                        <!-- 播放時class加上"play_animation" -->
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="dialog_box_time">
+                                        <p>00:04</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dialogue_block dialogue_right">
+                                <div class="dialogue_avatar">
+                                    <img src="../Content/image/photo/avatar/user.svg" alt="">
+                                </div>
+                                <div class="dialog_box">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

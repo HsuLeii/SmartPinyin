@@ -421,16 +421,6 @@ main {
 
 
         &::before {
-            // content: "";
-            // position: absolute;
-            // width: 40px;
-            // height: 40px;
-            // background-color: $bright_purple;
-            // border-radius: 50%;
-            // left: 50%;
-            // bottom: 20px;
-            // transform: translate(-50%, 0);
-
             -webkit-transform-origin: top center;
             z-index: 0;
             position: absolute;
@@ -466,7 +456,8 @@ main {
             }
         }
 
-        &:hover {
+        &:hover,
+        &:active {
             transform: scale(1);
             color: $white;
             &:before{
@@ -654,10 +645,6 @@ main {
 
     .start_page_text {
         margin: 40px 0 0;
-
-        h4 {
-            color: $main_color;
-        }
 
         .start_page_text_item {
             display: flex;
