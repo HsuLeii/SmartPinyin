@@ -177,7 +177,7 @@ body { background-color: #f7f8f8; counter-reset: page-number; /* 初始化，名
   .page h4 { font-size: 22px; line-height: 1.6; }
   .page .report_title { width: 35%; z-index: 2; margin: 15px 0 0; padding: 0; background-color: transparent; }
   .page .report_title img { width: 100%; max-width: none; }
-  .page .report_title .text_content h3 { border-bottom: 5px solid #fff; margin: 10px auto; font-size: 42px; display: block; }
+  .page .report_title .text_content h3 { border-bottom: 5px solid #fff; margin: 10px auto; font-size: 39px; display: block; }
   .page .report_title .text_content .chinese_title { font-size: 33px; margin-bottom: 10px; color: #fff; }
   .page .report_title .text_content .english_title { font-size: 15px; color: #fff; }
   .page .report_title .material { margin-top: 20px; display: block; }
@@ -239,7 +239,7 @@ body { background-color: #f7f8f8; counter-reset: page-number; /* 初始化，名
   .page h4 { font-size: 22px; }
   .page .report_title { width: 35%; margin: 15px 0 0; padding: 0; background-color: transparent; }
   .page .report_title img { width: 100%; max-width: none; }
-  .page .report_title .text_content h3 { font-size: 42px; display: block; }
+  .page .report_title .text_content h3 { font-size: 39px; display: block; }
   .page .report_title .text_content .chinese_title { font-size: 33px; }
   .page .report_title .text_content .english_title { font-size: 15px; }
   .page .report_title .material { display: block; }
