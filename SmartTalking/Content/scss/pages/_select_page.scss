@@ -46,6 +46,11 @@ main {
                 display: flex;
                 .select_page_link{
                     width: 33%;
+                    .select_page_btn{
+                        p{
+                            font-size: 30px
+                        }
+                    }
                 }
             }
         }

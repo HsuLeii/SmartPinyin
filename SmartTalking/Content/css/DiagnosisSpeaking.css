@@ -299,6 +299,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   main .slide_area .slide_text { bottom: 15px; }
   main .slide_area .slide_text h3 { font-size: 50px; }
   main .slide_area .slide_text p { font-size: 25px; }
+  main .select_page_link { padding: 30px 40px; }
   main .start_page_text .start_page_text_item p .icon_btn { width: 34px; height: 34px; }
   main .test_area_answer_btn.play .icon_btn.sound_btn .fa-volume-high::after { width: 68.85px; height: 54.9px; } }
 
@@ -458,7 +459,8 @@ main .select_page_area .select_page_btn_area .select_page_link .select_page_btn 
 
 @media screen and (min-width: 992px) { main .select_page_area { width: 80%; margin: 60px auto 0; }
   main .select_page_area .select_page_btn_area { display: flex; }
-  main .select_page_area .select_page_btn_area .select_page_link { width: 33%; } }
+  main .select_page_area .select_page_btn_area .select_page_link { width: 33%; }
+  main .select_page_area .select_page_btn_area .select_page_link .select_page_btn p { font-size: 30px; } }
 
 main .quiz_page { margin: 80px auto; width: 90%; }
 
@@ -484,7 +486,7 @@ main .quiz_page .test_area .test_area_right { width: 100%; margin: 40px auto; }
 
 main .quiz_page .test_area .test_area_right .test_area_right_nav { display: flex; }
 
-main .quiz_page .test_area .test_area_right .test_area_right_nav .test_area_right_nav_item { padding: 5px 3px; border: 1px solid #314675; border-radius: 5px 5px 0 0; }
+main .quiz_page .test_area .test_area_right .test_area_right_nav .test_area_right_nav_item { padding: 5px 3px; border: 1px solid #314675; border-radius: 5px 5px 0 0; background-color: #fff; }
 
 main .quiz_page .test_area .test_area_right .test_area_right_nav .test_area_right_nav_item.active { background-color: #314675; color: #fff; }
 
@@ -492,7 +494,7 @@ main .quiz_page .test_area .test_area_right .test_area_right_nav .test_area_righ
 
 main .quiz_page .test_area .test_area_right .test_area_right_nav .test_area_right_nav_item:hover { color: #314675; }
 
-main .quiz_page .test_area .test_area_right .test_area_content { border-radius: 0 5px 5px 5px; border: 2px solid #314675; padding: 10px; }
+main .quiz_page .test_area .test_area_right .test_area_content { border-radius: 0 5px 5px 5px; border: 2px solid #314675; padding: 10px; background-color: #fff; }
 
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block { display: flex; align-items: center; margin: 30px 0; }
 
