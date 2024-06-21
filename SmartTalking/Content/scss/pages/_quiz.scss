@@ -2,7 +2,6 @@ main {
     .quiz_page {
         margin: 80px auto;
         width: 90%;
-        max-width: 1500px;
 
         .test_area {
             width: 100%;
@@ -80,6 +79,10 @@ main {
                         &.active {
                             background-color: $main-color;
                             color: $white;
+
+                            &:hover {
+                                color: $white;
+                            }
                         }
 
                         &:hover {
@@ -97,6 +100,7 @@ main {
                         .dialogue_block {
                             display: flex;
                             align-items: center;
+                            margin: 30px 0;
 
                             .dialogue_avatar{
                                 width: 40px;
@@ -105,9 +109,20 @@ main {
                             .dialog_box{
                                 display: flex;
                                 align-items: center;
+                                padding: 5px 10px;
+                                border-radius: 5px;
                                 .dialog_box_icon{
                                     margin: 0 5px;
+                                    width: 30px;
+                                    height: 30px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    background-color: $main-color;
+                                    color: $white;
+                                    border-radius: 50%;
                                 }
+
                                 .sound_bar {
                                     height: 20px;
                                     margin: 0 5px;
@@ -121,31 +136,36 @@ main {
                                     }
     
                                     .bar {
-                                        background-color: $light_purple;
+                                        background-color: $main-color;
                                         height: 0px;
                                         width: 3px;
                                         margin: 0px 1px;
     
                                         &:nth-child(1) {
                                             animation-duration: 474ms;
+                                            height: 10px;
                                         }
     
                                         &:nth-child(2) {
                                             animation-duration: 433ms;
+                                            height: 5px;
                                         }
     
                                         &:nth-child(3) {
                                             animation-duration: 407ms;
+                                            height: 10px;
                                         }
     
                                         &:nth-child(4) {
                                             animation-duration: 458ms;
+                                            height: 5px;
                                         }
                                     }
                                 }
 
                                 .dialog_box_time{
                                     margin: 0 5px;
+                                    color: $main-color;
                                 }
                             }
 
@@ -153,6 +173,59 @@ main {
                                 .dialogue_avatar{
                                     margin: 0 10px 0 0;
                                 }
+
+                                .dialog_box{
+                                    background-color: $light_purple;
+                                }
+                            }
+
+                            &.dialogue_right{
+                                justify-content: flex-end;
+                                .dialogue_avatar{
+                                    margin: 0 0 0 10px;
+                                    order: 2;
+                                }
+
+                                .dialog_box{
+                                    background-color: $main-color;
+                                    order: 1;
+
+                                    .dialog_box_icon{
+                                        order: 3;
+                                        background-color: $white;
+                                        color: $main-color;
+                                    }
+
+                                    .sound_bar{
+                                        order: 2;
+                                        .bar{
+                                            background-color: $white;
+                                        }
+                                    }
+
+                                    .dialog_box_time{
+                                        order: 1;
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .recording_area{
+                        .recording_icon{
+                            background-color: $main-color;
+                            width: 60px;
+                            height: 60px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+                            margin: 80px auto 40px;
+
+                            i{
+                                color: $white;
+                                font-size: 40px;
                             }
                         }
                     }
@@ -175,13 +248,267 @@ main {
     }
 }
 
-@media screen and (min-width: 576px) {}
+@media screen and (min-width: 500px) {
+    main {
+        .quiz_page {
+    
+            .test_area {
+                .test_area_left {
+                    .test_area_left_tittle {
+                        margin: 10px 0;
+                    }
+    
+                    .test_area_left_options {
+                        display: flex;
+                        flex-wrap: wrap;
+                        width: 100%;
+    
+                        .test_area_left_options_item {
+                            padding: 5px 0px;
+                            width: 100%;
+    
+                            a {
+                                position: relative;
+                                color: $main_color_grey;
+    
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    top: 50%;
+                                    right: 0;
+                                    transform: translate(0, -50%);
+                                    width: 0;
+                                    height: 2px;
+                                    background-color: $main-color;
+                                    transition: .3s;
+                                }
+                            }
+    
+    
+    
+                            &:hover,
+                            &:active {
+                                a {
+                                    color: $main-color;
+                                }
+                            }
+    
+                            &.active {
+                                a {
+                                    color: $main-color;
+                                    font-weight: bold;
+    
+                                    &::before {
+                                        width: 20px;
+                                        transform: translate(25px, -50%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .test_area_right {
+                    width: 100%;
+                    margin: 40px auto;
+    
+                    .test_area_right_nav {
+                        display: flex;
+    
+                        .test_area_right_nav_item {
+                            padding: 5px 10px;
+                            border: 1px solid $main-color;
+                            border-radius: 5px 5px 0 0;
+    
+                            &.active {
+                                background-color: $main-color;
+                                color: $white;
+
+                                
+                            }
+    
+                            &:hover {
+                                color: $main-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+}
 
 @media screen and (min-width: 768px) {
     main {
         .quiz_page {
-            .test_area {}
+    
+            .test_area {
+                justify-content: space-between;
+                .test_area_left {
+                    width: 20%;
+                    .test_area_left_tittle {
+                        margin: 10px 0;
+                    }
+    
+                    .test_area_left_options {
+                        display: flex;
+                        flex-wrap: wrap;
+                        width: 100%;
+    
+                        .test_area_left_options_item {
+                            padding: 5px 0px;
+                            width: 100%;
+    
+                            a {
+                                position: relative;
+                                color: $main_color_grey;
+    
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    top: 50%;
+                                    right: 0;
+                                    transform: translate(0, -50%);
+                                    width: 0;
+                                    height: 2px;
+                                    background-color: $main-color;
+                                    transition: .3s;
+                                }
+                            }
+    
+    
+    
+                            &:hover,
+                            &:active {
+                                a {
+                                    color: $main-color;
+                                }
+                            }
+    
+                            &.active {
+                                a {
+                                    color: $main-color;
+                                    font-weight: bold;
+    
+                                    &::before {
+                                        width: 20px;
+                                        transform: translate(25px, -50%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .test_area_right {
+                    width: 70%;
+                    margin: 0 0 40px;
+    
+                    .test_area_content {
+                        border-radius: 0 5px 5px 5px;
+                        border: 2px solid $main_color;
+                        padding: 10px;
+    
+                        .dialogue_area {
+                            .dialogue_block {
+                                margin: 40px 0;
+    
+                                .dialogue_avatar{
+                                    width: 50px;
+                                }
+    
+                                .dialog_box{
+                                    
+                                    padding: 10px 20px;
+                                    .dialog_box_icon{
+                                        width: 50px;
+                                        height: 50px;
+
+                                        i{
+                                            font-size: 30px;
+                                        }
+                                    }
+    
+                                    .sound_bar {
+                                        height: 30px;
+        
+                                        .bar {
+        
+                                            &:nth-child(1) {
+                                                height: 15px;
+                                            }
+        
+                                            &:nth-child(2) {
+                                                height: 10px;
+                                            }
+        
+                                            &:nth-child(3) {
+                                                height: 15px;
+                                            }
+        
+                                            &:nth-child(4) {
+                                                height: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+    
+                                &.dialogue_right{
+                                    justify-content: flex-end;
+                                    .dialogue_avatar{
+                                        margin: 0 0 0 10px;
+                                        order: 2;
+                                    }
+    
+                                    .dialog_box{
+                                        background-color: $main-color;
+                                        order: 1;
+    
+                                        .dialog_box_icon{
+                                            order: 3;
+                                            background-color: $white;
+                                            color: $main-color;
+                                        }
+    
+                                        .sound_bar{
+                                            order: 2;
+                                            .bar{
+                                                background-color: $white;
+                                            }
+                                        }
+    
+                                        .dialog_box_time{
+                                            order: 1;
+                                            color: $white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+    
+                        .recording_area{
+                            .recording_icon{
+                                background-color: $main-color;
+                                width: 60px;
+                                height: 60px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 50%;
+                                margin: 80px auto 40px;
+    
+                                i{
+                                    color: $white;
+                                    font-size: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
+    
     }
 }
 
