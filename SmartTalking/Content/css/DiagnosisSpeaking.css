@@ -187,11 +187,13 @@ main .button.button_register { margin: 0px auto; }
 
 main .slide_area { position: relative; }
 
-main .slide_area .slide_text { width: 90%; position: absolute; left: 5%; top: 50%; transform: translate(0, -50%); }
+main .slide_area .slide_text { width: 90%; position: absolute; left: 5%; bottom: 5px; }
 
-main .slide_area .slide_text p { color: #fff; font-weight: bold; font-size: 20px; }
+main .slide_area .slide_text h3 { color: #4dbcbc; }
 
-main .select_page_link { position: relative; display: flex; justify-content: center; flex-direction: column; background-color: #314675; border-radius: 5px; margin: 40px auto; padding: 20px 40px; text-align: center; color: #fff; transform: scale(0.9); width: 100%; max-width: 400px; border: 2px solid transparent; }
+main .slide_area .slide_text p { color: #fff; font-weight: bold; }
+
+main .select_page_link { position: relative; display: flex; justify-content: center; align-items: center; background-color: #fff; color: #314675; border-radius: 5px; margin: 40px auto; padding: 20px 40px; text-align: center; color: #314675; transform: scale(0.9); width: 100%; max-width: 500px; border: 2px solid #314675; }
 
 main .select_page_link.small_btn::before { left: auto; right: 0; transform: translate(-40px, 0); }
 
@@ -201,15 +203,15 @@ main .select_page_link.small_btn .select_page_btn .select_page_btn_icon { margin
 
 main .select_page_link.small_btn:hover::before { transform: translate(0, 0); }
 
-main .select_page_link::before { content: ""; position: absolute; width: 40px; height: 40px; background-color: #4dbcbc; border-radius: 50%; left: 50%; bottom: 20px; transform: translate(-50%, 0); }
+main .select_page_link::before { -webkit-transform-origin: top center; z-index: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; transform-origin: top center; scale: 1 0; background-color: #314675; content: ""; transition-duration: .5s; transition-property: scale; transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); }
 
-main .select_page_link .select_page_btn { display: flex; align-items: center; flex-direction: column; }
+main .select_page_link .select_page_btn { display: flex; align-items: center; z-index: 1; }
 
-main .select_page_link .select_page_btn .select_page_btn_icon { position: relative; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid #fff; background-color: #fff; border-radius: 50%; margin: 15px 0 0; color: #314675; }
+main .select_page_link .select_page_btn .select_page_btn_icon { position: relative; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid #fff; background-color: #fff; border-radius: 50%; color: #314675; }
 
-main .select_page_link:hover { transform: scale(1); }
+main .select_page_link:hover { transform: scale(1); color: #fff; }
 
-main .select_page_link:hover::before { width: 100%; height: 100%; border-radius: 5px; bottom: 0; z-index: -1; transition: 0.3s; }
+main .select_page_link:hover:before { transform-origin: bottom center; scale: 1 1; }
 
 main .select_page_link:hover .select_page_btn .select_page_btn_icon { background-color: transparent; color: #fff; transition: 0.3s; }
 
@@ -295,18 +297,16 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   50% { opacity: 0.3; }
   100% { opacity: 1; } }
 
-@media screen and (min-width: 500px) { main .slide_area .slide_text p { font-size: 25px; } }
-
 @media screen and (min-width: 768px) { main .button { padding: 12px 20px; }
-  main .slide_area .slide_text p { font-size: 30px; }
-  main .select_page_link { width: 45%; }
+  main .slide_area .slide_text { bottom: 15px; }
+  main .slide_area .slide_text h3 { font-size: 50px; }
+  main .slide_area .slide_text p { font-size: 25px; }
   main .start_page_text .start_page_text_item p .icon_btn { width: 34px; height: 34px; }
   main .test_area_answer_btn.play .icon_btn.sound_btn .fa-volume-high::after { width: 68.85px; height: 54.9px; } }
 
-@media screen and (min-width: 1200px) { main .slide_area .slide_text { top: auto; bottom: 0; transform: translate(0, -20px); }
-  main .slide_area .slide_text p { font-size: 35px; } }
-
-@media screen and (min-width: 1400px) { main .slide_area .slide_text p { font-size: 40px; } }
+@media screen and (min-width: 1200px) { main .slide_area .slide_text { bottom: 30px; }
+  main .slide_area .slide_text h3 { font-size: 60px; }
+  main .slide_area .slide_text p { font-size: 30px; } }
 
 header { border-bottom: 1px solid #314675; background-color: #e8efff; }
 
@@ -451,11 +451,16 @@ main .register_area .register_form .register_btn a:hover { color: #314675; borde
 
 main .select_page_area { width: 80%; margin: 60px auto 40px; }
 
-main .select_page_area .select_page_btn_area .select_page_link .select_page_btn { font-size: 21px; }
+main .select_page_area .select_page_btn_area .select_page_link .select_page_btn { justify-content: space-between; width: 100%; }
+
+main .select_page_area .select_page_btn_area .select_page_link .select_page_btn p { font-size: 21px; }
 
 @media screen and (min-width: 768px) { main .select_page_area { width: 80%; margin: 60px auto 0; }
+  main .select_page_area .select_page_btn_area .select_page_link .select_page_btn p { font-size: 25px; } }
+
+@media screen and (min-width: 992px) { main .select_page_area { width: 80%; margin: 60px auto 0; }
   main .select_page_area .select_page_btn_area { display: flex; }
-  main .select_page_area .select_page_btn_area .select_page_link .select_page_btn { font-size: 25px; } }
+  main .select_page_area .select_page_btn_area .select_page_link { width: 33%; } }
 
 main .quiz_page { margin: 80px auto; max-width: 1500px; }
 
@@ -569,9 +574,7 @@ main .start_page .return_btn i { color: #314675; font-size: 30px; }
 
 main .start_page .return_btn:hover i { font-size: 35px; }
 
-@media screen and (min-width: 768px) { main .select_page_area { width: 80%; margin: 60px auto 0; }
-  main .select_page_area .select_page_btn_area { display: flex; }
-  main .select_page_area .select_page_btn_area .select_page_link { width: 45%; } }
+@media screen and (min-width: 768px) { main .select_page_area { width: 80%; margin: 60px auto 0; } }
 
 @media screen and (min-width: 1024px) { main .start_page .return_btn { transform: translate(-100%, calc(-100% - 15px)); }
   main .start_page .return_btn i { font-size: 40px; }

@@ -5,7 +5,11 @@ main {
         .select_page_btn_area{
             .select_page_link{
                 .select_page_btn{
-                    font-size: 21px
+                    justify-content: space-between;
+                    width: 100%;
+                    p{
+                        font-size: 21px
+                    }
                 }
             }
         }
@@ -21,10 +25,11 @@ main {
             width: 80%;
             margin: 60px auto 0;
             .select_page_btn_area{
-                display: flex;
                 .select_page_link{
                     .select_page_btn{
-                        font-size: 25px
+                        p{
+                            font-size: 25px
+                        }
                     }
                 }
             }
@@ -32,7 +37,20 @@ main {
     }
 }
 
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+    main {
+        .select_page_area {
+            width: 80%;
+            margin: 60px auto 0;
+            .select_page_btn_area{
+                display: flex;
+                .select_page_link{
+                    width: 33%;
+                }
+            }
+        }
+    }
+}
 
 @media screen and (min-width: 1200px) {}
 

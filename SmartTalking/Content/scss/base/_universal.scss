@@ -363,13 +363,16 @@ main {
             width: 90%;
             position: absolute;
             left: 5%;
-            top: 50%;
-            transform: translate(0, -50%);
+            bottom: 5px;
+
+            h3{
+                color: $bright_purple;
+            }
 
             p {
                 color: $white;
                 font-weight: bold;
-                font-size: 20px;
+                // font-size: 20px;
             }
         }
     }
@@ -378,17 +381,18 @@ main {
         position: relative;
         display: flex;
         justify-content: center;
-        flex-direction: column;
-        background-color: $main-color;
+        align-items: center;
+        background-color: $white;
+        color: $main_color;
         border-radius: 5px;
         margin: 40px auto;
         padding: 20px 40px;
         text-align: center;
-        color: $white;
+        color: $main_color;
         transform: scale(0.9);
         width: 100%;
-        max-width: 400px;
-        border: 2px solid transparent;
+        max-width: 500px;
+        border: 2px solid $main_color;
 
         &.small_btn {
 
@@ -417,21 +421,36 @@ main {
 
 
         &::before {
-            content: "";
+            // content: "";
+            // position: absolute;
+            // width: 40px;
+            // height: 40px;
+            // background-color: $bright_purple;
+            // border-radius: 50%;
+            // left: 50%;
+            // bottom: 20px;
+            // transform: translate(-50%, 0);
+
+            -webkit-transform-origin: top center;
+            z-index: 0;
             position: absolute;
-            width: 40px;
-            height: 40px;
-            background-color: $bright_purple;
-            border-radius: 50%;
-            left: 50%;
-            bottom: 20px;
-            transform: translate(-50%, 0);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-origin: top center;
+            scale: 1 0;
+            background-color: $main_color;
+            content: "";
+            transition-duration: .5s;
+            transition-property: scale;
+            transition-timing-function: cubic-bezier(.075,.82,.165,1);
         }
 
         .select_page_btn {
             display: flex;
             align-items: center;
-            flex-direction: column;
+            z-index: 1;
 
             .select_page_btn_icon {
                 position: relative;
@@ -443,21 +462,17 @@ main {
                 border: 1px solid $white;
                 background-color: $white;
                 border-radius: 50%;
-                margin: 15px 0 0;
                 color: $main_color;
             }
         }
 
         &:hover {
             transform: scale(1);
-
-            &::before {
-                width: 100%;
-                height: 100%;
-                border-radius: 5px;
-                bottom: 0;
-                z-index: -1;
-                transition: 0.3s;
+            color: $white;
+            &:before{
+                -webkit-transform-origin: bottom center;
+                transform-origin: bottom center;
+                scale: 1 1;
             }
 
             .select_page_btn {
@@ -709,7 +724,7 @@ input:-webkit-autofill:focus {
         .slide_area {
             .slide_text {
                 p {
-                    font-size: 25px;
+                    // font-size: 25px;
                 }
             }
         }
@@ -726,14 +741,14 @@ input:-webkit-autofill:focus {
 
         .slide_area {
             .slide_text {
+                bottom: 15px;
+                h3{
+                    font-size: 50px;
+                }
                 p {
-                    font-size: 30px;
+                    font-size: 25px;
                 }
             }
-        }
-
-        .select_page_link {
-            width: 45%;
         }
 
         .start_page_text {
@@ -772,13 +787,14 @@ input:-webkit-autofill:focus {
 @media screen and (min-width: 1200px) {
     main {
         .slide_area {
-            .slide_text {
-                top: auto;
-                bottom: 0;
-                transform: translate(0, -20px);
 
+            .slide_text {
+                bottom: 30px;
+                h3{
+                    font-size: 60px;
+                }
                 p {
-                    font-size: 35px;
+                    font-size: 30px;
                 }
             }
         }
@@ -790,7 +806,7 @@ input:-webkit-autofill:focus {
         .slide_area {
             .slide_text {
                 p {
-                    font-size: 40px;
+                    // font-size: 40px;
                 }
             }
         }
