@@ -161,6 +161,7 @@ body {
                 width: 15%;
                 max-width: 80px;
                 z-index: 1;
+                line-height: 0;
 
                 .number_mark {
                     position: absolute;
@@ -185,7 +186,7 @@ body {
                 }
 
                 .content_introduce {
-                    padding: 5px 10px 5px 10%;
+                    padding: 8px 10px 8px 10%;
                     border-radius: 0 0 5px 5px;
                     background-color: $white;
                     border-top: 0 !important;
@@ -471,22 +472,6 @@ body {
         padding-top: 15px;
         overflow: hidden;
 
-        &.report_one{
-            background: linear-gradient(90deg, #6b8dd9 38%, $white 0%);
-        }
-
-        &.report_two{
-            background: linear-gradient(90deg, #5c8eff 38%, $white 0%);
-        }
-
-        &.report_three{
-            background: linear-gradient(90deg, #0378c8 38%, $white 0%);
-        }
-
-        &.report_four{
-            background: linear-gradient(90deg, #0285cb 38%, $white 0%);
-        }
-
         &:after {
             /* content: counter(page-number); 取用該名字的計數器 */
             /*counter-increment: page-number 1;  增加計數器數值 */
@@ -626,6 +611,7 @@ body {
                     width: 15%;
                     max-width: 80px;
                     z-index: 1;
+                    line-height: 0;
 
                     .number_mark {
                         position: absolute;
@@ -649,7 +635,7 @@ body {
                     }
 
                     .content_introduce {
-                        padding: 5px 10px 5px 10%;
+                        padding: 8px 10px 8px 10%;
                         border-radius: 0 0 5px 5px;
                         background-color: $white;
                         border-top: 0 !important;
@@ -955,22 +941,6 @@ body {
         background: linear-gradient(90deg, $light_main_color 38%, $white 0%);
         height: 1448px;
         padding-top: 15px;
-
-        &.report_one{
-            background: linear-gradient(90deg, #6b8dd9 38%, $white 0%);
-        }
-
-        &.report_two{
-            background: linear-gradient(90deg, #5c8eff 38%, $white 0%);
-        }
-
-        &.report_three{
-            background: linear-gradient(90deg, #0378c8 38%, $white 0%);
-        }
-
-        &.report_four{
-            background: linear-gradient(90deg, #0285cb 38%, $white 0%);
-        }
     
         &:after {
             /* content: counter(page-number); 取用該名字的計數器 */

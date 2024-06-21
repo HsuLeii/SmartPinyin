@@ -59,7 +59,7 @@ body { background-color: #f7f8f8; counter-reset: page-number; /* 初始化，名
 
 .page h4 { font-size: 16px; line-height: 1.6; }
 
-.page .report_title { width: 100%; z-index: 2; background-color: #759cf3; padding: 20px 5%; }
+.page .report_title { width: 100%; z-index: 2; background-color: #6b8dd9; padding: 20px 5%; }
 
 .page .report_title img { width: 45%; max-width: 200px; }
 
@@ -93,7 +93,7 @@ body { background-color: #f7f8f8; counter-reset: page-number; /* 初始化，名
 
 .page .test_content .item .fraction_area .average { margin: 5px 0 5px 2.5%; }
 
-.page .test_content .item .title_mark { position: relative; width: 15%; max-width: 80px; z-index: 1; }
+.page .test_content .item .title_mark { position: relative; width: 15%; max-width: 80px; z-index: 1; line-height: 0; }
 
 .page .test_content .item .title_mark .number_mark { position: absolute; left: -5%; top: 0%; width: 45%; transform: translate(0px, -50%); }
 
@@ -101,7 +101,7 @@ body { background-color: #f7f8f8; counter-reset: page-number; /* 初始化，名
 
 .page .test_content .item .item_content .content_title { padding: 5px 10px 5px 10%; border-radius: 5px 5px 0 0; border-bottom: 0 !important; }
 
-.page .test_content .item .item_content .content_introduce { padding: 5px 10px 5px 10%; border-radius: 0 0 5px 5px; background-color: #fff; border-top: 0 !important; }
+.page .test_content .item .item_content .content_introduce { padding: 8px 10px 8px 10%; border-radius: 0 0 5px 5px; background-color: #fff; border-top: 0 !important; }
 
 .page .test_content .item.first_item .fraction_area .fraction p:nth-child(2) { background-color: #2783be; border: 1.5px solid #2783be; }
 
@@ -170,11 +170,7 @@ body { background-color: #f7f8f8; counter-reset: page-number; /* 初始化，名
 
 @media print { body { background-color: #f7f8f8; counter-reset: page-number; /* 初始化，名字可自訂，數值為0 */ -webkit-print-color-adjust: exact; }
   section { width: 100vw; height: 100vh; page-break-after: always; }
-  .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; background: linear-gradient(90deg, #759cf3 38%, #fff 0%); max-width: 1024px; width: 1024px; height: 1448px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; padding-top: 15px; overflow: hidden; }
-  .page.report_one { background: linear-gradient(90deg, #6b8dd9 38%, #fff 0%); }
-  .page.report_two { background: linear-gradient(90deg, #5c8eff 38%, #fff 0%); }
-  .page.report_three { background: linear-gradient(90deg, #0378c8 38%, #fff 0%); }
-  .page.report_four { background: linear-gradient(90deg, #0285cb 38%, #fff 0%); }
+  .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; background: linear-gradient(90deg, #6b8dd9 38%, #fff 0%); max-width: 1024px; width: 1024px; height: 1448px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; padding-top: 15px; overflow: hidden; }
   .page:after { /* content: counter(page-number); 取用該名字的計數器 */ /*counter-increment: page-number 1;  增加計數器數值 */ position: absolute; right: 0; bottom: 0; left: 0; font-size: 30px; text-align: center; }
   .page h3 { font-size: 20px; line-height: 1.5; color: #fff; }
   .page p { font-size: 16px; line-height: 1.5; }
@@ -195,11 +191,11 @@ body { background-color: #f7f8f8; counter-reset: page-number; /* 初始化，名
   .page .test_content .item .fraction_area .fraction p:nth-child(2), .page .test_content .item .fraction_area .average p:nth-child(2) { padding: 5px 10px; border-radius: 5px; }
   .page .test_content .item .fraction_area .fraction p.score, .page .test_content .item .fraction_area .average p.score { font-size: 18px; margin-left: 5px; }
   .page .test_content .item .fraction_area .fraction p:nth-child(2) { color: #fff; }
-  .page .test_content .item .title_mark { position: relative; width: 15%; max-width: 80px; z-index: 1; }
+  .page .test_content .item .title_mark { position: relative; width: 15%; max-width: 80px; z-index: 1; line-height: 0; }
   .page .test_content .item .title_mark .number_mark { position: absolute; left: -5%; top: 0%; width: 45%; transform: translate(0px, -50%); }
   .page .test_content .item .item_content { background-color: #fff; border-radius: 5px; width: 85%; margin-left: -5%; }
   .page .test_content .item .item_content .content_title { padding: 5px 10px 5px 10%; border-radius: 5px 5px 0 0; border-bottom: 0 !important; }
-  .page .test_content .item .item_content .content_introduce { padding: 5px 10px 5px 10%; border-radius: 0 0 5px 5px; background-color: #fff; border-top: 0 !important; }
+  .page .test_content .item .item_content .content_introduce { padding: 8px 10px 8px 10%; border-radius: 0 0 5px 5px; background-color: #fff; border-top: 0 !important; }
   .page .test_content .item.first_item .fraction_area .fraction p:nth-child(2) { background-color: #2783be; border: 1.5px solid #2783be; }
   .page .test_content .item.first_item .fraction_area .average p:nth-child(2) { color: #2783be; border: 1.5px solid #2783be; }
   .page .test_content .item.first_item .item_content .content_title { background-color: #2783be; border: 1px solid #2783be; }
@@ -236,11 +232,7 @@ body { background-color: #f7f8f8; counter-reset: page-number; /* 初始化，名
   .page .test_content .item { justify-content: flex-end; }
   .page .chartbar_area .srscore, .page .chartbar_area .cefr_level, .page .chartbar_area .actfl_level { width: 29%; margin: 0 2%; } }
 
-@media screen and (min-width: 1024px) { .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ background: linear-gradient(90deg, #759cf3 38%, #fff 0%); height: 1448px; padding-top: 15px; }
-  .page.report_one { background: linear-gradient(90deg, #6b8dd9 38%, #fff 0%); }
-  .page.report_two { background: linear-gradient(90deg, #5c8eff 38%, #fff 0%); }
-  .page.report_three { background: linear-gradient(90deg, #0378c8 38%, #fff 0%); }
-  .page.report_four { background: linear-gradient(90deg, #0285cb 38%, #fff 0%); }
+@media screen and (min-width: 1024px) { .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ background: linear-gradient(90deg, #6b8dd9 38%, #fff 0%); height: 1448px; padding-top: 15px; }
   .page:after { /* content: counter(page-number); 取用該名字的計數器 */ /*counter-increment: page-number 1;  增加計數器數值 */ position: absolute; right: 0; bottom: 0; left: 0; font-size: 30px; text-align: center; }
   .page h3 { font-size: 20px; }
   .page p { font-size: 16px; }
