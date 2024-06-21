@@ -514,6 +514,63 @@ main {
 
 @media screen and (min-width: 992px) {}
 
-@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 1200px) {
+    main {
+        .quiz_page {
+    
+            .test_area {
+                justify-content: space-between;
+                .test_area_left {
+                    width: 20%;
+                    .test_area_left_tittle {
+                        margin: 10px 0;
+                    }
+                }
+    
+                .test_area_right {
+                    width: 80%;
+    
+                    .test_area_content {
+                        border-radius: 0 5px 5px 5px;
+                        border: 2px solid $main_color;
+                        padding: 10px;
+    
+                        .dialogue_area {
+                            .dialogue_block {
+    
+                                .dialog_box{
+    
+                                    .sound_bar {
+                                        height: 40px;
+        
+                                        .bar {
+        
+                                            &:nth-child(1) {
+                                                height: 30px;
+                                            }
+        
+                                            &:nth-child(2) {
+                                                height: 20px;
+                                            }
+        
+                                            &:nth-child(3) {
+                                                height: 30px;
+                                            }
+        
+                                            &:nth-child(4) {
+                                                height: 20px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+}
 
 @media screen and (min-width: 1400px) {}
