@@ -38,16 +38,14 @@ main {
                                 background-color: $main-color;
                                 transition: .3s;
                             }
-                        }
 
-
-
-                        &:hover,
+                            &:hover,
                         &:active {
-                            a {
-                                color: $main-color;
-                            }
+                                color: $bright_main_color;
                         }
+                        }
+
+                        
 
                         &.active {
                             a {
@@ -74,27 +72,45 @@ main {
                     .test_area_right_nav_item {
                         padding: 5px 3px;
                         border: 1px solid $main-color;
+                        border-bottom: 0px;
                         border-radius: 5px 5px 0 0;
                         background-color: $white;
+                        transform: translate(-1px , 0);
+
+                        a{
+                            color: $black;
+
+                            &:hover {
+                                color: $bright_main_color;
+                            }
+                        
+                        }
+
+                        &:nth-child(1){
+                            transform: translate(0 , 0);
+                        }
+
+                        &:last-child(1){
+                            border-right: 1px solid $main-color;
+                        }
 
                         &.active {
                             background-color: $main-color;
-                            color: $white;
-
-                            &:hover {
+                            
+                            a{
                                 color: $white;
-                            }
-                        }
 
-                        &:hover {
-                            color: $main-color;
+                                &:hover {
+                                    color: $white;
+                                }
+                            }
                         }
                     }
                 }
 
                 .test_area_content {
                     border-radius: 0 5px 5px 5px;
-                    border: 2px solid $main_color;
+                    border: 1px solid $main_color;
                     padding: 10px;
                     background-color: $white;
 
@@ -111,10 +127,12 @@ main {
                             .dialog_box{
                                 display: flex;
                                 align-items: center;
-                                padding: 5px 10px;
+                                padding: 12px 15px;
                                 border-radius: 5px;
+                                position: relative;
+
                                 .dialog_box_icon{
-                                    margin: 0 5px;
+                                    margin: 0 10px;
                                     width: 30px;
                                     height: 30px;
                                     display: flex;
@@ -123,6 +141,10 @@ main {
                                     background-color: $main-color;
                                     color: $white;
                                     border-radius: 50%;
+
+                                    &:hover{
+                                        transform: scale(1.05);
+                                    }
                                 }
 
                                 .sound_bar {
@@ -141,7 +163,7 @@ main {
                                         background-color: $main-color;
                                         height: 0px;
                                         width: 3px;
-                                        margin: 0px 1px;
+                                        margin: 0px 2px;
     
                                         &:nth-child(1) {
                                             animation-duration: 474ms;
@@ -150,17 +172,17 @@ main {
     
                                         &:nth-child(2) {
                                             animation-duration: 433ms;
-                                            height: 5px;
+                                            height: 15px;
                                         }
     
                                         &:nth-child(3) {
                                             animation-duration: 407ms;
-                                            height: 10px;
+                                            height: 20px;
                                         }
     
                                         &:nth-child(4) {
                                             animation-duration: 458ms;
-                                            height: 5px;
+                                            height: 10px;
                                         }
                                     }
                                 }
@@ -173,24 +195,58 @@ main {
 
                             &.dialogue_left{
                                 .dialogue_avatar{
-                                    margin: 0 10px 0 0;
+                                    margin: 0 15px 0 0;
                                 }
 
                                 .dialog_box{
                                     background-color: $light_purple;
+
+                                    &::before{
+                                        content: "";
+                                        position: absolute;
+                                        border-width: 8px 0px 8px 8px;
+                                        left: 0;
+                                        top: 50%;
+                                        transform: translate(-100%, -50%);
+                                        border-right: 8px solid $light_purple;
+                                        border-bottom: 8px solid transparent;
+                                        border-left: 8px solid transparent;
+                                        border-top: 8px solid transparent;
+                                    }
                                 }
                             }
 
                             &.dialogue_right{
                                 justify-content: flex-end;
                                 .dialogue_avatar{
-                                    margin: 0 0 0 10px;
+                                    margin: 0 0 0 15px;
                                     order: 2;
+                                    background-color: $grey;
+                                    padding: 10px;
+                                    line-height: 0;
+                                    border-radius: 50%;
+
+                                    img{
+                                        line-height: 0;
+                                    }
                                 }
 
                                 .dialog_box{
                                     background-color: $main-color;
                                     order: 1;
+
+                                    &::before{
+                                        content: "";
+                                        position: absolute;
+                                        border-width: 8px 8px 8px 0px;
+                                        right: 0;
+                                        top: 50%;
+                                        transform: translate(100%, -50%);
+                                        border-right: 8px solid transparent;
+                                        border-bottom: 8px solid transparent;
+                                        border-left: 8px solid $main-color;
+                                        border-top: 8px solid transparent;
+                                    }
 
                                     .dialog_box_icon{
                                         order: 3;
@@ -229,6 +285,10 @@ main {
                                 color: $white;
                                 font-size: 40px;
                             }
+
+                            &:hover{
+                                transform: scale(1.05);
+                            }
                         }
                     }
                 }
@@ -259,79 +319,14 @@ main {
                     .test_area_left_tittle {
                         margin: 15px 0;
                     }
-    
-                    .test_area_left_options {
-                        display: flex;
-                        flex-wrap: wrap;
-                        width: 100%;
-    
-                        .test_area_left_options_item {
-                            padding: 5px 0px;
-                            width: 100%;
-    
-                            a {
-                                position: relative;
-                                color: $main_color_grey;
-    
-                                &::before {
-                                    content: "";
-                                    position: absolute;
-                                    top: 50%;
-                                    right: 0;
-                                    transform: translate(0, -50%);
-                                    width: 0;
-                                    height: 2px;
-                                    background-color: $main-color;
-                                    transition: .3s;
-                                }
-                            }
-    
-    
-    
-                            &:hover,
-                            &:active {
-                                a {
-                                    color: $main-color;
-                                }
-                            }
-    
-                            &.active {
-                                a {
-                                    color: $main-color;
-                                    font-weight: bold;
-    
-                                    &::before {
-                                        width: 20px;
-                                        transform: translate(25px, -50%);
-                                    }
-                                }
-                            }
-                        }
-                    }
                 }
     
                 .test_area_right {
-                    width: 100%;
-                    margin: 40px auto;
     
                     .test_area_right_nav {
-                        display: flex;
     
                         .test_area_right_nav_item {
                             padding: 5px 10px;
-                            border: 1px solid $main-color;
-                            border-radius: 5px 5px 0 0;
-    
-                            &.active {
-                                background-color: $main-color;
-                                color: $white;
-
-                                
-                            }
-    
-                            &:hover {
-                                color: $main-color;
-                            }
                         }
                     }
                 }
@@ -349,68 +344,21 @@ main {
                 justify-content: space-between;
                 .test_area_left {
                     width: 20%;
-                    .test_area_left_tittle {
-                        margin: 10px 0;
-                    }
-    
-                    .test_area_left_options {
-                        display: flex;
-                        flex-wrap: wrap;
-                        width: 100%;
-    
-                        .test_area_left_options_item {
-                            padding: 5px 0px;
-                            width: 100%;
-    
-                            a {
-                                position: relative;
-                                color: $main_color_grey;
-    
-                                &::before {
-                                    content: "";
-                                    position: absolute;
-                                    top: 50%;
-                                    right: 0;
-                                    transform: translate(0, -50%);
-                                    width: 0;
-                                    height: 2px;
-                                    background-color: $main-color;
-                                    transition: .3s;
-                                }
-                            }
-    
-    
-    
-                            &:hover,
-                            &:active {
-                                a {
-                                    color: $main-color;
-                                }
-                            }
-    
-                            &.active {
-                                a {
-                                    color: $main-color;
-                                    font-weight: bold;
-    
-                                    &::before {
-                                        width: 20px;
-                                        transform: translate(25px, -50%);
-                                    }
-                                }
-                            }
-                        }
-                    }
                 }
     
                 .test_area_right {
-                    width: 70%;
-                    margin: 0 0 40px;
+
+                    .test_area_right_nav {
+                        .test_area_right_nav_item {
+                            padding: 10px;
+                            border: 2px solid $main-color;
+                            border-bottom: 0px;
+                            transform: translate(-2px , 0);
+                        }
+                    }
     
                     .test_area_content {
-                        border-radius: 0 5px 5px 5px;
                         border: 2px solid $main_color;
-                        padding: 10px;
     
                         .dialogue_area {
                             .dialogue_block {
@@ -421,8 +369,7 @@ main {
                                 }
     
                                 .dialog_box{
-                                    
-                                    padding: 10px 20px;
+                                    padding: 15px 20px;
                                     .dialog_box_icon{
                                         width: 50px;
                                         height: 50px;
@@ -442,47 +389,52 @@ main {
                                             }
         
                                             &:nth-child(2) {
-                                                height: 10px;
+                                                height: 20px;
                                             }
         
                                             &:nth-child(3) {
-                                                height: 15px;
+                                                height: 30px;
                                             }
         
                                             &:nth-child(4) {
-                                                height: 10px;
+                                                height: 20px;
                                             }
+                                        }
+                                    }
+                                }
+
+                                &.dialogue_left{
+                                    .dialogue_avatar{
+                                        margin: 0 25px 0 0;
+                                    }
+    
+                                    .dialog_box{
+    
+                                        &::before{
+                                            border-width: 10px 0px 10px 10px;
+                                            border-right: 10px solid $light_purple;
+                                            border-bottom: 10px solid transparent;
+                                            border-left: 10px solid transparent;
+                                            border-top: 10px solid transparent;
                                         }
                                     }
                                 }
     
                                 &.dialogue_right{
-                                    justify-content: flex-end;
                                     .dialogue_avatar{
-                                        margin: 0 0 0 10px;
-                                        order: 2;
+                                        margin: 0 0 0 25px;
                                     }
     
                                     .dialog_box{
                                         background-color: $main-color;
                                         order: 1;
-    
-                                        .dialog_box_icon{
-                                            order: 3;
-                                            background-color: $white;
-                                            color: $main-color;
-                                        }
-    
-                                        .sound_bar{
-                                            order: 2;
-                                            .bar{
-                                                background-color: $white;
-                                            }
-                                        }
-    
-                                        .dialog_box_time{
-                                            order: 1;
-                                            color: $white;
+
+                                        &::before{
+                                            border-width: 10px 10px 10px 0px;
+                                            border-right: 10px solid transparent;
+                                            border-bottom: 10px solid transparent;
+                                            border-left: 10px solid $main-color;
+                                            border-top: 10px solid transparent;
                                         }
                                     }
                                 }
@@ -521,7 +473,6 @@ main {
         .quiz_page {
     
             .test_area {
-                justify-content: space-between;
                 .test_area_left {
                     width: 20%;
                 }
@@ -537,9 +488,6 @@ main {
                     }
     
                     .test_area_content {
-                        border-radius: 0 5px 5px 5px;
-                        border: 2px solid $main_color;
-                        padding: 10px;
     
                         .dialogue_area {
                             .dialogue_block {
@@ -552,19 +500,19 @@ main {
                                         .bar {
         
                                             &:nth-child(1) {
-                                                height: 30px;
+                                                height: 20px;
                                             }
         
                                             &:nth-child(2) {
-                                                height: 20px;
+                                                height: 25px;
                                             }
         
                                             &:nth-child(3) {
-                                                height: 30px;
+                                                height: 40px;
                                             }
         
                                             &:nth-child(4) {
-                                                height: 20px;
+                                                height: 25px;
                                             }
                                         }
                                     }
@@ -578,5 +526,3 @@ main {
     
     }
 }
-
-@media screen and (min-width: 1400px) {}
