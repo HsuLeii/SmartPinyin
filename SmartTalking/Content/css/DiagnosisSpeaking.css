@@ -352,13 +352,12 @@ header .header_right { display: flex; align-items: center; }
 
 @media screen and (min-width: 576px) { header .navbar .container-fluid .navbar-brand { width: 200px; } }
 
-@media screen and (min-width: 768px) { header .navbar { width: 95%; }
+@media screen and (min-width: 992px) { header .navbar { width: 95%; }
+  header .navbar .container-fluid .navbar-brand { width: 300px; }
   header .navbar .container-fluid .navbar-toggler { display: none; }
   header .navbar .container-fluid .navbar-collapse { position: relative; width: auto; display: flex; align-items: center; flex-basis: auto; }
   header .navbar .container-fluid .navbar-collapse .navbar-nav { flex-direction: row; border-radius: 50px; padding: 5px 20px; }
   header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .nav-link { padding: 10px 10px; } }
-
-@media screen and (min-width: 992px) { header .navbar .container-fluid .navbar-brand { width: 300px; } }
 
 main .select_page_area { width: 80%; margin: 60px auto 40px; }
 
