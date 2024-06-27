@@ -20,28 +20,21 @@ main {
                     width: 100%;
 
                     .test_area_left_options_item {
-                        padding: 5px 0px;
+                        padding: 10px 0px;
                         width: 100%;
 
                         a {
                             position: relative;
                             color: $main_color_grey;
-
-                            &::before {
-                                content: "";
-                                position: absolute;
-                                top: 50%;
-                                right: 0;
-                                transform: translate(0, -50%);
-                                width: 0;
-                                height: 2px;
-                                background-color: $main-color;
-                                transition: .3s;
-                            }
-
+                            background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
+                            transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
+                            padding: 10px 15px;
+                            
                             &:hover,
                         &:active {
                                 color: $bright_main_color;
+                                background-position: 0 100%;
+                                background-size: 100% 1px;
                         }
                         }
 
@@ -49,14 +42,24 @@ main {
 
                         &.active {
                             a {
-                                color: $main-color;
+                                color: $bright_main_color;
                                 font-weight: bold;
 
-                                &::before {
-                                    width: 20px;
-                                    transform: translate(25px, -50%);
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0;
+                                    transform: translate(calc(-100% - 10px), -50%);
+                                    display: inline-block;
+                                    width: 7px;
+                                    height: 7px;
+                                    border-radius: 50%;
+                                    background-color: $bright_main_color;
                                 }
                             }
+
+                            
                         }
                     }
                 }
@@ -266,6 +269,25 @@ main {
                                         color: $white;
                                     }
                                 }
+                            }
+                        }
+                    }
+
+                    .quiz_select_area{
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        .quiz_select_item{
+                            width: 49%;
+                            margin: 10px auto;
+                            a{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                            span{
+                                font-size: 25px;
+                            }
                             }
                         }
                     }

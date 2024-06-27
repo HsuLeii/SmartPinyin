@@ -1,72 +1,77 @@
-header{
-    border-bottom: 1px solid $main-color;
-    background-color: $color-header-bg;
+header {
     .navbar {
-        width: 90%;
         margin: 0 auto;
-        padding: 0;
-        .container-fluid{
-            position: relative;
-            padding: 0 !important;
-            .navbar-brand{
-                width: 120px;
+        padding: 0 5%;
+
+        .container-fluid {
+            width: auto;
+            background-color: $white;
+            border-radius: 9999px;
+            padding: 15px 20px;
+            margin: 20px 0;
+            z-index: 1;
+
+            .navbar-brand {
+                line-height: 0;
+                width: 180px;
                 padding: 0;
                 margin: 0;
             }
 
             .navbar-toggler {
-                position: relative;
+                position: absolute;
+                right: 5%;
                 cursor: pointer;
                 z-index: 5;
                 padding: 0;
-                border-radius: 5px;
+                border-radius: 50%;
                 box-shadow: none;
-                width: 45px;
-                height: 45px;
-                margin: 15px 0;
+                width: 60px;
+                height: 60px;
+                background-color: $main-color;
 
-                span{
+                span {
                     position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 30px;
-                height: 3px;
-                margin: 0px;
-                background: $main-color;
-                transition: 350ms ease all;
-                z-index: 5;
-            
-                &::before,
-                &::after{
-                    content: " ";
-                    position: absolute;
-                    width: 100%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 30px;
                     height: 3px;
-                    background: $main-color;
+                    margin: 0px;
+                    background: $white;
                     transition: 350ms ease all;
+                    z-index: 5;
+
+                    &::before,
+                    &::after {
+                        content: " ";
+                        position: absolute;
+                        width: 100%;
+                        height: 3px;
+                        background: $white;
+                        transition: 350ms ease all;
+                    }
+
+                    &::before {
+                        margin: -10px 0 0 0;
+                    }
+
+
+                    &::after {
+                        margin: 10px 0 0 0;
+                    }
                 }
-            
-                &::before{
-                    margin: -10px 0 0 0;
-                }
-            
-                
-                &::after{
-                    margin: 10px 0 0 0;
-                }
-                }
-            
+
                 &.open {
-                    span{
+                    span {
                         background-color: rgba(0, 0, 0, 0);
-                
-                        &::before{
+
+                        &::before {
                             transform: rotate(45deg);
                             margin: 0;
                         }
-                
-                        &::after{
+
+                        &::after {
                             transform: rotate(-45deg);
                             margin: 0;
                         }
@@ -93,50 +98,76 @@ header{
                 }
             }
 
-            .navbar-collapse{
+            .navbar-collapse {
                 position: absolute;
                 top: 100%;
-                width: 100%;
+                width: 90%;
                 flex-grow: initial;
-                margin: 20px 0;
-                right: 0;
+                right: 5%;
+                border-radius: 15px;
+                background-color: $white;
+                padding: 0 30px;
+                box-shadow: 0 2px 6px $main_color_40;
 
-                .navbar-nav{
-                    background-color: $white;
-                    box-shadow: 0 2px 6px $main_color_40;
-                    border-radius: 20px;
-                    padding: 40px 30px;
-                    position: relative;
-                    z-index: 1;
+                .navbar-nav {
+                    padding: 20px 0;
 
-                    .nav-item{
-                        .nav-link{
+                    .nav-item {
+                        .nav-link {
+                            position: relative;
                             padding: 15px 0;
                             color: $main-color;
+                            font-weight: bold;
+                            background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
+                            transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
 
-                            &:hover{
-                                color: darken($main_color, 15%);
+
+                            &:hover {
+                                color: $bright_main_color;
+                                background-position: 0 100%;
+                                background-size: 100% 1px;
                             }
+
+                            &.active{
+                                color: $bright_main_color;
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0;
+                                    transform: translate(calc(-100% - 10px), -50%);
+                                    display: inline-block;
+                                    width: 7px;
+                                    height: 7px;
+                                    border-radius: 50%;
+                                    background-color: $bright_main_color;
+                                }
+                            }
+
+                            
                         }
                     }
                 }
-                
+
             }
         }
     }
 
-    .header_right{
+    .header_right {
         display: flex;
         align-items: center;
     }
 }
 
-@media screen and (min-width: 500px){
-    header{
+:root{
+    --transition-duration: .3s;
+    --transition-timing-function: cubic-bezier(.3, 1, .3, 1);
+}
+@media screen and (min-width: 500px) {
+    header {
         .navbar {
-            padding: 0;
-            .container-fluid{
-                .navbar-brand{
+            .container-fluid {
+                .navbar-brand {
                     width: 150px;
                 }
             }
@@ -144,52 +175,63 @@ header{
     }
 }
 
-@media screen and (min-width: 576px){
-    header{
+@media screen and (min-width: 576px) {
+    header {
         .navbar {
-            .container-fluid{
-                .navbar-brand{
-                    width: 200px;
+            .container-fluid {
+                .navbar-brand {
+                    width: 250px;
                 }
             }
         }
     }
 }
 
-@media screen and (min-width: 768px){
-}
+@media screen and (min-width: 768px) {}
 
-@media screen and (min-width: 992px){
-    header{
+@media screen and (min-width: 992px) {
+    header {
         .navbar {
             width: 95%;
-            .container-fluid{
-                .navbar-brand{
-                    width: 300px;
-                }
+            padding: 0;
+
+            .container-fluid {
+                width: 100%;
+                padding: 10px 40px;
+                box-shadow: 0 2px 6px $main_color_40;
 
                 .navbar-toggler {
                     display: none;
                 }
-    
-                .navbar-collapse{
+
+                .navbar-collapse {
                     position: relative;
+                    right: auto;
                     width: auto;
                     display: flex;
                     align-items: center;
                     flex-basis: auto;
-                    .navbar-nav{
+                    padding: 0;
+                    box-shadow: none;
+
+                    .navbar-nav {
                         flex-direction: row;
-                        border-radius: 50px;
-                        padding: 5px 20px;
-    
-                        .nav-item{
-                            .nav-link{
-                                padding: 10px 10px;
+
+                        .nav-item {
+                            .nav-link {
+                                padding: 10px 15px;
+
+                                &.active{
+                                    &::after {
+                                        top: 100%;
+                                        left: 50%;
+                                        transform: translate(0 , 10px);
+                                    }
+                                }
                             }
                         }
                     }
-                    
+
                 }
             }
         }
