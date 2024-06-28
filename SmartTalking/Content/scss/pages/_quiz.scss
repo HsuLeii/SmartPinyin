@@ -10,6 +10,11 @@ main {
             flex-wrap: wrap;
 
             .test_area_left {
+                width: 100%;
+                background-color: $white;
+                padding: 10px 15px;
+                border-radius: 10px;
+
                 .test_area_left_tittle {
                     margin: 10px 0;
                 }
@@ -20,7 +25,7 @@ main {
                     width: 100%;
 
                     .test_area_left_options_item {
-                        padding: 10px 0px;
+                        padding: 10px 0px 10px 20px;
                         width: 100%;
 
                         a {
@@ -28,17 +33,16 @@ main {
                             color: $main_color_grey;
                             background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
                             transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
-                            padding: 10px 15px;
-                            
+
                             &:hover,
-                        &:active {
+                            &:active {
                                 color: $bright_main_color;
                                 background-position: 0 100%;
                                 background-size: 100% 1px;
-                        }
+                            }
                         }
 
-                        
+
 
                         &.active {
                             a {
@@ -51,7 +55,7 @@ main {
                                     top: 50%;
                                     left: 0;
                                     transform: translate(calc(-100% - 10px), -50%);
-                                    display: inline-block;
+
                                     width: 7px;
                                     height: 7px;
                                     border-radius: 50%;
@@ -59,7 +63,7 @@ main {
                                 }
                             }
 
-                            
+
                         }
                     }
                 }
@@ -78,29 +82,29 @@ main {
                         border-bottom: 0px;
                         border-radius: 5px 5px 0 0;
                         background-color: $white;
-                        transform: translate(-1px , 0);
+                        transform: translate(-1px, 0);
 
-                        a{
+                        a {
                             color: $black;
 
                             &:hover {
                                 color: $bright_main_color;
                             }
-                        
+
                         }
 
-                        &:nth-child(1){
-                            transform: translate(0 , 0);
+                        &:nth-child(1) {
+                            transform: translate(0, 0);
                         }
 
-                        &:last-child(1){
+                        &:last-child(1) {
                             border-right: 1px solid $main-color;
                         }
 
                         &.active {
                             background-color: $main-color;
-                            
-                            a{
+
+                            a {
                                 color: $white;
 
                                 &:hover {
@@ -123,18 +127,18 @@ main {
                             align-items: center;
                             margin: 30px 0;
 
-                            .dialogue_avatar{
+                            .dialogue_avatar {
                                 width: 40px;
                             }
 
-                            .dialog_box{
+                            .dialog_box {
                                 display: flex;
                                 align-items: center;
                                 padding: 12px 15px;
                                 border-radius: 5px;
                                 position: relative;
 
-                                .dialog_box_icon{
+                                .dialog_box_icon {
                                     margin: 0 10px;
                                     width: 30px;
                                     height: 30px;
@@ -145,7 +149,7 @@ main {
                                     color: $white;
                                     border-radius: 50%;
 
-                                    &:hover{
+                                    &:hover {
                                         transform: scale(1.05);
                                     }
                                 }
@@ -155,34 +159,34 @@ main {
                                     margin: 0 5px;
                                     display: flex;
                                     align-items: center;
-    
+
                                     &.play_animation {
                                         .bar {
                                             animation: sound 0ms -800ms linear infinite alternate;
                                         }
                                     }
-    
+
                                     .bar {
                                         background-color: $main-color;
                                         height: 0px;
                                         width: 3px;
                                         margin: 0px 2px;
-    
+
                                         &:nth-child(1) {
                                             animation-duration: 474ms;
                                             height: 10px;
                                         }
-    
+
                                         &:nth-child(2) {
                                             animation-duration: 433ms;
                                             height: 15px;
                                         }
-    
+
                                         &:nth-child(3) {
                                             animation-duration: 407ms;
                                             height: 20px;
                                         }
-    
+
                                         &:nth-child(4) {
                                             animation-duration: 458ms;
                                             height: 10px;
@@ -190,21 +194,21 @@ main {
                                     }
                                 }
 
-                                .dialog_box_time{
+                                .dialog_box_time {
                                     margin: 0 5px;
                                     color: $main-color;
                                 }
                             }
 
-                            &.dialogue_left{
-                                .dialogue_avatar{
+                            &.dialogue_left {
+                                .dialogue_avatar {
                                     margin: 0 15px 0 0;
                                 }
 
-                                .dialog_box{
+                                .dialog_box {
                                     background-color: $light_purple;
 
-                                    &::before{
+                                    &::before {
                                         content: "";
                                         position: absolute;
                                         border-width: 8px 0px 8px 8px;
@@ -219,9 +223,10 @@ main {
                                 }
                             }
 
-                            &.dialogue_right{
+                            &.dialogue_right {
                                 justify-content: flex-end;
-                                .dialogue_avatar{
+
+                                .dialogue_avatar {
                                     margin: 0 0 0 15px;
                                     order: 2;
                                     background-color: $grey;
@@ -229,16 +234,16 @@ main {
                                     line-height: 0;
                                     border-radius: 50%;
 
-                                    img{
+                                    img {
                                         line-height: 0;
                                     }
                                 }
 
-                                .dialog_box{
+                                .dialog_box {
                                     background-color: $main-color;
                                     order: 1;
 
-                                    &::before{
+                                    &::before {
                                         content: "";
                                         position: absolute;
                                         border-width: 8px 8px 8px 0px;
@@ -251,20 +256,21 @@ main {
                                         border-top: 8px solid transparent;
                                     }
 
-                                    .dialog_box_icon{
+                                    .dialog_box_icon {
                                         order: 3;
                                         background-color: $white;
                                         color: $main-color;
                                     }
 
-                                    .sound_bar{
+                                    .sound_bar {
                                         order: 2;
-                                        .bar{
+
+                                        .bar {
                                             background-color: $white;
                                         }
                                     }
 
-                                    .dialog_box_time{
+                                    .dialog_box_time {
                                         order: 1;
                                         color: $white;
                                     }
@@ -272,28 +278,9 @@ main {
                             }
                         }
                     }
-
-                    .quiz_select_area{
-                        display: flex;
-                        flex-wrap: wrap;
-
-                        .quiz_select_item{
-                            width: 49%;
-                            margin: 10px auto;
-                            a{
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-                            span{
-                                font-size: 25px;
-                            }
-                            }
-                        }
-                    }
-
-                    .recording_area{
-                        .recording_icon{
+                    
+                    .recording_area {
+                        .recording_icon {
                             background-color: $main-color;
                             width: 60px;
                             height: 60px;
@@ -303,13 +290,64 @@ main {
                             border-radius: 50%;
                             margin: 80px auto 40px;
 
-                            i{
+                            i {
                                 color: $white;
                                 font-size: 40px;
                             }
 
-                            &:hover{
+                            &:hover {
                                 transform: scale(1.05);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.quiz_select{
+                .test_area_right {
+                    border-radius: 10px;
+                    background-color: $white;
+                    border: 1px solid $main-color;
+
+                    .test_area_content{
+                        background-color: transparent;
+                        border: 0px;
+
+                        .quiz_select_area {
+                            display: flex;
+                            flex-wrap: wrap;
+                            width: 90%;
+                            margin: 0 auto;
+    
+                            .quiz_select_item {
+                                width: 100%;
+                                margin: 15px calc(2.5% / 2);
+                                border: 1px solid $main_color;
+                                border-radius: 10px;
+    
+                                
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    padding: 10px 15px;
+                                    border-radius: 10px;
+                                    color: $bright_main_color;
+    
+                                    span {
+                                        font-size: 25px;
+                                        color: $main_color;
+                                    }
+
+                                    &:hover{
+                                        background-color: $main_color;
+                                        color: $white;
+
+                                        span {
+                                            color: $white;
+                                        }
+                                    }
+                                
                             }
                         }
                     }
@@ -335,39 +373,78 @@ main {
 @media screen and (min-width: 500px) {
     main {
         .quiz_page {
-    
+
             .test_area {
                 .test_area_left {
+                    padding: 10px 10px 30px;
+
                     .test_area_left_tittle {
                         margin: 15px 0;
                     }
+
+                    .test_area_left_options {
+
+                        .test_area_left_options_item {
+                            width: 33%;
+                            display: flex;
+                            justify-content: center;
+
+                            &.active {
+                                a {
+                                    &::after {
+                                        top: 100%;
+                                        left: 50%;
+                                        transform: translate(0, 10px);
+                                    }
+                                }
+
+
+                            }
+                        }
+                    }
                 }
-    
+
                 .test_area_right {
-    
+
                     .test_area_right_nav {
-    
+
                         .test_area_right_nav_item {
                             padding: 5px 10px;
                         }
                     }
                 }
+
+                &.quiz_select{
+                    .test_area_right {
+    
+                        .test_area_content{
+    
+                            .quiz_select_area {
+        
+                                .quiz_select_item {
+                                    width: 47.5%;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
-    
+
     }
 }
 
 @media screen and (min-width: 768px) {
     main {
         .quiz_page {
-    
+
             .test_area {
                 justify-content: space-between;
-                .test_area_left {
-                    width: 20%;
-                }
-    
+
+                // .test_area_left {
+                //     width: 20%;
+                // }
+
                 .test_area_right {
 
                     .test_area_right_nav {
@@ -375,49 +452,50 @@ main {
                             padding: 10px;
                             border: 2px solid $main-color;
                             border-bottom: 0px;
-                            transform: translate(-2px , 0);
+                            transform: translate(-2px, 0);
                         }
                     }
-    
+
                     .test_area_content {
                         border: 2px solid $main_color;
-    
+
                         .dialogue_area {
                             .dialogue_block {
                                 margin: 40px 0;
-    
-                                .dialogue_avatar{
+
+                                .dialogue_avatar {
                                     width: 50px;
                                 }
-    
-                                .dialog_box{
+
+                                .dialog_box {
                                     padding: 15px 20px;
-                                    .dialog_box_icon{
+
+                                    .dialog_box_icon {
                                         width: 50px;
                                         height: 50px;
 
-                                        i{
+                                        i {
                                             font-size: 30px;
                                         }
                                     }
-    
+
                                     .sound_bar {
                                         height: 30px;
-        
+
                                         .bar {
-        
+
                                             &:nth-child(1) {
                                                 height: 15px;
                                             }
-        
+
                                             &:nth-child(2) {
                                                 height: 20px;
                                             }
-        
+
                                             &:nth-child(3) {
                                                 height: 30px;
                                             }
-        
+
                                             &:nth-child(4) {
                                                 height: 20px;
                                             }
@@ -425,14 +503,14 @@ main {
                                     }
                                 }
 
-                                &.dialogue_left{
-                                    .dialogue_avatar{
+                                &.dialogue_left {
+                                    .dialogue_avatar {
                                         margin: 0 25px 0 0;
                                     }
-    
-                                    .dialog_box{
-    
-                                        &::before{
+
+                                    .dialog_box {
+
+                                        &::before {
                                             border-width: 10px 0px 10px 10px;
                                             border-right: 10px solid $light_purple;
                                             border-bottom: 10px solid transparent;
@@ -441,17 +519,17 @@ main {
                                         }
                                     }
                                 }
-    
-                                &.dialogue_right{
-                                    .dialogue_avatar{
+
+                                &.dialogue_right {
+                                    .dialogue_avatar {
                                         margin: 0 0 0 25px;
                                     }
-    
-                                    .dialog_box{
+
+                                    .dialog_box {
                                         background-color: $main-color;
                                         order: 1;
 
-                                        &::before{
+                                        &::before {
                                             border-width: 10px 10px 10px 0px;
                                             border-right: 10px solid transparent;
                                             border-bottom: 10px solid transparent;
@@ -462,9 +540,9 @@ main {
                                 }
                             }
                         }
-    
-                        .recording_area{
-                            .recording_icon{
+
+                        .recording_area {
+                            .recording_icon {
                                 background-color: $main-color;
                                 width: 60px;
                                 height: 60px;
@@ -473,8 +551,8 @@ main {
                                 align-items: center;
                                 border-radius: 50%;
                                 margin: 80px auto 40px;
-    
-                                i{
+
+                                i {
                                     color: $white;
                                     font-size: 40px;
                                 }
@@ -484,60 +562,119 @@ main {
                 }
             }
         }
-    
+
     }
 }
 
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+    main {
+        .quiz_page {
+
+            .test_area {
+                justify-content: space-between;
+
+                .test_area_left {
+                    width: 20%;
+                    .test_area_left_options {
+                        .test_area_left_options_item{
+                            width: 100%;
+
+                            &.active {
+                                a {
+
+                                    &::after {
+                                        top: 50%;
+                                        left: 0;
+                                        transform: translate(calc(-100% - 10px), -50%);
+                                    }
+                                }
+    
+    
+                            }
+                        }
+                    }
+                }
+
+                .test_area_right {
+                    width: 75%;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+    }
+}
 
 @media screen and (min-width: 1200px) {
     main {
         .quiz_page {
-    
+
             .test_area {
-                .test_area_left {
-                    width: 20%;
-                }
-    
+
                 .test_area_right {
-                    width: 80%;
 
                     .test_area_right_nav {
-    
+
                         .test_area_right_nav_item {
                             padding: 10px 15px;
                         }
                     }
-    
+
                     .test_area_content {
-    
+
                         .dialogue_area {
                             .dialogue_block {
-    
-                                .dialog_box{
-    
+
+                                .dialog_box {
+
                                     .sound_bar {
                                         height: 40px;
-        
+
                                         .bar {
-        
+
                                             &:nth-child(1) {
                                                 height: 20px;
                                             }
-        
+
                                             &:nth-child(2) {
                                                 height: 25px;
                                             }
-        
+
                                             &:nth-child(3) {
                                                 height: 40px;
                                             }
-        
+
                                             &:nth-child(4) {
                                                 height: 25px;
                                             }
                                         }
                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 1400px){
+    main {
+        .quiz_page {
+    
+            .test_area {
+                &.quiz_select{
+                    .test_area_right {
+    
+                        .test_area_content{
+    
+                            .quiz_select_area {
+        
+                                .quiz_select_item {
+                                    width: 30%;
+                                    margin: 15px calc(3% / 2);
                                 }
                             }
                         }
