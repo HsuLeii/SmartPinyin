@@ -105,7 +105,7 @@ main .input_area .input-group-text.icon_eye { right: 0; cursor: pointer; }
 
 main .input_area .input-group-text.icon_eye:focus ~ .form-control { border-color: transparent; box-shadow: none; color: #314675; outline: solid calc(1em * 2 / 16) rgba(49, 70, 117, 0.6); }
 
-main .input_area .form-control { padding: 10px 45px 10px 62.5px; border-radius: 5px; border-color: grey; }
+main .input_area .form-control { padding: 10px 45px 10px 62.5px; border-radius: 5px; border-color: #ddd; }
 
 main .input_area .form-control .icon_down { top: 50%; right: 0; transform: translate(0, -50%); transition: 0.3s; }
 
@@ -117,15 +117,15 @@ main .input_area .form-control:focus p { color: #314675 !important; }
 
 main .input_area .form-control.show .icon_down { transform: translate(0, -50%) rotate(180deg); color: #314675; }
 
-main .input_area .form-control::placeholder { color: grey; opacity: 1; /* Firefox */ }
+main .input_area .form-control::placeholder { color: #ddd; opacity: 1; /* Firefox */ }
 
-main .input_area .form-control::-ms-input-placeholder { /* Edge 12 -18 */ color: grey; }
+main .input_area .form-control::-ms-input-placeholder { /* Edge 12 -18 */ color: #ddd; }
 
 main .input_area .form-control.form-control-birthday { padding: 0; }
 
 main .input_area .form-control.form-control-birthday i { position: absolute; right: 15px; top: 50%; transform: translate(0, -50%); color: #20221f; }
 
-main .input_area .form-control.form-control-birthday .birthday_input { color: grey; width: 100%; outline: 0; background-color: transparent !important; position: relative; z-index: 1; padding: 10px 0 10px 62.5px; }
+main .input_area .form-control.form-control-birthday .birthday_input { color: #ddd; width: 100%; outline: 0; background-color: transparent !important; position: relative; z-index: 1; padding: 10px 0 10px 62.5px; }
 
 main .input_area .form-control.form-control-birthday .birthday_input::-webkit-date-and-time-value { text-align: left; }
 
@@ -155,7 +155,7 @@ main .input_area .form-control.form-control-birthday:read-only .birthday_input:f
 
 main .input_area .form-control.form-control-birthday:read-only .birthday_input:focus::-webkit-datetime-edit-text, main .input_area .form-control.form-control-birthday:read-only .birthday_input:focus::-webkit-datetime-edit-day-field, main .input_area .form-control.form-control-birthday:read-only .birthday_input:focus::-webkit-datetime-edit-month-field, main .input_area .form-control.form-control-birthday:read-only .birthday_input:focus::-webkit-datetime-edit-year-field { background-color: transparent; color: #20221f; }
 
-main .input_area .form-control p { color: grey; text-align: left; }
+main .input_area .form-control p { color: #ddd; text-align: left; }
 
 main .input_area.input-group-submit .button { display: block; width: 100%; max-width: 500px; border-radius: 50px; border: 1px solid #4dbcbc; border-radius: 5px; margin: 30px auto; cursor: pointer; }
 
@@ -457,7 +457,7 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .d
 
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right { justify-content: flex-end; }
 
-main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialogue_avatar { margin: 0 0 0 15px; order: 2; background-color: grey; padding: 10px; line-height: 0; border-radius: 50%; }
+main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialogue_avatar { margin: 0 0 0 15px; order: 2; background-color: #ddd; padding: 10px; line-height: 0; border-radius: 50%; }
 
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialogue_avatar img { line-height: 0; }
 
@@ -473,25 +473,39 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .d
 
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box .dialog_box_time { order: 1; color: #fff; }
 
+main .quiz_page .test_area .test_area_right .test_area_content .listen_area .listen_sentence label { cursor: pointer; margin: 10px 0; }
+
+main .quiz_page .test_area .test_area_right .test_area_content .listen_area .listen_sentence label:hover { color: #4dbcbc; }
+
+main .quiz_page .test_area .test_area_right .test_area_content .listen_area .listen_sentence label ruby { line-height: 1.5; word-break: break-word; margin: 5px 3px; display: inline-block; text-align: center; }
+
 main .quiz_page .test_area .test_area_right .test_area_content .recording_area .recording_icon { background-color: #314675; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; border-radius: 50%; margin: 80px auto 40px; }
 
 main .quiz_page .test_area .test_area_right .test_area_content .recording_area .recording_icon i { color: #fff; font-size: 40px; }
 
 main .quiz_page .test_area .test_area_right .test_area_content .recording_area .recording_icon:hover { transform: scale(1.05); }
 
-main .quiz_page .test_area.quiz_select .test_area_right { border-radius: 10px; background-color: #fff; border: 1px solid #314675; }
+main .quiz_page .test_area.quiz_select .test_area_right { border-radius: 10px; background-color: #fff; }
 
 main .quiz_page .test_area.quiz_select .test_area_right .test_area_content { background-color: transparent; border: 0px; }
 
-main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz_select_area { display: flex; flex-wrap: wrap; width: 90%; margin: 0 auto; }
+main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz_select_area { display: flex; flex-wrap: wrap; margin: 0 auto; }
 
-main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz_select_area .quiz_select_item { width: 100%; margin: 15px calc(2.5% / 2); border: 1px solid #314675; border-radius: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px 15px; border-radius: 10px; color: #4dbcbc; }
+main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz_select_area .quiz_select_item { width: 100%; margin: 15px calc(2.5% / 2); border: 2px solid #ddd; border-radius: 10px; display: flex; flex-direction: column; padding: 15px 15px; border-radius: 10px; color: #314675; }
 
-main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz_select_area .quiz_select_item span { font-size: 25px; color: #314675; }
+main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz_select_area .quiz_select_item:hover { border: 2px solid #4dbcbc; }
 
-main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz_select_area .quiz_select_item:hover { background-color: #314675; color: #fff; }
+main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz_select_area .quiz_select_item:hover .book_text_title { color: #4dbcbc; }
 
-main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz_select_area .quiz_select_item:hover span { color: #fff; }
+main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz_select_area .quiz_select_item .book_image { margin: 0 auto 15px; }
+
+main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz_select_area .quiz_select_item .book_image img { border-radius: 10px; }
+
+main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz_select_area .quiz_select_item .book_text { color: #20221f; }
+
+main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz_select_area .quiz_select_item .book_text_title { color: #314675; margin: 10px 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; /*autoprefixer:off*/ -webkit-box-orient: vertical; /*autoprefixer:on*/ }
+
+main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz_select_area .quiz_select_item p { margin: 5px 0; }
 
 @keyframes sound { 0% { opacity: .55;
     height: 3px; }
@@ -541,6 +555,13 @@ main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar .bar:nth-child(1) { height: 20px; }
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar .bar:nth-child(2) { height: 25px; }
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar .bar:nth-child(3) { height: 40px; }
-  main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar .bar:nth-child(4) { height: 25px; } }
+  main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar .bar:nth-child(4) { height: 25px; }
+  main .quiz_page .test_area.quiz_select .test_area_right { border-radius: 10px; background-color: #fff; }
+  main .quiz_page .test_area.quiz_select .test_area_right .test_area_content { background-color: transparent; border: 0px; }
+  main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz_select_area { display: flex; flex-wrap: wrap; margin: 0 auto; }
+  main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz_select_area .quiz_select_item { width: calc(33.33333% - 2.5%); }
+  main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz_select_area .quiz_select_item .book_image { margin: 0 auto 15px; }
+  main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz_select_area .quiz_select_item .book_image img { border-radius: 10px; }
+  main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz_select_area .quiz_select_item p { margin: 5px 0; } }
 
 @media screen and (min-width: 1400px) { main .quiz_page .test_area.quiz_select .test_area_right .test_area_content .quiz_select_area .quiz_select_item { width: 30%; margin: 15px calc(3% / 2); } }

@@ -51,8 +51,6 @@ main {
                             }
                         }
 
-
-
                         &.active {
                             a {
                                 color: $bright_main_color;
@@ -287,6 +285,27 @@ main {
                             }
                         }
                     }
+
+                    .listen_area{
+                        .listen_sentence{
+                            label{
+                                cursor: pointer;
+                                margin: 10px 0;
+
+                                &:hover{
+                                    color: $bright_main_color;
+                                }
+
+                                ruby {
+                                    line-height: 1.5;
+                                    word-break: break-word;
+                                    margin: 5px 3px;
+                                    display: inline-block;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
                     
                     .recording_area {
                         .recording_icon {
@@ -316,7 +335,7 @@ main {
                 .test_area_right {
                     border-radius: 10px;
                     background-color: $white;
-                    border: 1px solid $main-color;
+                    // border: 1px solid $main-color;
 
                     .test_area_content{
                         background-color: transparent;
@@ -325,38 +344,54 @@ main {
                         .quiz_select_area {
                             display: flex;
                             flex-wrap: wrap;
-                            width: 90%;
                             margin: 0 auto;
     
                             .quiz_select_item {
                                 width: 100%;
                                 margin: 15px calc(2.5% / 2);
-                                border: 1px solid $main_color;
+                                border: 2px solid $grey;
                                 border-radius: 10px;
-    
-                                
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: center;
-                                    align-items: center;
-                                    padding: 10px 15px;
-                                    border-radius: 10px;
-                                    color: $bright_main_color;
-    
-                                    span {
-                                        font-size: 25px;
-                                        color: $main_color;
-                                    }
+                                display: flex;
+                                flex-direction: column;
+                                padding: 15px 15px;
+                                border-radius: 10px;
+                                color: $main_color;
 
                                     &:hover{
-                                        background-color: $main_color;
-                                        color: $white;
+                                        border: 2px solid $bright_main_color;
 
-                                        span {
-                                            color: $white;
+                                        .book_text_title{
+                                            color: $bright_main_color;
                                         }
                                     }
                                 
+                                    .book_image{
+                                        margin: 0 auto 15px;
+
+                                        img{
+                                            border-radius: 10px;
+                                        }
+                                    }
+
+                                    .book_text{
+                                        color: $main_color_grey;
+                                    }
+
+                                    .book_text_title{
+                                        color: $main_color;
+                                        margin: 10px 0;
+                                        overflow: hidden;
+                          text-overflow: ellipsis;
+                          display: -webkit-box;
+                          -webkit-line-clamp: 2;
+                          /*autoprefixer:off*/
+                          -webkit-box-orient: vertical;
+                          /*autoprefixer:on*/
+                                    }
+
+                                    p{
+                                        margin: 5px 0;
+                                    }
                             }
                         }
                     }
@@ -439,7 +474,6 @@ main {
                 }
             }
         }
-
     }
 }
 
@@ -670,6 +704,41 @@ main {
                                             }
                                         }
                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.quiz_select{
+                    .test_area_right {
+                        border-radius: 10px;
+                        background-color: $white;
+                        // border: 1px solid $main-color;
+    
+                        .test_area_content{
+                            background-color: transparent;
+                            border: 0px;
+    
+                            .quiz_select_area {
+                                display: flex;
+                                flex-wrap: wrap;
+                                margin: 0 auto;
+        
+                                .quiz_select_item {
+                                    width: calc(33.33333% - 2.5%);
+                                    
+                                        .book_image{
+                                            margin: 0 auto 15px;
+    
+                                            img{
+                                                border-radius: 10px;
+                                            }
+                                        }
+    
+                                        p{
+                                            margin: 5px 0;
+                                        }
                                 }
                             }
                         }
