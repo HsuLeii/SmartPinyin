@@ -3,9 +3,10 @@ main {
         margin: 40px auto;
         width: 90%;
 
-        .course_name{
+        .course_name {
             margin: 20px 0;
-            span{
+
+            span {
                 color: $main_color;
                 font-size: 25px;
                 font-weight: bold;
@@ -81,52 +82,108 @@ main {
                 margin: 40px auto;
 
                 .test_area_right_nav {
-                    display: flex;
 
-                    .test_area_right_nav_item {
-                        padding: 5px 3px;
-                        border: 1px solid $main-color;
-                        border-bottom: 0px;
-                        border-radius: 5px 5px 0 0;
-                        background-color: $white;
-                        transform: translate(-1px, 0);
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
 
-                        a {
-                            color: $black;
-
-                            &:hover {
-                                color: $bright_main_color;
-                            }
-
-                        }
-
-                        &:nth-child(1) {
-                            transform: translate(0, 0);
-                        }
-
-                        &:last-child(1) {
-                            border-right: 1px solid $main-color;
-                        }
-
-                        &.active {
-                            background-color: $main-color;
+                        .test_area_right_nav_item {
+                            position: relative;
+                            margin: 0 0 0 10px;
+                            padding: 5px 3px;
+                            border: 0px;
+                            border-radius: 0;
+                            background-color: transparent;
 
                             a {
-                                color: $white;
+                                padding: 3px 5px;
+                                color: $black;
+                                background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
+                                transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
 
                                 &:hover {
-                                    color: $white;
+                                    color: $bright_main_color;
+                                }
+
+                                &:hover,
+                                &:active {
+                                color: $bright_main_color;
+                                background-position: 0 100%;
+                                background-size: 100% 1px;
+                            }
+
+                            }
+
+                            &::after {
+                                position: absolute;
+                                content: "/";
+                                right: 0;
+                                transform: translate(100% , 0);
+                                color: $main_color_grey;
+                            }
+
+                            &:nth-child(4) {
+                                &::after {
+                                    content: "";
+                                }
+                            }
+
+                            &.active {
+                                background-color: transparent;
+                                color: $main-color;
+
+                                a {
+                                    color: $bright_main_color;
                                 }
                             }
                         }
                     }
+
+                    // .test_area_right_nav_item {
+                    //     padding: 5px 3px;
+                    //     border: 1px solid $main-color;
+                    //     border-bottom: 0px;
+                    //     border-radius: 5px 5px 0 0;
+                    //     background-color: $white;
+                    //     transform: translate(-1px, 0);
+
+                    //     a {
+                    //         color: $black;
+
+                    //         &:hover {
+                    //             color: $bright_main_color;
+                    //         }
+
+                    //     }
+
+                    //     &:nth-child(1) {
+                    //         transform: translate(0, 0);
+                    //     }
+
+                    //     &:last-child(1) {
+                    //         border-right: 1px solid $main-color;
+                    //     }
+
+                    //     &.active {
+                    //         background-color: $main-color;
+
+                    //         a {
+                    //             color: $white;
+
+                    //             &:hover {
+                    //                 color: $white;
+                    //             }
+                    //         }
+                    //     }
+                    // }
                 }
 
                 .test_area_content {
-                    border-radius: 0 5px 5px 5px;
+                    border-radius: 5px;
                     border: 1px solid $main_color;
                     padding: 10px;
                     background-color: $white;
+                    margin: 10px auto;
 
                     .dialogue_area {
                         .dialogue_block {
@@ -286,13 +343,13 @@ main {
                         }
                     }
 
-                    .listen_area{
-                        .listen_sentence{
-                            label{
+                    .listen_area {
+                        .listen_sentence {
+                            label {
                                 cursor: pointer;
                                 margin: 10px 0;
 
-                                &:hover{
+                                &:hover {
                                     color: $bright_main_color;
                                 }
 
@@ -306,38 +363,52 @@ main {
                             }
                         }
                     }
-                    
-                    .recording_area {
-                        .recording_icon {
-                            background-color: $main-color;
-                            width: 60px;
-                            height: 60px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            border-radius: 50%;
-                            margin: 80px auto 40px;
 
-                            i {
-                                color: $white;
-                                font-size: 40px;
-                            }
-
-                            &:hover {
-                                transform: scale(1.05);
+                    .toolbar_area{
+                        display: flex;
+                        justify-content: flex-end;
+                        width: 100%;
+                        .btn_icon_area{
+                            .btn_icon{
+                                width: 60px;
+                                    height: 60px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 50%;
+                                    margin: 80px auto 40px;
+                                    background-color: $main-color;
+    
+                                    i {
+                                        color: $white;
+                                        font-size: 40px;
+                                    }
+    
+                                    &:hover {
+                                        transform: scale(1.05);
+                                    }
                             }
                         }
+
+                        .toolbar_item{
+                            background-color: $bright_main_color;
+                            width: calc(50% - 60px);
+                        }
                     }
+
+                    
+
+                    
                 }
             }
 
-            &.quiz_select{
+            &.quiz_select {
                 .test_area_right {
                     border-radius: 10px;
                     background-color: $white;
                     // border: 1px solid $main-color;
 
-                    .test_area_content{
+                    .test_area_content {
                         background-color: transparent;
                         border: 0px;
 
@@ -345,7 +416,7 @@ main {
                             display: flex;
                             flex-wrap: wrap;
                             margin: 0 auto;
-    
+
                             .quiz_select_item {
                                 width: 100%;
                                 margin: 15px calc(2.5% / 2);
@@ -357,41 +428,42 @@ main {
                                 border-radius: 10px;
                                 color: $main_color;
 
-                                    &:hover{
-                                        border: 2px solid $bright_main_color;
+                                &:hover {
+                                    border: 2px solid $bright_main_color;
 
-                                        .book_text_title{
-                                            color: $bright_main_color;
-                                        }
+                                    .book_text_title {
+                                        color: $bright_main_color;
                                     }
-                                
-                                    .book_image{
-                                        margin: 0 auto 15px;
+                                }
 
-                                        img{
-                                            border-radius: 10px;
-                                        }
-                                    }
+                                .book_image {
+                                    margin: 0 auto 15px;
 
-                                    .book_text{
-                                        color: $main_color_grey;
+                                    img {
+                                        border-radius: 10px;
                                     }
+                                }
 
-                                    .book_text_title{
-                                        color: $main_color;
-                                        margin: 10px 0;
-                                        overflow: hidden;
-                          text-overflow: ellipsis;
-                          display: -webkit-box;
-                          -webkit-line-clamp: 2;
-                          /*autoprefixer:off*/
-                          -webkit-box-orient: vertical;
-                          /*autoprefixer:on*/
-                                    }
+                                .book_text {
+                                    color: $main_color_grey;
+                                }
 
-                                    p{
-                                        margin: 5px 0;
-                                    }
+                                .book_text_title {
+                                    color: $main_color;
+                                    margin: 10px 0;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 2;
+                                    /*autoprefixer:off*/
+                                    -webkit-box-orient: vertical;
+                                    // autoprefixer:on
+                                    
+                                }
+
+                                p {
+                                    margin: 5px 0;
+                                }
                             }
                         }
                     }
@@ -458,13 +530,13 @@ main {
                     }
                 }
 
-                &.quiz_select{
+                &.quiz_select {
                     .test_area_right {
-    
-                        .test_area_content{
-    
+
+                        .test_area_content {
+
                             .quiz_select_area {
-        
+
                                 .quiz_select_item {
                                     width: 47.5%;
                                 }
@@ -480,9 +552,10 @@ main {
 @media screen and (min-width: 768px) {
     main {
         .quiz_page {
-            .course_name{
+            .course_name {
                 margin: 30px 0;
-                span{
+
+                span {
                     font-size: 30px;
                 }
             }
@@ -589,24 +662,6 @@ main {
                                 }
                             }
                         }
-
-                        .recording_area {
-                            .recording_icon {
-                                background-color: $main-color;
-                                width: 60px;
-                                height: 60px;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                border-radius: 50%;
-                                margin: 80px auto 40px;
-
-                                i {
-                                    color: $white;
-                                    font-size: 40px;
-                                }
-                            }
-                        }
                     }
                 }
             }
@@ -624,8 +679,9 @@ main {
 
                 .test_area_left {
                     width: 20%;
+
                     .test_area_left_options {
-                        .test_area_left_options_item{
+                        .test_area_left_options_item {
                             width: 100%;
 
                             &.active {
@@ -637,8 +693,8 @@ main {
                                         transform: translate(calc(-100% - 10px), -50%);
                                     }
                                 }
-    
-    
+
+
                             }
                         }
                     }
@@ -657,9 +713,10 @@ main {
 @media screen and (min-width: 1200px) {
     main {
         .quiz_page {
-            .course_name{
+            .course_name {
                 margin: 40px 0;
-                span{
+
+                span {
                     font-size: 40px;
                 }
             }
@@ -710,35 +767,35 @@ main {
                     }
                 }
 
-                &.quiz_select{
+                &.quiz_select {
                     .test_area_right {
                         border-radius: 10px;
                         background-color: $white;
                         // border: 1px solid $main-color;
-    
-                        .test_area_content{
+
+                        .test_area_content {
                             background-color: transparent;
                             border: 0px;
-    
+
                             .quiz_select_area {
                                 display: flex;
                                 flex-wrap: wrap;
                                 margin: 0 auto;
-        
+
                                 .quiz_select_item {
                                     width: calc(33.33333% - 2.5%);
-                                    
-                                        .book_image{
-                                            margin: 0 auto 15px;
-    
-                                            img{
-                                                border-radius: 10px;
-                                            }
+
+                                    .book_image {
+                                        margin: 0 auto 15px;
+
+                                        img {
+                                            border-radius: 10px;
                                         }
-    
-                                        p{
-                                            margin: 5px 0;
-                                        }
+                                    }
+
+                                    p {
+                                        margin: 5px 0;
+                                    }
                                 }
                             }
                         }
@@ -750,18 +807,18 @@ main {
     }
 }
 
-@media screen and (min-width: 1400px){
+@media screen and (min-width: 1400px) {
     main {
         .quiz_page {
-    
+
             .test_area {
-                &.quiz_select{
+                &.quiz_select {
                     .test_area_right {
-    
-                        .test_area_content{
-    
+
+                        .test_area_content {
+
                             .quiz_select_area {
-        
+
                                 .quiz_select_item {
                                     width: 30%;
                                     margin: 15px calc(3% / 2);
@@ -772,6 +829,6 @@ main {
                 }
             }
         }
-    
+
     }
 }
