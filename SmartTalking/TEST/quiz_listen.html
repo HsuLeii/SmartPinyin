@@ -266,9 +266,14 @@
                             </p>
                         </div>
 
-                        
+                        <div class="drag_line">
+                            <div class="line" style="width: 13.1818%; height: 4px;"></div>
+                            <div class="draggable-button"></div>
+                        </div>
 
                         <div class="toolbar_area">
+
+                            
                             <div class="btn_icon_area recording_area">
                                 <button class="btn_icon recording_icon">
                                     <i class="fa-solid fa-play"></i>
@@ -276,8 +281,24 @@
                             </div>
 
                             <div class="toolbar_item">
-                                <i class="fa-solid fa-font"></i>
-                                <i class="fa-solid fa-comments"></i>
+                                <div class="toolbar_item_btn">
+                                    <button class="btn_icon font_icon hide" aria-label="拼音">
+                                        <i class="fa-solid fa-font"></i>
+                                    </button>
+                                </div>
+
+                                <div class="toolbar_item_btn">
+                                    <button class="btn_icon speak_icon" aria-label="語速">
+                                        <i class="fa-solid fa-comments"></i>
+                                    </button>
+                                    <div class="speak_menu_container">
+                                        <p>0.5</p>
+                                        <p>0.75</p>
+                                        <p class="active">1.0</p>
+                                        <p>1.25</p>
+                                        <p>1.5</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -295,28 +316,27 @@
     <!-- this page widgets JS -->
 
     <script>
+
+var pinyinShow = true;
+
         $(document).ready(function () {
             $("header").load("header.html", function () {});
         });
 
-        //按鈕功能
-        $("#micBtn").click(function () {
-            if ($(this).hasClass("play")) {
-                $(this).removeClass("play");
-            } else {
-                $(".instructions_item").removeClass("play");
-                $(this).addClass("play");
-            };
+        $(document).ready(function () {
+            $(".speak_icon").click(function () {
+                $(this).toggleClass("open");
+            });
         });
 
-        $("#playBtn").click(function () {
-            if ($(this).hasClass("play")) {
-                $(this).removeClass("play");
+        //拼音顯示
+        function ShowPinyin() {
+            if (pinyinShow) {
+                $(".listen_area > p > span > label > rt").show();
             } else {
-                $(".instructions_item").removeClass("play");
-                $(this).addClass("play");
-            };
-        });
+                $(".listen_area > p > span > label > rt").hide();
+            }
+        }
     </script>
 
 </body>
