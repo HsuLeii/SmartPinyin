@@ -41,13 +41,19 @@
 
     <main>
         <div class="main quiz_page">
-            <div class="course_name">
-                <span>
-                    第一課
-                </span>
-                <span>
-                    新同學
-                </span>
+            <div class="course_area">
+                <div class="course_name">
+                    <span>
+                        第一課
+                    </span>
+                    <span>
+                        新同學
+                    </span>
+                </div>
+                
+                <div class="course_img">
+                    <img src="../Content/image/photo/book/SB1/L1.png" alt="">
+                </div>
             </div>
 
             <div class="test_area">
@@ -241,7 +247,7 @@
                                         </ruby>。
                                     </label>
                                 </span><br />
-                                
+
                                 <span class="listen_sentence">
                                     <label>老師:大衛第一天來學校。漢文，你能帶大衛認識學校嗎?</label>
                                 </span><br />
@@ -273,9 +279,8 @@
 
                         <div class="toolbar_area">
 
-                            
-                            <div class="btn_icon_area recording_area">
-                                <button class="btn_icon recording_icon">
+                            <div class="btn_icon_area play_area">
+                                <button class="btn_icon play_icon">
                                     <i class="fa-solid fa-play"></i>
                                 </button>
                             </div>
@@ -316,27 +321,37 @@
     <!-- this page widgets JS -->
 
     <script>
-
-var pinyinShow = true;
-
         $(document).ready(function () {
-            $("header").load("header.html", function () {});
+            $("header").load("header.html", function () {
+            $('.nav-study').addClass('active');
+            });
+        });
+        //按鈕功能
+        $(".play_icon").click(function () {
+            $(this).toggleClass("play");
+            if ($(this).hasClass("play")) {
+                $(this).children().removeClass("fa-play");
+                $(this).children().addClass("fa-pause");
+            } else {
+                $(this).children().addClass("fa-play");
+                $(this).children().removeClass("fa-pause");
+            };
         });
 
         $(document).ready(function () {
             $(".speak_icon").click(function () {
                 $(this).toggleClass("open");
             });
-        });
 
-        //拼音顯示
-        function ShowPinyin() {
-            if (pinyinShow) {
-                $(".listen_area > p > span > label > rt").show();
-            } else {
-                $(".listen_area > p > span > label > rt").hide();
-            }
-        }
+            $(".font_icon").click(function () {
+                $(this).toggleClass("hide");
+                if ($(this).hasClass("hide")) {
+                    $("rt").show();
+                } else {
+                    $("rt").hide();
+                }
+            });
+        });
     </script>
 
 </body>

@@ -13,14 +13,17 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <!-- 之後改成正式網址的連結 -->
-    <meta property="og:image" content="https://hsuleii.github.io/SmartPinyin/Diagnosis-Speaking/Content/image/main/og_image.jpg" />
+    <meta property="og:image"
+        content="https://hsuleii.github.io/SmartPinyin/Diagnosis-Speaking/Content/image/main/og_image.jpg" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="SmartTalking中文聽說學習平台" />
     <!-- 之後改成正式網址的連結 -->
-    <meta name="twitter:image" content="https://hsuleii.github.io/SmartPinyin/Diagnosis-Speaking/Content/image/main/og_image.jpg" />
+    <meta name="twitter:image"
+        content="https://hsuleii.github.io/SmartPinyin/Diagnosis-Speaking/Content/image/main/og_image.jpg" />
     <meta itemprop="name" content="SmartTalking中文聽說學習平台">
     <!-- 之後改成正式網址的連結 -->
-    <meta itemprop="image" content="https://hsuleii.github.io/SmartPinyin/Diagnosis-Speaking/Content/image/main/og_image.jpg">
+    <meta itemprop="image"
+        content="https://hsuleii.github.io/SmartPinyin/Diagnosis-Speaking/Content/image/main/og_image.jpg">
     <link rel="shortcut icon" type="image/x-icon" href="../Content/image/favicon.ico" />
 
 
@@ -38,13 +41,19 @@
 
     <main>
         <div class="main quiz_page">
-            <div class="course_name">
-                        <span>
-                            第一課 
-                        </span>
-                        <span>
-                            新同學
-                        </span>
+            <div class="course_area">
+                <div class="course_name">
+                    <span>
+                        第一課
+                    </span>
+                    <span>
+                        新同學
+                    </span>
+                </div>
+
+                <div class="course_img">
+                    <img src="../Content/image/photo/book/SB1/L1.png" alt="">
+                </div>
             </div>
 
             <div class="test_area">
@@ -203,10 +212,17 @@
                             </div>
                         </div>
 
-                        <div class="btn_icon_area">
-                            <button class="btn_icon">
-                                <i class="fa-solid fa-microphone"></i>
-                            </button>
+                        <div class="toolbar_area">
+
+                            <div class="btn_icon_area recording_area">
+                                <button class="btn_icon recording_icon">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </button>
+                            </div>
+
+                            <div class="toolbar_item">
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -224,25 +240,20 @@
 
     <script>
         $(document).ready(function () {
-            $("header").load("header.html", function () {});
+            $("header").load("header.html", function () {
+            $('.nav-study').addClass('active');
+            });
         });
 
         //按鈕功能
-        $("#micBtn").click(function () {
+        $(".recording_icon").click(function () {
+            $(this).toggleClass("play");
             if ($(this).hasClass("play")) {
-                $(this).removeClass("play");
+                $(this).children().removeClass("fa-microphone");
+                $(this).children().addClass("fa-stop");
             } else {
-                $(".instructions_item").removeClass("play");
-                $(this).addClass("play");
-            };
-        });
-
-        $("#playBtn").click(function () {
-            if ($(this).hasClass("play")) {
-                $(this).removeClass("play");
-            } else {
-                $(".instructions_item").removeClass("play");
-                $(this).addClass("play");
+                $(this).children().addClass("fa-microphone");
+                $(this).children().removeClass("fa-stop");
             };
         });
     </script>
