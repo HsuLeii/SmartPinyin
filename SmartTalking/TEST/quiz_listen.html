@@ -50,7 +50,7 @@
                         新同學
                     </span>
                 </div>
-                
+
                 <div class="course_img">
                     <img src="../Content/image/photo/book/SB1/L1.png" alt="">
                 </div>
@@ -60,27 +60,38 @@
                 <div class="test_area_left">
                     <div class="test_area_left_tittle">
                         <p>
-                            全方位中文：
+                            課本3：
                         </p>
                     </div>
                     <div class="test_area_left_options">
-                        <div class="test_area_left_options_item">
-                            <a href="">
-                                全方位中文 1
-                            </a>
-                        </div>
-                        <div class="test_area_left_options_item">
-                            <a href="">
-                                全方位中文 2
-                            </a>
-                        </div>
                         <div class="test_area_left_options_item active">
                             <a href="">
-                                全方位中文 3
+                                新同學
+                            </a>
+                        </div>
+                        <div class="test_area_left_options_item">
+                            <a href="">
+                                到商場怎麼走？
+                            </a>
+                        </div>
+                        <div class="test_area_left_options_item">
+                            <a href="">
+                                我來台灣三個月了
+                            </a>
+                        </div>
+                        <div class="test_area_left_options_item">
+                            <a href="">
+                                歡迎來我家
+                            </a>
+                        </div>
+                        <div class="test_area_left_options_item">
+                            <a href="">
+                                找房子
                             </a>
                         </div>
                     </div>
                 </div>
+
                 <div class="test_area_right">
                     <!-- <div class="test_area_right_nav">
                         <div class="test_area_right_nav_item active">
@@ -272,10 +283,10 @@
                             </p>
                         </div>
 
-                        <div class="drag_line">
+                        <!-- <div class="drag_line">
                             <div class="line" style="width: 13.1818%; height: 4px;"></div>
                             <div class="draggable-button"></div>
-                        </div>
+                        </div> -->
 
                         <div class="toolbar_area">
 
@@ -297,11 +308,9 @@
                                         <i class="fa-solid fa-comments"></i>
                                     </button>
                                     <div class="speak_menu_container">
-                                        <p>0.5</p>
-                                        <p>0.75</p>
-                                        <p class="active">1.0</p>
-                                        <p>1.25</p>
-                                        <p>1.5</p>
+                                        <p>慢</p>
+                                        <p class="active">中</p>
+                                        <p>快</p>
                                     </div>
                                 </div>
                             </div>
@@ -323,9 +332,10 @@
     <script>
         $(document).ready(function () {
             $("header").load("header.html", function () {
-            $('.nav-study').addClass('active');
+                $('.nav-study').addClass('active');
             });
         });
+
         //按鈕功能
         $(".play_icon").click(function () {
             $(this).toggleClass("play");
@@ -336,9 +346,7 @@
                 $(this).children().addClass("fa-play");
                 $(this).children().removeClass("fa-pause");
             };
-        });
 
-        $(document).ready(function () {
             $(".speak_icon").click(function () {
                 $(this).toggleClass("open");
             });

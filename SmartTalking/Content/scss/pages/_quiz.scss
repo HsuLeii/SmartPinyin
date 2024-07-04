@@ -43,6 +43,12 @@ main {
 
                 .test_area_left_tittle {
                     margin: 10px 0;
+
+                    p{
+                        font-size: 20px;
+                        font-weight: bold;
+                        color:$main_color;
+                    }
                 }
 
                 .test_area_left_options {
@@ -97,6 +103,17 @@ main {
             .test_area_right {
                 width: 100%;
                 margin: 40px auto;
+                padding: 20px;
+
+                .test_area_right_tittle {
+                    margin: 10px 0;
+
+                    p{
+                        font-size: 20px;
+                        font-weight: bold;
+                        color:$main_color;
+                    }
+                }
 
                 .test_area_right_nav {
                     margin: 0 auto 30px;
@@ -200,7 +217,7 @@ main {
                 .test_area_content {
                     border-radius: 5px;
                     border: 1px solid $main_color;
-                    background-color: $white;
+                    background-color: $test_bg;
                     margin: 10px auto;
 
                     .dialogue_area {
@@ -256,6 +273,7 @@ main {
                                         height: 0px;
                                         width: 3px;
                                         margin: 0px 2px;
+                                        border-radius: 50px;
 
                                         &:nth-child(1) {
                                             animation-duration: 474ms;
@@ -406,12 +424,29 @@ main {
                     }
 
                     .toolbar_area {
+                        position: relative;
+                        z-index: 1;
                         display: flex;
                         justify-content: flex-end;
                         padding: 10px;
-                        margin: 40px auto 20px;
-                        border-top: 1px solid $main_color;
-                        padding: 20px 0 0;
+                        margin: 40px auto 0;
+                        padding: 20px 0;
+                        background-color: $white;
+                        border-radius: 50px 50px 5px 5px;
+
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            z-index: -1;
+                            top: 0;
+                            left: 0;
+                            transform: translate(-1px , 0);
+                            width: calc(100% + 2px);
+                            height: 100%;
+                            border: 1px solid $main_color;
+                            border-bottom: 0px;
+                            border-radius: 50px 50px 0 0;
+                        }
 
                         .btn_icon_area {
                             .btn_icon {
@@ -628,7 +663,7 @@ main {
 
             .test_area {
                 .test_area_left {
-                    padding: 10px 10px 30px;
+                    padding: 20px 15px 40px;
 
                     .test_area_left_tittle {
                         margin: 15px 0;
@@ -656,6 +691,10 @@ main {
                 }
 
                 .test_area_right {
+
+                    .test_area_right_tittle {
+                        margin: 15px 0;
+                    }
 
                     .test_area_right_nav {
 
@@ -699,6 +738,7 @@ main {
 
                 .course_img{
                     width: 180px;
+                    margin: 0;
                     border: 2px solid $main_color;
                 }
             }
@@ -706,11 +746,20 @@ main {
             .test_area {
                 justify-content: space-between;
 
-                // .test_area_left {
-                //     width: 20%;
-                // }
+                .test_area_left {
+                    .test_area_left_tittle{
+                        p{
+                            font-size: 25px;
+                        }
+                    }
+                }
 
                 .test_area_right {
+                    .test_area_right_tittle{
+                        p{
+                            font-size: 25px;
+                        }
+                    }
 
                     .test_area_right_nav {
                         .test_area_right_nav_item {
@@ -807,7 +856,12 @@ main {
                         }
 
                         .toolbar_area {
-                            border-top: 2px solid $main_color;
+                            &::before{
+                                transform: translate(-2px , 0);
+                                width: calc(100% + 4px);
+                                border: 2px solid $main_color;
+                                border-bottom: 0px;
+                            }
                         }
                     }
                 }
@@ -825,12 +879,13 @@ main {
                 justify-content: space-between;
 
                 .test_area_left {
-                    width: 20%;
+                    width: 25%;
 
                     .test_area_left_options {
                         .test_area_left_options_item {
                             width: 100%;
                             margin: 5px 0;
+                            justify-content: flex-start;
 
                             a {
                                 padding: 10px 0;
@@ -853,7 +908,7 @@ main {
                 }
 
                 .test_area_right {
-                    width: 75%;
+                    width: 70%;
                     margin: 0;
 
                     .test_area_right_nav {

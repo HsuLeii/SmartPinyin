@@ -60,27 +60,38 @@
                 <div class="test_area_left">
                     <div class="test_area_left_tittle">
                         <p>
-                            全方位中文：
+                            課本3：
                         </p>
                     </div>
                     <div class="test_area_left_options">
-                        <div class="test_area_left_options_item">
-                            <a href="">
-                                全方位中文 1
-                            </a>
-                        </div>
-                        <div class="test_area_left_options_item">
-                            <a href="">
-                                全方位中文 2
-                            </a>
-                        </div>
                         <div class="test_area_left_options_item active">
                             <a href="">
-                                全方位中文 3
+                                新同學
+                            </a>
+                        </div>
+                        <div class="test_area_left_options_item">
+                            <a href="">
+                                到商場怎麼走？
+                            </a>
+                        </div>
+                        <div class="test_area_left_options_item">
+                            <a href="">
+                                我來台灣三個月了
+                            </a>
+                        </div>
+                        <div class="test_area_left_options_item">
+                            <a href="">
+                                歡迎來我家
+                            </a>
+                        </div>
+                        <div class="test_area_left_options_item">
+                            <a href="">
+                                找房子
                             </a>
                         </div>
                     </div>
                 </div>
+
                 <div class="test_area_right">
                     <!-- <div class="test_area_right_nav">
                         <div class="test_area_right_nav_item">
@@ -106,12 +117,12 @@
                     </div> -->
                     <nav class="test_area_right_nav">
                         <ul>
-                            <li class="test_area_right_nav_item active">
+                            <li class="test_area_right_nav_item">
                                 <a href="">
                                     聆聽課文
                                 </a>
                             </li>
-                            <li class="test_area_right_nav_item">
+                            <li class="test_area_right_nav_item active">
                                 <a href="">
                                     課文朗讀
                                 </a>
@@ -220,9 +231,7 @@
                                 </button>
                             </div>
 
-                            <div class="toolbar_item">
-
-                            </div>
+                            <div class="toolbar_item"></div>
                         </div>
                     </div>
                 </div>
@@ -241,20 +250,20 @@
     <script>
         $(document).ready(function () {
             $("header").load("header.html", function () {
-            $('.nav-study').addClass('active');
+                $('.nav-study').addClass('active');
             });
-        });
 
-        //按鈕功能
-        $(".recording_icon").click(function () {
-            $(this).toggleClass("play");
-            if ($(this).hasClass("play")) {
-                $(this).children().removeClass("fa-microphone");
-                $(this).children().addClass("fa-stop");
-            } else {
-                $(this).children().addClass("fa-microphone");
-                $(this).children().removeClass("fa-stop");
-            };
+            //按鈕功能
+            $(".recording_icon").click(function () {
+                $(this).toggleClass("play");
+                if ($(this).hasClass("play")) {
+                    $(this).children().removeClass("fa-microphone");
+                    $(this).children().addClass("fa-stop");
+                } else {
+                    $(this).children().addClass("fa-microphone");
+                    $(this).children().removeClass("fa-stop");
+                };
+            });
         });
     </script>
 
