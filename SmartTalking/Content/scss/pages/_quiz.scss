@@ -3,7 +3,7 @@ main {
         margin: 40px auto;
         width: 90%;
 
-        .course_area{
+        .course_area {
             display: flex;
             justify-content: space-between;
             flex-direction: column;
@@ -17,13 +17,13 @@ main {
                 }
             }
 
-            .course_img{
+            .course_img {
                 width: 150px;
                 margin: 20px 0;
                 border-radius: 10px;
                 border: 1px solid $main_color;
 
-                img{
+                img {
                     border-radius: 10px;
                 }
             }
@@ -44,10 +44,10 @@ main {
                 .test_area_left_tittle {
                     margin: 10px 0;
 
-                    p{
+                    p {
                         font-size: 20px;
                         font-weight: bold;
-                        color:$main_color;
+                        color: $main_color;
                     }
                 }
 
@@ -61,7 +61,7 @@ main {
                         width: 100%;
 
                         a {
-                            display:block;
+                            display: block;
                             padding: 7px 0;
                             margin: 7px 0;
                             position: relative;
@@ -81,6 +81,15 @@ main {
                             a {
                                 color: $bright_main_color;
                                 font-weight: bold;
+                                cursor: auto;
+
+                                &:hover,
+                                &:active {
+                                    color: $bright_main_color;
+                                    background-position: 0 0;
+                                    background-size: 0 0;
+                                }
+
 
                                 // &::after {
                                 //     content: "";
@@ -94,6 +103,7 @@ main {
                                 //     border-radius: 50%;
                                 //     background-color: $bright_main_color;
                                 // }
+
                             }
                         }
                     }
@@ -108,10 +118,10 @@ main {
                 .test_area_right_tittle {
                     margin: 10px 0;
 
-                    p{
+                    p {
                         font-size: 20px;
                         font-weight: bold;
-                        color:$main_color;
+                        color: $main_color;
                     }
                 }
 
@@ -167,9 +177,18 @@ main {
                                 background-color: transparent;
                                 color: $main-color;
 
+
                                 a {
                                     color: $bright_main_color;
                                     font-weight: bold;
+                                    cursor: auto;
+
+                                    &:hover,
+                                    &:active {
+                                        color: $bright_main_color;
+                                        background-position: 0 0;
+                                        background-size: 0 0;
+                                    }
                                 }
                             }
                         }
@@ -220,42 +239,42 @@ main {
                     background-color: $test_bg;
                     margin: 10px auto;
 
-                    .dialogue_choose_caption{
+                    .dialogue_choose_caption {
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         width: 90%;
                         margin: 20px auto;
 
-                        .dialogue_choose_avatar{
+                        .dialogue_choose_avatar {
                             width: 40px;
                             margin: 0 15px 0 0;
                         }
 
-                        .dialogue_choose_text{
+                        .dialogue_choose_text {
                             display: flex;
-                                align-items: center;
-                                padding: 12px 15px;
-                                border-radius: 5px;
-                                position: relative;
-                                background-color: $white;
+                            align-items: center;
+                            padding: 12px 15px;
+                            border-radius: 5px;
+                            position: relative;
+                            background-color: $white;
 
-                                &::before {
-                                    content: "";
-                                    position: absolute;
-                                    border-width: 8px 0px 8px 8px;
-                                    left: 0;
-                                    top: 50%;
-                                    transform: translate(-100%, -50%);
-                                    border-right: 8px solid $white;
-                                    border-bottom: 8px solid transparent;
-                                    border-left: 8px solid transparent;
-                                    border-top: 8px solid transparent;
-                                }
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                border-width: 8px 0px 8px 8px;
+                                left: 0;
+                                top: 50%;
+                                transform: translate(-100%, -50%);
+                                border-right: 8px solid $white;
+                                border-bottom: 8px solid transparent;
+                                border-left: 8px solid transparent;
+                                border-top: 8px solid transparent;
+                            }
                         }
                     }
-                    
-                    .input_area_form{
+
+                    .input_area_form {
                         width: 90%;
                         margin: 0 auto;
                     }
@@ -474,13 +493,13 @@ main {
                         background-color: $white;
                         border-radius: 50px 50px 5px 5px;
 
-                        &::before{
+                        &::before {
                             content: "";
                             position: absolute;
                             z-index: -1;
                             top: 0;
                             left: 0;
-                            transform: translate(-1px , 0);
+                            transform: translate(-1px, 0);
                             width: calc(100% + 2px);
                             height: 100%;
                             border: 1px solid $main_color;
@@ -490,8 +509,8 @@ main {
 
                         .btn_icon_area {
                             .btn_icon {
-                                width: 65px;
-                                height: 65px;
+                                width: 55px;
+                                height: 55px;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
@@ -500,7 +519,7 @@ main {
 
                                 i {
                                     color: $white;
-                                    font-size: 40px;
+                                    font-size: 30px;
                                 }
 
                                 &:hover {
@@ -520,14 +539,14 @@ main {
                                 position: relative;
 
                                 .btn_icon {
-                                    margin: 0 10px;
+                                    margin: 0 5px;
                                     border-radius: 50%;
                                     border: 1px solid $main_color;
-                                    width: 45px;
-                                    height: 45px;
+                                    width: 30px;
+                                    height: 30px;
 
                                     i {
-                                        font-size: 25px;
+                                        font-size: 15px;
                                         color: $main_color;
                                     }
 
@@ -544,7 +563,7 @@ main {
                                                 top: 50%;
                                                 left: 50%;
                                                 transform: translate(-50%, -50%) rotate(45deg);
-                                                width: 60px;
+                                                width: 40px;
                                                 height: 2px;
                                                 background-color: $main_color;
                                                 opacity: 1;
@@ -552,9 +571,9 @@ main {
                                         }
                                     }
 
-                                    &.speak_icon{
-                                        &.open{
-                                            &~.speak_menu_container{
+                                    &.speak_icon {
+                                        &.open {
+                                            &~.speak_menu_container {
                                                 display: block;
                                             }
                                         }
@@ -563,36 +582,45 @@ main {
 
                                 .speak_menu_container {
                                     position: absolute;
+                                    left: 50%;
+                                    transform: translate(-50% , 0);
                                     z-index: 1;
                                     color: $main_color;
                                     background-color: $white;
                                     border: 2px solid $main_color;
                                     border-radius: 4px;
-                                    min-width: 70px;
+                                    min-width: 100px;
                                     text-align: center;
                                     bottom: 100%;
                                     padding: 5px 10px;
                                     margin-bottom: 11px;
                                     display: none;
-                                    
-                                    p{
+
+                                    p {
                                         margin: 5px;
                                         cursor: pointer;
                                         background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
                                         transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
 
 
-                                        &.active{
+                                        &.active {
                                             color: $bright_main_color;
                                             font-weight: bold;
+
+                                            &:hover,
+                                            &:active {
+                                            cursor: auto;
+                                            background-position: 0 0;
+                                            background-size: 0 0;
+                                        }
                                         }
 
                                         &:hover,
-                            &:active {
-                                color: $bright_main_color;
-                                background-position: 0 100%;
-                                background-size: 100% 1px;
-                            }
+                                        &:active {
+                                            color: $bright_main_color;
+                                            background-position: 0 100%;
+                                            background-size: 100% 1px;
+                                        }
                                     }
 
                                     &::before {
@@ -767,7 +795,7 @@ main {
 @media screen and (min-width: 768px) {
     main {
         .quiz_page {
-            .course_area{
+            .course_area {
                 flex-direction: row;
                 margin: 30px 0;
 
@@ -777,27 +805,27 @@ main {
                     }
                 }
 
-                .course_img{
+                .course_img {
                     width: 180px;
                     margin: 0;
                     border: 2px solid $main_color;
                 }
             }
-            
+
             .test_area {
                 justify-content: space-between;
 
                 .test_area_left {
-                    .test_area_left_tittle{
-                        p{
+                    .test_area_left_tittle {
+                        p {
                             font-size: 25px;
                         }
                     }
                 }
 
                 .test_area_right {
-                    .test_area_right_tittle{
-                        p{
+                    .test_area_right_tittle {
+                        p {
                             font-size: 25px;
                         }
                     }
@@ -813,14 +841,15 @@ main {
 
                     .test_area_content {
                         border: 2px solid $main_color;
-                        .dialogue_choose_caption{
+
+                        .dialogue_choose_caption {
                             margin: 40px auto;
-    
-                            .dialogue_choose_avatar{
+
+                            .dialogue_choose_avatar {
                                 width: 50px;
                             }
-    
-                            .dialogue_choose_text{
+
+                            .dialogue_choose_text {
                                 padding: 15px 20px;
                             }
                         }
@@ -908,11 +937,53 @@ main {
                         }
 
                         .toolbar_area {
-                            &::before{
-                                transform: translate(-2px , 0);
+                            &::before {
+                                transform: translate(-2px, 0);
                                 width: calc(100% + 4px);
                                 border: 2px solid $main_color;
                                 border-bottom: 0px;
+                            }
+
+                            .btn_icon_area {
+                                .btn_icon {
+                                    width: 65px;
+                                    height: 65px;
+    
+                                    i {
+                                        font-size: 40px;
+                                    }
+                                }
+                            }
+
+                            .toolbar_item {
+                                width: calc(40% - 30px);
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                margin: 0 5%;
+    
+                                .toolbar_item_btn {
+                                    position: relative;
+    
+                                    .btn_icon {
+                                        margin: 0 10px;
+                                        width: 40px;
+                                        height: 40px;
+    
+                                        i {
+                                            font-size: 25px;
+                                        }
+    
+                                        &.font_icon {
+    
+                                            &.hide {
+                                                &:after {
+                                                    width: 60px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -966,9 +1037,9 @@ main {
 
                     .test_area_right_nav {
                         margin: 0 auto 20px;
-    
+
                         ul {
-                            
+
                             .test_area_right_nav_item {
                                 a {
                                     padding: 3px 5px 10px;
@@ -986,7 +1057,7 @@ main {
 @media screen and (min-width: 1200px) {
     main {
         .quiz_page {
-            .course_area{
+            .course_area {
                 margin: 40px 0;
 
                 .course_name {
@@ -995,11 +1066,11 @@ main {
                     }
                 }
 
-                .course_img{
+                .course_img {
                     width: 250px;
                 }
             }
-            
+
             .test_area {
 
                 .test_area_right {
