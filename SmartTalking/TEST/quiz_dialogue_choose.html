@@ -140,103 +140,46 @@
                         </ul>
                     </nav>
                     <div class="test_area_content">
-                        <div class="dialogue_choose_avatar">
-                            <img src="../Content/image/photo/avatar/robot.svg" alt="">
-                        </div>
-                        <p>請選擇您想練習的角色及語速</p>
-                        <div class="dialogue_area">
-                            <div class="dialogue_block dialogue_left">
-                                <div class="dialogue_avatar">
-                                    <img src="../Content/image/photo/avatar/robot.svg" alt="">
-                                </div>
-                                <div class="dialog_box">
-                                    <button class="dialog_box_icon">
-                                        <i class="fa-solid fa-play"></i>
-                                    </button>
-                                    <div class="sound_bar">
-                                        <!-- 播放時class加上"play_animation" -->
-                                        <div class="bar"></div>
-                                        <div class="bar"></div>
-                                        <div class="bar"></div>
-                                        <div class="bar"></div>
-                                    </div>
-                                    <div class="dialog_box_time">
-                                        <p>00:04</p>
-                                    </div>
-                                </div>
+                        <div class="dialogue_choose_caption">
+                            <div class="dialogue_choose_avatar">
+                                <img src="../Content/image/photo/avatar/robot.svg" alt="">
                             </div>
-                            <div class="dialogue_block dialogue_right">
-                                <div class="dialogue_avatar">
-                                    <img src="../Content/image/photo/avatar/user.svg" alt="">
-                                </div>
-                                <div class="dialog_box">
-                                    <button class="dialog_box_icon">
-                                        <i class="fa-solid fa-play"></i>
-                                    </button>
-                                    <div class="sound_bar">
-                                        <!-- 播放時class加上"play_animation" -->
-                                        <div class="bar"></div>
-                                        <div class="bar"></div>
-                                        <div class="bar"></div>
-                                        <div class="bar"></div>
-                                    </div>
-                                    <div class="dialog_box_time">
-                                        <p>00:04</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dialogue_block dialogue_left">
-                                <div class="dialogue_avatar">
-                                    <img src="../Content/image/photo/avatar/robot.svg" alt="">
-                                </div>
-                                <div class="dialog_box">
-                                    <button class="dialog_box_icon">
-                                        <i class="fa-solid fa-play"></i>
-                                    </button>
-                                    <div class="sound_bar">
-                                        <!-- 播放時class加上"play_animation" -->
-                                        <div class="bar"></div>
-                                        <div class="bar"></div>
-                                        <div class="bar"></div>
-                                        <div class="bar"></div>
-                                    </div>
-                                    <div class="dialog_box_time">
-                                        <p>00:04</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dialogue_block dialogue_right">
-                                <div class="dialogue_avatar">
-                                    <img src="../Content/image/photo/avatar/user.svg" alt="">
-                                </div>
-                                <div class="dialog_box">
-                                    <button class="dialog_box_icon">
-                                        <i class="fa-solid fa-play"></i>
-                                    </button>
-                                    <div class="sound_bar">
-                                        <!-- 播放時class加上"play_animation" -->
-                                        <div class="bar"></div>
-                                        <div class="bar"></div>
-                                        <div class="bar"></div>
-                                        <div class="bar"></div>
-                                    </div>
-                                    <div class="dialog_box_time">
-                                        <p>00:04</p>
-                                    </div>
-                                </div>
+                            <div class="dialogue_choose_text">
+                                <p>請選擇您想練習的角色及語速</p>
                             </div>
                         </div>
 
-                        <div class="toolbar_area">
-
-                            <div class="btn_icon_area recording_area">
-                                <button class="btn_icon recording_icon">
-                                    <i class="fa-solid fa-microphone"></i>
-                                </button>
+                        <form action="" class="input_area_form">
+                            <div class="input_area">
+                                <label class="input-group-label" for="figure">角色：</label>
+                                <label class="radio-inline">
+                                    <input id="figure1" type="radio" value="0" name="figure">老師
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="figure2" type="radio" value="1" name="figure">大衛
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="figure3" type="radio" value="2" name="figure">漢文
+                                </label>
                             </div>
 
-                            <div class="toolbar_item"></div>
-                        </div>
+                            <div class="input_area">
+                                <label class="input-group-label" for="speed">語速：</label>
+                                <label class="radio-inline">
+                                    <input id="speed1" type="radio" value="0" checked="" name="speed">慢
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="speed2" type="radio" value="1" name="speed">正常
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="speed3" type="radio" value="2" name="speed">快
+                                </label>
+                            </div>
+
+                            <div class="input_area input-group-submit">
+                                <button id="submit" class="input-group-submit-btn" type="submit"><p>開始</p></button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

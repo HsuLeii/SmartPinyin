@@ -57,11 +57,13 @@ main {
                     width: 100%;
 
                     .test_area_left_options_item {
-                        padding: 0px 0px 0px 20px;
+                        padding: 0px 10px;
                         width: 100%;
 
                         a {
-                            padding: 15px 0;
+                            display:block;
+                            padding: 7px 0;
+                            margin: 7px 0;
                             position: relative;
                             color: $main_color_grey;
                             background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
@@ -80,21 +82,19 @@ main {
                                 color: $bright_main_color;
                                 font-weight: bold;
 
-                                &::after {
-                                    content: "";
-                                    position: absolute;
-                                    top: 50%;
-                                    left: 0;
-                                    transform: translate(calc(-100% - 10px), -50%);
+                                // &::after {
+                                //     content: "";
+                                //     position: absolute;
+                                //     top: 50%;
+                                //     left: 0;
+                                //     transform: translate(calc(-100% - 10px), -50%);
 
-                                    width: 7px;
-                                    height: 7px;
-                                    border-radius: 50%;
-                                    background-color: $bright_main_color;
-                                }
+                                //     width: 7px;
+                                //     height: 7px;
+                                //     border-radius: 50%;
+                                //     background-color: $bright_main_color;
+                                // }
                             }
-
-
                         }
                     }
                 }
@@ -124,8 +124,8 @@ main {
 
                         .test_area_right_nav_item {
                             position: relative;
-                            margin: 0 0 0 10px;
                             padding: 5px 3px;
+                            margin: 7px 0 7px 10px;
                             border: 0px;
                             border-radius: 0;
                             background-color: transparent;
@@ -219,6 +219,46 @@ main {
                     border: 1px solid $main_color;
                     background-color: $test_bg;
                     margin: 10px auto;
+
+                    .dialogue_choose_caption{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 90%;
+                        margin: 20px auto;
+
+                        .dialogue_choose_avatar{
+                            width: 40px;
+                            margin: 0 15px 0 0;
+                        }
+
+                        .dialogue_choose_text{
+                            display: flex;
+                                align-items: center;
+                                padding: 12px 15px;
+                                border-radius: 5px;
+                                position: relative;
+                                background-color: $white;
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    border-width: 8px 0px 8px 8px;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translate(-100%, -50%);
+                                    border-right: 8px solid $white;
+                                    border-bottom: 8px solid transparent;
+                                    border-left: 8px solid transparent;
+                                    border-top: 8px solid transparent;
+                                }
+                        }
+                    }
+                    
+                    .input_area_form{
+                        width: 90%;
+                        margin: 0 auto;
+                    }
 
                     .dialogue_area {
                         width: 90%;
@@ -672,20 +712,21 @@ main {
                     .test_area_left_options {
 
                         .test_area_left_options_item {
-                            width: 33%;
+                            width: auto;
+                            margin: 5px 0;
                             display: flex;
                             justify-content: center;
 
-                            &.active {
-                                a {
-                                    &::after {
-                                        top: 100%;
-                                        left: 50%;
-                                        transform: translate(0, 10px);
-                                    }
-                                }
+                            // &.active {
+                            //     a {
+                            //         &::after {
+                            //             top: 100%;
+                            //             left: 50%;
+                            //             transform: translate(0, 10px);
+                            //         }
+                            //     }
 
-                            }
+                            // }
                         }
                     }
                 }
@@ -772,6 +813,17 @@ main {
 
                     .test_area_content {
                         border: 2px solid $main_color;
+                        .dialogue_choose_caption{
+                            margin: 40px auto;
+    
+                            .dialogue_choose_avatar{
+                                width: 50px;
+                            }
+    
+                            .dialogue_choose_text{
+                                padding: 15px 20px;
+                            }
+                        }
 
                         .dialogue_area {
                             .dialogue_block {
@@ -885,6 +937,7 @@ main {
                         .test_area_left_options_item {
                             width: 100%;
                             margin: 5px 0;
+                            padding: 0 0 0 20px;
                             justify-content: flex-start;
 
                             a {
