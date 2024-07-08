@@ -292,12 +292,32 @@ main {
                                 width: 40px;
                             }
 
+                            .dialog_record {
+                                .dialog_box_icon {
+                                    margin: 0 10px;
+                                    width: 30px;
+                                    height: 30px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    background-color: $main-color;
+                                    background-color: #38ac61;
+                                    color: $white;
+                                    border-radius: 50%;
+
+                                    &:hover {
+                                        transform: scale(1.05);
+                                    }
+                                }
+                            }
+
                             .dialog_box {
                                 display: flex;
                                 align-items: center;
                                 padding: 12px 15px;
                                 border-radius: 5px;
                                 position: relative;
+                                max-width: 60%;
 
                                 .dialog_box_icon {
                                     margin: 0 10px;
@@ -313,6 +333,11 @@ main {
                                     &:hover {
                                         transform: scale(1.05);
                                     }
+                                }
+
+                                .dialog_box_text {
+                                    width: calc(100% - 70px);
+                                    margin: 0 10px;
                                 }
 
                                 .sound_bar {
@@ -365,6 +390,10 @@ main {
                             &.dialogue_left {
                                 .dialogue_avatar {
                                     margin: 0 15px 0 0;
+                                }
+
+                                .dialog_record {
+                                    order: 2;
                                 }
 
                                 .dialog_box {
@@ -422,6 +451,10 @@ main {
                                         order: 3;
                                         background-color: $white;
                                         color: $main-color;
+                                    }
+
+                                    .dialog_box_text {
+                                        color: $white;
                                     }
 
                                     .sound_bar {
@@ -583,7 +616,7 @@ main {
                                 .speak_menu_container {
                                     position: absolute;
                                     left: 50%;
-                                    transform: translate(-50% , 0);
+                                    transform: translate(-50%, 0);
                                     z-index: 1;
                                     color: $main_color;
                                     background-color: $white;
@@ -609,10 +642,10 @@ main {
 
                                             &:hover,
                                             &:active {
-                                            cursor: auto;
-                                            background-position: 0 0;
-                                            background-size: 0 0;
-                                        }
+                                                cursor: auto;
+                                                background-position: 0 0;
+                                                background-size: 0 0;
+                                            }
                                         }
 
                                         &:hover,
@@ -862,6 +895,17 @@ main {
                                     width: 50px;
                                 }
 
+                                .dialog_record {
+                                    .dialog_box_icon {
+                                        width: 50px;
+                                        height: 50px;
+
+                                        i {
+                                            font-size: 30px;
+                                        }
+                                    }
+                                }
+
                                 .dialog_box {
                                     padding: 15px 20px;
 
@@ -872,6 +916,10 @@ main {
                                         i {
                                             font-size: 30px;
                                         }
+                                    }
+
+                                    .dialog_box_text {
+                                        width: calc(100% - 90px);
                                     }
 
                                     .sound_bar {
@@ -921,8 +969,6 @@ main {
                                     }
 
                                     .dialog_box {
-                                        background-color: $main-color;
-                                        order: 1;
 
                                         &::before {
                                             border-width: 10px 10px 10px 0px;
@@ -948,7 +994,7 @@ main {
                                 .btn_icon {
                                     width: 65px;
                                     height: 65px;
-    
+
                                     i {
                                         font-size: 40px;
                                     }
@@ -961,21 +1007,21 @@ main {
                                 justify-content: flex-end;
                                 align-items: center;
                                 margin: 0 5%;
-    
+
                                 .toolbar_item_btn {
                                     position: relative;
-    
+
                                     .btn_icon {
                                         margin: 0 10px;
                                         width: 40px;
                                         height: 40px;
-    
+
                                         i {
                                             font-size: 25px;
                                         }
-    
+
                                         &.font_icon {
-    
+
                                             &.hide {
                                                 &:after {
                                                     width: 60px;
