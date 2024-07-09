@@ -3,6 +3,7 @@ main {
         .test_area {
             &.book_select {
                 .test_area_right {
+                    width: 100%;
                     border-radius: 10px;
                     background-color: $white;
                     // border: 1px solid $main-color;
