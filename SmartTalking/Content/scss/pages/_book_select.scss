@@ -1,0 +1,229 @@
+main {
+    .quiz_page {
+        .test_area {
+            &.book_select {
+                .test_area_right {
+                    border-radius: 10px;
+                    background-color: $white;
+                    // border: 1px solid $main-color;
+
+                    .test_area_content {
+                        background-color: transparent;
+                        border: 0px;
+
+                        .book_select_area {
+                            display: flex;
+                            flex-wrap: wrap;
+                            margin: 0 auto;
+
+                            .book_select_item {
+                                width: 100%;
+                                margin: 15px calc(2.5% / 2);
+                                border: 2px solid $grey;
+                                border-radius: 10px;
+                                display: flex;
+                                flex-direction: column;
+                                padding: 15px 15px;
+                                border-radius: 10px;
+                                color: $main_color;
+
+                                &:hover {
+                                    border: 2px solid $bright_main_color;
+
+                                    .book_text_title {
+                                        color: $bright_main_color;
+                                    }
+                                }
+
+                                .book_image {
+                                    margin: 0 auto 15px;
+
+                                    img {
+                                        border-radius: 10px;
+                                    }
+                                }
+
+                                .book_text {
+                                    color: $main_color_grey;
+                                }
+
+                                .book_text_title {
+                                    color: $main_color;
+                                    margin: 10px 0;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 2;
+                                    /*autoprefixer:off*/
+                                    -webkit-box-orient: vertical;
+                                    // autoprefixer:on
+
+                                }
+
+                                p {
+                                    margin: 5px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 500px) {
+    main {
+        .quiz_page {
+
+            .test_area {
+
+                &.book_select {
+                    .test_area_right {
+
+                        .test_area_content {
+
+                            .book_select_area {
+
+                                .book_select_item {
+                                    width: 47.5%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    main {
+        .quiz_page {
+
+            .test_area {
+                justify-content: space-between;
+
+                .test_area_left {
+                    width: 25%;
+
+                    .test_area_left_options {
+                        .test_area_left_options_item {
+                            width: 100%;
+                            margin: 5px 0;
+                            padding: 0 0 0 20px;
+                            justify-content: flex-start;
+
+                            a {
+                                padding: 10px 0;
+                            }
+
+                            &.active {
+                                a {
+
+                                    &::after {
+                                        top: 50%;
+                                        left: 0;
+                                        transform: translate(calc(-100% - 10px), -50%);
+                                    }
+                                }
+
+
+                            }
+                        }
+                    }
+                }
+
+                .test_area_right {
+                    width: 70%;
+                    margin: 0;
+
+                    .test_area_right_nav {
+                        margin: 0 auto 20px;
+
+                        ul {
+
+                            .test_area_right_nav_item {
+                                a {
+                                    padding: 3px 5px 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        .quiz_page {
+            .test_area {
+                &.book_select {
+                    .test_area_right {
+                        border-radius: 10px;
+                        background-color: $white;
+                        // border: 1px solid $main-color;
+
+                        .test_area_content {
+                            background-color: transparent;
+                            border: 0px;
+
+                            .book_select_area {
+                                display: flex;
+                                flex-wrap: wrap;
+                                margin: 0 auto;
+
+                                .book_select_item {
+                                    width: calc(33.33333% - 2.5%);
+
+                                    .book_image {
+                                        margin: 0 auto 15px;
+
+                                        img {
+                                            border-radius: 10px;
+                                        }
+                                    }
+
+                                    p {
+                                        margin: 5px 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    main {
+        .quiz_page {
+
+            .test_area {
+                &.book_select {
+                    .test_area_right {
+
+                        .test_area_content {
+
+                            .book_select_area {
+
+                                .book_select_item {
+                                    width: 30%;
+                                    margin: 15px calc(3% / 2);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
