@@ -89,7 +89,7 @@ body { background-color: #e5e5e5; }
 
 body { background-color: #e5e5e5; }
 
-main .main { margin: 0 auto; width: 80%; max-width: 1200px; }
+main .main { margin: 0 auto; width: 80%; max-width: 1500px; }
 
 main .input_area { display: flex; align-items: flex-start; flex-wrap: wrap; justify-content: flex-start; margin: 15px auto; position: relative; }
 
@@ -701,6 +701,24 @@ main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.too
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar .bar:nth-child(4) { height: 25px; }
   main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue .dialogue_btn { width: 28%; } }
 
+main .quiz_page .test_area.book_select .student_data_area { width: 100%; display: flex; flex-wrap: wrap; background-color: #fff; margin: 0px auto 20px; padding: 20px; border-radius: 10px; }
+
+main .quiz_page .test_area.book_select .student_data_area .avatar_img { background-color: #314675; width: calc(60px * 1.7); height: calc(60px * 1.7); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 10px; }
+
+main .quiz_page .test_area.book_select .student_data_area .avatar_img .avatar_text h4 { font-size: 60px; color: #fff; }
+
+main .quiz_page .test_area.book_select .student_data_area .student_data { width: calc(100% - 60px * 1.7); width: 100%; margin: 10px; }
+
+main .quiz_page .test_area.book_select .student_data_area .student_data .student_data_tittle { color: #314675; margin: 0 10px; }
+
+main .quiz_page .test_area.book_select .student_data_area .student_data .student_data_content { width: 100%; display: flex; flex-wrap: wrap; }
+
+main .quiz_page .test_area.book_select .student_data_area .student_data .student_data_content .student_data_content_left, main .quiz_page .test_area.book_select .student_data_area .student_data .student_data_content .student_data_content_right { margin: 0 10px; }
+
+main .quiz_page .test_area.book_select .student_data_area .student_data .student_data_content .student_data_item { display: flex; flex-wrap: wrap; margin: 5px 0; }
+
+main .quiz_page .test_area.book_select .student_data_area .student_data .student_data_content .student_data_item p { word-wrap: break-word; word-break: break-all; }
+
 main .quiz_page .test_area.book_select .test_area_right { width: 100%; border-radius: 10px; background-color: #fff; }
 
 main .quiz_page .test_area.book_select .test_area_right .test_area_content { background-color: transparent; border: 0px; }
@@ -725,21 +743,25 @@ main .quiz_page .test_area.book_select .test_area_right .test_area_content .book
 
 @media screen and (min-width: 500px) { main .quiz_page .test_area.book_select .test_area_right .test_area_content .book_select_area .book_select_item { width: 47.5%; } }
 
+@media screen and (min-width: 768px) { main .quiz_page .test_area.book_select .student_data_area { margin: 0px auto 40px; } }
+
 @media screen and (min-width: 992px) { main .quiz_page .test_area { justify-content: space-between; }
   main .quiz_page .test_area .test_area_left { width: 25%; }
   main .quiz_page .test_area .test_area_left .test_area_left_options .test_area_left_options_item { width: 100%; margin: 5px 0; padding: 0 0 0 20px; justify-content: flex-start; }
   main .quiz_page .test_area .test_area_left .test_area_left_options .test_area_left_options_item a { padding: 10px 0; }
   main .quiz_page .test_area .test_area_left .test_area_left_options .test_area_left_options_item.active a::after { top: 50%; left: 0; transform: translate(calc(-100% - 10px), -50%); }
+  main .quiz_page .test_area.book_select .test_area_right .test_area_content .book_select_area .book_select_item { width: calc(33.33333% - 2.5%); }
   main .quiz_page .test_area .test_area_right { width: 70%; margin: 0; }
   main .quiz_page .test_area .test_area_right .test_area_right_nav { margin: 0 auto 20px; }
   main .quiz_page .test_area .test_area_right .test_area_right_nav ul .test_area_right_nav_item a { padding: 3px 5px 10px; } }
 
+@media screen and (min-width: 1024px) { main .quiz_page .test_area.book_select .student_data_area .student_data { width: calc(100% - 60px * 1.7 - 40px); } }
+
 @media screen and (min-width: 1200px) { main .quiz_page .test_area.book_select .test_area_right { border-radius: 10px; background-color: #fff; }
   main .quiz_page .test_area.book_select .test_area_right .test_area_content { background-color: transparent; border: 0px; }
   main .quiz_page .test_area.book_select .test_area_right .test_area_content .book_select_area { display: flex; flex-wrap: wrap; margin: 0 auto; }
-  main .quiz_page .test_area.book_select .test_area_right .test_area_content .book_select_area .book_select_item { width: calc(33.33333% - 2.5%); }
   main .quiz_page .test_area.book_select .test_area_right .test_area_content .book_select_area .book_select_item .book_image { margin: 0 auto 15px; }
   main .quiz_page .test_area.book_select .test_area_right .test_area_content .book_select_area .book_select_item .book_image img { border-radius: 10px; }
   main .quiz_page .test_area.book_select .test_area_right .test_area_content .book_select_area .book_select_item p { margin: 5px 0; } }
 
-@media screen and (min-width: 1400px) { main .quiz_page .test_area.book_select .test_area_right .test_area_content .book_select_area .book_select_item { width: 30%; margin: 15px calc(3% / 2); } }
+@media screen and (min-width: 1400px) { main .quiz_page .test_area.book_select .test_area_right .test_area_content .book_select_area .book_select_item { width: 22%; margin: 15px calc(3% / 2); } }

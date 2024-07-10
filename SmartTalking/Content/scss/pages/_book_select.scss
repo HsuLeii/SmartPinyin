@@ -2,11 +2,71 @@ main {
     .quiz_page {
         .test_area {
             &.book_select {
+                .student_data_area {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    background-color: $white;
+                    margin: 0px auto 20px;
+                    padding: 20px;
+                    border-radius: 10px;
+
+                    .avatar_img {
+                        background-color: $main_color;
+                        width: calc(60px * 1.7);
+                        height: calc(60px * 1.7);
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 10px;
+
+                        .avatar_text {
+                            h4 {
+                                font-size: 60px;
+                                color: $white;
+                            }
+                        }
+                    }
+
+                    .student_data {
+                        width: calc(100% - 60px * 1.7);
+                        width: 100%;
+                        margin: 10px;
+
+                        .student_data_tittle {
+                            color: $main_color;
+                            margin: 0 10px;
+                        }
+
+                        .student_data_content {
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            .student_data_content_left,
+                            .student_data_content_right {
+                                margin: 0 10px;
+                            }
+
+                            .student_data_item {
+                                display: flex;
+                                flex-wrap: wrap;
+                                margin: 5px 0;
+
+                                p {
+                                    word-wrap: break-word;
+                                    word-break: break-all;
+                                }
+                            }
+                        }
+                    }
+                }
+
                 .test_area_right {
                     width: 100%;
                     border-radius: 10px;
                     background-color: $white;
-                    // border: 1px solid $main-color;
 
                     .test_area_content {
                         background-color: transparent;
@@ -98,6 +158,19 @@ main {
     }
 }
 
+@media screen and (min-width: 768px) {
+    main {
+        .quiz_page {
+            .test_area {
+                &.book_select {
+                    .student_data_area {
+                        margin: 0px auto 40px;
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media screen and (min-width: 992px) {
     main {
@@ -136,6 +209,21 @@ main {
                     }
                 }
 
+                &.book_select {
+                    .test_area_right {
+
+                        .test_area_content {
+
+                            .book_select_area {
+
+                                .book_select_item {
+                                    width: calc(33.33333% - 2.5%);
+                                }
+                            }
+                        }
+                    }
+                }
+
                 .test_area_right {
                     width: 70%;
                     margin: 0;
@@ -159,6 +247,22 @@ main {
     }
 }
 
+@media screen and (min-width: 1024px) {
+    main {
+        .quiz_page {
+            .test_area {
+                &.book_select {
+                    .student_data_area {
+                        .student_data {
+                            width: calc(100% - 60px * 1.7 - 40px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 1200px) {
     main {
         .quiz_page {
@@ -179,7 +283,6 @@ main {
                                 margin: 0 auto;
 
                                 .book_select_item {
-                                    width: calc(33.33333% - 2.5%);
 
                                     .book_image {
                                         margin: 0 auto 15px;
@@ -216,7 +319,7 @@ main {
                             .book_select_area {
 
                                 .book_select_item {
-                                    width: 30%;
+                                    width: 22%;
                                     margin: 15px calc(3% / 2);
                                 }
                             }
