@@ -277,7 +277,8 @@ main {
                         align-items: center;
                         justify-content: center;
                         width: 90%;
-                        margin: 20px auto;
+                        margin: 0 auto;
+                        padding: 20px 0;
 
                         .dialogue_choose_avatar {
                             width: 40px;
@@ -912,7 +913,8 @@ main {
                         border: 2px solid $main_color;
 
                         .dialogue_choose_caption {
-                            margin: 40px auto;
+                            margin: 0 auto;
+                            padding: 40px 0;
 
                             .dialogue_choose_avatar {
                                 width: 50px;
