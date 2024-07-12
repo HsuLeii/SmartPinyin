@@ -65,65 +65,82 @@ main {
 
                 .test_area_right {
                     width: 100%;
+                }
+            }
+
+            .test_area_right {
+
+                .test_area_content {
+                    background-color: transparent;
+                    border: 0px;
                     border-radius: 10px;
-                    background-color: $white;
+                background-color: $white;
 
-                    .test_area_content {
-                        background-color: transparent;
-                        border: 0px;
+                    .book_select_area {
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin: 0 auto;
 
-                        .book_select_area {
+                        .book_select_item {
+                            width: 100%;
+                            margin: 15px calc(2.5% / 2);
+                            border: 2px solid $grey;
+                            border-radius: 10px;
                             display: flex;
-                            flex-wrap: wrap;
-                            margin: 0 auto;
+                            flex-direction: column;
+                            padding: 15px 15px;
+                            border-radius: 10px;
+                            color: $main_color;
 
-                            .book_select_item {
-                                width: 100%;
-                                margin: 15px calc(2.5% / 2);
-                                border: 2px solid $grey;
-                                border-radius: 10px;
-                                display: flex;
-                                flex-direction: column;
-                                padding: 15px 15px;
-                                border-radius: 10px;
-                                color: $main_color;
-
-                                &:hover {
-                                    border: 2px solid $bright_main_color;
-
-                                    .book_text_title {
-                                        color: $bright_main_color;
-                                    }
-                                }
-
-                                .book_image {
-                                    margin: 0 auto 15px;
-
-                                    img {
-                                        border-radius: 10px;
-                                    }
-                                }
-
-                                .book_text {
-                                    color: $main_color_grey;
-                                }
+                            &:hover {
+                                border: 2px solid $bright_main_color;
 
                                 .book_text_title {
-                                    color: $main_color;
-                                    margin: 10px 0;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                    display: -webkit-box;
-                                    -webkit-line-clamp: 2;
-                                    /*autoprefixer:off*/
-                                    -webkit-box-orient: vertical;
-                                    // autoprefixer:on
+                                    color: $bright_main_color;
+                                }
+                            }
 
+                            .book_image {
+                                margin: 0 auto 15px;
+
+                                img {
+                                    border-radius: 10px;
+                                }
+                            }
+
+                            .book_text {
+                                color: $main_color_grey;
+                            }
+
+                            .book_text_title {
+                                color: $main_color;
+                                margin: 10px 0;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                /*autoprefixer:off*/
+                                -webkit-box-orient: vertical;
+                                // autoprefixer:on
+
+                                .book_icon{
+                                    width: 31px;
+                                    height: 31px;
+                                    display: inline-block;
+                                    background-color: $main_color_orange;
+                                    text-align: center;
+                                    line-height: 31px;
+                                    border-radius: 50%;
+
+                                    i{
+                                        color: $white;
+                                    }
                                 }
 
-                                p {
-                                    margin: 5px 0;
-                                }
+                            }
+
+                            p {
+                                margin: 5px 0;
                             }
                         }
                     }
@@ -133,13 +150,11 @@ main {
     }
 }
 
+
 @media screen and (min-width: 500px) {
     main {
         .quiz_page {
-
             .test_area {
-
-                &.book_select {
                     .test_area_right {
 
                         .test_area_content {
@@ -152,7 +167,7 @@ main {
                             }
                         }
                     }
-                }
+                
             }
         }
     }
@@ -166,6 +181,26 @@ main {
                     .student_data_area {
                         margin: 0px auto 40px;
                     }
+
+                    .test_area_right {
+    
+                        .test_area_content {
+    
+                            .book_select_area {
+    
+                                .book_select_item {
+                                    
+                                    .book_text_title {
+                                        .book_icon{
+                                            width: 35px;
+                                            height: 35px;
+                                            line-height: 35px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -178,36 +213,6 @@ main {
 
             .test_area {
                 justify-content: space-between;
-
-                .test_area_left {
-                    width: 25%;
-
-                    .test_area_left_options {
-                        .test_area_left_options_item {
-                            width: 100%;
-                            margin: 5px 0;
-                            padding: 0 0 0 20px;
-                            justify-content: flex-start;
-
-                            a {
-                                padding: 10px 0;
-                            }
-
-                            &.active {
-                                a {
-
-                                    &::after {
-                                        top: 50%;
-                                        left: 0;
-                                        transform: translate(calc(-100% - 10px), -50%);
-                                    }
-                                }
-
-
-                            }
-                        }
-                    }
-                }
 
                 &.book_select {
                     .test_area_right {
@@ -301,6 +306,22 @@ main {
                     }
                 }
             }
+
+            .test_area {
+                .test_area_right {
+
+                    .test_area_content {
+
+                        .book_select_area {
+
+                            .book_select_item {
+                                width: calc(33.33333% - 2.5%);
+                            }
+                        }
+                    }
+                }
+            
+        }
         }
 
     }

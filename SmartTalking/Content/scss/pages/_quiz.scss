@@ -37,86 +37,119 @@ main {
 
             .test_area_left {
                 width: 100%;
-                background-color: $white;
-                padding: 10px 15px;
+                // background-color: $white;
+                // padding: 10px 15px;
                 border-radius: 10px;
 
                 .test_area_left_tittle {
-                    margin: 10px 0;
+                    padding: 10px 5%;
+                    cursor: pointer;
+                    background-color: $white;
+                    border-radius: 10px;
+                    display: none;
+
+                    &:nth-child(1){
+                        display: block;
+                    }
 
                     p {
                         font-size: 20px;
                         font-weight: bold;
                         color: $main_color;
+                        padding: 3px 5px 15px;
                     }
-                }
 
-                .test_area_left_options {
-                    display: flex;
-                    flex-wrap: wrap;
-                    width: 100%;
-
-                    .test_area_left_options_item {
-                        padding: 0px 10px;
+                    .test_area_left_options {
+                        display: flex;
+                        flex-wrap: wrap;
                         width: 100%;
+                        display: none;
 
-                        a {
-                            display: block;
-                            padding: 7px 0;
-                            margin: 7px 0;
-                            position: relative;
-                            color: $main_color_grey;
-                            background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
-                            transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
+                        .test_area_left_options_item {
+                            padding: 0px 10px;
+                            width: 100%;
 
-                            &:hover,
-                            &:active {
-                                color: $bright_main_color;
-                                background-position: 0 100%;
-                                background-size: 100% 1px;
-                            }
-                        }
-
-                        &.active {
                             a {
-                                color: $bright_main_color;
-                                font-weight: bold;
-                                cursor: auto;
+                                display: block;
+                                padding: 7px 0;
+                                margin: 7px 0;
+                                position: relative;
+                                color: $main_color_grey;
+                                background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
+                                transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
 
                                 &:hover,
                                 &:active {
                                     color: $bright_main_color;
-                                    background-position: 0 0;
-                                    background-size: 0 0;
+                                    background-position: 0 100%;
+                                    background-size: 100% 1px;
                                 }
+                            }
+
+                            &.active {
+                                a {
+                                    color: $bright_main_color;
+                                    font-weight: bold;
+                                    cursor: auto;
+
+                                    &:hover,
+                                    &:active {
+                                        color: $bright_main_color;
+                                        background-position: 0 0;
+                                        background-size: 0 0;
+                                    }
 
 
-                                // &::after {
-                                //     content: "";
-                                //     position: absolute;
-                                //     top: 50%;
-                                //     left: 0;
-                                //     transform: translate(calc(-100% - 10px), -50%);
+                                    // &::after {
+                                    //     content: "";
+                                    //     position: absolute;
+                                    //     top: 50%;
+                                    //     left: 0;
+                                    //     transform: translate(calc(-100% - 10px), -50%);
 
-                                //     width: 7px;
-                                //     height: 7px;
-                                //     border-radius: 50%;
-                                //     background-color: $bright_main_color;
-                                // }
+                                    //     width: 7px;
+                                    //     height: 7px;
+                                    //     border-radius: 50%;
+                                    //     background-color: $bright_main_color;
+                                    // }
 
+                                }
                             }
                         }
                     }
+
+                    &.open{
+                        .test_area_left_options{
+                            display: flex;
+                        }
+                    }
+
+                    &.active{
+                        p{
+                            color: $bright_main_color;
+                        }
+                        .test_area_left_options{
+                            display: flex !important;
+                        }
+                    }
+
+                    &:hover{
+                        
+                        p{
+                            color: $bright_main_color;
+                            background-position: 0 100%;
+                        background-size: 100% 1px;
+                        }
+                    }
                 }
-            }
+        }
 
             .test_area_right {
                 width: 100%;
                 margin: 40px auto;
-                padding: 20px;
 
                 .test_area_right_tittle {
-                    margin: 10px 0;
+                    margin: 10px 20px;
 
                     p {
                         font-size: 20px;
@@ -281,12 +314,12 @@ main {
 
                     .dialogue_area {
                         width: 90%;
-                        margin: 20px auto;
+                        margin: 0 auto;
 
                         .dialogue_block {
                             display: flex;
                             align-items: center;
-                            margin: 70px 0;
+                            padding: 70px 0 0;
 
                             position: relative;
 
@@ -500,8 +533,8 @@ main {
                                 }
                             }
 
-                            &.dialogue_ai{
-                                .dialog_box{
+                            &.dialogue_ai {
+                                .dialog_box {
                                     width: auto;
                                 }
                             }
@@ -510,7 +543,8 @@ main {
 
                     .listen_area {
                         width: 90%;
-                        margin: 20px auto;
+                        margin: 0 auto;
+                        padding: 20px 0;
 
                         .listen_sentence {
                             label {
@@ -570,7 +604,6 @@ main {
                             width: calc(100% + 2px);
                             height: 100%;
                             border: 1px solid $main_color;
-                            border-bottom: 0px;
                             border-radius: 50px 50px 0 0;
                         }
 
@@ -781,38 +814,39 @@ main {
 
             .test_area {
                 .test_area_left {
-                    padding: 20px 15px 40px;
+                    // padding: 20px 15px 40px;
 
                     .test_area_left_tittle {
-                        margin: 15px 0;
-                    }
 
-                    .test_area_left_options {
+                        .test_area_left_options {
 
-                        .test_area_left_options_item {
-                            width: auto;
-                            margin: 5px 0;
-                            display: flex;
-                            justify-content: center;
+                            .test_area_left_options_item {
+                                width: auto;
+                                margin: 5px 0;
+                                display: flex;
+                                justify-content: center;
 
-                            // &.active {
-                            //     a {
-                            //         &::after {
-                            //             top: 100%;
-                            //             left: 50%;
-                            //             transform: translate(0, 10px);
-                            //         }
-                            //     }
+                                // &.active {
+                                //     a {
+                                //         &::after {
+                                //             top: 100%;
+                                //             left: 50%;
+                                //             transform: translate(0, 10px);
+                                //         }
+                                //     }
 
-                            // }
+                                // }
+                            }
                         }
                     }
+
+
                 }
 
                 .test_area_right {
 
                     .test_area_right_tittle {
-                        margin: 15px 0;
+                        margin: 15px 20px;
                     }
 
                     .test_area_right_nav {
@@ -891,7 +925,7 @@ main {
 
                         .dialogue_area {
                             .dialogue_block {
-                                margin: 60px 0;
+                                padding: 60px 0 0;
 
                                 .dialogue_avatar {
                                     width: 50px;
@@ -1016,7 +1050,6 @@ main {
                                 transform: translate(-2px, 0);
                                 width: calc(100% + 4px);
                                 border: 2px solid $main_color;
-                                border-bottom: 0px;
                             }
 
                             .btn_icon_area {
@@ -1086,31 +1119,61 @@ main {
                 .test_area_left {
                     width: 25%;
 
-                    .test_area_left_options {
-                        .test_area_left_options_item {
-                            width: 100%;
-                            margin: 5px 0;
-                            padding: 0 0 0 20px;
-                            justify-content: flex-start;
+                    .test_area_left_tittle {
+                        padding: 15px 20px;
+                        border-radius: 0;
+                        display: block;
 
-                            a {
-                                padding: 10px 0;
-                            }
+                        p {
+                            background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
+                        transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
+                        }
 
-                            &.active {
+                        &:nth-child(1){
+                            border-radius: 10px 10px 0 0;
+                        }
+
+                        &:nth-last-child(1){
+                            border-radius: 0 0 10px 10px;
+                        }
+
+                        .test_area_left_options {
+                            .test_area_left_options_item {
+                                width: 100%;
+                                margin: 5px 0;
+                                padding: 0 0 0 20px;
+                                justify-content: flex-start;
+
                                 a {
-
-                                    &::after {
-                                        top: 50%;
-                                        left: 0;
-                                        transform: translate(calc(-100% - 10px), -50%);
-                                    }
+                                    padding: 10px 0;
                                 }
 
+                                &.active {
+                                    a {
 
+                                        &::after {
+                                            top: 50%;
+                                            left: 0;
+                                            transform: translate(calc(-100% - 10px), -50%);
+                                        }
+                                    }
+
+
+                                }
+                            }
+                        }
+
+                        &:hover{
+                        
+                            p{
+                                color: $bright_main_color;
+                                background-position: 0 100%;
+                            background-size: 100% 1px;
                             }
                         }
                     }
+
+
                 }
 
                 .test_area_right {
