@@ -395,7 +395,8 @@ main {
             &::before {
                 left: auto;
                 right: 0;
-                transform: translate(-40px, 0);
+                top: 50%;
+                transform: translate(-40px, -50%);
             }
 
             .select_page_btn {
@@ -410,6 +411,7 @@ main {
             &:hover {
 
                 &::before {
+                    top: auto;
                     transform: translate(0, 0);
                 }
             }

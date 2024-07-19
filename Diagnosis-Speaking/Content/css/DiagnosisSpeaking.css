@@ -193,13 +193,13 @@ main .slide_area .slide_text p { color: #fff; font-weight: bold; font-size: 20px
 
 main .select_page_link { position: relative; display: flex; justify-content: center; flex-direction: column; background-color: #314675; border-radius: 5px; margin: 40px auto; padding: 20px 40px; text-align: center; color: #fff; transform: scale(0.9); width: 100%; max-width: 400px; border: 2px solid transparent; }
 
-main .select_page_link.small_btn::before { left: auto; right: 0; transform: translate(-40px, 0); }
+main .select_page_link.small_btn::before { left: auto; right: 0; top: 50%; transform: translate(-40px, -50%); }
 
 main .select_page_link.small_btn .select_page_btn { flex-direction: row; justify-content: space-between; }
 
 main .select_page_link.small_btn .select_page_btn .select_page_btn_icon { margin: 0; }
 
-main .select_page_link.small_btn:hover::before { transform: translate(0, 0); }
+main .select_page_link.small_btn:hover::before { top: auto; transform: translate(0, 0); }
 
 main .select_page_link::before { content: ""; position: absolute; width: 40px; height: 40px; background-color: #4dbcbc; border-radius: 50%; left: 50%; bottom: 20px; transform: translate(-50%, 0); }
 
@@ -594,7 +594,7 @@ main .start_page .return_btn:hover i { font-size: 35px; }
 
 main .start_listening_bg { width: auto; max-width: none; margin: 0 auto; position: relative; }
 
-main .start_listening_bg::before { content: ' '; position: absolute; z-index: -1; left: 0; top: 0; width: 100%; height: 100%; opacity: 0.8; background-image: url(../image/photo/bg-end.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; }
+main .start_listening_bg::before { content: ' '; position: absolute; z-index: -1; left: 0; top: 0; width: 100%; height: 100%; opacity: 0.8; background-image: url(../image/photo/bg/listening_bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; }
 
 main .start_listening_bg .start_listening_area { width: 80%; max-width: 1200px; margin: 95px auto; background-color: #f4ffff; padding: 30px; border-radius: 10px; }
 
