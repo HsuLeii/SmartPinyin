@@ -576,7 +576,7 @@ main .start_page { display: flex; justify-content: center; flex-direction: colum
 
 main .start_page .start_page_tittle h4 { display: flex; justify-content: center; text-align: center; color: #314675; text-align: left; }
 
-main .start_page .start_page_text { margin: 40px auto 0; }
+main .start_page .start_page_text { margin: 40px auto; }
 
 main .start_page .start_page_text p { display: flex; }
 
