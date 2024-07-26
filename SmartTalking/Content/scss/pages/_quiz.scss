@@ -142,7 +142,7 @@ main {
                         }
                     }
                 }
-        }
+            }
 
             .test_area_right {
                 width: 100%;
@@ -595,18 +595,18 @@ main {
                         background-color: $white;
                         border-radius: 50px 50px 5px 5px;
 
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            z-index: -1;
-                            top: 0;
-                            left: 0;
-                            transform: translate(-1px, 0);
-                            width: calc(100% + 2px);
-                            height: 100%;
-                            border: 1px solid $main_color;
-                            border-radius: 50px 50px 0 0;
-                        }
+                        // &::before {
+                        //     content: "";
+                        //     position: absolute;
+                        //     z-index: -1;
+                        //     top: 0;
+                        //     left: 0;
+                        //     transform: translate(-1px, 0);
+                        //     width: calc(100% + 2px);
+                        //     height: 100%;
+                        //     border: 1px solid $main_color;
+                        //     border-radius: 50px 50px 0 0;
+                        // }
 
                         .btn_icon_area {
                             .btn_icon {
@@ -790,6 +790,23 @@ main {
                         }
                     }
 
+                }
+            }
+
+            &.test_area_quiz{
+                .test_area_right{
+                    .test_area_content{
+                        padding: 15px 0;
+                        .test_area_content_img{
+                            width: 90%;
+                            margin: 0 auto;
+                            padding: 20px 0;
+
+                            img{
+                                border-radius: 10px;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1048,11 +1065,11 @@ main {
                         }
 
                         .toolbar_area {
-                            &::before {
-                                transform: translate(-2px, 0);
-                                width: calc(100% + 4px);
-                                border: 2px solid $main_color;
-                            }
+                            // &::before {
+                            //     transform: translate(-2px, 0);
+                            //     width: calc(100% + 4px);
+                            //     border: 2px solid $main_color;
+                            // }
 
                             .btn_icon_area {
                                 .btn_icon {
@@ -1110,13 +1127,11 @@ main {
     }
 }
 
-
 @media screen and (min-width: 992px) {
     main {
         .quiz_page {
 
             .test_area {
-                justify-content: space-between;
 
                 .test_area_left {
                     width: 25%;
@@ -1164,34 +1179,43 @@ main {
                                 }
                             }
                         }
-
-                        &:hover{
-                        
-                            p{
-                                color: $bright_main_color;
-                                background-position: 0 100%;
-                            background-size: 100% 1px;
-                            }
-                        }
                     }
 
 
                 }
 
-                .test_area_right {
-                    width: 70%;
-                    margin: 0;
+                &.test_area_quiz{
+                    .test_area_left{
+                        width: 100%;
+                        .test_area_left_tittle {
+                            display: none;
 
-                    .test_area_right_nav {
-                        margin: 0 auto 20px;
-
-                        ul {
-
-                            .test_area_right_nav_item {
-                                a {
-                                    padding: 3px 5px 10px;
+                            &:hover{
+                                p{
+                                    background-position: 0 0%;
+                                    background-size: 0% 0px;
                                 }
                             }
+
+                            &:nth-child(1){
+                                display: block;
+                                border-radius: 10px;
+                            }
+                            .test_area_left_options {
+                                .test_area_left_options_item{
+                                    width: auto;
+                                    margin: 5px 0;
+                                    display: flex;
+                                    justify-content: center;
+                                }
+                            }
+                        }
+                    }
+
+                    .test_area_right{
+                        width: 100%;
+                        .test_area_right_nav{
+                            margin: 20px auto;
                         }
                     }
                 }

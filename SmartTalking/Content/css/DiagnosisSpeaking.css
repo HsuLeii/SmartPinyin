@@ -582,8 +582,6 @@ main .quiz_page .test_area .test_area_right .test_area_content .drag_line .line 
 
 main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area { position: relative; z-index: 1; display: flex; justify-content: flex-end; padding: 10px; margin: 40px auto 0; padding: 20px 0; background-color: #fff; border-radius: 50px 50px 5px 5px; }
 
-main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area::before { content: ""; position: absolute; z-index: -1; top: 0; left: 0; transform: translate(-1px, 0); width: calc(100% + 2px); height: 100%; border: 1px solid #314675; border-radius: 50px 50px 0 0; }
-
 main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area .btn_icon_area .btn_icon { width: 55px; height: 55px; display: flex; justify-content: center; align-items: center; border-radius: 50%; background-color: #314675; }
 
 main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area .btn_icon_area .btn_icon i { color: #fff; font-size: 30px; }
@@ -636,6 +634,12 @@ main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.too
 
 main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue .dialogue_btn.dialogue_btn_done button { color: #fff; }
 
+main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content { padding: 15px 0; }
+
+main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .test_area_content_img { width: 90%; margin: 0 auto; padding: 20px 0; }
+
+main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .test_area_content_img img { border-radius: 10px; }
+
 @keyframes sound { 0% { opacity: .55;
     height: 3px; }
   100% { opacity: 1;
@@ -678,7 +682,6 @@ main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.too
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_record { right: auto; }
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box .dialog_box_icon { right: auto; }
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box::before { border-width: 10px 10px 10px 0px; border-right: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 10px solid #314675; border-top: 10px solid transparent; }
-  main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area::before { transform: translate(-2px, 0); width: calc(100% + 4px); border: 2px solid #314675; }
   main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area .btn_icon_area .btn_icon { width: 65px; height: 65px; }
   main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area .btn_icon_area .btn_icon i { font-size: 40px; }
   main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area .toolbar_item { width: calc(40% - 30px); display: flex; justify-content: flex-end; align-items: center; margin: 0 5%; }
@@ -688,8 +691,7 @@ main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.too
   main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area .toolbar_item .toolbar_item_btn .btn_icon.font_icon.hide:after { width: 60px; }
   main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue .dialogue_btn { width: 45%; } }
 
-@media screen and (min-width: 992px) { main .quiz_page .test_area { justify-content: space-between; }
-  main .quiz_page .test_area .test_area_left { width: 25%; }
+@media screen and (min-width: 992px) { main .quiz_page .test_area .test_area_left { width: 25%; }
   main .quiz_page .test_area .test_area_left .test_area_left_tittle { padding: 15px 20px; border-radius: 0; display: block; }
   main .quiz_page .test_area .test_area_left .test_area_left_tittle p { background: linear-gradient(currentcolor, currentcolor) 100% 100%/0 1px no-repeat; transition: background-size var(--transition-duration) var(--transition-timing-function) 0s; }
   main .quiz_page .test_area .test_area_left .test_area_left_tittle:nth-child(1) { border-radius: 10px 10px 0 0; }
@@ -697,10 +699,13 @@ main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.too
   main .quiz_page .test_area .test_area_left .test_area_left_tittle .test_area_left_options .test_area_left_options_item { width: 100%; margin: 5px 0; padding: 0 0 0 20px; justify-content: flex-start; }
   main .quiz_page .test_area .test_area_left .test_area_left_tittle .test_area_left_options .test_area_left_options_item a { padding: 10px 0; }
   main .quiz_page .test_area .test_area_left .test_area_left_tittle .test_area_left_options .test_area_left_options_item.active a::after { top: 50%; left: 0; transform: translate(calc(-100% - 10px), -50%); }
-  main .quiz_page .test_area .test_area_left .test_area_left_tittle:hover p { color: #4dbcbc; background-position: 0 100%; background-size: 100% 1px; }
-  main .quiz_page .test_area .test_area_right { width: 70%; margin: 0; }
-  main .quiz_page .test_area .test_area_right .test_area_right_nav { margin: 0 auto 20px; }
-  main .quiz_page .test_area .test_area_right .test_area_right_nav ul .test_area_right_nav_item a { padding: 3px 5px 10px; } }
+  main .quiz_page .test_area.test_area_quiz .test_area_left { width: 100%; }
+  main .quiz_page .test_area.test_area_quiz .test_area_left .test_area_left_tittle { display: none; }
+  main .quiz_page .test_area.test_area_quiz .test_area_left .test_area_left_tittle:hover p { background-position: 0 0%; background-size: 0% 0px; }
+  main .quiz_page .test_area.test_area_quiz .test_area_left .test_area_left_tittle:nth-child(1) { display: block; border-radius: 10px; }
+  main .quiz_page .test_area.test_area_quiz .test_area_left .test_area_left_tittle .test_area_left_options .test_area_left_options_item { width: auto; margin: 5px 0; display: flex; justify-content: center; }
+  main .quiz_page .test_area.test_area_quiz .test_area_right { width: 100%; }
+  main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_right_nav { margin: 20px auto; } }
 
 @media screen and (min-width: 1200px) { main .quiz_page .course_area { margin: 40px 0; }
   main .quiz_page .course_area .course_name span { font-size: 40px; }
