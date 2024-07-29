@@ -68,6 +68,11 @@ main {
                         .test_area_left_options_item {
                             padding: 0px 10px;
                             width: 100%;
+                            border-right: 1px solid $main_color_grey;
+
+                            &:nth-last-child(1){
+                                border-right: 0;
+                            }
 
                             a {
                                 display: block;
@@ -585,6 +590,7 @@ main {
                     }
 
                     .toolbar_area {
+                        width: 100%;
                         position: relative;
                         z-index: 1;
                         display: flex;
@@ -801,6 +807,7 @@ main {
                             width: 90%;
                             margin: 0 auto;
                             padding: 20px 0;
+                            max-width: 500px;
 
                             img{
                                 border-radius: 10px;
@@ -1158,8 +1165,9 @@ main {
                             .test_area_left_options_item {
                                 width: 100%;
                                 margin: 5px 0;
-                                padding: 0 0 0 20px;
+                                padding: 0 5x;
                                 justify-content: flex-start;
+                                border-right: 0;
 
                                 a {
                                     padding: 10px 0;
@@ -1174,8 +1182,6 @@ main {
                                             transform: translate(calc(-100% - 10px), -50%);
                                         }
                                     }
-
-
                                 }
                             }
                         }
@@ -1207,6 +1213,11 @@ main {
                                     margin: 5px 0;
                                     display: flex;
                                     justify-content: center;
+                                    border-right: 1px solid $main_color_grey;
+
+                                    &:nth-last-child(1){
+                                        border-right: 0;
+                                    }
                                 }
                             }
                         }
@@ -1216,6 +1227,33 @@ main {
                         width: 100%;
                         .test_area_right_nav{
                             margin: 20px auto;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        .quiz_page {
+
+            .test_area {
+                &.test_area_quiz{
+                    .test_area_right{
+                        .test_area_content{
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            .test_area_content_img{
+                                width: 35%;
+                            }
+
+                            .listen_area{
+                                width: 60%;
+                            }
                         }
                     }
                 }
