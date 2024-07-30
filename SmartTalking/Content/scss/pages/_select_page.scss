@@ -3,15 +3,41 @@ main {
         width: 80%;
         margin: 60px auto 40px;
         .select_page_btn_area{
-            .select_page_link{
-                .select_page_btn{
-                    justify-content: space-between;
-                    width: 100%;
-                    p{
-                        font-size: 21px
+            .select_page_item{
+                width: 100%;
+                margin: 20px auto;
+                .select_page_item_introduce{
+                    .introduce_img{
+                        max-width: 350px;
+                        width: 100%;
+                        margin: 0 auto;
+                    }
+
+                    .introduce_tittle{
+                        margin: 20px auto 10px;
+                        color: $main_color;
+                        font-weight: bold;
+                        width: 90%;
+                    }
+
+                    .introduce_text{
+                        width: 90%;
+                        margin: 0 auto;
+                    }
+                }
+
+                .select_page_link{
+                    margin: 20px auto;
+                    .select_page_btn{
+                        width: 100%;
+                        justify-content: space-between;    
+                        p{
+                            font-size: 21px
+                        }
                     }
                 }
             }
+            
         }
     }
 }
@@ -25,13 +51,45 @@ main {
             width: 80%;
             margin: 60px auto 0;
             .select_page_btn_area{
-                .select_page_link{
-                    .select_page_btn{
-                        p{
-                            font-size: 25px
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .select_page_item{
+                    width: 45%;
+                    margin: 20px 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .select_page_item_introduce{
+                        .introduce_img{
+                            max-width: 350px;
+                            width: 100%;
+                            margin: 0 auto;
+                        }
+    
+                        .introduce_tittle{
+                            margin: 20px auto 10px;
+                            color: $main_color;
+                            font-weight: bold;
+                            width: 90%;
+                        }
+    
+                        .introduce_text{
+                            width: 90%;
+                            margin: 0 auto;
+                        }
+                    }
+
+                    .select_page_link{
+                        padding: 30px 20px;
+                        .select_page_btn{
+                            p{
+                                font-size: 25px
+                            }
                         }
                     }
                 }
+                
             }
         }
     }
@@ -42,19 +100,18 @@ main {
         .select_page_area {
             width: 80%;
             margin: 60px auto 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        .select_page_area {
             .select_page_btn_area{
-                display: flex;
-                .select_page_link{
-                    width: 33%;
-                    .select_page_btn{
-                        p{
-                            font-size: 30px
-                        }
-                    }
+                .select_page_item{
+                    width: 30%;
                 }
             }
         }
     }
 }
-
-@media screen and (min-width: 1200px) {}

@@ -800,6 +800,25 @@ main {
             }
 
             &.test_area_quiz{
+                .test_area_left {
+    
+                    .test_area_left_tittle {
+    
+                        .test_area_left_options {
+    
+                            .test_area_left_options_item {
+                                padding: 0px 10px;
+                                margin: 10px 0;
+    
+                                a {
+                                    padding: 0;
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
                 .test_area_right{
                     .test_area_content{
                         padding: 15px 0;

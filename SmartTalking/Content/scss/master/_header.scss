@@ -8,12 +8,12 @@ header {
             background-color: $white;
             border-radius: 9999px;
             padding: 15px 20px;
-            margin: 20px 0;
+            margin: 5px 0 10px;
             z-index: 1;
 
             .navbar-brand {
                 line-height: 0;
-                width: 180px;
+                width: 120px;
                 padding: 0;
                 margin: 0;
             }
@@ -26,8 +26,8 @@ header {
                 padding: 0;
                 border-radius: 50%;
                 box-shadow: none;
-                width: 60px;
-                height: 60px;
+                width: 50px;
+                height: 50px;
                 background-color: $main-color;
 
                 span {
@@ -110,13 +110,12 @@ header {
                 box-shadow: 0 2px 6px $main_color_40;
 
                 .navbar-nav {
-                    padding: 20px 0;
 
                     .nav-item {
                         .nav-link {
                             position: relative;
                             padding: 7px 0;
-                            margin: 7px 0;
+                            margin: 15px 0;
                             color: $main-color;
                             font-weight: bold;
                             background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
@@ -158,6 +157,11 @@ header {
         display: flex;
         align-items: center;
     }
+
+    &.absolute{
+        position: absolute;
+        width: 100%;
+    }
 }
 
 :root{
@@ -180,6 +184,20 @@ header {
     header {
         .navbar {
             .container-fluid {
+                margin: 10px 0;
+                .navbar-brand {
+                    width: 180px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        .navbar {
+            .container-fluid {
+                margin: 20px 0;
                 .navbar-brand {
                     width: 250px;
                 }
@@ -187,8 +205,6 @@ header {
         }
     }
 }
-
-@media screen and (min-width: 768px) {}
 
 @media screen and (min-width: 992px) {
     header {
@@ -220,7 +236,7 @@ header {
 
                         .nav-item {
                             .nav-link {
-                                padding: 10px 15px;
+                                padding: 5px 15px;
 
                                 &.active{
                                     &::after {
