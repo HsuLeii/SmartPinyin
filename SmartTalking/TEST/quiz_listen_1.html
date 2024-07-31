@@ -37,21 +37,58 @@
 <body>
     <!-- ------- ------- ------- ------- ------- ------- ------- -->
     <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="">
+                    <img src="../Content/image/logo/logo.svg" alt="SmartPinyin">
+                </a>
+                <div class="header_right">
+                    <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+                        <span></span>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="">拼音學習</a>
+                            </li>
+        
+                            <li class="nav-item">
+                                <a class="nav-link nav-study active" href="book_select.html">聽說學習</a>
+                            </li>
+        
+                            <li class="nav-item">
+                                <a class="nav-link" href="">聽說測驗</a>
+                            </li>
+            
+                            <li class="nav-item">
+                                <a class="nav-link" href="">繁體中文</a>
+                            </li>
+            
+                            <li class="nav-item">
+                                <a class="nav-link" href="../login.html">
+                                    <i class="fa-solid fa-arrow-right-to-bracket"></i> 登出</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
+        <div class="quiz_book_bg">
+            <img src="../Content/image/photo/book/SB1/L1.png" alt="">
+        </div>
         <div class="main quiz_page">
+
             <div class="course_area">
                 <div class="course_name">
                     <span>
                         全方位中文1
-                        <br/>
+                    </span>
+                    <span>
                         新同學
                     </span>
-                </div>
-
-                <div class="course_img">
-                    <img src="../Content/image/photo/book/SB1/L1.png" alt="">
                 </div>
             </div>
 
@@ -321,7 +358,7 @@
                         </ul>
                     </ul>
 
-                    
+
                 </div>
 
                 <div class="test_area_right">
@@ -347,7 +384,7 @@
                             </a>
                         </div>
                     </div> -->
-                    <nav class="test_area_right_nav">
+                    <!-- <nav class="test_area_right_nav">
                         <ul>
                             <li class="test_area_right_nav_item active">
                                 <a href="quiz_listen.html">
@@ -370,8 +407,32 @@
                                 </a>
                             </li>
                         </ul>
-                    </nav>
+                    </nav> -->
                     <div class="test_area_content">
+                        <nav class="test_area_right_nav">
+                            <ul>
+                                <li class="test_area_right_nav_item active">
+                                    <a href="quiz_listen.html">
+                                        聆聽課文
+                                    </a>
+                                </li>
+                                <li class="test_area_right_nav_item">
+                                    <a href="quiz_dialogue_choose.html">
+                                        課文朗讀
+                                    </a>
+                                </li>
+                                <li class="test_area_right_nav_item">
+                                    <a href="quiz_ai.html">
+                                        AI對話
+                                    </a>
+                                </li>
+                                <li class="test_area_right_nav_item">
+                                    <a href="">
+                                        學習歷程
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                         <div class="test_area_content_img">
                             <img src="../Content/image/photo/book/SB1/L1.png" alt="">
                         </div>
@@ -648,12 +709,12 @@
     <!-- this page widgets JS -->
 
     <script>
-        $(document).ready(function () {
-            $("header").load("header.html", function () {
-                $('.nav-study').addClass('active');
-            });
-        });
 
+        //選單按鈕
+    $(".navbar-toggler").click(function () {
+      $(this).toggleClass("open");
+    });
+        
         //按鈕功能
         $(".play_icon").click(function () {
             $(this).toggleClass("play");
@@ -667,23 +728,43 @@
         });
 
         $(".speak_icon").click(function () {
-                $(this).toggleClass("open");
-            });
+            $(this).toggleClass("open");
+        });
 
-            $(".font_icon").click(function () {
-                $(this).toggleClass("hide");
-                if ($(this).hasClass("hide")) {
-                    $("rt").show();
-                } else {
-                    $("rt").hide();
-                }
-            });
+        $(".font_icon").click(function () {
+            $(this).toggleClass("hide");
+            if ($(this).hasClass("hide")) {
+                $("rt").show();
+            } else {
+                $("rt").hide();
+            }
+        });
 
-            //選擇課本
-            $(".test_area_left_tittle").click(function (){
-                $(this).toggleClass("open");
-                $(this).siblings(".test_area_left_tittle").removeClass("open");
-            });
+        //選擇課本
+        $(".test_area_left_tittle").click(function () {
+            $(this).toggleClass("open");
+            $(this).siblings(".test_area_left_tittle").removeClass("open");
+        });
+    
+    
+        $(document).ready(function () {
+    
+        var sticky = $("header").height();
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                $("header").addClass("sticky");
+            } else {
+                $("header").removeClass("sticky");
+            }
+        }
+
+        window.onscroll = function () {
+            myFunction()
+        };
+
+    });
+    
     </script>
 
 </body>

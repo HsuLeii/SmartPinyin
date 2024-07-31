@@ -1,4 +1,5 @@
 header {
+    
     .navbar {
         margin: 0 auto;
         padding: 0 5%;
@@ -158,10 +159,15 @@ header {
         align-items: center;
     }
 
-    &.absolute{
-        position: absolute;
-        width: 100%;
-    }
+    // 240731調整
+    background-color: $white;
+
+        &.sticky{
+            position: sticky;
+            z-index: 1;
+            top: 20px;
+            background-color: transparent;
+        }
 }
 
 :root{
@@ -215,7 +221,6 @@ header {
             .container-fluid {
                 width: 100%;
                 padding: 10px 40px;
-                box-shadow: 0 2px 6px $main_color_40;
 
                 .navbar-toggler {
                     display: none;
@@ -249,6 +254,14 @@ header {
                         }
                     }
 
+                }
+            }
+        }
+
+        &.sticky{
+            .navbar{
+                .container-fluid{
+                    box-shadow: 0 2px 6px $main_color_40;
                 }
             }
         }
