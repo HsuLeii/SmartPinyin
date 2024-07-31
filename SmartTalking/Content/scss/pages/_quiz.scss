@@ -887,6 +887,8 @@ main {
                             img{
                                 max-width: 500px;
                                 border-radius: 10px;
+                                position: sticky;
+                                top: 20px;
                             }
                         }
                     }
@@ -1339,7 +1341,9 @@ main {
                                 margin: 0 calc(5% - 33px) 0 33px;
                             }
 
-                            .listen_area{
+                            .listen_area,
+                            .dialogue_area,
+                            .dialogue_area{
                                 width: calc(60% - 10px);
                                 margin: 0 33px 0 calc(5% - 33px);
                             }
