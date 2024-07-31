@@ -66,6 +66,7 @@ main {
                 // background-color: $white;
                 // padding: 10px 15px;
                 border-radius: 10px;
+                margin: 40px auto 0;
 
                 .test_area_left_tittle {
                     padding: 10px 5%;
@@ -94,7 +95,6 @@ main {
                         .test_area_left_options_item {
                             padding: 0px 10px;
                             width: 100%;
-                            border-right: 1px solid $main_color_grey;
 
                             &:nth-last-child(1){
                                 border-right: 0;
@@ -238,11 +238,6 @@ main {
                                 }
                             }
 
-                            &:nth-child(1){
-                                padding: 5px 3px 5px 0;
-                                margin: 7px 0;
-                            }
-
                             &.active {
                                 background-color: transparent;
                                 color: $main-color;
@@ -308,6 +303,34 @@ main {
                     border: 1px solid $main_color;
                     background-color: $test_bg;
                     margin: 0 auto;
+
+                    .course_area {
+                        width: 90%;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                        padding: 20px 0 0;
+                        margin: 0 auto;
+            
+                        .course_name {
+                            span {
+                                color: $main_color;
+                                font-size: 25px;
+                                font-weight: bold;
+                            }
+                        }
+            
+                        .course_img {
+                            width: 150px;
+                            margin: 20px 0;
+                            border-radius: 10px;
+                            border: 1px solid $main_color;
+            
+                            img {
+                                border-radius: 10px;
+                            }
+                        }
+                    }
 
                     .dialogue_choose_caption {
                         display: flex;
@@ -855,12 +878,14 @@ main {
                     .test_area_content{
                         padding: 15px 0;
                         .test_area_content_img{
+                            display: flex;
+                            justify-content: flex-start;
                             width: 90%;
                             margin: 0 auto;
                             padding: 20px 0;
-                            max-width: 500px;
 
                             img{
+                                max-width: 500px;
                                 border-radius: 10px;
                             }
                         }
@@ -901,6 +926,7 @@ main {
                                 margin: 5px 0;
                                 display: flex;
                                 justify-content: center;
+                                border-right: 1px solid $main_color_grey;
 
                                 // &.active {
                                 //     a {
@@ -1278,7 +1304,15 @@ main {
                         width: 100%;
                         .test_area_right_nav{
                             margin: 20px auto;
-                            width: 95%;
+                            padding: 15px 20px;
+                            width: 100%;
+                        }
+
+                        .test_area_content{
+                            .course_area{
+                                width: 100%;
+                                padding: 15px 33px;
+                            }
                         }
                     }
                 }
@@ -1300,11 +1334,14 @@ main {
                             flex-wrap: wrap;
 
                             .test_area_content_img{
-                                width: 35%;
+                                display: block;
+                                width: calc(30% - 10px);
+                                margin: 0 calc(5% - 33px) 0 33px;
                             }
 
                             .listen_area{
-                                width: 60%;
+                                width: calc(60% - 10px);
+                                margin: 0 33px 0 calc(5% - 33px);
                             }
                         }
                     }

@@ -101,7 +101,7 @@ header {
 
             .navbar-collapse {
                 position: absolute;
-                top: 100%;
+                top: calc(100% + 20px);
                 width: 90%;
                 flex-grow: initial;
                 right: 5%;
