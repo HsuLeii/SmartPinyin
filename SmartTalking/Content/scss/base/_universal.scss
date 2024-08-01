@@ -468,8 +468,8 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $white;
-        color: $main_color;
+        background-color: $bright_main_color;
+        color: $white;
         border-radius: 5px;
         margin: 40px auto;
         padding: 20px 40px;
@@ -478,7 +478,7 @@ main {
         transform: scale(0.9);
         width: 100%;
         max-width: 500px;
-        border: 2px solid $main_color;
+        overflow: hidden;
 
         &.small_btn {
 
@@ -527,6 +527,7 @@ main {
             display: flex;
             align-items: center;
             z-index: 1;
+            color: $white;
 
             .select_page_btn_icon {
                 position: relative;
@@ -538,14 +539,16 @@ main {
                 border: 1px solid $white;
                 background-color: $white;
                 border-radius: 50%;
-                color: $main_color;
+                color: $bright_main_color;
             }
         }
 
         &:hover,
         &:active {
             transform: scale(1);
-            color: $white;
+            .select_page_btn{
+                color: $bright_main_color;
+            }
 
             &:before {
                 -webkit-transform-origin: bottom center;
@@ -556,7 +559,8 @@ main {
             .select_page_btn {
                 .select_page_btn_icon {
                     background-color: transparent;
-                    color: $white;
+                    color: $bright_main_color;
+                    border: 1px solid $bright_main_color;
                     transition: 0.3s;
                 }
             }
