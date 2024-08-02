@@ -1,6 +1,6 @@
 main {
     position: relative;
-    padding: 0 0 150px;
+    padding: 40px 0;
     .quiz_book_bg{
         position: absolute;
         top: 0;
@@ -64,13 +64,17 @@ main {
             flex-wrap: wrap;
 
             .test_area_link{
-                background-color: $bright_main_color;
-                border-radius: 5px;
-                margin: 40px 0 0;
-                a{
-                    display: block;
-                    color: $white;
-                    padding: 10px 15px;
+                
+                .select_page_link{
+                    margin: 0;
+                    padding: 15px 20px;
+
+                    .select_page_btn{
+                        .select_page_btn_icon,
+                        p{
+                            margin: 0 10px;
+                        }
+                    }
                 }
             }
 
@@ -1231,6 +1235,7 @@ main {
 
 @media screen and (min-width: 992px) {
     main {
+        padding: 70px 0;
         .quiz_page {
 
             .test_area {

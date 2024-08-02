@@ -58,8 +58,14 @@
 
             <div class="test_area test_area_quiz">
                 <div class="test_area_link">
-                    <a href="book_select.html">
-                        <i class="fa-solid fa-chevron-left"></i> 選擇其他課程
+                    <a href="book_select.html" class="select_page_link">
+                        <div class="select_page_btn">
+                            <div class="select_page_btn_icon">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </div>
+
+                            <p>閱讀其他課本</p>
+                        </div>
                     </a>
                 </div>
 
@@ -382,17 +388,17 @@
                         <nav class="test_area_right_nav">
                             <ul>
                                 <li class="test_area_right_nav_item active">
-                                    <a href="quiz_listen.html">
+                                    <a href="quiz_listen_1.html">
                                         聆聽課文
                                     </a>
                                 </li>
                                 <li class="test_area_right_nav_item">
-                                    <a href="quiz_dialogue_choose.html">
+                                    <a href="quiz_dialogue_choose_1.html">
                                         課文朗讀
                                     </a>
                                 </li>
                                 <li class="test_area_right_nav_item">
-                                    <a href="quiz_ai.html">
+                                    <a href="quiz_ai_1.html">
                                         AI對話
                                     </a>
                                 </li>
@@ -697,9 +703,9 @@
                 $('.nav-study').addClass('active');
             });
             $("footer").load("footer.html");
-        });
-        
-        //按鈕功能
+
+
+            //按鈕功能
         $(".play_icon").click(function () {
             $(this).toggleClass("play");
             if ($(this).hasClass("play")) {
@@ -729,6 +735,9 @@
             $(this).toggleClass("open");
             $(this).siblings(".test_area_left_tittle").removeClass("open");
         });
+        });
+        
+        
     
     </script>
 

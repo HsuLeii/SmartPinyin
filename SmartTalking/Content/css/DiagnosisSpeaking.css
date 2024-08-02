@@ -243,7 +243,7 @@ main .select_page_link.small_btn .select_page_btn .select_page_btn_icon { margin
 
 main .select_page_link.small_btn:hover::before { transform: translate(0, 0); }
 
-main .select_page_link::before { -webkit-transform-origin: top center; z-index: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; transform-origin: top center; scale: 1 0; background-color: #314675; content: ""; transition-duration: .5s; transition-property: scale; transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); }
+main .select_page_link::before { -webkit-transform-origin: top center; z-index: 0; position: absolute; z-index: -1; top: 0; left: 0; width: 100%; height: 100%; transform-origin: top center; scale: 1 0; background-color: #314675; content: ""; transition-duration: .5s; transition-property: scale; transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); }
 
 main .select_page_link .select_page_btn { display: flex; align-items: center; z-index: 1; color: #fff; }
 
@@ -413,7 +413,7 @@ header.sticky { position: sticky; z-index: 1; top: 20px; background-color: trans
   header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .nav-link.active::after { top: 100%; left: 50%; transform: translate(0, 10px); }
   header.sticky .navbar .container-fluid { box-shadow: 0 2px 6px #552b8d40; } }
 
-footer { background-color: #314675; padding: 20px 0; position: relative; }
+footer { background-color: #314675; padding: 20px 0; }
 
 footer .footer_logo { display: flex; justify-content: center; padding: 20px; margin: 0 auto; }
 
@@ -446,8 +446,6 @@ footer .footer_information .products_logo .products_logo_content .products_logo_
 footer .footer_copyright { display: flex; justify-content: center; margin: 40px auto 10px; padding: 40px 20px 0; border-top: 1px solid #fff; }
 
 footer .footer_copyright p { font-size: 12px; color: #fff; }
-
-footer::before { content: ""; position: absolute; z-index: -1; top: 0; left: 0; transform: translate(0, -50%); width: 100%; height: 150px; background-color: #314675; border-radius: 100%; }
 
 @media screen and (min-width: 768px) { footer .footer_information .products_logo .products_logo_content .products_logo_item { width: 30%; margin: 10px 1.5%; } }
 
@@ -500,7 +498,7 @@ main .select_page_area .select_page_btn_area .select_page_item .select_page_link
 
 @media screen and (min-width: 1200px) { main .select_page_area .select_page_btn_area .select_page_item { width: 30%; } }
 
-main { position: relative; padding: 0 0 150px; }
+main { position: relative; padding: 40px 0; }
 
 main .quiz_book_bg { position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; min-height: 100vh; }
 
@@ -520,9 +518,9 @@ main .quiz_page .course_area .course_img img { border-radius: 10px; }
 
 main .quiz_page .test_area { width: 100%; margin: 0px auto; display: flex; flex-wrap: wrap; }
 
-main .quiz_page .test_area .test_area_link { background-color: #4dbcbc; border-radius: 5px; margin: 40px 0 0; }
+main .quiz_page .test_area .test_area_link .select_page_link { margin: 0; padding: 15px 20px; }
 
-main .quiz_page .test_area .test_area_link a { display: block; color: #fff; padding: 10px 15px; }
+main .quiz_page .test_area .test_area_link .select_page_link .select_page_btn .select_page_btn_icon, main .quiz_page .test_area .test_area_link .select_page_link .select_page_btn p { margin: 0 10px; }
 
 main .quiz_page .test_area .test_area_left { width: 100%; border-radius: 10px; margin: 40px auto 0; }
 
@@ -802,7 +800,8 @@ main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .t
   main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area .toolbar_item .toolbar_item_btn .btn_icon.font_icon.hide:after { width: 60px; }
   main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue .dialogue_btn { width: 45%; } }
 
-@media screen and (min-width: 992px) { main .quiz_page .test_area .test_area_left { width: 25%; }
+@media screen and (min-width: 992px) { main { padding: 70px 0; }
+  main .quiz_page .test_area .test_area_left { width: 25%; }
   main .quiz_page .test_area .test_area_left .test_area_left_tittle { padding: 15px 20px; border-radius: 0; display: block; }
   main .quiz_page .test_area .test_area_left .test_area_left_tittle p { background: linear-gradient(currentcolor, currentcolor) 100% 100%/0 1px no-repeat; transition: background-size var(--transition-duration) var(--transition-timing-function) 0s; }
   main .quiz_page .test_area .test_area_left .test_area_left_tittle:nth-child(1) { border-radius: 10px 10px 0 0; }
@@ -836,7 +835,7 @@ main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .t
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar .bar:nth-child(4) { height: 25px; }
   main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue .dialogue_btn { width: 28%; } }
 
-main .quiz_page .test_area.book_select .student_data_area { width: 100%; display: flex; flex-wrap: wrap; background-color: #fff; margin: 40px auto 20px; padding: 20px; border-radius: 10px; }
+main .quiz_page .test_area.book_select .student_data_area { width: 100%; display: flex; flex-wrap: wrap; background-color: #fff; margin: 0 auto 20px; padding: 20px; border-radius: 10px; }
 
 main .quiz_page .test_area.book_select .student_data_area .avatar_img { background-color: #314675; width: calc(60px * 1.7); height: calc(60px * 1.7); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 10px; }
 
@@ -882,7 +881,7 @@ main .quiz_page .test_area .test_area_right .test_area_content .book_select_area
 
 @media screen and (min-width: 500px) { main .quiz_page .test_area .test_area_right .test_area_content .book_select_area .book_select_item { width: 47.5%; } }
 
-@media screen and (min-width: 768px) { main .quiz_page .test_area.book_select .student_data_area { margin: 80px auto 40px; }
+@media screen and (min-width: 768px) { main .quiz_page .test_area.book_select .student_data_area { margin: 0 auto 40px; }
   main .quiz_page .test_area.book_select .test_area_right .test_area_content .book_select_area .book_select_item .book_text_title .book_icon { width: 35px; height: 35px; line-height: 35px; } }
 
 @media screen and (min-width: 992px) { main .quiz_page .test_area { justify-content: space-between; }
