@@ -40,6 +40,20 @@ main {
             
         }
     }
+
+    .robot_img{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 15px;
+        position: sticky;
+        bottom: 0;
+        z-index: 1;
+
+        img{
+            width: 80px;
+        }
+    }
 }
 
 @media screen and (min-width: 576px) {
@@ -92,6 +106,12 @@ main {
                 
             }
         }
+
+        .robot_img{
+            img{
+                width: 120px;
+            }
+        }
     }
 }
 
@@ -111,6 +131,12 @@ main {
                 .select_page_item{
                     width: 30%;
                 }
+            }
+        }
+
+        .robot_img{
+            img{
+                width: 180px;
             }
         }
     }
