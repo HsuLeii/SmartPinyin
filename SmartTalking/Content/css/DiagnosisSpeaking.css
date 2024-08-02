@@ -475,7 +475,7 @@ main .select_page_area .slogan_area { width: 80%; margin: 0 auto 60px; display: 
 
 main .select_page_area .slogan_area .slogan_area_img { width: 80%; max-width: 150px; }
 
-main .select_page_area .slogan_area .slogan_area_tittle { color: #314675; margin: 20px auto 0; }
+main .select_page_area .slogan_area .slogan_area_tittle { color: #314675; margin: 20px auto 0; text-align: center; }
 
 main .select_page_area .select_page_btn_area .select_page_item { width: 100%; margin: 20px auto; }
 
