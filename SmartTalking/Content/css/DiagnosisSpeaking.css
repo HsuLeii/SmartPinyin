@@ -469,7 +469,13 @@ footer .footer_copyright p { font-size: 12px; color: #fff; }
   footer .footer_information .related_logo { max-width: 800px; }
   footer .footer_information .products_logo { max-width: 800px; flex-direction: row; align-items: center; } }
 
-main .select_page_area { width: 80%; margin: 60px auto 40px; }
+main .select_page_area { width: 80%; margin: 60px auto; }
+
+main .select_page_area .slogan_area { width: 80%; margin: 0 auto 60px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+
+main .select_page_area .slogan_area .slogan_area_img { width: 80%; max-width: 150px; }
+
+main .select_page_area .slogan_area .slogan_area_tittle { color: #314675; margin: 20px auto 0; }
 
 main .select_page_area .select_page_btn_area .select_page_item { width: 100%; margin: 20px auto; }
 
@@ -485,11 +491,9 @@ main .select_page_area .select_page_btn_area .select_page_item .select_page_link
 
 main .select_page_area .select_page_btn_area .select_page_item .select_page_link .select_page_btn p { font-size: 21px; }
 
-main .robot_img { width: 100%; display: flex; justify-content: flex-end; padding: 15px; position: sticky; bottom: 0; z-index: 1; }
+main .robot_img { width: 80px; position: fixed; right: 15px; bottom: 15px; z-index: 1; }
 
-main .robot_img img { width: 80px; }
-
-@media screen and (min-width: 768px) { main .select_page_area { width: 80%; margin: 60px auto 0; }
+@media screen and (min-width: 768px) { main .select_page_area { width: 80%; margin: 80px auto; }
   main .select_page_area .select_page_btn_area { display: flex; flex-wrap: wrap; justify-content: space-between; }
   main .select_page_area .select_page_btn_area .select_page_item { width: 45%; margin: 20px 0; display: flex; flex-direction: column; justify-content: space-between; }
   main .select_page_area .select_page_btn_area .select_page_item .select_page_item_introduce .introduce_img { max-width: 350px; width: 100%; margin: 0 auto; }
@@ -497,14 +501,12 @@ main .robot_img img { width: 80px; }
   main .select_page_area .select_page_btn_area .select_page_item .select_page_item_introduce .introduce_text { width: 90%; margin: 0 auto; }
   main .select_page_area .select_page_btn_area .select_page_item .select_page_link { padding: 30px 20px; }
   main .select_page_area .select_page_btn_area .select_page_item .select_page_link .select_page_btn p { font-size: 25px; }
-  main .robot_img img { width: 120px; } }
-
-@media screen and (min-width: 992px) { main .select_page_area { width: 80%; margin: 60px auto 0; } }
+  main .robot_img { width: 120px; } }
 
 @media screen and (min-width: 1200px) { main .select_page_area .select_page_btn_area .select_page_item { width: 30%; }
-  main .robot_img img { width: 180px; } }
+  main .robot_img { width: 180px; } }
 
-main { position: relative; padding: 40px 0; }
+main { position: relative; padding: 0 0 40px; }
 
 main .quiz_book_bg { position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; min-height: 100vh; }
 
@@ -512,7 +514,7 @@ main .quiz_book_bg img { width: 100%; height: 100%; object-fit: cover; }
 
 main .quiz_book_bg::before { content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: #a7a7a761; }
 
-main .quiz_page { margin: 0px auto; width: 90%; }
+main .quiz_page { margin: 0px auto; width: 90%; padding: 40px 0 0; }
 
 main .quiz_page .course_area { display: flex; justify-content: space-between; flex-direction: column; padding: 20px 0; }
 
@@ -606,6 +608,8 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_choose_
 
 main .quiz_page .test_area .test_area_right .test_area_content .input_area_form { width: 90%; margin: 0 auto; }
 
+main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area, main .quiz_page .test_area .test_area_right .test_area_content .listen_area { padding: 20px; border: 1px solid #314675; border-radius: 5px; }
+
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area { width: 90%; margin: 0 auto; }
 
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block { display: flex; align-items: center; padding: 70px 0 0; position: relative; }
@@ -676,7 +680,9 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .d
 
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_ai .dialog_box { width: auto; }
 
-main .quiz_page .test_area .test_area_right .test_area_content .listen_area { width: 90%; margin: 0 auto; padding: 20px 0; }
+main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block:nth-child(1) { padding: 0; }
+
+main .quiz_page .test_area .test_area_right .test_area_content .listen_area { width: 90%; margin: 0 auto; }
 
 main .quiz_page .test_area .test_area_right .test_area_content .listen_area .listen_sentence label { cursor: pointer; margin: 10px 0; }
 
@@ -748,7 +754,7 @@ main .quiz_page .test_area.test_area_quiz .test_area_left .test_area_left_tittle
 
 main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content { padding: 15px 0; }
 
-main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .test_area_content_img { display: flex; justify-content: flex-start; width: 90%; margin: 0 auto; padding: 20px 0; }
+main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .test_area_content_img { display: flex; justify-content: flex-start; width: 90%; margin: 0 auto; }
 
 main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .test_area_content_img img { max-width: 500px; border-radius: 10px; position: sticky; top: 20px; }
 
@@ -806,7 +812,8 @@ main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .t
   main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area .toolbar_item .toolbar_item_btn .btn_icon.font_icon.hide:after { width: 60px; }
   main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue .dialogue_btn { width: 45%; } }
 
-@media screen and (min-width: 992px) { main { padding: 70px 0; }
+@media screen and (min-width: 992px) { main { padding: 0 0 70px; }
+  main .quiz_page { padding: 70px 0 0; }
   main .quiz_page .test_area .test_area_left { width: 25%; }
   main .quiz_page .test_area .test_area_left .test_area_left_tittle { padding: 15px 20px; border-radius: 0; display: block; }
   main .quiz_page .test_area .test_area_left .test_area_left_tittle p { background: linear-gradient(currentcolor, currentcolor) 100% 100%/0 1px no-repeat; transition: background-size var(--transition-duration) var(--transition-timing-function) 0s; }

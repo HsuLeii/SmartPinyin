@@ -1,6 +1,6 @@
 main {
     position: relative;
-    padding: 40px 0;
+    padding: 0 0 40px;
     .quiz_book_bg{
         position: absolute;
         top: 0;
@@ -30,6 +30,7 @@ main {
     .quiz_page {
         margin: 0px auto;
         width: 90%;
+        padding: 40px 0 0;
 
         .course_area {
             display: flex;
@@ -390,6 +391,13 @@ main {
                         margin: 0 auto;
                     }
 
+                    .dialogue_area,
+                    .listen_area{
+                        padding: 20px;
+                        border: 1px solid $main_color;
+                        border-radius: 5px;
+                    }
+
                     .dialogue_area {
                         width: 90%;
                         margin: 0 auto;
@@ -516,7 +524,6 @@ main {
                                 }
                             }
 
-
                             &.dialogue_left {
                                 .dialogue_avatar {
                                     margin: 0 15px 0 0;
@@ -618,13 +625,16 @@ main {
                                     width: auto;
                                 }
                             }
+
+                            &:nth-child(1){
+                                padding: 0;
+                            }
                         }
                     }
 
                     .listen_area {
                         width: 90%;
                         margin: 0 auto;
-                        padding: 20px 0;
 
                         .listen_sentence {
                             label {
@@ -888,7 +898,6 @@ main {
                             justify-content: flex-start;
                             width: 90%;
                             margin: 0 auto;
-                            padding: 20px 0;
 
                             img{
                                 max-width: 500px;
@@ -1235,8 +1244,9 @@ main {
 
 @media screen and (min-width: 992px) {
     main {
-        padding: 70px 0;
+        padding: 0 0 70px;
         .quiz_page {
+            padding: 70px 0 0;
 
             .test_area {
 

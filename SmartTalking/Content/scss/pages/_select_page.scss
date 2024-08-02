@@ -1,7 +1,26 @@
 main {
     .select_page_area {
         width: 80%;
-        margin: 60px auto 40px;
+        margin: 60px auto;
+
+        .slogan_area{
+            width: 80%;
+            margin: 0 auto 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .slogan_area_img{
+                width: 80%;
+                max-width: 150px;
+            }
+
+            .slogan_area_tittle{
+                color: $main_color;
+                margin: 20px auto 0;
+            }
+        }
         .select_page_btn_area{
             .select_page_item{
                 width: 100%;
@@ -42,17 +61,11 @@ main {
     }
 
     .robot_img{
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        padding: 15px;
-        position: sticky;
-        bottom: 0;
+        width: 80px;
+        position: fixed;
+        right: 15px;
+        bottom: 15px;
         z-index: 1;
-
-        img{
-            width: 80px;
-        }
     }
 }
 
@@ -63,7 +76,7 @@ main {
     main {
         .select_page_area {
             width: 80%;
-            margin: 60px auto 0;
+            margin: 80px auto;
             .select_page_btn_area{
                 display: flex;
                 flex-wrap: wrap;
@@ -108,20 +121,12 @@ main {
         }
 
         .robot_img{
-            img{
-                width: 120px;
-            }
+            width: 120px;
         }
     }
 }
 
 @media screen and (min-width: 992px) {
-    main {
-        .select_page_area {
-            width: 80%;
-            margin: 60px auto 0;
-        }
-    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -135,9 +140,7 @@ main {
         }
 
         .robot_img{
-            img{
-                width: 180px;
-            }
+            width: 180px;
         }
     }
 }
