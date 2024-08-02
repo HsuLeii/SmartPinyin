@@ -31,6 +31,11 @@ main {
                         max-width: 350px;
                         width: 100%;
                         margin: 0 auto;
+                        animation-duration:0.3s;
+
+                        &:hover{
+                            animation-name:introduce;
+                        }
                     }
 
                     .introduce_tittle{
@@ -143,5 +148,15 @@ main {
         .robot_img{
             width: 180px;
         }
+    }
+}
+
+@keyframes introduce{
+    0%{
+        transform: scale(0.9);
+    }
+
+    100%{
+        transform: scale(1);
     }
 }
