@@ -134,7 +134,6 @@ footer {
                 justify-content: center;
     
                 .products_logo_content{
-                    max-width: 650px;
                     .products_logo_item{
                         padding: 10px 10px;
                     }
@@ -201,12 +200,6 @@ footer {
 
             .related_logo{
                 max-width: 800px;
-            }
-    
-            .products_logo{
-                max-width: 800px;
-                flex-direction: row;
-                align-items: center;
             }
         }
     }
