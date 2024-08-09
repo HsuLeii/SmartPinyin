@@ -4,24 +4,104 @@ main {
         margin: 60px auto;
 
         .slogan_area{
-            width: 80%;
-            margin: 0 auto 60px;
+            position: relative;
+            width: 100%;
+            margin: 0 auto 80px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
 
-            .slogan_area_img{
-                width: 80%;
-                max-width: 150px;
-            }
-
             .slogan_area_tittle{
+                position: relative;
                 color: $main_color;
                 margin: 20px auto 0;
                 text-align: center;
+                background-color: $white;
+                padding: 40px;
+                border-radius: 10px;
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    border-width: 10px 0px 10px 10px;
+                    left: 50%;
+                    bottom: 0%;
+                    transform: translate(-50%, 80%) rotate(15deg);
+                    border-right: 20px solid transparent;
+                    border-bottom: 20px solid transparent;
+                    border-left: 20px solid transparent;
+                    border-top: 40px solid $white;
+                }
+
+                h5{
+                    text-align: left;
+                }
+
+                .slogan_area_text{
+                    margin: 20px auto;
+                    p{
+                        text-align: left;
+                    }
+                }
+
+                .slogan_area_tittle_bg{
+                    position: absolute;
+                    z-index: -1;
+                    top: 15px;
+                    left: -15px;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $bright_main_color;
+                    border-radius: 10px;
+    
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        border-width: 10px 0px 10px 10px;
+                        left: calc(50% + 7.5px);
+                        bottom: 0%;
+                        transform: translate(-50%, 80%) rotate(15deg);
+                        border-right: 20px solid transparent;
+                        border-bottom: 20px solid transparent;
+                        border-left: 20px solid transparent;
+                        border-top: 40px solid $bright_main_color;
+                    }
+                }
+
+                .slogan_icon{
+                    position: absolute;
+                    
+                    
+                    i{
+                        font-size: 35px;
+                    }
+    
+                    &.slogan_icon_right{
+                        right: -10px;
+                        top: 0;
+    
+                        i{
+                            color: $main_color;
+                        }
+                    }
+    
+                    &.slogan_icon_left{
+                        left: 10px;
+                        bottom: 0;
+    
+                        i{
+                            color: $main_color_yellow;
+                        }
+                    }
+                }
             }
+
+            
+
+            
         }
+
         .select_page_btn_area{
             .select_page_item{
                 width: 100%;
@@ -73,6 +153,22 @@ main {
         bottom: 15px;
         z-index: 1;
     }
+
+    .decorate_line{
+        position: fixed;
+        z-index: 1;
+        width: 6%;
+
+        &.decorate_right{
+            top: 100px;
+            right: 0;
+        }
+
+        &.decorate_left{
+            bottom: 0px;
+            left: 0;
+        }
+    }
 }
 
 @media screen and (min-width: 576px) {
@@ -81,8 +177,26 @@ main {
 @media screen and (min-width: 768px) {
     main {
         .select_page_area {
-            width: 80%;
-            margin: 80px auto;
+
+
+            .slogan_area{
+                width: 80%;
+    
+                .slogan_area_tittle{
+                    padding: 60px;
+    
+                    .slogan_icon{
+                        i{
+                            font-size: 50px;
+                        }
+                    }
+                }
+    
+                
+    
+                
+            }
+
             .select_page_btn_area{
                 display: flex;
                 flex-wrap: wrap;
