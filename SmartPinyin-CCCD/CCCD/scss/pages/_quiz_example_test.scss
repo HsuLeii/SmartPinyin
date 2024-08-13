@@ -152,6 +152,12 @@ main {
                 font-size: 29px;
             }
 
+            .Disabled {
+                cursor: not-allowed;
+                opacity: 0.5;
+                text-decoration: none;
+            }
+
             svg {
                 background-color: $color-main;
                 color: white;
@@ -162,6 +168,12 @@ main {
             &:hover {
                 svg {
                     background-color: darken($color-main, 10%);
+                }
+
+                .Disabled {
+                    svg {
+                        background-color: $color-main;
+                    }
                 }
             }
         }
