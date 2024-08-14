@@ -157,11 +157,11 @@ main .player_area .play_area.Disabled .cursor { cursor: not-allowed; }
 
 main .player_area .play_area.Disabled input { cursor: not-allowed; }
 
+main .player_area .play_area.Disabled ~ .sound_area { opacity: 0.5; }
+
+main .player_area .play_area.Disabled ~ .sound_area svg, main .player_area .play_area.Disabled ~ .sound_area input { cursor: not-allowed; }
+
 main .player_area .play_area .fa-play { margin-right: 10px; }
-
-main .player_area .play_area ~ .sound_area { opacity: 0.5; }
-
-main .player_area .play_area ~ .sound_area svg, main .player_area .play_area ~ .sound_area input { cursor: not-allowed; }
 
 main .player_area .sound_area { display: flex; align-items: center; max-width: 165px; padding: 5px 10px; background-color: #e7dcf4; border-radius: 50px; }
 

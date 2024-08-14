@@ -95,18 +95,18 @@ main {
         input{
           cursor: not-allowed;
         }
+
+        &~.sound_area{
+          opacity: 0.5;
+  
+          svg,input{
+            cursor: not-allowed;
+          }
+        }
     }
 
       .fa-play {
         margin-right: 10px;
-      }
-
-      &~.sound_area{
-        opacity: 0.5;
-
-        svg,input{
-          cursor: not-allowed;
-        }
       }
     }
 
