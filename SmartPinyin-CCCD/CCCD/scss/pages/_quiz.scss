@@ -83,8 +83,30 @@ main {
         color: $color-main;
       }
 
+      &.Disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+        text-decoration: none;
+
+        .cursor {
+          cursor: not-allowed;
+        }
+
+        input{
+          cursor: not-allowed;
+        }
+    }
+
       .fa-play {
         margin-right: 10px;
+      }
+
+      &~.sound_area{
+        opacity: 0.5;
+
+        svg,input{
+          cursor: not-allowed;
+        }
       }
     }
 
