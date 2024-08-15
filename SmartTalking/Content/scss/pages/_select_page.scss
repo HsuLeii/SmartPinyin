@@ -18,9 +18,10 @@ main {
                 margin: 20px auto 0;
                 text-align: center;
                 background-color: $white;
+                border: 1.5px solid $bright_main_color;
                 padding: 40px;
                 border-radius: 10px;
-
+                
                 &::before{
                     content: "";
                     position: absolute;
@@ -123,6 +124,10 @@ main {
                         color: $main_color;
                         font-weight: bold;
                         width: 90%;
+
+                        img{
+                            width: 55%;
+                        }
                     }
 
                     .introduce_text{

@@ -1,7 +1,8 @@
 main {
     position: relative;
-    padding: 0 0 40px;
-    .quiz_book_bg{
+    // padding: 0 0 40px;
+
+    .quiz_book_bg {
         position: absolute;
         top: 0;
         left: 0;
@@ -9,14 +10,14 @@ main {
         width: 100%;
         height: 100%;
         min-height: 100vh;
-        
-        img{
+
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        &::before{
+        &::before {
             content: "";
             position: absolute;
             left: 0;
@@ -64,15 +65,16 @@ main {
             display: flex;
             flex-wrap: wrap;
 
-            .test_area_link{
-                
-                .select_page_link{
+            .test_area_link {
+
+                .select_page_link {
                     margin: 0;
                     padding: 15px 20px;
 
-                    .select_page_btn{
+                    .select_page_btn {
+
                         .select_page_btn_icon,
-                        p{
+                        p {
                             margin: 0 10px;
                         }
                     }
@@ -93,7 +95,7 @@ main {
                     border-radius: 10px;
                     display: none;
 
-                    &:nth-child(1){
+                    &:nth-child(1) {
                         display: block;
                     }
 
@@ -114,7 +116,7 @@ main {
                             padding: 0px 10px;
                             width: 100%;
 
-                            &:nth-last-child(1){
+                            &:nth-last-child(1) {
                                 border-right: 0;
                             }
 
@@ -167,27 +169,28 @@ main {
                         }
                     }
 
-                    &.open{
-                        .test_area_left_options{
+                    &.open {
+                        .test_area_left_options {
                             display: flex;
                         }
                     }
 
-                    &.active{
-                        p{
+                    &.active {
+                        p {
                             color: $bright_main_color;
                         }
-                        .test_area_left_options{
+
+                        .test_area_left_options {
                             display: flex !important;
                         }
                     }
 
-                    &:hover{
-                        
-                        p{
+                    &:hover {
+
+                        p {
                             color: $bright_main_color;
                             background-position: 0 100%;
-                        background-size: 100% 1px;
+                            background-size: 100% 1px;
                         }
                     }
                 }
@@ -329,7 +332,7 @@ main {
                         flex-direction: column;
                         padding: 20px 0 0;
                         margin: 0 auto;
-            
+
                         .course_name {
                             span {
                                 color: $main_color;
@@ -337,13 +340,13 @@ main {
                                 font-weight: bold;
                             }
                         }
-            
+
                         .course_img {
                             width: 150px;
                             margin: 20px 0;
                             border-radius: 10px;
                             border: 1px solid $main_color;
-            
+
                             img {
                                 border-radius: 10px;
                             }
@@ -359,29 +362,72 @@ main {
                         padding: 20px 0;
 
                         .dialogue_choose_avatar {
-                            width: 40px;
-                            margin: 0 15px 0 0;
+                            width: 60px;
+                            margin: 0 20px 0 0;
                         }
 
                         .dialogue_choose_text {
+                            position: relative;
                             display: flex;
                             align-items: center;
                             padding: 12px 15px;
                             border-radius: 5px;
                             position: relative;
-                            background-color: $white;
+                            z-index: 1;
+
+                            .dialogue_choose_text_bg {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                left: -5px;
+                                top: 5px;
+                                border-radius: 5px;
+                                border: 1px solid $bright_main_color;
+                                background-color: $bright_main_color;
+                                z-index: -1;
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    top: -3px;
+                                    left: 3px;
+                                    z-index: -2;
+                                    border-radius: 5px;
+                                    background-color: $white;
+                                    border: 1.5px solid $bright_main_color;
+                                }
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    border-width: 10px 0px 10px 10px;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translate(-100%, -50%);
+                                    border-right: 10px solid $bright_main_color;
+                                    border-bottom: 10px solid transparent;
+                                    border-left: 10px solid transparent;
+                                    border-top: 10px solid transparent;
+                                }
+                            }
+
+                            p {
+                                color: $main_color;
+                            }
 
                             &::before {
                                 content: "";
                                 position: absolute;
-                                border-width: 8px 0px 8px 8px;
+                                border-width: 10px 0px 10px 10px;
                                 left: 0;
                                 top: 50%;
                                 transform: translate(-100%, -50%);
-                                border-right: 8px solid $white;
-                                border-bottom: 8px solid transparent;
-                                border-left: 8px solid transparent;
-                                border-top: 8px solid transparent;
+                                border-right: 10px solid $white;
+                                border-bottom: 10px solid transparent;
+                                border-left: 10px solid transparent;
+                                border-top: 10px solid transparent;
                             }
                         }
                     }
@@ -389,10 +435,51 @@ main {
                     .input_area_form {
                         width: 90%;
                         margin: 0 auto;
+
+                        .input_area {
+                            margin: 40px auto;
+
+                            &.input_area_figure {
+                                .input-group-label {
+                                    width: 100%;
+                                }
+
+                                .radio-inline {
+                                    margin: 10px;
+
+                                    .figure_img {
+                                        width: 70%;
+                                        max-width: 150px;
+                                        margin: 0 8px 0 0;
+
+                                        img {
+                                            border-radius: 50%;
+                                            padding: 5px;
+                                        }
+                                    }
+
+                                    &:has(input:checked) {
+                                        .figure_img {
+                                            img {
+                                                border: 1.5px solid $bright_main_color;
+                                            }
+                                        }
+                                    }
+
+                                    &:hover {
+                                        .figure_img {
+                                            img {
+                                                border: 1.5px solid $bright_main_color;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
 
                     .dialogue_area,
-                    .listen_area{
+                    .listen_area {
                         padding: 20px;
                         border: 1px solid $main_color;
                         border-radius: 5px;
@@ -626,7 +713,7 @@ main {
                                 }
                             }
 
-                            &:nth-child(1){
+                            &:nth-child(1) {
                                 padding: 0;
                             }
                         }
@@ -870,17 +957,17 @@ main {
                 }
             }
 
-            &.test_area_quiz{
+            &.test_area_quiz {
                 .test_area_left {
-    
+
                     .test_area_left_tittle {
-    
+
                         .test_area_left_options {
-    
+
                             .test_area_left_options_item {
                                 padding: 0px 10px;
                                 margin: 10px 0;
-    
+
                                 a {
                                     padding: 0;
                                     margin: 0;
@@ -890,16 +977,17 @@ main {
                     }
                 }
 
-                .test_area_right{
-                    .test_area_content{
+                .test_area_right {
+                    .test_area_content {
                         padding: 15px 0;
-                        .test_area_content_img{
+
+                        .test_area_content_img {
                             display: flex;
                             justify-content: flex-start;
                             width: 90%;
                             margin: 0 auto;
 
-                            img{
+                            img {
                                 max-width: 500px;
                                 border-radius: 10px;
                                 position: sticky;
@@ -1035,7 +1123,8 @@ main {
                             padding: 40px 0;
 
                             .dialogue_choose_avatar {
-                                width: 50px;
+                                width: 100px;
+                                margin: 0 40px 0 0;
                             }
 
                             .dialogue_choose_text {
@@ -1043,11 +1132,11 @@ main {
                             }
                         }
 
-                        .input_area_form{
-                            max-width: 800px;
+                        .input_area_form {
+                            max-width: 900px;
 
-                            .input_area{
-                                .input-group-label{
+                            .input_area {
+                                .input-group-label {
                                     width: auto;
                                 }
                             }
@@ -1244,7 +1333,8 @@ main {
 
 @media screen and (min-width: 992px) {
     main {
-        padding: 0 0 70px;
+        // padding: 0 0 70px;
+
         .quiz_page {
             padding: 70px 0 0;
 
@@ -1260,14 +1350,14 @@ main {
 
                         p {
                             background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
-                        transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
+                            transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
                         }
 
-                        &:nth-child(1){
+                        &:nth-child(1) {
                             border-radius: 10px 10px 0 0;
                         }
 
-                        &:nth-last-child(1){
+                        &:nth-last-child(1) {
                             border-radius: 0 0 10px 10px;
                         }
 
@@ -1300,32 +1390,57 @@ main {
 
                 }
 
-                &.test_area_quiz{
-                    .test_area_left{
+                .test_area_right {
+
+                    .test_area_content {
+
+                        .input_area_form {
+
+                            .input_area {
+
+                                &.input_area_figure {
+
+                                    .radio-inline {
+                                        width: calc(30% - 20px);
+
+                                        .figure_img {
+                                            width: 55%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.test_area_quiz {
+                    .test_area_left {
                         width: 100%;
+
                         .test_area_left_tittle {
                             display: none;
 
-                            &:hover{
-                                p{
+                            &:hover {
+                                p {
                                     background-position: 0 0%;
                                     background-size: 0% 0px;
                                 }
                             }
 
-                            &:nth-child(1){
+                            &:nth-child(1) {
                                 display: block;
                                 border-radius: 10px;
                             }
+
                             .test_area_left_options {
-                                .test_area_left_options_item{
+                                .test_area_left_options_item {
                                     width: auto;
                                     margin: 5px 0;
                                     display: flex;
                                     justify-content: center;
                                     border-right: 1px solid $main_color_grey;
 
-                                    &:nth-last-child(1){
+                                    &:nth-last-child(1) {
                                         border-right: 0;
                                     }
                                 }
@@ -1333,16 +1448,17 @@ main {
                         }
                     }
 
-                    .test_area_right{
+                    .test_area_right {
                         width: 100%;
-                        .test_area_right_nav{
+
+                        .test_area_right_nav {
                             margin: 20px auto;
                             padding: 15px 20px;
                             width: 100%;
                         }
 
-                        .test_area_content{
-                            .course_area{
+                        .test_area_content {
+                            .course_area {
                                 width: 100%;
                                 padding: 15px 33px;
                             }
@@ -1360,13 +1476,13 @@ main {
         .quiz_page {
 
             .test_area {
-                &.test_area_quiz{
-                    .test_area_right{
-                        .test_area_content{
+                &.test_area_quiz {
+                    .test_area_right {
+                        .test_area_content {
                             display: flex;
                             flex-wrap: wrap;
 
-                            .test_area_content_img{
+                            .test_area_content_img {
                                 display: block;
                                 width: calc(30% - 10px);
                                 margin: 0 calc(5% - 33px) 0 33px;
@@ -1374,7 +1490,7 @@ main {
 
                             .listen_area,
                             .dialogue_area,
-                            .dialogue_area{
+                            .dialogue_area {
                                 width: calc(60% - 10px);
                                 margin: 0 33px 0 calc(5% - 33px);
                             }
