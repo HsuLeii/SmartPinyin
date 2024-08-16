@@ -1,6 +1,5 @@
 main {
     position: relative;
-    // padding: 0 0 40px;
 
     .quiz_book_bg {
         position: absolute;
@@ -210,9 +209,44 @@ main {
                     }
                 }
 
+                // .test_area_right_nav_btn{
+
+                //     .test_area_right_nav_btn_a{
+                //         position: relative;
+                //     }
+                //     .test_area_right_nav_span{
+                //         position: absolute;
+                //         transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+                //         transition-duration: 0.3s;
+                //     }
+
+                //     .test_area_right_nav_span_one{
+                //         position: absolute;
+                //         width: 100%;
+                //         height: 100%;
+                //         background-color: $white;
+                //         padding-left: 1.25rem;
+                //         padding-right: 1.25rem;
+                //         padding-top: 0.75rem;
+                //         padding-bottom: 0.75rem;
+                //     }
+
+                //     .test_area_right_nav_span_two{
+                //         width: 100%;
+                //         height: 100%;
+                //         position: absolute;
+                //         background-color: $black;
+                //         transition-duration: 0.3s;
+                //         transition-property: all;
+                //         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                //         transition-duration: 150ms;
+                //     }
+                // }
+
+
                 .test_area_right_nav {
                     width: 90%;
-                    margin: 0 auto 30px;
+                    margin: 0 auto;
 
                     ul {
                         display: flex;
@@ -220,58 +254,60 @@ main {
 
                         .test_area_right_nav_item {
                             position: relative;
-                            padding: 5px 3px;
-                            margin: 7px 0 7px 10px;
-                            border: 0px;
-                            border-radius: 0;
+                            // padding: 5px 10px;
+                            margin: 5px;
+                            border: 1px solid $main_color;
+                            border-radius: 5px;
                             background-color: transparent;
 
                             a {
-                                padding: 3px 5px;
-                                color: $black;
+                                display: block;
+                                padding: 10px 10px;
+                                color: $main_color;
                                 background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
                                 transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
 
-                                &:hover {
-                                    color: $bright_main_color;
-                                }
+                                // &:hover {
+                                //     color: $bright_main_color;
+                                //     background-color: $main_color;
+                                // }
 
-                                &:hover,
-                                &:active {
-                                    color: $bright_main_color;
-                                    background-position: 0 100%;
-                                    background-size: 100% 1px;
-                                }
+                                // &:hover,
+                                // &:active {
+                                //     color: $bright_main_color;
+                                //     background-position: 0 100%;
+                                //     background-size: 100% 1px;
+                                // }
 
                             }
 
-                            &::after {
-                                position: absolute;
-                                content: "/";
-                                right: 0;
-                                transform: translate(100%, 0);
-                                color: $main_color_grey;
-                            }
+                            // &::after {
+                            //     position: absolute;
+                            //     content: "/";
+                            //     right: 0;
+                            //     transform: translate(100%, 0);
+                            //     color: $main_color_grey;
+                            // }
 
-                            &:nth-child(4) {
-                                &::after {
-                                    content: "";
+                            &:hover {
+                                background-color: $main_color;
+
+                                a{
+                                    color: $white;
                                 }
                             }
 
                             &.active {
-                                background-color: transparent;
-                                color: $main-color;
-
+                                background-color: $main_color;
 
                                 a {
-                                    color: $bright_main_color;
+                                    color: $white;
                                     font-weight: bold;
                                     cursor: auto;
 
                                     &:hover,
                                     &:active {
-                                        color: $bright_main_color;
+                                        color: $white;
                                         background-position: 0 0;
                                         background-size: 0 0;
                                     }
@@ -985,7 +1021,7 @@ main {
                             display: flex;
                             justify-content: flex-start;
                             width: 90%;
-                            margin: 0 auto;
+                            margin: 40px auto;
 
                             img {
                                 max-width: 500px;
@@ -1059,7 +1095,7 @@ main {
                     .test_area_right_nav {
 
                         .test_area_right_nav_item {
-                            padding: 5px 10px;
+                            // padding: 5px 10px;
                         }
                     }
                 }
@@ -1108,7 +1144,6 @@ main {
 
                     .test_area_right_nav {
                         .test_area_right_nav_item {
-                            padding: 10px;
                             border: 2px solid $main-color;
                             border-bottom: 0px;
                             transform: translate(-2px, 0);
@@ -1333,7 +1368,6 @@ main {
 
 @media screen and (min-width: 992px) {
     main {
-        // padding: 0 0 70px;
 
         .quiz_page {
             padding: 70px 0 0;
@@ -1401,7 +1435,6 @@ main {
                                 &.input_area_figure {
 
                                     .radio-inline {
-                                        width: calc(30% - 20px);
 
                                         .figure_img {
                                             width: 55%;
@@ -1523,14 +1556,6 @@ main {
             .test_area {
 
                 .test_area_right {
-
-                    .test_area_right_nav {
-
-                        .test_area_right_nav_item {
-                            padding: 10px 15px;
-                        }
-                    }
-
                     .test_area_content {
 
                         .dialogue_area {
