@@ -337,7 +337,7 @@
                         </ul>
                     </ul>
 
-                    
+
                 </div>
 
                 <div class="test_area_right">
@@ -440,10 +440,27 @@
                                     <div class="dialogue_choose_text_bg"></div>
                                 </div>
                             </div>
-                            <div action="" class="input_area_form">
+                            <div class="input_area_form">
                                 <div class="input_area input_area_figure">
-                                    <label class="input-group-label" for="figure">角色選擇：</label>
-                                    <label class="radio-inline">
+                                    <p class="input-group-label">角色選擇：</p>
+                                    <div class="input_area_figure_item_area">
+                                        <div class="input_area_figure_item">
+                                            <img src="../Content/image/photo/avatar/avatar_00.png" alt="">
+                                            <p>老師</p>
+                                        </div>
+
+                                        <div class="input_area_figure_item">
+                                            <img src="../Content/image/photo/avatar/avatar_01.png" alt="">
+                                            <p>大衛</p>
+                                        </div>
+
+                                        <div class="input_area_figure_item">
+                                            <img src="../Content/image/photo/avatar/avatar_07.png" alt="">
+                                            <p>漢文</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- <label class="radio-inline">
                                         <div class="figure_img">
                                             <img src="../Content/image/photo/avatar/avatar_00.png" alt="">
                                         </div>
@@ -460,9 +477,9 @@
                                             <img src="../Content/image/photo/avatar/avatar_07.png" alt="">
                                         </div>
                                         <input id="figure3" type="radio" value="2" name="figure">漢文
-                                    </label>
+                                    </label> -->
                                 </div>
-    
+
                                 <div class="input_area">
                                     <label class="input-group-label" for="speed">語速選擇：</label>
                                     <label class="radio-inline">
@@ -475,50 +492,55 @@
                                         <input id="speed3" type="radio" value="2" name="speed">快
                                     </label>
                                 </div>
-    
-                                
+
+
                             </div>
                         </div>
 
                         <div class="toolbar_area">
 
                             <div class="input_area input-group-submit">
-                                <button id="submit" class="input-group-submit-btn" type="submit" onclick="location.href='quiz_dialogue_1.html'">
+                                <button id="submit" class="input-group-submit-btn" type="submit"
+                                    onclick="location.href='quiz_dialogue_1.html'">
                                     <p>開始</p>
                                 </button>
                             </div>
 
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <div class="robot_img">
-            <img src="../Content/image/logo/robot.png" alt="">
+        <div class="robot_hint">
+            <div class="robot_img">
+                <img src="../Content/image/logo/robot.png" alt="">
+            </div>
         </div>
 
         <div class="main_footer">
             <div class="footer_radar">
                 <img src="../Content/image/svg/footer_radar.svg" alt="">
             </div>
-            
-            
+
+
             <div class="footer_logo">
-            
+
                 <div class="footer_logo_img">
                     <img src="../Content/image/logo/logo.svg" alt="">
                 </div>
-            
+
                 <div class="footer_svg_area">
-                    <svg version="1.1" viewBox="0 0 1920 252.7" style="enable-background:new 0 0 1920 252.7;" xml:space="preserve">
-                        <path class="footer_svg" d="M751.8,437.8h1167.7V205.7h0.5c0-27.9-25.5-54.9-75.7-80.3c-48.4-24.5-117.6-46.4-205.8-65.3
-                        C1457.3,21.3,1216.3,0,960,0S462.7,21.3,281.4,60.1C193.3,79,124,100.9,75.7,125.4C25.5,150.8,0,177.8,0,205.7v232.1H751.8z"/>
+                    <svg version="1.1" viewBox="0 0 1920 252.7" style="enable-background:new 0 0 1920 252.7;"
+                        xml:space="preserve">
+                        <path class="footer_svg"
+                            d="M751.8,437.8h1167.7V205.7h0.5c0-27.9-25.5-54.9-75.7-80.3c-48.4-24.5-117.6-46.4-205.8-65.3
+                        C1457.3,21.3,1216.3,0,960,0S462.7,21.3,281.4,60.1C193.3,79,124,100.9,75.7,125.4C25.5,150.8,0,177.8,0,205.7v232.1H751.8z" />
                     </svg>
                 </div>
-            
+
             </div>
         </div>
     </main>
@@ -541,10 +563,23 @@
             $("footer").load("footer.html");
 
             //選擇課本
-            $(".test_area_left_tittle").click(function (){
+            $(".test_area_left_tittle").click(function () {
                 $(this).toggleClass("open");
                 $(this).siblings(".test_area_left_tittle").removeClass("open");
             });
+        });
+    </script>
+
+    <script>
+        // var el = document.querySelectorAll(".abc");
+        $(".input_area_figure_item").click(function () {
+            var el = $(".input_area_figure_item.active").length;
+
+            if(el < 2){
+                $(this).toggleClass("active");
+            }else if(el = 2){
+                $(this).removeClass("active");
+            }
         });
     </script>
 
