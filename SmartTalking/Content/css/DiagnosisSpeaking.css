@@ -701,7 +701,7 @@ main .quiz_page .test_area .test_area_right .test_area_content .input_area_form 
 
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area, main .quiz_page .test_area .test_area_right .test_area_content .listen_area { padding: 20px; border: 1px solid #314675; border-radius: 5px; }
 
-main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area { width: 90%; margin: 0 auto; }
+main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area { width: 90%; margin: 0 auto; padding: 20px 20px 60px; }
 
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block { display: flex; align-items: center; padding: 70px 0 0; position: relative; }
 
@@ -919,6 +919,7 @@ main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .t
   main .quiz_page .test_area .test_area_right .test_area_content .input_area_form { max-width: 900px; }
   main .quiz_page .test_area .test_area_right .test_area_content .input_area_form .input_area.input_area_figure .input_area_figure_item_area .input_area_figure_item { width: 28%; }
   main .quiz_page .test_area .test_area_right .test_area_content .input_area_form .input_area .input-group-label { width: auto; }
+  main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area { padding: 20px; }
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block { padding: 60px 0 0; }
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialogue_avatar { width: 50px; }
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_record { position: relative; bottom: auto; transform: translate(0, 0); margin: 0 10px; }
