@@ -292,7 +292,7 @@ main {
                             &:hover {
                                 background-color: $main_color;
 
-                                a{
+                                a {
                                     color: $white;
                                 }
                             }
@@ -477,19 +477,20 @@ main {
 
                             &.input_area_figure {
                                 flex-wrap: wrap;
+
                                 .input-group-label {
                                     width: 100%;
                                     margin: 0 auto 15px;
                                 }
 
-                                .input_area_figure_item_area{
+                                .input_area_figure_item_area {
                                     width: 100%;
                                     display: flex;
                                     flex-wrap: wrap;
                                     align-items: flex-start;
                                     border: 0;
 
-                                    .input_area_figure_item{
+                                    .input_area_figure_item {
                                         width: 45%;
                                         margin: 10px 2.5%;
                                         display: flex;
@@ -498,7 +499,7 @@ main {
                                         align-items: center;
                                         cursor: pointer;
 
-                                        img{
+                                        img {
                                             margin: 5px auto;
                                             padding: 5px;
                                             transform: scale(0.9);
@@ -506,18 +507,18 @@ main {
                                             border-radius: 50%;
                                         }
 
-                                        &.active{
-                                            img{
+                                        &.active {
+                                            img {
                                                 border: 1px solid $bright_main_color;
                                             }
 
-                                            p{
+                                            p {
                                                 color: $bright_main_color;
                                             }
                                         }
 
-                                        &:hover{
-                                            img{
+                                        &:hover {
+                                            img {
                                                 transform: scale(1);
                                             }
                                         }
@@ -900,7 +901,6 @@ main {
                                     }
 
                                     &.font_icon {
-
                                         &.hide {
                                             &:after {
                                                 content: "";
@@ -947,7 +947,6 @@ main {
                                         background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
                                         transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
 
-
                                         &.active {
                                             color: $bright_main_color;
                                             font-weight: bold;
@@ -980,12 +979,156 @@ main {
                                     }
                                 }
                             }
+
+                            ul {
+                                display: flex;
+
+                                li {
+                                    position: relative;
+                                    margin: 0 5px;
+
+                                    .toolbar_item_btn {
+                                        i {
+                                            font-size: 15px;
+                                            color: $main_color;
+                                        }
+                                    }
+
+                                    .toolbar_item_container {
+                                        display: none;
+                                        position: absolute;
+                                        z-index: 1;
+                                        color: $main_color;
+                                        background-color: $white;
+                                        border: 2px solid;
+                                        border-color: $main_color;
+                                        border-radius: 4px;
+                                        min-width: 70px;
+                                        text-align: center;
+                                        left: -8px;
+                                        bottom: 100%;
+                                        margin-bottom: 11px;
+                                        padding: 5px 10px;
+
+                                        &.open{
+                                            display: block;
+                                        }
+
+                                        &.speak_menu_container {
+                                            left: -8px;
+                                            min-width: 100px;
+        
+                                            p {
+                                                margin: 5px;
+                                                cursor: pointer;
+                                                background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
+                                                transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
+        
+                                                &.active {
+                                                    color: $bright_main_color;
+                                                    font-weight: bold;
+        
+                                                    &:hover,
+                                                    &:active {
+                                                        cursor: auto;
+                                                        background-position: 0 0;
+                                                        background-size: 0 0;
+                                                    }
+                                                }
+        
+                                                &:hover,
+                                                &:active {
+                                                    color: $bright_main_color;
+                                                    background-position: 0 100%;
+                                                    background-size: 100% 1px;
+                                                }
+                                            }
+                                        }
+
+                                        .label_text {
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            flex-direction: column;
+                                            line-height: 28px;
+                                            min-width: 100px;
+                                            padding: 3px 0px;
+
+                                            input[type=checkbox] {
+                                                height: 0;
+                                                width: 0;
+                                                visibility: hidden;
+
+                                                &:checked {
+                                                    &~label {
+                                                        background: $main_color !important;
+
+                                                        &::after {
+                                                            left: calc(100% - 5px) !important;
+                                                            transform: translateX(-100%);
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            label {
+                                                cursor: pointer;
+                                                text-indent: -9999px;
+                                                width: 40px;
+                                                height: 25px;
+                                                background-color: $grey;
+                                                display: block;
+                                                border-radius: 100px;
+                                                position: relative;
+                                                margin-left: 7px;
+
+                                                &::after {
+                                                    content: '';
+                                                    position: absolute;
+                                                    top: 5px;
+                                                    left: 5px;
+                                                    width: 15px;
+                                                    height: 15px;
+                                                    background: $white;
+                                                    border-radius: 90px;
+                                                    transition: 0.1s;
+                                                }
+                                            }
+                                        }
+
+                                        &::before {
+                                            content: "";
+                                            border: solid transparent;
+                                            border-width: 9px 9px 0 9px;
+                                            border-top-color: $main_color;
+                                            position: absolute;
+                                            bottom: -10px;
+                                            left: calc(11px - 3px);
+                                        }
+
+                                        &::after {
+                                            content: "";
+                                            border: solid transparent;
+                                            position: absolute;
+                                            border-width: 7px 7px 0 7px;
+                                            border-top-color: $white;
+                                            bottom: -7px;
+                                            left: 10px;
+                                        }
+                                    }
+                                }
+                            }
                         }
 
-                        &.toolbar_dialogue {
-                            padding: 20px 10%;
-                            justify-content: center;
-                            flex-wrap: wrap;
+                        &.toolbar_dialogue_area {
+                            // padding: 20px 10%;
+                            // justify-content: center;
+                            // flex-wrap: wrap;
+
+                            .toolbar_dialogue {
+                                display: flex;
+                                width: calc(60% - 30px);
+                            }
 
                             .dialogue_btn {
                                 margin: 10px;
@@ -1216,8 +1359,8 @@ main {
 
                             .input_area {
                                 &.input_area_figure {
-                                    .input_area_figure_item_area{
-                                        .input_area_figure_item{
+                                    .input_area_figure_item_area {
+                                        .input_area_figure_item {
                                             width: 28%;
                                         }
                                     }
@@ -1402,9 +1545,20 @@ main {
                                         }
                                     }
                                 }
+
+                                ul {
+                                    li {
+                                        margin: 0 10px;
+                                        .toolbar_item_btn {
+                                            i {
+                                                font-size: 25px;
+                                            }
+                                        }
+                                    }
+                                }
                             }
 
-                            &.toolbar_dialogue {
+                            &.toolbar_dialogue_area {
                                 .dialogue_btn {
                                     width: 45%;
                                 }
@@ -1643,7 +1797,7 @@ main {
                         }
 
                         .toolbar_area {
-                            &.toolbar_dialogue {
+                            &.toolbar_dialogue_area {
                                 .dialogue_btn {
                                     width: 28%;
                                 }

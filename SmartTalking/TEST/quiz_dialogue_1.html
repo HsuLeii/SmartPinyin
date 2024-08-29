@@ -336,7 +336,7 @@
                         </ul>
                     </ul>
 
-                    
+
                 </div>
 
                 <div class="test_area_right">
@@ -418,7 +418,7 @@
                         <div class="test_area_content_img">
                             <img src="../Content/image/photo/book/SB1/L1.png" alt="">
                         </div>
-                        
+
                         <div class="dialogue_area">
                             <div class="dialogue_block dialogue_left">
                                 <div class="dialogue_avatar">
@@ -495,7 +495,7 @@
                                         <i class="fa-solid fa-microphone-lines"></i>
                                     </button>
                                 </div>
-                                
+
                                 <div class="dialog_box">
                                     <button class="dialog_box_icon">
                                         <i class="fa-solid fa-play"></i>
@@ -504,7 +504,7 @@
                                         <p>好。
                                         </p>
                                     </div>
-                                    
+
                                 </div>
                             </div>
 
@@ -532,18 +532,89 @@
                             </div>
                         </div>
 
-                        <div class="toolbar_area toolbar_dialogue">
+                        <div class="toolbar_area toolbar_dialogue_area">
 
-                            <div class="dialogue_btn dialogue_btn_try">
-                                <button type="button">再試一次</button>
+                            <div class="toolbar_dialogue">
+                                <div class="dialogue_btn dialogue_btn_try">
+                                    <button type="button">再試一次</button>
+                                </div>
+
+                                <div class="dialogue_btn dialogue_btn_change">
+                                    <button type="button">選擇其他角色</button>
+                                </div>
+
+                                <div class="dialogue_btn dialogue_btn_done">
+                                    <button type="button">完成</button>
+                                </div>
                             </div>
 
-                            <div class="dialogue_btn dialogue_btn_change">
-                                <button type="button">選擇其他角色</button>
-                            </div>
+                            <div class="toolbar_item">
+                                <ul>
+                                    <li aria-label="拼音">
+                                        <button class="toolbar_item_btn btn_pinyin">
+                                            <i class="fa-solid fa-font"></i>
+                                        </button>
 
-                            <div class="dialogue_btn dialogue_btn_done">
-                                <button type="button">完成</button>
+                                        <div class="toolbar_item_container">
+                                            <p class="label_text">
+                                                <input type="checkbox" id="pinyin_id" class="">
+                                                <span>拼音</span>
+                                                <label for="pinyin_id"></label></p>
+                                        </div>
+                                    </li>
+                    
+                                    <li aria-label="翻譯">
+                                        <button class="toolbar_item_btn btn_translate">
+                                            <i class="fa-solid fa-earth-americas"></i>
+                                        </button>
+                                        <div class="toolbar_item_container open">
+                                            <p class="label_text">
+                                                <input type="checkbox" id="translate_id" checked="">
+                                                <span>翻譯</span>
+                                                <label for="translate_id"></label>
+                                            </p>
+                                        </div>
+                                    </li>
+
+                                    <li aria-label="糾錯">
+                                        <button class="toolbar_item_btn btn_correction">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </button>
+                                        <div class="toolbar_item_container">
+                                            <p class="label_text"><input type="checkbox" id="correction_id">
+                                                <span>糾錯</span>
+                                                <label for="correction_id"></label></p>
+                                        </div>
+                                    </li>
+                    
+                                    <li aria-label="語速">
+                                        <button class="toolbar_item_btn btn_speak">
+                                            <i class="fa-solid fa-comments"></i>
+                                        </button>
+                                        <div class="toolbar_item_container speak_menu_container">
+                                            <p>慢</p>
+                                            <p class="active">正常</p>
+                                            <p>快</p>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <!-- <div class="toolbar_item_btn">
+                                    <button class="btn_icon font_icon hide" aria-label="拼音">
+                                        <i class="fa-solid fa-font"></i>
+                                    </button>
+                                </div>
+
+                                <div class="toolbar_item_btn">
+                                    <button class="btn_icon speak_icon" aria-label="語速">
+                                        <i class="fa-solid fa-comments"></i>
+                                    </button>
+                                    <div class="speak_menu_container">
+                                        <p>慢</p>
+                                        <p class="active">正常</p>
+                                        <p>快</p>
+                                    </div>
+                                </div> -->
                             </div>
 
                         </div>
@@ -563,21 +634,23 @@
             <div class="footer_radar">
                 <img src="../Content/image/svg/footer_radar.svg" alt="">
             </div>
-            
-            
+
+
             <div class="footer_logo">
-            
+
                 <div class="footer_logo_img">
                     <img src="../Content/image/logo/logo.svg" alt="">
                 </div>
-            
+
                 <div class="footer_svg_area">
-                    <svg version="1.1" viewBox="0 0 1920 252.7" style="enable-background:new 0 0 1920 252.7;" xml:space="preserve">
-                        <path class="footer_svg" d="M751.8,437.8h1167.7V205.7h0.5c0-27.9-25.5-54.9-75.7-80.3c-48.4-24.5-117.6-46.4-205.8-65.3
-                        C1457.3,21.3,1216.3,0,960,0S462.7,21.3,281.4,60.1C193.3,79,124,100.9,75.7,125.4C25.5,150.8,0,177.8,0,205.7v232.1H751.8z"/>
+                    <svg version="1.1" viewBox="0 0 1920 252.7" style="enable-background:new 0 0 1920 252.7;"
+                        xml:space="preserve">
+                        <path class="footer_svg"
+                            d="M751.8,437.8h1167.7V205.7h0.5c0-27.9-25.5-54.9-75.7-80.3c-48.4-24.5-117.6-46.4-205.8-65.3
+                        C1457.3,21.3,1216.3,0,960,0S462.7,21.3,281.4,60.1C193.3,79,124,100.9,75.7,125.4C25.5,150.8,0,177.8,0,205.7v232.1H751.8z" />
                     </svg>
                 </div>
-            
+
             </div>
         </div>
     </main>
@@ -610,8 +683,33 @@
                 };
             });
 
+            $(".speak_icon").click(function () {
+                $(this).toggleClass("open");
+            });
+
+            $(".font_icon").click(function () {
+                $(this).toggleClass("hide");
+                if ($(this).hasClass("hide")) {
+                    $("rt").show();
+                } else {
+                    $("rt").hide();
+                }
+            });
+
+            
+            $(".toolbar_item_btn").click(function () {
+                if($(this).siblings(".toolbar_item_container").hasClass("open")){
+                    $(".toolbar_item_container").removeClass("open");
+                    $(this).siblings(".toolbar_item_container").removeClass("open");
+                }else{
+                    $(".toolbar_item_container").removeClass("open");
+                    $(this).siblings(".toolbar_item_container").addClass("open");
+                }
+            });
+            
+            
             //選擇課本
-            $(".test_area_left_tittle").click(function (){
+            $(".test_area_left_tittle").click(function () {
                 $(this).toggleClass("open");
                 $(this).siblings(".test_area_left_tittle").removeClass("open");
             });
