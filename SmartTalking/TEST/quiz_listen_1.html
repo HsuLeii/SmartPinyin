@@ -657,22 +657,55 @@
                             </div>
 
                             <div class="toolbar_item">
-                                <div class="toolbar_item_btn">
-                                    <button class="btn_icon font_icon hide" aria-label="拼音">
-                                        <i class="fa-solid fa-font"></i>
-                                    </button>
-                                </div>
+                                <ul>
+                                    <li aria-label="拼音">
+                                        <button class="toolbar_item_btn btn_pinyin">
+                                            <i class="fa-solid fa-font"></i>
+                                        </button>
 
-                                <div class="toolbar_item_btn">
-                                    <button class="btn_icon speak_icon" aria-label="語速">
-                                        <i class="fa-solid fa-comments"></i>
-                                    </button>
-                                    <div class="speak_menu_container">
-                                        <p>慢</p>
-                                        <p class="active">正常</p>
-                                        <p>快</p>
-                                    </div>
-                                </div>
+                                        <div class="toolbar_item_container">
+                                            <p class="label_text">
+                                                <input type="checkbox" id="pinyin_id" class="">
+                                                <span>拼音</span>
+                                                <label for="pinyin_id"></label></p>
+                                        </div>
+                                    </li>
+                    
+                                    <li aria-label="翻譯">
+                                        <button class="toolbar_item_btn btn_translate">
+                                            <i class="fa-solid fa-earth-americas"></i>
+                                        </button>
+                                        <div class="toolbar_item_container">
+                                            <p class="label_text">
+                                                <input type="checkbox" id="translate_id" checked="">
+                                                <span>翻譯</span>
+                                                <label for="translate_id"></label>
+                                            </p>
+                                        </div>
+                                    </li>
+
+                                    <li aria-label="糾錯">
+                                        <button class="toolbar_item_btn btn_correction">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </button>
+                                        <div class="toolbar_item_container">
+                                            <p class="label_text"><input type="checkbox" id="correction_id">
+                                                <span>糾錯</span>
+                                                <label for="correction_id"></label></p>
+                                        </div>
+                                    </li>
+                    
+                                    <li aria-label="語速">
+                                        <button class="toolbar_item_btn btn_speak">
+                                            <i class="fa-solid fa-comments"></i>
+                                        </button>
+                                        <div class="toolbar_item_container speak_menu_container">
+                                            <p>慢</p>
+                                            <p class="active">正常</p>
+                                            <p>快</p>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -752,6 +785,16 @@
                 $("rt").hide();
             }
         });
+
+        $(".toolbar_item_btn").click(function () {
+                if($(this).siblings(".toolbar_item_container").hasClass("open")){
+                    $(".toolbar_item_container").removeClass("open");
+                    $(this).siblings(".toolbar_item_container").removeClass("open");
+                }else{
+                    $(".toolbar_item_container").removeClass("open");
+                    $(this).siblings(".toolbar_item_container").addClass("open");
+                }
+            });
 
         //選擇課本
         $(".test_area_left_tittle").click(function () {

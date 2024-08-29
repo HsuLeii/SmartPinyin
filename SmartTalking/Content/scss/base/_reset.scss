@@ -172,7 +172,8 @@ body {
             pointer-events: all;
             padding: 4px 8px;
             bottom: 100%;
-            right: 0%;
+            left: 50%;
+            transform: translate(-50%, 0px);
             margin-bottom: 11px;
         }
 

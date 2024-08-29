@@ -846,12 +846,12 @@ main {
                         position: relative;
                         z-index: 1;
                         display: flex;
-                        justify-content: flex-end;
+                        justify-content: center;
+                        flex-wrap: wrap;
                         padding: 10px;
-                        margin: 80px auto 0;
-                        padding: 30px 0;
+                        margin: 20px auto 0;
+                        padding: 30px 0 0;
                         background-color: $white;
-                        border-top: 1px solid $main_color;
 
                         .btn_icon_area {
                             .btn_icon {
@@ -862,6 +862,7 @@ main {
                                 align-items: center;
                                 border-radius: 50%;
                                 background-color: $main-color;
+                                transform: scale(0.95);
 
                                 i {
                                     color: $white;
@@ -869,17 +870,20 @@ main {
                                 }
 
                                 &:hover {
-                                    transform: scale(1.05);
+                                    transform: scale(1);
+                                    background-color: $bright_main_color;
                                 }
                             }
                         }
 
                         .toolbar_item {
-                            width: calc(40% - 30px);
+                            width: 100%;
                             display: flex;
                             justify-content: flex-end;
                             align-items: center;
-                            margin: 0 5%;
+                            margin: 40px 5% 0px;
+                            border-top:  1px solid $main_color;
+                            padding: 20px 0 10px;
 
                             .toolbar_item_btn {
                                 position: relative;
@@ -898,6 +902,10 @@ main {
 
                                     &:hover {
                                         transform: scale(1.05);
+
+                                        i{
+                                            color: $bright_main_color;
+                                        }
                                     }
 
                                     &.font_icon {
@@ -981,17 +989,48 @@ main {
                             }
 
                             ul {
+                                width: 100%;
                                 display: flex;
+                                justify-content: space-between;
 
                                 li {
                                     position: relative;
-                                    margin: 0 5px;
+                                    margin: 0 10px;
 
                                     .toolbar_item_btn {
+                                        transform: scale(0.95);
+
                                         i {
-                                            font-size: 15px;
+                                            font-size: 25px;
                                             color: $main_color;
                                         }
+
+                                        &:hover {
+                                            transform: scale(1);
+
+                                            i{
+                                                color: $bright_main_color;
+                                            }
+                                        }
+                                    }
+
+                                    &:nth-child(1),
+                                    &:nth-child(2){
+                                        .toolbar_item_container{
+                                            right: auto;
+                                            left: -8px;
+
+                                            &::before {
+                                                left: calc(11px - 3px);
+                                                right: auto;
+                                            }
+    
+                                            &::after {
+                                                right: auto;
+                                                left: 10px;
+                                            }
+                                        }
+                                        
                                     }
 
                                     .toolbar_item_container {
@@ -1003,9 +1042,9 @@ main {
                                         border: 2px solid;
                                         border-color: $main_color;
                                         border-radius: 4px;
-                                        min-width: 70px;
+                                        min-width: 100px;
                                         text-align: center;
-                                        left: -8px;
+                                        right: -8px;
                                         bottom: 100%;
                                         margin-bottom: 11px;
                                         padding: 5px 10px;
@@ -1015,8 +1054,6 @@ main {
                                         }
 
                                         &.speak_menu_container {
-                                            left: -8px;
-                                            min-width: 100px;
         
                                             p {
                                                 margin: 5px;
@@ -1077,6 +1114,7 @@ main {
                                                 width: 40px;
                                                 height: 25px;
                                                 background-color: $grey;
+                                                border: 1px solid $main_color;
                                                 display: block;
                                                 border-radius: 100px;
                                                 position: relative;
@@ -1103,7 +1141,7 @@ main {
                                             border-top-color: $main_color;
                                             position: absolute;
                                             bottom: -10px;
-                                            left: calc(11px - 3px);
+                                            right: calc(11px - 3px);
                                         }
 
                                         &::after {
@@ -1113,8 +1151,10 @@ main {
                                             border-width: 7px 7px 0 7px;
                                             border-top-color: $white;
                                             bottom: -7px;
-                                            left: 10px;
+                                            right: 10px;
                                         }
+
+                                        
                                     }
                                 }
                             }
@@ -1517,11 +1557,6 @@ main {
                             }
 
                             .toolbar_item {
-                                width: calc(40% - 30px);
-                                display: flex;
-                                justify-content: flex-end;
-                                align-items: center;
-                                margin: 0 5%;
 
                                 .toolbar_item_btn {
                                     position: relative;
@@ -1547,11 +1582,12 @@ main {
                                 }
 
                                 ul {
+                                    width: auto;
                                     li {
-                                        margin: 0 10px;
+                                        margin: 0 15px;
                                         .toolbar_item_btn {
                                             i {
-                                                font-size: 25px;
+                                                font-size: 30px;
                                             }
                                         }
                                     }
