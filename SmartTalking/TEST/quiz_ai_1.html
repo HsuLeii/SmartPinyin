@@ -422,7 +422,7 @@
                         <div class="dialogue_area">
                             <div class="dialogue_block dialogue_ai dialogue_left">
                                 <div class="dialogue_avatar">
-                                    <img src="../Content/image/photo/avatar/robot.svg" alt="">
+                                    <img src="../Content/image/photo/avatar/avatar_00.png" alt="">
                                 </div>
                                 <div class="dialog_box">
                                     <button class="dialog_box_icon">
@@ -442,7 +442,7 @@
                             </div>
                             <div class="dialogue_block dialogue_ai dialogue_right">
                                 <div class="dialogue_avatar">
-                                    <img src="../Content/image/photo/avatar/user.svg" alt="">
+                                    <img src="../Content/image/photo/avatar/avatar_01.png" alt="">
                                 </div>
                                 <div class="dialog_box">
                                     <button class="dialog_box_icon">
@@ -462,7 +462,7 @@
                             </div>
                             <div class="dialogue_block dialogue_ai dialogue_left">
                                 <div class="dialogue_avatar">
-                                    <img src="../Content/image/photo/avatar/robot.svg" alt="">
+                                    <img src="../Content/image/photo/avatar/avatar_02.png" alt="">
                                 </div>
                                 <div class="dialog_box">
                                     <button class="dialog_box_icon">
@@ -482,7 +482,7 @@
                             </div>
                             <div class="dialogue_block dialogue_ai dialogue_right">
                                 <div class="dialogue_avatar">
-                                    <img src="../Content/image/photo/avatar/user.svg" alt="">
+                                    <img src="../Content/image/photo/avatar/avatar_03.png" alt="">
                                 </div>
                                 <div class="dialog_box">
                                     <button class="dialog_box_icon">
@@ -508,9 +508,62 @@
                                 <button class="btn_icon recording_icon">
                                     <i class="fa-solid fa-microphone"></i>
                                 </button>
+                                <p class="recording_time">
+                                    0:12
+                                </p>
                             </div>
 
-                            <div class="toolbar_item"></div>
+                            <div class="toolbar_item">
+                                <ul>
+                                    <li>
+                                        <button class="toolbar_item_btn btn_pinyin" aria-label="拼音" disabled>
+                                            <i class="fa-solid fa-font"></i>
+                                        </button>
+
+                                        <div class="toolbar_item_container">
+                                            <p class="label_text">
+                                                <input type="checkbox" id="pinyin_id">
+                                                <span>拼音</span>
+                                                <label for="pinyin_id"></label></p>
+                                        </div>
+                                    </li>
+                    
+                                    <li>
+                                        <button class="toolbar_item_btn btn_translate" aria-label="翻譯" disabled>
+                                            <i class="fa-solid fa-earth-americas"></i>
+                                        </button>
+                                        <div class="toolbar_item_container">
+                                            <p class="label_text">
+                                                <input type="checkbox" id="translate_id">
+                                                <span>翻譯</span>
+                                                <label for="translate_id"></label>
+                                            </p>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <button class="toolbar_item_btn btn_correction" aria-label="糾錯" disabled>
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </button>
+                                        <div class="toolbar_item_container">
+                                            <p class="label_text"><input type="checkbox" id="correction_id">
+                                                <span>糾錯</span>
+                                                <label for="correction_id"></label></p>
+                                        </div>
+                                    </li>
+                    
+                                    <li>
+                                        <button class="toolbar_item_btn btn_speak" aria-label="語速">
+                                            <i class="fa-solid fa-comments"></i>
+                                        </button>
+                                        <div class="toolbar_item_container speak_menu_container">
+                                            <p>慢</p>
+                                            <p class="active">正常</p>
+                                            <p>快</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -569,10 +622,22 @@
                 if ($(this).hasClass("play")) {
                     $(this).children().removeClass("fa-microphone");
                     $(this).children().addClass("fa-stop");
+                    $(".recording_time").show();
                 } else {
                     $(this).children().addClass("fa-microphone");
                     $(this).children().removeClass("fa-stop");
+                    $(".recording_time").hide();
                 };
+            });
+
+            $(".toolbar_item_btn").click(function () {
+                if($(this).siblings(".toolbar_item_container").hasClass("open")){
+                    $(".toolbar_item_container").removeClass("open");
+                    $(this).siblings(".toolbar_item_container").removeClass("open");
+                }else{
+                    $(".toolbar_item_container").removeClass("open");
+                    $(this).siblings(".toolbar_item_container").addClass("open");
+                }
             });
 
             //選擇課本

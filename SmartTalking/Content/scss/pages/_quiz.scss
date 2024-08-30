@@ -580,6 +580,10 @@ main {
 
                             .dialogue_avatar {
                                 width: 40px;
+                                
+                                img{
+                                    border-radius: 50%;
+                                }
                             }
 
                             .dialog_record {
@@ -615,7 +619,6 @@ main {
                                 border-radius: 5px;
                                 position: relative;
                                 max-width: 60%;
-
                                 position: relative;
                                 width: calc(100% - 55px);
                                 max-width: none;
@@ -629,7 +632,6 @@ main {
                                     background-color: $main-color;
                                     color: $white;
                                     border-radius: 50%;
-
                                     position: absolute;
                                     z-index: 1;
                                     bottom: 0;
@@ -641,9 +643,38 @@ main {
                                 }
 
                                 .dialog_box_text {
-                                    width: calc(100% - 70px);
-
                                     width: 100%;
+                                    color: $main_color_grey;
+
+                                    .dialog_box_score{
+                                        margin: 10px 0;
+
+                                        i{
+                                            font-size: 25px;
+                                            color: $white;
+                                            padding: 5px;
+                                            background-color: $bright_main_color;
+                                            border-radius: 50%;
+                                        }
+
+                                        &.good{
+                                            i{
+                                                background-color: $score_good;
+                                            }
+                                        }
+
+                                        &.general{
+                                            i{
+                                                background-color: $score_general;
+                                            }
+                                        }
+
+                                        &.bad{
+                                            i{
+                                                background-color: $score_bad;
+                                            }
+                                        }
+                                    }
                                 }
 
                                 .sound_bar {
@@ -710,6 +741,18 @@ main {
                                         left: 0px;
                                     }
 
+                                    .dialog_box_text {
+                                        label {
+                                            ruby {
+                                                &.wrong {
+                                                    rt {
+                                                        color: $main_color_grey;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
                                     &::before {
                                         content: "";
                                         position: absolute;
@@ -731,14 +774,6 @@ main {
                                 .dialogue_avatar {
                                     margin: 0 0 0 15px;
                                     order: 2;
-                                    background-color: $grey;
-                                    padding: 10px;
-                                    line-height: 0;
-                                    border-radius: 50%;
-
-                                    img {
-                                        line-height: 0;
-                                    }
                                 }
 
                                 .dialog_record {
@@ -772,6 +807,16 @@ main {
 
                                     .dialog_box_text {
                                         color: $white;
+
+                                        label {
+                                            ruby {
+                                                &.wrong {
+                                                    rt {
+                                                        color: $white;
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
 
                                     .sound_bar {
@@ -805,21 +850,29 @@ main {
                         width: 90%;
                         margin: 0 auto;
 
-                        .listen_sentence {
-                            label {
-                                cursor: pointer;
-                                margin: 10px 0;
+                        .listen_area_sentence {
+                            margin: 0 auto 40px;
 
-                                &:hover {
-                                    color: $bright_main_color;
-                                }
+                            .listen_sentence {
+                                label {
+                                    cursor: pointer;
+                                    margin: 10px 0;
 
-                                ruby {
-                                    line-height: 1.5;
-                                    word-break: break-word;
-                                    margin: 5px 3px;
-                                    display: inline-block;
-                                    text-align: center;
+                                    &:hover {
+                                        color: $bright_main_color;
+
+                                        ruby {
+                                            color: $bright_main_color;
+
+                                            rt {
+                                                color: $bright_main_color;
+
+                                                span {
+                                                    color: $bright_main_color;
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -875,6 +928,17 @@ main {
                                     background-color: $bright_main_color;
                                 }
                             }
+
+                            &.recording_area{
+                                display: flex;
+                                flex-direction: column;
+                            }
+
+                            .recording_time{
+                                display: none;
+                                color: $main_color;
+                                margin: 10px auto 0;
+                            }
                         }
 
                         .toolbar_item {
@@ -883,7 +947,7 @@ main {
                             justify-content: flex-end;
                             align-items: center;
                             margin: 40px 5% 0px;
-                            border-top:  1px solid $main_color;
+                            border-top: 1px solid $main_color;
                             padding: 20px 0 10px;
 
                             .toolbar_item_btn {
@@ -904,32 +968,8 @@ main {
                                     &:hover {
                                         transform: scale(1.05);
 
-                                        i{
+                                        i {
                                             color: $bright_main_color;
-                                        }
-                                    }
-
-                                    &.font_icon {
-                                        &.hide {
-                                            &:after {
-                                                content: "";
-                                                position: absolute;
-                                                top: 50%;
-                                                left: 50%;
-                                                transform: translate(-50%, -50%) rotate(45deg);
-                                                width: 40px;
-                                                height: 2px;
-                                                background-color: $main_color;
-                                                opacity: 1;
-                                            }
-                                        }
-                                    }
-
-                                    &.speak_icon {
-                                        &.open {
-                                            &~.speak_menu_container {
-                                                display: block;
-                                            }
                                         }
                                     }
                                 }
@@ -1001,6 +1041,26 @@ main {
                                     .toolbar_item_btn {
                                         transform: scale(0.95);
 
+                                        &:disabled {
+                                            i {
+                                                color: $grey;
+                                            }
+
+                                            &:hover {
+                                                transform: scale(0.95);
+
+                                                i {
+                                                    color: $grey;
+                                                }
+                                            }
+
+                                            &:before {
+                                                content: "";
+                                                background-color: transparent;
+                                            }
+
+                                        }
+
                                         i {
                                             font-size: 25px;
                                             color: $main_color;
@@ -1009,15 +1069,15 @@ main {
                                         &:hover {
                                             transform: scale(1);
 
-                                            i{
+                                            i {
                                                 color: $bright_main_color;
                                             }
                                         }
                                     }
 
                                     &:nth-child(1),
-                                    &:nth-child(2){
-                                        .toolbar_item_container{
+                                    &:nth-child(2) {
+                                        .toolbar_item_container {
                                             right: auto;
                                             left: -8px;
 
@@ -1025,13 +1085,13 @@ main {
                                                 left: calc(11px - 3px);
                                                 right: auto;
                                             }
-    
+
                                             &::after {
                                                 right: auto;
                                                 left: 10px;
                                             }
                                         }
-                                        
+
                                     }
 
                                     .toolbar_item_container {
@@ -1050,22 +1110,22 @@ main {
                                         margin-bottom: 11px;
                                         padding: 5px 10px;
 
-                                        &.open{
+                                        &.open {
                                             display: block;
                                         }
 
                                         &.speak_menu_container {
-        
+
                                             p {
                                                 margin: 5px;
                                                 cursor: pointer;
                                                 background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
                                                 transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
-        
+
                                                 &.active {
                                                     color: $bright_main_color;
                                                     font-weight: bold;
-        
+
                                                     &:hover,
                                                     &:active {
                                                         cursor: auto;
@@ -1073,7 +1133,7 @@ main {
                                                         background-size: 0 0;
                                                     }
                                                 }
-        
+
                                                 &:hover,
                                                 &:active {
                                                     color: $bright_main_color;
@@ -1124,7 +1184,7 @@ main {
                                                 &::after {
                                                     content: '';
                                                     position: absolute;
-                                                    top: 5px;
+                                                    top: 4px;
                                                     left: 5px;
                                                     width: 15px;
                                                     height: 15px;
@@ -1155,7 +1215,7 @@ main {
                                             right: 10px;
                                         }
 
-                                        
+
                                     }
                                 }
                             }
@@ -1168,7 +1228,9 @@ main {
 
                             .toolbar_dialogue {
                                 display: flex;
-                                width: calc(60% - 30px);
+                                flex-wrap: wrap;
+                                justify-content: center;
+                                width: 90%;
                             }
 
                             .dialogue_btn {
@@ -1218,6 +1280,38 @@ main {
                         }
                     }
 
+                    label {
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+
+                        ruby {
+                            rt {
+                                font-size: 75%;
+
+                                span {
+                                    font-size: 100%;
+                                    line-height: 1;
+
+                                    &.wrong {
+                                        &.show {
+                                            color: $wrong_text;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.wrong {
+                                rt {
+                                    color: $main_color_grey;
+                                }
+
+                                &.show {
+                                    color: $wrong_text;
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
@@ -1332,6 +1426,59 @@ main {
     }
 }
 
+@media screen and (min-width: 576px) {
+    main {
+        .quiz_page {
+
+            .test_area {
+                .test_area_left {
+
+                    .test_area_left_tittle {
+
+                        .test_area_left_options {
+
+                            .test_area_left_options_item {
+                                width: auto;
+                                margin: 5px 0;
+                                display: flex;
+                                justify-content: center;
+                                border-right: 1px solid $main_color_grey;
+                            }
+                        }
+                    }
+
+
+                }
+
+                .test_area_right {
+
+                    .test_area_right_tittle {
+                        margin: 15px 20px;
+                    }
+
+                    .test_area_content {
+
+                        .toolbar_area {
+
+                            &.toolbar_dialogue_area {
+                                .dialogue_btn {
+                                    width: 45%;
+
+                                    &.dialogue_btn_done {
+                                        width: 80%;
+                                        margin: 30px auto 0;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 768px) {
     main {
         .quiz_page {
@@ -1415,6 +1562,7 @@ main {
 
                         .dialogue_area {
                             padding: 20px;
+
                             .dialogue_block {
                                 padding: 60px 0 0;
 
@@ -1460,8 +1608,16 @@ main {
                                     }
 
                                     .dialog_box_text {
-                                        margin: 0 10px;
+                                        margin: 0 15px;
                                         width: calc(100% - 90px);
+
+                                        .dialog_box_score{
+                                            margin: 10px 0;
+    
+                                            i{
+                                                font-size: 30px;
+                                            }
+                                        }
                                     }
 
                                     .sound_bar {
@@ -1571,22 +1727,15 @@ main {
                                         i {
                                             font-size: 25px;
                                         }
-
-                                        &.font_icon {
-
-                                            &.hide {
-                                                &:after {
-                                                    width: 60px;
-                                                }
-                                            }
-                                        }
                                     }
                                 }
 
                                 ul {
                                     width: auto;
+
                                     li {
                                         margin: 0 15px;
+
                                         .toolbar_item_btn {
                                             i {
                                                 font-size: 30px;
@@ -1598,7 +1747,15 @@ main {
 
                             &.toolbar_dialogue_area {
                                 .dialogue_btn {
-                                    width: 45%;
+                                    max-width: 450px;
+
+                                    button {
+                                        padding: 15px 0;
+
+                                        &.dialogue_btn_done {
+                                            max-width: 600px;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -1837,7 +1994,36 @@ main {
                         .toolbar_area {
                             &.toolbar_dialogue_area {
                                 .dialogue_btn {
-                                    width: 28%;
+                                    width: 45%;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    main {
+        .quiz_page {
+
+            .test_area {
+
+                .test_area_right {
+                    .test_area_content {
+
+                        .toolbar_area {
+                            &.toolbar_dialogue_area {
+                                .dialogue_btn {
+                                    width: 25%;
+
+                                    &.dialogue_btn_done {
+                                        margin: 10px;
+                                    }
                                 }
                             }
                         }
