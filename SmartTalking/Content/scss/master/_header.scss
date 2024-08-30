@@ -242,7 +242,7 @@ header {
                             }
 
                             &.navbar-nav-language{
-                                margin: 0 0 0 auto;
+                                margin: 0;
                             }
     
                             .nav-item {
@@ -281,7 +281,6 @@ header {
     
                     .navbar-collapse {
                         width: 100%;
-                        justify-content: space-between;
                     }
                 }
             }
