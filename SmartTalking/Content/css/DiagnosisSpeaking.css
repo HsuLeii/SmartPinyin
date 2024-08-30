@@ -91,7 +91,7 @@ body { background-color: #e5e5e5; }
 
 main .main { margin: 0 auto; width: 80%; max-width: 1500px; }
 
-main .input_area { display: flex; flex-direction: row; align-items: center; justify-content: space-between; margin: 15px auto; position: relative; }
+main .input_area { display: flex; flex-direction: row; align-items: center; margin: 15px auto; position: relative; }
 
 main .input_area input:read-only { border: 0px solid #20221f; border-bottom: 1px solid #20221f; border-radius: 0; background-color: transparent; cursor: auto; }
 
