@@ -540,7 +540,7 @@ main {
                                         .information_text {
                                             width: calc(100% - 10px - 5px);
                                             display: flex;
-                                            flex-wrap: wrap;
+                                            flex-wrap: nowrap;
                                         }
                                     }
                                 }
@@ -1195,7 +1195,7 @@ main {
                                         .information_text {
                                             width: calc(100% - 10px - 5px);
                                             display: flex;
-                                            flex-wrap: wrap;
+                                            flex-wrap: nowrap;
                                         }
                                     }
                                 }
