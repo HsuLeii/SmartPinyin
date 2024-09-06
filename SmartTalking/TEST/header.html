@@ -4,7 +4,8 @@
             <img src="../Content/image/logo/logo.svg" alt="SmartPinyin">
         </a>
         <div class="header_right">
-            <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+            <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false">
                 <span></span>
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -21,16 +22,42 @@
                         <a class="nav-link" href="">聽說測驗</a>
                     </li>
 
-                    
                     <li class="nav-item">
-                        <a class="nav-link" href="">學習歷程</a>
+                        <a href="#" class="nav-link dropdown">學習歷程</a>
+                                <div class="dropdown-content">
+                                    <div class="nav-item nav-textbook">
+                                        <a class="nav-link dropdown" href="#">全方位中文 1</a>
+                                        <div class="dropdown-content">
+                                            <a class="nav-link" href="report_selector.html">第一課 新同學</a>
+                                            <a class="nav-link" href="#">第二課 那是誰</a>
+                                            <a class="nav-link" href="#">第三課 我的一天</a>
+                                        </div>
+                                    </div>
+                                    <div class="nav-item nav-textbook">
+                                        <a class="nav-link dropdown" href="#">全方位中文 2</a>
+                                        <div class="dropdown-content">
+                                            <a class="nav-link" href="#">第一課 你好</a>
+                                            <a class="nav-link" href="#">第二課 那是誰</a>
+                                            <a class="nav-link" href="#">第三課 我的一天</a>
+                                        </div>
+                                    </div>
+                                    <div class="nav-item nav-textbook">
+                                        <a class="nav-link dropdown" href="#">全方位中文 3</a>
+                                        <div class="dropdown-content">
+                                            <a class="nav-link dropdown" href="#">第一課 你好</a>
+                                            <a class="nav-link dropdown" href="#">第二課 那是誰</a>
+                                            <a class="nav-link dropdown" href="#">第三課 我的一天</a>
+                                        </div>
+                                    </div>
+                                </div>
                     </li>
                 </ul>
+
                 <ul class="navbar-nav navbar-nav-language">
                     <li class="nav-item">
                         <a class="nav-link" href="">繁體中文</a>
                     </li>
-    
+
                     <li class="nav-item">
                         <a class="nav-link" href="../login.html">
                             <i class="fa-solid fa-arrow-right-to-bracket"></i> 登出</a>
@@ -44,6 +71,14 @@
 <script>
     //選單按鈕
     $(".navbar-toggler").click(function () {
-      $(this).toggleClass("open");
+        $(this).toggleClass("open");
     });
-  </script>
+
+    $(".dropdown").click(function () {
+        $(this).toggleClass("show");
+
+        if ($(".nav-textbook").children(".dropdown").hasClass("show")) {
+            $(this).parents(".nav-textbook").siblings(".nav-textbook").children(".dropdown").removeClass("show");
+        }
+    });
+</script>

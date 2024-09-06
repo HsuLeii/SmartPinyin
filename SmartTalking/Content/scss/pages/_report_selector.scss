@@ -1,0 +1,170 @@
+main {
+
+    .test_area {
+
+        .test_area_right {
+            .test_area_content {
+                .score_report_area {
+                        width: 90%;
+                        margin: 0 auto;
+                        padding: 20px;
+                        border-radius: 5px;
+
+                    .form-group {
+                        overflow-x: scroll;
+
+                        .table {
+                            border: 1px solid darken($main_color, 15%);
+                            margin: 0 auto 40px;
+                            min-width: 800px;
+
+                            thead {
+                                .score_report_header {
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    background-color: $main_color;
+                                    border-bottom: 0;
+
+                                    .score_report_header_text {
+                                        display: flex;
+                                        justify-content: center;
+                                        color: $white;
+                                        padding: 8px 5px;
+                                        width: 22%;
+                                        border-left: 1px dotted;
+                                        transform: translate(-1px, 0px);
+
+                                        &:nth-child(1) {
+                                            border-left: 0;
+                                            width: 34%;
+                                        }
+                                    }
+                                }
+                            }
+
+                            tbody {
+                                &.score_report_body {
+                                    border-top: 0;
+                                    background-color: $white;
+
+                                    .score_report_item {
+                                        position: relative;
+                                        display: flex;
+                                        align-items: center;
+                                        border-top: 1px dotted darken($main_color, 15%);
+
+                                        .score_report_item_content {
+                                                padding: 15px 2px;
+                                                position: relative;
+                                                display: flex;
+                                                justify-content: center;
+                                                color: $main_color_grey;
+                                                word-break: break-word;
+                                                width: 22%;
+
+                                                &:nth-child(1){
+                                                    width: 34%;
+                                                    border-right: 1px dotted darken($main_color, 15%);
+                                                }
+
+                                                .score_report_btn{
+                                                    padding: 8px 30px;
+                                                    margin: 0px auto;
+                                                    border-radius: 50px;
+                                                    border: 1px solid $main_color;
+                                                    color: $main_color;
+                                                    background-color: $white;
+                                    
+                                                    &:hover{
+                                                        background-color: $main_color;
+                                                        color: $white;
+                                                    }
+                                                }
+
+                                        }
+
+                                        &.check_item {
+                                            background-color: $main_color_30;
+
+                                            .score_report_item_content {
+                                                &.score_report_item_icon {
+                                                    .fa-circle-check {
+                                                        display: inline-block;
+                                                    }
+                                                }
+
+                                                &.score_report_item_text {
+                                                    color: darken($main_color, 15%);
+                                                }
+                                            }
+                                        }
+
+                                        &::before,
+                                        &::after{
+                                            content: "";
+                                            position: absolute;
+                                            top: 0;
+                                            width: 1px;
+                                            height: 100%;
+                                            border: 1px dotted darken($main_color, 15%);
+                                        }
+
+                                        &::before{
+                                            left: calc(56% - 1px);
+                                        }
+
+                                        &::after{
+                                            left: calc(78% - 1px);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .pagination{
+                            position: sticky;
+                            left: 0;
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 350px) {
+    main {
+
+        .test_area {
+
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+
+}
+
+@media screen and (min-width: 768px) {
+    main {
+
+        .test_area {
+
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {}
+
+@media screen and (min-width: 1200px) {
+    main {
+
+        .test_area {
+
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {}

@@ -606,6 +606,52 @@ main {
         }
     }
 
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px auto;
+
+        .page-numbers {
+            font-size: 13px;
+            padding: 3px;
+            margin: 3px;
+            color: $main_color_grey;
+            border-radius: 3px;
+            cursor: pointer;
+
+            .fa-solid {
+                font-size: 13px;
+            }
+
+            &.current {
+                background-color: $bright_main_color;
+                color: $white;
+                padding: 3px 5px;
+
+                &:hover {
+                    color: $white;
+                }
+            }
+
+            &.dots {
+                cursor: auto;
+
+                &:hover {
+                    color: $main_color_grey;
+                }
+            }
+
+            &:hover {
+                color: $main_color;
+            }
+        }
+
+        .page-numbers-area {
+            display: flex;
+        }
+    }
+
     .test_area_answer_btn {
         &:disabled {
             &:hover {
@@ -846,7 +892,17 @@ input:-webkit-autofill:focus {
     
 }
 
-@media screen and (min-width: 576px) {}
+@media screen and (min-width: 576px) {
+    main {
+        .pagination {
+            .page-numbers {
+                .fa-solid {
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+}
 
 @media screen and (min-width: 768px) {
     main {
@@ -858,6 +914,24 @@ input:-webkit-autofill:focus {
 
         .button {
             padding: 12px 20px;
+        }
+
+        .pagination {
+            margin: 50px auto;
+
+            .page-numbers {
+                font-size: 20px;
+                margin: 8px;
+                padding: 8px;
+
+                .fa-solid {
+                    font-size: 20px;
+                }
+
+                &.current {
+                    padding: 8px 10px;
+                }
+            }
         }
 
         .slide_area {

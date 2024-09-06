@@ -561,14 +561,14 @@ main {
 
                     .dialogue_area,
                     .listen_area {
+                        width: 90%;
+                        margin: 0 auto;
                         padding: 20px;
                         border: 1px solid $main_color;
                         border-radius: 5px;
                     }
 
                     .dialogue_area {
-                        width: 90%;
-                        margin: 0 auto;
                         padding: 20px 20px 60px;
 
                         .dialogue_block {
@@ -847,8 +847,6 @@ main {
                     }
 
                     .listen_area {
-                        width: 90%;
-                        margin: 0 auto;
 
                         .listen_area_sentence {
                             margin: 0 auto 40px;

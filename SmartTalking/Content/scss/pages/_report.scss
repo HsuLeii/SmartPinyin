@@ -1,0 +1,990 @@
+main {
+    .page {
+        /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
+        /* page-break-after: always;  碰到此元素會直接換頁 */
+        page-break-inside: avoid;
+        position: relative;
+        max-width: 1024px;
+        width: 100%;
+        margin: 60px auto 0;
+        overflow: hidden;
+
+        &:after {
+            /* content: counter(page-number); 取用該名字的計數器 */
+            /*counter-increment: page-number 1;  增加計數器數值 */
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .page_header {
+            width: 100%;
+            .page_tittle_area {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, -35%);
+                width: 85%;
+                margin: 0 auto;
+
+                .page_tittle {
+                    position: absolute;
+                    left: 50%;
+                    top: 30%;
+                    transform: translate(-50%, -50%);
+                    color: $main_color;
+                    font-size: 25px;
+                }
+
+                .tittle_bg {
+                    max-width: 650px;
+                    margin: 0 auto;
+                }
+            }
+
+            .frame_one,
+            .frame_two {
+                height: 120px;
+                border-radius: 50% 50% 0 0;
+            }
+
+            .frame_one {
+                background-color: $bright_main_color;
+                border: 5px solid $main_color;
+                border-bottom: 0px;
+                padding: 5px 5px 0;
+
+                .frame_two {
+                    background-color: $white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+
+                    .page_header_logo {
+                        height: 40px;
+
+                        img {
+                            width: auto;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .page_body {
+            width: 100%;
+            .frame_one {
+                background-color: $bright_main_color;
+                border: 5px solid $main_color;
+                border-top: 0px;
+                padding: 0 5px 5px;
+
+                .frame_two {
+                    background-color: $white;
+                    padding: 20px;
+
+                    .page_information {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        margin: 20px auto;
+
+                        .information_name,
+                        .information_course,
+                        .information_time{
+                            margin: 5px auto;
+                            p{
+                                display: flex;
+                                align-items: center;
+                                color: $main_color;
+                                font-weight: bold;
+
+                                .circle{
+                                    display: block;
+                                    width: 10px;
+                                    height: 10px;
+                                    border: 2px solid $main_color;
+                                    background-color: $bright_main_color;
+                                    border-radius: 50%;
+                                    margin: 0 5px 0 0;
+                                }
+                            }
+                        }
+                    }
+
+                    .page_content {
+
+                        .page_score_logo {
+                            position: relative;
+                            z-index: 1;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 225px;
+                            margin: 20px auto 40px;
+
+                            .antenna {
+                                width: 34.5%;
+                                transform: translate(0, 10px);
+                            }
+
+                            .ear {
+                                width: 8%;
+                                position: absolute;
+                                top: 65%;
+                                z-index: -1;
+
+
+                                &.left_ear {
+                                    left: 0;
+                                    transform: translate(-85%, -50%);
+                                }
+
+                                &.right_ear {
+                                    right: 0;
+                                    transform: translate(85%, -50%);
+                                }
+                            }
+
+                            .page_score_area {
+                                width: 100%;
+                                background-color: $robot_grey;
+                                border-radius: 30px;
+                                padding: 20px 15px 10px;
+
+                                .page_score_content {
+                                    background-color: $main_color;
+                                    width: 100%;
+                                    border-radius: 30px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-direction: column;
+                                    padding: 10px;
+
+                                    p {
+                                        color: $white;
+                                    }
+
+                                    .page_score {
+                                        font-size: 50px;
+                                        color: $bright_main_color;
+                                        font-weight: bold;
+                                    }
+                                }
+
+
+                            }
+                        }
+
+                        .speaking_result_table_area {
+
+                            .speaking_result_table {
+                                display: block;
+
+                                .speaking_table_text {
+                                    text-align: center;
+                                    width: 50%;
+                                    padding: 15px 10px;
+
+                                    .wrong{
+                                        color: $wrong_text;
+                                    }
+
+                                    &.table_exercise {
+                                        width: 100%;
+                                        border: 0px;
+                                    }
+
+                                    &.table_pronounce {
+                                        border-top: 1px solid;
+                                    }
+
+                                    &.table_fluency {
+                                        border-top: 1px solid;
+                                        border-left: 1px solid;
+                                    }
+                                }
+
+                                thead {
+                                    display: block;
+                                    width: 100%;
+
+                                    tr {
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: flex-end;
+                                        background-color: $main_color;
+                                        border-bottom: 0;
+                                        flex-wrap: wrap;
+
+                                        th {
+                                            color: $white;
+                                        }
+                                    }
+                                }
+
+                                tbody {
+                                    border: 1px solid $main_color;
+                                    width: 100%;
+                                    display: block;
+
+                                    tr {
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: flex-end;
+                                        border-bottom: 0;
+                                        flex-wrap: wrap;
+                                        color: $main_color;
+
+                                        .speaking_table_text {
+                                            &.table_exercise {
+                                                border-top: 1px solid $main_color;
+                                            }
+
+                                            &.table_pronounce {
+                                                border-color: $main_color;
+                                            }
+
+                                            &.table_fluency {
+                                                border-color: $main_color;
+                                            }
+                                        }
+                                    }
+                                }
+
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@page {
+    /*size: portrait;  直向 */
+    /*size: landscape;  橫向 */
+    /*size: A4;  紙張大小 */
+    size: A4 portrait;
+    /* 混合使用 */
+    min-height: 100vh;
+    margin: 0;
+    /* 邊界與內容的距離 */
+}
+
+@media print{
+    main {
+        .page {
+            /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
+            /* page-break-after: always;  碰到此元素會直接換頁 */
+            page-break-inside: avoid;
+            position: relative;
+            max-width: 1024px;
+            width: 100%;
+            margin: 60px auto 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            overflow: hidden;
+    
+            &:after {
+                /* content: counter(page-number); 取用該名字的計數器 */
+                /*counter-increment: page-number 1;  增加計數器數值 */
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                font-size: 30px;
+                text-align: center;
+            }
+    
+    
+            .page_header {
+                .page_tittle_area {
+                    position: relative;
+                    left: auto;
+                    transform: translate(0%, 100px);
+                    width: 85%;
+                    margin: 0 auto;
+    
+                    .page_tittle {
+                        position: absolute;
+                        left: 50%;
+                        top: 30%;
+                        transform: translate(-50%, -50%);
+                        color: $main_color;
+                        font-size: 50px;
+                    }
+    
+                    .tittle_bg {
+                        max-width: 650px;
+                        margin: 0 auto;
+                    }
+                }
+    
+                .frame_one,
+                .frame_two {
+                    height: 210px;
+                    border-radius: 50% 50% 0 0;
+                }
+    
+                .frame_one {
+                    background-color: $bright_main_color;
+                    border: 5px solid $main_color;
+                    border-bottom: 0px;
+                    padding: 5px 5px 0;
+    
+                    .frame_two {
+                        background-color: $white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-end;
+    
+                        .page_header_logo {
+                            height: 70px;
+    
+                            img {
+                                width: auto;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .page_body {
+                .frame_one {
+                    background-color: $bright_main_color;
+                    border: 5px solid $main_color;
+                    border-top: 0px;
+                    padding: 0 5px 5px;
+    
+                    .frame_two {
+                        background-color: $white;
+                        padding: 20px;
+    
+                        .page_information {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin: 20px auto;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+    
+                            .information_name,
+                            .information_course,
+                            .information_time{
+                                margin: 5px 8px;
+
+                                p{
+                                    color: $main_color;
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+    
+                        .page_content {
+                            .page_score_logo {
+                                position: relative;
+                                z-index: 1;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                width: 400px;
+                                margin: 20px auto 40px;
+    
+                                .antenna {
+                                    width: 34.5%;
+                                    transform: translate(0, 10px);
+                                }
+    
+                                .ear {
+                                    width: 8%;
+                                    position: absolute;
+                                    top: 65%;
+                                    z-index: -1;
+    
+    
+                                    &.left_ear {
+                                        left: 0;
+                                        transform: translate(-85%, -50%);
+                                    }
+    
+                                    &.right_ear {
+                                        right: 0;
+                                        transform: translate(85%, -50%);
+                                    }
+                                }
+    
+                                .page_score_area {
+                                    width: 100%;
+                                    background-color: $robot_grey;
+                                    border-radius: 30px;
+                                    padding: 20px 15px 10px;
+    
+                                    .page_score_content {
+                                        background-color: $main_color;
+                                        width: 100%;
+                                        border-radius: 30px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        flex-direction: column;
+                                        padding: 15px;
+    
+                                        p {
+                                            color: $white;
+                                        }
+    
+                                        .page_score {
+                                            font-size: 110px;
+                                            color: $bright_main_color;
+                                            font-weight: bold;
+                                        }
+                                    }
+    
+    
+                                }
+                            }
+    
+                            .speaking_result_table_area {
+    
+                                .speaking_result_table {
+                                    display: block;
+    
+                                    .speaking_table_text {
+                                        text-align: center;
+                                        width: 20%;
+                                        padding: 15px 10px;
+
+                                        .wrong{
+                                            color: $wrong_text;
+                                        }
+    
+                                        &.table_exercise {
+                                            width: 60%;
+                                            border: 0px;
+                                        }
+    
+                                        &.table_pronounce {
+                                            border-top: 0px;
+                                            border-left: 1px solid;
+                                        }
+    
+                                        &.table_fluency {
+                                            border-top: 0px;
+                                            border-left: 1px solid;
+                                        }
+                                    }
+    
+                                    thead {
+                                        display: block;
+                                        width: 100%;
+    
+                                        tr {
+                                            width: 100%;
+                                            display: flex;
+                                            justify-content: flex-end;
+                                            background-color: $main_color;
+                                            border-bottom: 0;
+                                            flex-wrap: wrap;
+    
+                                            th {
+                                                color: $white;
+                                            }
+                                        }
+                                    }
+    
+                                    tbody {
+                                        border: 1px solid $main_color;
+                                        width: 100%;
+                                        display: block;
+    
+                                        tr {
+                                            width: 100%;
+                                            display: flex;
+                                            justify-content: flex-end;
+                                            border-bottom: 0;
+                                            flex-wrap: wrap;
+                                            color: $main_color;
+    
+                                            .speaking_table_text {
+                                                &.table_exercise {
+                                                    border-top: 1px solid $main_color;
+                                                }
+    
+                                                &.table_pronounce {
+                                                    border-top: 1px solid $main_color;
+                                                }
+    
+                                                &.table_fluency {
+                                                    border-top: 1px solid $main_color;
+                                                }
+                                            }
+                                        }
+                                    }
+    
+    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    main {
+        .page {
+            .page_header {
+                .page_tittle_area {
+                    .page_tittle {
+                        font-size: 30px;
+                    }
+                }
+
+                .frame_one,
+                .frame_two {
+                    height: 150px;
+                }
+
+                .frame_one {
+                    .frame_two {
+                        .page_header_logo {
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+
+            .page_body {
+                .frame_one {
+                    .frame_two {
+                        .page_information {
+                            flex-direction: row;
+                            flex-wrap: wrap;
+    
+                            .information_name,
+                            .information_course,
+                            .information_time{
+                                margin: 5px 8px;
+                            }
+                        }
+
+                        .page_content {
+                            .page_score_logo {
+                                width: 350px;
+
+                                .page_score_area {
+
+                                    .page_score_content {
+                                        padding: 15px;
+
+                                        .page_score {
+                                            font-size: 85px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 650px) {
+    main {
+        .page {
+            .page_header {
+                .page_tittle_area {
+                    .page_tittle {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        .page {
+            .page_header {
+                .page_tittle_area {
+                    .page_tittle {
+                        font-size: 50px;
+                    }
+                }
+
+                .frame_one,
+                .frame_two {
+                    height: 210px;
+                }
+
+                .frame_one {
+                    .frame_two {
+                        .page_header_logo {
+                            height: 70px;
+                        }
+                    }
+                }
+            }
+
+            .page_body {
+                .frame_one {
+                    .frame_two {
+                        .page_content {
+                            .page_score_logo {
+                                width: 400px;
+
+                                .page_score_area {
+
+                                    .page_score_content {
+
+                                        .page_score {
+                                            font-size: 110px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    main {
+        .page {
+            .page_body {
+                .frame_one {
+    
+                    .frame_two {
+                        
+                        .page_content {
+    
+                            .speaking_result_table_area {
+    
+                                .speaking_result_table {
+    
+                                    .speaking_table_text {
+                                        width: 20%;
+    
+                                        &.table_exercise {
+                                            width: 60%;
+                                        }
+    
+                                        &.table_pronounce {
+                                            border-top: 0px;
+                                            border-left: 1px solid;
+                                        }
+    
+                                        &.table_fluency {
+                                            border-top: 0px;
+                                        }
+                                    }
+    
+                                    tbody {
+                                        tr {
+    
+                                            .speaking_table_text {
+                                                &.table_exercise {
+                                                    border-top: 1px solid $main_color;
+                                                }
+    
+                                                &.table_pronounce {
+                                                    border-top: 1px solid $main_color;
+                                                }
+    
+                                                &.table_fluency {
+                                                    border-top: 1px solid $main_color;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    main {
+        .page {
+            /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
+            /* page-break-after: always;  碰到此元素會直接換頁 */
+            page-break-inside: avoid;
+            position: relative;
+            max-width: 1024px;
+            width: 100%;
+            margin: 60px auto 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            overflow: hidden;
+    
+            &:after {
+                /* content: counter(page-number); 取用該名字的計數器 */
+                /*counter-increment: page-number 1;  增加計數器數值 */
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                font-size: 30px;
+                text-align: center;
+            }
+    
+    
+            .page_header {
+                width: 100%;
+                .page_tittle_area {
+                    position: relative;
+                    left: auto;
+                    transform: translate(0%, 100px);
+                    width: 85%;
+                    margin: 0 auto;
+    
+                    .page_tittle {
+                        position: absolute;
+                        left: 50%;
+                        top: 30%;
+                        transform: translate(-50%, -50%);
+                        color: $main_color;
+                        font-size: 50px;
+                    }
+    
+                    .tittle_bg {
+                        max-width: 650px;
+                        margin: 0 auto;
+                    }
+                }
+    
+                .frame_one,
+                .frame_two {
+                    height: 210px;
+                    border-radius: 50% 50% 0 0;
+                }
+    
+                .frame_one {
+                    background-color: $bright_main_color;
+                    border: 5px solid $main_color;
+                    border-bottom: 0px;
+                    padding: 5px 5px 0;
+    
+                    .frame_two {
+                        background-color: $white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-end;
+    
+                        .page_header_logo {
+                            height: 70px;
+    
+                            img {
+                                width: auto;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .page_body {
+                width: 100%;
+                .frame_one {
+                    background-color: $bright_main_color;
+                    border: 5px solid $main_color;
+                    border-top: 0px;
+                    padding: 0 5px 5px;
+    
+                    .frame_two {
+                        background-color: $white;
+                        padding: 20px;
+    
+                        .page_information {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin: 20px auto;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+    
+                            .information_name,
+                            .information_course,
+                            .information_time{
+                                margin: 5px 8px;
+
+                                p{
+                                    color: $main_color;
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+    
+                        .page_content {
+                            .page_score_logo {
+                                position: relative;
+                                z-index: 1;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                width: 400px;
+                                margin: 20px auto 40px;
+    
+                                .antenna {
+                                    width: 34.5%;
+                                    transform: translate(0, 10px);
+                                }
+    
+                                .ear {
+                                    width: 8%;
+                                    position: absolute;
+                                    top: 65%;
+                                    z-index: -1;
+    
+    
+                                    &.left_ear {
+                                        left: 0;
+                                        transform: translate(-85%, -50%);
+                                    }
+    
+                                    &.right_ear {
+                                        right: 0;
+                                        transform: translate(85%, -50%);
+                                    }
+                                }
+    
+                                .page_score_area {
+                                    width: 100%;
+                                    background-color: $robot_grey;
+                                    border-radius: 30px;
+                                    padding: 20px 15px 10px;
+    
+                                    .page_score_content {
+                                        background-color: $main_color;
+                                        width: 100%;
+                                        border-radius: 30px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        flex-direction: column;
+                                        padding: 15px;
+    
+                                        p {
+                                            color: $white;
+                                        }
+    
+                                        .page_score {
+                                            font-size: 110px;
+                                            color: $bright_main_color;
+                                            font-weight: bold;
+                                        }
+                                    }
+    
+    
+                                }
+                            }
+    
+                            .speaking_result_table_area {
+    
+                                .speaking_result_table {
+                                    display: block;
+    
+                                    .speaking_table_text {
+                                        text-align: center;
+                                        width: 20%;
+                                        padding: 15px 10px;
+
+                                        .wrong{
+                                            color: $wrong_text;
+                                        }
+    
+                                        &.table_exercise {
+                                            width: 60%;
+                                            border: 0px;
+                                        }
+    
+                                        &.table_pronounce {
+                                            border-top: 0px;
+                                            border-left: 1px solid;
+                                        }
+    
+                                        &.table_fluency {
+                                            border-top: 0px;
+                                            border-left: 1px solid;
+                                        }
+                                    }
+    
+                                    thead {
+                                        display: block;
+                                        width: 100%;
+    
+                                        tr {
+                                            width: 100%;
+                                            display: flex;
+                                            justify-content: flex-end;
+                                            background-color: $main_color;
+                                            border-bottom: 0;
+                                            flex-wrap: wrap;
+    
+                                            th {
+                                                color: $white;
+                                            }
+                                        }
+                                    }
+    
+                                    tbody {
+                                        border: 1px solid $main_color;
+                                        width: 100%;
+                                        display: block;
+    
+                                        tr {
+                                            width: 100%;
+                                            display: flex;
+                                            justify-content: flex-end;
+                                            border-bottom: 0;
+                                            flex-wrap: wrap;
+                                            color: $main_color;
+    
+                                            .speaking_table_text {
+                                                &.table_exercise {
+                                                    border-top: 1px solid $main_color;
+                                                }
+    
+                                                &.table_pronounce {
+                                                    border-top: 1px solid $main_color;
+                                                }
+    
+                                                &.table_fluency {
+                                                    border-top: 1px solid $main_color;
+                                                }
+                                            }
+                                        }
+                                    }
+    
+    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
