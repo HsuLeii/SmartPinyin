@@ -1353,6 +1353,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   .robot_hint { display: none; }
   .main_footer { display: none; }
   footer { display: none; }
+  main .main { width: 100%; margin: 0; max-width: none; }
   main .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; height: 1448px; width: 100%; margin: 0px auto 0; overflow: hidden; background-color: #f9df54; padding: 30px; }
   main .page:after { /* content: counter(page-number); 取用該名字的計數器 */ /*counter-increment: page-number 1;  增加計數器數值 */ position: absolute; right: 0; bottom: 0; left: 0; font-size: 30px; text-align: center; }
   main .page .page_container { transform: translate(0px, -50px); }
@@ -1448,6 +1449,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   .robot_hint { display: none; }
   .main_footer { display: none; }
   footer { display: none; }
+  main .main { width: 100%; margin: 0; max-width: none; }
   main .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; height: 1448px; width: 100%; margin: 0px auto 0; overflow: hidden; background-color: #f9df54; padding: 30px; }
   main .page:after { /* content: counter(page-number); 取用該名字的計數器 */ /*counter-increment: page-number 1;  增加計數器數值 */ position: absolute; right: 0; bottom: 0; left: 0; font-size: 30px; text-align: center; }
   main .page .page_container { transform: translate(0px, -50px); }
