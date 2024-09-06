@@ -327,10 +327,13 @@ main {
     .robot_hint{
         display: none;
     }
+    .main_footer{
+        display: none;
+    }
     footer{
         display: none;
     }
-    
+
     main {
         .page {
             /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
@@ -340,7 +343,7 @@ main {
             max-width: 1024px;
             height: 1448px;
             width: 100%;
-            margin: 60px auto 0;
+            margin: 0px auto 0;
             overflow: hidden;
             background-color: $page_bg;
             padding: 30px;
@@ -429,6 +432,10 @@ main {
                                 margin: 20px auto;
                                 flex-direction: row;
                                 flex-wrap: wrap;
+                                background-color: $bright_main_color;
+                                padding: 10px 50px;
+                                position: relative;
+                                z-index: 1;
 
                                 .page_information_triangle {
                                     position: absolute;
@@ -965,6 +972,18 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
+    header{
+        display: none;
+    }
+    .robot_hint{
+        display: none;
+    }
+    .main_footer{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
     main {
         .page {
             /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
@@ -974,7 +993,7 @@ main {
             max-width: 1024px;
             height: 1448px;
             width: 100%;
-            margin: 60px auto 0;
+            margin: 0px auto 0;
             overflow: hidden;
             background-color: $page_bg;
             padding: 30px;
@@ -1063,6 +1082,10 @@ main {
                                 margin: 20px auto;
                                 flex-direction: row;
                                 flex-wrap: wrap;
+                                background-color: $bright_main_color;
+                                padding: 10px 50px;
+                                position: relative;
+                                z-index: 1;
 
                                 .page_information_triangle {
                                     position: absolute;

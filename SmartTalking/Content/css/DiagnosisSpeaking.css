@@ -1351,8 +1351,9 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
 
 @media print { header { display: none; }
   .robot_hint { display: none; }
+  .main_footer { display: none; }
   footer { display: none; }
-  main .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; height: 1448px; width: 100%; margin: 60px auto 0; overflow: hidden; background-color: #f9df54; padding: 30px; }
+  main .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; height: 1448px; width: 100%; margin: 0px auto 0; overflow: hidden; background-color: #f9df54; padding: 30px; }
   main .page:after { /* content: counter(page-number); 取用該名字的計數器 */ /*counter-increment: page-number 1;  增加計數器數值 */ position: absolute; right: 0; bottom: 0; left: 0; font-size: 30px; text-align: center; }
   main .page .page_container { transform: translate(0px, -50px); }
   main .page .page_container .page_header .page_tittle_area { position: relative; transform: translate(0%, 100px); width: 85%; margin: 0 auto; }
@@ -1365,7 +1366,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   main .page .page_container .page_header .frame_one .frame_two .page_header_logo img { width: auto; height: 100%; }
   main .page .page_container .page_body .frame_one { background-color: #4dbcbc; border: 5px solid #314675; border-top: 0px; padding: 0 5px 5px; }
   main .page .page_container .page_body .frame_one .frame_two { background-color: #fcefde; padding: 20px; }
-  main .page .page_container .page_body .frame_one .frame_two .page_information { display: flex; justify-content: center; align-items: flex-start; margin: 20px auto; flex-direction: row; flex-wrap: wrap; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information { display: flex; justify-content: center; align-items: flex-start; margin: 20px auto; flex-direction: row; flex-wrap: wrap; background-color: #4dbcbc; padding: 10px 50px; position: relative; z-index: 1; }
   main .page .page_container .page_body .frame_one .frame_two .page_information .page_information_triangle { position: absolute; top: 0; width: 50px; height: 100%; background-color: #fcefde; }
   main .page .page_container .page_body .frame_one .frame_two .page_information .page_information_triangle::before { content: ""; position: absolute; top: 0; border-width: 10px 10px 10px 0px; border-right: 50px solid #4dbcbc; border-bottom: 100px solid transparent; border-left: 0px solid transparent; border-top: 0px solid transparent; }
   main .page .page_container .page_body .frame_one .frame_two .page_information .page_information_triangle::after { content: ""; position: absolute; bottom: 0; border-width: 10px 10px 10px 0px; border-right: 50px solid #4dbcbc; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-top: 100px solid transparent; }
@@ -1443,7 +1444,11 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce { border-top: 1px solid #314675; }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency { border-top: 1px solid #314675; } }
 
-@media screen and (min-width: 1024px) { main .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; height: 1448px; width: 100%; margin: 60px auto 0; overflow: hidden; background-color: #f9df54; padding: 30px; }
+@media screen and (min-width: 1024px) { header { display: none; }
+  .robot_hint { display: none; }
+  .main_footer { display: none; }
+  footer { display: none; }
+  main .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; height: 1448px; width: 100%; margin: 0px auto 0; overflow: hidden; background-color: #f9df54; padding: 30px; }
   main .page:after { /* content: counter(page-number); 取用該名字的計數器 */ /*counter-increment: page-number 1;  增加計數器數值 */ position: absolute; right: 0; bottom: 0; left: 0; font-size: 30px; text-align: center; }
   main .page .page_container { transform: translate(0px, -50px); }
   main .page .page_container .page_header .page_tittle_area { position: relative; transform: translate(0%, 100px); width: 85%; margin: 0 auto; }
@@ -1456,7 +1461,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   main .page .page_container .page_header .frame_one .frame_two .page_header_logo img { width: auto; height: 100%; }
   main .page .page_container .page_body .frame_one { background-color: #4dbcbc; border: 5px solid #314675; border-top: 0px; padding: 0 5px 5px; }
   main .page .page_container .page_body .frame_one .frame_two { background-color: #fcefde; padding: 20px; }
-  main .page .page_container .page_body .frame_one .frame_two .page_information { display: flex; justify-content: center; align-items: flex-start; margin: 20px auto; flex-direction: row; flex-wrap: wrap; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information { display: flex; justify-content: center; align-items: flex-start; margin: 20px auto; flex-direction: row; flex-wrap: wrap; background-color: #4dbcbc; padding: 10px 50px; position: relative; z-index: 1; }
   main .page .page_container .page_body .frame_one .frame_two .page_information .page_information_triangle { position: absolute; top: 0; width: 50px; height: 100%; background-color: #fcefde; }
   main .page .page_container .page_body .frame_one .frame_two .page_information .page_information_triangle::before { content: ""; position: absolute; top: 0; border-width: 10px 10px 10px 0px; border-right: 50px solid #4dbcbc; border-bottom: 100px solid transparent; border-left: 0px solid transparent; border-top: 0px solid transparent; }
   main .page .page_container .page_body .frame_one .frame_two .page_information .page_information_triangle::after { content: ""; position: absolute; bottom: 0; border-width: 10px 10px 10px 0px; border-right: 50px solid #4dbcbc; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-top: 100px solid transparent; }
