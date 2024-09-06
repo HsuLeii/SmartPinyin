@@ -21,17 +21,18 @@ main {
             text-align: center;
         }
 
-        .page_container{
+        .page_container {
             transform: translate(0px, -25px);
+
             .page_header {
                 width: 100%;
-    
+
                 .page_tittle_area {
                     position: relative;
                     transform: translate(0%, 50px);
                     width: 85%;
                     margin: 0 auto;
-    
+
                     .page_tittle {
                         position: absolute;
                         left: 50%;
@@ -40,34 +41,34 @@ main {
                         color: $white;
                         font-size: 25px;
                     }
-    
+
                     .tittle_bg {
                         max-width: 650px;
                         margin: 0 auto;
                     }
                 }
-    
+
                 .frame_one,
                 .frame_two {
                     height: 120px;
                     border-radius: 50% 50% 0 0;
                 }
-    
+
                 .frame_one {
                     background-color: $bright_main_color;
                     border: 5px solid $main_color;
                     border-bottom: 0px;
                     padding: 5px 5px 0;
-    
+
                     .frame_two {
                         background-color: $frame_two_bg;
                         display: flex;
                         justify-content: center;
                         align-items: flex-end;
-    
+
                         .page_header_logo {
                             height: 40px;
-    
+
                             img {
                                 width: auto;
                                 height: 100%;
@@ -76,37 +77,37 @@ main {
                     }
                 }
             }
-    
+
             .page_body {
                 width: 100%;
-    
+
                 .frame_one {
                     background-color: $bright_main_color;
                     border: 5px solid $main_color;
                     border-top: 0px;
                     padding: 0 5px 5px;
-    
+
                     .frame_two {
                         background-color: $frame_two_bg;
                         padding: 20px;
-    
+
                         .page_information {
                             display: flex;
                             align-items: flex-start;
                             flex-direction: column;
                             margin: 20px auto;
-    
+
                             .information_name,
                             .information_course,
                             .information_time {
                                 margin: 5px 0;
-    
+
                                 div {
                                     display: flex;
                                     align-items: flex-start;
                                     color: $main_color;
                                     font-weight: bold;
-    
+
                                     .circle {
                                         display: block;
                                         width: 10px;
@@ -117,7 +118,7 @@ main {
                                         margin: calc(8px* 1.7 - 5px) 5px 0 0;
                                     }
 
-                                    .information_text{
+                                    .information_text {
                                         width: calc(100% - 10px - 5px);
                                         display: flex;
                                         flex-wrap: wrap;
@@ -125,9 +126,9 @@ main {
                                 }
                             }
                         }
-    
+
                         .page_content {
-    
+
                             .page_score_logo {
                                 position: relative;
                                 z-index: 1;
@@ -136,38 +137,38 @@ main {
                                 align-items: center;
                                 width: 225px;
                                 margin: 20px auto 40px;
-    
+
                                 .antenna {
                                     width: 25%;
                                     max-width: 80px;
                                     transform: translate(0, 10px);
                                 }
-    
+
                                 .ear {
                                     width: 8%;
                                     position: absolute;
                                     top: 65%;
                                     z-index: -1;
-    
-    
+
+
                                     &.left_ear {
                                         left: 0;
                                         transform: translate(-85%, -50%);
                                     }
-    
+
                                     &.right_ear {
                                         right: 0;
                                         transform: translate(85%, -50%);
                                     }
                                 }
-    
+
                                 .page_score_area {
                                     width: 100%;
                                     height: calc(225px * 0.6);
                                     background-color: $robot_grey;
                                     border-radius: 30px;
                                     padding: 20px 15px 10px;
-    
+
                                     .page_score_content {
                                         background-color: $main_color;
                                         width: 100%;
@@ -177,16 +178,16 @@ main {
                                         justify-content: center;
                                         align-items: center;
                                         padding: 10px;
-    
+
                                         p {
                                             color: $white;
                                             display: flex;
                                             align-items: flex-end;
-    
+
                                             .total_score {
                                                 line-height: calc(50px * 1);
                                             }
-    
+
                                             .page_num {
                                                 font-size: 50px;
                                                 color: $white;
@@ -195,52 +196,52 @@ main {
                                                 margin: 0 5px;
                                                 -webkit-text-stroke: 1.5px $bright_main_color;
                                             }
-    
+
                                             .page_score {
                                                 line-height: 1;
                                             }
                                         }
-    
-    
+
+
                                     }
-    
-    
+
+
                                 }
                             }
-    
+
                             .speaking_result_table_area {
-    
+
                                 .speaking_result_table {
                                     display: block;
-    
+
                                     .speaking_table_text {
                                         text-align: center;
                                         width: 50%;
                                         padding: 15px 10px;
-    
+
                                         .wrong {
                                             color: $wrong_text;
                                         }
-    
+
                                         &.table_exercise {
                                             width: 100%;
                                             border: 0px;
                                         }
-    
+
                                         &.table_pronounce {
                                             border-top: 1px solid;
                                         }
-    
+
                                         &.table_fluency {
                                             border-top: 1px solid;
                                             border-left: 1px solid;
                                         }
                                     }
-    
+
                                     thead {
                                         display: block;
                                         width: 100%;
-    
+
                                         tr {
                                             width: 100%;
                                             display: flex;
@@ -248,19 +249,19 @@ main {
                                             background-color: $main_color;
                                             border-bottom: 0;
                                             flex-wrap: wrap;
-    
+
                                             th {
                                                 color: $white;
                                             }
                                         }
                                     }
-    
+
                                     tbody {
                                         border: 1px solid $main_color;
                                         width: 100%;
                                         display: block;
                                         background-color: $white;
-    
+
                                         tr {
                                             width: 100%;
                                             display: flex;
@@ -271,33 +272,33 @@ main {
                                             border-bottom: 3px solid;
                                             border-top: 3px solid;
                                             margin: 20px 0;
-    
+
                                             .speaking_table_text {
                                                 &.table_exercise {
                                                     display: flex;
                                                     justify-content: center;
                                                     text-align: left;
                                                 }
-    
+
                                                 &.table_pronounce,
                                                 &.table_fluency {
                                                     display: flex;
                                                     align-items: center;
                                                     justify-content: center;
                                                 }
-    
+
                                                 &.table_pronounce {
                                                     border-color: $main_color;
                                                 }
-    
+
                                                 &.table_fluency {
                                                     border-color: $main_color;
                                                 }
                                             }
                                         }
                                     }
-    
-    
+
+
                                 }
                             }
                         }
@@ -345,16 +346,16 @@ main {
                 text-align: center;
             }
 
-            .page_container{
+            .page_container {
                 transform: translate(0px, -50px);
+
                 .page_header {
                     .page_tittle_area {
                         position: relative;
-                        left: auto;
                         transform: translate(0%, 100px);
                         width: 85%;
                         margin: 0 auto;
-    
+
                         .page_tittle {
                             position: absolute;
                             left: 50%;
@@ -363,34 +364,34 @@ main {
                             color: $white;
                             font-size: 50px;
                         }
-    
+
                         .tittle_bg {
                             max-width: 650px;
                             margin: 0 auto;
                         }
                     }
-    
+
                     .frame_one,
                     .frame_two {
                         height: 210px;
                         border-radius: 50% 50% 0 0;
                     }
-    
+
                     .frame_one {
                         background-color: $bright_main_color;
                         border: 5px solid $main_color;
                         border-bottom: 0px;
                         padding: 5px 5px 0;
-    
+
                         .frame_two {
                             background-color: $frame_two_bg;
                             display: flex;
                             justify-content: center;
                             align-items: flex-end;
-    
+
                             .page_header_logo {
                                 height: 95px;
-    
+
                                 img {
                                     width: auto;
                                     height: 100%;
@@ -399,38 +400,95 @@ main {
                         }
                     }
                 }
-    
+
                 .page_body {
                     .frame_one {
                         background-color: $bright_main_color;
                         border: 5px solid $main_color;
                         border-top: 0px;
                         padding: 0 5px 5px;
-    
+
                         .frame_two {
                             background-color: $frame_two_bg;
                             padding: 20px;
-    
+
                             .page_information {
                                 display: flex;
                                 justify-content: center;
-                                align-items: center;
+                                align-items: flex-start;
                                 margin: 20px auto;
                                 flex-direction: row;
                                 flex-wrap: wrap;
-    
+
+                                .page_information_triangle {
+                                    position: absolute;
+                                    top: 0;
+                                    width: 50px;
+                                    height: 100%;
+                                    background-color: $frame_two_bg;
+
+                                    &::before {
+                                        content: "";
+                                        position: absolute;
+                                        top: 0;
+                                        border-width: 10px 10px 10px 0px;
+                                        border-right: 50px solid $bright_main_color;
+                                        border-bottom: 100px solid transparent;
+                                        border-left: 0px solid transparent;
+                                        border-top: 0px solid transparent;
+                                    }
+
+                                    &::after {
+                                        content: "";
+                                        position: absolute;
+                                        bottom: 0;
+                                        border-width: 10px 10px 10px 0px;
+                                        border-right: 50px solid $bright_main_color;
+                                        border-bottom: 0px solid transparent;
+                                        border-left: 0px solid transparent;
+                                        border-top: 100px solid transparent;
+                                    }
+
+                                    &.page_information_triangle_left {
+                                        left: 0;
+                                    }
+
+                                    &.page_information_triangle_right {
+                                        right: 0;
+                                        transform: rotate(180deg);
+                                    }
+                                }
+
                                 .information_name,
                                 .information_course,
                                 .information_time {
                                     margin: 5px 8px;
-    
-                                    p {
+
+                                    div {
+                                        display: flex;
+                                        align-items: flex-start;
                                         color: $main_color;
                                         font-weight: bold;
+
+                                        .circle {
+                                            display: block;
+                                            width: 10px;
+                                            height: 10px;
+                                            border: 2px solid $main_color;
+                                            background-color: $bright_main_color;
+                                            border-radius: 50%;
+                                            margin: calc(10px * 1.7 - 5px) 5px 0 0;
+                                        }
+
+                                        .information_text {
+                                            width: calc(100% - 10px - 5px);
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                        }
                                     }
                                 }
                             }
-    
+
                             .page_content {
                                 .page_score_logo {
                                     position: relative;
@@ -440,38 +498,38 @@ main {
                                     align-items: center;
                                     width: 400px;
                                     margin: 20px auto 40px;
-    
+
                                     .antenna {
                                         width: 25%;
                                         max-width: 80px;
                                         transform: translate(0, 10px);
                                     }
-    
+
                                     .ear {
                                         width: 8%;
                                         position: absolute;
                                         top: 65%;
                                         z-index: -1;
-    
-    
+
+
                                         &.left_ear {
                                             left: 0;
                                             transform: translate(-85%, -50%);
                                         }
-    
+
                                         &.right_ear {
                                             right: 0;
                                             transform: translate(85%, -50%);
                                         }
                                     }
-    
+
                                     .page_score_area {
                                         width: 100%;
                                         height: calc(400px * 0.6);
                                         background-color: $robot_grey;
                                         border-radius: 30px;
                                         padding: 20px 15px 10px;
-    
+
                                         .page_score_content {
                                             background-color: $main_color;
                                             width: 100%;
@@ -481,69 +539,69 @@ main {
                                             justify-content: center;
                                             align-items: center;
                                             padding: 15px;
-    
+
                                             p {
                                                 color: $white;
                                                 display: flex;
                                                 align-items: flex-end;
-                                            }
-    
-                                            .total_score {
-                                                line-height: calc(110px * 1);
-                                            }
-    
-                                            .page_num {
-                                                font-size: 110px;
-                                                color: $white;
-                                                font-weight: bold;
-                                                line-height: 1;
-                                                margin: 0 5px;
-                                                -webkit-text-stroke: 5px $bright_main_color;
-                                            }
-    
-                                            .page_score {
-                                                line-height: 1;
+
+                                                .total_score {
+                                                    line-height: calc(165px * 1);
+                                                }
+
+                                                .page_num {
+                                                    font-size: 165px;
+                                                    color: $white;
+                                                    font-weight: bold;
+                                                    line-height: 1;
+                                                    margin: 0 10px;
+                                                    -webkit-text-stroke: 5px $bright_main_color;
+                                                }
+
+                                                .page_score {
+                                                    line-height: 1;
+                                                }
                                             }
                                         }
-    
-    
+
+
                                     }
                                 }
-    
+
                                 .speaking_result_table_area {
-    
+
                                     .speaking_result_table {
                                         display: block;
-    
+
                                         .speaking_table_text {
                                             text-align: center;
                                             width: 20%;
                                             padding: 15px 10px;
-    
+
                                             .wrong {
                                                 color: $wrong_text;
                                             }
-    
+
                                             &.table_exercise {
                                                 width: 60%;
                                                 border: 0px;
                                             }
-    
+
                                             &.table_pronounce {
                                                 border-top: 0px;
                                                 border-left: 1px solid;
                                             }
-    
+
                                             &.table_fluency {
                                                 border-top: 0px;
                                                 border-left: 1px solid;
                                             }
                                         }
-    
+
                                         thead {
                                             display: block;
                                             width: 100%;
-    
+
                                             tr {
                                                 width: 100%;
                                                 display: flex;
@@ -551,19 +609,19 @@ main {
                                                 background-color: $main_color;
                                                 border-bottom: 0;
                                                 flex-wrap: wrap;
-    
+
                                                 th {
                                                     color: $white;
                                                 }
                                             }
                                         }
-    
+
                                         tbody {
                                             border: 1px solid $main_color;
                                             width: 100%;
                                             display: block;
                                             background-color: $white;
-    
+
                                             tr {
                                                 width: 100%;
                                                 display: flex;
@@ -574,7 +632,7 @@ main {
                                                 border-bottom: 0px;
                                                 border-top: 0px;
                                                 margin: 0;
-    
+
                                                 .speaking_table_text {
                                                     &.table_exercise {
                                                         display: flex;
@@ -583,26 +641,26 @@ main {
                                                         text-align: left;
                                                         border-top: 1px solid $main_color;
                                                     }
-    
+
                                                     &.table_pronounce,
                                                     &.table_fluency {
                                                         display: flex;
                                                         align-items: center;
                                                         justify-content: center;
                                                     }
-    
+
                                                     &.table_pronounce {
                                                         border-top: 1px solid $main_color;
                                                     }
-    
+
                                                     &.table_fluency {
                                                         border-top: 1px solid $main_color;
                                                     }
                                                 }
                                             }
                                         }
-    
-    
+
+
                                     }
                                 }
                             }
@@ -617,21 +675,23 @@ main {
 @media screen and (min-width: 576px) {
     main {
         .page {
-            .page_container{
+            .page_container {
                 transform: translate(0px, -35px);
+
                 .page_header {
                     .page_tittle_area {
                         transform: translate(0%, 70px);
+
                         .page_tittle {
                             font-size: 30px;
                         }
                     }
-    
+
                     .frame_one,
                     .frame_two {
                         height: 150px;
                     }
-    
+
                     .frame_one {
                         .frame_two {
                             .page_header_logo {
@@ -640,43 +700,43 @@ main {
                         }
                     }
                 }
-    
+
                 .page_body {
                     .frame_one {
                         .frame_two {
                             .page_information {
                                 flex-direction: row;
                                 flex-wrap: wrap;
-    
+
                                 .information_name,
                                 .information_course,
                                 .information_time {
                                     margin: 5px 8px;
                                 }
                             }
-    
+
                             .page_content {
                                 .page_score_logo {
                                     width: 300px;
-    
+
                                     .page_score_area {
                                         height: calc(300px * 0.6);
-    
+
                                         .page_score_content {
                                             padding: 15px;
-    
+
                                             p {
                                                 .total_score {
                                                     line-height: calc(100px * 1);
                                                 }
-    
+
                                                 .page_num {
                                                     font-size: 100px;
                                                     -webkit-text-stroke: 3px $bright_main_color;
                                                 }
                                             }
-    
-    
+
+
                                         }
                                     }
                                 }
@@ -692,7 +752,7 @@ main {
 @media screen and (min-width: 650px) {
     main {
         .page {
-            .page_container{
+            .page_container {
                 .page_header {
                     .page_tittle_area {
                         .page_tittle {
@@ -708,21 +768,23 @@ main {
 @media screen and (min-width: 768px) {
     main {
         .page {
-            .page_container{
+            .page_container {
                 transform: translate(0px, -50px);
+
                 .page_header {
                     .page_tittle_area {
                         transform: translate(0%, 100px);
+
                         .page_tittle {
                             font-size: 50px;
                         }
                     }
-    
+
                     .frame_one,
                     .frame_two {
                         height: 210px;
                     }
-    
+
                     .frame_one {
                         .frame_two {
                             .page_header_logo {
@@ -731,7 +793,7 @@ main {
                         }
                     }
                 }
-    
+
                 .page_body {
                     .frame_one {
                         .frame_two {
@@ -741,14 +803,14 @@ main {
                                 position: relative;
                                 z-index: 1;
 
-                                .page_information_triangle{
+                                .page_information_triangle {
                                     position: absolute;
                                     top: 0;
                                     width: 50px;
                                     height: 100%;
                                     background-color: $frame_two_bg;
 
-                                    &::before{
+                                    &::before {
                                         content: "";
                                         position: absolute;
                                         top: 0;
@@ -759,7 +821,7 @@ main {
                                         border-top: 0px solid transparent;
                                     }
 
-                                    &::after{
+                                    &::after {
                                         content: "";
                                         position: absolute;
                                         bottom: 0;
@@ -770,22 +832,22 @@ main {
                                         border-top: 100px solid transparent;
                                     }
 
-                                    &.page_information_triangle_left{
+                                    &.page_information_triangle_left {
                                         left: 0;
                                     }
 
-                                    &.page_information_triangle_right{
+                                    &.page_information_triangle_right {
                                         right: 0;
                                         transform: rotate(180deg);
                                     }
                                 }
-        
+
                                 .information_name,
                                 .information_course,
                                 .information_time {
-        
+
                                     div {
-        
+
                                         .circle {
                                             margin: calc(10px * 1.7 - 5px) 5px 0 0;
                                         }
@@ -796,24 +858,24 @@ main {
                             .page_content {
                                 .page_score_logo {
                                     width: 400px;
-    
+
                                     .page_score_area {
                                         height: calc(400px * 0.6);
-    
+
                                         .page_score_content {
-    
+
                                             p {
                                                 .total_score {
                                                     line-height: calc(165px * 1);
                                                 }
-    
+
                                                 .page_num {
                                                     font-size: 165px;
                                                     margin: 0 10px;
                                                     -webkit-text-stroke: 5px $bright_main_color;
                                                 }
                                             }
-    
+
                                         }
                                     }
                                 }
@@ -829,51 +891,51 @@ main {
 @media screen and (min-width: 992px) {
     main {
         .page {
-            .page_container{
+            .page_container {
                 .page_body {
                     .frame_one {
-    
+
                         .frame_two {
-    
+
                             .page_content {
-    
+
                                 .speaking_result_table_area {
-    
+
                                     .speaking_result_table {
-    
+
                                         .speaking_table_text {
                                             width: 20%;
-    
+
                                             &.table_exercise {
                                                 width: 60%;
                                             }
-    
+
                                             &.table_pronounce {
                                                 border-top: 0px;
                                                 border-left: 1px solid;
                                             }
-    
+
                                             &.table_fluency {
                                                 border-top: 0px;
                                             }
                                         }
-    
+
                                         tbody {
                                             tr {
                                                 border-top: 0px;
                                                 border-bottom: 0px;
                                                 margin: 0;
-    
+
                                                 .speaking_table_text {
                                                     &.table_exercise {
                                                         justify-content: flex-start;
                                                         border-top: 1px solid $main_color;
                                                     }
-    
+
                                                     &.table_pronounce {
                                                         border-top: 1px solid $main_color;
                                                     }
-    
+
                                                     &.table_fluency {
                                                         border-top: 1px solid $main_color;
                                                     }
@@ -917,15 +979,16 @@ main {
                 text-align: center;
             }
 
-            .page_container{
+            .page_container {
                 transform: translate(0px, -50px);
+
                 .page_header {
                     .page_tittle_area {
                         position: relative;
                         transform: translate(0%, 100px);
                         width: 85%;
                         margin: 0 auto;
-    
+
                         .page_tittle {
                             position: absolute;
                             left: 50%;
@@ -934,34 +997,34 @@ main {
                             color: $white;
                             font-size: 50px;
                         }
-    
+
                         .tittle_bg {
                             max-width: 650px;
                             margin: 0 auto;
                         }
                     }
-    
+
                     .frame_one,
                     .frame_two {
                         height: 210px;
                         border-radius: 50% 50% 0 0;
                     }
-    
+
                     .frame_one {
                         background-color: $bright_main_color;
                         border: 5px solid $main_color;
                         border-bottom: 0px;
                         padding: 5px 5px 0;
-    
+
                         .frame_two {
                             background-color: $frame_two_bg;
                             display: flex;
                             justify-content: center;
                             align-items: flex-end;
-    
+
                             .page_header_logo {
                                 height: 95px;
-    
+
                                 img {
                                     width: auto;
                                     height: 100%;
@@ -970,18 +1033,18 @@ main {
                         }
                     }
                 }
-    
+
                 .page_body {
                     .frame_one {
                         background-color: $bright_main_color;
                         border: 5px solid $main_color;
                         border-top: 0px;
                         padding: 0 5px 5px;
-    
+
                         .frame_two {
                             background-color: $frame_two_bg;
                             padding: 20px;
-    
+
                             .page_information {
                                 display: flex;
                                 justify-content: center;
@@ -990,14 +1053,14 @@ main {
                                 flex-direction: row;
                                 flex-wrap: wrap;
 
-                                .page_information_triangle{
+                                .page_information_triangle {
                                     position: absolute;
                                     top: 0;
                                     width: 50px;
                                     height: 100%;
                                     background-color: $frame_two_bg;
 
-                                    &::before{
+                                    &::before {
                                         content: "";
                                         position: absolute;
                                         top: 0;
@@ -1008,7 +1071,7 @@ main {
                                         border-top: 0px solid transparent;
                                     }
 
-                                    &::after{
+                                    &::after {
                                         content: "";
                                         position: absolute;
                                         bottom: 0;
@@ -1019,27 +1082,27 @@ main {
                                         border-top: 100px solid transparent;
                                     }
 
-                                    &.page_information_triangle_left{
+                                    &.page_information_triangle_left {
                                         left: 0;
                                     }
 
-                                    &.page_information_triangle_right{
+                                    &.page_information_triangle_right {
                                         right: 0;
                                         transform: rotate(180deg);
                                     }
                                 }
-    
+
                                 .information_name,
                                 .information_course,
                                 .information_time {
                                     margin: 5px 8px;
-    
+
                                     div {
                                         display: flex;
                                         align-items: flex-start;
                                         color: $main_color;
                                         font-weight: bold;
-        
+
                                         .circle {
                                             display: block;
                                             width: 10px;
@@ -1049,8 +1112,8 @@ main {
                                             border-radius: 50%;
                                             margin: calc(10px * 1.7 - 5px) 5px 0 0;
                                         }
-    
-                                        .information_text{
+
+                                        .information_text {
                                             width: calc(100% - 10px - 5px);
                                             display: flex;
                                             flex-wrap: wrap;
@@ -1058,7 +1121,7 @@ main {
                                     }
                                 }
                             }
-    
+
                             .page_content {
                                 .page_score_logo {
                                     position: relative;
@@ -1068,38 +1131,38 @@ main {
                                     align-items: center;
                                     width: 400px;
                                     margin: 20px auto 40px;
-    
+
                                     .antenna {
                                         width: 25%;
                                         max-width: 80px;
                                         transform: translate(0, 10px);
                                     }
-    
+
                                     .ear {
                                         width: 8%;
                                         position: absolute;
                                         top: 65%;
                                         z-index: -1;
-    
-    
+
+
                                         &.left_ear {
                                             left: 0;
                                             transform: translate(-85%, -50%);
                                         }
-    
+
                                         &.right_ear {
                                             right: 0;
                                             transform: translate(85%, -50%);
                                         }
                                     }
-    
+
                                     .page_score_area {
                                         width: 100%;
                                         height: calc(400px * 0.6);
                                         background-color: $robot_grey;
                                         border-radius: 30px;
                                         padding: 20px 15px 10px;
-    
+
                                         .page_score_content {
                                             background-color: $main_color;
                                             width: 100%;
@@ -1109,69 +1172,69 @@ main {
                                             justify-content: center;
                                             align-items: center;
                                             padding: 15px;
-    
+
                                             p {
                                                 color: $white;
                                                 display: flex;
                                                 align-items: flex-end;
-                                            }
-    
-                                            .total_score {
-                                                line-height: calc(110px * 1);
-                                            }
-    
-                                            .page_num {
-                                                font-size: 110px;
-                                                color: $white;
-                                                font-weight: bold;
-                                                line-height: 1;
-                                                margin: 0 5px;
-                                                -webkit-text-stroke: 5px $bright_main_color;
-                                            }
-    
-                                            .page_score {
-                                                line-height: 1;
+
+                                                .total_score {
+                                                    line-height: calc(165px * 1);
+                                                }
+
+                                                .page_num {
+                                                    font-size: 165px;
+                                                    color: $white;
+                                                    font-weight: bold;
+                                                    line-height: 1;
+                                                    margin: 0 10px;
+                                                    -webkit-text-stroke: 5px $bright_main_color;
+                                                }
+
+                                                .page_score {
+                                                    line-height: 1;
+                                                }
                                             }
                                         }
-    
-    
+
+
                                     }
                                 }
-    
+
                                 .speaking_result_table_area {
-    
+
                                     .speaking_result_table {
                                         display: block;
-    
+
                                         .speaking_table_text {
                                             text-align: center;
                                             width: 20%;
                                             padding: 15px 10px;
-    
+
                                             .wrong {
                                                 color: $wrong_text;
                                             }
-    
+
                                             &.table_exercise {
                                                 width: 60%;
                                                 border: 0px;
                                             }
-    
+
                                             &.table_pronounce {
                                                 border-top: 0px;
                                                 border-left: 1px solid;
                                             }
-    
+
                                             &.table_fluency {
                                                 border-top: 0px;
                                                 border-left: 1px solid;
                                             }
                                         }
-    
+
                                         thead {
                                             display: block;
                                             width: 100%;
-    
+
                                             tr {
                                                 width: 100%;
                                                 display: flex;
@@ -1179,19 +1242,19 @@ main {
                                                 background-color: $main_color;
                                                 border-bottom: 0;
                                                 flex-wrap: wrap;
-    
+
                                                 th {
                                                     color: $white;
                                                 }
                                             }
                                         }
-    
+
                                         tbody {
                                             border: 1px solid $main_color;
                                             width: 100%;
                                             display: block;
                                             background-color: $white;
-    
+
                                             tr {
                                                 width: 100%;
                                                 display: flex;
@@ -1202,7 +1265,7 @@ main {
                                                 border-bottom: 0px;
                                                 border-top: 0px;
                                                 margin: 0;
-    
+
                                                 .speaking_table_text {
                                                     &.table_exercise {
                                                         display: flex;
@@ -1211,26 +1274,26 @@ main {
                                                         text-align: left;
                                                         border-top: 1px solid $main_color;
                                                     }
-    
+
                                                     &.table_pronounce,
                                                     &.table_fluency {
                                                         display: flex;
                                                         align-items: center;
                                                         justify-content: center;
                                                     }
-    
+
                                                     &.table_pronounce {
                                                         border-top: 1px solid $main_color;
                                                     }
-    
+
                                                     &.table_fluency {
                                                         border-top: 1px solid $main_color;
                                                     }
                                                 }
                                             }
                                         }
-    
-    
+
+
                                     }
                                 }
                             }
