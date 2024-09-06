@@ -7,6 +7,7 @@ body { font-family: 'Noto Sans TC', "PingFang TC" ,"微軟正黑體",   "蘋果�
 /*other*/
 /*purple*/
 /*btn*/
+/*page*/
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, figure { margin: 0; padding: 0; list-style: none; }
 
 h1 { font-size: 35px; line-height: 1.7; font-weight: bold; }
@@ -1247,87 +1248,97 @@ main .test_area .test_area_right .test_area_content .score_report_area .form-gro
 
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .pagination { position: sticky; left: 0; }
 
-main .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; width: 100%; margin: 60px auto 0; overflow: hidden; }
+main .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; width: 100%; margin: 60px auto 0; background-color: #f9df54; padding: 30px; }
 
 main .page:after { /* content: counter(page-number); 取用該名字的計數器 */ /*counter-increment: page-number 1;  增加計數器數值 */ position: absolute; right: 0; bottom: 0; left: 0; font-size: 30px; text-align: center; }
 
-main .page .page_header { width: 100%; }
+main .page .page_container { transform: translate(0px, -25px); }
 
-main .page .page_header .page_tittle_area { position: absolute; left: 50%; transform: translate(-50%, -35%); width: 85%; margin: 0 auto; }
+main .page .page_container .page_header { width: 100%; }
 
-main .page .page_header .page_tittle_area .page_tittle { position: absolute; left: 50%; top: 30%; transform: translate(-50%, -50%); color: #314675; font-size: 25px; }
+main .page .page_container .page_header .page_tittle_area { position: relative; transform: translate(0%, 50px); width: 85%; margin: 0 auto; }
 
-main .page .page_header .page_tittle_area .tittle_bg { max-width: 650px; margin: 0 auto; }
+main .page .page_container .page_header .page_tittle_area .page_tittle { position: absolute; left: 50%; top: 30%; transform: translate(-50%, -50%); color: #fff; font-size: 25px; }
 
-main .page .page_header .frame_one, main .page .page_header .frame_two { height: 120px; border-radius: 50% 50% 0 0; }
+main .page .page_container .page_header .page_tittle_area .tittle_bg { max-width: 650px; margin: 0 auto; }
 
-main .page .page_header .frame_one { background-color: #4dbcbc; border: 5px solid #314675; border-bottom: 0px; padding: 5px 5px 0; }
+main .page .page_container .page_header .frame_one, main .page .page_container .page_header .frame_two { height: 120px; border-radius: 50% 50% 0 0; }
 
-main .page .page_header .frame_one .frame_two { background-color: #fff; display: flex; justify-content: center; align-items: flex-end; }
+main .page .page_container .page_header .frame_one { background-color: #4dbcbc; border: 5px solid #314675; border-bottom: 0px; padding: 5px 5px 0; }
 
-main .page .page_header .frame_one .frame_two .page_header_logo { height: 40px; }
+main .page .page_container .page_header .frame_one .frame_two { background-color: #fcefde; display: flex; justify-content: center; align-items: flex-end; }
 
-main .page .page_header .frame_one .frame_two .page_header_logo img { width: auto; height: 100%; }
+main .page .page_container .page_header .frame_one .frame_two .page_header_logo { height: 40px; }
 
-main .page .page_body { width: 100%; }
+main .page .page_container .page_header .frame_one .frame_two .page_header_logo img { width: auto; height: 100%; }
 
-main .page .page_body .frame_one { background-color: #4dbcbc; border: 5px solid #314675; border-top: 0px; padding: 0 5px 5px; }
+main .page .page_container .page_body { width: 100%; }
 
-main .page .page_body .frame_one .frame_two { background-color: #fff; padding: 20px; }
+main .page .page_container .page_body .frame_one { background-color: #4dbcbc; border: 5px solid #314675; border-top: 0px; padding: 0 5px 5px; }
 
-main .page .page_body .frame_one .frame_two .page_information { display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 20px auto; }
+main .page .page_container .page_body .frame_one .frame_two { background-color: #fcefde; padding: 20px; }
 
-main .page .page_body .frame_one .frame_two .page_information .information_name, main .page .page_body .frame_one .frame_two .page_information .information_course, main .page .page_body .frame_one .frame_two .page_information .information_time { margin: 5px auto; }
+main .page .page_container .page_body .frame_one .frame_two .page_information { display: flex; align-items: flex-start; flex-direction: column; margin: 20px auto; }
 
-main .page .page_body .frame_one .frame_two .page_information .information_name p, main .page .page_body .frame_one .frame_two .page_information .information_course p, main .page .page_body .frame_one .frame_two .page_information .information_time p { display: flex; align-items: center; color: #314675; font-weight: bold; }
+main .page .page_container .page_body .frame_one .frame_two .page_information .information_name, main .page .page_container .page_body .frame_one .frame_two .page_information .information_course, main .page .page_container .page_body .frame_one .frame_two .page_information .information_time { margin: 5px 0; }
 
-main .page .page_body .frame_one .frame_two .page_information .information_name p .circle, main .page .page_body .frame_one .frame_two .page_information .information_course p .circle, main .page .page_body .frame_one .frame_two .page_information .information_time p .circle { display: block; width: 10px; height: 10px; border: 2px solid #314675; background-color: #4dbcbc; border-radius: 50%; margin: 0 5px 0 0; }
+main .page .page_container .page_body .frame_one .frame_two .page_information .information_name div, main .page .page_container .page_body .frame_one .frame_two .page_information .information_course div, main .page .page_container .page_body .frame_one .frame_two .page_information .information_time div { display: flex; align-items: flex-start; color: #314675; font-weight: bold; }
 
-main .page .page_body .frame_one .frame_two .page_content .page_score_logo { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; width: 225px; margin: 20px auto 40px; }
+main .page .page_container .page_body .frame_one .frame_two .page_information .information_name div .circle, main .page .page_container .page_body .frame_one .frame_two .page_information .information_course div .circle, main .page .page_container .page_body .frame_one .frame_two .page_information .information_time div .circle { display: block; width: 10px; height: 10px; border: 2px solid #314675; background-color: #4dbcbc; border-radius: 50%; margin: calc(8px* 1.7 - 5px) 5px 0 0; }
 
-main .page .page_body .frame_one .frame_two .page_content .page_score_logo .antenna { width: 34.5%; transform: translate(0, 10px); }
+main .page .page_container .page_body .frame_one .frame_two .page_information .information_name div .information_text, main .page .page_container .page_body .frame_one .frame_two .page_information .information_course div .information_text, main .page .page_container .page_body .frame_one .frame_two .page_information .information_time div .information_text { width: calc(100% - 10px - 5px); display: flex; flex-wrap: wrap; }
 
-main .page .page_body .frame_one .frame_two .page_content .page_score_logo .ear { width: 8%; position: absolute; top: 65%; z-index: -1; }
+main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; width: 225px; margin: 20px auto 40px; }
 
-main .page .page_body .frame_one .frame_two .page_content .page_score_logo .ear.left_ear { left: 0; transform: translate(-85%, -50%); }
+main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .antenna { width: 25%; max-width: 80px; transform: translate(0, 10px); }
 
-main .page .page_body .frame_one .frame_two .page_content .page_score_logo .ear.right_ear { right: 0; transform: translate(85%, -50%); }
+main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .ear { width: 8%; position: absolute; top: 65%; z-index: -1; }
 
-main .page .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area { width: 100%; background-color: #dcdcd6; border-radius: 30px; padding: 20px 15px 10px; }
+main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .ear.left_ear { left: 0; transform: translate(-85%, -50%); }
 
-main .page .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content { background-color: #314675; width: 100%; border-radius: 30px; display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 10px; }
+main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .ear.right_ear { right: 0; transform: translate(85%, -50%); }
 
-main .page .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p { color: #fff; }
+main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area { width: 100%; height: calc(225px * 0.6); background-color: #dcdcd6; border-radius: 30px; padding: 20px 15px 10px; }
 
-main .page .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content .page_score { font-size: 50px; color: #4dbcbc; font-weight: bold; }
+main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content { background-color: #314675; width: 100%; height: 100%; border-radius: 30px; display: flex; justify-content: center; align-items: center; padding: 10px; }
 
-main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table { display: block; }
+main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p { color: #fff; display: flex; align-items: flex-end; }
 
-main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text { text-align: center; width: 50%; padding: 15px 10px; }
+main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .total_score { line-height: calc(50px * 1); }
 
-main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text .wrong { color: #ff0200; }
+main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num { font-size: 50px; color: #fff; font-weight: bold; line-height: 1; margin: 0 5px; -webkit-text-stroke: 1.5px #4dbcbc; }
 
-main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_exercise { width: 100%; border: 0px; }
+main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_score { line-height: 1; }
 
-main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_pronounce { border-top: 1px solid; }
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table { display: block; }
 
-main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_fluency { border-top: 1px solid; border-left: 1px solid; }
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text { text-align: center; width: 50%; padding: 15px 10px; }
 
-main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead { display: block; width: 100%; }
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text .wrong { color: #ff0200; }
 
-main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead tr { width: 100%; display: flex; justify-content: flex-end; background-color: #314675; border-bottom: 0; flex-wrap: wrap; }
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_exercise { width: 100%; border: 0px; }
 
-main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead tr th { color: #fff; }
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_pronounce { border-top: 1px solid; }
 
-main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody { border: 1px solid #314675; width: 100%; display: block; }
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_fluency { border-top: 1px solid; border-left: 1px solid; }
 
-main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr { width: 100%; display: flex; justify-content: flex-end; border-bottom: 0; flex-wrap: wrap; color: #314675; }
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead { display: block; width: 100%; }
 
-main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_exercise { border-top: 1px solid #314675; }
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead tr { width: 100%; display: flex; justify-content: flex-end; background-color: #314675; border-bottom: 0; flex-wrap: wrap; }
 
-main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce { border-color: #314675; }
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead tr th { color: #fff; }
 
-main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency { border-color: #314675; }
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody { border: 1px solid #314675; width: 100%; display: block; background-color: #fff; }
+
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr { width: 100%; display: flex; justify-content: flex-end; border-bottom: 0; flex-wrap: wrap; color: #314675; border-bottom: 3px solid; border-top: 3px solid; margin: 20px 0; }
+
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_exercise { display: flex; justify-content: center; text-align: left; }
+
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce, main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency { display: flex; align-items: center; justify-content: center; }
+
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce { border-color: #314675; }
+
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency { border-color: #314675; }
 
 @page { /*size: portrait;  直向 */
   /*size: landscape;  橫向 */
@@ -1338,107 +1349,136 @@ main .page .page_body .frame_one .frame_two .page_content .speaking_result_table
   margin: 0;
   /* 邊界與內容的距離 */ }
 
-@media print { main .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; width: 100%; margin: 60px auto 0; display: flex; justify-content: space-around; flex-wrap: wrap; overflow: hidden; }
+@media print { main .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; height: 1448px; width: 100%; margin: 60px auto 0; overflow: hidden; background-color: #f9df54; padding: 30px; }
   main .page:after { /* content: counter(page-number); 取用該名字的計數器 */ /*counter-increment: page-number 1;  增加計數器數值 */ position: absolute; right: 0; bottom: 0; left: 0; font-size: 30px; text-align: center; }
-  main .page .page_header .page_tittle_area { position: relative; left: auto; transform: translate(0%, 100px); width: 85%; margin: 0 auto; }
-  main .page .page_header .page_tittle_area .page_tittle { position: absolute; left: 50%; top: 30%; transform: translate(-50%, -50%); color: #314675; font-size: 50px; }
-  main .page .page_header .page_tittle_area .tittle_bg { max-width: 650px; margin: 0 auto; }
-  main .page .page_header .frame_one, main .page .page_header .frame_two { height: 210px; border-radius: 50% 50% 0 0; }
-  main .page .page_header .frame_one { background-color: #4dbcbc; border: 5px solid #314675; border-bottom: 0px; padding: 5px 5px 0; }
-  main .page .page_header .frame_one .frame_two { background-color: #fff; display: flex; justify-content: center; align-items: flex-end; }
-  main .page .page_header .frame_one .frame_two .page_header_logo { height: 70px; }
-  main .page .page_header .frame_one .frame_two .page_header_logo img { width: auto; height: 100%; }
-  main .page .page_body .frame_one { background-color: #4dbcbc; border: 5px solid #314675; border-top: 0px; padding: 0 5px 5px; }
-  main .page .page_body .frame_one .frame_two { background-color: #fff; padding: 20px; }
-  main .page .page_body .frame_one .frame_two .page_information { display: flex; justify-content: center; align-items: center; margin: 20px auto; flex-direction: row; flex-wrap: wrap; }
-  main .page .page_body .frame_one .frame_two .page_information .information_name, main .page .page_body .frame_one .frame_two .page_information .information_course, main .page .page_body .frame_one .frame_two .page_information .information_time { margin: 5px 8px; }
-  main .page .page_body .frame_one .frame_two .page_information .information_name p, main .page .page_body .frame_one .frame_two .page_information .information_course p, main .page .page_body .frame_one .frame_two .page_information .information_time p { color: #314675; font-weight: bold; }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; width: 400px; margin: 20px auto 40px; }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo .antenna { width: 34.5%; transform: translate(0, 10px); }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo .ear { width: 8%; position: absolute; top: 65%; z-index: -1; }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo .ear.left_ear { left: 0; transform: translate(-85%, -50%); }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo .ear.right_ear { right: 0; transform: translate(85%, -50%); }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area { width: 100%; background-color: #dcdcd6; border-radius: 30px; padding: 20px 15px 10px; }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content { background-color: #314675; width: 100%; border-radius: 30px; display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 15px; }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p { color: #fff; }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content .page_score { font-size: 110px; color: #4dbcbc; font-weight: bold; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table { display: block; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text { text-align: center; width: 20%; padding: 15px 10px; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text .wrong { color: #ff0200; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_exercise { width: 60%; border: 0px; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_pronounce { border-top: 0px; border-left: 1px solid; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_fluency { border-top: 0px; border-left: 1px solid; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead { display: block; width: 100%; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead tr { width: 100%; display: flex; justify-content: flex-end; background-color: #314675; border-bottom: 0; flex-wrap: wrap; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead tr th { color: #fff; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody { border: 1px solid #314675; width: 100%; display: block; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr { width: 100%; display: flex; justify-content: flex-end; border-bottom: 0; flex-wrap: wrap; color: #314675; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_exercise { border-top: 1px solid #314675; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce { border-top: 1px solid #314675; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency { border-top: 1px solid #314675; } }
+  main .page .page_container { transform: translate(0px, -50px); }
+  main .page .page_container .page_header .page_tittle_area { position: relative; left: auto; transform: translate(0%, 100px); width: 85%; margin: 0 auto; }
+  main .page .page_container .page_header .page_tittle_area .page_tittle { position: absolute; left: 50%; top: 30%; transform: translate(-50%, -50%); color: #fff; font-size: 50px; }
+  main .page .page_container .page_header .page_tittle_area .tittle_bg { max-width: 650px; margin: 0 auto; }
+  main .page .page_container .page_header .frame_one, main .page .page_container .page_header .frame_two { height: 210px; border-radius: 50% 50% 0 0; }
+  main .page .page_container .page_header .frame_one { background-color: #4dbcbc; border: 5px solid #314675; border-bottom: 0px; padding: 5px 5px 0; }
+  main .page .page_container .page_header .frame_one .frame_two { background-color: #fcefde; display: flex; justify-content: center; align-items: flex-end; }
+  main .page .page_container .page_header .frame_one .frame_two .page_header_logo { height: 95px; }
+  main .page .page_container .page_header .frame_one .frame_two .page_header_logo img { width: auto; height: 100%; }
+  main .page .page_container .page_body .frame_one { background-color: #4dbcbc; border: 5px solid #314675; border-top: 0px; padding: 0 5px 5px; }
+  main .page .page_container .page_body .frame_one .frame_two { background-color: #fcefde; padding: 20px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information { display: flex; justify-content: center; align-items: center; margin: 20px auto; flex-direction: row; flex-wrap: wrap; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information .information_name, main .page .page_container .page_body .frame_one .frame_two .page_information .information_course, main .page .page_container .page_body .frame_one .frame_two .page_information .information_time { margin: 5px 8px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information .information_name p, main .page .page_container .page_body .frame_one .frame_two .page_information .information_course p, main .page .page_container .page_body .frame_one .frame_two .page_information .information_time p { color: #314675; font-weight: bold; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; width: 400px; margin: 20px auto 40px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .antenna { width: 25%; max-width: 80px; transform: translate(0, 10px); }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .ear { width: 8%; position: absolute; top: 65%; z-index: -1; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .ear.left_ear { left: 0; transform: translate(-85%, -50%); }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .ear.right_ear { right: 0; transform: translate(85%, -50%); }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area { width: 100%; height: calc(400px * 0.6); background-color: #dcdcd6; border-radius: 30px; padding: 20px 15px 10px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content { background-color: #314675; width: 100%; height: 100%; border-radius: 30px; display: flex; justify-content: center; align-items: center; padding: 15px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p { color: #fff; display: flex; align-items: flex-end; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content .total_score { line-height: calc(110px * 1); }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content .page_num { font-size: 110px; color: #fff; font-weight: bold; line-height: 1; margin: 0 5px; -webkit-text-stroke: 5px #4dbcbc; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content .page_score { line-height: 1; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table { display: block; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text { text-align: center; width: 20%; padding: 15px 10px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text .wrong { color: #ff0200; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_exercise { width: 60%; border: 0px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_pronounce { border-top: 0px; border-left: 1px solid; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_fluency { border-top: 0px; border-left: 1px solid; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead { display: block; width: 100%; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead tr { width: 100%; display: flex; justify-content: flex-end; background-color: #314675; border-bottom: 0; flex-wrap: wrap; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead tr th { color: #fff; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody { border: 1px solid #314675; width: 100%; display: block; background-color: #fff; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr { width: 100%; display: flex; justify-content: flex-end; border-bottom: 0; flex-wrap: wrap; color: #314675; border-bottom: 0px; border-top: 0px; margin: 0; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_exercise { display: flex; justify-content: flex-start; text-align: left; text-align: left; border-top: 1px solid #314675; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce, main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency { display: flex; align-items: center; justify-content: center; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce { border-top: 1px solid #314675; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency { border-top: 1px solid #314675; } }
 
-@media screen and (min-width: 576px) { main .page .page_header .page_tittle_area .page_tittle { font-size: 30px; }
-  main .page .page_header .frame_one, main .page .page_header .frame_two { height: 150px; }
-  main .page .page_header .frame_one .frame_two .page_header_logo { height: 50px; }
-  main .page .page_body .frame_one .frame_two .page_information { flex-direction: row; flex-wrap: wrap; }
-  main .page .page_body .frame_one .frame_two .page_information .information_name, main .page .page_body .frame_one .frame_two .page_information .information_course, main .page .page_body .frame_one .frame_two .page_information .information_time { margin: 5px 8px; }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo { width: 350px; }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content { padding: 15px; }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content .page_score { font-size: 85px; } }
+@media screen and (min-width: 576px) { main .page .page_container { transform: translate(0px, -35px); }
+  main .page .page_container .page_header .page_tittle_area { transform: translate(0%, 70px); }
+  main .page .page_container .page_header .page_tittle_area .page_tittle { font-size: 30px; }
+  main .page .page_container .page_header .frame_one, main .page .page_container .page_header .frame_two { height: 150px; }
+  main .page .page_container .page_header .frame_one .frame_two .page_header_logo { height: 50px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information { flex-direction: row; flex-wrap: wrap; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information .information_name, main .page .page_container .page_body .frame_one .frame_two .page_information .information_course, main .page .page_container .page_body .frame_one .frame_two .page_information .information_time { margin: 5px 8px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo { width: 300px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area { height: calc(300px * 0.6); }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content { padding: 15px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .total_score { line-height: calc(100px * 1); }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num { font-size: 100px; -webkit-text-stroke: 3px #4dbcbc; } }
 
-@media screen and (min-width: 650px) { main .page .page_header .page_tittle_area .page_tittle { font-size: 40px; } }
+@media screen and (min-width: 650px) { main .page .page_container .page_header .page_tittle_area .page_tittle { font-size: 40px; } }
 
-@media screen and (min-width: 768px) { main .page .page_header .page_tittle_area .page_tittle { font-size: 50px; }
-  main .page .page_header .frame_one, main .page .page_header .frame_two { height: 210px; }
-  main .page .page_header .frame_one .frame_two .page_header_logo { height: 70px; }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo { width: 400px; }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content .page_score { font-size: 110px; } }
+@media screen and (min-width: 768px) { main .page .page_container { transform: translate(0px, -50px); }
+  main .page .page_container .page_header .page_tittle_area { transform: translate(0%, 100px); }
+  main .page .page_container .page_header .page_tittle_area .page_tittle { font-size: 50px; }
+  main .page .page_container .page_header .frame_one, main .page .page_container .page_header .frame_two { height: 210px; }
+  main .page .page_container .page_header .frame_one .frame_two .page_header_logo { height: 70px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information { background-color: #4dbcbc; padding: 10px 50px; position: relative; z-index: 1; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information .page_information_triangle { position: absolute; top: 0; width: 50px; height: 100%; background-color: #fcefde; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information .page_information_triangle::before { content: ""; position: absolute; top: 0; border-width: 10px 10px 10px 0px; border-right: 50px solid #4dbcbc; border-bottom: 100px solid transparent; border-left: 0px solid transparent; border-top: 0px solid transparent; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information .page_information_triangle::after { content: ""; position: absolute; bottom: 0; border-width: 10px 10px 10px 0px; border-right: 50px solid #4dbcbc; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-top: 100px solid transparent; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information .page_information_triangle.page_information_triangle_left { left: 0; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information .page_information_triangle.page_information_triangle_right { right: 0; transform: rotate(180deg); }
+  main .page .page_container .page_body .frame_one .frame_two .page_information .information_name div .circle, main .page .page_container .page_body .frame_one .frame_two .page_information .information_course div .circle, main .page .page_container .page_body .frame_one .frame_two .page_information .information_time div .circle { margin: calc(10px * 1.7 - 5px) 5px 0 0; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo { width: 400px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area { height: calc(400px * 0.6); }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .total_score { line-height: calc(165px * 1); }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num { font-size: 165px; margin: 0 10px; -webkit-text-stroke: 5px #4dbcbc; } }
 
-@media screen and (min-width: 992px) { main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text { width: 20%; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_exercise { width: 60%; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_pronounce { border-top: 0px; border-left: 1px solid; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_fluency { border-top: 0px; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_exercise { border-top: 1px solid #314675; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce { border-top: 1px solid #314675; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency { border-top: 1px solid #314675; } }
+@media screen and (min-width: 992px) { main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text { width: 20%; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_exercise { width: 60%; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_pronounce { border-top: 0px; border-left: 1px solid; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_fluency { border-top: 0px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr { border-top: 0px; border-bottom: 0px; margin: 0; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_exercise { justify-content: flex-start; border-top: 1px solid #314675; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce { border-top: 1px solid #314675; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency { border-top: 1px solid #314675; } }
 
-@media screen and (min-width: 1024px) { main .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; width: 100%; margin: 60px auto 0; display: flex; justify-content: space-around; flex-wrap: wrap; overflow: hidden; }
+@media screen and (min-width: 1024px) { main .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; height: 1448px; width: 100%; margin: 60px auto 0; overflow: hidden; background-color: #f9df54; padding: 30px; }
   main .page:after { /* content: counter(page-number); 取用該名字的計數器 */ /*counter-increment: page-number 1;  增加計數器數值 */ position: absolute; right: 0; bottom: 0; left: 0; font-size: 30px; text-align: center; }
-  main .page .page_header { width: 100%; }
-  main .page .page_header .page_tittle_area { position: relative; left: auto; transform: translate(0%, 100px); width: 85%; margin: 0 auto; }
-  main .page .page_header .page_tittle_area .page_tittle { position: absolute; left: 50%; top: 30%; transform: translate(-50%, -50%); color: #314675; font-size: 50px; }
-  main .page .page_header .page_tittle_area .tittle_bg { max-width: 650px; margin: 0 auto; }
-  main .page .page_header .frame_one, main .page .page_header .frame_two { height: 210px; border-radius: 50% 50% 0 0; }
-  main .page .page_header .frame_one { background-color: #4dbcbc; border: 5px solid #314675; border-bottom: 0px; padding: 5px 5px 0; }
-  main .page .page_header .frame_one .frame_two { background-color: #fff; display: flex; justify-content: center; align-items: flex-end; }
-  main .page .page_header .frame_one .frame_two .page_header_logo { height: 70px; }
-  main .page .page_header .frame_one .frame_two .page_header_logo img { width: auto; height: 100%; }
-  main .page .page_body { width: 100%; }
-  main .page .page_body .frame_one { background-color: #4dbcbc; border: 5px solid #314675; border-top: 0px; padding: 0 5px 5px; }
-  main .page .page_body .frame_one .frame_two { background-color: #fff; padding: 20px; }
-  main .page .page_body .frame_one .frame_two .page_information { display: flex; justify-content: center; align-items: center; margin: 20px auto; flex-direction: row; flex-wrap: wrap; }
-  main .page .page_body .frame_one .frame_two .page_information .information_name, main .page .page_body .frame_one .frame_two .page_information .information_course, main .page .page_body .frame_one .frame_two .page_information .information_time { margin: 5px 8px; }
-  main .page .page_body .frame_one .frame_two .page_information .information_name p, main .page .page_body .frame_one .frame_two .page_information .information_course p, main .page .page_body .frame_one .frame_two .page_information .information_time p { color: #314675; font-weight: bold; }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; width: 400px; margin: 20px auto 40px; }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo .antenna { width: 34.5%; transform: translate(0, 10px); }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo .ear { width: 8%; position: absolute; top: 65%; z-index: -1; }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo .ear.left_ear { left: 0; transform: translate(-85%, -50%); }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo .ear.right_ear { right: 0; transform: translate(85%, -50%); }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area { width: 100%; background-color: #dcdcd6; border-radius: 30px; padding: 20px 15px 10px; }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content { background-color: #314675; width: 100%; border-radius: 30px; display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 15px; }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p { color: #fff; }
-  main .page .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content .page_score { font-size: 110px; color: #4dbcbc; font-weight: bold; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table { display: block; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text { text-align: center; width: 20%; padding: 15px 10px; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text .wrong { color: #ff0200; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_exercise { width: 60%; border: 0px; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_pronounce { border-top: 0px; border-left: 1px solid; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_fluency { border-top: 0px; border-left: 1px solid; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead { display: block; width: 100%; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead tr { width: 100%; display: flex; justify-content: flex-end; background-color: #314675; border-bottom: 0; flex-wrap: wrap; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead tr th { color: #fff; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody { border: 1px solid #314675; width: 100%; display: block; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr { width: 100%; display: flex; justify-content: flex-end; border-bottom: 0; flex-wrap: wrap; color: #314675; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_exercise { border-top: 1px solid #314675; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce { border-top: 1px solid #314675; }
-  main .page .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency { border-top: 1px solid #314675; } }
+  main .page .page_container { transform: translate(0px, -50px); }
+  main .page .page_container .page_header .page_tittle_area { position: relative; transform: translate(0%, 100px); width: 85%; margin: 0 auto; }
+  main .page .page_container .page_header .page_tittle_area .page_tittle { position: absolute; left: 50%; top: 30%; transform: translate(-50%, -50%); color: #fff; font-size: 50px; }
+  main .page .page_container .page_header .page_tittle_area .tittle_bg { max-width: 650px; margin: 0 auto; }
+  main .page .page_container .page_header .frame_one, main .page .page_container .page_header .frame_two { height: 210px; border-radius: 50% 50% 0 0; }
+  main .page .page_container .page_header .frame_one { background-color: #4dbcbc; border: 5px solid #314675; border-bottom: 0px; padding: 5px 5px 0; }
+  main .page .page_container .page_header .frame_one .frame_two { background-color: #fcefde; display: flex; justify-content: center; align-items: flex-end; }
+  main .page .page_container .page_header .frame_one .frame_two .page_header_logo { height: 95px; }
+  main .page .page_container .page_header .frame_one .frame_two .page_header_logo img { width: auto; height: 100%; }
+  main .page .page_container .page_body .frame_one { background-color: #4dbcbc; border: 5px solid #314675; border-top: 0px; padding: 0 5px 5px; }
+  main .page .page_container .page_body .frame_one .frame_two { background-color: #fcefde; padding: 20px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information { display: flex; justify-content: center; align-items: flex-start; margin: 20px auto; flex-direction: row; flex-wrap: wrap; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information .page_information_triangle { position: absolute; top: 0; width: 50px; height: 100%; background-color: #fcefde; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information .page_information_triangle::before { content: ""; position: absolute; top: 0; border-width: 10px 10px 10px 0px; border-right: 50px solid #4dbcbc; border-bottom: 100px solid transparent; border-left: 0px solid transparent; border-top: 0px solid transparent; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information .page_information_triangle::after { content: ""; position: absolute; bottom: 0; border-width: 10px 10px 10px 0px; border-right: 50px solid #4dbcbc; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-top: 100px solid transparent; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information .page_information_triangle.page_information_triangle_left { left: 0; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information .page_information_triangle.page_information_triangle_right { right: 0; transform: rotate(180deg); }
+  main .page .page_container .page_body .frame_one .frame_two .page_information .information_name, main .page .page_container .page_body .frame_one .frame_two .page_information .information_course, main .page .page_container .page_body .frame_one .frame_two .page_information .information_time { margin: 5px 8px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information .information_name div, main .page .page_container .page_body .frame_one .frame_two .page_information .information_course div, main .page .page_container .page_body .frame_one .frame_two .page_information .information_time div { display: flex; align-items: flex-start; color: #314675; font-weight: bold; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information .information_name div .circle, main .page .page_container .page_body .frame_one .frame_two .page_information .information_course div .circle, main .page .page_container .page_body .frame_one .frame_two .page_information .information_time div .circle { display: block; width: 10px; height: 10px; border: 2px solid #314675; background-color: #4dbcbc; border-radius: 50%; margin: calc(10px * 1.7 - 5px) 5px 0 0; }
+  main .page .page_container .page_body .frame_one .frame_two .page_information .information_name div .information_text, main .page .page_container .page_body .frame_one .frame_two .page_information .information_course div .information_text, main .page .page_container .page_body .frame_one .frame_two .page_information .information_time div .information_text { width: calc(100% - 10px - 5px); display: flex; flex-wrap: wrap; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; width: 400px; margin: 20px auto 40px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .antenna { width: 25%; max-width: 80px; transform: translate(0, 10px); }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .ear { width: 8%; position: absolute; top: 65%; z-index: -1; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .ear.left_ear { left: 0; transform: translate(-85%, -50%); }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .ear.right_ear { right: 0; transform: translate(85%, -50%); }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area { width: 100%; height: calc(400px * 0.6); background-color: #dcdcd6; border-radius: 30px; padding: 20px 15px 10px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content { background-color: #314675; width: 100%; height: 100%; border-radius: 30px; display: flex; justify-content: center; align-items: center; padding: 15px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p { color: #fff; display: flex; align-items: flex-end; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content .total_score { line-height: calc(110px * 1); }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content .page_num { font-size: 110px; color: #fff; font-weight: bold; line-height: 1; margin: 0 5px; -webkit-text-stroke: 5px #4dbcbc; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content .page_score { line-height: 1; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table { display: block; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text { text-align: center; width: 20%; padding: 15px 10px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text .wrong { color: #ff0200; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_exercise { width: 60%; border: 0px; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_pronounce { border-top: 0px; border-left: 1px solid; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_fluency { border-top: 0px; border-left: 1px solid; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead { display: block; width: 100%; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead tr { width: 100%; display: flex; justify-content: flex-end; background-color: #314675; border-bottom: 0; flex-wrap: wrap; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead tr th { color: #fff; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody { border: 1px solid #314675; width: 100%; display: block; background-color: #fff; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr { width: 100%; display: flex; justify-content: flex-end; border-bottom: 0; flex-wrap: wrap; color: #314675; border-bottom: 0px; border-top: 0px; margin: 0; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_exercise { display: flex; justify-content: flex-start; text-align: left; text-align: left; border-top: 1px solid #314675; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce, main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency { display: flex; align-items: center; justify-content: center; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce { border-top: 1px solid #314675; }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency { border-top: 1px solid #314675; } }
