@@ -321,6 +321,16 @@ main {
 }
 
 @media print {
+    header{
+        display: none;
+    }
+    .robot_hint{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+    
     main {
         .page {
             /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
@@ -670,6 +680,7 @@ main {
             }
         }
     }
+    
 }
 
 @media screen and (min-width: 576px) {
