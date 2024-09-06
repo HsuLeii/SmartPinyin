@@ -334,6 +334,41 @@ main {
         display: none;
     }
 
+    h5 {
+        font-size: 24px;
+        line-height: 1.5;
+        font-weight: bold;
+    }
+    
+    p,
+    i {
+        font-size: 20px;
+        line-height: 1.7;
+    }
+    
+    span,
+    th,
+    td,
+    .form-control {
+        font-size: 20px;
+        text-decoration: none;
+        line-height: 1.7;
+    }
+
+    .table{
+        th,
+        td{
+            border-top: 0px;
+            border-bottom: 0px;
+        }
+    
+        thead{
+            th{
+                border-bottom: 0px;
+            }
+        }
+    }
+
     main {
         .main{
             width: 100%;
