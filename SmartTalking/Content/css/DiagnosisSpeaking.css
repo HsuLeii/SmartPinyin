@@ -3840,7 +3840,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     flex-direction: row;
     flex-wrap: wrap;
     background-color: #4dbcbc;
-    padding: 10px 50px;
+    padding: 10px;
     position: relative;
     z-index: 1;
   }
@@ -4114,7 +4114,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   }
   main .page .page_container .page_body .frame_one .frame_two .page_information {
     background-color: #4dbcbc;
-    padding: 10px 50px;
+    padding: 10px;
     position: relative;
     z-index: 1;
   }
@@ -4306,7 +4306,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     flex-direction: row;
     flex-wrap: wrap;
     background-color: #4dbcbc;
-    padding: 10px 50px;
+    padding: 10px;
     position: relative;
     z-index: 1;
   }
