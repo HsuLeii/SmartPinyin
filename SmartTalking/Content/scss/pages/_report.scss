@@ -466,13 +466,12 @@ main {
 
                             .page_information {
                                 display: flex;
-                                justify-content: center;
                                 align-items: flex-start;
                                 margin: 20px auto;
                                 flex-direction: row;
                                 flex-wrap: wrap;
                                 background-color: $bright_main_color;
-                                padding: 10px;
+                                padding: 10px 50px;
                                 position: relative;
                                 z-index: 1;
 
@@ -1122,13 +1121,12 @@ main {
 
                             .page_information {
                                 display: flex;
-                                justify-content: center;
                                 align-items: flex-start;
                                 margin: 20px auto;
                                 flex-direction: row;
                                 flex-wrap: wrap;
                                 background-color: $bright_main_color;
-                                padding: 10px;
+                                padding: 10px 50px;
                                 position: relative;
                                 z-index: 1;
 
