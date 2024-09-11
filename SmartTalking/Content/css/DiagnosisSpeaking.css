@@ -992,12 +992,12 @@ input:-webkit-autofill:focus {
     margin: 50px auto;
   }
   main .pagination .page-numbers {
-    font-size: 20px;
-    margin: 8px;
-    padding: 8px;
+    font-size: 15px;
+    margin: 5px;
+    padding: 5px;
   }
   main .pagination .page-numbers .fa-solid {
-    font-size: 20px;
+    font-size: 15px;
   }
   main .pagination .page-numbers.current {
     padding: 8px 10px;
@@ -1021,6 +1021,16 @@ input:-webkit-autofill:focus {
   main .test_area_answer_btn.play .icon_btn.sound_btn .fa-volume-high::after {
     width: 68.85px;
     height: 54.9px;
+  }
+}
+@media screen and (min-width: 992px) {
+  main .pagination .page-numbers {
+    font-size: 20px;
+    margin: 8px;
+    padding: 8px;
+  }
+  main .pagination .page-numbers .fa-solid {
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1684,6 +1694,9 @@ main .decorate_line.decorate_left {
 }
 main {
   position: relative;
+  /* input range 主體樣式 */
+  /* input range 播放樣式 */
+  /* 播放完畢時，100%進度顯示 */
 }
 main .quiz_book_bg {
   position: absolute;
@@ -1735,7 +1748,7 @@ main .quiz_page .course_area .course_img img {
   border-radius: 10px;
 }
 main .quiz_page .test_area {
-  width: 100%;
+  width: 80%;
   margin: 0px auto;
   display: flex;
   flex-wrap: wrap;
@@ -2290,10 +2303,10 @@ main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 10px;
   margin: 20px auto 0;
-  padding: 30px 0 0;
-  background-color: #fff;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_area_bottom {
+  margin: 35px auto;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area .btn_icon_area .btn_icon {
   width: 55px;
@@ -2320,15 +2333,14 @@ main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area .bt
 main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area .btn_icon_area .recording_time {
   display: none;
   color: #314675;
-  margin: 10px auto 0;
+  margin: 0px auto 10px;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area .toolbar_item {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: 40px 5% 0px;
-  border-top: 1px solid #314675;
+  margin: 0px 5% 20px;
   padding: 20px 0 10px;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area .toolbar_item .toolbar_item_btn {
@@ -2546,12 +2558,12 @@ main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area .to
   right: 10px;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .toolbar_dialogue {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 90%;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn {
+main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn_item {
   margin: 10px;
   display: flex;
   justify-content: center;
@@ -2559,32 +2571,38 @@ main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.too
   transform: scale(0.95);
   width: 100%;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn button {
+main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn_item .dialogue_btn {
   padding: 10px 0;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn:hover {
+main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn_item .dialogue_btn p {
+  margin: 0 0 0 5px;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn_item:hover {
   transform: scale(1);
 }
-main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn.dialogue_btn_try {
+main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn_item.dialogue_btn_try {
   background-color: #314675;
   border: 1px solid #314675;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn.dialogue_btn_try button {
+main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn_item.dialogue_btn_try button {
   color: #fff;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn.dialogue_btn_change {
+main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn_item.dialogue_btn_change {
   background-color: #fff;
   border: 1px solid #314675;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn.dialogue_btn_change button {
+main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn_item.dialogue_btn_change button {
   color: #314675;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn.dialogue_btn_done {
+main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn_item.dialogue_btn_done {
   background-color: #38ac61;
   border: 1px solid #38ac61;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn.dialogue_btn_done button {
+main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn_item.dialogue_btn_done button {
   color: #fff;
 }
 main .quiz_page .test_area .test_area_right .test_area_content label {
@@ -2631,6 +2649,57 @@ main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .t
   position: sticky;
   top: 20px;
 }
+main input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+  /* input range 原點focus */
+  /* input range 原點樣式 */
+  /* input range 進度條樣式 */
+}
+main input[type=range]:focus::-webkit-slider-thumb {
+  background-color: #223051;
+}
+main input[type=range]::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  border: none;
+  -webkit-appearance: none;
+  background-color: #314675;
+  z-index: 1;
+  position: relative;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  transform: translate(0%, -50%);
+  top: 50%;
+}
+main input[type=range]::-webkit-slider-runnable-track {
+  background-color: #4dbcbc;
+  height: 5px;
+  border-radius: 10px;
+}
+main input[name=playRange] {
+  margin-top: 15px;
+}
+main input[name=playRange]:before {
+  position: absolute;
+  content: "";
+  width: var(--playRange);
+  height: 100%;
+  background-color: #314675;
+  border-radius: 10px;
+}
+main input[name=playRange0]:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #314675;
+  border-radius: 10px;
+}
 
 @keyframes sound {
   0% {
@@ -2665,10 +2734,10 @@ main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .t
   main .quiz_page .test_area .test_area_right .test_area_right_tittle {
     margin: 15px 20px;
   }
-  main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn {
+  main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn_item {
     width: 45%;
   }
-  main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn.dialogue_btn_done {
+  main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn_item.dialogue_btn_done {
     width: 80%;
     margin: 30px auto 0;
   }
@@ -2846,14 +2915,11 @@ main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .t
   main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area .toolbar_item ul li .toolbar_item_btn i {
     font-size: 30px;
   }
-  main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn {
+  main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn_item {
     max-width: 450px;
   }
-  main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn button {
+  main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn_item .dialogue_btn {
     padding: 15px 0;
-  }
-  main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn button.dialogue_btn_done {
-    max-width: 600px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -2934,19 +3000,23 @@ main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .t
   }
 }
 @media screen and (min-width: 1024px) {
+  main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_area_bottom {
+    width: calc(65% - 10px);
+    margin: 35px 0 35px calc(35% - 43px);
+  }
   main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content {
     display: flex;
     flex-wrap: wrap;
   }
   main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .test_area_content_img {
     display: block;
-    width: calc(30% - 10px);
+    width: calc(25% - 10px);
     margin: 0 calc(5% - 33px) 0 33px;
   }
   main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .listen_area,
   main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .dialogue_area,
   main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .dialogue_area {
-    width: calc(60% - 10px);
+    width: calc(65% - 10px);
     margin: 0 33px 0 calc(5% - 33px);
   }
 }
@@ -2978,16 +3048,32 @@ main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .t
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar .bar:nth-child(4) {
     height: 25px;
   }
-  main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn {
+  main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn_item {
     width: 45%;
   }
 }
 @media screen and (min-width: 1400px) {
-  main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn {
+  main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn_item {
     width: 25%;
   }
-  main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn.dialogue_btn_done {
+  main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn_item.dialogue_btn_done {
     margin: 10px;
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_area_bottom {
+    width: calc(70% - 10px);
+    margin: 35px 0 35px calc(30% - 43px);
+  }
+  main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .test_area_content_img {
+    display: block;
+    width: calc(20% - 10px);
+  }
+  main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .listen_area,
+  main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .dialogue_area,
+  main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .dialogue_area {
+    width: calc(70% - 10px);
   }
 }
 main .quiz_page .test_area.book_select .student_data_area {
@@ -3393,6 +3479,9 @@ main .test_area .test_area_right .test_area_content .score_report_area .form-gro
   align-items: center;
   border-top: 1px dotted #1a263f;
 }
+main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item:nth-child(1) {
+  border-top: 0px;
+}
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item .score_report_item_content {
   padding: 15px 2px;
   position: relative;
@@ -3466,6 +3555,9 @@ main .page:after {
   left: 0;
   font-size: 30px;
   text-align: center;
+}
+main .page.page_PDF {
+  margin: 0 auto;
 }
 main .page .page_container {
   transform: translate(0px, -25px);
@@ -3710,18 +3802,6 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   /* 邊界與內容的距離 */
 }
 @media print {
-  header {
-    display: none;
-  }
-  .robot_hint {
-    display: none;
-  }
-  .main_footer {
-    display: none;
-  }
-  footer {
-    display: none;
-  }
   h5 {
     font-size: 24px;
     line-height: 1.5;
@@ -3761,10 +3841,12 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     max-width: 1024px;
     height: 1448px;
     width: 100%;
-    margin: 0px auto 0;
     overflow: hidden;
     background-color: #f9df54;
     padding: 30px;
+  }
+  main .page.page_PDF {
+    margin: 0 auto;
   }
   main .page:after {
     /* content: counter(page-number); 取用該名字的計數器 */
@@ -4202,23 +4284,6 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   }
 }
 @media screen and (min-width: 1024px) {
-  header {
-    display: none;
-  }
-  .robot_hint {
-    display: none;
-  }
-  .main_footer {
-    display: none;
-  }
-  footer {
-    display: none;
-  }
-  main .main {
-    width: 100%;
-    margin: 0;
-    max-width: none;
-  }
   main .page {
     /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
     /* page-break-after: always;  碰到此元素會直接換頁 */
@@ -4227,7 +4292,6 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     max-width: 1024px;
     height: 1448px;
     width: 100%;
-    margin: 0px auto 0;
     overflow: hidden;
     background-color: #f9df54;
     padding: 30px;

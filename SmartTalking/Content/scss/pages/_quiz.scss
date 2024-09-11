@@ -59,7 +59,7 @@ main {
         }
 
         .test_area {
-            width: 100%;
+            width: 80%;
             margin: 0px auto;
             display: flex;
             flex-wrap: wrap;
@@ -900,10 +900,11 @@ main {
                         display: flex;
                         justify-content: center;
                         flex-wrap: wrap;
-                        padding: 10px;
                         margin: 20px auto 0;
-                        padding: 30px 0 0;
-                        background-color: $white;
+
+                        &.toolbar_area_bottom{
+                            margin: 35px auto;
+                        }
 
                         .btn_icon_area {
                             .btn_icon {
@@ -935,7 +936,7 @@ main {
                             .recording_time{
                                 display: none;
                                 color: $main_color;
-                                margin: 10px auto 0;
+                                margin: 0px auto 10px;
                             }
                         }
 
@@ -944,8 +945,7 @@ main {
                             display: flex;
                             justify-content: flex-end;
                             align-items: center;
-                            margin: 40px 5% 0px;
-                            border-top: 1px solid $main_color;
+                            margin: 0px 5% 20px;
                             padding: 20px 0 10px;
 
                             .toolbar_item_btn {
@@ -1225,13 +1225,13 @@ main {
                             // flex-wrap: wrap;
 
                             .toolbar_dialogue {
+                                width: 100%;
                                 display: flex;
                                 flex-wrap: wrap;
                                 justify-content: center;
-                                width: 90%;
                             }
 
-                            .dialogue_btn {
+                            .dialogue_btn_item {
                                 margin: 10px;
                                 display: flex;
                                 justify-content: center;
@@ -1239,9 +1239,16 @@ main {
                                 transform: scale(0.95);
                                 width: 100%;
 
-                                button {
+                                .dialogue_btn {
                                     padding: 10px 0;
                                     width: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    p{
+                                        margin: 0 0 0 5px;
+                                    }
                                 }
 
                                 &:hover {
@@ -1356,6 +1363,71 @@ main {
         }
     }
 
+    /* input range 主體樣式 */
+    input[type="range"] {
+        -webkit-appearance: none;
+        width: 100%;
+        position: relative;
+        border-radius: 10px;
+        cursor: pointer;
+  
+        /* input range 原點focus */
+        &:focus {
+          &::-webkit-slider-thumb {
+            background-color: darken($main_color, 10%);
+          }
+        }
+  
+        /* input range 原點樣式 */
+        &::-webkit-slider-thumb {
+          width: 15px;
+          height: 15px;
+          border-radius: 100%;
+          border: none;
+          -webkit-appearance: none;
+          background-color: $main_color;
+          z-index: 1;
+          position: relative;
+          transition: 0.5s all ease;
+          transform: translate(0%, -50%);
+          top: 50%;
+        }
+  
+        /* input range 進度條樣式 */
+        &::-webkit-slider-runnable-track {
+          background-color: $bright_main_color;
+          height: 5px;
+          border-radius: 10px;
+        }
+      }
+
+    /* input range 播放樣式 */
+    input[name="playRange"] {
+        margin-top: 15px;
+  
+        &:before {
+          position: absolute;
+          content: "";
+          width: var(--playRange);
+          height: 100%;
+          background-color: $main_color;
+          border-radius: 10px;
+        }
+      }
+  
+      /* 播放完畢時，100%進度顯示 */
+      input[name="playRange0"] {
+  
+        &:before {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 100%;
+          background-color: $main_color;
+          border-radius: 10px;
+        }
+      }
+
 }
 
 @keyframes sound {
@@ -1459,7 +1531,7 @@ main {
                         .toolbar_area {
 
                             &.toolbar_dialogue_area {
-                                .dialogue_btn {
+                                .dialogue_btn_item {
                                     width: 45%;
 
                                     &.dialogue_btn_done {
@@ -1744,15 +1816,11 @@ main {
                             }
 
                             &.toolbar_dialogue_area {
-                                .dialogue_btn {
+                                .dialogue_btn_item {
                                     max-width: 450px;
 
-                                    button {
+                                    .dialogue_btn {
                                         padding: 15px 0;
-
-                                        &.dialogue_btn_done {
-                                            max-width: 600px;
-                                        }
                                     }
                                 }
                             }
@@ -1908,6 +1976,17 @@ main {
         .quiz_page {
 
             .test_area {
+                .test_area_right{
+                    .test_area_content{
+                        .toolbar_area {
+                            &.toolbar_area_bottom{
+                                width: calc(65% - 10px);
+                                margin: 35px 0 35px calc(35% - 43px);
+                            }
+                        }
+                    }
+                }
+
                 &.test_area_quiz {
                     .test_area_right {
                         .test_area_content {
@@ -1916,14 +1995,14 @@ main {
 
                             .test_area_content_img {
                                 display: block;
-                                width: calc(30% - 10px);
+                                width: calc(25% - 10px);
                                 margin: 0 calc(5% - 33px) 0 33px;
                             }
 
                             .listen_area,
                             .dialogue_area,
                             .dialogue_area {
-                                width: calc(60% - 10px);
+                                width: calc(65% - 10px);
                                 margin: 0 33px 0 calc(5% - 33px);
                             }
                         }
@@ -1991,7 +2070,7 @@ main {
 
                         .toolbar_area {
                             &.toolbar_dialogue_area {
-                                .dialogue_btn {
+                                .dialogue_btn_item {
                                     width: 45%;
                                 }
                             }
@@ -2016,16 +2095,56 @@ main {
 
                         .toolbar_area {
                             &.toolbar_dialogue_area {
-                                .dialogue_btn {
+                                .dialogue_btn_item {
                                     width: 25%;
 
                                     &.dialogue_btn_done {
                                         margin: 10px;
+                                        width: 40%;
                                     }
                                 }
                             }
                         }
 
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    main {
+        .quiz_page {
+
+            .test_area {
+                .test_area_right{
+                    .test_area_content{
+                        .toolbar_area {
+                            &.toolbar_area_bottom{
+                                width: calc(70% - 10px);
+                                margin: 35px 0 35px calc(30% - 43px);
+                            }
+                        }
+                    }
+                }
+
+                &.test_area_quiz {
+                    .test_area_right {
+                        .test_area_content {
+
+                            .test_area_content_img {
+                                display: block;
+                                width: calc(20% - 10px);
+                            }
+
+                            .listen_area,
+                            .dialogue_area,
+                            .dialogue_area {
+                                width: calc(70% - 10px);
+                            }
+                        }
                     }
                 }
             }

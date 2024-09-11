@@ -21,6 +21,10 @@ main {
             text-align: center;
         }
 
+        &.page_PDF{
+            margin: 0 auto;
+        }
+
         .page_container {
             transform: translate(0px, -25px);
 
@@ -320,18 +324,18 @@ main {
 }
 
 @media print {
-    header{
-        display: none;
-    }
-    .robot_hint{
-        display: none;
-    }
-    .main_footer{
-        display: none;
-    }
-    footer{
-        display: none;
-    }
+    // header{
+    //     display: none;
+    // }
+    // .robot_hint{
+    //     display: none;
+    // }
+    // .main_footer{
+    //     display: none;
+    // }
+    // footer{
+    //     display: none;
+    // }
 
     h5 {
         font-size: 24px;
@@ -382,10 +386,13 @@ main {
             max-width: 1024px;
             height: 1448px;
             width: 100%;
-            margin: 0px auto 0;
             overflow: hidden;
             background-color: $page_bg;
             padding: 30px;
+
+            &.page_PDF{
+                margin: 0 auto;
+            }
 
             &:after {
                 /* content: counter(page-number); 取用該名字的計數器 */
@@ -1011,24 +1018,7 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
-    header{
-        display: none;
-    }
-    .robot_hint{
-        display: none;
-    }
-    .main_footer{
-        display: none;
-    }
-    footer{
-        display: none;
-    }
     main {
-        .main{
-            width: 100%;
-            margin: 0;
-            max-width: none;
-        }
         .page {
             /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
             /* page-break-after: always;  碰到此元素會直接換頁 */
@@ -1037,7 +1027,6 @@ main {
             max-width: 1024px;
             height: 1448px;
             width: 100%;
-            margin: 0px auto 0;
             overflow: hidden;
             background-color: $page_bg;
             padding: 30px;

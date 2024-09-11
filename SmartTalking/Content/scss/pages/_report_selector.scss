@@ -53,6 +53,10 @@ main {
                                         align-items: center;
                                         border-top: 1px dotted darken($main_color, 15%);
 
+                                        &:nth-child(1){
+                                            border-top: 0px;
+                                        }
+
                                         .score_report_item_content {
                                                 padding: 15px 2px;
                                                 position: relative;

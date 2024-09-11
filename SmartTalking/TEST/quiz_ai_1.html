@@ -415,6 +415,60 @@
                             </div>
                         </div>
 
+                        <div class="toolbar_area">
+                            <div class="toolbar_item">
+                                <ul>
+                                    <li>
+                                        <button class="toolbar_item_btn btn_pinyin" aria-label="拼音" disabled>
+                                            <i class="fa-solid fa-font"></i>
+                                        </button>
+
+                                        <div class="toolbar_item_container">
+                                            <p class="label_text">
+                                                <input type="checkbox" id="pinyin_id">
+                                                <span>拼音</span>
+                                                <label for="pinyin_id"></label></p>
+                                        </div>
+                                    </li>
+                    
+                                    <li>
+                                        <button class="toolbar_item_btn btn_translate" aria-label="翻譯" disabled>
+                                            <i class="fa-solid fa-earth-americas"></i>
+                                        </button>
+                                        <div class="toolbar_item_container">
+                                            <p class="label_text">
+                                                <input type="checkbox" id="translate_id">
+                                                <span>翻譯</span>
+                                                <label for="translate_id"></label>
+                                            </p>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <button class="toolbar_item_btn btn_correction" aria-label="糾錯" disabled>
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </button>
+                                        <div class="toolbar_item_container">
+                                            <p class="label_text"><input type="checkbox" id="correction_id">
+                                                <span>糾錯</span>
+                                                <label for="correction_id"></label></p>
+                                        </div>
+                                    </li>
+                    
+                                    <li>
+                                        <button class="toolbar_item_btn btn_speak" aria-label="語速">
+                                            <i class="fa-solid fa-comments"></i>
+                                        </button>
+                                        <div class="toolbar_item_container speak_menu_container">
+                                            <p>慢</p>
+                                            <p class="active">正常</p>
+                                            <p>快</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
                         <div class="test_area_content_img">
                             <img src="../Content/image/photo/book/SB1/L1.png" alt="">
                         </div>
@@ -502,67 +556,15 @@
                             </div>
                         </div>
 
-                        <div class="toolbar_area">
+                        <div class="toolbar_area toolbar_area_bottom">
 
                             <div class="btn_icon_area recording_area">
-                                <button class="btn_icon recording_icon">
-                                    <i class="fa-solid fa-microphone"></i>
-                                </button>
                                 <p class="recording_time">
                                     0:12
                                 </p>
-                            </div>
-
-                            <div class="toolbar_item">
-                                <ul>
-                                    <li>
-                                        <button class="toolbar_item_btn btn_pinyin" aria-label="拼音" disabled>
-                                            <i class="fa-solid fa-font"></i>
-                                        </button>
-
-                                        <div class="toolbar_item_container">
-                                            <p class="label_text">
-                                                <input type="checkbox" id="pinyin_id">
-                                                <span>拼音</span>
-                                                <label for="pinyin_id"></label></p>
-                                        </div>
-                                    </li>
-                    
-                                    <li>
-                                        <button class="toolbar_item_btn btn_translate" aria-label="翻譯" disabled>
-                                            <i class="fa-solid fa-earth-americas"></i>
-                                        </button>
-                                        <div class="toolbar_item_container">
-                                            <p class="label_text">
-                                                <input type="checkbox" id="translate_id">
-                                                <span>翻譯</span>
-                                                <label for="translate_id"></label>
-                                            </p>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <button class="toolbar_item_btn btn_correction" aria-label="糾錯" disabled>
-                                            <i class="fa-solid fa-pen-to-square"></i>
-                                        </button>
-                                        <div class="toolbar_item_container">
-                                            <p class="label_text"><input type="checkbox" id="correction_id">
-                                                <span>糾錯</span>
-                                                <label for="correction_id"></label></p>
-                                        </div>
-                                    </li>
-                    
-                                    <li>
-                                        <button class="toolbar_item_btn btn_speak" aria-label="語速">
-                                            <i class="fa-solid fa-comments"></i>
-                                        </button>
-                                        <div class="toolbar_item_container speak_menu_container">
-                                            <p>慢</p>
-                                            <p class="active">正常</p>
-                                            <p>快</p>
-                                        </div>
-                                    </li>
-                                </ul>
+                                <button class="btn_icon recording_icon">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -612,7 +614,7 @@
     <script>
         $(document).ready(function () {
             $("header").load("header.html", function () {
-                $('.nav-study').addClass('active');
+                $('.nav-quiz').addClass('active');
             });
             $("footer").load("footer.html");
 
