@@ -3561,7 +3561,6 @@ main .page .page_container .page_body .frame_one .frame_two .page_information .i
 main .page .page_container .page_body .frame_one .frame_two .page_information .information_name div .information_text,
 main .page .page_container .page_body .frame_one .frame_two .page_information .information_course div .information_text,
 main .page .page_container .page_body .frame_one .frame_two .page_information .information_time div .information_text {
-  width: calc(100% - 10px - 5px);
   display: flex;
   flex-wrap: wrap;
 }
@@ -3905,7 +3904,6 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   main .page .page_container .page_body .frame_one .frame_two .page_information .information_name div .information_text,
   main .page .page_container .page_body .frame_one .frame_two .page_information .information_course div .information_text,
   main .page .page_container .page_body .frame_one .frame_two .page_information .information_time div .information_text {
-    width: calc(100% - 10px - 5px);
     display: flex;
     flex-wrap: wrap;
   }
@@ -4371,7 +4369,6 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   main .page .page_container .page_body .frame_one .frame_two .page_information .information_name div .information_text,
   main .page .page_container .page_body .frame_one .frame_two .page_information .information_course div .information_text,
   main .page .page_container .page_body .frame_one .frame_two .page_information .information_time div .information_text {
-    width: calc(100% - 10px - 5px);
     display: flex;
     flex-wrap: wrap;
   }
