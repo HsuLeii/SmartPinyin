@@ -610,7 +610,7 @@ main {
                                                     font-weight: bold;
                                                     line-height: 1;
                                                     margin: 0 10px;
-                                                    -webkit-text-stroke: 5px $bright_main_color;
+                                                    -webkit-text-stroke: 8px $bright_main_color;
                                                 }
 
                                                 .page_score {
@@ -1122,6 +1122,7 @@ main {
                             .page_information {
                                 display: flex;
                                 align-items: flex-start;
+                                justify-content: center;
                                 margin: 20px auto;
                                 flex-direction: row;
                                 flex-wrap: wrap;

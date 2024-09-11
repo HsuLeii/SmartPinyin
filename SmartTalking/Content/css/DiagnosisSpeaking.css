@@ -3966,7 +3966,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     font-weight: bold;
     line-height: 1;
     margin: 0 10px;
-    -webkit-text-stroke: 5px #4dbcbc;
+    -webkit-text-stroke: 8px #4dbcbc;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_score {
     line-height: 1;
@@ -4300,6 +4300,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   main .page .page_container .page_body .frame_one .frame_two .page_information {
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     margin: 20px auto;
     flex-direction: row;
     flex-wrap: wrap;
