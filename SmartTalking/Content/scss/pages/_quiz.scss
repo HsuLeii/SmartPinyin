@@ -82,17 +82,13 @@ main {
 
             .test_area_left {
                 width: 100%;
-                // background-color: $white;
-                // padding: 10px 15px;
                 border-radius: 10px;
                 margin: 40px auto 0;
 
                 .test_area_left_tittle {
                     padding: 10px 5%;
-                    cursor: pointer;
                     background-color: $white;
                     border-radius: 10px;
-                    display: none;
 
                     &:nth-child(1) {
                         display: block;
@@ -101,7 +97,7 @@ main {
                     p {
                         font-size: 20px;
                         font-weight: bold;
-                        color: $main_color;
+                        color: $bright_main_color;
                         padding: 3px 5px 15px;
                     }
 
@@ -109,7 +105,6 @@ main {
                         display: flex;
                         flex-wrap: wrap;
                         width: 100%;
-                        display: none;
 
                         .test_area_left_options_item {
                             padding: 0px 10px;
@@ -168,22 +163,6 @@ main {
                         }
                     }
 
-                    &.open {
-                        .test_area_left_options {
-                            display: flex;
-                        }
-                    }
-
-                    &.active {
-                        p {
-                            color: $bright_main_color;
-                        }
-
-                        .test_area_left_options {
-                            display: flex !important;
-                        }
-                    }
-
                     &:hover {
 
                         p {
@@ -208,41 +187,6 @@ main {
                         color: $main_color;
                     }
                 }
-
-                // .test_area_right_nav_btn{
-
-                //     .test_area_right_nav_btn_a{
-                //         position: relative;
-                //     }
-                //     .test_area_right_nav_span{
-                //         position: absolute;
-                //         transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-                //         transition-duration: 0.3s;
-                //     }
-
-                //     .test_area_right_nav_span_one{
-                //         position: absolute;
-                //         width: 100%;
-                //         height: 100%;
-                //         background-color: $white;
-                //         padding-left: 1.25rem;
-                //         padding-right: 1.25rem;
-                //         padding-top: 0.75rem;
-                //         padding-bottom: 0.75rem;
-                //     }
-
-                //     .test_area_right_nav_span_two{
-                //         width: 100%;
-                //         height: 100%;
-                //         position: absolute;
-                //         background-color: $black;
-                //         transition-duration: 0.3s;
-                //         transition-property: all;
-                //         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-                //         transition-duration: 150ms;
-                //     }
-                // }
-
 
                 .test_area_right_nav {
                     width: 90%;
@@ -315,44 +259,6 @@ main {
                             }
                         }
                     }
-
-                    // .test_area_right_nav_item {
-                    //     padding: 5px 3px;
-                    //     border: 1px solid $main-color;
-                    //     border-bottom: 0px;
-                    //     border-radius: 5px 5px 0 0;
-                    //     background-color: $white;
-                    //     transform: translate(-1px, 0);
-
-                    //     a {
-                    //         color: $black;
-
-                    //         &:hover {
-                    //             color: $bright_main_color;
-                    //         }
-
-                    //     }
-
-                    //     &:nth-child(1) {
-                    //         transform: translate(0, 0);
-                    //     }
-
-                    //     &:last-child(1) {
-                    //         border-right: 1px solid $main-color;
-                    //     }
-
-                    //     &.active {
-                    //         background-color: $main-color;
-
-                    //         a {
-                    //             color: $white;
-
-                    //             &:hover {
-                    //                 color: $white;
-                    //             }
-                    //         }
-                    //     }
-                    // }
                 }
 
                 .test_area_content {
@@ -893,8 +799,28 @@ main {
                         }
                     }
 
+                    .playRange_area{
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        width: 90%;
+                        margin: 20px auto 0;
+
+                        .form-label{
+                            order: 2;
+                            margin-bottom: 0;
+                            color: $black;
+                            margin: 10px 0 0 0;
+                        }
+
+                        .playRange_input{
+                            width: 100%;
+                        }
+                    }
+
                     .toolbar_area {
-                        width: 100%;
+                        width: 90%;
                         position: relative;
                         z-index: 1;
                         display: flex;
@@ -945,8 +871,7 @@ main {
                             display: flex;
                             justify-content: flex-end;
                             align-items: center;
-                            margin: 0px 5% 20px;
-                            padding: 20px 0 10px;
+                            padding: 20px 0;
 
                             .toolbar_item_btn {
                                 position: relative;
@@ -1395,7 +1320,7 @@ main {
   
         /* input range 進度條樣式 */
         &::-webkit-slider-runnable-track {
-          background-color: $bright_main_color;
+          background-color: #b4b4b48e;
           height: 5px;
           border-radius: 10px;
         }
@@ -1403,8 +1328,6 @@ main {
 
     /* input range 播放樣式 */
     input[name="playRange"] {
-        margin-top: 15px;
-  
         &:before {
           position: absolute;
           content: "";
@@ -1448,7 +1371,6 @@ main {
 
             .test_area {
                 .test_area_left {
-                    // padding: 20px 15px 40px;
 
                     .test_area_left_tittle {
 
@@ -1460,17 +1382,6 @@ main {
                                 display: flex;
                                 justify-content: center;
                                 border-right: 1px solid $main_color_grey;
-
-                                // &.active {
-                                //     a {
-                                //         &::after {
-                                //             top: 100%;
-                                //             left: 50%;
-                                //             transform: translate(0, 10px);
-                                //         }
-                                //     }
-
-                                // }
                             }
                         }
                     }
@@ -1482,13 +1393,6 @@ main {
 
                     .test_area_right_tittle {
                         margin: 15px 20px;
-                    }
-
-                    .test_area_right_nav {
-
-                        .test_area_right_nav_item {
-                            // padding: 5px 10px;
-                        }
                     }
                 }
             }
@@ -1527,7 +1431,6 @@ main {
                     }
 
                     .test_area_content {
-
                         .toolbar_area {
 
                             &.toolbar_dialogue_area {
@@ -1766,6 +1669,25 @@ main {
                             }
                         }
 
+                        .playRange_area{
+                            align-items: center;
+    
+                            .form-label{
+                                order: 1;
+                                margin: 0 10px 0 0;
+                            }
+    
+                            .playRange_input{
+                                order: 2;
+                                width: calc(70% - 10px);
+
+                                &~.form-label{
+                                    order: 3;
+                                    margin: 0 0 0 10px;
+                                }
+                            }
+                        }
+
                         .toolbar_area {
                             // &::before {
                             //     transform: translate(-2px, 0);
@@ -1978,6 +1900,10 @@ main {
             .test_area {
                 .test_area_right{
                     .test_area_content{
+                        .playRange_area{
+                            width: calc(65% - 10px);
+                            margin: 35px 0 35px calc(35% - 43px);
+                        }
                         .toolbar_area {
                             &.toolbar_area_bottom{
                                 width: calc(65% - 10px);
@@ -2068,6 +1994,13 @@ main {
                             }
                         }
 
+                        .playRange_area{
+    
+                            .playRange_input{
+                                width: calc(75% - 10px);
+                            }
+                        }
+
                         .toolbar_area {
                             &.toolbar_dialogue_area {
                                 .dialogue_btn_item {
@@ -2121,6 +2054,10 @@ main {
             .test_area {
                 .test_area_right{
                     .test_area_content{
+                        .playRange_area{
+                            width: calc(70% - 10px);
+                            margin: 35px 0 35px calc(30% - 43px);
+                        }
                         .toolbar_area {
                             &.toolbar_area_bottom{
                                 width: calc(70% - 10px);

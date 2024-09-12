@@ -1768,10 +1768,8 @@ main .quiz_page .test_area .test_area_left {
 }
 main .quiz_page .test_area .test_area_left .test_area_left_tittle {
   padding: 10px 5%;
-  cursor: pointer;
   background-color: #fff;
   border-radius: 10px;
-  display: none;
 }
 main .quiz_page .test_area .test_area_left .test_area_left_tittle:nth-child(1) {
   display: block;
@@ -1779,14 +1777,13 @@ main .quiz_page .test_area .test_area_left .test_area_left_tittle:nth-child(1) {
 main .quiz_page .test_area .test_area_left .test_area_left_tittle p {
   font-size: 20px;
   font-weight: bold;
-  color: #314675;
+  color: #4dbcbc;
   padding: 3px 5px 15px;
 }
 main .quiz_page .test_area .test_area_left .test_area_left_tittle .test_area_left_options {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  display: none;
 }
 main .quiz_page .test_area .test_area_left .test_area_left_tittle .test_area_left_options .test_area_left_options_item {
   padding: 0px 10px;
@@ -1818,15 +1815,6 @@ main .quiz_page .test_area .test_area_left .test_area_left_tittle .test_area_lef
   color: #4dbcbc;
   background-position: 0 0;
   background-size: 0 0;
-}
-main .quiz_page .test_area .test_area_left .test_area_left_tittle.open .test_area_left_options {
-  display: flex;
-}
-main .quiz_page .test_area .test_area_left .test_area_left_tittle.active p {
-  color: #4dbcbc;
-}
-main .quiz_page .test_area .test_area_left .test_area_left_tittle.active .test_area_left_options {
-  display: flex !important;
 }
 main .quiz_page .test_area .test_area_left .test_area_left_tittle:hover p {
   color: #4dbcbc;
@@ -2296,8 +2284,25 @@ main .quiz_page .test_area .test_area_right .test_area_content .drag_line .line 
   margin-top: 0px;
   margin-left: 0px;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area {
+main .quiz_page .test_area .test_area_right .test_area_content .playRange_area {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 20px auto 0;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .playRange_area .form-label {
+  order: 2;
+  margin-bottom: 0;
+  color: #000;
+  margin: 10px 0 0 0;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .playRange_area .playRange_input {
   width: 100%;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area {
+  width: 90%;
   position: relative;
   z-index: 1;
   display: flex;
@@ -2340,8 +2345,7 @@ main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area .to
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: 0px 5% 20px;
-  padding: 20px 0 10px;
+  padding: 20px 0;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area .toolbar_item .toolbar_item_btn {
   position: relative;
@@ -2677,12 +2681,9 @@ main input[type=range]::-webkit-slider-thumb {
   top: 50%;
 }
 main input[type=range]::-webkit-slider-runnable-track {
-  background-color: #4dbcbc;
+  background-color: rgba(180, 180, 180, 0.5568627451);
   height: 5px;
   border-radius: 10px;
-}
-main input[name=playRange] {
-  margin-top: 15px;
 }
 main input[name=playRange]:before {
   position: absolute;
@@ -2888,6 +2889,21 @@ main input[name=playRange0]:before {
     border-left: 10px solid #314675;
     border-top: 10px solid transparent;
   }
+  main .quiz_page .test_area .test_area_right .test_area_content .playRange_area {
+    align-items: center;
+  }
+  main .quiz_page .test_area .test_area_right .test_area_content .playRange_area .form-label {
+    order: 1;
+    margin: 0 10px 0 0;
+  }
+  main .quiz_page .test_area .test_area_right .test_area_content .playRange_area .playRange_input {
+    order: 2;
+    width: calc(70% - 10px);
+  }
+  main .quiz_page .test_area .test_area_right .test_area_content .playRange_area .playRange_input ~ .form-label {
+    order: 3;
+    margin: 0 0 0 10px;
+  }
   main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area .btn_icon_area .btn_icon {
     width: 65px;
     height: 65px;
@@ -3000,6 +3016,10 @@ main input[name=playRange0]:before {
   }
 }
 @media screen and (min-width: 1024px) {
+  main .quiz_page .test_area .test_area_right .test_area_content .playRange_area {
+    width: calc(65% - 10px);
+    margin: 35px 0 35px calc(35% - 43px);
+  }
   main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_area_bottom {
     width: calc(65% - 10px);
     margin: 35px 0 35px calc(35% - 43px);
@@ -3048,6 +3068,9 @@ main input[name=playRange0]:before {
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar .bar:nth-child(4) {
     height: 25px;
   }
+  main .quiz_page .test_area .test_area_right .test_area_content .playRange_area .playRange_input {
+    width: calc(75% - 10px);
+  }
   main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_dialogue_area .dialogue_btn_item {
     width: 45%;
   }
@@ -3062,6 +3085,10 @@ main input[name=playRange0]:before {
   }
 }
 @media screen and (min-width: 1600px) {
+  main .quiz_page .test_area .test_area_right .test_area_content .playRange_area {
+    width: calc(70% - 10px);
+    margin: 35px 0 35px calc(30% - 43px);
+  }
   main .quiz_page .test_area .test_area_right .test_area_content .toolbar_area.toolbar_area_bottom {
     width: calc(70% - 10px);
     margin: 35px 0 35px calc(30% - 43px);
@@ -3436,24 +3463,33 @@ main .login_area .login_form .register_btn a:hover {
     background-size: 500px;
   }
 }
+main .test_area .test_area_right .test_area_content .report_selector_tittle {
+  width: 100%;
+  padding: 10px 5%;
+}
+main .test_area .test_area_right .test_area_content .report_selector_tittle p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4dbcbc;
+  padding: 3px 5px 15px;
+}
 main .test_area .test_area_right .test_area_content .score_report_area {
   width: 90%;
   margin: 0 auto;
-  padding: 20px;
   border-radius: 5px;
 }
 main .test_area .test_area_right .test_area_content .score_report_area .form-group {
   overflow-x: scroll;
 }
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .table {
-  border: 1px solid #1a263f;
+  border: 1px solid #4dbcbc;
   margin: 0 auto 40px;
   min-width: 800px;
 }
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .table thead .score_report_header {
   display: flex;
   justify-content: flex-end;
-  background-color: #314675;
+  background-color: #4dbcbc;
   border-bottom: 0;
 }
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .table thead .score_report_header .score_report_header_text {
@@ -3461,13 +3497,12 @@ main .test_area .test_area_right .test_area_content .score_report_area .form-gro
   justify-content: center;
   color: #fff;
   padding: 8px 5px;
-  width: 22%;
+  width: 25%;
   border-left: 1px dotted;
   transform: translate(-1px, 0px);
 }
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .table thead .score_report_header .score_report_header_text:nth-child(1) {
   border-left: 0;
-  width: 34%;
 }
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body {
   border-top: 0;
@@ -3477,7 +3512,7 @@ main .test_area .test_area_right .test_area_content .score_report_area .form-gro
   position: relative;
   display: flex;
   align-items: center;
-  border-top: 1px dotted #1a263f;
+  border-top: 1px dotted #4dbcbc;
 }
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item:nth-child(1) {
   border-top: 0px;
@@ -3489,11 +3524,7 @@ main .test_area .test_area_right .test_area_content .score_report_area .form-gro
   justify-content: center;
   color: #20221f;
   word-break: break-word;
-  width: 22%;
-}
-main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item .score_report_item_content:nth-child(1) {
-  width: 34%;
-  border-right: 1px dotted #1a263f;
+  width: 25%;
 }
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item .score_report_item_content .score_report_btn {
   padding: 8px 30px;
@@ -3507,34 +3538,33 @@ main .test_area .test_area_right .test_area_content .score_report_area .form-gro
   background-color: #314675;
   color: #fff;
 }
-main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item.check_item {
-  background-color: rgba(85, 43, 141, 0.1882352941);
-}
-main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item.check_item .score_report_item_content.score_report_item_icon .fa-circle-check {
-  display: inline-block;
-}
-main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item.check_item .score_report_item_content.score_report_item_text {
-  color: #1a263f;
-}
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item::before, main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item::after {
   content: "";
   position: absolute;
   top: 0;
   width: 1px;
   height: 100%;
-  border: 1px dotted #1a263f;
 }
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item::before {
-  left: calc(56% - 1px);
+  border-right: 1px dotted #4dbcbc;
+  border-left: 1px dotted #4dbcbc;
+  width: 25%;
+  left: calc(25% - 1px);
 }
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item::after {
-  left: calc(78% - 1px);
+  border-left: 1px dotted #4dbcbc;
+  left: calc(75% - 1px);
 }
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .pagination {
   position: sticky;
   left: 0;
 }
 
+@media screen and (min-width: 768px) {
+  main .test_area .test_area_right .test_area_content .report_selector_tittle p {
+    font-size: 25px;
+  }
+}
 main .page {
   /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
   /* page-break-after: always;  碰到此元素會直接換頁 */
