@@ -1025,9 +1025,9 @@ main {
             page-break-inside: avoid;
             position: relative;
             max-width: 1024px;
-            height: 1448px;
+            // height: 1448px;
             width: 100%;
-            overflow: hidden;
+            // overflow: hidden;
             background-color: $page_bg;
             padding: 30px;
 
@@ -1369,5 +1369,21 @@ main {
                 }
             }
         }
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    main {
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    main {
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    main {
     }
 }

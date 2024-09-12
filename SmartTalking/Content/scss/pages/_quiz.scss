@@ -380,6 +380,7 @@ main {
 
                         .input_area {
                             margin: 40px auto;
+                            flex-wrap: wrap;
 
                             &.input_area_figure {
                                 flex-wrap: wrap;
@@ -819,397 +820,6 @@ main {
                         }
                     }
 
-                    .toolbar_area {
-                        width: 90%;
-                        position: relative;
-                        z-index: 1;
-                        display: flex;
-                        justify-content: center;
-                        flex-wrap: wrap;
-                        margin: 20px auto 0;
-
-                        &.toolbar_area_bottom{
-                            margin: 35px auto;
-                        }
-
-                        .btn_icon_area {
-                            .btn_icon {
-                                width: 55px;
-                                height: 55px;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                border-radius: 50%;
-                                background-color: $main-color;
-                                transform: scale(0.95);
-
-                                i {
-                                    color: $white;
-                                    font-size: 30px;
-                                }
-
-                                &:hover {
-                                    transform: scale(1);
-                                    background-color: $bright_main_color;
-                                }
-                            }
-
-                            &.recording_area{
-                                display: flex;
-                                flex-direction: column;
-                            }
-
-                            .recording_time{
-                                display: none;
-                                color: $main_color;
-                                margin: 0px auto 10px;
-                            }
-                        }
-
-                        .toolbar_item {
-                            width: 100%;
-                            display: flex;
-                            justify-content: flex-end;
-                            align-items: center;
-                            padding: 20px 0;
-
-                            .toolbar_item_btn {
-                                position: relative;
-
-                                .btn_icon {
-                                    margin: 0 5px;
-                                    border-radius: 50%;
-                                    border: 1px solid $main_color;
-                                    width: 30px;
-                                    height: 30px;
-
-                                    i {
-                                        font-size: 15px;
-                                        color: $main_color;
-                                    }
-
-                                    &:hover {
-                                        transform: scale(1.05);
-
-                                        i {
-                                            color: $bright_main_color;
-                                        }
-                                    }
-                                }
-
-                                .speak_menu_container {
-                                    position: absolute;
-                                    left: 50%;
-                                    transform: translate(-50%, 0);
-                                    z-index: 1;
-                                    color: $main_color;
-                                    background-color: $white;
-                                    border: 2px solid $main_color;
-                                    border-radius: 4px;
-                                    min-width: 100px;
-                                    text-align: center;
-                                    bottom: 100%;
-                                    padding: 5px 10px;
-                                    margin-bottom: 11px;
-                                    display: none;
-
-                                    p {
-                                        margin: 5px;
-                                        cursor: pointer;
-                                        background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
-                                        transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
-
-                                        &.active {
-                                            color: $bright_main_color;
-                                            font-weight: bold;
-
-                                            &:hover,
-                                            &:active {
-                                                cursor: auto;
-                                                background-position: 0 0;
-                                                background-size: 0 0;
-                                            }
-                                        }
-
-                                        &:hover,
-                                        &:active {
-                                            color: $bright_main_color;
-                                            background-position: 0 100%;
-                                            background-size: 100% 1px;
-                                        }
-                                    }
-
-                                    &::before {
-                                        content: "";
-                                        position: absolute;
-                                        border: solid transparent;
-                                        border-width: 9px 9px 0 9px;
-                                        border-top-color: $main_color;
-                                        bottom: -10px;
-                                        left: 50%;
-                                        transform: translate(-50%, 0px);
-                                    }
-                                }
-                            }
-
-                            ul {
-                                width: 100%;
-                                display: flex;
-                                justify-content: space-between;
-
-                                li {
-                                    position: relative;
-                                    margin: 0 10px;
-
-                                    .toolbar_item_btn {
-                                        transform: scale(0.95);
-
-                                        &:disabled {
-                                            i {
-                                                color: $grey;
-                                            }
-
-                                            &:hover {
-                                                transform: scale(0.95);
-
-                                                i {
-                                                    color: $grey;
-                                                }
-                                            }
-
-                                            &:before {
-                                                content: "";
-                                                background-color: transparent;
-                                            }
-
-                                        }
-
-                                        i {
-                                            font-size: 25px;
-                                            color: $main_color;
-                                        }
-
-                                        &:hover {
-                                            transform: scale(1);
-
-                                            i {
-                                                color: $bright_main_color;
-                                            }
-                                        }
-                                    }
-
-                                    &:nth-child(1),
-                                    &:nth-child(2) {
-                                        .toolbar_item_container {
-                                            right: auto;
-                                            left: -8px;
-
-                                            &::before {
-                                                left: calc(11px - 3px);
-                                                right: auto;
-                                            }
-
-                                            &::after {
-                                                right: auto;
-                                                left: 10px;
-                                            }
-                                        }
-
-                                    }
-
-                                    .toolbar_item_container {
-                                        display: none;
-                                        position: absolute;
-                                        z-index: 1;
-                                        color: $main_color;
-                                        background-color: $white;
-                                        border: 2px solid;
-                                        border-color: $main_color;
-                                        border-radius: 4px;
-                                        min-width: 100px;
-                                        text-align: center;
-                                        right: -8px;
-                                        bottom: 100%;
-                                        margin-bottom: 11px;
-                                        padding: 5px 10px;
-
-                                        &.open {
-                                            display: block;
-                                        }
-
-                                        &.speak_menu_container {
-
-                                            p {
-                                                margin: 5px;
-                                                cursor: pointer;
-                                                background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
-                                                transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
-
-                                                &.active {
-                                                    color: $bright_main_color;
-                                                    font-weight: bold;
-
-                                                    &:hover,
-                                                    &:active {
-                                                        cursor: auto;
-                                                        background-position: 0 0;
-                                                        background-size: 0 0;
-                                                    }
-                                                }
-
-                                                &:hover,
-                                                &:active {
-                                                    color: $bright_main_color;
-                                                    background-position: 0 100%;
-                                                    background-size: 100% 1px;
-                                                }
-                                            }
-                                        }
-
-                                        .label_text {
-                                            display: flex;
-                                            align-items: center;
-                                            justify-content: center;
-                                            flex-direction: column;
-                                            line-height: 28px;
-                                            min-width: 100px;
-                                            padding: 3px 0px;
-
-                                            input[type=checkbox] {
-                                                height: 0;
-                                                width: 0;
-                                                visibility: hidden;
-
-                                                &:checked {
-                                                    &~label {
-                                                        background: $main_color !important;
-
-                                                        &::after {
-                                                            left: calc(100% - 5px) !important;
-                                                            transform: translateX(-100%);
-                                                        }
-                                                    }
-                                                }
-                                            }
-
-                                            label {
-                                                cursor: pointer;
-                                                text-indent: -9999px;
-                                                width: 40px;
-                                                height: 25px;
-                                                background-color: $grey;
-                                                border: 1px solid $main_color;
-                                                display: block;
-                                                border-radius: 100px;
-                                                position: relative;
-                                                margin-left: 7px;
-
-                                                &::after {
-                                                    content: '';
-                                                    position: absolute;
-                                                    top: 4px;
-                                                    left: 5px;
-                                                    width: 15px;
-                                                    height: 15px;
-                                                    background: $white;
-                                                    border-radius: 90px;
-                                                    transition: 0.1s;
-                                                }
-                                            }
-                                        }
-
-                                        &::before {
-                                            content: "";
-                                            border: solid transparent;
-                                            border-width: 9px 9px 0 9px;
-                                            border-top-color: $main_color;
-                                            position: absolute;
-                                            bottom: -10px;
-                                            right: calc(11px - 3px);
-                                        }
-
-                                        &::after {
-                                            content: "";
-                                            border: solid transparent;
-                                            position: absolute;
-                                            border-width: 7px 7px 0 7px;
-                                            border-top-color: $white;
-                                            bottom: -7px;
-                                            right: 10px;
-                                        }
-
-
-                                    }
-                                }
-                            }
-                        }
-
-                        &.toolbar_dialogue_area {
-                            // padding: 20px 10%;
-                            // justify-content: center;
-                            // flex-wrap: wrap;
-
-                            .toolbar_dialogue {
-                                width: 100%;
-                                display: flex;
-                                flex-wrap: wrap;
-                                justify-content: center;
-                            }
-
-                            .dialogue_btn_item {
-                                margin: 10px;
-                                display: flex;
-                                justify-content: center;
-                                border-radius: 5px;
-                                transform: scale(0.95);
-                                width: 100%;
-
-                                .dialogue_btn {
-                                    padding: 10px 0;
-                                    width: 100%;
-                                    display: flex;
-                                    justify-content: center;
-                                    align-items: center;
-
-                                    p{
-                                        margin: 0 0 0 5px;
-                                    }
-                                }
-
-                                &:hover {
-                                    transform: scale(1);
-                                }
-
-                                &.dialogue_btn_try {
-                                    background-color: $main_color;
-                                    border: 1px solid $main_color;
-
-                                    button {
-                                        color: $white;
-                                    }
-                                }
-
-                                &.dialogue_btn_change {
-                                    background-color: $white;
-                                    border: 1px solid $main_color;
-
-                                    button {
-                                        color: $main_color;
-                                    }
-                                }
-
-                                &.dialogue_btn_done {
-                                    background-color: $main_color_green;
-                                    border: 1px solid $main_color_green;
-
-                                    button {
-                                        color: $white;
-                                    }
-                                }
-                            }
-                        }
-                    }
-
                     label {
                         display: flex;
                         align-items: center;
@@ -1282,6 +892,397 @@ main {
                                 top: 20px;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    .toolbar_area {
+        width: 90%;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 20px auto 0;
+
+        &.toolbar_area_bottom{
+            margin: 35px auto;
+        }
+
+        .btn_icon_area {
+            .btn_icon {
+                width: 55px;
+                height: 55px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background-color: $main-color;
+                transform: scale(0.95);
+
+                i {
+                    color: $white;
+                    font-size: 30px;
+                }
+
+                &:hover {
+                    transform: scale(1);
+                    background-color: $bright_main_color;
+                }
+            }
+
+            &.recording_area{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .recording_time{
+                display: none;
+                color: $main_color;
+                margin: 0px auto 10px;
+            }
+        }
+
+        .toolbar_item {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 20px 0;
+
+            .toolbar_item_btn {
+                position: relative;
+
+                .btn_icon {
+                    margin: 0 5px;
+                    border-radius: 50%;
+                    border: 1px solid $main_color;
+                    width: 30px;
+                    height: 30px;
+
+                    i {
+                        font-size: 15px;
+                        color: $main_color;
+                    }
+
+                    &:hover {
+                        transform: scale(1.05);
+
+                        i {
+                            color: $bright_main_color;
+                        }
+                    }
+                }
+
+                .speak_menu_container {
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    z-index: 1;
+                    color: $main_color;
+                    background-color: $white;
+                    border: 2px solid $main_color;
+                    border-radius: 4px;
+                    min-width: 100px;
+                    text-align: center;
+                    bottom: 100%;
+                    padding: 5px 10px;
+                    margin-bottom: 11px;
+                    display: none;
+
+                    p {
+                        margin: 5px;
+                        cursor: pointer;
+                        background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
+                        transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
+
+                        &.active {
+                            color: $bright_main_color;
+                            font-weight: bold;
+
+                            &:hover,
+                            &:active {
+                                cursor: auto;
+                                background-position: 0 0;
+                                background-size: 0 0;
+                            }
+                        }
+
+                        &:hover,
+                        &:active {
+                            color: $bright_main_color;
+                            background-position: 0 100%;
+                            background-size: 100% 1px;
+                        }
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        border: solid transparent;
+                        border-width: 9px 9px 0 9px;
+                        border-top-color: $main_color;
+                        bottom: -10px;
+                        left: 50%;
+                        transform: translate(-50%, 0px);
+                    }
+                }
+            }
+
+            ul {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                li {
+                    position: relative;
+                    margin: 0 10px;
+
+                    .toolbar_item_btn {
+                        transform: scale(0.95);
+
+                        &:disabled {
+                            i {
+                                color: $grey;
+                            }
+
+                            &:hover {
+                                transform: scale(0.95);
+
+                                i {
+                                    color: $grey;
+                                }
+                            }
+
+                            &:before {
+                                content: "";
+                                background-color: transparent;
+                            }
+
+                        }
+
+                        i {
+                            font-size: 25px;
+                            color: $main_color;
+                        }
+
+                        &:hover {
+                            transform: scale(1);
+
+                            i {
+                                color: $bright_main_color;
+                            }
+                        }
+                    }
+
+                    &:nth-child(1),
+                    &:nth-child(2) {
+                        .toolbar_item_container {
+                            right: auto;
+                            left: -8px;
+
+                            &::before {
+                                left: calc(11px - 3px);
+                                right: auto;
+                            }
+
+                            &::after {
+                                right: auto;
+                                left: 10px;
+                            }
+                        }
+
+                    }
+
+                    .toolbar_item_container {
+                        display: none;
+                        position: absolute;
+                        z-index: 1;
+                        color: $main_color;
+                        background-color: $white;
+                        border: 2px solid;
+                        border-color: $main_color;
+                        border-radius: 4px;
+                        min-width: 100px;
+                        text-align: center;
+                        right: -8px;
+                        bottom: 100%;
+                        margin-bottom: 11px;
+                        padding: 5px 10px;
+
+                        &.open {
+                            display: block;
+                        }
+
+                        &.speak_menu_container {
+
+                            p {
+                                margin: 5px;
+                                cursor: pointer;
+                                background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
+                                transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
+
+                                &.active {
+                                    color: $bright_main_color;
+                                    font-weight: bold;
+
+                                    &:hover,
+                                    &:active {
+                                        cursor: auto;
+                                        background-position: 0 0;
+                                        background-size: 0 0;
+                                    }
+                                }
+
+                                &:hover,
+                                &:active {
+                                    color: $bright_main_color;
+                                    background-position: 0 100%;
+                                    background-size: 100% 1px;
+                                }
+                            }
+                        }
+
+                        .label_text {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            line-height: 28px;
+                            min-width: 100px;
+                            padding: 3px 0px;
+
+                            input[type=checkbox] {
+                                height: 0;
+                                width: 0;
+                                visibility: hidden;
+
+                                &:checked {
+                                    &~label {
+                                        background: $main_color !important;
+
+                                        &::after {
+                                            left: calc(100% - 5px) !important;
+                                            transform: translateX(-100%);
+                                        }
+                                    }
+                                }
+                            }
+
+                            label {
+                                cursor: pointer;
+                                text-indent: -9999px;
+                                width: 40px;
+                                height: 25px;
+                                background-color: $grey;
+                                border: 1px solid $main_color;
+                                display: block;
+                                border-radius: 100px;
+                                position: relative;
+                                margin-left: 7px;
+
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 4px;
+                                    left: 5px;
+                                    width: 15px;
+                                    height: 15px;
+                                    background: $white;
+                                    border-radius: 90px;
+                                    transition: 0.1s;
+                                }
+                            }
+                        }
+
+                        &::before {
+                            content: "";
+                            border: solid transparent;
+                            border-width: 9px 9px 0 9px;
+                            border-top-color: $main_color;
+                            position: absolute;
+                            bottom: -10px;
+                            right: calc(11px - 3px);
+                        }
+
+                        &::after {
+                            content: "";
+                            border: solid transparent;
+                            position: absolute;
+                            border-width: 7px 7px 0 7px;
+                            border-top-color: $white;
+                            bottom: -7px;
+                            right: 10px;
+                        }
+
+
+                    }
+                }
+            }
+        }
+
+        &.toolbar_dialogue_area {
+            // padding: 20px 10%;
+            // justify-content: center;
+            // flex-wrap: wrap;
+
+            .toolbar_dialogue {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .dialogue_btn_item {
+                margin: 10px;
+                display: flex;
+                justify-content: center;
+                border-radius: 5px;
+                transform: scale(0.95);
+                width: 100%;
+
+                .dialogue_btn {
+                    padding: 10px 0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    p{
+                        margin: 0 0 0 5px;
+                    }
+                }
+
+                &:hover {
+                    transform: scale(1);
+                }
+
+                &.dialogue_btn_try {
+                    background-color: $main_color;
+                    border: 1px solid $main_color;
+
+                    button {
+                        color: $white;
+                    }
+                }
+
+                &.dialogue_btn_change {
+                    background-color: $white;
+                    border: 1px solid $main_color;
+
+                    button {
+                        color: $main_color;
+                    }
+                }
+
+                &.dialogue_btn_done {
+                    background-color: $main_color_green;
+                    border: 1px solid $main_color_green;
+
+                    button {
+                        color: $white;
                     }
                 }
             }
@@ -1429,22 +1430,19 @@ main {
                     .test_area_right_tittle {
                         margin: 15px 20px;
                     }
+                }
+            }
+        }
 
-                    .test_area_content {
-                        .toolbar_area {
+        .toolbar_area {
 
-                            &.toolbar_dialogue_area {
-                                .dialogue_btn_item {
-                                    width: 45%;
+            &.toolbar_dialogue_area {
+                .dialogue_btn_item {
+                    width: 45%;
 
-                                    &.dialogue_btn_done {
-                                        width: 80%;
-                                        margin: 30px auto 0;
-                                    }
-                                }
-                            }
-                        }
-
+                    &.dialogue_btn_done {
+                        width: 80%;
+                        margin: 30px auto 0;
                     }
                 }
             }
@@ -1687,71 +1685,70 @@ main {
                                 }
                             }
                         }
-
-                        .toolbar_area {
-                            // &::before {
-                            //     transform: translate(-2px, 0);
-                            //     width: calc(100% + 4px);
-                            //     border: 2px solid $main_color;
-                            // }
-
-                            .btn_icon_area {
-                                .btn_icon {
-                                    width: 65px;
-                                    height: 65px;
-
-                                    i {
-                                        font-size: 40px;
-                                    }
-                                }
-                            }
-
-                            .toolbar_item {
-
-                                .toolbar_item_btn {
-                                    position: relative;
-
-                                    .btn_icon {
-                                        margin: 0 10px;
-                                        width: 40px;
-                                        height: 40px;
-
-                                        i {
-                                            font-size: 25px;
-                                        }
-                                    }
-                                }
-
-                                ul {
-                                    width: auto;
-
-                                    li {
-                                        margin: 0 15px;
-
-                                        .toolbar_item_btn {
-                                            i {
-                                                font-size: 30px;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            &.toolbar_dialogue_area {
-                                .dialogue_btn_item {
-                                    max-width: 450px;
-
-                                    .dialogue_btn {
-                                        padding: 15px 0;
-                                    }
-                                }
-                            }
-                        }
                     }
                 }
             }
         }
 
+        .toolbar_area {
+            // &::before {
+            //     transform: translate(-2px, 0);
+            //     width: calc(100% + 4px);
+            //     border: 2px solid $main_color;
+            // }
+
+            .btn_icon_area {
+                .btn_icon {
+                    width: 65px;
+                    height: 65px;
+
+                    i {
+                        font-size: 40px;
+                    }
+                }
+            }
+
+            .toolbar_item {
+
+                .toolbar_item_btn {
+                    position: relative;
+
+                    .btn_icon {
+                        margin: 0 10px;
+                        width: 40px;
+                        height: 40px;
+
+                        i {
+                            font-size: 25px;
+                        }
+                    }
+                }
+
+                ul {
+                    width: auto;
+
+                    li {
+                        margin: 0 15px;
+
+                        .toolbar_item_btn {
+                            i {
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.toolbar_dialogue_area {
+                .dialogue_btn_item {
+                    max-width: 450px;
+
+                    .dialogue_btn {
+                        padding: 15px 0;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -1904,12 +1901,6 @@ main {
                             width: calc(65% - 10px);
                             margin: 35px 0 35px calc(35% - 43px);
                         }
-                        .toolbar_area {
-                            &.toolbar_area_bottom{
-                                width: calc(65% - 10px);
-                                margin: 35px 0 35px calc(35% - 43px);
-                            }
-                        }
                     }
                 }
 
@@ -1937,6 +1928,12 @@ main {
             }
         }
 
+        .toolbar_area {
+            &.toolbar_area_bottom{
+                width: calc(65% - 10px);
+                margin: 35px 0 35px calc(35% - 43px);
+            }
+        }
     }
 }
 
@@ -2000,50 +1997,35 @@ main {
                                 width: calc(75% - 10px);
                             }
                         }
-
-                        .toolbar_area {
-                            &.toolbar_dialogue_area {
-                                .dialogue_btn_item {
-                                    width: 45%;
-                                }
-                            }
-                        }
-
                     }
                 }
             }
         }
 
+        .toolbar_area {
+            &.toolbar_dialogue_area {
+                .dialogue_btn_item {
+                    width: 45%;
+                }
+            }
+        }
     }
 }
 
 @media screen and (min-width: 1400px) {
     main {
-        .quiz_page {
+        .toolbar_area {
+            &.toolbar_dialogue_area {
+                .dialogue_btn_item {
+                    width: 25%;
 
-            .test_area {
-
-                .test_area_right {
-                    .test_area_content {
-
-                        .toolbar_area {
-                            &.toolbar_dialogue_area {
-                                .dialogue_btn_item {
-                                    width: 25%;
-
-                                    &.dialogue_btn_done {
-                                        margin: 10px;
-                                        width: 40%;
-                                    }
-                                }
-                            }
-                        }
-
+                    &.dialogue_btn_done {
+                        margin: 10px;
+                        width: 40%;
                     }
                 }
             }
         }
-
     }
 }
 
@@ -2057,12 +2039,6 @@ main {
                         .playRange_area{
                             width: calc(70% - 10px);
                             margin: 35px 0 35px calc(30% - 43px);
-                        }
-                        .toolbar_area {
-                            &.toolbar_area_bottom{
-                                width: calc(70% - 10px);
-                                margin: 35px 0 35px calc(30% - 43px);
-                            }
                         }
                     }
                 }
@@ -2087,5 +2063,11 @@ main {
             }
         }
 
+        .toolbar_area {
+            &.toolbar_area_bottom{
+                width: calc(70% - 10px);
+                margin: 35px 0 35px calc(30% - 43px);
+            }
+        }
     }
 }
