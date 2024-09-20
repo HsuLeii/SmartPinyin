@@ -89,14 +89,10 @@ a {
 ruby {
   letter-spacing: 1.8px;
   word-break: break-word;
-  margin: 10px;
+  margin: 2px 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
-}
-
-rt {
-  transform: translateY(-35%);
 }
 
 input,
@@ -2091,6 +2087,8 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .d
   position: relative;
   width: calc(100% - 55px);
   max-width: none;
+  background-color: #efefef;
+  border: 2px solid #d7d7d7;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_icon {
   width: 30px;
@@ -2099,6 +2097,7 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .d
   justify-content: center;
   align-items: center;
   background-color: #314675;
+  border: 1px solid #314675;
   color: #fff;
   border-radius: 50%;
   position: absolute;
@@ -2108,6 +2107,17 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .d
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_icon:hover {
   transform: translate(0, calc(100% + 10px)) scale(1.05);
+}
+main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box::after {
+  content: "";
+  position: absolute;
+  top: 50%;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_text {
   width: 100%;
@@ -2175,9 +2185,6 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .d
   order: 2;
   left: 100px;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_left .dialog_box {
-  background-color: #E6BBFF;
-}
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_left .dialog_box .dialog_box_icon {
   left: 0px;
 }
@@ -2185,16 +2192,22 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .d
   color: #20221f;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_left .dialog_box::before {
-  content: "";
-  position: absolute;
   border-width: 8px 0px 8px 8px;
   left: 0;
-  top: 50%;
   transform: translate(-100%, -50%);
-  border-right: 8px solid #E6BBFF;
+  border-right: 8px solid #efefef;
   border-bottom: 8px solid transparent;
   border-left: 8px solid transparent;
   border-top: 8px solid transparent;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_left .dialog_box::after {
+  border-width: 10px 0px 10px 10px;
+  left: 0;
+  transform: translate(-100%, -50%);
+  border-right: 10px solid #d7d7d7;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-top: 10px solid transparent;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right {
   justify-content: flex-end;
@@ -2207,33 +2220,29 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .d
   right: 100px;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box {
-  background-color: #314675;
   order: 1;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box .dialog_box_icon {
   order: 3;
-  background-color: #fff;
-  color: #314675;
   right: 0px;
-  border: 1px solid #314675;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box::before {
-  content: "";
-  position: absolute;
   border-width: 8px 8px 8px 0px;
   right: 0;
-  top: 50%;
   transform: translate(100%, -50%);
   border-right: 8px solid transparent;
   border-bottom: 8px solid transparent;
-  border-left: 8px solid #314675;
+  border-left: 8px solid #efefef;
   border-top: 8px solid transparent;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box .dialog_box_text {
-  color: #fff;
-}
-main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box .dialog_box_text label ruby.wrong rt {
-  color: #fff;
+main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box::after {
+  border-width: 10px 10px 10px 0px;
+  right: 0;
+  transform: translate(100%, -50%);
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #d7d7d7;
+  border-top: 10px solid transparent;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box .sound_bar {
   order: 2;
@@ -2869,7 +2878,7 @@ main input[name=playRange0]:before {
   }
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_left .dialog_box::before {
     border-width: 10px 0px 10px 10px;
-    border-right: 10px solid #E6BBFF;
+    border-right: 10px solid #efefef;
     border-bottom: 10px solid transparent;
     border-left: 10px solid transparent;
     border-top: 10px solid transparent;
@@ -2887,7 +2896,7 @@ main input[name=playRange0]:before {
     border-width: 10px 10px 10px 0px;
     border-right: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    border-left: 10px solid #314675;
+    border-left: 10px solid #efefef;
     border-top: 10px solid transparent;
   }
   main .quiz_page .test_area .test_area_right .test_area_content .playRange_area {
@@ -3498,12 +3507,18 @@ main .test_area .test_area_right .test_area_content .score_report_area .form-gro
   justify-content: center;
   color: #fff;
   padding: 8px 5px;
-  width: 25%;
+  width: 20%;
   border-left: 1px dotted;
   transform: translate(-1px, 0px);
 }
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .table thead .score_report_header .score_report_header_text:nth-child(1) {
   border-left: 0;
+}
+main .test_area .test_area_right .test_area_content .score_report_area .form-group .table thead .score_report_header .score_report_header_text:nth-child(3) {
+  width: 34%;
+}
+main .test_area .test_area_right .test_area_content .score_report_area .form-group .table thead .score_report_header .score_report_header_text:nth-child(4) {
+  width: 26%;
 }
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body {
   border-top: 0;
@@ -3525,7 +3540,7 @@ main .test_area .test_area_right .test_area_content .score_report_area .form-gro
   justify-content: center;
   color: #20221f;
   word-break: break-word;
-  width: 25%;
+  width: 20%;
 }
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item .score_report_item_content .score_report_btn {
   padding: 8px 30px;
@@ -3539,6 +3554,12 @@ main .test_area .test_area_right .test_area_content .score_report_area .form-gro
   background-color: #314675;
   color: #fff;
 }
+main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item .score_report_item_content:nth-child(3) {
+  width: 34%;
+}
+main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item .score_report_item_content:nth-child(4) {
+  width: 26%;
+}
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item::before, main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item::after {
   content: "";
   position: absolute;
@@ -3549,12 +3570,12 @@ main .test_area .test_area_right .test_area_content .score_report_area .form-gro
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item::before {
   border-right: 1px dotted #4dbcbc;
   border-left: 1px dotted #4dbcbc;
-  width: 25%;
-  left: calc(25% - 1px);
+  width: 20%;
+  left: calc(20% - 1px);
 }
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item::after {
   border-left: 1px dotted #4dbcbc;
-  left: calc(75% - 1px);
+  left: calc(74% - 1px);
 }
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .pagination {
   position: sticky;
@@ -3717,7 +3738,6 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .page_
 }
 main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area {
   width: 100%;
-  height: 135px;
   background-color: #dcdcd6;
   border-radius: 30px;
   padding: 20px 15px 10px;
@@ -3725,31 +3745,22 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .page_
 main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content {
   background-color: #314675;
   width: 100%;
-  height: 100%;
   border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
 }
 main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p {
   color: #fff;
   display: flex;
-  align-items: flex-end;
-}
-main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .total_score {
-  line-height: 50px;
+  flex-direction: column;
+  padding: 10px;
 }
 main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
-  font-size: 50px;
+  font-size: 20px;
   color: #fff;
   font-weight: bold;
-  line-height: 1;
   margin: 0 5px;
-  -webkit-text-stroke: 1.5px #4dbcbc;
-}
-main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_score {
-  line-height: 1;
 }
 main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table {
   display: block;
@@ -3765,6 +3776,26 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
 main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_exercise {
   width: 100%;
   border: 0px;
+}
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score {
+  width: 100%;
+  border-top: 1px solid;
+}
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score i {
+  font-size: 20px;
+  color: #fff;
+  padding: 5px;
+  background-color: #4dbcbc;
+  border-radius: 50%;
+}
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.good i {
+  background-color: #00b050;
+}
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.general i {
+  background-color: #ffc000;
+}
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.bad i {
+  background-color: #ff0000;
 }
 main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_pronounce {
   border-top: 1px solid;
@@ -3807,10 +3838,10 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
 }
 main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_exercise {
   display: flex;
-  justify-content: center;
   text-align: left;
+  flex-wrap: wrap;
 }
-main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce, main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency {
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_score, main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce, main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3858,11 +3889,6 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   }
   .table thead th {
     border-bottom: 0px;
-  }
-  main .main {
-    width: 100%;
-    margin: 0;
-    max-width: none;
   }
   main .page {
     /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
@@ -3947,6 +3973,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   main .page .page_container .page_body .frame_one .frame_two .page_information {
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     margin: 20px auto;
     flex-direction: row;
     flex-wrap: wrap;
@@ -4026,7 +4053,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 400px;
+    width: 750px;
     margin: 20px auto 40px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .antenna {
@@ -4050,7 +4077,6 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area {
     width: 100%;
-    height: 240px;
     background-color: #dcdcd6;
     border-radius: 30px;
     padding: 20px 15px 10px;
@@ -4058,7 +4084,6 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content {
     background-color: #314675;
     width: 100%;
-    height: 100%;
     border-radius: 30px;
     display: flex;
     justify-content: center;
@@ -4068,21 +4093,14 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p {
     color: #fff;
     display: flex;
-    align-items: flex-end;
-  }
-  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .total_score {
-    line-height: 165px;
+    flex-direction: column;
+    padding: 52px 10px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
-    font-size: 165px;
+    font-size: 70px;
     color: #fff;
     font-weight: bold;
-    line-height: 1;
     margin: 0 10px;
-    -webkit-text-stroke: 8px #4dbcbc;
-  }
-  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_score {
-    line-height: 1;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table {
     display: block;
@@ -4096,8 +4114,29 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     color: #ff0200;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_exercise {
-    width: 60%;
+    width: 40%;
     border: 0px;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score {
+    width: 20%;
+    border-top: 0px;
+    border-left: 1px solid;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score i {
+    font-size: 25px;
+    color: #fff;
+    padding: 5px;
+    background-color: #4dbcbc;
+    border-radius: 50%;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.good i {
+    background-color: #00b050;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.general i {
+    background-color: #ffc000;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.bad i {
+    background-color: #ff0000;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_pronounce {
     border-top: 0px;
@@ -4141,15 +4180,17 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_exercise {
     display: flex;
-    justify-content: flex-start;
     text-align: left;
     text-align: left;
     border-top: 1px solid #314675;
   }
-  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce, main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency {
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_score, main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce, main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_score {
+    border-top: 1px solid #314675;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce {
     border-top: 1px solid #314675;
@@ -4185,20 +4226,22 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     margin: 5px 8px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo {
-    width: 300px;
-  }
-  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area {
-    height: 180px;
+    width: 375px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content {
     padding: 15px;
   }
-  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .total_score {
-    line-height: 100px;
-  }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
-    font-size: 100px;
-    -webkit-text-stroke: 3px #4dbcbc;
+    font-size: 40px;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text {
+    width: 33.33333%;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score {
+    width: 33.33333%;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_pronounce {
+    border-left: 1px solid;
   }
 }
 @media screen and (min-width: 650px) {
@@ -4270,18 +4313,10 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     margin: 12px 5px 0 0;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo {
-    width: 400px;
-  }
-  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area {
-    height: 240px;
-  }
-  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .total_score {
-    line-height: 165px;
+    width: 550px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
-    font-size: 165px;
-    margin: 0 10px;
-    -webkit-text-stroke: 5px #4dbcbc;
+    font-size: 70px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -4289,7 +4324,15 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     width: 20%;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_exercise {
-    width: 60%;
+    width: 40%;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score {
+    width: 20%;
+    border-top: 0px;
+    border-left: 1px solid;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score i {
+    font-size: 25px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_pronounce {
     border-top: 0px;
@@ -4304,7 +4347,9 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     margin: 0;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_exercise {
-    justify-content: flex-start;
+    border-top: 1px solid #314675;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_score {
     border-top: 1px solid #314675;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce {
@@ -4473,7 +4518,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 400px;
+    width: 750px;
     margin: 20px auto 40px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .antenna {
@@ -4497,7 +4542,6 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area {
     width: 100%;
-    height: 240px;
     background-color: #dcdcd6;
     border-radius: 30px;
     padding: 20px 15px 10px;
@@ -4505,7 +4549,6 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content {
     background-color: #314675;
     width: 100%;
-    height: 100%;
     border-radius: 30px;
     display: flex;
     justify-content: center;
@@ -4515,21 +4558,14 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p {
     color: #fff;
     display: flex;
-    align-items: flex-end;
-  }
-  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .total_score {
-    line-height: 165px;
+    flex-direction: column;
+    padding: 52px 10px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
-    font-size: 165px;
+    font-size: 70px;
     color: #fff;
     font-weight: bold;
-    line-height: 1;
     margin: 0 10px;
-    -webkit-text-stroke: 5px #4dbcbc;
-  }
-  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_score {
-    line-height: 1;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table {
     display: block;
@@ -4543,8 +4579,29 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     color: #ff0200;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_exercise {
-    width: 60%;
+    width: 40%;
     border: 0px;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score {
+    width: 20%;
+    border-top: 0px;
+    border-left: 1px solid;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score i {
+    font-size: 25px;
+    color: #fff;
+    padding: 5px;
+    background-color: #4dbcbc;
+    border-radius: 50%;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.good i {
+    background-color: #00b050;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.general i {
+    background-color: #ffc000;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.bad i {
+    background-color: #ff0000;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_pronounce {
     border-top: 0px;
@@ -4588,15 +4645,17 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_exercise {
     display: flex;
-    justify-content: flex-start;
     text-align: left;
     text-align: left;
     border-top: 1px solid #314675;
   }
-  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce, main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency {
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_score, main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce, main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_score {
+    border-top: 1px solid #314675;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce {
     border-top: 1px solid #314675;

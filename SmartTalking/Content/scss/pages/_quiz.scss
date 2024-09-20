@@ -529,6 +529,8 @@ main {
                                 position: relative;
                                 width: calc(100% - 55px);
                                 max-width: none;
+                                background-color: $dialog_box_bg;
+                                border: 2px solid $dialog_box_border;
 
                                 .dialog_box_icon {
                                     width: 30px;
@@ -537,6 +539,7 @@ main {
                                     justify-content: center;
                                     align-items: center;
                                     background-color: $main-color;
+                                    border: 1px solid $main_color;
                                     color: $white;
                                     border-radius: 50%;
                                     position: absolute;
@@ -547,6 +550,19 @@ main {
                                     &:hover {
                                         transform: translate(0, calc(100% + 10px)) scale(1.05);
                                     }
+                                }
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    z-index: 1;
+                                    top: 50%;
+                                }
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 50%;
                                 }
 
                                 .dialog_box_text {
@@ -629,6 +645,8 @@ main {
                                     margin: 0 5px;
                                     color: $main-color;
                                 }
+
+                                
                             }
 
                             &.dialogue_left {
@@ -642,10 +660,11 @@ main {
                                 }
 
                                 .dialog_box {
-                                    background-color: $light_purple;
+                                    // background-color: $light_purple;
 
                                     .dialog_box_icon {
                                         left: 0px;
+                                        
                                     }
 
                                     .dialog_box_text {
@@ -661,16 +680,23 @@ main {
                                     }
 
                                     &::before {
-                                        content: "";
-                                        position: absolute;
                                         border-width: 8px 0px 8px 8px;
                                         left: 0;
-                                        top: 50%;
                                         transform: translate(-100%, -50%);
-                                        border-right: 8px solid $light_purple;
+                                        border-right: 8px solid $dialog_box_bg;
                                         border-bottom: 8px solid transparent;
                                         border-left: 8px solid transparent;
                                         border-top: 8px solid transparent;
+                                    }
+
+                                    &::after {
+                                        border-width: 10px 0px 10px 10px;
+                                        left: 0;
+                                        transform: translate(-100%, -50%);
+                                        border-right: 10px solid $dialog_box_border;
+                                        border-bottom: 10px solid transparent;
+                                        border-left: 10px solid transparent;
+                                        border-top: 10px solid transparent;
                                     }
                                 }
                             }
@@ -688,42 +714,46 @@ main {
                                 }
 
                                 .dialog_box {
-                                    background-color: $main-color;
+                                    // background-color: $main-color;
                                     order: 1;
 
                                     .dialog_box_icon {
                                         order: 3;
-                                        background-color: $white;
-                                        color: $main-color;
                                         right: 0px;
-                                        border: 1px solid $main_color;
                                     }
 
                                     &::before {
-                                        content: "";
-                                        position: absolute;
                                         border-width: 8px 8px 8px 0px;
                                         right: 0;
-                                        top: 50%;
                                         transform: translate(100%, -50%);
                                         border-right: 8px solid transparent;
                                         border-bottom: 8px solid transparent;
-                                        border-left: 8px solid $main-color;
+                                        border-left: 8px solid $dialog_box_bg;
                                         border-top: 8px solid transparent;
                                     }
 
-                                    .dialog_box_text {
-                                        color: $white;
+                                    &::after {
+                                        border-width: 10px 10px 10px 0px;
+                                        right: 0;
+                                        transform: translate(100%, -50%);
+                                        border-right: 10px solid transparent;
+                                        border-bottom: 10px solid transparent;
+                                        border-left: 10px solid $dialog_box_border;
+                                        border-top: 10px solid transparent;
+                                    }
 
-                                        label {
-                                            ruby {
-                                                &.wrong {
-                                                    rt {
-                                                        color: $white;
-                                                    }
-                                                }
-                                            }
-                                        }
+                                    .dialog_box_text {
+                                        // color: $white;
+
+                                        // label {
+                                        //     ruby {
+                                        //         &.wrong {
+                                        //             rt {
+                                        //                 color: $white;
+                                        //             }
+                                        //         }
+                                        //     }
+                                        // }
                                     }
 
                                     .sound_bar {
@@ -1632,7 +1662,7 @@ main {
 
                                         &::before {
                                             border-width: 10px 0px 10px 10px;
-                                            border-right: 10px solid $light_purple;
+                                            border-right: 10px solid $dialog_box_bg;
                                             border-bottom: 10px solid transparent;
                                             border-left: 10px solid transparent;
                                             border-top: 10px solid transparent;
@@ -1659,7 +1689,7 @@ main {
                                             border-width: 10px 10px 10px 0px;
                                             border-right: 10px solid transparent;
                                             border-bottom: 10px solid transparent;
-                                            border-left: 10px solid $main-color;
+                                            border-left: 10px solid $dialog_box_bg;
                                             border-top: 10px solid transparent;
                                         }
                                     }

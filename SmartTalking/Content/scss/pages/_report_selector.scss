@@ -39,12 +39,20 @@ main {
                                         justify-content: center;
                                         color: $white;
                                         padding: 8px 5px;
-                                        width: 25%;
+                                        width: 20%;
                                         border-left: 1px dotted;
                                         transform: translate(-1px, 0px);
 
                                         &:nth-child(1) {
                                             border-left: 0;
+                                        }
+
+                                        &:nth-child(3) {
+                                            width: 34%;
+                                        }
+
+                                        &:nth-child(4){
+                                            width: 26%;
                                         }
                                     }
                                 }
@@ -72,7 +80,7 @@ main {
                                                 justify-content: center;
                                                 color: $main_color_grey;
                                                 word-break: break-word;
-                                                width: 25%;
+                                                width: 20%;
 
                                                 .score_report_btn{
                                                     padding: 8px 30px;
@@ -86,6 +94,14 @@ main {
                                                         background-color: $main_color;
                                                         color: $white;
                                                     }
+                                                }
+
+                                                &:nth-child(3){
+                                                    width: 34%;
+                                                }
+
+                                                &:nth-child(4){
+                                                    width: 26%;
                                                 }
 
                                         }
@@ -102,13 +118,13 @@ main {
                                         &::before{
                                             border-right: 1px dotted $bright_main_color;
                                             border-left: 1px dotted $bright_main_color;
-                                            width: 25%;
-                                            left: calc(25% - 1px);
+                                            width: 20%;
+                                            left: calc(20% - 1px);
                                         }
 
                                         &::after{
                                             border-left: 1px dotted $bright_main_color;
-                                            left: calc(75% - 1px);
+                                            left: calc(74% - 1px);
                                         }
                                     }
                                 }
