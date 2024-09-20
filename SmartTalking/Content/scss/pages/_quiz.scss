@@ -1667,6 +1667,14 @@ main {
                                             border-left: 10px solid transparent;
                                             border-top: 10px solid transparent;
                                         }
+
+                                        &::after {
+                                            border-width: 12px 0px 12px 12px;
+                                            border-right: 12px solid $dialog_box_border;
+                                            border-bottom: 12px solid transparent;
+                                            border-left: 12px solid transparent;
+                                            border-top: 12px solid transparent;
+                                        }
                                     }
                                 }
 
@@ -1691,6 +1699,14 @@ main {
                                             border-bottom: 10px solid transparent;
                                             border-left: 10px solid $dialog_box_bg;
                                             border-top: 10px solid transparent;
+                                        }
+
+                                        &::after {
+                                            border-width: 12px 12px 12px 0px;
+                                            border-right: 12px solid transparent;
+                                            border-bottom: 12px solid transparent;
+                                            border-left: 12px solid $dialog_box_border;
+                                            border-top: 12px solid transparent;
                                         }
                                     }
                                 }

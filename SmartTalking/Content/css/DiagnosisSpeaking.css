@@ -2883,6 +2883,13 @@ main input[name=playRange0]:before {
     border-left: 10px solid transparent;
     border-top: 10px solid transparent;
   }
+  main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_left .dialog_box::after {
+    border-width: 12px 0px 12px 12px;
+    border-right: 12px solid #d7d7d7;
+    border-bottom: 12px solid transparent;
+    border-left: 12px solid transparent;
+    border-top: 12px solid transparent;
+  }
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialogue_avatar {
     margin: 0 0 0 25px;
   }
@@ -2898,6 +2905,13 @@ main input[name=playRange0]:before {
     border-bottom: 10px solid transparent;
     border-left: 10px solid #efefef;
     border-top: 10px solid transparent;
+  }
+  main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box::after {
+    border-width: 12px 12px 12px 0px;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 12px solid #d7d7d7;
+    border-top: 12px solid transparent;
   }
   main .quiz_page .test_area .test_area_right .test_area_content .playRange_area {
     align-items: center;
