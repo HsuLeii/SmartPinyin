@@ -140,12 +140,12 @@ body {
 }
 
 ::-moz-selection {
-  background: #1a263f;
+  background: #1d3c57;
   color: #fff;
 }
 
 ::selection {
-  background: #1a263f;
+  background: #1d3c57;
   color: #fff;
 }
 
@@ -169,7 +169,7 @@ body {
 }
 [aria-label]:hover:before {
   content: attr(aria-label);
-  background-color: #314675;
+  background-color: #306390;
   border-radius: 4px;
   white-space: nowrap;
   color: #fff;
@@ -232,7 +232,7 @@ body {
 .modal .modal-dialog .modal-content {
   border: 1px solid #20221f;
   background-color: #e5e5e5;
-  box-shadow: 0px 5px 30px rgba(49, 70, 117, 0.3);
+  box-shadow: 0px 5px 30px rgba(48, 99, 144, 0.3);
 }
 .modal .modal-dialog .modal-content .modal-body {
   padding: 20px 30px 40px;
@@ -363,8 +363,8 @@ main .input_area .input-group-text.icon_eye {
 main .input_area .input-group-text.icon_eye:focus ~ .form-control {
   border-color: transparent;
   box-shadow: none;
-  color: #314675;
-  outline: solid 0.125em rgba(49, 70, 117, 0.6);
+  color: #306390;
+  outline: solid 0.125em rgba(48, 99, 144, 0.6);
 }
 main .input_area .input-group-label {
   padding: 10px 15px;
@@ -450,18 +450,18 @@ main .input_area .form-control .icon_down {
 main .input_area .form-control:focus {
   border-color: transparent;
   box-shadow: none;
-  color: #314675;
-  outline: solid 0.125em rgba(49, 70, 117, 0.6);
+  color: #306390;
+  outline: solid 0.125em rgba(48, 99, 144, 0.6);
 }
 main .input_area .form-control:focus ~ .icon_item i {
-  color: #314675;
+  color: #306390;
 }
 main .input_area .form-control:focus p {
-  color: #314675 !important;
+  color: #306390 !important;
 }
 main .input_area .form-control.show .icon_down {
   transform: translate(0, -50%) rotate(180deg);
-  color: #314675;
+  color: #306390;
 }
 main .input_area .form-control::-moz-placeholder {
   color: #ddd;
@@ -515,13 +515,13 @@ main .input_area .form-control.form-control-birthday .birthday_input::-webkit-ca
   cursor: pointer;
 }
 main .input_area .form-control.form-control-birthday .birthday_input:focus ~ i {
-  color: #314675;
+  color: #306390;
 }
 main .input_area .form-control.form-control-birthday .birthday_input:focus ~ .icon_item i {
-  color: #314675;
+  color: #306390;
 }
 main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-text, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-day-field, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-month-field, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-year-field {
-  background-color: #314675;
+  background-color: #306390;
   color: #fff;
   border: 0px;
 }
@@ -585,12 +585,12 @@ main .input_area.input-group-submit .input-group-submit-btn {
   padding: 8px 30px;
   margin: 0px auto;
   border-radius: 50px;
-  border: 1px solid #314675;
-  color: #314675;
+  border: 1px solid #306390;
+  color: #306390;
   background-color: #fff;
 }
 main .input_area.input-group-submit .input-group-submit-btn:hover {
-  background-color: #314675;
+  background-color: #306390;
   color: #fff;
 }
 main .input_area .password_input {
@@ -612,11 +612,11 @@ main .input_area .dropdown-menu li a {
   padding: 10px 15px;
 }
 main .input_area .dropdown-menu li a:hover {
-  background-color: #314675;
+  background-color: #306390;
   color: #fff;
 }
 main .input_area .dropdown-menu li a.check {
-  background-color: #314675;
+  background-color: #306390;
   color: #fff;
 }
 main .button {
@@ -640,11 +640,11 @@ main .button.solid_color:hover {
   background-color: #41aeae;
 }
 main .button.line_color {
-  color: #314675;
+  color: #306390;
 }
 main .button.line_color:hover {
   color: #fff;
-  background-color: #314675;
+  background-color: #306390;
 }
 main .button.button_register {
   margin: 0px auto;
@@ -683,7 +683,7 @@ main .select_page_link {
   margin: 40px auto;
   padding: 20px 40px;
   text-align: center;
-  color: #314675;
+  color: #306390;
   transform: scale(0.9);
   width: 100%;
   max-width: 500px;
@@ -715,7 +715,7 @@ main .select_page_link::before {
   height: 100%;
   transform-origin: top center;
   scale: 1 0;
-  background-color: #314675;
+  background-color: #306390;
   content: "";
   transition-duration: 0.5s;
   transition-property: scale;
@@ -756,7 +756,7 @@ main .select_page_link:hover .select_page_btn .select_page_btn_icon, main .selec
   transition: 0.3s;
 }
 main .select_page_link:focus {
-  border: 2px solid #314675;
+  border: 2px solid #306390;
 }
 main .select_page_link.disabled {
   background-color: #ADADAD;
@@ -811,7 +811,7 @@ main .pagination .page-numbers.dots:hover {
   color: #20221f;
 }
 main .pagination .page-numbers:hover {
-  color: #314675;
+  color: #306390;
 }
 main .pagination .page-numbers-area {
   display: flex;
@@ -848,7 +848,7 @@ main .test_area_answer_btn:hover .icon_btn.next_btn {
   background-color: #268a8d;
 }
 main .test_area_answer_btn:focus .icon_btn {
-  border: 2px solid #314675;
+  border: 2px solid #306390;
 }
 main .test_area_answer_btn:focus .icon_btn.disable {
   border: 0;
@@ -1074,7 +1074,7 @@ header .navbar .container-fluid .header_right .navbar-toggler {
   box-shadow: none;
   width: 50px;
   height: 50px;
-  background-color: #314675;
+  background-color: #306390;
 }
 header .navbar .container-fluid .header_right .navbar-toggler span {
   position: absolute;
@@ -1118,7 +1118,7 @@ header .navbar .container-fluid .header_right .navbar-toggler .icon-bar {
   width: 22px;
   height: 2px;
   border-radius: 1px;
-  background-color: #314675;
+  background-color: #306390;
 }
 header .navbar .container-fluid .header_right .navbar-toggler .icon-bar + .icon-bar {
   margin-top: 4px;
@@ -1136,13 +1136,13 @@ header .navbar .container-fluid .header_right .navbar-collapse {
   background-color: #fff;
   padding: 0 30px;
   box-shadow: 0 2px 6px rgba(85, 43, 141, 0.2509803922);
-  border: 1.5px solid #314675;
+  border: 1.5px solid #306390;
 }
 header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-item .nav-link {
   position: relative;
   padding: 7px 0;
   margin: 15px 0;
-  color: #314675;
+  color: #306390;
   font-weight: bold;
   background: linear-gradient(currentcolor, currentcolor) 100% 100%/0 1px no-repeat;
   transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
@@ -1300,11 +1300,11 @@ header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-
   }
 }
 footer .footer_content {
-  background-color: #314675;
+  background-color: #306390;
 }
 footer .footer_content .footer_information {
   padding: 20px;
-  background-color: #314675;
+  background-color: #306390;
 }
 footer .footer_content .footer_information .information .information_map,
 footer .footer_content .footer_information .information .information_mail {
@@ -1372,7 +1372,7 @@ footer .footer_content .footer_copyright {
   margin: 40px auto 0px;
   padding: 40px 20px;
   border-top: 1px solid #fff;
-  background-color: #314675;
+  background-color: #306390;
 }
 footer .footer_content .footer_copyright p {
   font-size: 12px;
@@ -1457,7 +1457,7 @@ main .select_page_area .slogan_area {
 }
 main .select_page_area .slogan_area .slogan_area_tittle {
   position: relative;
-  color: #314675;
+  color: #306390;
   margin: 20px auto 0;
   text-align: center;
   background-color: #fff;
@@ -1519,7 +1519,7 @@ main .select_page_area .slogan_area .slogan_area_tittle .slogan_icon.slogan_icon
   top: 0;
 }
 main .select_page_area .slogan_area .slogan_area_tittle .slogan_icon.slogan_icon_right i {
-  color: #314675;
+  color: #306390;
 }
 main .select_page_area .slogan_area .slogan_area_tittle .slogan_icon.slogan_icon_left {
   left: 10px;
@@ -1543,7 +1543,7 @@ main .select_page_area .select_page_btn_area .select_page_item .select_page_item
 }
 main .select_page_area .select_page_btn_area .select_page_item .select_page_item_introduce .introduce_tittle {
   margin: 20px auto 10px;
-  color: #314675;
+  color: #306390;
   font-weight: bold;
   width: 90%;
 }
@@ -1608,8 +1608,8 @@ main .robot_hint .robot_hint_text .robot_hint_link {
   margin: 5px auto;
 }
 main .robot_hint .robot_hint_text .robot_hint_link:hover {
-  background-color: #314675;
-  border: 1px solid #314675;
+  background-color: #306390;
+  border: 1px solid #306390;
 }
 main .decorate_line {
   position: fixed;
@@ -1654,7 +1654,7 @@ main .decorate_line.decorate_left {
   }
   main .select_page_area .select_page_btn_area .select_page_item .select_page_item_introduce .introduce_tittle {
     margin: 20px auto 10px;
-    color: #314675;
+    color: #306390;
     font-weight: bold;
     width: 90%;
   }
@@ -1730,7 +1730,7 @@ main .quiz_page .course_area {
   padding: 20px 0;
 }
 main .quiz_page .course_area .course_name span {
-  color: #314675;
+  color: #306390;
   font-size: 25px;
   font-weight: bold;
 }
@@ -1738,7 +1738,7 @@ main .quiz_page .course_area .course_img {
   width: 150px;
   margin: 20px 0;
   border-radius: 10px;
-  border: 1px solid #314675;
+  border: 1px solid #306390;
 }
 main .quiz_page .course_area .course_img img {
   border-radius: 10px;
@@ -1827,7 +1827,7 @@ main .quiz_page .test_area .test_area_right .test_area_right_tittle {
 main .quiz_page .test_area .test_area_right .test_area_right_tittle p {
   font-size: 20px;
   font-weight: bold;
-  color: #314675;
+  color: #306390;
 }
 main .quiz_page .test_area .test_area_right .test_area_right_nav {
   width: 90%;
@@ -1840,25 +1840,25 @@ main .quiz_page .test_area .test_area_right .test_area_right_nav ul {
 main .quiz_page .test_area .test_area_right .test_area_right_nav ul .test_area_right_nav_item {
   position: relative;
   margin: 5px;
-  border: 1px solid #314675;
+  border: 1px solid #306390;
   border-radius: 5px;
   background-color: transparent;
 }
 main .quiz_page .test_area .test_area_right .test_area_right_nav ul .test_area_right_nav_item a {
   display: block;
   padding: 10px 10px;
-  color: #314675;
+  color: #306390;
   background: linear-gradient(currentcolor, currentcolor) 100% 100%/0 1px no-repeat;
   transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
 }
 main .quiz_page .test_area .test_area_right .test_area_right_nav ul .test_area_right_nav_item:hover {
-  background-color: #314675;
+  background-color: #306390;
 }
 main .quiz_page .test_area .test_area_right .test_area_right_nav ul .test_area_right_nav_item:hover a {
   color: #fff;
 }
 main .quiz_page .test_area .test_area_right .test_area_right_nav ul .test_area_right_nav_item.active {
-  background-color: #314675;
+  background-color: #306390;
 }
 main .quiz_page .test_area .test_area_right .test_area_right_nav ul .test_area_right_nav_item.active a {
   color: #fff;
@@ -1872,7 +1872,7 @@ main .quiz_page .test_area .test_area_right .test_area_right_nav ul .test_area_r
 }
 main .quiz_page .test_area .test_area_right .test_area_content {
   border-radius: 5px;
-  border: 1px solid #314675;
+  border: 1px solid #306390;
   background-color: #e1ebee;
   margin: 0 auto;
 }
@@ -1885,7 +1885,7 @@ main .quiz_page .test_area .test_area_right .test_area_content .course_area {
   margin: 0 auto;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .course_area .course_name span {
-  color: #314675;
+  color: #306390;
   font-size: 25px;
   font-weight: bold;
 }
@@ -1893,7 +1893,7 @@ main .quiz_page .test_area .test_area_right .test_area_content .course_area .cou
   width: 150px;
   margin: 20px 0;
   border-radius: 10px;
-  border: 1px solid #314675;
+  border: 1px solid #306390;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .course_area .course_img img {
   border-radius: 10px;
@@ -1955,7 +1955,7 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_choose_
   border-top: 10px solid transparent;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_choose_caption .dialogue_choose_text p {
-  color: #314675;
+  color: #306390;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_choose_caption .dialogue_choose_text::before {
   content: "";
@@ -2039,7 +2039,7 @@ main .quiz_page .test_area .test_area_right .test_area_content .listen_area {
   width: 90%;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #314675;
+  border: 1px solid #306390;
   border-radius: 5px;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area {
@@ -2096,8 +2096,8 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .d
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #314675;
-  border: 1px solid #314675;
+  background-color: #306390;
+  border: 1px solid #306390;
   color: #fff;
   border-radius: 50%;
   position: absolute;
@@ -2152,7 +2152,7 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .d
   animation: sound 0ms -800ms linear infinite alternate;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar .bar {
-  background-color: #314675;
+  background-color: #306390;
   height: 0px;
   width: 3px;
   margin: 0px 2px;
@@ -2176,7 +2176,7 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .d
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_time {
   margin: 0 5px;
-  color: #314675;
+  color: #306390;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_left .dialogue_avatar {
   margin: 0 15px 0 0;
@@ -2247,12 +2247,8 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .d
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box .sound_bar {
   order: 2;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box .sound_bar .bar {
-  background-color: #fff;
-}
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box .dialog_box_time {
   order: 1;
-  color: #fff;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block.dialogue_ai .dialog_box {
   width: auto;
@@ -2289,7 +2285,7 @@ main .quiz_page .test_area .test_area_right .test_area_content .drag_line {
   margin: 0 auto;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .drag_line .line {
-  background: #314675;
+  background: #306390;
   border-radius: 8px;
   margin-top: 0px;
   margin-left: 0px;
@@ -2374,7 +2370,7 @@ main .toolbar_area .btn_icon_area .btn_icon {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: #314675;
+  background-color: #306390;
   transform: scale(0.95);
 }
 main .toolbar_area .btn_icon_area .btn_icon i {
@@ -2391,7 +2387,7 @@ main .toolbar_area .btn_icon_area.recording_area {
 }
 main .toolbar_area .btn_icon_area .recording_time {
   display: none;
-  color: #314675;
+  color: #306390;
   margin: 0px auto 10px;
 }
 main .toolbar_area .toolbar_item {
@@ -2407,13 +2403,13 @@ main .toolbar_area .toolbar_item .toolbar_item_btn {
 main .toolbar_area .toolbar_item .toolbar_item_btn .btn_icon {
   margin: 0 5px;
   border-radius: 50%;
-  border: 1px solid #314675;
+  border: 1px solid #306390;
   width: 30px;
   height: 30px;
 }
 main .toolbar_area .toolbar_item .toolbar_item_btn .btn_icon i {
   font-size: 15px;
-  color: #314675;
+  color: #306390;
 }
 main .toolbar_area .toolbar_item .toolbar_item_btn .btn_icon:hover {
   transform: scale(1.05);
@@ -2426,9 +2422,9 @@ main .toolbar_area .toolbar_item .toolbar_item_btn .speak_menu_container {
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 1;
-  color: #314675;
+  color: #306390;
   background-color: #fff;
-  border: 2px solid #314675;
+  border: 2px solid #306390;
   border-radius: 4px;
   min-width: 100px;
   text-align: center;
@@ -2462,7 +2458,7 @@ main .toolbar_area .toolbar_item .toolbar_item_btn .speak_menu_container::before
   position: absolute;
   border: solid transparent;
   border-width: 9px 9px 0 9px;
-  border-top-color: #314675;
+  border-top-color: #306390;
   bottom: -10px;
   left: 50%;
   transform: translate(-50%, 0px);
@@ -2494,7 +2490,7 @@ main .toolbar_area .toolbar_item ul li .toolbar_item_btn:disabled:before {
 }
 main .toolbar_area .toolbar_item ul li .toolbar_item_btn i {
   font-size: 25px;
-  color: #314675;
+  color: #306390;
 }
 main .toolbar_area .toolbar_item ul li .toolbar_item_btn:hover {
   transform: scale(1);
@@ -2518,10 +2514,10 @@ main .toolbar_area .toolbar_item ul li .toolbar_item_container {
   display: none;
   position: absolute;
   z-index: 1;
-  color: #314675;
+  color: #306390;
   background-color: #fff;
   border: 2px solid;
-  border-color: #314675;
+  border-color: #306390;
   border-radius: 4px;
   min-width: 100px;
   text-align: center;
@@ -2568,7 +2564,7 @@ main .toolbar_area .toolbar_item ul li .toolbar_item_container .label_text input
   visibility: hidden;
 }
 main .toolbar_area .toolbar_item ul li .toolbar_item_container .label_text input[type=checkbox]:checked ~ label {
-  background: #314675 !important;
+  background: #306390 !important;
 }
 main .toolbar_area .toolbar_item ul li .toolbar_item_container .label_text input[type=checkbox]:checked ~ label::after {
   left: calc(100% - 5px) !important;
@@ -2580,7 +2576,7 @@ main .toolbar_area .toolbar_item ul li .toolbar_item_container .label_text label
   width: 40px;
   height: 25px;
   background-color: #ddd;
-  border: 1px solid #314675;
+  border: 1px solid #306390;
   display: block;
   border-radius: 100px;
   position: relative;
@@ -2601,7 +2597,7 @@ main .toolbar_area .toolbar_item ul li .toolbar_item_container::before {
   content: "";
   border: solid transparent;
   border-width: 9px 9px 0 9px;
-  border-top-color: #314675;
+  border-top-color: #306390;
   position: absolute;
   bottom: -10px;
   right: 8px;
@@ -2643,18 +2639,18 @@ main .toolbar_area.toolbar_dialogue_area .dialogue_btn_item:hover {
   transform: scale(1);
 }
 main .toolbar_area.toolbar_dialogue_area .dialogue_btn_item.dialogue_btn_try {
-  background-color: #314675;
-  border: 1px solid #314675;
+  background-color: #306390;
+  border: 1px solid #306390;
 }
 main .toolbar_area.toolbar_dialogue_area .dialogue_btn_item.dialogue_btn_try button {
   color: #fff;
 }
 main .toolbar_area.toolbar_dialogue_area .dialogue_btn_item.dialogue_btn_change {
   background-color: #fff;
-  border: 1px solid #314675;
+  border: 1px solid #306390;
 }
 main .toolbar_area.toolbar_dialogue_area .dialogue_btn_item.dialogue_btn_change button {
-  color: #314675;
+  color: #306390;
 }
 main .toolbar_area.toolbar_dialogue_area .dialogue_btn_item.dialogue_btn_done {
   background-color: #38ac61;
@@ -2674,7 +2670,7 @@ main input[type=range] {
   /* input range 進度條樣式 */
 }
 main input[type=range]:focus::-webkit-slider-thumb {
-  background-color: #223051;
+  background-color: #23496a;
 }
 main input[type=range]::-webkit-slider-thumb {
   width: 15px;
@@ -2682,7 +2678,7 @@ main input[type=range]::-webkit-slider-thumb {
   border-radius: 100%;
   border: none;
   -webkit-appearance: none;
-  background-color: #314675;
+  background-color: #306390;
   z-index: 1;
   position: relative;
   -webkit-transition: 0.5s all ease;
@@ -2700,7 +2696,7 @@ main input[name=playRange]:before {
   content: "";
   width: var(--playRange);
   height: 100%;
-  background-color: #314675;
+  background-color: #306390;
   border-radius: 10px;
 }
 main input[name=playRange0]:before {
@@ -2708,7 +2704,7 @@ main input[name=playRange0]:before {
   content: "";
   width: 100%;
   height: 100%;
-  background-color: #314675;
+  background-color: #306390;
   border-radius: 10px;
 }
 
@@ -2764,7 +2760,7 @@ main input[name=playRange0]:before {
   main .quiz_page .course_area .course_img {
     width: 180px;
     margin: 0;
-    border: 2px solid #314675;
+    border: 2px solid #306390;
   }
   main .quiz_page .test_area {
     justify-content: space-between;
@@ -2776,12 +2772,12 @@ main input[name=playRange0]:before {
     font-size: 25px;
   }
   main .quiz_page .test_area .test_area_right .test_area_right_nav .test_area_right_nav_item {
-    border: 2px solid #314675;
+    border: 2px solid #306390;
     border-bottom: 0px;
     transform: translate(-2px, 0);
   }
   main .quiz_page .test_area .test_area_right .test_area_content {
-    border: 2px solid #314675;
+    border: 2px solid #306390;
   }
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_choose_caption {
     margin: 0 auto;
@@ -3137,7 +3133,7 @@ main .quiz_page .test_area.book_select .student_data_area {
   border-radius: 10px;
 }
 main .quiz_page .test_area.book_select .student_data_area .avatar_img {
-  background-color: #314675;
+  background-color: #306390;
   width: 102px;
   height: 102px;
   border-radius: 50%;
@@ -3156,7 +3152,7 @@ main .quiz_page .test_area.book_select .student_data_area .student_data {
   margin: 10px;
 }
 main .quiz_page .test_area.book_select .student_data_area .student_data .student_data_tittle {
-  color: #314675;
+  color: #306390;
   margin: 0 10px;
 }
 main .quiz_page .test_area.book_select .student_data_area .student_data .student_data_content {
@@ -3200,7 +3196,7 @@ main .quiz_page .test_area .test_area_right .test_area_content .book_select_area
   flex-direction: column;
   padding: 15px 15px;
   border-radius: 10px;
-  color: #314675;
+  color: #306390;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .book_select_area .book_select_item:hover {
   border: 2px solid #4dbcbc;
@@ -3218,7 +3214,7 @@ main .quiz_page .test_area .test_area_right .test_area_content .book_select_area
   color: #20221f;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .book_select_area .book_select_item .book_text_title {
-  color: #314675;
+  color: #306390;
   margin: 10px 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -3270,7 +3266,7 @@ main .main_footer .footer_logo .footer_svg_area {
   width: 100%;
 }
 main .main_footer .footer_logo .footer_svg_area .footer_svg {
-  fill: #314675;
+  fill: #306390;
 }
 
 @media screen and (min-width: 500px) {
@@ -3380,7 +3376,7 @@ main .login_area .login_form .login_img {
   max-width: 300px;
 }
 main .login_area .login_form .login_title {
-  color: #314675;
+  color: #306390;
   margin: 30px auto 0;
 }
 main .login_area .login_form .save_password {
@@ -3410,14 +3406,14 @@ main .login_area .login_form .save_password .save_password_checkbox + label:befo
   border: 1px solid #20221f;
 }
 main .login_area .login_form .save_password .save_password_checkbox:hover + label {
-  color: #314675;
+  color: #306390;
 }
 main .login_area .login_form .save_password .save_password_checkbox:hover + label:before {
-  border: 1px solid #314675;
+  border: 1px solid #306390;
 }
 main .login_area .login_form .save_password .save_password_checkbox:checked + label:before {
-  border: 1px solid #314675;
-  background-color: #314675;
+  border: 1px solid #306390;
+  background-color: #306390;
 }
 main .login_area .login_form .save_password .save_password_checkbox:checked + label:after {
   font-family: "FontAwesome", sans-serif;
@@ -3438,12 +3434,12 @@ main .login_area .login_form .register_btn {
   color: #20221f;
 }
 main .login_area .login_form .register_btn a {
-  color: #314675;
+  color: #306390;
   border-bottom: 0px solid transparent;
 }
 main .login_area .login_form .register_btn a:hover {
-  color: #314675;
-  border-bottom: 1px solid #314675;
+  color: #306390;
+  border-bottom: 1px solid #306390;
 }
 
 @media screen and (min-width: 576px) {
@@ -3560,12 +3556,12 @@ main .test_area .test_area_right .test_area_content .score_report_area .form-gro
   padding: 8px 30px;
   margin: 0px auto;
   border-radius: 50px;
-  border: 1px solid #314675;
-  color: #314675;
+  border: 1px solid #306390;
+  color: #306390;
   background-color: #fff;
 }
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item .score_report_item_content .score_report_btn:hover {
-  background-color: #314675;
+  background-color: #306390;
   color: #fff;
 }
 main .test_area .test_area_right .test_area_content .score_report_area .form-group .table tbody.score_report_body .score_report_item .score_report_item_content:nth-child(3) {
@@ -3656,7 +3652,7 @@ main .page .page_container .page_header .frame_two {
 }
 main .page .page_container .page_header .frame_one {
   background-color: #4dbcbc;
-  border: 5px solid #314675;
+  border: 5px solid #306390;
   border-bottom: 0px;
   padding: 5px 5px 0;
 }
@@ -3678,7 +3674,7 @@ main .page .page_container .page_body {
 }
 main .page .page_container .page_body .frame_one {
   background-color: #4dbcbc;
-  border: 5px solid #314675;
+  border: 5px solid #306390;
   border-top: 0px;
   padding: 0 5px 5px;
 }
@@ -3702,7 +3698,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_information .i
 main .page .page_container .page_body .frame_one .frame_two .page_information .information_time div {
   display: flex;
   align-items: flex-start;
-  color: #314675;
+  color: #306390;
   font-weight: bold;
 }
 main .page .page_container .page_body .frame_one .frame_two .page_information .information_name div .circle,
@@ -3711,7 +3707,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_information .i
   display: block;
   width: 10px;
   height: 10px;
-  border: 2px solid #314675;
+  border: 2px solid #306390;
   background-color: #4dbcbc;
   border-radius: 50%;
   margin: 8.6px 5px 0 0;
@@ -3757,7 +3753,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .page_
   padding: 20px 15px 10px;
 }
 main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content {
-  background-color: #314675;
+  background-color: #306390;
   width: 100%;
   border-radius: 30px;
   display: flex;
@@ -3826,7 +3822,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  background-color: #314675;
+  background-color: #306390;
   border-bottom: 0;
   flex-wrap: wrap;
 }
@@ -3834,7 +3830,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   color: #fff;
 }
 main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody {
-  border: 1px solid #314675;
+  border: 1px solid #306390;
   width: 100%;
   display: block;
   background-color: #fff;
@@ -3845,7 +3841,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   justify-content: flex-end;
   border-bottom: 0;
   flex-wrap: wrap;
-  color: #314675;
+  color: #306390;
   border-bottom: 3px solid;
   border-top: 3px solid;
   margin: 20px 0;
@@ -3861,10 +3857,10 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   justify-content: center;
 }
 main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce {
-  border-color: #314675;
+  border-color: #306390;
 }
 main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency {
-  border-color: #314675;
+  border-color: #306390;
 }
 
 @page {
@@ -3957,7 +3953,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   }
   main .page .page_container .page_header .frame_one {
     background-color: #4dbcbc;
-    border: 5px solid #314675;
+    border: 5px solid #306390;
     border-bottom: 0px;
     padding: 5px 5px 0;
   }
@@ -3976,7 +3972,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   }
   main .page .page_container .page_body .frame_one {
     background-color: #4dbcbc;
-    border: 5px solid #314675;
+    border: 5px solid #306390;
     border-top: 0px;
     padding: 0 5px 5px;
   }
@@ -4041,7 +4037,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   main .page .page_container .page_body .frame_one .frame_two .page_information .information_time div {
     display: flex;
     align-items: flex-start;
-    color: #314675;
+    color: #306390;
     font-weight: bold;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_information .information_name div .circle,
@@ -4050,7 +4046,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     display: block;
     width: 10px;
     height: 10px;
-    border: 2px solid #314675;
+    border: 2px solid #306390;
     background-color: #4dbcbc;
     border-radius: 50%;
     margin: 12px 5px 0 0;
@@ -4096,7 +4092,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     padding: 20px 15px 10px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content {
-    background-color: #314675;
+    background-color: #306390;
     width: 100%;
     border-radius: 30px;
     display: flex;
@@ -4168,7 +4164,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    background-color: #314675;
+    background-color: #306390;
     border-bottom: 0;
     flex-wrap: wrap;
   }
@@ -4176,7 +4172,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     color: #fff;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody {
-    border: 1px solid #314675;
+    border: 1px solid #306390;
     width: 100%;
     display: block;
     background-color: #fff;
@@ -4187,7 +4183,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     justify-content: flex-end;
     border-bottom: 0;
     flex-wrap: wrap;
-    color: #314675;
+    color: #306390;
     border-bottom: 0px;
     border-top: 0px;
     margin: 0;
@@ -4196,7 +4192,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     display: flex;
     text-align: left;
     text-align: left;
-    border-top: 1px solid #314675;
+    border-top: 1px solid #306390;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_score, main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce, main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency {
     display: flex;
@@ -4204,13 +4200,13 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     justify-content: center;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_score {
-    border-top: 1px solid #314675;
+    border-top: 1px solid #306390;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce {
-    border-top: 1px solid #314675;
+    border-top: 1px solid #306390;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency {
-    border-top: 1px solid #314675;
+    border-top: 1px solid #306390;
   }
 }
 @media screen and (min-width: 576px) {
@@ -4361,16 +4357,16 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     margin: 0;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_exercise {
-    border-top: 1px solid #314675;
+    border-top: 1px solid #306390;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_score {
-    border-top: 1px solid #314675;
+    border-top: 1px solid #306390;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce {
-    border-top: 1px solid #314675;
+    border-top: 1px solid #306390;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency {
-    border-top: 1px solid #314675;
+    border-top: 1px solid #306390;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -4422,7 +4418,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   }
   main .page .page_container .page_header .frame_one {
     background-color: #4dbcbc;
-    border: 5px solid #314675;
+    border: 5px solid #306390;
     border-bottom: 0px;
     padding: 5px 5px 0;
   }
@@ -4441,7 +4437,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   }
   main .page .page_container .page_body .frame_one {
     background-color: #4dbcbc;
-    border: 5px solid #314675;
+    border: 5px solid #306390;
     border-top: 0px;
     padding: 0 5px 5px;
   }
@@ -4506,7 +4502,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   main .page .page_container .page_body .frame_one .frame_two .page_information .information_time div {
     display: flex;
     align-items: flex-start;
-    color: #314675;
+    color: #306390;
     font-weight: bold;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_information .information_name div .circle,
@@ -4515,7 +4511,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     display: block;
     width: 10px;
     height: 10px;
-    border: 2px solid #314675;
+    border: 2px solid #306390;
     background-color: #4dbcbc;
     border-radius: 50%;
     margin: 12px 5px 0 0;
@@ -4561,7 +4557,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     padding: 20px 15px 10px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content {
-    background-color: #314675;
+    background-color: #306390;
     width: 100%;
     border-radius: 30px;
     display: flex;
@@ -4633,7 +4629,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    background-color: #314675;
+    background-color: #306390;
     border-bottom: 0;
     flex-wrap: wrap;
   }
@@ -4641,7 +4637,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     color: #fff;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody {
-    border: 1px solid #314675;
+    border: 1px solid #306390;
     width: 100%;
     display: block;
     background-color: #fff;
@@ -4652,7 +4648,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     justify-content: flex-end;
     border-bottom: 0;
     flex-wrap: wrap;
-    color: #314675;
+    color: #306390;
     border-bottom: 0px;
     border-top: 0px;
     margin: 0;
@@ -4661,7 +4657,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     display: flex;
     text-align: left;
     text-align: left;
-    border-top: 1px solid #314675;
+    border-top: 1px solid #306390;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_score, main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce, main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency {
     display: flex;
@@ -4669,12 +4665,12 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     justify-content: center;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_score {
-    border-top: 1px solid #314675;
+    border-top: 1px solid #306390;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_pronounce {
-    border-top: 1px solid #314675;
+    border-top: 1px solid #306390;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table tbody tr .speaking_table_text.table_fluency {
-    border-top: 1px solid #314675;
+    border-top: 1px solid #306390;
   }
 }/*# sourceMappingURL=DiagnosisSpeaking.css.map */
