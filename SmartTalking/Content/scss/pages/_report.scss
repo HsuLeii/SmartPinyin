@@ -232,9 +232,21 @@ main {
                                                 background-color: $bright_main_color;
                                                 border-radius: 50%;
                                             }
+
+                                            img{
+                                                width: 30px;
+                                                color: $white;
+                                                padding: 5px;
+                                                background-color: $bright_main_color;
+                                                border-radius: 50%;
+                                            }
     
                                             &.good{
                                                 i{
+                                                    background-color: $score_good;
+                                                }
+
+                                                img{
                                                     background-color: $score_good;
                                                 }
                                             }
@@ -243,10 +255,18 @@ main {
                                                 i{
                                                     background-color: $score_general;
                                                 }
+
+                                                img{
+                                                    background-color: $score_general;
+                                                }
                                             }
     
                                             &.bad{
                                                 i{
+                                                    background-color: $score_bad;
+                                                }
+
+                                                img{
                                                     background-color: $score_bad;
                                                 }
                                             }
@@ -669,9 +689,21 @@ main {
                                                     background-color: $bright_main_color;
                                                     border-radius: 50%;
                                                 }
+
+                                                img{
+                                                    width: 36px;
+                                                    color: $white;
+                                                    padding: 5px;
+                                                    background-color: $bright_main_color;
+                                                    border-radius: 50%;
+                                                }
         
                                                 &.good{
                                                     i{
+                                                        background-color: $score_good;
+                                                    }
+
+                                                    img{
                                                         background-color: $score_good;
                                                     }
                                                 }
@@ -680,10 +712,18 @@ main {
                                                     i{
                                                         background-color: $score_general;
                                                     }
+
+                                                    img{
+                                                        background-color: $score_general;
+                                                    }
                                                 }
         
                                                 &.bad{
                                                     i{
+                                                        background-color: $score_bad;
+                                                    }
+
+                                                    img{
                                                         background-color: $score_bad;
                                                     }
                                                 }
@@ -1029,6 +1069,10 @@ main {
                                                 i{
                                                     font-size: 25px;
                                                 }
+
+                                                img{
+                                                    width: 36px;
+                                                }
                                             }
 
                                             &.table_pronounce {
@@ -1348,9 +1392,21 @@ main {
                                                     background-color: $bright_main_color;
                                                     border-radius: 50%;
                                                 }
+
+                                                img{
+                                                    font-size: 36px;
+                                                    color: $white;
+                                                    padding: 5px;
+                                                    background-color: $bright_main_color;
+                                                    border-radius: 50%;
+                                                }
         
                                                 &.good{
                                                     i{
+                                                        background-color: $score_good;
+                                                    }
+
+                                                    img{
                                                         background-color: $score_good;
                                                     }
                                                 }
@@ -1359,10 +1415,18 @@ main {
                                                     i{
                                                         background-color: $score_general;
                                                     }
+
+                                                    img{
+                                                        background-color: $score_general;
+                                                    }
                                                 }
         
                                                 &.bad{
                                                     i{
+                                                        background-color: $score_bad;
+                                                    }
+
+                                                    img{
                                                         background-color: $score_bad;
                                                     }
                                                 }

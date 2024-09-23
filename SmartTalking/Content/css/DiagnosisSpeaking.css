@@ -3798,13 +3798,29 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   background-color: #4dbcbc;
   border-radius: 50%;
 }
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score img {
+  width: 30px;
+  color: #fff;
+  padding: 5px;
+  background-color: #4dbcbc;
+  border-radius: 50%;
+}
 main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.good i {
+  background-color: #00b050;
+}
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.good img {
   background-color: #00b050;
 }
 main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.general i {
   background-color: #ffc000;
 }
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.general img {
+  background-color: #ffc000;
+}
 main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.bad i {
+  background-color: #ff0000;
+}
+main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.bad img {
   background-color: #ff0000;
 }
 main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_pronounce {
@@ -4139,13 +4155,29 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     background-color: #4dbcbc;
     border-radius: 50%;
   }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score img {
+    width: 36px;
+    color: #fff;
+    padding: 5px;
+    background-color: #4dbcbc;
+    border-radius: 50%;
+  }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.good i {
+    background-color: #00b050;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.good img {
     background-color: #00b050;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.general i {
     background-color: #ffc000;
   }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.general img {
+    background-color: #ffc000;
+  }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.bad i {
+    background-color: #ff0000;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.bad img {
     background-color: #ff0000;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_pronounce {
@@ -4343,6 +4375,9 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score i {
     font-size: 25px;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score img {
+    width: 36px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_pronounce {
     border-top: 0px;
@@ -4604,13 +4639,29 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     background-color: #4dbcbc;
     border-radius: 50%;
   }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score img {
+    font-size: 36px;
+    color: #fff;
+    padding: 5px;
+    background-color: #4dbcbc;
+    border-radius: 50%;
+  }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.good i {
+    background-color: #00b050;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.good img {
     background-color: #00b050;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.general i {
     background-color: #ffc000;
   }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.general img {
+    background-color: #ffc000;
+  }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.bad i {
+    background-color: #ff0000;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score.bad img {
     background-color: #ff0000;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_pronounce {
