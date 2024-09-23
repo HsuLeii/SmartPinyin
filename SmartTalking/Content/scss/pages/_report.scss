@@ -188,7 +188,7 @@ main {
 
                                             .page_num {
                                                 font-size: 20px;
-                                                color: $white;
+                                                color: $page_bg;
                                                 font-weight: bold;
                                                 margin: 0 5px;
                                                 // -webkit-text-stroke: 1.5px $bright_main_color;
@@ -647,7 +647,7 @@ main {
 
                                                 .page_num {
                                                     font-size: 70px;
-                                                    color: $white;
+                                                    color: $page_bg;
                                                     font-weight: bold;
                                                     margin: 0 10px;
                                                 }
@@ -1350,7 +1350,7 @@ main {
 
                                                 .page_num {
                                                     font-size: 70px;
-                                                    color: $white;
+                                                    color: $page_bg;
                                                     font-weight: bold;
                                                     margin: 0 10px;
                                                 }
