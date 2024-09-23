@@ -580,8 +580,20 @@ main {
                                             border-radius: 50%;
                                         }
 
+                                        img{
+                                            width: 36px;
+                                            color: $white;
+                                            padding: 5px;
+                                            background-color: $bright_main_color;
+                                            border-radius: 50%;
+                                        }
+
                                         &.good{
                                             i{
+                                                background-color: $score_good;
+                                            }
+
+                                            img{
                                                 background-color: $score_good;
                                             }
                                         }
@@ -590,11 +602,19 @@ main {
                                             i{
                                                 background-color: $score_general;
                                             }
+
+                                            img{
+                                                background-color: $score_good;
+                                            }
                                         }
 
                                         &.bad{
                                             i{
                                                 background-color: $score_bad;
+                                            }
+
+                                            img{
+                                                background-color: $score_good;
                                             }
                                         }
                                     }
@@ -1612,6 +1632,10 @@ main {
     
                                             i{
                                                 font-size: 30px;
+                                            }
+
+                                            img{
+                                                width: 40px;
                                             }
                                         }
                                     }

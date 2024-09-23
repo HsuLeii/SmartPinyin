@@ -2133,14 +2133,30 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .d
   background-color: #4dbcbc;
   border-radius: 50%;
 }
+main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_text .dialog_box_score img {
+  width: 36px;
+  color: #fff;
+  padding: 5px;
+  background-color: #4dbcbc;
+  border-radius: 50%;
+}
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_text .dialog_box_score.good i {
+  background-color: #00b050;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_text .dialog_box_score.good img {
   background-color: #00b050;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_text .dialog_box_score.general i {
   background-color: #ffc000;
 }
+main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_text .dialog_box_score.general img {
+  background-color: #00b050;
+}
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_text .dialog_box_score.bad i {
   background-color: #ff0000;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_text .dialog_box_score.bad img {
+  background-color: #00b050;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar {
   height: 20px;
@@ -2847,6 +2863,9 @@ main input[name=playRange0]:before {
   }
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_text .dialog_box_score i {
     font-size: 30px;
+  }
+  main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_text .dialog_box_score img {
+    width: 40px;
   }
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar {
     height: 30px;
