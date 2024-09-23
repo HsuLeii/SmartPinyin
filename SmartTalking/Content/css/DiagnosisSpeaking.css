@@ -3663,7 +3663,7 @@ main .page .page_container .page_header .frame_one .frame_two {
   align-items: flex-end;
 }
 main .page .page_container .page_header .frame_one .frame_two .page_header_logo {
-  height: 40px;
+  height: 50px;
 }
 main .page .page_container .page_header .frame_one .frame_two .page_header_logo img {
   width: auto;
