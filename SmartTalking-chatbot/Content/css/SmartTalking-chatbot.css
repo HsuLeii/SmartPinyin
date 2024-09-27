@@ -7,6 +7,10 @@ body {
   font-family: "Noto Sans TC", "PingFang TC", "微軟正黑體", "蘋果儷中黑", "sans-serif", Arial;
 }
 
+main .input_area .form-control:focus {
+  box-shadow: 5px 5px 10px 3px rgba(85, 43, 141, 0.1450980392);
+}
+
 body,
 div,
 dl,
@@ -129,7 +133,7 @@ body {
 }
 
 body {
-  background-color: #e5e5e5;
+  background-color: #f9df54;
 }
 
 .cursor {
@@ -228,7 +232,7 @@ body {
 }
 .modal .modal-dialog .modal-content {
   border: 1px solid #20221f;
-  background-color: #e5e5e5;
+  background-color: #f9df54;
   box-shadow: 0px 5px 30px rgba(49, 70, 117, 0.3);
 }
 .modal .modal-dialog .modal-content .modal-body {
@@ -259,6 +263,515 @@ body {
 @media screen and (min-width: 576px) {
   .modal .modal-dialog {
     margin: 0.5rem auto;
+  }
+}
+main .input_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  position: relative;
+}
+main .input_area input:-moz-read-only {
+  border: 0px solid #20221f;
+  border-radius: 0;
+  background-color: transparent;
+  cursor: auto;
+}
+main .input_area input:read-only {
+  border: 0px solid #20221f;
+  border-radius: 0;
+  background-color: transparent;
+  cursor: auto;
+}
+main .input_area input:-moz-read-only:focus {
+  border: 0px solid #20221f;
+  box-shadow: none;
+  outline: none;
+}
+main .input_area input:read-only:focus {
+  border: 0px solid #20221f;
+  box-shadow: none;
+  outline: none;
+}
+main .input_area input:read-only:focus::-moz-placeholder {
+  color: transparent;
+}
+main .input_area input:-moz-read-only:focus::placeholder {
+  color: transparent;
+}
+main .input_area input:read-only:focus::placeholder {
+  color: transparent;
+}
+main .input_area input:-moz-read-only:focus ~ .icon_item i {
+  color: #20221f;
+}
+main .input_area input:read-only:focus ~ .icon_item i {
+  color: #20221f;
+}
+main .input_area input:-moz-read-only.solid_color {
+  background-color: #314675;
+  color: #fff;
+}
+main .input_area input:read-only.solid_color {
+  background-color: #314675;
+  color: #fff;
+}
+main .input_area input:-moz-read-only.solid_color:hover {
+  transform: scale(1.05);
+  background-color: #293b63;
+}
+main .input_area input:read-only.solid_color:hover {
+  transform: scale(1.05);
+  background-color: #293b63;
+}
+main .input_area .form-control {
+  text-align: left;
+  border-radius: 5px;
+  margin-left: 0px !important;
+  padding: 10px 15px;
+  border: 1px solid #314675;
+  color: #314675;
+  width: 100%;
+  position: relative;
+}
+main .input_area .form-control.form-control-gender {
+  display: flex;
+}
+main .input_area .form-control.form-control-gender .radio-item {
+  margin: 0 20px 0 0;
+}
+main .input_area .form-control.form-control-gender .radio-item label {
+  display: flex;
+  align-items: center;
+  color: #20221f;
+  font-weight: normal;
+  position: relative;
+  cursor: pointer;
+}
+main .input_area .form-control.form-control-gender .radio-item label:before {
+  content: " ";
+  display: inline-block;
+  top: 0;
+  margin: 0 8px 0 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: relative;
+  border: 2px solid #20221f;
+}
+main .input_area .form-control.form-control-gender .radio-item input[type=radio] {
+  display: none;
+}
+main .input_area .form-control.form-control-gender .radio-item input[type=radio]:checked + label {
+  color: #314675;
+}
+main .input_area .form-control.form-control-gender .radio-item input[type=radio]:checked + label:before {
+  border: 2px solid #314675;
+  background: radial-gradient(#314675 0%, #314675 40%, transparent 50%, transparent);
+}
+main .input_area .form-control.form-control-birthday i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translate(0, -50%);
+  color: #20221f;
+}
+main .input_area .form-control.form-control-birthday .birthday_input {
+  color: #20221f;
+  width: 100%;
+  outline: 0;
+  background-color: transparent !important;
+  position: relative;
+  z-index: 1;
+}
+main .input_area .form-control.form-control-birthday .birthday_input::-webkit-date-and-time-value {
+  text-align: left;
+}
+main .input_area .form-control.form-control-birthday .birthday_input:valid {
+  border: 0;
+}
+main .input_area .form-control.form-control-birthday .birthday_input:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+main .input_area .form-control.form-control-birthday .birthday_input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+main .input_area .form-control.form-control-birthday .birthday_input:focus ~ i {
+  color: #314675;
+}
+main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-text, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-day-field, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-month-field, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-year-field {
+  background-color: #314675;
+  color: #fff;
+  border: 0px;
+}
+main .input_area .form-control::-moz-placeholder {
+  color: #20221f;
+}
+main .input_area .form-control::placeholder {
+  color: #20221f;
+}
+main .input_area .form-control:focus {
+  position: relative;
+  z-index: 3;
+  outline: none;
+  border: 1px solid #4dbcbc;
+  color: #314675;
+}
+main .input_area .form-control:focus::-moz-placeholder {
+  color: transparent;
+}
+main .input_area .form-control:focus::placeholder {
+  color: transparent;
+}
+main .input_area .input-group-text {
+  position: absolute;
+  background-color: transparent;
+  border: 0px;
+  padding: 5px 15px;
+  border-radius: 0;
+}
+main .input_area .input-group-text.icon_item {
+  width: 57.5px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border-right: 1px solid #20221f;
+}
+main .input_area .input-group-text.icon_item i {
+  color: #20221f;
+}
+main .input_area .input-group-text.icon_eye {
+  right: 0;
+  cursor: pointer;
+}
+main .input_area .input-group-text.icon_eye:focus ~ .form-control {
+  border-color: transparent;
+  box-shadow: none;
+  color: #314675;
+  outline: solid 0.125em rgba(49, 70, 117, 0.6);
+}
+main .input_area .input-group-label {
+  padding: 10px 15px;
+  color: #314675;
+  width: 100%;
+  font-weight: bold;
+}
+main .input_area .radio-inline {
+  display: flex;
+  align-items: center;
+  color: #20221f;
+  font-weight: normal;
+  position: relative;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+main .input_area .radio-inline:before {
+  content: " ";
+  display: inline-block;
+  top: 0;
+  margin: 0 8px 0 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: relative;
+  border: 2px solid #20221f;
+}
+main .input_area .radio-inline:has(input:-moz-read-only) {
+  color: #20221f;
+}
+main .input_area .radio-inline:has(input:read-only) {
+  color: #20221f;
+}
+main .input_area .radio-inline:has(input:-moz-read-only):before {
+  border: 2px solid #20221f;
+}
+main .input_area .radio-inline:has(input:read-only):before {
+  border: 2px solid #20221f;
+}
+main .input_area .radio-inline:has(input:-moz-read-only):hover {
+  color: #4dbcbc;
+}
+main .input_area .radio-inline:has(input:read-only):hover {
+  color: #4dbcbc;
+}
+main .input_area .radio-inline:has(input:-moz-read-only):hover:before {
+  border: 2px solid #4dbcbc;
+}
+main .input_area .radio-inline:has(input:read-only):hover:before {
+  border: 2px solid #4dbcbc;
+}
+main .input_area .radio-inline:has(input:checked) {
+  color: #4dbcbc;
+  cursor: pointer;
+}
+main .input_area .radio-inline:has(input:checked):before {
+  border: 2px solid #4dbcbc;
+  background: radial-gradient(#4dbcbc 0%, #4dbcbc 40%, transparent 50%, transparent);
+}
+main .input_area .radio-inline:hover {
+  color: #4dbcbc;
+}
+main .input_area .radio-inline input[type=radio] {
+  display: none;
+}
+main .input_area .radio-inline input[type=radio]:checked + label {
+  color: #4dbcbc;
+}
+main .input_area .radio-inline input[type=radio]:checked + label:before {
+  border: 2px solid #4dbcbc;
+  background: radial-gradient(#4dbcbc 0%, #4dbcbc 40%, transparent 50%, transparent);
+}
+main .input_area .form-control .icon_down {
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  transition: 0.3s;
+}
+main .input_area .form-control:focus {
+  border-color: transparent;
+  box-shadow: none;
+  color: #314675;
+  outline: solid 0.125em #314675;
+}
+main .input_area .form-control:focus ~ .icon_item i {
+  color: #314675;
+}
+main .input_area .form-control:focus p {
+  color: #314675 !important;
+}
+main .input_area .form-control.show .icon_down {
+  transform: translate(0, -50%) rotate(180deg);
+  color: #314675;
+}
+main .input_area .form-control::-moz-placeholder {
+  color: #ddd;
+  opacity: 1;
+  /* Firefox */
+}
+main .input_area .form-control::placeholder {
+  color: #ddd;
+  opacity: 1;
+  /* Firefox */
+}
+main .input_area .form-control::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: #ddd;
+}
+main .input_area .form-control.form-control-birthday {
+  padding: 0;
+}
+main .input_area .form-control.form-control-birthday i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translate(0, -50%);
+  color: #20221f;
+}
+main .input_area .form-control.form-control-birthday .birthday_input {
+  color: #ddd;
+  width: 100%;
+  outline: 0;
+  background-color: transparent !important;
+  position: relative;
+  z-index: 1;
+  padding: 10px 0 10px 62.5px;
+}
+main .input_area .form-control.form-control-birthday .birthday_input::-webkit-date-and-time-value {
+  text-align: left;
+}
+main .input_area .form-control.form-control-birthday .birthday_input:valid {
+  border: 0;
+}
+main .input_area .form-control.form-control-birthday .birthday_input:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+main .input_area .form-control.form-control-birthday .birthday_input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+main .input_area .form-control.form-control-birthday .birthday_input:focus ~ i {
+  color: #314675;
+}
+main .input_area .form-control.form-control-birthday .birthday_input:focus ~ .icon_item i {
+  color: #314675;
+}
+main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-text, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-day-field, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-month-field, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-year-field {
+  background-color: #314675;
+  color: #fff;
+  border: 0px;
+}
+main .input_area .form-control.form-control-birthday .input-group-text {
+  left: 0;
+  top: 50%;
+  transform: translate(0px, -50%);
+}
+main .input_area .form-control.form-control-birthday .input-group-text.icon_item i {
+  position: initial;
+  transform: translate(0, 0);
+}
+main .input_area .form-control.form-control-birthday:-moz-read-only {
+  border: 0px solid #20221f;
+  border-bottom: 1px solid #20221f;
+  border-radius: 0;
+  background-color: transparent;
+  cursor: auto;
+}
+main .input_area .form-control.form-control-birthday:read-only {
+  border: 0px solid #20221f;
+  border-bottom: 1px solid #20221f;
+  border-radius: 0;
+  background-color: transparent;
+  cursor: auto;
+}
+main .input_area .form-control.form-control-birthday:read-only .birthday_input::-webkit-datetime-edit-text, main .input_area .form-control.form-control-birthday:read-only .birthday_input::-webkit-datetime-edit-day-field, main .input_area .form-control.form-control-birthday:read-only .birthday_input::-webkit-datetime-edit-month-field, main .input_area .form-control.form-control-birthday:read-only .birthday_input::-webkit-datetime-edit-year-field {
+  color: #20221f;
+}
+main .input_area .form-control.form-control-birthday:-moz-read-only .birthday_input:focus ~ i {
+  color: #20221f;
+}
+main .input_area .form-control.form-control-birthday:read-only .birthday_input:focus ~ i {
+  color: #20221f;
+}
+main .input_area .form-control.form-control-birthday:-moz-read-only .birthday_input:focus ~ .icon_item i {
+  color: #20221f;
+}
+main .input_area .form-control.form-control-birthday:read-only .birthday_input:focus ~ .icon_item i {
+  color: #20221f;
+}
+main .input_area .form-control.form-control-birthday:read-only .birthday_input:focus::-webkit-datetime-edit-text, main .input_area .form-control.form-control-birthday:read-only .birthday_input:focus::-webkit-datetime-edit-day-field, main .input_area .form-control.form-control-birthday:read-only .birthday_input:focus::-webkit-datetime-edit-month-field, main .input_area .form-control.form-control-birthday:read-only .birthday_input:focus::-webkit-datetime-edit-year-field {
+  background-color: transparent;
+  color: #20221f;
+}
+main .input_area .form-control p {
+  color: #ddd;
+  text-align: left;
+}
+main .input_area .password_input {
+  width: 100%;
+}
+main .input_area .dropdown-menu {
+  width: calc(100% - 62.5px);
+  border-radius: 5px;
+  padding: 0;
+  overflow: hidden;
+}
+main .input_area .dropdown-menu li {
+  cursor: pointer;
+  padding: 20px;
+}
+main .input_area .dropdown-menu li:hover {
+  background-color: #314675;
+  color: #fff;
+}
+main .input_area .dropdown-menu li.check {
+  background-color: #314675;
+  color: #fff;
+}
+main .button {
+  display: block;
+  padding: 8px 10px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 5px;
+  border: 1px solid #314675;
+  margin: 30px auto;
+}
+main .button p {
+  font-weight: 500;
+}
+main .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+}
+main .pagination .page-numbers {
+  font-size: 13px;
+  padding: 3px;
+  margin: 3px;
+  color: #20221f;
+  border-radius: 3px;
+  cursor: pointer;
+}
+main .pagination .page-numbers .fa-solid {
+  font-size: 13px;
+}
+main .pagination .page-numbers.current {
+  background-color: #4dbcbc;
+  color: #fff;
+  padding: 3px 5px;
+}
+main .pagination .page-numbers.current:hover {
+  color: #fff;
+}
+main .pagination .page-numbers.dots {
+  cursor: auto;
+}
+main .pagination .page-numbers.dots:hover {
+  color: #20221f;
+}
+main .pagination .page-numbers:hover {
+  color: #314675;
+}
+main .pagination .page-numbers-area {
+  display: flex;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  border: 1px solid #20221f;
+  -webkit-text-fill-color: #20221f;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+}
+
+@media screen and (min-width: 576px) {
+  main .pagination .page-numbers .fa-solid {
+    margin: 0 5px;
+  }
+}
+@media screen and (min-width: 768px) {
+  main .input_area .input-group-label {
+    width: 20%;
+  }
+  main .button {
+    padding: 12px 20px;
+  }
+  main .pagination {
+    margin: 50px auto;
+  }
+  main .pagination .page-numbers {
+    font-size: 15px;
+    margin: 5px;
+    padding: 5px;
+  }
+  main .pagination .page-numbers .fa-solid {
+    font-size: 15px;
+  }
+  main .pagination .page-numbers.current {
+    padding: 8px 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  main .pagination .page-numbers {
+    font-size: 20px;
+    margin: 8px;
+    padding: 8px;
+  }
+  main .pagination .page-numbers .fa-solid {
+    font-size: 20px;
   }
 }
 header {
@@ -661,5 +1174,238 @@ footer .footer_content .footer_copyright p {
 @media screen and (min-width: 1600px) {
   footer .footer_content .footer_information .related_logo {
     max-width: 800px;
+  }
+}
+main .starquiz_area {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .starquiz_area .starquiz_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+main .starquiz_area .starquiz_content .starquiz_text {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+main .starquiz_area .starquiz_content .starquiz_text h4 {
+  color: #314675;
+}
+main .starquiz_logo {
+  width: 80%;
+  margin: 30px auto;
+  max-width: 500px;
+}
+main .link_btn_area {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4dbcbc;
+  color: #fff;
+  border-radius: 5px;
+  margin: 40px auto;
+  padding: 20px 40px;
+  text-align: center;
+  color: #314675;
+  transform: scale(0.9);
+  width: 80%;
+  max-width: 500px;
+  overflow: hidden;
+  cursor: pointer;
+}
+main .link_btn_area::before {
+  -webkit-transform-origin: top center;
+  z-index: 0;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: top center;
+  scale: 1 0;
+  background-color: #314675;
+  content: "";
+  transition-duration: 0.5s;
+  transition-property: scale;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+main .link_btn_area .link_btn {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 1;
+  color: #fff;
+}
+main .link_btn_area .link_btn .link_btn_text {
+  width: 100%;
+  font-size: 21px;
+  color: #fff;
+  cursor: pointer;
+}
+main .link_btn_area .link_btn .link_btn_text p {
+  font-size: 21px;
+}
+main .link_btn_area .link_btn .link_btn_icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  background-color: #fff;
+  border-radius: 50%;
+  color: #4dbcbc;
+  margin: 20px auto 0;
+}
+main .link_btn_area:hover, main .link_btn_area:active {
+  transform: scale(1);
+}
+main .link_btn_area:hover .select_page_btn, main .link_btn_area:active .select_page_btn {
+  color: #4dbcbc;
+}
+main .link_btn_area:hover:before, main .link_btn_area:active:before {
+  transform-origin: bottom center;
+  scale: 1 1;
+}
+main .link_btn_area:hover .select_page_btn .select_page_btn_icon, main .link_btn_area:active .select_page_btn .select_page_btn_icon {
+  background-color: transparent;
+  color: #4dbcbc;
+  border: 1px solid #4dbcbc;
+  transition: 0.3s;
+}
+main .link_btn_area:focus {
+  border: 2px solid #314675;
+}
+main .link_btn_area:focus .select_page_btn p,
+main .link_btn_area:focus .select_page_btn input {
+  color: #fff;
+}
+main .link_btn_area.disabled {
+  background-color: #ADADAD;
+  opacity: 0.5;
+  cursor: auto;
+}
+main .link_btn_area.disabled::before {
+  background-color: transparent;
+  transition: 0s;
+}
+main .link_btn_area.disabled .link_btn .link_btn_icon {
+  background-color: #fff;
+  color: #ADADAD;
+  transition: 0s;
+}
+main .link_btn_area.disabled:hover {
+  transform: scale(0.9);
+}
+main .link_btn_area.disabled:focus {
+  border: 2px solid transparent;
+  box-shadow: none;
+}
+
+@media screen and (min-width: 576px) {
+  main .link_btn_area .link_btn .link_btn_text {
+    width: calc(95% - 40px);
+  }
+  main .link_btn_area .link_btn .link_btn_icon {
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  main .starquiz_logo {
+    margin: 30px auto 50px;
+  }
+  main .link_btn_area {
+    margin: 60px auto;
+  }
+  main .link_btn_area .link_btn .link_btn_text {
+    font-size: 28px;
+  }
+  main .link_btn_area .link_btn .link_btn_text p {
+    font-size: 28px;
+  }
+}
+main .test_area {
+  width: 80%;
+  max-width: 1200px;
+  margin: 80px auto;
+}
+main .test_area.information_area .information_item_area .information_tittle {
+  display: flex;
+  justify-content: center;
+  color: #1a263f;
+  margin: 0 auto 50px;
+}
+main .test_area.information_area .information_item_area .input_area {
+  display: flex;
+  align-items: flex-start;
+}
+main .test_area.information_area .information_item_area .input_area .input-group-label {
+  padding: 10px 15px 10px 0;
+  border: 1px solid transparent;
+}
+main .test_area.information_area .information_item_area .input_area .dropdown-menu {
+  padding: 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+main .test_area.information_area .information_item_area .input_area .dropdown-menu li.dropdown-item:hover {
+  color: #fff;
+  background-color: #4dbcbc;
+}
+main .test_area.information_area .information_item_area .input_area .dropdown-menu li.dropdown-item.check {
+  color: #fff;
+}
+main .test_area.information_area .information_item_area .input_area .dropdown-menu li.dropdown-item.check i {
+  display: inline-block;
+}
+main .test_area.information_area .information_item_area .input_area .input_date_icon {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  z-index: 1;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: #20221f;
+}
+
+@media screen and (min-width: 992px) {
+  main .test_area {
+    background-color: #f6f4f3;
+    padding: 40px;
+    border-radius: 50px;
+  }
+  main .test_area.information_area .information_item_area .information_area .input_area {
+    flex-direction: row;
+    align-items: center;
+  }
+  main .test_area.information_area .information_item_area .information_area .input_area .input-group-label {
+    padding: 10px 30px 10px 0;
+    width: calc(30% - 30px);
+    text-align: right;
+  }
+  main .test_area.information_area .information_item_area .information_area .input_area .dropdown-menu {
+    width: 70%;
+  }
+  main .test_area.information_area .information_item_area .information_area .input_area .form-control {
+    width: 70%;
   }
 }/*# sourceMappingURL=SmartTalking-chatbot.css.map */

@@ -4,7 +4,10 @@
 @import "base/lang";
 @import "base/reset";
 @import "base/resetbootstrap";
-// @import "base/universal";
+@import "base/universal";
 
 @import "master/header";
 @import "master/footer";
+
+@import "pages/starquiz";
+@import "pages/information";
