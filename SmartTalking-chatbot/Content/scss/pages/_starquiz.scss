@@ -102,13 +102,8 @@ main {
 
             .link_btn_text {
                 width: 100%;
-                font-size: 21px;
                 color: $white;
                 cursor: pointer;
-
-                p {
-                    font-size: 21px;
-                }
             }
 
             .link_btn_icon {
@@ -218,15 +213,6 @@ main {
 
         .link_btn_area {
             margin: 60px auto;
-
-            .link_btn {
-                .link_btn_text {
-                    font-size: 28px;
-                    p {
-                        font-size: 28px;
-                    }
-                }
-            }
         }
     }
 }

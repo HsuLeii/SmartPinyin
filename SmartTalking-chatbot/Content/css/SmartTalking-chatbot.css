@@ -1253,12 +1253,8 @@ main .link_btn_area .link_btn {
 }
 main .link_btn_area .link_btn .link_btn_text {
   width: 100%;
-  font-size: 21px;
   color: #fff;
   cursor: pointer;
-}
-main .link_btn_area .link_btn .link_btn_text p {
-  font-size: 21px;
 }
 main .link_btn_area .link_btn .link_btn_icon {
   position: relative;
@@ -1333,12 +1329,6 @@ main .link_btn_area.disabled:focus {
   main .link_btn_area {
     margin: 60px auto;
   }
-  main .link_btn_area .link_btn .link_btn_text {
-    font-size: 28px;
-  }
-  main .link_btn_area .link_btn .link_btn_text p {
-    font-size: 28px;
-  }
 }
 main .test_area {
   width: 80%;
@@ -1407,5 +1397,57 @@ main .test_area.information_area .information_item_area .input_area .input_date_
   }
   main .test_area.information_area .information_item_area .information_area .input_area .form-control {
     width: 70%;
+  }
+}
+main .test_area {
+  background-color: #f6f4f3;
+  padding: 40px;
+  border-radius: 50px;
+}
+main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content {
+  margin: 0 auto 35px;
+}
+main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content .choose_practice_content_item {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto 25px;
+}
+main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content .choose_practice_content_item .choose_practice_item_tittle {
+  width: 100%;
+  margin: 0 auto 10px;
+}
+main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content .choose_practice_content_item .choose_practice_item_tittle h5 {
+  color: #314675;
+  margin: 5px;
+}
+main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content .choose_practice_content_item .choose_practice_options {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1.5px solid #314675;
+  cursor: pointer;
+}
+main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content .choose_practice_content_item .choose_practice_options .choose_practice_options_item p {
+  color: #314675;
+}
+main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content .choose_practice_content_item .choose_practice_options:hover {
+  background-color: #4dbcbc;
+  border: 1.5px solid #4dbcbc;
+}
+main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content .choose_practice_content_item .choose_practice_options:hover .choose_practice_options_item p {
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content {
+    margin: 0 auto 70px;
+  }
+  main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content .choose_practice_content_item .choose_practice_item_tittle h5 {
+    margin: 5px;
+  }
+  main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content .choose_practice_content_item .choose_practice_options {
+    margin: 10px 5px;
   }
 }/*# sourceMappingURL=SmartTalking-chatbot.css.map */

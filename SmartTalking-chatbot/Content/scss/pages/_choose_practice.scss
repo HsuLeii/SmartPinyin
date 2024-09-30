@@ -1,0 +1,91 @@
+main {
+    .test_area {
+        background-color: $test_bg;
+        padding: 40px;
+            border-radius: 50px;
+        &.choose_practice_area {
+            .choose_practice_item_area {
+                .choose_practice_content{
+                    margin: 0 auto 35px;
+                    .choose_practice_content_item{
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin: 0 auto 25px;
+                        .choose_practice_item_tittle{
+                            width: 100%;
+                            margin: 0 auto 10px;
+
+                            h5{
+                                color: $main_color;
+                                margin: 5px;
+                            }
+                        }
+
+                        .choose_practice_options{
+                            display: flex;
+                            align-items: center;
+                            padding: 5px 10px;
+                            margin: 5px;
+                            border-radius: 5px;
+                            border: 1.5px solid $main_color;
+                            cursor: pointer;
+
+                            .choose_practice_options_item{
+                                
+                                p{
+                                    color: $main_color;
+                                }
+                            }
+
+                            &:hover{
+                                background-color: $bright_main_color;
+                                border: 1.5px solid $bright_main_color;
+
+                                .choose_practice_options_item{
+                                    p{
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 768px) {
+    main {
+        .test_area {
+            &.choose_practice_area {
+                .choose_practice_item_area {
+                    .choose_practice_content{
+                        margin: 0 auto 70px;
+                        .choose_practice_content_item{
+                            .choose_practice_item_tittle{
+    
+                                h5{
+                                    margin: 5px;
+                                }
+                            }
+    
+                            .choose_practice_options{
+                                margin: 10px 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1400px) {}
