@@ -389,68 +389,10 @@
     <!-- this page widgets JS -->
 
     <script>
-        // 國籍Nationality
-        var Nationality_one = $(".Nationality-dropdown-one").text();
-        var Nationality_two = $(".Nationality-dropdown-two").text();
-        $(".Nationality-dropdown-one").click(function () {
-            document.querySelector("#Nationality > #dropdown_text").innerHTML = Nationality_one;
-            $("#Nationality").children("#dropdown_text").css({color: "#314675"});
-            $(".Nationality-dropdown-li").removeClass("check");
-            $(this).addClass("check");
-        });
-        $(".Nationality-dropdown-two").click(function () {
-            document.querySelector("#Nationality > #dropdown_text").textContent = Nationality_two;
-            $("#Nationality").children("#dropdown_text").css({color: "#314675"});
-            $(".Nationality-dropdown-li").removeClass("check");
-            $(this).addClass("check");
-        });
-
-        // 性別Gender
-        var Gender_one = $(".Gender-dropdown-one").text();
-        var Gender_two = $(".Gender-dropdown-two").text();
-        $(".Gender-dropdown-one").click(function () {
-            document.querySelector("#Gender > #dropdown_text").innerHTML = Gender_one;
-            $("#Gender").children("#dropdown_text").css({color: "#314675"});
-            $(".Gender-dropdown-li").removeClass("check");
-            $(this).addClass("check");
-        });
-        $(".Gender-dropdown-two").click(function () {
-            document.querySelector("#Gender > #dropdown_text").innerHTML = Gender_two;
-            $("#Gender").children("#dropdown_text").css({color: "#314675"});
-            $(".Gender-dropdown-li").removeClass("check");
-            $(this).addClass("check");
-        });
-
-        // 語言程度Chinese level
-        var ChineseLevel_one = $(".ChineseLevel-dropdown-one").text();
-        var ChineseLevel_two = $(".ChineseLevel-dropdown-two").text();
-        $(".ChineseLevel-dropdown-one").click(function () {
-            document.querySelector("#ChineseLevel > #dropdown_text").innerHTML = ChineseLevel_one;
-            $("#ChineseLevel").children("#dropdown_text").css({color: "#314675"});
-            $(".ChineseLevel-dropdown-li").removeClass("check");
-            $(this).addClass("check");
-        });
-        $(".ChineseLevel-dropdown-two").click(function () {
-            document.querySelector("#ChineseLevel > #dropdown_text").innerHTML = ChineseLevel_two;
-            $("#ChineseLevel").children("#dropdown_text").css({color: "#314675"});
-            $(".ChineseLevel-dropdown-li").removeClass("check");
-            $(this).addClass("check");
-        });
-
-        // 使用教材 Textbook
-        var Textbook_one = $(".Textbook-dropdown-one").text();
-        var Textbook_two = $(".Textbook-dropdown-two").text();
-        $(".Textbook-dropdown-one").click(function () {
-            document.querySelector("#Textbook > #dropdown_text").innerHTML = Textbook_one;
-            $("#Textbook").children("#dropdown_text").css({color: "#314675"});
-            $(".Textbook-dropdown-li").removeClass("check");
-            $(this).addClass("check");
-        });
-        $(".Textbook-dropdown-two").click(function () {
-            document.querySelector("#Textbook > #dropdown_text").innerHTML = Textbook_two;
-            $("#Textbook").children("#dropdown_text").css({color: "#314675"});
-            $(".Textbook-dropdown-li").removeClass("check");
-            $(this).addClass("check");
+        // var el = document.querySelectorAll(".abc");
+        $(".choose_practice_options").click(function () {
+            $(".choose_practice_options").removeClass("active");
+            $(this).addClass("active");
         });
     </script>
 </body>

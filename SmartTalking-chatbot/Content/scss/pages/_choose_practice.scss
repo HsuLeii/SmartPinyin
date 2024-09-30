@@ -11,6 +11,12 @@ main {
                         display: flex;
                         flex-wrap: wrap;
                         margin: 0 auto 25px;
+                        padding: 0 0 25px;
+                        border-bottom: 1.5px solid $main_color;
+
+                        &:nth-last-child(1){
+                            border-bottom: 0px solid $main_color;
+                        }
                         .choose_practice_item_tittle{
                             width: 100%;
                             margin: 0 auto 10px;
@@ -37,7 +43,8 @@ main {
                                 }
                             }
 
-                            &:hover{
+                            &:hover,
+                            &.active{
                                 background-color: $bright_main_color;
                                 border: 1.5px solid $bright_main_color;
 

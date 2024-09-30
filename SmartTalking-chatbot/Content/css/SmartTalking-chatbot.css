@@ -1207,6 +1207,9 @@ main .starquiz_logo {
   margin: 30px auto;
   max-width: 500px;
 }
+main .test_area .starquiz_logo {
+  max-width: 350px;
+}
 main .link_btn_area {
   position: relative;
   display: flex;
@@ -1411,6 +1414,11 @@ main .test_area.choose_practice_area .choose_practice_item_area .choose_practice
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto 25px;
+  padding: 0 0 25px;
+  border-bottom: 1.5px solid #314675;
+}
+main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content .choose_practice_content_item:nth-last-child(1) {
+  border-bottom: 0px solid #314675;
 }
 main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content .choose_practice_content_item .choose_practice_item_tittle {
   width: 100%;
@@ -1432,11 +1440,11 @@ main .test_area.choose_practice_area .choose_practice_item_area .choose_practice
 main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content .choose_practice_content_item .choose_practice_options .choose_practice_options_item p {
   color: #314675;
 }
-main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content .choose_practice_content_item .choose_practice_options:hover {
+main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content .choose_practice_content_item .choose_practice_options:hover, main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content .choose_practice_content_item .choose_practice_options.active {
   background-color: #4dbcbc;
   border: 1.5px solid #4dbcbc;
 }
-main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content .choose_practice_content_item .choose_practice_options:hover .choose_practice_options_item p {
+main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content .choose_practice_content_item .choose_practice_options:hover .choose_practice_options_item p, main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content .choose_practice_content_item .choose_practice_options.active .choose_practice_options_item p {
   color: #fff;
 }
 
@@ -1449,5 +1457,312 @@ main .test_area.choose_practice_area .choose_practice_item_area .choose_practice
   }
   main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content .choose_practice_content_item .choose_practice_options {
     margin: 10px 5px;
+  }
+}
+main .test_area .test_area_content .course_area {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 20px 0 0;
+  margin: 0 auto;
+}
+main .test_area .test_area_content .course_area .course_name span {
+  color: #314675;
+  font-size: 25px;
+  font-weight: bold;
+}
+main .test_area .test_area_content .dialogue_area {
+  padding: 20px 20px 60px;
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #314675;
+  border-radius: 5px;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block {
+  display: flex;
+  align-items: center;
+  padding: 70px 0 0;
+  position: relative;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block .dialogue_avatar {
+  width: 40px;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block .dialogue_avatar img {
+  border-radius: 50%;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_record {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  transform: translate(0, calc(100% + 10px));
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_record .dialog_box_icon {
+  margin: 0 0px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #38ac61;
+  color: #fff;
+  border-radius: 50%;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_record .dialog_box_icon:hover {
+  transform: scale(1.05);
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box {
+  display: flex;
+  align-items: center;
+  padding: 12px 10px;
+  border-radius: 5px;
+  position: relative;
+  max-width: 60%;
+  position: relative;
+  width: auto;
+  max-width: none;
+  background-color: #fff;
+  border: 2px solid #fff;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #314675;
+  border: 1px solid #314675;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  transform: translate(0, calc(100% + 10px));
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_icon:hover {
+  transform: translate(0, calc(100% + 10px)) scale(1.05);
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar {
+  height: 20px;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar.play_animation .bar {
+  animation: sound 0ms -800ms linear infinite alternate;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar .bar {
+  background-color: #314675;
+  height: 0px;
+  width: 3px;
+  margin: 0px 2px;
+  border-radius: 50px;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar .bar:nth-child(1) {
+  animation-duration: 474ms;
+  height: 10px;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar .bar:nth-child(2) {
+  animation-duration: 433ms;
+  height: 15px;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar .bar:nth-child(3) {
+  animation-duration: 407ms;
+  height: 20px;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar .bar:nth-child(4) {
+  animation-duration: 458ms;
+  height: 10px;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_time {
+  margin: 0 5px;
+  color: #314675;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_left .dialogue_avatar {
+  margin: 0 15px 0 0;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_left .dialog_record {
+  order: 2;
+  left: 100px;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_left .dialog_box .dialog_box_icon {
+  left: 0px;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_left .dialog_box .dialog_box_text label ruby.wrong rt {
+  color: #20221f;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_left .dialog_box::before {
+  border-width: 8px 0px 8px 8px;
+  left: 0;
+  transform: translate(-100%, -50%);
+  border-right: 8px solid #efefef;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-top: 8px solid transparent;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_left .dialog_box::after {
+  border-width: 10px 0px 10px 10px;
+  left: 0;
+  transform: translate(-100%, -50%);
+  border-right: 10px solid #d7d7d7;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-top: 10px solid transparent;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_right {
+  justify-content: flex-end;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialogue_avatar {
+  margin: 0 0 0 15px;
+  order: 2;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_record {
+  right: 100px;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box {
+  order: 1;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box .dialog_box_icon {
+  order: 3;
+  right: 0px;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box::before {
+  border-width: 8px 8px 8px 0px;
+  right: 0;
+  transform: translate(100%, -50%);
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid #fff;
+  border-top: 8px solid transparent;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box::after {
+  border-width: 10px 10px 10px 0px;
+  right: 0;
+  transform: translate(100%, -50%);
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #d7d7d7;
+  border-top: 10px solid transparent;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box .sound_bar {
+  order: 2;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box .dialog_box_time {
+  order: 1;
+}
+main .test_area .test_area_content .dialogue_area .dialogue_block:nth-child(1) {
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  main .test_area .test_area_content .dialogue_area {
+    padding: 20px;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block {
+    padding: 60px 0 0;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block .dialogue_avatar {
+    width: 50px;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_record {
+    position: relative;
+    bottom: auto;
+    transform: translate(0, 0);
+    margin: 0 10px;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_record .dialog_box_icon {
+    width: 50px;
+    height: 50px;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_record .dialog_box_icon i {
+    font-size: 30px;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box {
+    padding: 15px 20px;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_icon {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    bottom: auto;
+    transform: translate(0, 0);
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_icon:hover {
+    transform: scale(1.05);
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_icon i {
+    font-size: 30px;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar {
+    height: 30px;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar .bar:nth-child(1) {
+    height: 15px;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar .bar:nth-child(2) {
+    height: 20px;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar .bar:nth-child(3) {
+    height: 30px;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar .bar:nth-child(4) {
+    height: 20px;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_left .dialogue_avatar {
+    margin: 0 25px 0 0;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_left .dialog_record {
+    left: auto;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_left .dialog_box .dialog_box_icon {
+    left: auto;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_left .dialog_box::before {
+    border-width: 10px 0px 10px 10px;
+    border-right: 10px solid #efefef;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-top: 10px solid transparent;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_left .dialog_box::after {
+    border-width: 12px 0px 12px 12px;
+    border-right: 12px solid #d7d7d7;
+    border-bottom: 12px solid transparent;
+    border-left: 12px solid transparent;
+    border-top: 12px solid transparent;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialogue_avatar {
+    margin: 0 0 0 25px;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_record {
+    right: auto;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box .dialog_box_icon {
+    right: auto;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box::before {
+    border-width: 10px 10px 10px 0px;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #efefef;
+    border-top: 10px solid transparent;
+  }
+  main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_right .dialog_box::after {
+    border-width: 12px 12px 12px 0px;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 12px solid #d7d7d7;
+    border-top: 12px solid transparent;
   }
 }/*# sourceMappingURL=SmartTalking-chatbot.css.map */

@@ -1,0 +1,443 @@
+main {
+    .test_area {
+            .test_area_content {
+
+                .course_area {
+                    width: 90%;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    padding: 20px 0 0;
+                    margin: 0 auto;
+
+                    .course_name {
+                        span {
+                            color: $main_color;
+                            font-size: 25px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .dialogue_area {
+                    padding: 20px 20px 60px;
+                    width: 90%;
+                    margin: 0 auto;
+                    border: 1px solid $main_color;
+                    border-radius: 5px;
+
+                    .dialogue_block {
+                        display: flex;
+                        align-items: center;
+                        padding: 70px 0 0;
+
+                        position: relative;
+
+                        .dialogue_avatar {
+                            width: 40px;
+                            
+                            img{
+                                border-radius: 50%;
+                            }
+                        }
+
+                        .dialog_record {
+                            position: absolute;
+                            z-index: 1;
+                            bottom: 0;
+                            transform: translate(0, calc(100% + 10px));
+
+                            .dialog_box_icon {
+                                margin: 0 0px;
+                                width: 30px;
+                                height: 30px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                // background-color: $main-color;
+
+                                background-color: $main_color_green;
+                                color: $white;
+                                border-radius: 50%;
+
+                                &:hover {
+                                    transform: scale(1.05);
+                                }
+                            }
+
+                        }
+
+                        .dialog_box {
+                            display: flex;
+                            align-items: center;
+                            padding: 12px 10px;
+                            border-radius: 5px;
+                            position: relative;
+                            max-width: 60%;
+                            position: relative;
+                            width: auto;
+                            max-width: none;
+                            background-color: $white;
+                            border: 2px solid $white;
+
+                            .dialog_box_icon {
+                                width: 30px;
+                                height: 30px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                background-color: $main-color;
+                                border: 1px solid $main_color;
+                                color: $white;
+                                border-radius: 50%;
+                                position: absolute;
+                                z-index: 1;
+                                bottom: 0;
+                                transform: translate(0, calc(100% + 10px));
+
+                                &:hover {
+                                    transform: translate(0, calc(100% + 10px)) scale(1.05);
+                                }
+                            }
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                z-index: 1;
+                                top: 50%;
+                            }
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                            }
+
+                            .sound_bar {
+                                height: 20px;
+                                margin: 0 5px;
+                                display: flex;
+                                align-items: center;
+
+                                &.play_animation {
+                                    .bar {
+                                        animation: sound 0ms -800ms linear infinite alternate;
+                                    }
+                                }
+
+                                .bar {
+                                    background-color: $main-color;
+                                    height: 0px;
+                                    width: 3px;
+                                    margin: 0px 2px;
+                                    border-radius: 50px;
+
+                                    &:nth-child(1) {
+                                        animation-duration: 474ms;
+                                        height: 10px;
+                                    }
+
+                                    &:nth-child(2) {
+                                        animation-duration: 433ms;
+                                        height: 15px;
+                                    }
+
+                                    &:nth-child(3) {
+                                        animation-duration: 407ms;
+                                        height: 20px;
+                                    }
+
+                                    &:nth-child(4) {
+                                        animation-duration: 458ms;
+                                        height: 10px;
+                                    }
+                                }
+                            }
+
+                            .dialog_box_time {
+                                margin: 0 5px;
+                                color: $main-color;
+                            }
+                        }
+
+                        &.dialogue_left {
+                            .dialogue_avatar {
+                                margin: 0 15px 0 0;
+                            }
+
+                            .dialog_record {
+                                order: 2;
+                                left: 100px;
+                            }
+
+                            .dialog_box {
+                                // background-color: $light_purple;
+
+                                .dialog_box_icon {
+                                    left: 0px;
+                                    
+                                }
+
+                                .dialog_box_text {
+                                    label {
+                                        ruby {
+                                            &.wrong {
+                                                rt {
+                                                    color: $main_color_grey;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &::before {
+                                    border-width: 8px 0px 8px 8px;
+                                    left: 0;
+                                    transform: translate(-100%, -50%);
+                                    border-right: 8px solid $dialog_box_bg;
+                                    border-bottom: 8px solid transparent;
+                                    border-left: 8px solid transparent;
+                                    border-top: 8px solid transparent;
+                                }
+
+                                &::after {
+                                    border-width: 10px 0px 10px 10px;
+                                    left: 0;
+                                    transform: translate(-100%, -50%);
+                                    border-right: 10px solid $dialog_box_border;
+                                    border-bottom: 10px solid transparent;
+                                    border-left: 10px solid transparent;
+                                    border-top: 10px solid transparent;
+                                }
+                            }
+                        }
+
+                        &.dialogue_right {
+                            justify-content: flex-end;
+
+                            .dialogue_avatar {
+                                margin: 0 0 0 15px;
+                                order: 2;
+                            }
+
+                            .dialog_record {
+                                right: 100px;
+                            }
+
+                            .dialog_box {
+                                // background-color: $main-color;
+                                order: 1;
+
+                                .dialog_box_icon {
+                                    order: 3;
+                                    right: 0px;
+                                }
+
+                                &::before {
+                                    border-width: 8px 8px 8px 0px;
+                                    right: 0;
+                                    transform: translate(100%, -50%);
+                                    border-right: 8px solid transparent;
+                                    border-bottom: 8px solid transparent;
+                                    border-left: 8px solid $white;
+                                    border-top: 8px solid transparent;
+                                }
+
+                                &::after {
+                                    border-width: 10px 10px 10px 0px;
+                                    right: 0;
+                                    transform: translate(100%, -50%);
+                                    border-right: 10px solid transparent;
+                                    border-bottom: 10px solid transparent;
+                                    border-left: 10px solid $dialog_box_border;
+                                    border-top: 10px solid transparent;
+                                }
+
+                                .dialog_box_text {
+                                    // color: $white;
+
+                                    // label {
+                                    //     ruby {
+                                    //         &.wrong {
+                                    //             rt {
+                                    //                 color: $white;
+                                    //             }
+                                    //         }
+                                    //     }
+                                    // }
+                                }
+
+                                .sound_bar {
+                                    order: 2;
+                                }
+
+                                .dialog_box_time {
+                                    order: 1;
+                                }
+                            }
+                        }
+
+                        &:nth-child(1) {
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+    }
+}
+
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 768px) {
+    main {
+        .test_area {
+            .test_area_content {
+
+                .dialogue_area {
+                    padding: 20px;
+
+                    .dialogue_block {
+                        padding: 60px 0 0;
+
+                        .dialogue_avatar {
+                            width: 50px;
+                        }
+
+                        .dialog_record {
+                            position: relative;
+                            bottom: auto;
+                            transform: translate(0, 0);
+                            margin: 0 10px;
+
+                            .dialog_box_icon {
+                                width: 50px;
+                                height: 50px;
+
+                                i {
+                                    font-size: 30px;
+                                }
+                            }
+                        }
+
+                        .dialog_box {
+                            padding: 15px 20px;
+
+                            .dialog_box_icon {
+                                width: 50px;
+                                height: 50px;
+
+                                position: relative;
+                                bottom: auto;
+                                transform: translate(0, 0);
+
+                                &:hover {
+                                    transform: scale(1.05);
+                                }
+
+                                i {
+                                    font-size: 30px;
+                                }
+                            }
+
+                            .sound_bar {
+                                height: 30px;
+
+                                .bar {
+
+                                    &:nth-child(1) {
+                                        height: 15px;
+                                    }
+
+                                    &:nth-child(2) {
+                                        height: 20px;
+                                    }
+
+                                    &:nth-child(3) {
+                                        height: 30px;
+                                    }
+
+                                    &:nth-child(4) {
+                                        height: 20px;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.dialogue_left {
+                            .dialogue_avatar {
+                                margin: 0 25px 0 0;
+                            }
+
+                            .dialog_record {
+                                left: auto;
+                            }
+
+                            .dialog_box {
+
+                                .dialog_box_icon {
+                                    left: auto;
+                                }
+
+                                &::before {
+                                    border-width: 10px 0px 10px 10px;
+                                    border-right: 10px solid $dialog_box_bg;
+                                    border-bottom: 10px solid transparent;
+                                    border-left: 10px solid transparent;
+                                    border-top: 10px solid transparent;
+                                }
+
+                                &::after {
+                                    border-width: 12px 0px 12px 12px;
+                                    border-right: 12px solid $dialog_box_border;
+                                    border-bottom: 12px solid transparent;
+                                    border-left: 12px solid transparent;
+                                    border-top: 12px solid transparent;
+                                }
+                            }
+                        }
+
+                        &.dialogue_right {
+                            .dialogue_avatar {
+                                margin: 0 0 0 25px;
+                            }
+
+                            .dialog_record {
+                                right: auto;
+                            }
+
+                            .dialog_box {
+
+                                .dialog_box_icon {
+                                    right: auto;
+                                }
+
+                                &::before {
+                                    border-width: 10px 10px 10px 0px;
+                                    border-right: 10px solid transparent;
+                                    border-bottom: 10px solid transparent;
+                                    border-left: 10px solid $dialog_box_bg;
+                                    border-top: 10px solid transparent;
+                                }
+
+                                &::after {
+                                    border-width: 12px 12px 12px 0px;
+                                    border-right: 12px solid transparent;
+                                    border-bottom: 12px solid transparent;
+                                    border-left: 12px solid $dialog_box_border;
+                                    border-top: 12px solid transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1400px) {}
