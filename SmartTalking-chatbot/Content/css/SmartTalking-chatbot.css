@@ -1664,7 +1664,87 @@ main .test_area .test_area_content .dialogue_area .dialogue_block.dialogue_right
 main .test_area .test_area_content .dialogue_area .dialogue_block:nth-child(1) {
   padding: 0;
 }
+main .test_area .test_area_content .toolbar_area {
+  width: 90%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px auto 0;
+}
+main .test_area .test_area_content .toolbar_area.toolbar_area_bottom {
+  margin: 35px auto;
+}
+main .test_area .test_area_content .toolbar_area .btn_icon_area .btn_icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #314675;
+  transform: scale(0.95);
+}
+main .test_area .test_area_content .toolbar_area .btn_icon_area .btn_icon i {
+  color: #fff;
+  font-size: 30px;
+}
+main .test_area .test_area_content .toolbar_area .btn_icon_area .btn_icon:hover {
+  transform: scale(1);
+  background-color: #4dbcbc;
+}
+main .test_area .test_area_content .toolbar_area .btn_icon_area.recording_area {
+  display: flex;
+  flex-direction: column;
+}
+main .test_area .test_area_content .toolbar_area .btn_icon_area .recording_time {
+  display: none;
+  color: #314675;
+  margin: 0px auto 10px;
+}
 
+@media screen and (min-width: 576px) {
+  main .test_area .test_area_content .toolbar_area {
+    width: 90%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px auto 0;
+  }
+  main .test_area .test_area_content .toolbar_area.toolbar_area_bottom {
+    margin: 35px auto;
+  }
+  main .test_area .test_area_content .toolbar_area .btn_icon_area .btn_icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #314675;
+    transform: scale(0.95);
+  }
+  main .test_area .test_area_content .toolbar_area .btn_icon_area .btn_icon i {
+    color: #fff;
+    font-size: 30px;
+  }
+  main .test_area .test_area_content .toolbar_area .btn_icon_area .btn_icon:hover {
+    transform: scale(1);
+    background-color: #4dbcbc;
+  }
+  main .test_area .test_area_content .toolbar_area .btn_icon_area.recording_area {
+    display: flex;
+    flex-direction: column;
+  }
+  main .test_area .test_area_content .toolbar_area .btn_icon_area .recording_time {
+    display: none;
+    color: #314675;
+    margin: 0px auto 10px;
+  }
+}
 @media screen and (min-width: 768px) {
   main .test_area .test_area_content .dialogue_area {
     padding: 20px;
@@ -1764,5 +1844,12 @@ main .test_area .test_area_content .dialogue_area .dialogue_block:nth-child(1) {
     border-bottom: 12px solid transparent;
     border-left: 12px solid #d7d7d7;
     border-top: 12px solid transparent;
+  }
+  main .test_area .test_area_content .toolbar_area .btn_icon_area .btn_icon {
+    width: 65px;
+    height: 65px;
+  }
+  main .test_area .test_area_content .toolbar_area .btn_icon_area .btn_icon i {
+    font-size: 40px;
   }
 }/*# sourceMappingURL=SmartTalking-chatbot.css.map */
