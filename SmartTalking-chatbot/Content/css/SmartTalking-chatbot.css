@@ -1208,6 +1208,7 @@ main .page_tittle {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 40px auto;
 }
 main .page_tittle h4 {
   color: #4dbcbc;
