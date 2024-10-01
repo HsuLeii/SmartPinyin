@@ -1,6 +1,6 @@
 main {
     .test_area {
-        width: 80%;
+        width: 90%;
         max-width: 1200px;
         margin: 80px auto;
         &.information_area {
@@ -64,6 +64,11 @@ main {
 @media screen and (min-width: 576px) {}
 
 @media screen and (min-width: 768px) {
+    main {
+        .test_area{
+            width: 80%;
+        }
+    }
 }
 
 @media screen and (min-width: 992px) {

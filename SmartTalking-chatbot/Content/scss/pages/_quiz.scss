@@ -7,8 +7,7 @@ main {
                     display: flex;
                     justify-content: space-between;
                     flex-direction: column;
-                    padding: 20px 0 0;
-                    margin: 0 auto;
+                    margin: 20px auto;
 
                     .course_name {
                         span {
@@ -24,6 +23,7 @@ main {
                     width: 90%;
                     margin: 0 auto;
                     border: 1px solid $main_color;
+                    background-color: $white;
                     border-radius: 5px;
 
                     .dialogue_block {
@@ -39,32 +39,16 @@ main {
                             img{
                                 border-radius: 50%;
                             }
-                        }
 
-                        .dialog_record {
-                            position: absolute;
-                            z-index: 1;
-                            bottom: 0;
-                            transform: translate(0, calc(100% + 10px));
-
-                            .dialog_box_icon {
-                                margin: 0 0px;
-                                width: 30px;
-                                height: 30px;
+                            p{
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
-                                // background-color: $main-color;
-
-                                background-color: $main_color_green;
+                                background-color: $bright_main_color;
                                 color: $white;
+                                height: 40px;
                                 border-radius: 50%;
-
-                                &:hover {
-                                    transform: scale(1.05);
-                                }
                             }
-
                         }
 
                         .dialog_box {
@@ -77,8 +61,8 @@ main {
                             position: relative;
                             width: auto;
                             max-width: none;
-                            background-color: $white;
-                            border: 2px solid $white;
+                            background-color: $dialog_box_bg;
+                            border: 2px solid $dialog_box_border;
 
                             .dialog_box_icon {
                                 width: 30px;
@@ -97,6 +81,8 @@ main {
 
                                 &:hover {
                                     transform: translate(0, calc(100% + 10px)) scale(1.05);
+                                    background-color: $bright_main_color;
+                                    border: 1px solid $bright_main_color;
                                 }
                             }
 
@@ -115,7 +101,7 @@ main {
 
                             .sound_bar {
                                 height: 20px;
-                                margin: 0 5px;
+                                margin: 0 10px;
                                 display: flex;
                                 align-items: center;
 
@@ -155,7 +141,6 @@ main {
                             }
 
                             .dialog_box_time {
-                                margin: 0 5px;
                                 color: $main-color;
                             }
                         }
@@ -165,29 +150,12 @@ main {
                                 margin: 0 15px 0 0;
                             }
 
-                            .dialog_record {
-                                order: 2;
-                                left: 100px;
-                            }
-
                             .dialog_box {
                                 // background-color: $light_purple;
 
                                 .dialog_box_icon {
                                     left: 0px;
                                     
-                                }
-
-                                .dialog_box_text {
-                                    label {
-                                        ruby {
-                                            &.wrong {
-                                                rt {
-                                                    color: $main_color_grey;
-                                                }
-                                            }
-                                        }
-                                    }
                                 }
 
                                 &::before {
@@ -220,10 +188,6 @@ main {
                                 order: 2;
                             }
 
-                            .dialog_record {
-                                right: 100px;
-                            }
-
                             .dialog_box {
                                 // background-color: $main-color;
                                 order: 1;
@@ -239,7 +203,7 @@ main {
                                     transform: translate(100%, -50%);
                                     border-right: 8px solid transparent;
                                     border-bottom: 8px solid transparent;
-                                    border-left: 8px solid $white;
+                                    border-left: 8px solid $dialog_box_bg;
                                     border-top: 8px solid transparent;
                                 }
 
@@ -251,20 +215,6 @@ main {
                                     border-bottom: 10px solid transparent;
                                     border-left: 10px solid $dialog_box_border;
                                     border-top: 10px solid transparent;
-                                }
-
-                                .dialog_box_text {
-                                    // color: $white;
-
-                                    // label {
-                                    //     ruby {
-                                    //         &.wrong {
-                                    //             rt {
-                                    //                 color: $white;
-                                    //             }
-                                    //         }
-                                    //     }
-                                    // }
                                 }
 
                                 .sound_bar {
@@ -292,10 +242,6 @@ main {
                     flex-wrap: wrap;
                     margin: 20px auto 0;
             
-                    &.toolbar_area_bottom{
-                        margin: 35px auto;
-                    }
-            
                     .btn_icon_area {
                         .btn_icon {
                             width: 55px;
@@ -306,8 +252,9 @@ main {
                             border-radius: 50%;
                             background-color: $main-color;
                             transform: scale(0.95);
+                            color: $white;
             
-                            i {
+                            svg {
                                 color: $white;
                                 font-size: 30px;
                             }
@@ -326,11 +273,24 @@ main {
                         .recording_time{
                             display: none;
                             color: $main_color;
-                            margin: 0px auto 10px;
+                            margin: 10px auto 0;
+                            text-align: center;
                         }
                     }
                 }
             }
+    }
+}
+
+@keyframes sound {
+    0% {
+        opacity: .55;
+        height: 3px;
+    }
+
+    100% {
+        opacity: 1;
+        height: 20px;
     }
 }
 
@@ -346,10 +306,6 @@ main {
                         justify-content: center;
                         flex-wrap: wrap;
                         margin: 20px auto 0;
-                
-                        &.toolbar_area_bottom{
-                            margin: 35px auto;
-                        }
                 
                         .btn_icon_area {
                             .btn_icon {
@@ -403,21 +359,9 @@ main {
 
                         .dialogue_avatar {
                             width: 50px;
-                        }
 
-                        .dialog_record {
-                            position: relative;
-                            bottom: auto;
-                            transform: translate(0, 0);
-                            margin: 0 10px;
-
-                            .dialog_box_icon {
-                                width: 50px;
+                            p{
                                 height: 50px;
-
-                                i {
-                                    font-size: 30px;
-                                }
                             }
                         }
 
@@ -443,6 +387,7 @@ main {
 
                             .sound_bar {
                                 height: 30px;
+                                margin: 0 15px;
 
                                 .bar {
 
@@ -468,10 +413,6 @@ main {
                         &.dialogue_left {
                             .dialogue_avatar {
                                 margin: 0 25px 0 0;
-                            }
-
-                            .dialog_record {
-                                left: auto;
                             }
 
                             .dialog_box {
@@ -501,10 +442,6 @@ main {
                         &.dialogue_right {
                             .dialogue_avatar {
                                 margin: 0 0 0 25px;
-                            }
-
-                            .dialog_record {
-                                right: auto;
                             }
 
                             .dialog_box {
