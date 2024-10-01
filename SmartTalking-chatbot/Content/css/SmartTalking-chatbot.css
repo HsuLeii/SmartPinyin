@@ -1475,6 +1475,7 @@ main .test_area.choose_practice_area .choose_practice_item_area .choose_practice
   border-radius: 5px;
   border: 1.5px solid #314675;
   cursor: pointer;
+  background-color: #fff;
 }
 main .test_area.choose_practice_area .choose_practice_item_area .choose_practice_content .choose_practice_content_item .choose_practice_options .choose_practice_options_item p {
   color: #314675;
