@@ -1204,6 +1204,18 @@ main .starquiz_logo {
   margin: 30px auto;
   max-width: 500px;
 }
+main .page_tittle {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main .page_tittle h4 {
+  color: #4dbcbc;
+  margin: 5px 0;
+}
+main .page_tittle h4:nth-child(1) {
+  margin: 5px 10px 5px 0;
+}
 main .test_area .starquiz_logo {
   max-width: 350px;
 }
@@ -1313,6 +1325,25 @@ main .link_btn_area.disabled:focus {
   border: 2px solid transparent;
   box-shadow: none;
 }
+main .decorate_area {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  position: fixed;
+}
+main .decorate_area .decorate_line {
+  position: fixed;
+  z-index: 1;
+  width: 8%;
+}
+main .decorate_area .decorate_line.decorate_right {
+  top: 0px;
+  right: 0;
+}
+main .decorate_area .decorate_line.decorate_left {
+  bottom: 0px;
+  left: 0;
+}
 
 @media screen and (min-width: 576px) {
   main .link_btn_area .link_btn .link_btn_text {
@@ -1320,6 +1351,11 @@ main .link_btn_area.disabled:focus {
   }
   main .link_btn_area .link_btn .link_btn_icon {
     margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  main .decorate_area {
+    display: block;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1833,41 +1869,39 @@ main .test_area.quiz_area .quiz_item_area .test_area_content .toolbar_area .btn_
     font-size: 40px;
   }
 }
-main .test_area {
-  width: 90%;
-  max-width: 1200px;
-  margin: 80px auto;
-}
 main .test_area.questionnaire_area .questionnaire_item_area .questionnaire_content .questionnaire_content_item .input_area {
   margin: 0 auto;
   padding: 40px 0;
   border-bottom: 1px solid #314675;
 }
+main .test_area.questionnaire_area .questionnaire_item_area .questionnaire_content .questionnaire_content_item .input_area:nth-last-child(1) {
+  border-bottom: 0;
+}
+main .test_area.questionnaire_area .questionnaire_item_area .questionnaire_content .questionnaire_content_item .input_area .input-group-label.narrate-label {
+  color: #4dbcbc;
+}
+main .test_area.questionnaire_area .questionnaire_item_area .questionnaire_content .questionnaire_content_item .input_area .radio-inline {
+  width: 100%;
+}
+main .test_area.questionnaire_area .questionnaire_item_area .questionnaire_content .questionnaire_content_item .input_area .text-danger {
+  margin: 20px 0 0;
+  padding: 10px 15px;
+}
+main .test_area.questionnaire_area .questionnaire_item_area .questionnaire_content .questionnaire_content_item .input_area .input-group-textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px 15px;
+  margin: 10px 15px;
+  color: #314675;
+}
+main .test_area.questionnaire_area .questionnaire_item_area .questionnaire_content .questionnaire_content_item .input_area textarea:focus {
+  background: #cfeded !important;
+  border-color: #314675;
+  outline: none;
+}
 
 @media screen and (min-width: 768px) {
-  main .test_area {
-    width: 80%;
-  }
-}
-@media screen and (min-width: 992px) {
-  main .test_area {
-    background-color: #f6f4f3;
-    padding: 40px;
-    border-radius: 50px;
-  }
-  main .test_area.information_area .information_item_area .information_area .input_area {
-    flex-direction: row;
-    align-items: center;
-  }
-  main .test_area.information_area .information_item_area .information_area .input_area .input-group-label {
-    padding: 10px 30px 10px 0;
-    width: calc(30% - 30px);
-    text-align: right;
-  }
-  main .test_area.information_area .information_item_area .information_area .input_area .dropdown-menu {
-    width: 70%;
-  }
-  main .test_area.information_area .information_item_area .information_area .input_area .form-control {
-    width: 70%;
+  main .test_area.questionnaire_area .questionnaire_item_area .questionnaire_content .questionnaire_content_item .input_area .radio-inline {
+    width: auto;
   }
 }/*# sourceMappingURL=SmartTalking-chatbot.css.map */

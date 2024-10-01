@@ -40,13 +40,17 @@
                 <div class="starquiz_logo">
                     <img src="../Content/image/logo/logo_1.svg" alt="">
                 </div>
+                <div class="page_tittle">
+                    <h4>問卷調查</h4>
+                    <h4>Questionnaire</h4>
+                </div>
                 <div class="questionnaire_content">
                     <div class="questionnaire_content_item">
                         <div class="input_area">
                             <label class="input-group-label" for="Qone">
                                 *1.對話品質 Conversation Quality
                             </label>
-                            <label class="input-group-label" for="Qone">
+                            <label class="input-group-label narrate-label" for="Qone">
                                 您認為AI的對話品質如何？<br/>
                                 How would you rate the quality of the AI's conversation?
                             </label>
@@ -65,13 +69,17 @@
                             <label class="radio-inline">
                                 <input id="Qone5" type="radio" value="4" name="Qone">非常不好 Very Poor
                             </label>
+
+                            <span class="text-danger" style="display: none;" data-valmsg-for="" data-valmsg-replace="">
+                                請選擇
+                            </span>
                         </div>
 
                         <div class="input_area">
                             <label class="input-group-label" for="Qone">
                                 *2.主題符合度 / Topic Relevance
                             </label>
-                            <label class="input-group-label" for="Qtwo">
+                            <label class="input-group-label narrate-label" for="Qtwo">
                                 AI的對話是否符合您選擇的主題？<br/>
                                 Did the AI's conversation match your chosen topic?
                             </label>
@@ -90,13 +98,17 @@
                             <label class="radio-inline">
                                 <input id="Qtwo5" type="radio" value="4" name="Qtwo">全不符合 Completely Irrelevant
                             </label>
+
+                            <span class="text-danger" style="display: none;" data-valmsg-for="" data-valmsg-replace="">
+                                請選擇
+                            </span>
                         </div>
 
                         <div class="input_area">
                             <label class="input-group-label" for="Qthree">
                                 *3.聲音品質 Sound Quality
                             </label>
-                            <label class="input-group-label" for="Qthree">
+                            <label class="input-group-label narrate-label" for="Qthree">
                                 您對AI的聲音滿意嗎？<br/>
                                 Are you satisfied with the AI's voice?
                             </label>
@@ -115,13 +127,17 @@
                             <label class="radio-inline">
                                 <input id="Qfour5" type="radio" value="4" name="Qfour">非常不滿意 Very Unsatisfied
                             </label>
+
+                            <span class="text-danger" style="display: none;" data-valmsg-for="" data-valmsg-replace="">
+                                請選擇
+                            </span>
                         </div>
 
                         <div class="input_area">
                             <label class="input-group-label" for="Qfour">
                                 *4.語速 Speech Rate
                             </label>
-                            <label class="input-group-label" for="Qfour">
+                            <label class="input-group-label narrate-label" for="Qfour">
                                 您對AI的語速滿意嗎？<br/>
                                 Are you satisfied with the AI's speech rate
                             </label>
@@ -140,13 +156,17 @@
                             <label class="radio-inline">
                                 <input id="Qfour5" type="radio" value="4" name="Qfour">非常不滿意 Very Unsatisfied
                             </label>
+
+                            <span class="text-danger" style="display: none;" data-valmsg-for="" data-valmsg-replace="">
+                                請選擇
+                            </span>
                         </div>
 
                         <div class="input_area">
                             <label class="input-group-label" for="Qfive">
                                 *5.整體體驗 / Overall Experience
                             </label>
-                            <label class="input-group-label" for="Qfive">
+                            <label class="input-group-label narrate-label" for="Qfive">
                                 您對這次對話的整體體驗滿意嗎？<br/>
                                 Are you satisfied with your overall experience?
                             </label>
@@ -165,45 +185,46 @@
                             <label class="radio-inline">
                                 <input id="Qfive5" type="radio" value="4" name="Qfive">非常不滿意 Very Unsatisfied
                             </label>
+
+                            <span class="text-danger" style="display: none;" data-valmsg-for="" data-valmsg-replace="">
+                                請選擇
+                            </span>
                         </div>
 
                         <div class="input_area">
-                            <label class="input-group-label" for="Qone">
-                                *1.對話品質 Conversation Quality
+                            <label class="input-group-label" for="Qsix">
+                                6.建議與意見 Suggestions and Comments
                             </label>
-                            <label class="input-group-label" for="Qone">
-                                您認為AI的對話品質如何？<br/>
-                                How would you rate the quality of the AI's conversation?
+                            <label class="input-group-label" for="Qsix">
+                                您有什麼建議或意見可以讓我們改進嗎？<br/>
+                                Do you have any suggestions or comments for improvement?
                             </label>
-                            <label class="radio-inline">
-                                <input id="Qone1" type="radio" value="0" name="Qone">非常好 Excellent
-                            </label>
-                            <label class="radio-inline">
-                                <input id="Qone2" type="radio" value="1" name="Qone">好 Good
-                            </label>
-                            <label class="radio-inline">
-                                <input id="Qone3" type="radio" value="2" name="Qone">一般  Average
-                            </label>
-                            <label class="radio-inline">
-                                <input id="Qone4" type="radio" value="2" name="Qone">不好 Poor
-                            </label>
-                            <label class="radio-inline">
-                                <input id="Qone5" type="radio" value="2" name="Qone">非常不好 Very Poor
-                            </label>
+                            <textarea id="Qsix" class="input-group-textarea" placeholder="您有什麼建議或意見可以讓我們改進嗎？ Do you have any suggestions or comments for improvement?"></textarea> 
                         </div>
                     </div>
                 </div>
             </div>
 
-            <a class="input_area link_btn_area">
+            <a href="end.html" class="input_area link_btn_area">
                 <div class="link_btn">
-                    <input id="submit" type="button" class="link_btn_text" value="下一頁 NEXT" onclick="location.href='quiz.html'">
+                    <input id="submit" type="button" class="link_btn_text" value="完成 Send" onclick="location.href='quiz.html'">
                     <div class="link_btn_icon">
-                        <i class="fa-solid fa-arrow-right"></i>
+                        <i class="fa-solid fa-check"></i>
                     </div>
                 </div>
             </a>
         </div>
+
+        <div class="decorate_area">
+            <div class="decorate_line decorate_right">
+                <img src="../Content/image/svg/decorate_right.svg" alt="" srcset="">
+            </div>
+    
+            <div class="decorate_line decorate_left">
+                <img src="../Content/image/svg/decorate_left.svg" alt="" srcset="">
+            </div>
+        </div>
+        
     </main>
 
     <script src="../Content/js/jquery-3.5.1.min.js"></script>
