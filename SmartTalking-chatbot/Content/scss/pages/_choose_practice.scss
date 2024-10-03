@@ -1,8 +1,5 @@
 main {
     .test_area {
-        background-color: $test_bg;
-        padding: 40px;
-            border-radius: 50px;
         &.choose_practice_area {
             .choose_practice_item_area {
                 .choose_practice_content{
@@ -68,6 +65,7 @@ main {
 @media screen and (min-width: 768px) {
     main {
         .test_area {
+            
             &.choose_practice_area {
                 .choose_practice_item_area {
                     .choose_practice_content{

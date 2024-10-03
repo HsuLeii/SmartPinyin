@@ -23,7 +23,7 @@ main {
                     }
     
                     .dialogue_area {
-                        padding: 20px 20px 60px;
+                        padding: 20px 10px 60px;
                         width: 90%;
                         margin: 0 auto;
                         border: 1px solid $main_color;
@@ -247,6 +247,10 @@ main {
                         margin: 20px auto 0;
                 
                         .btn_icon_area {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            margin: 0 auto 20px;
                             .btn_icon {
                                 width: 55px;
                                 height: 55px;
@@ -279,6 +283,42 @@ main {
                                 color: $main_color;
                                 margin: 10px auto 0;
                                 text-align: center;
+                            }
+                        }
+
+                        .btn_finish_area{
+                            margin: 0 auto;
+                            display: flex;
+                            align-items: center;
+                            border: 1px solid $main_color_red;
+                            border-radius: 5px;
+
+                            .btn_finish_icon{
+                                padding: 5px 10px;
+                                color: $main_color_red;
+                            }
+
+                            .btn_finish_text{
+                                display: flex;
+                                padding: 5px 10px;
+                                text-align: left;
+                                color: $main_color_red;
+
+                                p{
+                                    margin: 0 5px;
+                                }
+                            }
+
+                            &:hover{
+                                background-color: $main_color_red;
+
+                                .btn_finish_icon{
+                                    color: $white;
+                                }
+
+                                .btn_finish_text{
+                                    color: $white;
+                                }
                             }
                         }
                     }
@@ -500,6 +540,48 @@ main {
 }
 
 @media screen and (min-width: 992px) {
+}
+
+@media screen and (min-width: 1024px) {
+    main{
+        .test_area {
+            &.quiz_area{
+                .quiz_item_area{
+                    .test_area_content {
+                        .toolbar_area {
+                    
+                            .btn_icon_area {
+                                width: auto;
+                                margin: 0 auto;
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50% , -50%);
+                            }
+    
+                            .btn_finish_area{
+                                margin: 0 0 0 auto;
+                                display: flex;
+                                align-items: center;
+                                border: 1px solid $main_color_red;
+                                border-radius: 5px;
+    
+                                .btn_finish_icon{
+                                    padding: 5px 10px;
+                                    color: $main_color_red;
+                                }
+    
+                                .btn_finish_text{
+                                    flex-direction: column;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 }
 
 @media screen and (min-width: 1200px) {}

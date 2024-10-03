@@ -112,6 +112,24 @@ main {
             transition-timing-function: cubic-bezier(.075, .82, .165, 1);
         }
 
+        &[disabled] {
+            background-color: transparent;
+            pointer-events: none;
+            border: 1px solid $disabled;
+
+            .link_btn{
+                .link_btn_text{
+                    color: $disabled;
+                }
+
+                .link_btn_icon {
+                    border: 1px solid $disabled;
+                    background-color: transparent;
+                    color: $disabled;
+                }
+            }
+        }
+
         .link_btn {
             width: 100%;
             justify-content: center;

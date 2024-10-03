@@ -3,6 +3,9 @@ main {
         width: 90%;
         max-width: 1200px;
         margin: 80px auto;
+        background-color: $test_bg;
+        padding: 20px;
+            border-radius: 50px;
         &.information_area {
             .information_item_area {
                 .information_tittle {
@@ -67,6 +70,7 @@ main {
     main {
         .test_area{
             width: 80%;
+            padding: 40px;
         }
     }
 }
