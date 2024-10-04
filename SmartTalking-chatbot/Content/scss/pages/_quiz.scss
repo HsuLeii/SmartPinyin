@@ -250,6 +250,7 @@ main {
                             width: 100%;
                             display: flex;
                             justify-content: center;
+                            flex-direction: column;
                             margin: 0 auto 20px;
                             .btn_icon {
                                 width: 55px;
@@ -257,6 +258,7 @@ main {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
+                                margin: 0 auto;
                                 border-radius: 50%;
                                 background-color: $main-color;
                                 transform: scale(0.95);
