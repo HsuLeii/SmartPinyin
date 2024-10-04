@@ -89,7 +89,7 @@ a {
 ruby {
   letter-spacing: 1.8px;
   word-break: break-word;
-  margin: 2px 4px;
+  margin: 5px 3px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1744,7 +1744,8 @@ main .quiz_page .course_area .course_img img {
   border-radius: 10px;
 }
 main .quiz_page .test_area {
-  width: 80%;
+  width: 95%;
+  max-width: 1200px;
   margin: 0px auto;
   display: flex;
   flex-wrap: wrap;
@@ -2053,9 +2054,16 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .d
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialogue_avatar {
   width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialogue_avatar img {
   border-radius: 50%;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialogue_avatar .dialogue_avatar_name {
+  font-size: 11px;
+  margin: 8px auto 0;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_record {
   position: absolute;
@@ -2329,7 +2337,7 @@ main .quiz_page .test_area .test_area_right .test_area_content label {
   flex-wrap: wrap;
 }
 main .quiz_page .test_area .test_area_right .test_area_content label ruby rt {
-  font-size: 75%;
+  font-size: 50%;
 }
 main .quiz_page .test_area .test_area_right .test_area_content label ruby rt span {
   font-size: 100%;
@@ -2822,7 +2830,10 @@ main input[name=playRange0]:before {
     padding: 60px 0 0;
   }
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialogue_avatar {
-    width: 50px;
+    width: 75px;
+  }
+  main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialogue_avatar .dialogue_avatar_name {
+    font-size: 12px;
   }
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_record {
     position: relative;
@@ -2839,7 +2850,7 @@ main input[name=playRange0]:before {
   }
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box {
     padding: 15px 20px;
-    width: calc(100% - 75px);
+    width: calc(100% - 125px);
   }
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_icon {
     width: 50px;
@@ -3088,6 +3099,9 @@ main input[name=playRange0]:before {
   }
   main .quiz_page .course_area .course_img {
     width: 250px;
+  }
+  main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialogue_avatar .dialogue_avatar_name {
+    font-size: 14px;
   }
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box {
     width: calc(75% - 75px);
@@ -3624,7 +3638,7 @@ main .page {
   max-width: 1024px;
   width: 100%;
   margin: 60px auto 0;
-  background-color: #f9df54;
+  background-color: #fff1a5;
   padding: 30px;
 }
 main .page:after {
@@ -3787,7 +3801,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .page_
 }
 main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
   font-size: 20px;
-  color: #f9df54;
+  color: #fff;
   font-weight: bold;
   margin: 0 5px;
 }
@@ -3944,7 +3958,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     height: 1448px;
     width: 100%;
     overflow: hidden;
-    background-color: #f9df54;
+    background-color: #fff1a5;
     padding: 30px;
   }
   main .page.page_PDF {
@@ -4143,7 +4157,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
     font-size: 70px;
-    color: #f9df54;
+    color: #fff;
     font-weight: bold;
     margin: 0 10px;
   }
@@ -4431,7 +4445,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     position: relative;
     max-width: 1024px;
     width: 100%;
-    background-color: #f9df54;
+    background-color: #fff1a5;
     padding: 30px;
   }
   main .page:after {
@@ -4627,7 +4641,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
     font-size: 70px;
-    color: #f9df54;
+    color: #fff;
     font-weight: bold;
     margin: 0 10px;
   }

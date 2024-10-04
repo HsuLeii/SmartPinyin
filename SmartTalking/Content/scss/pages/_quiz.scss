@@ -59,7 +59,8 @@ main {
         }
 
         .test_area {
-            width: 80%;
+            width: 95%;
+            max-width: 1200px;
             margin: 0px auto;
             display: flex;
             flex-wrap: wrap;
@@ -487,9 +488,17 @@ main {
 
                             .dialogue_avatar {
                                 width: 40px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
                                 
                                 img{
                                     border-radius: 50%;
+                                }
+
+                                .dialogue_avatar_name{
+                                    font-size: 11px;
+                                    margin: 8px auto 0;
                                 }
                             }
 
@@ -872,7 +881,7 @@ main {
 
                         ruby {
                             rt {
-                                font-size: 75%;
+                                font-size: 50%;
 
                                 span {
                                     font-size: 100%;
@@ -1516,6 +1525,7 @@ main {
             }
 
             .test_area {
+                // width: 80%;
                 justify-content: space-between;
 
                 .test_area_left {
@@ -1583,7 +1593,11 @@ main {
                                 padding: 60px 0 0;
 
                                 .dialogue_avatar {
-                                    width: 50px;
+                                    width: 75px;
+
+                                    .dialogue_avatar_name{
+                                        font-size: 12px;
+                                    }
                                 }
 
                                 .dialog_record {
@@ -1604,7 +1618,7 @@ main {
 
                                 .dialog_box {
                                     padding: 15px 20px;
-                                    width: calc(100% - 75px);
+                                    width: calc(100% - 125px);
 
                                     .dialog_box_icon {
                                         width: 50px;
@@ -2026,6 +2040,12 @@ main {
 
                         .dialogue_area {
                             .dialogue_block {
+                                .dialogue_avatar {
+
+                                    .dialogue_avatar_name{
+                                        font-size: 14px;
+                                    }
+                                }
 
                                 .dialog_box {
                                     width: calc(75% - 75px);
