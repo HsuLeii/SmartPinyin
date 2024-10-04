@@ -1391,6 +1391,7 @@ main .decorate_area .robot_hint .robot_hint_text::before {
 }
 main .decorate_area .robot_hint .robot_hint_text p {
   color: #fff;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 576px) {
