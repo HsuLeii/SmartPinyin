@@ -70,6 +70,14 @@ main {
         }
     }
 
+    .page_text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: 40px auto;
+    }
+
     .test_area{
         .starquiz_logo {
             max-width: 350px;
@@ -324,6 +332,12 @@ main {
 
         .link_btn_area {
             margin: 60px auto;
+        }
+
+        .page_text{
+            p{
+                text-align: center;
+            }
         }
     }
 }
