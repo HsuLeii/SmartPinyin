@@ -185,6 +185,9 @@ main {
                                             flex-direction: column;
                                             padding: 10px;
 
+                                            .total_score{
+                                                font-weight: bold;
+                                            }
 
                                             .page_num {
                                                 font-size: 20px;
@@ -645,6 +648,11 @@ main {
                                                 flex-direction: column;
                                                 padding: 52px 10px;
 
+                                                .total_score{
+                                                    font-weight: bold;
+                                                    font-size: 35px;
+                                                }
+
                                                 .page_num {
                                                     font-size: 70px;
                                                     color: $white;
@@ -872,6 +880,9 @@ main {
                                             padding: 15px;
 
                                             p {
+                                                .total_score{
+                                                    font-size: 20px;
+                                                }
 
                                                 .page_num {
                                                     font-size: 40px;
@@ -1021,6 +1032,9 @@ main {
                                         .page_score_content {
 
                                             p {
+                                                .total_score{
+                                                    font-size: 35px;
+                                                }
 
                                                 .page_num {
                                                     font-size: 70px;

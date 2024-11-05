@@ -3799,6 +3799,9 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .page_
   flex-direction: column;
   padding: 10px;
 }
+main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .total_score {
+  font-weight: bold;
+}
 main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
   font-size: 20px;
   color: #fff;
@@ -4155,6 +4158,10 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
     flex-direction: column;
     padding: 52px 10px;
   }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .total_score {
+    font-weight: bold;
+    font-size: 35px;
+  }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
     font-size: 70px;
     color: #fff;
@@ -4306,6 +4313,9 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content {
     padding: 15px;
   }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .total_score {
+    font-size: 20px;
+  }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
     font-size: 40px;
   }
@@ -4389,6 +4399,9 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo {
     width: 550px;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .total_score {
+    font-size: 35px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
     font-size: 70px;
