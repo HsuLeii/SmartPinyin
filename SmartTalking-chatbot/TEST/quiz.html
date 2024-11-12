@@ -13,23 +13,26 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <!-- 之後改成正式網址的連結 -->
-    <meta property="og:image" content="https://hsuleii.github.io/SmartPinyin/SmartTalking-chatbot/Content/image/main/og_image.jpg" />
+    <meta property="og:image"
+        content="https://hsuleii.github.io/SmartPinyin/SmartTalking-chatbot/Content/image/main/og_image.jpg" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="SmartTalking-Mandarin" />
     <!-- 之後改成正式網址的連結 -->
-    <meta name="twitter:image" content="https://hsuleii.github.io/SmartPinyin/SmartTalking-chatbot/Content/image/main/og_image.jpg" />
+    <meta name="twitter:image"
+        content="https://hsuleii.github.io/SmartPinyin/SmartTalking-chatbot/Content/image/main/og_image.jpg" />
     <meta itemprop="name" content="SmartTalking-Mandarin">
     <!-- 之後改成正式網址的連結 -->
-    <meta itemprop="image" content="https://hsuleii.github.io/SmartPinyin/SmartTalking-chatbot/Content/image/main/og_image.jpg">
+    <meta itemprop="image"
+        content="https://hsuleii.github.io/SmartPinyin/SmartTalking-chatbot/Content/image/main/og_image.jpg">
     <link rel="shortcut icon" type="image/x-icon" href="../Content/image/favicon.ico" />
-  
-  
+
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../Content/css/bootstrap-5.1.1.min.css" />
-  
+
     <!-- my core CSS -->
     <link rel="stylesheet" href="../Content/css/SmartTalking-chatbot.css" />
-  </head>
+</head>
 
 <body>
 
@@ -51,7 +54,7 @@
                             </span>
                         </div>
                     </div>
-    
+
                     <div class="dialogue_area">
                         <div class="dialogue_block dialogue_left">
                             <div class="dialogue_avatar">
@@ -137,15 +140,50 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="dialogue_block dialogue_left">
+                            <div class="dialogue_avatar">
+                                <img src="../Content/image/photo/avatar/avatar_00.png" alt="">
+                            </div>
+                            <div class="dialog_box">
+                                <button class="dialog_box_icon">
+                                    <i class="fa-solid fa-play"></i>
+                                </button>
+                                <div class="sound_bar">
+                                    <!-- 播放時class加上"play_animation" -->
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="dialog_box_time">
+                                    <p>00:04</p>
+                                </div>
+                            </div>
+                            <div class="dialog_comments">
+                                <p class="dialog_comments_text">
+                                    <span class="dialog_comments_text_one">
+                                        評語：
+                                    </span>
+                                    <span class="dialog_comments_text_two">
+                                        今天的對話就到這邊，希望你有每個好的一天！你的中文能力很好，對話中使用的詞彙很正確。
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+
+
+
+
                     </div>
-    
+
                     <div class="toolbar_area">
-    
+
                         <div class="btn_icon_area">
                             <button class="btn_icon recording_icon">
                                 <i class="fa-solid fa-microphone"></i>
                             </button>
-    
+
                             <p class="recording_time">
                                 0:12
                             </p>
@@ -184,7 +222,7 @@
             <div class="decorate_line decorate_right">
                 <img src="../Content/image/svg/decorate_right.svg" alt="" srcset="">
             </div>
-    
+
             <div class="decorate_line decorate_left">
                 <img src="../Content/image/svg/decorate_left.svg" alt="" srcset="">
             </div>
@@ -198,8 +236,8 @@
 
     <script>
         $(document).ready(function () {
-        //按鈕功能
-        $(".recording_icon").click(function () {
+            //按鈕功能
+            $(".recording_icon").click(function () {
                 $(this).toggleClass("play");
                 if ($(this).hasClass("play")) {
                     $(this).children().removeClass("fa-microphone");

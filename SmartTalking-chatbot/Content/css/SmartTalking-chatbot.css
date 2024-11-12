@@ -1588,6 +1588,7 @@ main .test_area.quiz_area .quiz_item_area .test_area_content .dialogue_area {
 main .test_area.quiz_area .quiz_item_area .test_area_content .dialogue_area .dialogue_block {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   padding: 70px 0 0;
   position: relative;
 }
@@ -1684,6 +1685,16 @@ main .test_area.quiz_area .quiz_item_area .test_area_content .dialogue_area .dia
 }
 main .test_area.quiz_area .quiz_item_area .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_time {
   color: #314675;
+}
+main .test_area.quiz_area .quiz_item_area .test_area_content .dialogue_area .dialogue_block .dialog_comments {
+  width: 100%;
+  margin: 60px auto 20px;
+}
+main .test_area.quiz_area .quiz_item_area .test_area_content .dialogue_area .dialogue_block .dialog_comments .dialog_comments_text {
+  display: flex;
+}
+main .test_area.quiz_area .quiz_item_area .test_area_content .dialogue_area .dialogue_block .dialog_comments .dialog_comments_text .dialog_comments_text_one {
+  word-break: keep-all;
 }
 main .test_area.quiz_area .quiz_item_area .test_area_content .dialogue_area .dialogue_block.dialogue_left .dialogue_avatar {
   margin: 0 15px 0 0;
@@ -1918,6 +1929,9 @@ main .test_area.quiz_area .quiz_item_area .test_area_content .toolbar_area .btn_
   }
   main .test_area.quiz_area .quiz_item_area .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar .bar:nth-child(4) {
     height: 20px;
+  }
+  main .test_area.quiz_area .quiz_item_area .test_area_content .dialogue_area .dialogue_block .dialog_comments {
+    margin: 20px auto;
   }
   main .test_area.quiz_area .quiz_item_area .test_area_content .dialogue_area .dialogue_block.dialogue_left .dialogue_avatar {
     margin: 0 25px 0 0;

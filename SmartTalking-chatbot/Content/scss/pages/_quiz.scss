@@ -33,6 +33,7 @@ main {
                         .dialogue_block {
                             display: flex;
                             align-items: center;
+                            flex-wrap: wrap;
                             padding: 70px 0 0;
     
                             position: relative;
@@ -146,6 +147,19 @@ main {
     
                                 .dialog_box_time {
                                     color: $main-color;
+                                }
+                            }
+
+                            .dialog_comments{
+                                width: 100%;
+                                margin: 60px auto 20px;
+
+                                .dialog_comments_text{
+                                    display: flex;
+
+                                    .dialog_comments_text_one{
+                                        word-break: keep-all;
+                                    }
                                 }
                             }
     
@@ -458,6 +472,10 @@ main {
                                             }
                                         }
                                     }
+                                }
+
+                                .dialog_comments{
+                                    margin: 20px auto;
                                 }
         
                                 &.dialogue_left {
