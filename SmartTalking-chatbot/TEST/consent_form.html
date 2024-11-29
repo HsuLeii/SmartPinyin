@@ -29,10 +29,10 @@
   
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../Content/css/bootstrap-5.1.1.min.css" />
+    <link rel="stylesheet" href="../Content/css/fontawesome-free-5.7.2-all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <!-- my core CSS -->
-    <!-- <link rel="stylesheet" href="../Content/css/SmartTalking-chatbot.css" /> -->
-
-    <link rel="stylesheet" href="../Content/css/DiagnosisSpeaking.css" />
+    <link rel="stylesheet" href="../Content/css/SmartTalking-chatbot.css" />
   </head>
 
 <body>
@@ -60,17 +60,48 @@
                 </div>
                     
                 <div class="consent_input">
-                        <input type="checkbox" value="remember-me" id="consent_input" class="consent_input_checkbox">
-                        <label for="consent_input">
-                            <p class="consent_input_text">我已理解本測驗的相關事項，並同意進行測驗以供學術研究使用</p>
+                    <div class="consent_input_item agree_consent_input_item">
+                        <input type="checkbox" value="agree_consent" id="agree_consent_input" class="consent_input_checkbox">
+                        <label for="agree_consent_input">
+                            <p class="consent_input_text">
+                                我同意SmartTalking授權同意書<br/>
+                                I agree SmartTalking Authorization and Consent Form                                   
+                            </p>
                         </label>
+                    </div>
+
+                    <div class="consent_input_item">
+                        <input type="checkbox" value="disagree_consent" id="disagree_consent_input" class="consent_input_checkbox">
+                        <label for="disagree_consent_input">
+                            <p class="consent_input_text">
+                                我不同意SmartTalking授權同意書<br/>
+                                I disagree SmartTalking Authorization and Consent Form                                                                     
+                            </p>
+                        </label>
+                    </div>
                 </div>
                 
                 <button class="link_btn_area button_consent" type="button" onclick="location.href='select_page.html'"
                 disabled>
                     <div class="link_btn">
-                        <div class="link_btn_text fa-briefcase">
-                            <p>完成 Send</p>
+                        <div class="link_btn_text">
+                            <p>
+                                我同意上述事項 I agree
+                            </p>
+                        </div>
+    
+                        <div class="link_btn_icon">
+                            <svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>
+                        </div>
+                    </div>
+                </button>
+
+                <button class="link_btn_area button_consent" type="button" onclick="location.href='select_page.html'">
+                    <div class="link_btn">
+                        <div class="link_btn_text">
+                            <p>
+                                我不同意上述事項 I disagree
+                            </p>
                         </div>
     
                         <div class="link_btn_icon">
@@ -94,9 +125,9 @@
             $("header").load("header.html", function () {});
         });
 
-        var checkBox = document.getElementById("consent_input");
+        var checkBox = document.getElementById("agree_consent_input");
 
-        $(".consent_input").click(function () {
+        $(".consent_input_item").click(function () {
             if (checkBox.checked == true) {
                 $(".button_consent").attr('disabled', false);
             } else {
