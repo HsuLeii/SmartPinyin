@@ -2109,6 +2109,14 @@ main .test_area.consent_form_area .consent_input .consent_input_item .consent_in
   text-align: center;
   font-weight: 900;
 }
+main .test_area.consent_form_area .button_consent_area {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px auto;
+}
+main .test_area.consent_form_area .button_consent_area .link_btn_area {
+  margin: 20px auto;
+}
 
 @media screen and (min-width: 500px) {
   main .test_area.consent_form_area .consent_area .consent_content {
@@ -2118,6 +2126,11 @@ main .test_area.consent_form_area .consent_input .consent_input_item .consent_in
 @media screen and (min-width: 768px) {
   main .test_area.consent_form_area .consent_area .consent_content {
     max-height: calc(80vh - 144px - 72px - 68px - 45px);
+  }
+}
+@media screen and (min-width: 992px) {
+  main .test_area.consent_form_area .button_consent_area {
+    margin: 60px auto;
   }
 }
 @media screen and (min-width: 1024px) {
