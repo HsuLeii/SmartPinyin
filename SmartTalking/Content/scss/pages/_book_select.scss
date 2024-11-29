@@ -76,6 +76,32 @@ main {
                     border-radius: 10px;
                     background-color: $white;
 
+                    .book_text_title {
+                        color: $main_color;
+                        margin: 10px 0;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        /*autoprefixer:off*/
+                        -webkit-box-orient: vertical;
+                        // autoprefixer:on
+
+                        .book_icon{
+                            width: 31px;
+                            height: 31px;
+                            display: inline-block;
+                            background-color: $main_color_orange;
+                            text-align: center;
+                            line-height: 31px;
+                            border-radius: 50%;
+
+                            i{
+                                color: $white;
+                            }
+                        }
+                    }
+
                     .book_select_area {
                         display: flex;
                         flex-wrap: wrap;
@@ -136,11 +162,6 @@ main {
                                         color: $white;
                                     }
                                 }
-
-                            }
-
-                            p {
-                                margin: 5px 0;
                             }
                         }
                     }
@@ -186,6 +207,41 @@ main {
     }
 }
 
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-button-next, .swiper-button-prev{
+    position: absolute;
+
+    &:hover{
+        &::before{
+            display: none;
+        }
+    }
+  }
+
+  .swiper-button-next{
+    &::after{
+        content: 'next';
+    }
+  }
+
+  .swiper-button-prev{
+    &::after{
+        content: 'prev';
+    }
+  }
 
 @media screen and (min-width: 500px) {
     main {

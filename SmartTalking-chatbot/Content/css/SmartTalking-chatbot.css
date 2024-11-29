@@ -2043,4 +2043,80 @@ main .test_area.questionnaire_area .questionnaire_item_area .questionnaire_conte
   main .test_area.questionnaire_area .questionnaire_item_area .questionnaire_content .questionnaire_content_item .input_area .radio-inline {
     width: auto;
   }
+}
+main .test_area.consent_form_area .consent_area .consent_content {
+  max-height: calc(80vh - 65px - 90px - 55px - 45px);
+  overflow-y: scroll;
+  padding: 15px;
+  border: 1px solid #314675;
+}
+main .test_area.consent_form_area .consent_input {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+main .test_area.consent_form_area .consent_input .consent_input_checkbox {
+  position: absolute;
+  opacity: 0;
+}
+main .test_area.consent_form_area .consent_input .consent_input_checkbox + label {
+  color: #20221f;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+main .test_area.consent_form_area .consent_input .consent_input_checkbox + label:before {
+  content: "";
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 1px solid #20221f;
+}
+main .test_area.consent_form_area .consent_input .consent_input_checkbox + label .consent_input_text {
+  width: calc(100% - 20px - 10px);
+}
+main .test_area.consent_form_area .consent_input .consent_input_checkbox:hover + label {
+  color: #314675;
+}
+main .test_area.consent_form_area .consent_input .consent_input_checkbox:hover + label:before {
+  border: 1px solid #314675;
+}
+main .test_area.consent_form_area .consent_input .consent_input_checkbox:checked + label {
+  color: #314675;
+}
+main .test_area.consent_form_area .consent_input .consent_input_checkbox:checked + label:before {
+  border: 1px solid #314675;
+  background-color: #314675;
+}
+main .test_area.consent_form_area .consent_input .consent_input_checkbox:checked + label:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  position: absolute;
+  color: #fff;
+  width: 20px;
+  font-size: 15px;
+  text-align: center;
+}
+
+@media screen and (min-width: 500px) {
+  main .test_area.consent_form_area .consent_area .consent_content {
+    max-height: calc(80vh - 65px - 60px - 55px - 60px);
+  }
+}
+@media screen and (min-width: 768px) {
+  main .test_area.consent_form_area .consent_area .consent_content {
+    max-height: calc(80vh - 144px - 72px - 68px - 45px);
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .test_area.consent_form_area .consent_area .consent_content {
+    max-height: calc(80vh - 65px - 90px - 55px - 45px);
+  }
 }/*# sourceMappingURL=SmartTalking-chatbot.css.map */

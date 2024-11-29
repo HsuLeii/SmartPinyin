@@ -3070,10 +3070,6 @@ main input[name=playRange0]:before {
     width: calc(65% - 10px);
     margin: 35px 0 35px calc(35% - 43px);
   }
-  main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content {
-    display: flex;
-    flex-wrap: wrap;
-  }
   main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .test_area_content_img {
     display: block;
     width: calc(25% - 10px);
@@ -3215,6 +3211,28 @@ main .quiz_page .test_area .test_area_right .test_area_content {
   border-radius: 10px;
   background-color: #fff;
 }
+main .quiz_page .test_area .test_area_right .test_area_content .book_text_title {
+  color: #314675;
+  margin: 10px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /*autoprefixer:off*/
+  -webkit-box-orient: vertical;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_text_title .book_icon {
+  width: 31px;
+  height: 31px;
+  display: inline-block;
+  background-color: #db600e;
+  text-align: center;
+  line-height: 31px;
+  border-radius: 50%;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_text_title .book_icon i {
+  color: #fff;
+}
 main .quiz_page .test_area .test_area_right .test_area_content .book_select_area {
   display: flex;
   flex-wrap: wrap;
@@ -3268,9 +3286,6 @@ main .quiz_page .test_area .test_area_right .test_area_content .book_select_area
 main .quiz_page .test_area .test_area_right .test_area_content .book_select_area .book_select_item .book_text_title .book_icon i {
   color: #fff;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .book_select_area .book_select_item p {
-  margin: 5px 0;
-}
 main .main_footer {
   margin: 40px 0 0;
 }
@@ -3300,6 +3315,35 @@ main .main_footer .footer_logo .footer_svg_area {
 }
 main .main_footer .footer_logo .footer_svg_area .footer_svg {
   fill: #314675;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  position: absolute;
+}
+.swiper-button-next:hover::before, .swiper-button-prev:hover::before {
+  display: none;
+}
+
+.swiper-button-next::after {
+  content: "next";
+}
+
+.swiper-button-prev::after {
+  content: "prev";
 }
 
 @media screen and (min-width: 500px) {
