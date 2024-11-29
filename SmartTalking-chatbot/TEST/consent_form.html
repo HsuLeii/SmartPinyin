@@ -82,7 +82,7 @@
                 </div>
                 
                 <div class="button_consent_area">
-                    <button class="link_btn_area button_consent" type="button" onclick="location.href='select_page.html'"
+                    <button class="link_btn_area button_consent agree_button_consent" type="button" onclick="location.href='select_page.html'"
                     disabled>
                         <div class="link_btn">
                             <div class="link_btn_text">
@@ -131,9 +131,9 @@
 
         $(".consent_input_item").click(function () {
             if (checkBox.checked == true) {
-                $(".button_consent").attr('disabled', false);
+                $(".agree_button_consent").attr('disabled', false);
             } else {
-                $(".button_consent").attr('disabled', true);
+                $(".agree_button_consent").attr('disabled', true);
             }
         });
     </script>
