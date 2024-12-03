@@ -2361,7 +2361,7 @@ main .quiz_page .test_area.test_area_quiz .test_area_left .test_area_left_tittle
   margin: 0;
 }
 main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content {
-  padding: 15px 0;
+  padding: 15px 20px;
 }
 main .quiz_page .test_area.test_area_quiz .test_area_right .test_area_content .test_area_content_img {
   display: flex;
@@ -2761,9 +2761,6 @@ main input[name=playRange0]:before {
     display: flex;
     justify-content: center;
     border-right: 1px solid #20221f;
-  }
-  main .quiz_page .test_area .test_area_right .test_area_right_tittle {
-    margin: 15px 20px;
   }
   main .toolbar_area.toolbar_dialogue_area .dialogue_btn_item {
     width: 45%;
@@ -3211,9 +3208,18 @@ main .quiz_page .test_area .test_area_right .test_area_content {
   border-radius: 10px;
   background-color: #fff;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .book_text_title {
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item {
+  margin: 40px auto 60px;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item .book_classification {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: left;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item .book_classification .book_classification_title {
   color: #314675;
-  margin: 10px 0;
+  margin: 5px 0;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -3221,7 +3227,7 @@ main .quiz_page .test_area .test_area_right .test_area_content .book_text_title 
   /*autoprefixer:off*/
   -webkit-box-orient: vertical;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .book_text_title .book_icon {
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item .book_classification .book_classification_title .book_icon {
   width: 31px;
   height: 31px;
   display: inline-block;
@@ -3230,43 +3236,53 @@ main .quiz_page .test_area .test_area_right .test_area_content .book_text_title 
   line-height: 31px;
   border-radius: 50%;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .book_text_title .book_icon i {
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item .book_classification .book_classification_title .book_icon i {
   color: #fff;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .book_select_area {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item .book_classification p {
+  margin: 0 0 0 8px;
+  padding: 0 8px 0 0;
+  border-right: 1px solid;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .book_select_area .book_select_item {
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item .book_classification p:nth-last-child(1) {
+  border-right: 0px;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item .swiper_area {
   width: 100%;
-  margin: 15px 1.25%;
+  position: relative;
+  margin: 60px 0 0 0;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item .swiper_area .book_select_item {
+  width: 100%;
   border: 2px solid #ddd;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  padding: 15px 15px;
+  padding: 15px;
   border-radius: 10px;
   color: #314675;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .book_select_area .book_select_item:hover {
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item .swiper_area .book_select_item:hover {
   border: 2px solid #4dbcbc;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .book_select_area .book_select_item:hover .book_text_title {
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item .swiper_area .book_select_item:hover .book_text .book_text_title {
   color: #4dbcbc;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .book_select_area .book_select_item .book_image {
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item .swiper_area .book_select_item:hover .book_text .book_text_course {
+  color: #4dbcbc;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item .swiper_area .book_select_item .book_image {
   margin: 0 auto 15px;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .book_select_area .book_select_item .book_image img {
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item .swiper_area .book_select_item .book_image img {
   border-radius: 10px;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .book_select_area .book_select_item .book_text {
-  color: #20221f;
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item .swiper_area .book_select_item .book_text {
+  text-align: left;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .book_select_area .book_select_item .book_text_title {
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item .swiper_area .book_select_item .book_text .book_text_title {
   color: #314675;
-  margin: 10px 0;
+  margin: 5px 0;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -3274,17 +3290,8 @@ main .quiz_page .test_area .test_area_right .test_area_content .book_select_area
   /*autoprefixer:off*/
   -webkit-box-orient: vertical;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .book_select_area .book_select_item .book_text_title .book_icon {
-  width: 31px;
-  height: 31px;
-  display: inline-block;
-  background-color: #db600e;
-  text-align: center;
-  line-height: 31px;
-  border-radius: 50%;
-}
-main .quiz_page .test_area .test_area_right .test_area_content .book_select_area .book_select_item .book_text_title .book_icon i {
-  color: #fff;
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item .swiper_area .book_select_item .book_text .book_text_course {
+  color: #20221f;
 }
 main .main_footer {
   margin: 40px 0 0;
@@ -3319,10 +3326,9 @@ main .main_footer .footer_logo .footer_svg_area .footer_svg {
 
 .swiper {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
-
-.swiper-slide {
+.swiper .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -3331,45 +3337,69 @@ main .main_footer .footer_logo .footer_svg_area .footer_svg {
   align-items: center;
 }
 
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
   position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #314675;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  margin-top: 0;
+  transform: translate(0, -150%);
 }
-.swiper-button-next:hover::before, .swiper-button-prev:hover::before {
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 15px;
+}
+.swiper-button-next:hover::before,
+.swiper-button-prev:hover::before {
   display: none;
 }
 
+.swiper-button-next {
+  right: 10px;
+  left: auto;
+}
 .swiper-button-next::after {
   content: "next";
 }
 
+.swiper-button-prev {
+  right: 10px;
+  left: auto;
+  transform: translate(calc(-100% - 10px), -150%);
+}
 .swiper-button-prev::after {
   content: "prev";
 }
 
-@media screen and (min-width: 500px) {
-  main .quiz_page .test_area .test_area_right .test_area_content .book_select_area .book_select_item {
-    width: 47.5%;
-  }
-}
 @media screen and (min-width: 768px) {
   main .quiz_page .test_area.book_select .student_data_area {
     margin: 0 auto 40px;
   }
-  main .quiz_page .test_area.book_select .test_area_right .test_area_content .book_select_area .book_select_item .book_text_title .book_icon {
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
+  main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item .swiper_area {
+    margin: 80px 0 0 0;
   }
   main .main_footer .footer_radar img {
     width: 80px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 992px) {
   main .quiz_page .test_area {
     justify-content: space-between;
-  }
-  main .quiz_page .test_area.book_select .test_area_right .test_area_content .book_select_area .book_select_item {
-    width: 30.83333%;
   }
   main .quiz_page .test_area .test_area_right {
     width: 70%;
@@ -3394,29 +3424,6 @@ main .main_footer .footer_logo .footer_svg_area .footer_svg {
   main .quiz_page .test_area.book_select .test_area_right .test_area_content {
     background-color: transparent;
     border: 0px;
-  }
-  main .quiz_page .test_area.book_select .test_area_right .test_area_content .book_select_area {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-  }
-  main .quiz_page .test_area.book_select .test_area_right .test_area_content .book_select_area .book_select_item .book_image {
-    margin: 0 auto 15px;
-  }
-  main .quiz_page .test_area.book_select .test_area_right .test_area_content .book_select_area .book_select_item .book_image img {
-    border-radius: 10px;
-  }
-  main .quiz_page .test_area.book_select .test_area_right .test_area_content .book_select_area .book_select_item p {
-    margin: 5px 0;
-  }
-  main .quiz_page .test_area .test_area_right .test_area_content .book_select_area .book_select_item {
-    width: 30.83333%;
-  }
-}
-@media screen and (min-width: 1400px) {
-  main .quiz_page .test_area.book_select .test_area_right .test_area_content .book_select_area .book_select_item {
-    width: 22%;
-    margin: 15px 1.5%;
   }
 }
 @media screen and (min-width: 1600px) {

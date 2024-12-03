@@ -931,7 +931,7 @@ main {
 
                 .test_area_right {
                     .test_area_content {
-                        padding: 15px 0;
+                        padding: 15px 20px;
 
                         .test_area_content_img {
                             display: flex;
@@ -1474,15 +1474,6 @@ main {
                                 border-right: 1px solid $main_color_grey;
                             }
                         }
-                    }
-
-
-                }
-
-                .test_area_right {
-
-                    .test_area_right_tittle {
-                        margin: 15px 20px;
                     }
                 }
             }
