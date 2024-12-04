@@ -68,124 +68,229 @@ main {
                 }
             }
 
-            .test_area_right {
+            .student_data_area {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                background-color: $white;
+                margin: 0 auto 20px;
+                padding: 20px;
+                border-radius: 10px;
 
+                .avatar_img {
+                    background-color: $main_color;
+                    width: calc(60px * 1.7);
+                    height: calc(60px * 1.7);
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 10px;
+
+                    .avatar_text {
+                        h4 {
+                            font-size: 60px;
+                            color: $white;
+                        }
+                    }
+                }
+
+                .student_data {
+                    width: calc(100% - 60px * 1.7);
+                    width: 100%;
+                    margin: 10px;
+
+                    .student_data_tittle {
+                        color: $main_color;
+                        margin: 0 10px;
+                    }
+
+                    .student_data_content {
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        .student_data_content_left,
+                        .student_data_content_right {
+                            margin: 0 10px;
+                        }
+
+                        .student_data_item {
+                            display: flex;
+                            flex-wrap: wrap;
+                            margin: 5px 0;
+
+                            p {
+                                word-wrap: break-word;
+                                word-break: break-all;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .test_area_right {
+                
                 .test_area_content {
                     background-color: transparent;
                     border: 0px;
                     border-radius: 10px;
                     background-color: $white;
+                    padding: 15px 20px;
 
-                    .book_swiper_item{
-                        margin: 40px auto 60px;
+                    .book_swiper_item_area{
+                        display: flex;
+                        .book_swiper_marker{
+                            position: relative;
+                            padding: 40px 0 60px;
+                            margin: 0 auto;
 
-                        .book_classification{
-                            display: flex;
-                            flex-wrap: wrap;
-                            align-items: center;
-                            text-align: left;
-    
-                            .book_classification_title {
-                                color: $main_color;
+                            .book_swiper_marker_inner{
                                 margin: 5px 0;
-                                overflow: hidden;
-                                text-overflow: ellipsis;
-                                display: -webkit-box;
-                                -webkit-line-clamp: 2;
-                                /*autoprefixer:off*/
-                                -webkit-box-orient: vertical;
-                                // autoprefixer:on
-    
-                                .book_icon {
-                                    width: 31px;
-                                    height: 31px;
-                                    display: inline-block;
-                                    background-color: $main_color_orange;
-                                    text-align: center;
-                                    line-height: 31px;
-                                    border-radius: 50%;
-    
-                                    i {
-                                        color: $white;
-                                    }
+                                background-color: $main-color;
+                                width: calc(22px * 1.5);
+                                text-align: center;
+                                border-radius: 50%;
+                                position: relative;
+                                z-index: 1;
+
+                                h4{
+                                    color: $white;
                                 }
                             }
-    
-                            p {
-                                margin: 0 0 0 8px;
-                                padding: 0 8px 0 0;
-                                border-right: 1px solid;
-    
-                                &:nth-last-child(1) {
-                                    border-right: 0px;
+
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                width: 1.5px;
+                                background: $main-color;
+                                top: 45px;
+                                bottom: -60px;
+                                left: 50%;
+                                transform: translate(-50%, 0px);
+                            }
+
+                            
+                        }
+
+                        &:nth-last-child(1){
+                            .book_swiper_marker{
+                                &::before{
+                                    bottom: 60px;
                                 }
                             }
                         }
+
+                        .book_swiper_item{
+                            margin: 40px 15px 60px;
+                            width: calc(100% - calc(22px * 1.5) - 30px);
     
-                        .swiper_area {
-                            width: 100%;
-                            position: relative;
-                            margin: 60px 0 0 0;
-    
-                            .book_select_item {
-                                width: 100%;
-                                // margin: 15px calc(2.5% / 2);
-                                border: 2px solid $grey;
-                                border-radius: 10px;
+                            .book_classification{
                                 display: flex;
-                                flex-direction: column;
-                                padding: 15px;
-                                border-radius: 10px;
-                                color: $main_color;
+                                flex-wrap: wrap;
+                                align-items: center;
+                                text-align: left;
         
-                                &:hover {
-                                    border: 2px solid $bright_main_color;
-    
+                                .book_classification_title {
+                                    color: $main_color;
+                                    margin: 5px 0;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 2;
+                                    /*autoprefixer:off*/
+                                    -webkit-box-orient: vertical;
+                                    // autoprefixer:on
+        
+                                    .book_icon {
+                                        width: 31px;
+                                        height: 31px;
+                                        display: inline-block;
+                                        background-color: $main_color_orange;
+                                        text-align: center;
+                                        line-height: 31px;
+                                        border-radius: 50%;
+        
+                                        i {
+                                            color: $white;
+                                        }
+                                    }
+                                }
+        
+                                p {
+                                    margin: 0 0 0 8px;
+                                    padding: 0 8px 0 0;
+                                    border-right: 1px solid;
+        
+                                    &:nth-last-child(1) {
+                                        border-right: 0px;
+                                    }
+                                }
+                            }
+        
+                            .swiper_area {
+                                width: 100%;
+                                position: relative;
+                                margin: 60px 0 0 0;
+        
+                                .book_select_item {
+                                    width: 100%;
+                                    // margin: 15px calc(2.5% / 2);
+                                    border: 2px solid $grey;
+                                    border-radius: 10px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    padding: 15px;
+                                    border-radius: 10px;
+                                    color: $main_color;
+            
+                                    &:hover {
+                                        border: 2px solid $bright_main_color;
+        
+                                        .book_text{
+                                            .book_text_title {
+                                                color: $bright_main_color;
+                                            }
+        
+                                            .book_text_course{
+                                                color: $bright_main_color;
+                                            }
+                                        }
+            
+                                        
+                                    }
+            
+                                    .book_image {
+                                        margin: 0 auto 15px;
+            
+                                        img {
+                                            border-radius: 10px;
+                                        }
+                                    }
+            
                                     .book_text{
+                                        text-align: left;
+            
                                         .book_text_title {
-                                            color: $bright_main_color;
+                                            color: $main_color;
+                                            margin: 5px 0;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            display: -webkit-box;
+                                            -webkit-line-clamp: 2;
+                                            /*autoprefixer:off*/
+                                            -webkit-box-orient: vertical;
+                                            // autoprefixer:on
                                         }
-    
-                                        .book_text_course{
-                                            color: $bright_main_color;
+            
+                                        .book_text_course {
+                                            color: $main_color_grey;
                                         }
-                                    }
-        
-                                    
-                                }
-        
-                                .book_image {
-                                    margin: 0 auto 15px;
-        
-                                    img {
-                                        border-radius: 10px;
-                                    }
-                                }
-        
-                                .book_text{
-                                    text-align: left;
-        
-                                    .book_text_title {
-                                        color: $main_color;
-                                        margin: 5px 0;
-                                        overflow: hidden;
-                                        text-overflow: ellipsis;
-                                        display: -webkit-box;
-                                        -webkit-line-clamp: 2;
-                                        /*autoprefixer:off*/
-                                        -webkit-box-orient: vertical;
-                                        // autoprefixer:on
-                                    }
-        
-                                    .book_text_course {
-                                        color: $main_color_grey;
                                     }
                                 }
                             }
                         }
                     }
-
-                    
 
                     // .book_select_area {
                     //     display: flex;
@@ -401,13 +506,30 @@ main {
                     }
                 }
 
-                .test_area_right {
+                .student_data_area {
+                    margin: 0 auto 40px;
+                }
 
+                .test_area_right {
+                    
                     .test_area_content {
 
-                        .book_swiper_item{
-                            .swiper_area{
-                                margin: 80px 0 0 0;
+                        .book_swiper_item_area{
+                            .book_swiper_marker{
+                                .book_swiper_marker_inner{
+                                    width: calc(35px * 1.5);
+
+                                    h4{
+                                        font-size: 35px;
+                                    }
+                                }
+                            }
+
+                            .book_swiper_item{
+                                width: calc(100% - calc(35px * 1.5) - 30px);
+                                .swiper_area{
+                                    margin: 80px 0 0 0;
+                                }
                             }
                         }
                     }
@@ -458,7 +580,7 @@ main {
                 }
 
                 .test_area_right {
-                    width: 70%;
+                    width: 100%;
 
                     .test_area_right_nav {
                         margin: 0 auto 20px;
@@ -491,6 +613,18 @@ main {
                         .student_data {
                             width: calc(100% - 60px * 1.7 - 40px);
                         }
+                    }
+                }
+
+                .student_data_area {
+                    .student_data {
+                        width: calc(100% - 60px * 1.7 - 40px);
+                    }
+                }
+
+                .test_area_right{
+                    .test_area_content{
+                        
                     }
                 }
             }
@@ -535,6 +669,36 @@ main {
                         }
                     }
                 }
+
+                .test_area_right {
+
+                    .test_area_content {
+
+                        .book_swiper_item_area{
+                            .book_swiper_marker{
+    
+                                .book_swiper_marker_inner{
+                                    width: calc(40px * 1.5);
+    
+                                    h4{
+                                        font-size: 40px;
+                                    }
+                                }
+                            }
+                            .book_swiper_item{
+                                width: calc(100% - calc(40px * 1.5) - 30px);
+
+                                .book_classification{
+                                    width: calc(100% - 110px);
+                                }
+    
+                                .swiper_area {
+                                    margin: 40px 0 0 0;
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
             .test_area {
@@ -555,6 +719,16 @@ main {
         }
 
     }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+    transform: translate(0, -200%);
+}
+
+.swiper-button-prev {
+    transform: translate(calc(-100% - 10px), -200%);
+}
+
 }
 
 @media screen and (min-width: 1400px) {

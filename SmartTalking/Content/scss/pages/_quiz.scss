@@ -59,8 +59,8 @@ main {
         }
 
         .test_area {
-            width: 95%;
-            max-width: 1200px;
+            // width: 95%;
+            // max-width: 1200px;
             margin: 0px auto;
             display: flex;
             flex-wrap: wrap;
@@ -1977,8 +1977,8 @@ main {
                 &.test_area_quiz {
                     .test_area_right {
                         .test_area_content {
-                            // display: flex;
-                            // flex-wrap: wrap;
+                            display: flex;
+                            flex-wrap: wrap;
 
                             .test_area_content_img {
                                 display: block;
