@@ -2156,13 +2156,13 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .d
   background-color: #ffc000;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_text .dialog_box_score.general img {
-  background-color: #00b050;
+  background-color: #ffc000;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_text .dialog_box_score.bad i {
   background-color: #ff0000;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_text .dialog_box_score.bad img {
-  background-color: #00b050;
+  background-color: #ff0000;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .sound_bar {
   height: 20px;
