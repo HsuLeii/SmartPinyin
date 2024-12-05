@@ -3285,11 +3285,59 @@ main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item
   content: "";
   position: absolute;
   width: 1.5px;
-  background: #314675;
+  background-color: #314675;
   top: 45px;
   bottom: -60px;
   left: 50%;
   transform: translate(-50%, 0px);
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_marker.one_swiper_marker .book_swiper_marker_inner {
+  background-color: #f2cb4a;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_marker.one_swiper_marker::before {
+  background-color: #f2cb4a;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_marker.two_swiper_marker .book_swiper_marker_inner {
+  background-color: #86ba70;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_marker.two_swiper_marker::before {
+  background-color: #86ba70;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_marker.three_swiper_marker .book_swiper_marker_inner {
+  background-color: #f6ada6;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_marker.three_swiper_marker::before {
+  background-color: #f6ada6;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_marker.four_swiper_marker .book_swiper_marker_inner {
+  background-color: #b1aad3;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_marker.four_swiper_marker::before {
+  background-color: #b1aad3;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_marker.five_swiper_marker .book_swiper_marker_inner {
+  background-color: #f3a978;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_marker.five_swiper_marker::before {
+  background-color: #f3a978;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_marker.six_swiper_marker .book_swiper_marker_inner {
+  background-color: #95c7ec;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_marker.six_swiper_marker::before {
+  background-color: #95c7ec;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_marker.seven_swiper_marker .book_swiper_marker_inner {
+  background-color: #b89b7b;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_marker.seven_swiper_marker::before {
+  background-color: #b89b7b;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_marker.eight_swiper_marker .book_swiper_marker_inner {
+  background-color: #d89cb6;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_marker.eight_swiper_marker::before {
+  background-color: #d89cb6;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area:nth-last-child(1) .book_swiper_marker::before {
   bottom: 60px;
@@ -3445,6 +3493,54 @@ main .main_footer .footer_logo .footer_svg_area .footer_svg {
 .swiper-button-next:hover::before,
 .swiper-button-prev:hover::before {
   display: none;
+}
+.swiper-button-next.one_swiper_next,
+.swiper-button-next .one_swiper_prev,
+.swiper-button-prev.one_swiper_next,
+.swiper-button-prev .one_swiper_prev {
+  background-color: #f2cb4a;
+}
+.swiper-button-next.two_swiper_next,
+.swiper-button-next .two_swiper_prev,
+.swiper-button-prev.two_swiper_next,
+.swiper-button-prev .two_swiper_prev {
+  background-color: #86ba70;
+}
+.swiper-button-next.three_swiper_next,
+.swiper-button-next .three_swiper_prev,
+.swiper-button-prev.three_swiper_next,
+.swiper-button-prev .three_swiper_prev {
+  background-color: #f6ada6;
+}
+.swiper-button-next.four_swiper_next,
+.swiper-button-next .four_swiper_prev,
+.swiper-button-prev.four_swiper_next,
+.swiper-button-prev .four_swiper_prev {
+  background-color: #b1aad3;
+}
+.swiper-button-next.five_swiper_next,
+.swiper-button-next .five_swiper_prev,
+.swiper-button-prev.five_swiper_next,
+.swiper-button-prev .five_swiper_prev {
+  background-color: #f3a978;
+}
+.swiper-button-next.six_swiper_next,
+.swiper-button-next .six_swiper_prev,
+.swiper-button-prev.six_swiper_next,
+.swiper-button-prev .six_swiper_prev {
+  background-color: #95c7ec;
+}
+.swiper-button-next.seven_swiper_next,
+.swiper-button-next .seven_swiper_prev,
+.swiper-button-prev.seven_swiper_next,
+.swiper-button-prev .seven_swiper_prev {
+  background-color: #b89b7b;
+}
+.swiper-button-next.eight_swiper_next,
+.swiper-button-next .eight_swiper_prev,
+.swiper-button-prev.eight_swiper_next,
+.swiper-button-prev .eight_swiper_prev {
+  background-color: #d89cb6;
 }
 
 .swiper-button-next {

@@ -163,14 +163,92 @@ main {
                                 content: "";
                                 position: absolute;
                                 width: 1.5px;
-                                background: $main-color;
+                                background-color: $main-color;
                                 top: 45px;
                                 bottom: -60px;
                                 left: 50%;
                                 transform: translate(-50%, 0px);
                             }
 
-                            
+                            &.one_swiper_marker{
+                                .book_swiper_marker_inner{
+                                    background-color: $color_one;
+                                }
+
+                                &::before{
+                                    background-color: $color_one;
+                                }
+                            }
+
+                            &.two_swiper_marker{
+                                .book_swiper_marker_inner{
+                                    background-color: $color_two;
+                                }
+
+                                &::before{
+                                    background-color: $color_two;
+                                }
+                            }
+
+                            &.three_swiper_marker{
+                                .book_swiper_marker_inner{
+                                    background-color: $color_three;
+                                }
+
+                                &::before{
+                                    background-color: $color_three;
+                                }
+                            }
+
+                            &.four_swiper_marker{
+                                .book_swiper_marker_inner{
+                                    background-color: $color_four;
+                                }
+
+                                &::before{
+                                    background-color: $color_four;
+                                }
+                            }
+
+                            &.five_swiper_marker{
+                                .book_swiper_marker_inner{
+                                    background-color: $color_five;
+                                }
+
+                                &::before{
+                                    background-color: $color_five;
+                                }
+                            }
+
+                            &.six_swiper_marker{
+                                .book_swiper_marker_inner{
+                                    background-color: $color_six;
+                                }
+
+                                &::before{
+                                    background-color: $color_six;
+                                }
+                            }
+
+                            &.seven_swiper_marker{
+                                .book_swiper_marker_inner{
+                                    background-color: $color_seven;
+                                }
+
+                                &::before{
+                                    background-color: $color_seven;
+                                }
+                            }
+
+                            &.eight_swiper_marker{
+                                .book_swiper_marker_inner{
+                                    background-color: $color_eight;
+                                }
+
+                                &::before{
+                                    background-color: $color_eight;
+                                }
+                            }
                         }
 
                         &:nth-last-child(1){
@@ -405,7 +483,7 @@ main {
     .swiper-slide {
         text-align: center;
         font-size: 18px;
-        background: #fff;
+        background: $white;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -434,6 +512,46 @@ main {
         &::before {
             display: none;
         }
+    }
+
+    &.one_swiper_next,
+    .one_swiper_prev{
+        background-color: $color_one;
+    }
+
+    &.two_swiper_next,
+    .two_swiper_prev{
+        background-color: $color_two;
+    }
+
+    &.three_swiper_next,
+    .three_swiper_prev{
+        background-color: $color_three;
+    }
+
+    &.four_swiper_next,
+    .four_swiper_prev{
+        background-color: $color_four;
+    }
+
+    &.five_swiper_next,
+    .five_swiper_prev{
+        background-color: $color_five;
+    }
+
+    &.six_swiper_next,
+    .six_swiper_prev{
+        background-color: $color_six;
+    }
+
+    &.seven_swiper_next,
+    .seven_swiper_prev{
+        background-color: $color_seven;
+    }
+
+    &.eight_swiper_next,
+    .eight_swiper_prev{
+        background-color: $color_eight;
     }
 }
 
