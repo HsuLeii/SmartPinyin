@@ -2084,6 +2084,12 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .d
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_record .dialog_box_icon:hover {
   transform: scale(1.05);
 }
+main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_record .dialog_box_icon:disabled {
+  background-color: #ddd;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_record .dialog_box_icon:disabled:hover {
+  transform: scale(1);
+}
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box {
   display: flex;
   align-items: center;
@@ -2114,6 +2120,13 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .d
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_icon:hover {
   transform: translate(0, calc(100% + 10px)) scale(1.05);
+}
+main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_icon:disabled {
+  background-color: #ddd;
+  border: 1px solid #ddd;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_icon:disabled:hover {
+  transform: scale(1);
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box::before {
   content: "";

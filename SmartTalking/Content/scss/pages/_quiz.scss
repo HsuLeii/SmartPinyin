@@ -525,6 +525,14 @@ main {
                                     &:hover {
                                         transform: scale(1.05);
                                     }
+
+                                    &:disabled{
+                                        background-color: $grey;
+
+                                        &:hover {
+                                            transform: scale(1);
+                                        }
+                                    }
                                 }
 
                             }
@@ -559,6 +567,15 @@ main {
 
                                     &:hover {
                                         transform: translate(0, calc(100% + 10px)) scale(1.05);
+                                    }
+
+                                    &:disabled{
+                                        background-color: $grey;
+                                        border: 1px solid $grey;
+
+                                        &:hover {
+                                            transform: scale(1);
+                                        }
                                     }
                                 }
 
