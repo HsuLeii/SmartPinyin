@@ -1695,9 +1695,10 @@ main {
   /* 播放完畢時，100%進度顯示 */
 }
 main .quiz_book_bg {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: -1;
   width: 100%;
   height: 100%;
@@ -3340,10 +3341,11 @@ main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item
   background-color: #d89cb6;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area:nth-last-child(1) .book_swiper_marker::before {
-  bottom: 60px;
+  bottom: 80px;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item {
-  margin: 40px 15px 60px;
+  position: relative;
+  margin: 40px 15px 100px;
   width: calc(100% - 33px - 30px);
 }
 main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item .book_classification {
@@ -3387,24 +3389,26 @@ main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item
   position: relative;
   margin: 60px 0 0 0;
 }
-main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item .swiper_area .book_select_item {
-  width: 100%;
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item .swiper_area .swiper-slide {
   border: 2px solid #ddd;
   border-radius: 10px;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item .swiper_area .swiper-slide:hover {
+  border: 2px solid #4dbcbc;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item .swiper_area .swiper-slide:hover .book_select_item .book_text .book_text_title {
+  color: #4dbcbc;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item .swiper_area .swiper-slide:hover .book_select_item .book_text .book_text_course {
+  color: #4dbcbc;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item .swiper_area .book_select_item {
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 15px;
   border-radius: 10px;
   color: #314675;
-}
-main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item .swiper_area .book_select_item:hover {
-  border: 2px solid #4dbcbc;
-}
-main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item .swiper_area .book_select_item:hover .book_text .book_text_title {
-  color: #4dbcbc;
-}
-main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item .swiper_area .book_select_item:hover .book_text .book_text_course {
-  color: #4dbcbc;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item .swiper_area .book_select_item .book_image {
   margin: 0 auto 15px;
@@ -3427,6 +3431,43 @@ main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item
 }
 main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item .swiper_area .book_select_item .book_text .book_text_course {
   color: #20221f;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item.book_one_swiper_item::after {
+  background-color: #f2cb4a;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item.book_two_swiper_item::after {
+  background-color: #86ba70;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item.book_three_swiper_item::after {
+  background-color: #f6ada6;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item.book_four_swiper_item::after {
+  background-color: #b1aad3;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item.book_five_swiper_item::after {
+  background-color: #f3a978;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item.book_six_swiper_item::after {
+  background-color: #95c7ec;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item.book_seven_swiper_item::after {
+  background-color: #b89b7b;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item.book_eight_swiper_item {
+  margin: 40px 15px 140px;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item.book_eight_swiper_item::after {
+  background-color: #d89cb6;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 30px);
+  height: calc(50% + 60px);
+  bottom: 0px;
+  left: 0;
+  transform: translate(-15px, 60px);
+  border-radius: 0 0 10px 10px;
 }
 main .main_footer {
   margin: 40px 0 0;
@@ -3494,52 +3535,44 @@ main .main_footer .footer_logo .footer_svg_area .footer_svg {
 .swiper-button-prev:hover::before {
   display: none;
 }
-.swiper-button-next.one_swiper_next,
-.swiper-button-next .one_swiper_prev,
+.swiper-button-next.one_swiper_next, .swiper-button-next.one_swiper_prev,
 .swiper-button-prev.one_swiper_next,
-.swiper-button-prev .one_swiper_prev {
+.swiper-button-prev.one_swiper_prev {
   background-color: #f2cb4a;
 }
-.swiper-button-next.two_swiper_next,
-.swiper-button-next .two_swiper_prev,
+.swiper-button-next.two_swiper_next, .swiper-button-next.two_swiper_prev,
 .swiper-button-prev.two_swiper_next,
-.swiper-button-prev .two_swiper_prev {
+.swiper-button-prev.two_swiper_prev {
   background-color: #86ba70;
 }
-.swiper-button-next.three_swiper_next,
-.swiper-button-next .three_swiper_prev,
+.swiper-button-next.three_swiper_next, .swiper-button-next.three_swiper_prev,
 .swiper-button-prev.three_swiper_next,
-.swiper-button-prev .three_swiper_prev {
+.swiper-button-prev.three_swiper_prev {
   background-color: #f6ada6;
 }
-.swiper-button-next.four_swiper_next,
-.swiper-button-next .four_swiper_prev,
+.swiper-button-next.four_swiper_next, .swiper-button-next.four_swiper_prev,
 .swiper-button-prev.four_swiper_next,
-.swiper-button-prev .four_swiper_prev {
+.swiper-button-prev.four_swiper_prev {
   background-color: #b1aad3;
 }
-.swiper-button-next.five_swiper_next,
-.swiper-button-next .five_swiper_prev,
+.swiper-button-next.five_swiper_next, .swiper-button-next.five_swiper_prev,
 .swiper-button-prev.five_swiper_next,
-.swiper-button-prev .five_swiper_prev {
+.swiper-button-prev.five_swiper_prev {
   background-color: #f3a978;
 }
-.swiper-button-next.six_swiper_next,
-.swiper-button-next .six_swiper_prev,
+.swiper-button-next.six_swiper_next, .swiper-button-next.six_swiper_prev,
 .swiper-button-prev.six_swiper_next,
-.swiper-button-prev .six_swiper_prev {
+.swiper-button-prev.six_swiper_prev {
   background-color: #95c7ec;
 }
-.swiper-button-next.seven_swiper_next,
-.swiper-button-next .seven_swiper_prev,
+.swiper-button-next.seven_swiper_next, .swiper-button-next.seven_swiper_prev,
 .swiper-button-prev.seven_swiper_next,
-.swiper-button-prev .seven_swiper_prev {
+.swiper-button-prev.seven_swiper_prev {
   background-color: #b89b7b;
 }
-.swiper-button-next.eight_swiper_next,
-.swiper-button-next .eight_swiper_prev,
+.swiper-button-next.eight_swiper_next, .swiper-button-next.eight_swiper_prev,
 .swiper-button-prev.eight_swiper_next,
-.swiper-button-prev .eight_swiper_prev {
+.swiper-button-prev.eight_swiper_prev {
   background-color: #d89cb6;
 }
 

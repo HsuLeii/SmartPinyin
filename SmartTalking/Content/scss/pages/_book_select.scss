@@ -254,13 +254,14 @@ main {
                         &:nth-last-child(1){
                             .book_swiper_marker{
                                 &::before{
-                                    bottom: 60px;
+                                    bottom: 80px;
                                 }
                             }
                         }
 
                         .book_swiper_item{
-                            margin: 40px 15px 60px;
+                            position: relative;
+                            margin: 40px 15px 100px;
                             width: calc(100% - calc(22px * 1.5) - 30px);
     
                             .book_classification{
@@ -310,33 +311,37 @@ main {
                                 width: 100%;
                                 position: relative;
                                 margin: 60px 0 0 0;
+
+                                .swiper-slide{
+                                    border: 2px solid $grey;
+                                    border-radius: 10px;
+
+                                    &:hover {
+                                        border: 2px solid $bright_main_color;
+
+                                        .book_select_item{
+                                            .book_text{
+                                                .book_text_title {
+                                                    color: $bright_main_color;
+                                                }
+            
+                                                .book_text_course{
+                                                    color: $bright_main_color;
+                                                }
+                                            }
+                                        }
+                                        
+                                    }
+
+                                }
         
                                 .book_select_item {
                                     width: 100%;
-                                    // margin: 15px calc(2.5% / 2);
-                                    border: 2px solid $grey;
-                                    border-radius: 10px;
                                     display: flex;
                                     flex-direction: column;
                                     padding: 15px;
                                     border-radius: 10px;
                                     color: $main_color;
-            
-                                    &:hover {
-                                        border: 2px solid $bright_main_color;
-        
-                                        .book_text{
-                                            .book_text_title {
-                                                color: $bright_main_color;
-                                            }
-        
-                                            .book_text_course{
-                                                color: $bright_main_color;
-                                            }
-                                        }
-            
-                                        
-                                    }
             
                                     .book_image {
                                         margin: 0 auto 15px;
@@ -366,6 +371,67 @@ main {
                                         }
                                     }
                                 }
+                            }
+
+                            &.book_one_swiper_item{
+                                &::after{
+                                    background-color: $color_one;
+                                }
+                            }
+
+                            &.book_two_swiper_item{
+                                &::after{
+                                    background-color: $color_two;
+                                }
+                            }
+                            
+                            &.book_three_swiper_item{
+                                &::after{
+                                    background-color: $color_three;
+                                }
+                            }
+                            
+                            &.book_four_swiper_item{
+                                &::after{
+                                    background-color: $color_four;
+                                }
+                            }
+
+                            &.book_five_swiper_item{
+                                &::after{
+                                    background-color: $color_five;
+                                }
+                            }
+
+                            &.book_six_swiper_item{
+                                &::after{
+                                    background-color: $color_six;
+                                }
+                            }
+
+                            &.book_seven_swiper_item{
+                                &::after{
+                                    background-color: $color_seven;
+                                }
+                            }
+
+                            &.book_eight_swiper_item{
+                                margin: 40px 15px 140px;
+
+                                &::after{
+                                    background-color: $color_eight;
+                                }
+                            }
+
+                            &::after{
+                                content: "";
+                                position: absolute;
+                                width: calc(100% + 30px);
+                                height: calc(50% + 60px);
+                                bottom: 0px;
+                                left: 0;
+                                transform: translate(-15px, 60px);
+                                border-radius: 0 0 10px 10px;
                             }
                         }
                     }
@@ -515,42 +581,42 @@ main {
     }
 
     &.one_swiper_next,
-    .one_swiper_prev{
+    &.one_swiper_prev{
         background-color: $color_one;
     }
 
     &.two_swiper_next,
-    .two_swiper_prev{
+    &.two_swiper_prev{
         background-color: $color_two;
     }
 
     &.three_swiper_next,
-    .three_swiper_prev{
+    &.three_swiper_prev{
         background-color: $color_three;
     }
 
     &.four_swiper_next,
-    .four_swiper_prev{
+    &.four_swiper_prev{
         background-color: $color_four;
     }
 
     &.five_swiper_next,
-    .five_swiper_prev{
+    &.five_swiper_prev{
         background-color: $color_five;
     }
 
     &.six_swiper_next,
-    .six_swiper_prev{
+    &.six_swiper_prev{
         background-color: $color_six;
     }
 
     &.seven_swiper_next,
-    .seven_swiper_prev{
+    &.seven_swiper_prev{
         background-color: $color_seven;
     }
 
     &.eight_swiper_next,
-    .eight_swiper_prev{
+    &.eight_swiper_prev{
         background-color: $color_eight;
     }
 }
