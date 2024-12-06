@@ -3462,6 +3462,9 @@ main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item
 main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item .swiper_area .book_select_item .book_text .book_text_course {
   color: #20221f;
 }
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item .swiper_area .book_select_item .book_text .book_text_course span {
+  display: block;
+}
 main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item.book_one_swiper_item::after {
   background-color: #f2cb4a;
 }

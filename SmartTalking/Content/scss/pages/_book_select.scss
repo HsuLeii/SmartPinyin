@@ -368,6 +368,10 @@ main {
             
                                         .book_text_course {
                                             color: $main_color_grey;
+
+                                            span{
+                                                display: block;
+                                            }
                                         }
                                     }
                                 }
