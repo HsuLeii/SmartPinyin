@@ -1,0 +1,412 @@
+main {
+    .quiz_page {
+        .test_area {
+            &.book_select {
+                .student_data_area {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    background-color: $white;
+                    margin: 0 auto 20px;
+                    padding: 20px;
+                    border-radius: 10px;
+
+                    .avatar_img {
+                        background-color: $main_color;
+                        width: calc(60px * 1.7);
+                        height: calc(60px * 1.7);
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 10px;
+
+                        .avatar_text {
+                            h4 {
+                                font-size: 60px;
+                                color: $white;
+                            }
+                        }
+                    }
+
+                    .student_data {
+                        width: calc(100% - 60px * 1.7);
+                        width: 100%;
+                        margin: 10px;
+
+                        .student_data_tittle {
+                            color: $main_color;
+                            margin: 0 10px;
+                        }
+
+                        .student_data_content {
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            .student_data_content_left,
+                            .student_data_content_right {
+                                margin: 0 10px;
+                            }
+
+                            .student_data_item {
+                                display: flex;
+                                flex-wrap: wrap;
+                                margin: 5px 0;
+
+                                p {
+                                    word-wrap: break-word;
+                                    word-break: break-all;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .test_area_right {
+                    width: 100%;
+                }
+            }
+
+            .test_area_right {
+
+                .test_area_content {
+                    background-color: transparent;
+                    border: 0px;
+                    border-radius: 10px;
+                    background-color: $white;
+
+                    .book_select_area {
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin: 0 auto;
+
+                        .book_select_item {
+                            width: 100%;
+                            margin: 15px calc(2.5% / 2);
+                            border: 2px solid $grey;
+                            border-radius: 10px;
+                            display: flex;
+                            flex-direction: column;
+                            padding: 15px 15px;
+                            border-radius: 10px;
+                            color: $main_color;
+
+                            &:hover {
+                                border: 2px solid $bright_main_color;
+
+                                .book_text_title {
+                                    color: $bright_main_color;
+                                }
+                            }
+
+                            .book_image {
+                                margin: 0 auto 15px;
+
+                                img {
+                                    border-radius: 10px;
+                                }
+                            }
+
+                            .book_text {
+                                color: $main_color_grey;
+                            }
+
+                            .book_text_title {
+                                color: $main_color;
+                                margin: 10px 0;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                /*autoprefixer:off*/
+                                -webkit-box-orient: vertical;
+                                // autoprefixer:on
+
+                                .book_icon{
+                                    width: 31px;
+                                    height: 31px;
+                                    display: inline-block;
+                                    background-color: $main_color_orange;
+                                    text-align: center;
+                                    line-height: 31px;
+                                    border-radius: 50%;
+
+                                    i{
+                                        color: $white;
+                                    }
+                                }
+
+                            }
+
+                            p {
+                                margin: 5px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main_footer{
+        margin: 40px 0 0;
+        .footer_radar {
+            display: flex;
+            justify-content: center;
+    
+            img {
+                width: 50px;
+            }
+        }
+    
+        .footer_logo {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+    
+            .footer_logo_img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -0%);
+                width: 50%;
+                max-width: 350px;
+            }
+    
+            .footer_svg_area {
+                width: 100%;
+    
+                .footer_svg {
+                    fill: $main_color;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 500px) {
+    main {
+        .quiz_page {
+            .test_area {
+                    .test_area_right {
+
+                        .test_area_content {
+
+                            .book_select_area {
+
+                                .book_select_item {
+                                    width: 47.5%;
+                                }
+                            }
+                        }
+                    }
+                
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        .quiz_page {
+            .test_area {
+                &.book_select {
+                    .student_data_area {
+                        margin: 0 auto 40px;
+                    }
+
+                    .test_area_right {
+    
+                        .test_area_content {
+    
+                            .book_select_area {
+    
+                                .book_select_item {
+                                    
+                                    .book_text_title {
+                                        .book_icon{
+                                            width: 35px;
+                                            height: 35px;
+                                            line-height: 35px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .main_footer{
+            .footer_radar {
+                img {
+                    width: 80px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    main {
+        .quiz_page {
+
+            .test_area {
+                justify-content: space-between;
+
+                &.book_select {
+                    .test_area_right {
+
+                        .test_area_content {
+
+                            .book_select_area {
+
+                                .book_select_item {
+                                    width: calc(33.33333% - 2.5%);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .test_area_right {
+                    width: 70%;
+
+                    .test_area_right_nav {
+                        margin: 0 auto 20px;
+
+                        // ul {
+
+                        //     .test_area_right_nav_item {
+                        //         a {
+                        //             padding: 3px 5px 10px;
+                        //         }
+                        //     }
+                        // }
+                    }
+                }
+            }
+        }
+
+        .main_footer{
+            margin: 70px 0 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        .quiz_page {
+            .test_area {
+                &.book_select {
+                    .student_data_area {
+                        .student_data {
+                            width: calc(100% - 60px * 1.7 - 40px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        .quiz_page {
+            .test_area {
+                &.book_select {
+                    .test_area_right {
+                        border-radius: 10px;
+                        background-color: $white;
+                        // border: 1px solid $main-color;
+
+                        .test_area_content {
+                            background-color: transparent;
+                            border: 0px;
+
+                            .book_select_area {
+                                display: flex;
+                                flex-wrap: wrap;
+                                margin: 0 auto;
+
+                                .book_select_item {
+
+                                    .book_image {
+                                        margin: 0 auto 15px;
+
+                                        img {
+                                            border-radius: 10px;
+                                        }
+                                    }
+
+                                    p {
+                                        margin: 5px 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .test_area {
+                .test_area_right {
+
+                    .test_area_content {
+
+                        .book_select_area {
+
+                            .book_select_item {
+                                width: calc(33.33333% - 2.5%);
+                            }
+                        }
+                    }
+                }
+            
+        }
+        }
+
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    main {
+        .quiz_page {
+
+            .test_area {
+                &.book_select {
+                    .test_area_right {
+
+                        .test_area_content {
+
+                            .book_select_area {
+
+                                .book_select_item {
+                                    width: 22%;
+                                    margin: 15px calc(3% / 2);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 1600px){
+    main{
+        .main_footer{
+            .footer_logo {
+                .footer_logo_img {
+                    max-width: 500px;
+                }
+            }
+        }
+    }
+}

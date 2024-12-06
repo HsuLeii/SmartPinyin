@@ -1,0 +1,174 @@
+main {
+
+    .test_area {
+
+        .test_area_right {
+            .test_area_content {
+                .report_selector_tittle{
+                    width: 100%;
+                    padding: 10px 5%;
+                    p{
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: $bright_main_color;
+                        padding: 3px 5px 15px;
+                    }
+                }
+                .score_report_area {
+                        width: 90%;
+                        margin: 0 auto;
+                        border-radius: 5px;
+
+                    .form-group {
+                        overflow-x: scroll;
+
+                        .table {
+                            border: 1px solid $bright_main_color;
+                            margin: 0 auto 40px;
+                            min-width: 800px;
+
+                            thead {
+                                .score_report_header {
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    background-color: $bright_main_color;
+                                    border-bottom: 0;
+
+                                    .score_report_header_text {
+                                        display: flex;
+                                        justify-content: center;
+                                        color: $white;
+                                        padding: 8px 5px;
+                                        width: 20%;
+                                        border-left: 1px dotted;
+                                        transform: translate(-1px, 0px);
+
+                                        &:nth-child(1) {
+                                            border-left: 0;
+                                        }
+
+                                        &:nth-child(3) {
+                                            width: 34%;
+                                        }
+
+                                        &:nth-child(4){
+                                            width: 26%;
+                                        }
+                                    }
+                                }
+                            }
+
+                            tbody {
+                                &.score_report_body {
+                                    border-top: 0;
+                                    background-color: $white;
+
+                                    .score_report_item {
+                                        position: relative;
+                                        display: flex;
+                                        align-items: center;
+                                        border-top: 1px dotted $bright_main_color;
+
+                                        &:nth-child(1){
+                                            border-top: 0px;
+                                        }
+
+                                        .score_report_item_content {
+                                                padding: 15px 2px;
+                                                position: relative;
+                                                display: flex;
+                                                justify-content: center;
+                                                color: $main_color_grey;
+                                                word-break: break-word;
+                                                width: 20%;
+
+                                                .score_report_btn{
+                                                    padding: 8px 30px;
+                                                    margin: 0px auto;
+                                                    border-radius: 50px;
+                                                    border: 1px solid $main_color;
+                                                    color: $main_color;
+                                                    background-color: $white;
+                                    
+                                                    &:hover{
+                                                        background-color: $main_color;
+                                                        color: $white;
+                                                    }
+                                                }
+
+                                                &:nth-child(3){
+                                                    width: 34%;
+                                                }
+
+                                                &:nth-child(4){
+                                                    width: 26%;
+                                                }
+
+                                        }
+
+                                        &::before,
+                                        &::after{
+                                            content: "";
+                                            position: absolute;
+                                            top: 0;
+                                            width: 1px;
+                                            height: 100%;
+                                        }
+
+                                        &::before{
+                                            border-right: 1px dotted $bright_main_color;
+                                            border-left: 1px dotted $bright_main_color;
+                                            width: 20%;
+                                            left: calc(20% - 1px);
+                                        }
+
+                                        &::after{
+                                            border-left: 1px dotted $bright_main_color;
+                                            left: calc(74% - 1px);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .pagination{
+                            position: sticky;
+                            left: 0;
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 576px) {
+
+}
+
+@media screen and (min-width: 768px) {
+    main {
+
+        .test_area {
+
+            .test_area_right {
+                .test_area_content {
+                    .report_selector_tittle{
+                        p{
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1400px) {}
