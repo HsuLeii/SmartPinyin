@@ -999,12 +999,19 @@ main {
         }
 
         .btn_icon_area {
+            width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto 20px;
+
             .btn_icon {
                 width: 55px;
                 height: 55px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                margin: 0 auto;
                 border-radius: 50%;
                 background-color: $main-color;
                 transform: scale(0.95);
@@ -1029,6 +1036,42 @@ main {
                 display: none;
                 color: $main_color;
                 margin: 0px auto 10px;
+            }
+        }
+
+        .btn_finish_area{
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            border: 1px solid $main_color_red;
+            border-radius: 5px;
+
+            .btn_finish_icon{
+                padding: 5px 10px;
+                color: $main_color_red;
+            }
+
+            .btn_finish_text{
+                display: flex;
+                padding: 5px 10px;
+                text-align: left;
+                color: $main_color_red;
+
+                p{
+                    margin: 0 5px;
+                }
+            }
+
+            &:hover{
+                background-color: $main_color_red;
+
+                .btn_finish_icon{
+                    color: $white;
+                }
+
+                .btn_finish_text{
+                    color: $white;
+                }
             }
         }
 
@@ -2039,6 +2082,32 @@ main {
             &.toolbar_area_bottom{
                 width: calc(65% - 10px);
                 margin: 35px 0 35px calc(35% - 43px);
+            }
+
+            .btn_icon_area {
+                width: auto;
+                margin: 0 auto;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50% , -50%);
+            }
+
+            .btn_finish_area{
+                margin: 0 0 0 auto;
+                display: flex;
+                align-items: center;
+                border: 1px solid $main_color_red;
+                border-radius: 5px;
+
+                .btn_finish_icon{
+                    padding: 5px 10px;
+                    color: $main_color_red;
+                }
+
+                .btn_finish_text{
+                    flex-direction: column;
+                }
             }
         }
     }

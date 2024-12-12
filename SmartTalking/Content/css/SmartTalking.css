@@ -2413,12 +2413,20 @@ main .toolbar_area {
 main .toolbar_area.toolbar_area_bottom {
   margin: 35px auto;
 }
+main .toolbar_area .btn_icon_area {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto 20px;
+}
 main .toolbar_area .btn_icon_area .btn_icon {
   width: 55px;
   height: 55px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
   border-radius: 50%;
   background-color: #314675;
   transform: scale(0.95);
@@ -2439,6 +2447,35 @@ main .toolbar_area .btn_icon_area .recording_time {
   display: none;
   color: #314675;
   margin: 0px auto 10px;
+}
+main .toolbar_area .btn_finish_area {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e60012;
+  border-radius: 5px;
+}
+main .toolbar_area .btn_finish_area .btn_finish_icon {
+  padding: 5px 10px;
+  color: #e60012;
+}
+main .toolbar_area .btn_finish_area .btn_finish_text {
+  display: flex;
+  padding: 5px 10px;
+  text-align: left;
+  color: #e60012;
+}
+main .toolbar_area .btn_finish_area .btn_finish_text p {
+  margin: 0 5px;
+}
+main .toolbar_area .btn_finish_area:hover {
+  background-color: #e60012;
+}
+main .toolbar_area .btn_finish_area:hover .btn_finish_icon {
+  color: #fff;
+}
+main .toolbar_area .btn_finish_area:hover .btn_finish_text {
+  color: #fff;
 }
 main .toolbar_area .toolbar_item {
   width: 100%;
@@ -3114,6 +3151,28 @@ main input[name=playRange0]:before {
   main .toolbar_area.toolbar_area_bottom {
     width: calc(65% - 10px);
     margin: 35px 0 35px calc(35% - 43px);
+  }
+  main .toolbar_area .btn_icon_area {
+    width: auto;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main .toolbar_area .btn_finish_area {
+    margin: 0 0 0 auto;
+    display: flex;
+    align-items: center;
+    border: 1px solid #e60012;
+    border-radius: 5px;
+  }
+  main .toolbar_area .btn_finish_area .btn_finish_icon {
+    padding: 5px 10px;
+    color: #e60012;
+  }
+  main .toolbar_area .btn_finish_area .btn_finish_text {
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 1200px) {
