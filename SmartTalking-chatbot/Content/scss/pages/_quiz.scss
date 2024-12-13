@@ -282,6 +282,11 @@ main {
                                     color: $white;
                                     font-size: 30px;
                                 }
+
+                                i {
+                                    color: $white;
+                                    font-size: 30px;
+                                }
                 
                                 &:hover {
                                     transform: scale(1);
@@ -354,58 +359,6 @@ main {
         opacity: 1;
         height: 20px;
     }
-}
-
-@media screen and (min-width: 576px) {
-    main {
-        .test_area {
-                .test_area_content {
-                    .toolbar_area {
-                        width: 90%;
-                        position: relative;
-                        z-index: 1;
-                        display: flex;
-                        justify-content: center;
-                        flex-wrap: wrap;
-                        margin: 20px auto 0;
-                
-                        .btn_icon_area {
-                            .btn_icon {
-                                width: 55px;
-                                height: 55px;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                border-radius: 50%;
-                                background-color: $main-color;
-                                transform: scale(0.95);
-                
-                                i {
-                                    color: $white;
-                                    font-size: 30px;
-                                }
-                
-                                &:hover {
-                                    transform: scale(1);
-                                    background-color: $bright_main_color;
-                                }
-                            }
-                
-                            &.recording_area{
-                                display: flex;
-                                flex-direction: column;
-                            }
-                
-                            .recording_time{
-                                display: none;
-                                color: $main_color;
-                                margin: 0px auto 10px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
 }
 
 @media screen and (min-width: 768px) {

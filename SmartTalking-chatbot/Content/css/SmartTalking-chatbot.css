@@ -1793,6 +1793,10 @@ main .test_area.quiz_area .quiz_item_area .test_area_content .toolbar_area .btn_
   color: #fff;
   font-size: 30px;
 }
+main .test_area.quiz_area .quiz_item_area .test_area_content .toolbar_area .btn_icon_area .btn_icon i {
+  color: #fff;
+  font-size: 30px;
+}
 main .test_area.quiz_area .quiz_item_area .test_area_content .toolbar_area .btn_icon_area .btn_icon:hover {
   transform: scale(1);
   background-color: #4dbcbc;
@@ -1845,44 +1849,6 @@ main .test_area.quiz_area .quiz_item_area .test_area_content .toolbar_area .btn_
   100% {
     opacity: 1;
     height: 20px;
-  }
-}
-@media screen and (min-width: 576px) {
-  main .test_area .test_area_content .toolbar_area {
-    width: 90%;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 20px auto 0;
-  }
-  main .test_area .test_area_content .toolbar_area .btn_icon_area .btn_icon {
-    width: 55px;
-    height: 55px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: #314675;
-    transform: scale(0.95);
-  }
-  main .test_area .test_area_content .toolbar_area .btn_icon_area .btn_icon i {
-    color: #fff;
-    font-size: 30px;
-  }
-  main .test_area .test_area_content .toolbar_area .btn_icon_area .btn_icon:hover {
-    transform: scale(1);
-    background-color: #4dbcbc;
-  }
-  main .test_area .test_area_content .toolbar_area .btn_icon_area.recording_area {
-    display: flex;
-    flex-direction: column;
-  }
-  main .test_area .test_area_content .toolbar_area .btn_icon_area .recording_time {
-    display: none;
-    color: #314675;
-    margin: 0px auto 10px;
   }
 }
 @media screen and (min-width: 768px) {
