@@ -13,23 +13,26 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <!-- 之後改成正式網址的連結 -->
-    <meta property="og:image" content="https://hsuleii.github.io/SmartPinyin/SmartTalking-chatbot/Content/image/main/og_image.jpg" />
+    <meta property="og:image"
+        content="https://hsuleii.github.io/SmartPinyin/SmartTalking-chatbot/Content/image/main/og_image.jpg" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="SmartTalking-Mandarin" />
     <!-- 之後改成正式網址的連結 -->
-    <meta name="twitter:image" content="https://hsuleii.github.io/SmartPinyin/SmartTalking-chatbot/Content/image/main/og_image.jpg" />
+    <meta name="twitter:image"
+        content="https://hsuleii.github.io/SmartPinyin/SmartTalking-chatbot/Content/image/main/og_image.jpg" />
     <meta itemprop="name" content="SmartTalking-Mandarin">
     <!-- 之後改成正式網址的連結 -->
-    <meta itemprop="image" content="https://hsuleii.github.io/SmartPinyin/SmartTalking-chatbot/Content/image/main/og_image.jpg">
+    <meta itemprop="image"
+        content="https://hsuleii.github.io/SmartPinyin/SmartTalking-chatbot/Content/image/main/og_image.jpg">
     <link rel="shortcut icon" type="image/x-icon" href="../Content/image/favicon.ico" />
-  
-  
+
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../Content/css/bootstrap-5.1.1.min.css" />
-  
+
     <!-- my core CSS -->
     <link rel="stylesheet" href="../Content/css/SmartTalking-chatbot.css" />
-  </head>
+</head>
 
 <body>
     <main>
@@ -52,7 +55,8 @@
                             中文姓名<br />
                             ChineseName
                         </label>
-                        <input type="text" id="ChineseName" class="form-control" value="" placeholder="中文姓名 ChineseName">
+                        <input type="text" id="ChineseName" class="form-control" value=""
+                            placeholder="中文姓名 ChineseName">
                         <span class="text-danger field-validation-valid" data-valmsg-for="ClassName"
                             data-valmsg-replace="true"></span>
                     </div>
@@ -68,10 +72,161 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li class="dropdown-item Nationality-dropdown-li Nationality-dropdown-one" href="#">
-                                    國籍1 Nationality
+                                國籍1 Nationality
                             </li>
                             <li class="dropdown-item Nationality-dropdown-li Nationality-dropdown-two" href="#">
-                                    國籍2 Nationality
+                                國籍2 Nationality
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="input_area">
+                        <label class="input-group-label" for="Text_country">
+                            國籍<br>
+                            Nationality
+                        </label>
+                        <!-- <select id="Drop_area" class="dropdown_text form-control" onchange="LoadCountry()"
+                            style=" color:gray">
+                            <option value="">區域 Area</option>
+                            <option value="大洋洲">大洋洲</option>
+                            <option value="亞洲">亞洲</option>
+                            <option value="其他">其他</option>
+                            <option value="非洲">非洲</option>
+                            <option value="美洲">美洲</option>
+                            <option value="歐洲">歐洲</option>
+                        </select> -->
+                        <input id="Text_country" type="text" class="dropdown_text form-control show"
+                            placeholder="國籍 Nationality" autocomplete="off" required="" data-bs-toggle="dropdown"
+                            aria-expanded="true" title="TZ">
+                        <ul id="Drop_area" class="dropdown-menu">
+                            <li class="dropdown-item Country-dropdown-li" value="">
+                                區域 Area
+                            </li>
+                        </ul>
+                        
+                        <label class="input-group-label" for="Text_country">
+                            <br>
+                        </label>
+
+                        <input id="Text_country" type="text" class="dropdown_text form-control show"
+                            placeholder="國籍 Nationality" autocomplete="off" required="" data-bs-toggle="dropdown"
+                            aria-expanded="true" title="TZ">
+                        <ul id="ul_country" class="dropdown-menu"
+                            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(306px, 148px);"
+                            data-popper-placement="bottom-start">
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="AE">阿拉伯聯合大公國
+                                United Arab Emirates</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="AF">阿富汗
+                                Afghanistan</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="AM">亞美尼亞
+                                Armenia</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="AU">澳大利亞
+                                Australia</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="AZ">亞塞拜然
+                                Azerbaijan</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="BD">孟加拉
+                                Bangladesh</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="BH">巴林 Bahrain
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="BN">汶萊 Brunei
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="BT">不丹 Bhutan
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="CN">中國 China
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="GE">格魯吉亞
+                                Georgia</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="HK">香港 Hong
+                                Kong</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="ID">印尼
+                                Indonesia</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="IL">以色列 Israel
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="IN">印度 India
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="IQ">伊拉克 Iraq
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="IR">伊朗 Iran
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="JO">約旦 Jordan
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="JP">日本 Japan
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="KG">吉爾吉斯斯坦
+                                Kyrgyzstan</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="KH">柬埔寨
+                                Cambodia</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="KP">朝鮮 Korea
+                                (North)</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="KR">韓國 Korea
+                                (South)</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="KW">科威特 Kuwait
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="KZ">哈薩克
+                                Kazakhstan</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="LA">老撾 Laos
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="LB">黎巴嫩 Lebanon
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="LK">斯里蘭卡 Sri
+                                Lanka</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="LO">老撾 Laos
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="MH">馬紹爾群島
+                                Marshall Islands</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="MM">緬甸 Myanmar
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="MN">蒙古 Mongolia
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="MO">澳門 Macau
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="MV">馬爾地夫
+                                Maldives</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="MY">馬來西亞
+                                Malaysia</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="NP">尼泊爾 Nepal
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="OM">阿曼 Oman
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="PG">巴布亞新幾內亞
+                                Papua New Guinea</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="PH">菲律賓
+                                Philippines</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="PK">巴基斯坦
+                                Pakistan</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="PS">巴勒斯坦
+                                Palestine</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="QA">卡達 Qatar
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="SA">沙烏地阿拉伯
+                                Saudi Arabia</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="SB">所羅門群島
+                                Solomon Islands</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="SG">新加坡
+                                Singapore</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="SY">敘利亞 Syria
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="TH">泰國 Thailand
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="TJ">塔吉克斯坦
+                                Tajikistan</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="TK">托克勞 Tokelau
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="TL">東帝汶
+                                Timor-Leste</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="TM">土庫曼斯坦
+                                Turkmenistan</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="TR">土耳其 Turkey
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="TW">&nbsp;臺灣
+                                Taiwan</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="UZ">烏茲別克斯坦
+                                Uzbekistan</li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="VN">越南 Vietnam
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="WS">薩摩亞 Samoa
+                            </li>
+                            <li class="dropdown-item Country-dropdown-li" onclick="Country(this)" title="YE">葉門 Yemen
                             </li>
                         </ul>
                     </div>
@@ -87,10 +242,10 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li class="dropdown-item Gender-dropdown-li Gender-dropdown-one" href="#">
-                                    性別1 Gender
+                                性別1 Gender
                             </li>
                             <li class="dropdown-item Gender-dropdown-li Gender-dropdown-two" href="#">
-                                    性別2 Gender
+                                性別2 Gender
                             </li>
                         </ul>
                     </div>
@@ -105,11 +260,13 @@
                             <p id="dropdown_text">語言程度 Chinese level</p>
                         </button>
                         <ul class="dropdown-menu">
-                            <li id="item1" class="dropdown-item ChineseLevel-dropdown-li ChineseLevel-dropdown-one" href="#">
-                                    語言程度1 Chinese level
+                            <li id="item1" class="dropdown-item ChineseLevel-dropdown-li ChineseLevel-dropdown-one"
+                                href="#">
+                                語言程度1 Chinese level
                             </li>
-                            <li id="item2" class="dropdown-item ChineseLevel-dropdown-li ChineseLevel-dropdown-two" href="#">
-                                    語言程度2 Chinese level
+                            <li id="item2" class="dropdown-item ChineseLevel-dropdown-li ChineseLevel-dropdown-two"
+                                href="#">
+                                語言程度2 Chinese level
                             </li>
                         </ul>
                     </div>
@@ -125,10 +282,10 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li id="item1" class="dropdown-item Textbook-dropdown-li Textbook-dropdown-one" href="#">
-                                    使用教材1 Textbook
+                                使用教材1 Textbook
                             </li>
                             <li id="item2" class="dropdown-item Textbook-dropdown-li Textbook-dropdown-two" href="#">
-                                    使用教材2 Textbook
+                                使用教材2 Textbook
                             </li>
                         </ul>
                     </div>
@@ -169,7 +326,7 @@
             <div class="decorate_line decorate_right">
                 <img src="../Content/image/svg/decorate_right.svg" alt="" srcset="">
             </div>
-    
+
             <div class="decorate_line decorate_left">
                 <img src="../Content/image/svg/decorate_left.svg" alt="" srcset="">
             </div>
@@ -189,13 +346,17 @@
         var Nationality_two = $(".Nationality-dropdown-two").text();
         $(".Nationality-dropdown-one").click(function () {
             document.querySelector("#Nationality > #dropdown_text").innerHTML = Nationality_one;
-            $("#Nationality").children("#dropdown_text").css({color: "#314675"});
+            $("#Nationality").children("#dropdown_text").css({
+                color: "#314675"
+            });
             $(".Nationality-dropdown-li").removeClass("check");
             $(this).addClass("check");
         });
         $(".Nationality-dropdown-two").click(function () {
             document.querySelector("#Nationality > #dropdown_text").textContent = Nationality_two;
-            $("#Nationality").children("#dropdown_text").css({color: "#314675"});
+            $("#Nationality").children("#dropdown_text").css({
+                color: "#314675"
+            });
             $(".Nationality-dropdown-li").removeClass("check");
             $(this).addClass("check");
         });
@@ -205,13 +366,17 @@
         var Gender_two = $(".Gender-dropdown-two").text();
         $(".Gender-dropdown-one").click(function () {
             document.querySelector("#Gender > #dropdown_text").innerHTML = Gender_one;
-            $("#Gender").children("#dropdown_text").css({color: "#314675"});
+            $("#Gender").children("#dropdown_text").css({
+                color: "#314675"
+            });
             $(".Gender-dropdown-li").removeClass("check");
             $(this).addClass("check");
         });
         $(".Gender-dropdown-two").click(function () {
             document.querySelector("#Gender > #dropdown_text").innerHTML = Gender_two;
-            $("#Gender").children("#dropdown_text").css({color: "#314675"});
+            $("#Gender").children("#dropdown_text").css({
+                color: "#314675"
+            });
             $(".Gender-dropdown-li").removeClass("check");
             $(this).addClass("check");
         });
@@ -221,13 +386,17 @@
         var ChineseLevel_two = $(".ChineseLevel-dropdown-two").text();
         $(".ChineseLevel-dropdown-one").click(function () {
             document.querySelector("#ChineseLevel > #dropdown_text").innerHTML = ChineseLevel_one;
-            $("#ChineseLevel").children("#dropdown_text").css({color: "#314675"});
+            $("#ChineseLevel").children("#dropdown_text").css({
+                color: "#314675"
+            });
             $(".ChineseLevel-dropdown-li").removeClass("check");
             $(this).addClass("check");
         });
         $(".ChineseLevel-dropdown-two").click(function () {
             document.querySelector("#ChineseLevel > #dropdown_text").innerHTML = ChineseLevel_two;
-            $("#ChineseLevel").children("#dropdown_text").css({color: "#314675"});
+            $("#ChineseLevel").children("#dropdown_text").css({
+                color: "#314675"
+            });
             $(".ChineseLevel-dropdown-li").removeClass("check");
             $(this).addClass("check");
         });
@@ -237,13 +406,17 @@
         var Textbook_two = $(".Textbook-dropdown-two").text();
         $(".Textbook-dropdown-one").click(function () {
             document.querySelector("#Textbook > #dropdown_text").innerHTML = Textbook_one;
-            $("#Textbook").children("#dropdown_text").css({color: "#314675"});
+            $("#Textbook").children("#dropdown_text").css({
+                color: "#314675"
+            });
             $(".Textbook-dropdown-li").removeClass("check");
             $(this).addClass("check");
         });
         $(".Textbook-dropdown-two").click(function () {
             document.querySelector("#Textbook > #dropdown_text").innerHTML = Textbook_two;
-            $("#Textbook").children("#dropdown_text").css({color: "#314675"});
+            $("#Textbook").children("#dropdown_text").css({
+                color: "#314675"
+            });
             $(".Textbook-dropdown-li").removeClass("check");
             $(this).addClass("check");
         });
