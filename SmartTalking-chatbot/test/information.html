@@ -61,7 +61,7 @@
                             data-valmsg-replace="true"></span>
                     </div>
 
-                    <div class="input_area">
+                    <!-- <div class="input_area">
                         <label class="input-group-label" for="Nationality">
                             國籍<br />
                             Nationality
@@ -78,7 +78,7 @@
                                 國籍2 Nationality
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
 
                     <div class="input_area">
                         <label class="input-group-label" for="Text_country">
@@ -95,20 +95,23 @@
                             <option value="美洲">美洲</option>
                             <option value="歐洲">歐洲</option>
                         </select> -->
-                        <input id="Text_country" type="text" class="dropdown_text form-control show"
+                        <input id="Text_country" type="text" class="dropdown_text form-control"
                             placeholder="國籍 Nationality" autocomplete="off" required="" data-bs-toggle="dropdown"
                             aria-expanded="true" title="TZ">
+                            <!-- <button type="button" id="Nationality" class="form-control" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <p id="dropdown_text">國籍 Nationality</p>
+                        </button> -->
                         <ul id="Drop_area" class="dropdown-menu">
-                            <li class="dropdown-item Country-dropdown-li" value="">
-                                區域 Area
-                            </li>
+                            <li class="dropdown-item Nationality-dropdown-li Nationality-dropdown-one" href="#">國籍1 Nationality</li>
+                            <li class="dropdown-item Nationality-dropdown-li Nationality-dropdown-two" href="#">國籍2 Nationality</li>
                         </ul>
                         
                         <label class="input-group-label" for="Text_country">
                             <br>
                         </label>
 
-                        <input id="Text_country" type="text" class="dropdown_text form-control show"
+                        <input id="Text_country" type="text" class="dropdown_text form-control"
                             placeholder="國籍 Nationality" autocomplete="off" required="" data-bs-toggle="dropdown"
                             aria-expanded="true" title="TZ">
                         <ul id="ul_country" class="dropdown-menu"
@@ -344,17 +347,34 @@
         // 國籍Nationality
         var Nationality_one = $(".Nationality-dropdown-one").text();
         var Nationality_two = $(".Nationality-dropdown-two").text();
+        // $(".Nationality-dropdown-one").click(function () {
+        //     document.querySelector("#Nationality > #dropdown_text").innerHTML = Nationality_one;
+        //     $("#Nationality").children("#dropdown_text").css({
+        //         color: "#314675"
+        //     });
+        //     $(".Nationality-dropdown-li").removeClass("check");
+        //     $(this).addClass("check");
+        // });
+        // $(".Nationality-dropdown-two").click(function () {
+        //     document.querySelector("#Nationality > #dropdown_text").textContent = Nationality_two;
+        //     $("#Nationality").children("#dropdown_text").css({
+        //         color: "#314675"
+        //     });
+        //     $(".Nationality-dropdown-li").removeClass("check");
+        //     $(this).addClass("check");
+        // });
+
         $(".Nationality-dropdown-one").click(function () {
-            document.querySelector("#Nationality > #dropdown_text").innerHTML = Nationality_one;
-            $("#Nationality").children("#dropdown_text").css({
+            $("#Text_country").val($(this).text());
+            $("#Text_country").children("#dropdown_text").css({
                 color: "#314675"
             });
             $(".Nationality-dropdown-li").removeClass("check");
             $(this).addClass("check");
         });
         $(".Nationality-dropdown-two").click(function () {
-            document.querySelector("#Nationality > #dropdown_text").textContent = Nationality_two;
-            $("#Nationality").children("#dropdown_text").css({
+            $("#Text_country").val($(this).text());
+            $("#Text_country").children("#dropdown_text").css({
                 color: "#314675"
             });
             $(".Nationality-dropdown-li").removeClass("check");

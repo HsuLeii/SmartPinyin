@@ -843,12 +843,12 @@ main {
                     .listen_area {
 
                         .listen_area_sentence {
-                            margin: 0 auto 40px;
+                            margin: 5px auto;
 
                             .listen_sentence {
                                 label {
+                                    font-size: 20px;
                                     cursor: pointer;
-                                    margin: 10px 0;
 
                                     &:hover {
                                         color: $bright_main_color;
@@ -866,6 +866,10 @@ main {
                                         }
                                     }
                                 }
+                            }
+
+                            .translate_text{
+                                margin: 0 0 25px;
                             }
                         }
                     }
@@ -966,22 +970,41 @@ main {
                     .test_area_content {
                         padding: 15px 20px;
 
-                        .test_area_content_img {
-                            display: flex;
-                            justify-content: flex-start;
+                        .test_area_content_img_area{
                             width: 90%;
-                            margin: 40px auto;
+                            position: sticky;
+                            top: 20px;
+                            margin: 0 auto;
+                            z-index: 2;
 
-                            img {
-                                max-width: 500px;
-                                border-radius: 10px;
-                                position: sticky;
-                                top: 20px;
+                            .test_area_content_img_area_content{
+                                .test_area_content_img {
+                                    img {
+                                        max-width: 150px;
+                                        border-radius: 10px;
+                                    }
+                                }
+    
+                                .progress_area {
+                                    width: 100%;
+                                    max-width: 150px;
+                                    margin: 10px 0 20px;
+                                    background-color: $grey;
+                                    border-radius: 10px;
+                    
+                                    .line{
+                                        height: 4px;
+                                        background: $main_color;
+                                        border-radius: 10px;
+                                    }
+                                }
                             }
                         }
                     }
                 }
             }
+
+            
         }
     }
 
@@ -1043,19 +1066,32 @@ main {
             margin: 0 auto;
             display: flex;
             align-items: center;
-            border: 1px solid $main_color_red;
+            border: 1px solid $main_color;
             border-radius: 5px;
+            padding: 5px 10px;
 
             .btn_finish_icon{
                 padding: 5px 10px;
                 color: $main_color_red;
             }
 
+            img{
+                width: 30px;
+            }
+
             .btn_finish_text{
                 display: flex;
+                align-items: center;
                 padding: 5px 10px;
                 text-align: left;
-                color: $main_color_red;
+                color: $main_color;
+
+                .btn_finish_img{
+                    margin: 5px;
+                    .escape_white{
+                        display: none;
+                    }
+                }
 
                 p{
                     margin: 0 5px;
@@ -1064,6 +1100,7 @@ main {
 
             &:hover{
                 background-color: $main_color_red;
+                border: 1px solid $main_color_red;
 
                 .btn_finish_icon{
                     color: $white;
@@ -1071,6 +1108,17 @@ main {
 
                 .btn_finish_text{
                     color: $white;
+
+                    .btn_finish_img{
+                        margin: 5px;
+                        .escape_white{
+                            display: block;
+                        }
+
+                        .escape_blue{
+                            display: none;
+                        }
+                    }
                 }
             }
         }
@@ -1417,6 +1465,11 @@ main {
                 }
             }
         }
+    }
+
+    .loading_robot{
+        width: 100px;
+        margin: 10px;
     }
 
     /* input range 主體樣式 */
@@ -1817,6 +1870,17 @@ main {
                             }
                         }
 
+                        .listen_area {
+
+                            .listen_area_sentence {
+                                .listen_sentence {
+                                    label {
+                                        font-size: 26px;
+                                    }
+                                }
+                            }
+                        }
+
                         .playRange_area{
                             align-items: center;
     
@@ -1832,6 +1896,26 @@ main {
                                 &~.form-label{
                                     order: 3;
                                     margin: 0 0 0 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.test_area_quiz{
+                    .test_area_right{
+                        .test_area_content{
+                            .test_area_content_img_area{
+                                .test_area_content_img_area_content{
+                                    .test_area_content_img {
+                                        img {
+                                            max-width: 350px;
+                                        }
+                                    }
+    
+                                    .progress_area {
+                                        max-width: 350px;
+                                    }
                                 }
                             }
                         }
@@ -2060,10 +2144,14 @@ main {
                             display: flex;
                             flex-wrap: wrap;
 
-                            .test_area_content_img {
-                                display: block;
+                            .test_area_content_img_area{
                                 width: calc(25% - 10px);
                                 margin: 0 calc(5% - 33px) 0 33px;
+
+                                .test_area_content_img_area_content{
+                                    position: sticky;
+                                    top: 20px;
+                                }
                             }
 
                             .listen_area,
@@ -2095,10 +2183,6 @@ main {
 
             .btn_finish_area{
                 margin: 0 0 0 auto;
-                display: flex;
-                align-items: center;
-                border: 1px solid $main_color_red;
-                border-radius: 5px;
 
                 .btn_finish_icon{
                     padding: 5px 10px;
@@ -2229,8 +2313,7 @@ main {
                     .test_area_right {
                         .test_area_content {
 
-                            .test_area_content_img {
-                                display: block;
+                            .test_area_content_img_area{
                                 width: calc(20% - 10px);
                             }
 
