@@ -212,7 +212,7 @@ main {
 
                                     .speaking_table_text {
                                         text-align: center;
-                                        width: 50%;
+                                        width: 100%;
                                         padding: 15px 10px;
 
                                         .wrong {
@@ -277,6 +277,7 @@ main {
 
                                         &.table_pronounce {
                                             border-top: 1px solid;
+                                            justify-content: left;
                                         }
 
                                         &.table_fluency {
@@ -338,6 +339,7 @@ main {
 
                                                 &.table_pronounce {
                                                     border-color: $main_color;
+                                                    justify-content: left;
                                                 }
 
                                                 &.table_fluency {
@@ -600,7 +602,7 @@ main {
                                     display: flex;
                                     flex-direction: column;
                                     align-items: center;
-                                    width: 750px;
+                                    width: 615px;
                                     margin: 20px auto 40px;
 
                                     .antenna {
@@ -654,7 +656,7 @@ main {
                                                 }
 
                                                 .page_num {
-                                                    font-size: 70px;
+                                                    font-size: 55px;
                                                     color: $white;
                                                     font-weight: bold;
                                                     margin: 0 10px;
@@ -673,7 +675,7 @@ main {
 
                                         .speaking_table_text {
                                             text-align: center;
-                                            width: 20%;
+                                            width: 30%;
                                             padding: 15px 10px;
 
                                             .wrong {
@@ -681,7 +683,7 @@ main {
                                             }
 
                                             &.table_exercise {
-                                                width: 40%;
+                                                width: 50%;
                                                 border: 0px;
                                             }
 
@@ -740,6 +742,7 @@ main {
                                             &.table_pronounce {
                                                 border-top: 0px;
                                                 border-left: 1px solid;
+                                                justify-content: left;
                                             }
 
                                             &.table_fluency {
@@ -805,6 +808,7 @@ main {
 
                                                     &.table_pronounce {
                                                         border-top: 1px solid $main_color;
+                                                        justify-content: left;
                                                     }
 
                                                     &.table_fluency {
@@ -896,9 +900,9 @@ main {
 
                                     .speaking_result_table {
                                         .speaking_table_text {
-                                            width: 33.33333%;
+                                            width: 70%;
                                             &.table_score{
-                                                width: 33.33333%;
+                                                width: 30%;
                                             }
     
                                             &.table_pronounce {
@@ -1025,7 +1029,7 @@ main {
 
                             .page_content {
                                 .page_score_logo {
-                                    width: 550px;
+                                    width: 435px;
 
                                     .page_score_area {
 
@@ -1037,7 +1041,7 @@ main {
                                                 }
 
                                                 .page_num {
-                                                    font-size: 70px;
+                                                    font-size: 36px;
                                                 }
                                             }
 
@@ -1064,15 +1068,32 @@ main {
 
                             .page_content {
 
+                                .page_score_logo {
+                                    width: 570px;
+
+                                    .page_score_area {
+
+                                        .page_score_content {
+
+                                            p {
+                                                .page_num {
+                                                    font-size: 50px;
+                                                }
+                                            }
+
+                                        }
+                                    }
+                                }
+
                                 .speaking_result_table_area {
 
                                     .speaking_result_table {
 
                                         .speaking_table_text {
-                                            width: 20%;
+                                            width: 30%;
 
                                             &.table_exercise {
-                                                width: 40%;
+                                                width: 50%;
                                             }
 
                                             &.table_score {
@@ -1314,7 +1335,7 @@ main {
                                     display: flex;
                                     flex-direction: column;
                                     align-items: center;
-                                    width: 750px;
+                                    width: 615px;
                                     margin: 20px auto 40px;
 
                                     .antenna {
@@ -1363,7 +1384,7 @@ main {
                                                 padding: 52px 10px;
 
                                                 .page_num {
-                                                    font-size: 70px;
+                                                    font-size: 55px;
                                                     color: $white;
                                                     font-weight: bold;
                                                     margin: 0 10px;
@@ -1382,7 +1403,7 @@ main {
 
                                         .speaking_table_text {
                                             text-align: center;
-                                            width: 20%;
+                                            width: 30%;
                                             padding: 15px 10px;
 
                                             .wrong {
@@ -1390,7 +1411,7 @@ main {
                                             }
 
                                             &.table_exercise {
-                                                width: 40%;
+                                                width: 50%;
                                                 border: 0px;
                                             }
 
@@ -1514,6 +1535,7 @@ main {
 
                                                     &.table_pronounce {
                                                         border-top: 1px solid $main_color;
+                                                        justify-content: left;
                                                     }
 
                                                     &.table_fluency {

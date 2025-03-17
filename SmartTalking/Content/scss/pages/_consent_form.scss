@@ -1,0 +1,371 @@
+main {
+    .quiz_page {
+        .test_area {
+            display: block;
+            
+            &.consent_form_area {
+                background-color: $white;
+                border-radius: 10px;
+                padding: 25px 20px;
+
+                .consent_area {
+                    width: 80%;
+                    margin: 30px auto;
+
+                    .consent_logo {
+                        width: 80%;
+                        margin: 30px auto;
+                        max-width: 350px;
+                    }
+
+                    .page_tittle {
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        margin: 40px auto;
+
+                        h4 {
+                            &:nth-child(1) {
+                                margin: 5px 10px 5px 0;
+                            }
+
+                            color: $bright_main_color;
+                            margin: 5px 0;
+                        }
+                    }
+
+                    .consent_content {
+                        max-height: calc(80vh - 65px - 90px - 55px - 45px);
+                        overflow-y: scroll;
+                        padding: 15px;
+                        border: 1px solid $main_color;
+                    }
+                }
+
+                .consent_input {
+                    width: 80%;
+                    margin: 0 auto;
+
+                    .consent_input_item {
+                        margin: 20px auto;
+
+                        .consent_input_checkbox {
+                            position: absolute;
+                            opacity: 0;
+
+                            &+label {
+                                color: $main_color_grey;
+                                display: flex;
+                                align-items: center;
+                                position: relative;
+                                cursor: pointer;
+                                padding: 0;
+
+                                &:before {
+                                    content: '';
+                                    margin-right: 10px;
+                                    display: inline-block;
+                                    vertical-align: text-top;
+                                    width: 25px;
+                                    height: 25px;
+                                    background: $white;
+                                    border: 1px solid $main_color_grey;
+                                }
+
+                                .consent_input_text {
+                                    width: calc(100% - 20px - 10px);
+                                }
+                            }
+
+                            &:hover {
+                                &+label {
+                                    color: $main_color;
+
+                                    &:before {
+                                        border: 1px solid $main_color;
+                                    }
+                                }
+                            }
+
+                            &:checked {
+                                &+label {
+                                    color: $main_color;
+
+                                    &:before {
+                                        border: 1px solid $main_color;
+                                        background-color: $main_color;
+                                    }
+
+                                    &:after {
+                                        font-family: "Font Awesome 5 Free";
+                                        content: '\f00c';
+                                        position: absolute;
+                                        color: $white;
+                                        width: 25px;
+                                        font-size: 15px;
+                                        text-align: center;
+                                        font-weight: 900;
+                                    }
+                                }
+                            }
+
+
+                        }
+                    }
+
+
+                }
+
+                .button_consent_area {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 40px auto;
+
+                    .link_btn_area {
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $bright_main_color;
+                        color: $white;
+                        border-radius: 5px;
+                        padding: 20px 40px;
+                        text-align: center;
+                        color: $main_color;
+                        transform: scale(0.9);
+                        width: 80%;
+                        max-width: 500px;
+                        overflow: hidden;
+                        cursor: pointer;
+                        margin: 20px auto;
+
+                        &::before {
+                            -webkit-transform-origin: top center;
+                            z-index: 0;
+                            position: absolute;
+                            z-index: -1;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            transform-origin: top center;
+                            scale: 1 0;
+                            background-color: $main_color;
+                            content: "";
+                            transition-duration: .5s;
+                            transition-property: scale;
+                            transition-timing-function: cubic-bezier(.075, .82, .165, 1);
+                        }
+
+                        &[disabled] {
+                            background-color: transparent;
+                            pointer-events: none;
+                            border: 1px solid $disabled;
+
+                            .link_btn {
+                                .link_btn_text {
+                                    color: $disabled;
+                                }
+
+                                .link_btn_icon {
+                                    border: 1px solid $disabled;
+                                    background-color: transparent;
+                                    color: $disabled;
+                                }
+                            }
+                        }
+
+                        .link_btn {
+                            width: 100%;
+                            justify-content: center;
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            z-index: 1;
+                            color: $white;
+
+                            .link_btn_text {
+                                width: 100%;
+                                color: $white;
+                                cursor: pointer;
+                            }
+
+                            .link_btn_icon {
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 40px;
+                                height: 40px;
+                                border: 1px solid $white;
+                                background-color: $white;
+                                border-radius: 50%;
+                                color: $bright_main_color;
+                                margin: 20px auto 0;
+                            }
+                        }
+
+                        &:hover,
+                        &:active {
+                            transform: scale(1);
+
+                            .select_page_btn {
+                                color: $bright_main_color;
+                            }
+
+                            &:before {
+                                -webkit-transform-origin: bottom center;
+                                transform-origin: bottom center;
+                                scale: 1 1;
+                            }
+
+                            .select_page_btn {
+                                .select_page_btn_icon {
+                                    background-color: transparent;
+                                    color: $bright_main_color;
+                                    border: 1px solid $bright_main_color;
+                                    transition: 0.3s;
+                                }
+                            }
+                        }
+
+                        &:focus {
+                            border: 2px solid $main_color;
+
+                            .select_page_btn {
+
+                                p,
+                                input {
+                                    color: $white;
+                                }
+                            }
+
+                        }
+
+                        &.disabled {
+                            background-color: $disabled;
+                            opacity: 0.5;
+                            cursor: auto;
+
+                            &::before {
+                                background-color: transparent;
+                                transition: 0s;
+                            }
+
+                            .link_btn {
+                                .link_btn_icon {
+                                    background-color: $white;
+                                    color: $disabled;
+                                    transition: 0s;
+                                }
+                            }
+
+                            &:hover {
+                                transform: scale(0.9);
+                            }
+
+                            &:focus {
+                                border: 2px solid transparent;
+                                box-shadow: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 500px) {
+    main {
+        .quiz_page {
+            .test_area {
+                &.consent_form_area {
+                    .consent_area {
+                        .consent_content {
+                            max-height: calc(80vh - 65px - 60px - 55px - 60px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px){
+    main {
+        .quiz_page {
+            .test_area {
+                &.consent_form_area {
+                    .button_consent_area{
+                        .link_btn_area{
+                            .link_btn{
+                                .link_btn_text{
+                                    width: calc(95% - 40px);
+                                }
+
+                                .link_btn_icon{
+                                    margin: 0 auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        .quiz_page {
+            .test_area {
+                &.consent_form_area {
+                    .consent_area {
+                        .consent_content {
+                            max-height: calc(80vh - 144px - 72px - 68px - 45px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    main {
+        .quiz_page {
+            .test_area {
+                &.consent_form_area {
+                    .consent_logo {
+                        margin: 30px auto 50px;
+                    }
+
+                    .button_consent_area {
+                        margin: 60px auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        .quiz_page {
+            .test_area {
+                &.consent_form_area {
+                    .consent_area {
+                        .consent_content {
+                            max-height: calc(80vh - 65px - 90px - 55px - 45px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1400px) {}
