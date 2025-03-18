@@ -126,13 +126,13 @@ main {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        background-color: $bright_main_color;
+                        background-color: $main_color;
                         color: $white;
                         border-radius: 5px;
                         padding: 20px 40px;
                         text-align: center;
                         color: $main_color;
-                        transform: scale(0.9);
+                        transform: scale(0.95);
                         width: 80%;
                         max-width: 500px;
                         overflow: hidden;
@@ -200,7 +200,7 @@ main {
                                 border: 1px solid $white;
                                 background-color: $white;
                                 border-radius: 50%;
-                                color: $bright_main_color;
+                                color: $main_color;
                                 margin: 20px auto 0;
                             }
                         }

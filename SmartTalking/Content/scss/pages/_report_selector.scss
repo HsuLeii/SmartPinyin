@@ -11,8 +11,15 @@ main {
                         font-size: 20px;
                         font-weight: bold;
                         color: $bright_main_color;
-                        padding: 3px 5px 15px;
+                        margin: 0 auto 20px;
                     }
+                }
+
+                .report_selector_text{
+                    width: 90%;
+                    padding: 10px;
+                    margin: 0 auto 20px;
+                    border: 1px solid $bright_main_color;
                 }
                 .score_report_area {
                         width: 90%;
