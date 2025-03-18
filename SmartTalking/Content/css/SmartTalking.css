@@ -1631,7 +1631,7 @@ main .robot_hint {
   position: fixed;
   right: 15px;
   bottom: 15px;
-  z-index: 1;
+  z-index: 2;
 }
 main .robot_hint .robot_img {
   width: 80px;
@@ -4382,6 +4382,8 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .speak
   border-left: 1px solid;
 }
 main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead {
+  position: sticky;
+  top: 25px;
   display: block;
   width: 100%;
 }
@@ -4776,6 +4778,8 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
     border-left: 1px solid;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead {
+    position: sticky;
+    top: 50px;
     display: block;
     width: 100%;
   }
@@ -4886,6 +4890,9 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score {
     width: 100%;
   }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead {
+    top: 35px;
+  }
 }
 @media screen and (min-width: 650px) {
   main .page .page_container .page_header .page_tittle_area .page_tittle {
@@ -4963,6 +4970,9 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
     font-size: 36px;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead {
+    top: 50px;
   }
 }
 @media screen and (min-width: 992px) {

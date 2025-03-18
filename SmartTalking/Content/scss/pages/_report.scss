@@ -290,6 +290,8 @@ main {
                                     }
 
                                     thead {
+                                        position: sticky;
+                                        top: 25px;
                                         display: block;
                                         width: 100%;
 
@@ -790,6 +792,8 @@ main {
                                         }
 
                                         thead {
+                                            position: sticky;
+                                            top: 50px;
                                             display: block;
                                             width: 100%;
 
@@ -955,11 +959,15 @@ main {
                                 .speaking_result_table_area {
 
                                     .speaking_result_table {
+                                        
                                         .speaking_table_text {
-                                            
                                             &.table_score{
                                                 width: 100%;
                                             }
+                                        }
+
+                                        thead{
+                                            top: 35px;
                                         }
                                     }
                                 }
@@ -1097,6 +1105,16 @@ main {
                                                 }
                                             }
 
+                                        }
+                                    }
+                                }
+
+                                .speaking_result_table_area {
+
+                                    .speaking_result_table {
+    
+                                        thead{
+                                            top: 50px;
                                         }
                                     }
                                 }
