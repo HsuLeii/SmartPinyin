@@ -4312,6 +4312,8 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .page_
 }
 main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .total_score {
   font-weight: bold;
+  font-size: 11px;
+  margin: 0 5px;
 }
 main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
   font-size: 20px;
@@ -4700,6 +4702,7 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .total_score {
     font-weight: bold;
     font-size: 35px;
+    margin: 0 10px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
     font-size: 55px;
@@ -4882,7 +4885,7 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
     padding: 15px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .total_score {
-    font-size: 20px;
+    font-size: 14px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
     font-size: 28px;
@@ -4966,7 +4969,7 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
     width: 435px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .total_score {
-    font-size: 35px;
+    font-size: 22px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
     font-size: 36px;
@@ -4978,6 +4981,9 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
 @media screen and (min-width: 992px) {
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo {
     width: 570px;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .total_score {
+    font-size: 25px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
     font-size: 50px;
@@ -5229,6 +5235,9 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
     display: flex;
     flex-direction: column;
     padding: 52px 10px;
+  }
+  main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .total_score {
+    margin: 0 10px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
     font-size: 55px;
