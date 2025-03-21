@@ -1,0 +1,123 @@
+main {
+    .quiz_page{
+        .test_area {
+            &.questionnaire_area {
+                background-color: $white;
+                border-radius: 10px;
+                padding: 25px 20px;
+                .questionnaire_item_area {
+                    width: 80%;
+                    margin: 30px auto;
+
+                    .questionnaire_logo {
+                        width: 80%;
+                        margin: 30px auto;
+                        max-width: 350px;
+                    }
+
+                    .page_tittle{
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        margin: 40px auto;
+
+                        h4{
+                            color: $bright_main_color;
+                            margin: 5px 0;
+                            
+                            &:nth-child(1){
+                                margin: 5px 10px 5px 0;
+                            }
+                        }
+                    }
+
+                    .page_text{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 90%;
+                        margin: 40px auto;
+                    }
+
+                    .questionnaire_content {
+                        .questionnaire_content_item{
+                            .input_area{
+                                flex-wrap: wrap;
+                                margin: 0 auto;
+                                padding: 40px 0;
+                                border-bottom: 1px solid $main_color;
+    
+                                &:nth-last-child(1){
+                                    border-bottom: 0;
+                                }
+    
+                                .input-group-label{
+                                    width: 100%;
+                                    &.narrate-label{
+                                        color: $bright_main_color;
+                                    }
+                                }
+    
+                                .radio-inline{
+                                    width: 100%;
+                                }
+    
+                                .text-danger{
+                                    margin: 20px 0 0;
+                                    padding: 10px 15px;
+                                }
+    
+                                .input-group-textarea{
+                                    width: 100%;
+                                    height: 150px;
+                                    padding: 10px 15px;
+                                    margin: 10px 15px;
+                                    color: $main_color;
+                                }
+    
+                                textarea{
+                                    &:focus{
+                                        background: lighten($bright_main_color, 35%) !important;
+                                        border-color: $main_color;
+                                        outline: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 768px) {
+    main {
+        .quiz_page{
+            .test_area{
+                &.questionnaire_area {
+                    .questionnaire_item_area {
+                        .questionnaire_content {
+                            .questionnaire_content_item{
+                                .input_area{
+                                    .radio-inline{
+                                        width: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1400px) {}
