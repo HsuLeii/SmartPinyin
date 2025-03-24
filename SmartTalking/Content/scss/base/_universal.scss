@@ -481,7 +481,7 @@ main {
         padding: 20px 40px;
         text-align: center;
         color: $main_color;
-        transform: scale(0.9);
+        transform: scale(0.95);
         width: 100%;
         max-width: 500px;
         overflow: hidden;
@@ -533,8 +533,16 @@ main {
         .select_page_btn {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             z-index: 1;
             color: $white;
+
+            p{
+                margin: 5px 10px;
+                word-break: break-word;
+                text-align: left;
+            }
+
 
             .select_page_btn_icon {
                 position: relative;
@@ -547,6 +555,7 @@ main {
                 background-color: $white;
                 border-radius: 50%;
                 color: $bright_main_color;
+                margin: 5px 10px;
             }
         }
 

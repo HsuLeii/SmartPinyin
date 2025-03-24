@@ -169,6 +169,7 @@ main {
             background-color: $bright_main_color;
             padding: 10px 20px;
             border-radius: 5px;
+            min-width: 180px;
 
             &::before{
                 content: "";
