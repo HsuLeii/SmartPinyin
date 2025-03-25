@@ -1685,6 +1685,7 @@ main .decorate_line {
   position: fixed;
   z-index: 1;
   width: 6%;
+  display: none;
 }
 main .decorate_line.decorate_right {
   top: 0px;
@@ -1740,6 +1741,9 @@ main .decorate_line.decorate_left {
   }
   main .robot_hint .robot_img {
     width: 120px;
+  }
+  main .decorate_line {
+    display: block;
   }
 }
 @media screen and (min-width: 1200px) {

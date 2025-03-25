@@ -210,6 +210,7 @@ main {
         position: fixed;
         z-index: 1;
         width: 6%;
+        display: none;
 
         &.decorate_right{
             top: 0px;
@@ -229,8 +230,6 @@ main {
 @media screen and (min-width: 768px) {
     main {
         .select_page_area {
-
-
             .slogan_area{
                 width: 80%;
     
@@ -296,6 +295,10 @@ main {
             .robot_img{
                 width: 120px;
             }
+        }
+
+        .decorate_line{
+            display: block;
         }
     }
 }
