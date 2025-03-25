@@ -55,11 +55,11 @@
                         <div class="questionnaire_content_item">
                             <div class="input_area">
                                 <label class="input-group-label" for="Qone">
-                                    *1.對話品質 Conversation Quality
+                                    1.AI的表現 AI Performance
                                 </label>
                                 <label class="input-group-label narrate-label" for="Qone">
-                                    您認為AI的對話品質如何？<br/>
-                                    How would you rate the quality of the AI's conversation?
+                                    您覺得AI的表現好不好？<br/>
+                                    How would you rate the AI's performance?
                                 </label>
                                 <label class="radio-inline">
                                     <input id="Qone1" type="radio" value="0" name="Qone">非常好 Excellent
@@ -76,6 +76,9 @@
                                 <label class="radio-inline">
                                     <input id="Qone5" type="radio" value="4" name="Qone">非常不好 Very Poor
                                 </label>
+                                <label class="radio-inline">
+                                    <input id="Qone6" type="radio" value="5" name="Qone">沒使用過此功能 Have not tried this function yet
+                                </label>
     
                                 <span class="text-danger" style="display: none;" data-valmsg-for="" data-valmsg-replace="">
                                     請選擇
@@ -84,26 +87,29 @@
     
                             <div class="input_area">
                                 <label class="input-group-label" for="Qone">
-                                    *2.主題符合度 / Topic Relevance
+                                    2.主題跟內容 / Topic and Content
                                 </label>
                                 <label class="input-group-label narrate-label" for="Qtwo">
-                                    AI的對話是否符合您選擇的主題？<br/>
-                                    Did the AI's conversation match your chosen topic?
+                                    您覺得跟AI聊天的內容跟主題有關嗎？<br/>
+                                    How relevant do you think the content of the chat with AI is to the topic?
                                 </label>
                                 <label class="radio-inline">
-                                    <input id="Qtwo1" type="radio" value="0" name="Qtwo">非常符合 Very Relevant
+                                    <input id="Qtwo1" type="radio" value="0" name="Qtwo">非常有關 Very relevant
                                 </label>
                                 <label class="radio-inline">
-                                    <input id="Qtwo2" type="radio" value="1" name="Qtwo">符合 Relevant
+                                    <input id="Qtwo2" type="radio" value="1" name="Qtwo">有關 Relevant
                                 </label>
                                 <label class="radio-inline">
-                                    <input id="Qtwo3" type="radio" value="2" name="Qtwo">一般  Average
+                                    <input id="Qtwo3" type="radio" value="2" name="Qtwo">還好 Neutral
                                 </label>
                                 <label class="radio-inline">
-                                    <input id="Qtwo4" type="radio" value="3" name="Qtwo">不符合 Not Relevant
+                                    <input id="Qtwo4" type="radio" value="3" name="Qtwo">無關 Irrelevant
                                 </label>
                                 <label class="radio-inline">
-                                    <input id="Qtwo5" type="radio" value="4" name="Qtwo">全不符合 Completely Irrelevant
+                                    <input id="Qtwo5" type="radio" value="4" name="Qtwo">完全無關  Completely irrelevant
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Qtwo6" type="radio" value="6" name="Qtwo">沒使用過此功能 Haven’t tried this function 
                                 </label>
     
                                 <span class="text-danger" style="display: none;" data-valmsg-for="" data-valmsg-replace="">
@@ -113,55 +119,52 @@
     
                             <div class="input_area">
                                 <label class="input-group-label" for="Qthree">
-                                    *3.聲音品質 Sound Quality
+                                    3.聲音 Sound
                                 </label>
                                 <label class="input-group-label narrate-label" for="Qthree">
-                                    您對AI的聲音滿意嗎？<br/>
-                                    Are you satisfied with the AI's voice?
+                                    您覺得AI的聲音自然嗎？<br/>
+                                    How natural do you think the AI’s voice sounds?
                                 </label>
                                 <label class="radio-inline">
-                                    <input id="Qfour1" type="radio" value="0" name="Qfour">非常滿意 Very satisfied
+                                    <input id="Qthree1" type="radio" value="0" name="Qthree">非常自然 Very natural
                                 </label>
                                 <label class="radio-inline">
-                                    <input id="Qfour2" type="radio" value="1" name="Qfour">滿意 Satisfied
+                                    <input id="Qthree2" type="radio" value="1" name="Qthree">自然 Natural
                                 </label>
                                 <label class="radio-inline">
-                                    <input id="Qfour3" type="radio" value="2" name="Qfour">一般  Average
+                                    <input id="Qthree3" type="radio" value="2" name="Qthree">還好 Neutral
                                 </label>
                                 <label class="radio-inline">
-                                    <input id="Qfour4" type="radio" value="3" name="Qfour">不滿意 Unsatisfied
+                                    <input id="Qthree4" type="radio" value="3" name="Qthree">不自然 Unnatural
                                 </label>
                                 <label class="radio-inline">
-                                    <input id="Qfour5" type="radio" value="4" name="Qfour">非常不滿意 Very Unsatisfied
+                                    <input id="Qthree5" type="radio" value="4" name="Qthree">非常不自然 Very unnatural                                    
                                 </label>
-    
-                                <span class="text-danger" style="display: none;" data-valmsg-for="" data-valmsg-replace="">
-                                    請選擇
-                                </span>
-                            </div>
-    
-                            <div class="input_area">
-                                <label class="input-group-label" for="Qfour">
-                                    *4.語速 Speech Rate
+                                <label class="radio-inline">
+                                    <input id="Qthree6" type="radio" value="5" name="Qthree">沒使用過此功能 Haven’t tried this function                                    
                                 </label>
+
                                 <label class="input-group-label narrate-label" for="Qfour">
-                                    您對AI的語速滿意嗎？<br/>
-                                    Are you satisfied with the AI's speech rate
+                                    您覺得課文的聲音自然嗎？ <br/>
+                                    How natural do you think the voices of the characters in the role-playing are?
                                 </label>
                                 <label class="radio-inline">
-                                    <input id="Qfour1" type="radio" value="0" name="Qfour">非常滿意 Very satisfied
+                                    <input id="Qfour1" type="radio" value="0" name="Qfour">非常自然 Very natural
                                 </label>
                                 <label class="radio-inline">
-                                    <input id="Qfour2" type="radio" value="1" name="Qfour">滿意 Satisfied
+                                    <input id="Qfour2" type="radio" value="1" name="Qfour">自然 Natural
                                 </label>
                                 <label class="radio-inline">
-                                    <input id="Qfour3" type="radio" value="2" name="Qfour">一般  Average
+                                    <input id="Qfour3" type="radio" value="2" name="Qfour">還好 Neutral
                                 </label>
                                 <label class="radio-inline">
-                                    <input id="Qfour4" type="radio" value="3" name="Qfour">不滿意 Unsatisfied
+                                    <input id="Qfour4" type="radio" value="3" name="Qfour">不自然 Unnatural
                                 </label>
                                 <label class="radio-inline">
-                                    <input id="Qfour5" type="radio" value="4" name="Qfour">非常不滿意 Very Unsatisfied
+                                    <input id="Qfour5" type="radio" value="4" name="Qfour">非常不自然 Very unnatural                                    
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Qfour6" type="radio" value="5" name="Qfour">沒使用過此功能 Haven’t tried this function                                   
                                 </label>
     
                                 <span class="text-danger" style="display: none;" data-valmsg-for="" data-valmsg-replace="">
@@ -171,26 +174,29 @@
     
                             <div class="input_area">
                                 <label class="input-group-label" for="Qfive">
-                                    *5.整體體驗 / Overall Experience
+                                    4.聲音快慢 Speech Rate
                                 </label>
                                 <label class="input-group-label narrate-label" for="Qfive">
-                                    您對這次對話的整體體驗滿意嗎？<br/>
-                                    Are you satisfied with your overall experience?
+                                    您覺得AI說話說得快不快？<br/>
+                                    How would you rate the AI’s speech rate?
                                 </label>
                                 <label class="radio-inline">
-                                    <input id="Qfive1" type="radio" value="0" name="Qfive">非常滿意 Very satisfied
+                                    <input id="Qfive1" type="radio" value="0" name="Qfive">非常快 Very fast
                                 </label>
                                 <label class="radio-inline">
-                                    <input id="Qfive2" type="radio" value="1" name="Qfive">滿意 Satisfied
+                                    <input id="Qfive2" type="radio" value="1" name="Qfive">有點快 Fast
                                 </label>
                                 <label class="radio-inline">
-                                    <input id="Qfive3" type="radio" value="2" name="Qfive">一般  Average
+                                    <input id="Qfive3" type="radio" value="2" name="Qfive">還好 Neutral
                                 </label>
                                 <label class="radio-inline">
-                                    <input id="Qfive4" type="radio" value="3" name="Qfive">不滿意 Unsatisfied
+                                    <input id="Qfive4" type="radio" value="3" name="Qfive">有點慢 Slow
                                 </label>
                                 <label class="radio-inline">
-                                    <input id="Qfive5" type="radio" value="4" name="Qfive">非常不滿意 Very Unsatisfied
+                                    <input id="Qfive5" type="radio" value="4" name="Qfive">非常慢 Very slow
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Qfive6" type="radio" value="5" name="Qfive">沒使用過此功能 Haven’t tried this function
                                 </label>
     
                                 <span class="text-danger" style="display: none;" data-valmsg-for="" data-valmsg-replace="">
@@ -200,19 +206,106 @@
     
                             <div class="input_area">
                                 <label class="input-group-label" for="Qsix">
-                                    6.建議與意見 Suggestions and Comments
+                                    5.體驗 Chat Experience
                                 </label>
-                                <label class="input-group-label" for="Qsix">
-                                    您有什麼建議或意見可以讓我們改進嗎？<br/>
-                                    Do you have any suggestions or comments for improvement?
+                                <label class="input-group-label narrate-label" for="Qsix">
+                                    您覺得這次跟AI的聊天怎麼樣？<br/>
+                                    How was your overall chat experience with the AI?
                                 </label>
-                                <textarea id="Qsix" class="input-group-textarea" placeholder="您有什麼建議或意見可以讓我們改進嗎？ Do you have any suggestions or comments for improvement?"></textarea> 
+                                <label class="radio-inline">
+                                    <input id="Qsix1" type="radio" value="0" name="Qsix">非常好 Excellent
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Qsix2" type="radio" value="1" name="Qsix">好 Good
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Qsix3" type="radio" value="2" name="Qsix">一般 Average
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Qsix4" type="radio" value="3" name="Qsix">不好 Poor
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Qsix5" type="radio" value="4" name="Qsix">非常不好 Very Poor
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Qsix6" type="radio" value="5" name="Qsix">沒使用過此功能 Haven’t tried this function
+                                </label>
+    
+                                <span class="text-danger" style="display: none;" data-valmsg-for="" data-valmsg-replace="">
+                                    請選擇
+                                </span>
+                            </div>
+
+                            <div class="input_area">
+                                <label class="input-group-label" for="Qseven">
+                                    6.課文朗讀 Text Read-aloud
+                                </label>
+                                <label class="input-group-label narrate-label" for="Qseven">
+                                    您喜歡用角色扮演的方式練習課文朗讀嗎？<br/>
+                                    How do you feel about practicing text read-aloud through role-playing?
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Qseven1" type="radio" value="0" name="Qseven">非常喜歡 I like it very much
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Qseven2" type="radio" value="1" name="Qseven">喜歡 I like it
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Qseven3" type="radio" value="2" name="Qseven">一般 Neutral
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Qseven4" type="radio" value="3" name="Qseven">不喜歡 I dislike it
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Qseven5" type="radio" value="4" name="Qseven">非常不喜歡 I dislike it very much
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Qseven6" type="radio" value="5" name="Qseven">沒使用過此功能 Haven’t tried this function
+                                </label>
+
+                                <label class="input-group-label narrate-label" for="Qeight">
+                                    您覺得這次練習對您的學習有幫助嗎？<br/>
+                                    How helpful do you think this exercise was for your learning?
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Qeight1" type="radio" value="0" name="Qeight">非常有幫助 Very helpful
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Qeight2" type="radio" value="1" name="Qeight">有幫助 Helpful
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Qeight3" type="radio" value="2" name="Qeight">一般 Neutral
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Qeight4" type="radio" value="3" name="Qeight">沒有幫助 Not helpful
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Qeight5" type="radio" value="4" name="Qeight">非常沒有幫助 Very unhelpful
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Qeight6" type="radio" value="5" name="Qeight">沒使用過此功能 Haven’t tried this function
+                                </label>
+    
+                                <span class="text-danger" style="display: none;" data-valmsg-for="" data-valmsg-replace="">
+                                    請選擇
+                                </span>
+                            </div>
+    
+                            <div class="input_area">
+                                <label class="input-group-label" for="Qnine">
+                                    7.建議與意見 Suggestions and Comments
+                                </label>
+                                <label class="input-group-label" for="Qnine">
+                                    請跟我們分享您的建議或想法<br/>
+                                    Please share with us any suggestions or comments.
+                                </label>
+                                <textarea id="Qnine" class="input-group-textarea" placeholder="請跟我們分享您的建議或想法 Please share with us any suggestions or comments."></textarea> 
                             </div>
                         </div>
                     </div>
                 </div>
 
-                    <a href="end.html" class="select_page_link">
+                    <a href="select_page.html" class="select_page_link">
                         <div class="select_page_btn">
                                 <p>完成 Send</p>
         

@@ -50,16 +50,24 @@ main {
                                 &:nth-last-child(1){
                                     border-bottom: 0;
                                 }
+
+                                
     
                                 .input-group-label{
                                     width: 100%;
                                     &.narrate-label{
                                         color: $bright_main_color;
+
+                                        
                                     }
                                 }
     
                                 .radio-inline{
                                     width: 100%;
+
+                                    &~.narrate-label{
+                                        margin: 15px auto 0;
+                                    }
                                 }
     
                                 .text-danger{

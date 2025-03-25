@@ -744,7 +744,7 @@ main .select_page_link {
   color: #fff;
   border-radius: 5px;
   margin: 40px auto;
-  padding: 20px 40px;
+  padding: 15px 40px;
   text-align: center;
   color: #314675;
   transform: scale(0.95);
@@ -1077,9 +1077,6 @@ input:-webkit-autofill:focus {
   main .slide_area .slide_text p {
     font-size: 25px;
   }
-  main .select_page_link {
-    padding: 30px 40px;
-  }
   main .start_page_text .start_page_text_item p .icon_btn {
     width: 34px;
     height: 34px;
@@ -1112,6 +1109,8 @@ input:-webkit-autofill:focus {
 }
 header {
   background-color: #fff;
+  position: relative;
+  z-index: 2;
 }
 header .navbar {
   margin: 0 auto;
@@ -1688,7 +1687,7 @@ main .decorate_line {
   width: 6%;
 }
 main .decorate_line.decorate_right {
-  top: 100px;
+  top: 0px;
   right: 0;
 }
 main .decorate_line.decorate_left {
@@ -5426,11 +5425,13 @@ main .quiz_page .test_area.consent_form_area .consent_input .consent_input_item 
 }
 main .quiz_page .test_area.consent_form_area .button_consent_area {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 40px auto;
 }
 main .quiz_page .test_area.consent_form_area .button_consent_area .select_page_link {
   cursor: pointer;
+  margin: 40px 20px;
 }
 main .quiz_page .test_area.consent_form_area .button_consent_area .select_page_link[disabled] {
   background-color: transparent;
@@ -5528,6 +5529,9 @@ main .quiz_page .test_area.questionnaire_area .questionnaire_item_area .question
 }
 main .quiz_page .test_area.questionnaire_area .questionnaire_item_area .questionnaire_content .questionnaire_content_item .input_area .radio-inline {
   width: 100%;
+}
+main .quiz_page .test_area.questionnaire_area .questionnaire_item_area .questionnaire_content .questionnaire_content_item .input_area .radio-inline ~ .narrate-label {
+  margin: 15px auto 0;
 }
 main .quiz_page .test_area.questionnaire_area .questionnaire_item_area .questionnaire_content .questionnaire_content_item .input_area .text-danger {
   margin: 20px 0 0;

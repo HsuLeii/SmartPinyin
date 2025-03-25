@@ -118,11 +118,13 @@ main {
 
                 .button_consent_area {
                     display: flex;
+                    justify-content: center;
                     flex-wrap: wrap;
                     margin: 40px auto;
 
                     .select_page_link{
                         cursor: pointer;
+                        margin: 40px 20px;
 
                         &[disabled] {
                             background-color: transparent;
