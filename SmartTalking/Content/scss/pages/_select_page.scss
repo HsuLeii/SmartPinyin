@@ -163,9 +163,9 @@ main {
 
         .robot_hint_text{
             position: absolute;
-            left: -15px;
-            bottom: 0;
-            transform: translate(-100%, -50%);
+            left: 0;
+            top: 0;
+            transform: translate(-100px, calc(-100% - 20px));
             background-color: $bright_main_color;
             padding: 10px 20px;
             border-radius: 5px;
@@ -174,18 +174,19 @@ main {
             &::before{
                 content: "";
                 position: absolute;
-                border-width: 10px 0px 10px 10px;
+                border-width: 10px 10px 0px 10px;
                 right: 0;
-                top: 50%;
-                transform: translate(100%, -50%);
+                bottom: 0;
+                transform: translate(-28px, 100%);
                 border-right: 10px solid transparent;
                 border-bottom: 10px solid transparent;
-                border-left: 10px solid $bright_main_color;
-                border-top: 10px solid transparent;
+                border-left: 10px solid transparent;
+                border-top: 10px solid $bright_main_color;
             }
 
             p{
                 color: $white;
+                text-align: center;
             }
 
             .robot_hint_link{
@@ -294,6 +295,14 @@ main {
             .robot_img{
                 width: 120px;
             }
+
+            .robot_hint_text{
+                transform: translate(-60px, calc(-100% - 20px));
+
+                &::before{
+                    transform: translate(-47px, 100%);
+                }
+            }
         }
 
         .decorate_line{
@@ -318,6 +327,14 @@ main {
         .robot_hint{
             .robot_img{
                 width: 180px;
+            }
+
+            .robot_hint_text{
+                transform: translate(0px, calc(-100% - 20px));
+
+                &::before{
+                    transform: translate(-75px, 100%);
+                }
             }
         }
     }
