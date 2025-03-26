@@ -744,7 +744,7 @@ main .select_page_link {
   color: #fff;
   border-radius: 5px;
   margin: 40px auto;
-  padding: 15px 40px;
+  padding: 15px 10px;
   text-align: center;
   color: #314675;
   transform: scale(0.95);
@@ -1732,9 +1732,6 @@ main .decorate_line.decorate_left {
   main .select_page_area .select_page_btn_area .select_page_item .select_page_item_introduce .introduce_text {
     width: 90%;
     margin: 0 auto;
-  }
-  main .select_page_area .select_page_btn_area .select_page_item .select_page_link {
-    padding: 30px 20px;
   }
   main .select_page_area .select_page_btn_area .select_page_item .select_page_link .select_page_btn p {
     font-size: 25px;
