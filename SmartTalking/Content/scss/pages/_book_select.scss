@@ -629,6 +629,10 @@ main {
     right: 10px;
     left: auto;
 
+    &:hover{
+        transform: translate(0, -150%) scale(1.1);
+    }
+
     &::after {
         content: 'next';
     }
@@ -638,6 +642,10 @@ main {
     right: 10px;
     left: auto;
     transform: translate(calc(-100% - 10px), -150%);
+
+    &:hover{
+        transform: translate(calc(-100% - 10px), -150%) scale(1.1);
+    }
 
     &::after {
         content: 'prev';

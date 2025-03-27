@@ -3802,6 +3802,9 @@ main .main_footer .footer_logo .footer_svg_area .footer_svg {
   right: 10px;
   left: auto;
 }
+.swiper-button-next:hover {
+  transform: translate(0, -150%) scale(1.1);
+}
 .swiper-button-next::after {
   content: "next";
 }
@@ -3810,6 +3813,9 @@ main .main_footer .footer_logo .footer_svg_area .footer_svg {
   right: 10px;
   left: auto;
   transform: translate(calc(-100% - 10px), -150%);
+}
+.swiper-button-prev:hover {
+  transform: translate(calc(-100% - 10px), -150%) scale(1.1);
 }
 .swiper-button-prev::after {
   content: "prev";
