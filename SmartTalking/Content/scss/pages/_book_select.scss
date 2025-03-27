@@ -916,13 +916,20 @@ main {
 
     }
 
-    .swiper-button-next,
-    .swiper-button-prev {
+    .swiper-button-next {
     transform: translate(0, -200%);
+
+    &:hover{
+        transform: translate(0, -200%) scale(1.1);
+    }
 }
 
 .swiper-button-prev {
     transform: translate(calc(-100% - 10px), -200%);
+
+    &:hover{
+        transform: translate(calc(-100% - 10px), -200%) scale(1.1);
+    }
 }
 
 }

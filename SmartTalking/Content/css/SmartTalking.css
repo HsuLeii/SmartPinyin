@@ -3911,12 +3911,17 @@ main .main_footer .footer_logo .footer_svg_area .footer_svg {
   main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_item .swiper_area {
     margin: 40px 0 0 0;
   }
-  .swiper-button-next,
-  .swiper-button-prev {
+  .swiper-button-next {
     transform: translate(0, -200%);
+  }
+  .swiper-button-next:hover {
+    transform: translate(0, -200%) scale(1.1);
   }
   .swiper-button-prev {
     transform: translate(calc(-100% - 10px), -200%);
+  }
+  .swiper-button-prev:hover {
+    transform: translate(calc(-100% - 10px), -200%) scale(1.1);
   }
 }
 @media screen and (min-width: 1600px) {
