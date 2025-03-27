@@ -241,6 +241,7 @@
                 <a href="questionnaire.html" class="robot_hint_link">
                     前往問卷
                 </a>
+                <a href="#close_robot" rel="modal:close" class="close_robot">X</a>
             </div>
         </div>
 
@@ -300,6 +301,12 @@
             }
         });
     </script>
+
+<script>
+    $(".close_robot").click(function (e) {
+        $(".robot_hint").fadeOut();
+    });
+</script>
 
 </body>
 
