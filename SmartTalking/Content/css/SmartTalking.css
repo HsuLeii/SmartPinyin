@@ -1694,6 +1694,9 @@ main .robot_hint .robot_hint_text .close_robot {
   border-radius: 50%;
   font-size: 16px;
 }
+main .robot_hint .robot_hint_text .close_robot:hover {
+  transform: translate(50%, -50%) scale(1.1);
+}
 main .decorate_line {
   position: fixed;
   z-index: 1;

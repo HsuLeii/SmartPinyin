@@ -216,6 +216,10 @@ main {
                 color: $white;
                 border-radius: 50%;
                 font-size: 16px;
+
+                &:hover{
+                    transform: translate(50% , -50%) scale(1.1);
+                }
             }
         }
     }
