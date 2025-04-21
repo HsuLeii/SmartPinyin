@@ -143,6 +143,7 @@ footer {
                     justify-content: center;
 
                     .products_logo_content {
+                        width: calc(100% - 100px);
                         .products_logo_item {
                             padding: 10px 10px;
                         }

@@ -193,6 +193,7 @@ main {
                 .test_area_right_nav {
                     width: 90%;
                     margin: 0 auto;
+                    order: 1;
 
                     ul {
                         display: flex;
@@ -201,7 +202,7 @@ main {
                         .test_area_right_nav_item {
                             position: relative;
                             // padding: 5px 10px;
-                            margin: 5px;
+                            margin: 5px 10px 5px 0;
                             border: 1px solid $main_color;
                             border-radius: 5px;
                             background-color: transparent;
@@ -276,6 +277,7 @@ main {
                         flex-direction: column;
                         padding: 20px 0 0;
                         margin: 0 auto;
+                        order: 2;
 
                         .course_name {
                             span {
@@ -479,12 +481,12 @@ main {
 
                     .dialogue_area {
                         padding: 20px 20px 60px;
+                        order: 5;
 
                         .dialogue_block {
                             display: flex;
                             align-items: center;
                             padding: 70px 0 0;
-
                             position: relative;
 
                             .dialogue_avatar {
@@ -518,11 +520,11 @@ main {
                                 }
                             }
 
-                            .dialog_record {
+                            .dialog_play {
                                 position: absolute;
                                 z-index: 1;
                                 bottom: 0;
-                                transform: translate(0, calc(100% + 10px));
+                                transform: translate(0, calc(100% + 8px));
 
                                 .dialog_box_icon {
                                     margin: 0 0px;
@@ -549,13 +551,45 @@ main {
                                         }
                                     }
                                 }
+                            }
 
+                            .dialog_record {
+                                position: absolute;
+                                z-index: 1;
+                                bottom: 0;
+                                transform: translate(0, calc(100% + 8px));
+
+                                .dialog_box_icon {
+                                    margin: 0;
+                                    width: 30px;
+                                    height: 30px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    // background-color: $main-color;
+
+                                    background-color: $main_color_green;
+                                    color: $white;
+                                    border-radius: 50%;
+
+                                    &:hover {
+                                        transform: scale(1.05);
+                                    }
+
+                                    &:disabled{
+                                        background-color: $grey;
+
+                                        &:hover {
+                                            transform: scale(1);
+                                        }
+                                    }
+                                }
                             }
 
                             .dialog_box {
                                 display: flex;
                                 align-items: center;
-                                padding: 12px 10px;
+                                padding: 20px 10px;
                                 border-radius: 5px;
                                 position: relative;
                                 max-width: 60%;
@@ -589,7 +623,7 @@ main {
                                         border: 1px solid $grey;
 
                                         &:hover {
-                                            transform: scale(1);
+                                            transform: translate(0, calc(100% + 10px)) scale(1);
                                         }
                                     }
                                 }
@@ -716,6 +750,11 @@ main {
                                     margin: 0 15px 0 0;
                                 }
 
+                                .dialog_play {
+                                    order: 2;
+                                    left: 145px;
+                                }
+
                                 .dialog_record {
                                     order: 2;
                                     left: 100px;
@@ -769,6 +808,10 @@ main {
                                 .dialogue_avatar {
                                     margin: 0 0 0 15px;
                                     order: 2;
+                                }
+
+                                .dialog_play {
+                                    right: 145px;
                                 }
 
                                 .dialog_record {
@@ -841,6 +884,7 @@ main {
                     }
 
                     .listen_area {
+                        order: 5;
 
                         .listen_area_sentence {
                             margin: 5px auto;
@@ -898,6 +942,7 @@ main {
                         flex-wrap: wrap;
                         width: 90%;
                         margin: 20px auto 0;
+                        order: 6;
 
                         .form-label{
                             order: 2;
@@ -969,26 +1014,27 @@ main {
                 .test_area_right {
                     .test_area_content {
                         padding: 25px 20px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: flex-end;
 
                         .test_area_content_img_area{
                             width: 90%;
-                            position: sticky;
+                            max-width: 150px;
                             top: 20px;
-                            margin: 0 auto;
-                            z-index: 2;
+                            margin: 20px 5% 0;
+                            order: 3;
 
                             .test_area_content_img_area_content{
                                 .test_area_content_img {
                                     img {
-                                        max-width: 150px;
                                         border-radius: 10px;
                                     }
                                 }
     
                                 .progress_area {
                                     width: 100%;
-                                    max-width: 150px;
-                                    margin: 10px 0 20px;
+                                    margin: 10px 0 0;
                                     background-color: $grey;
                                     border-radius: 10px;
                     
@@ -1003,8 +1049,6 @@ main {
                     }
                 }
             }
-
-            
         }
     }
 
@@ -1013,20 +1057,22 @@ main {
         position: relative;
         z-index: 1;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         flex-wrap: wrap;
         margin: 20px auto 0;
+        order: 4;
 
         &.toolbar_area_bottom{
             margin: 35px auto;
+            order: 6;
         }
 
         .btn_icon_area {
             width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 0 auto 20px;
 
             .btn_icon {
                 width: 55px;
@@ -1468,7 +1514,7 @@ main {
     }
 
     .loading_robot{
-        width: 100px;
+        width: 60px;
         margin: 10px;
     }
 
@@ -1724,6 +1770,22 @@ main {
                                     }
                                 }
 
+                                .dialog_play {
+                                    position: relative;
+                                    bottom: auto;
+                                    transform: translate(0, 0);
+                                    margin: 0;
+
+                                    .dialog_box_icon {
+                                        width: 50px;
+                                        height: 50px;
+
+                                        i {
+                                            font-size: 30px;
+                                        }
+                                    }
+                                }
+
                                 .dialog_record {
                                     position: relative;
                                     bottom: auto;
@@ -1741,8 +1803,8 @@ main {
                                 }
 
                                 .dialog_box {
-                                    padding: 15px 20px;
-                                    width: calc(100% - 125px);
+                                    padding: 20px;
+                                    width: calc(100% - 220px);
 
                                     .dialog_box_icon {
                                         width: 50px;
@@ -1807,6 +1869,11 @@ main {
                                         margin: 0 25px 0 0;
                                     }
 
+                                    .dialog_play {
+                                        left: auto;
+                                        order: 3;
+                                    }
+
                                     .dialog_record {
                                         left: auto;
                                     }
@@ -1838,6 +1905,10 @@ main {
                                 &.dialogue_right {
                                     .dialogue_avatar {
                                         margin: 0 0 0 25px;
+                                    }
+
+                                    .dialog_play {
+                                        right: auto;
                                     }
 
                                     .dialog_record {
@@ -1906,17 +1977,9 @@ main {
                     .test_area_right{
                         .test_area_content{
                             .test_area_content_img_area{
-                                .test_area_content_img_area_content{
-                                    .test_area_content_img {
-                                        img {
-                                            max-width: 350px;
-                                        }
-                                    }
-    
-                                    .progress_area {
-                                        max-width: 350px;
-                                    }
-                                }
+                                margin: 20px 5%;
+                                max-width: none;
+                                width: 300px;
                             }
                         }
                     }
@@ -1925,6 +1988,8 @@ main {
         }
 
         .toolbar_area {
+            width: calc(85% - 300px);
+            margin: 0 5% 0 auto;
             // &::before {
             //     transform: translate(-2px, 0);
             //     width: calc(100% + 4px);
@@ -1974,6 +2039,7 @@ main {
             }
 
             &.toolbar_dialogue_area {
+                width: 90%;
                 .dialogue_btn_item {
                     max-width: 450px;
 
@@ -2143,10 +2209,13 @@ main {
                         .test_area_content {
                             display: flex;
                             flex-wrap: wrap;
+                            align-items: flex-start;
 
                             .test_area_content_img_area{
                                 width: calc(25% - 10px);
-                                margin: 0 calc(5% - 33px) 0 33px;
+                                margin: 0 calc(5% - 33px) 35px 33px;
+                                position: sticky;
+                                order: 4;
 
                                 .test_area_content_img_area_content{
                                     position: sticky;
@@ -2167,6 +2236,10 @@ main {
         }
 
         .toolbar_area {
+            width: 90%;
+            order: 3;
+            margin: 0 43px 0 auto;
+
             &.toolbar_area_bottom{
                 width: calc(65% - 10px);
                 margin: 35px 0 35px calc(35% - 43px);
