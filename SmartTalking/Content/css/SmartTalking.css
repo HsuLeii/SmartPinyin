@@ -3120,7 +3120,10 @@ main input[name=playRange0]:before {
     transform: translate(0, 0);
   }
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_icon:hover {
-    transform: scale(1.05);
+    transform: translate(0, 0) scale(1.05);
+  }
+  main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_icon:disabled:hover {
+    transform: translate(0, 0) scale(1);
   }
   main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_icon i {
     font-size: 30px;

@@ -1815,7 +1815,14 @@ main {
                                         transform: translate(0, 0);
 
                                         &:hover {
-                                            transform: scale(1.05);
+                                            transform: translate(0, 0) scale(1.05);
+                                        }
+
+                                        &:disabled{
+    
+                                            &:hover {
+                                                transform: translate(0, 0) scale(1);
+                                            }
                                         }
 
                                         i {
