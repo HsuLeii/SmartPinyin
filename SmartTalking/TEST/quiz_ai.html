@@ -170,6 +170,12 @@
                                             <p>快</p>
                                         </div>
                                     </li>
+
+                                    <li>
+                                        <button class="toolbar_item_btn btn_text">
+                                            <i class="fa-solid fa-eye-slash"></i>
+                                        </button>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -188,6 +194,12 @@
 
                         <div class="dialogue_area">
                             <div class="dialogue_block dialogue_ai dialogue_left">
+                                <div class="toolbar_dialogue_btn">
+                                    <button class="dialogue_block_btn dialogue_block_eye">
+                                        <i class="fa-solid fa-eye-slash"></i>
+                                    </button>
+                                </div>
+                                
                                 <div class="dialogue_avatar">
                                     <img src="../Content/image/photo/avatar/avatar_01.jpg" alt="">
                                     <p class="dialogue_avatar_name">老師</p>
@@ -208,6 +220,11 @@
                                     </div>
                                     <div class="loading_robot">
                                         <img src="../Content/image/apng/robot.png" alt="">
+                                    </div>
+                                    <div class="dialog_box_text dialog_box_ai_text">
+                                        <p>
+                                            文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -428,6 +445,27 @@
                 }else{
                     $(".toolbar_item_container").removeClass("open");
                     $(this).siblings(".toolbar_item_container").addClass("open");
+                }
+            });
+
+            //文字切換
+            $(".btn_text").click(function () {
+                if($(this).children(".fa-solid").hasClass("fa-eye")){
+                    $(this).children(".fa-eye").attr("class","fa-solid fa-eye-slash");
+                    $(".dialog_box_ai_text").removeClass("open");
+                }else{
+                    $(this).children(".fa-eye-slash").attr("class","fa-solid fa-eye");
+                    $(".dialog_box_ai_text").addClass("open");
+                }
+            });
+
+            $(".dialogue_block_eye").click(function () {
+                if($(this).children(".fa-solid").hasClass("fa-eye")){
+                    $(this).children(".fa-eye").attr("class","fa-solid fa-eye-slash");
+                    $(this).parents(".toolbar_dialogue_btn").siblings(".dialog_box").children(".dialog_box_ai_text").removeClass("open");
+                }else{
+                    $(this).children(".fa-eye-slash").attr("class","fa-solid fa-eye");
+                    $(this).parents(".toolbar_dialogue_btn").siblings(".dialog_box").children(".dialog_box_ai_text").addClass("open");
                 }
             });
         });
