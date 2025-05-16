@@ -2213,7 +2213,6 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .d
   justify-content: center;
   align-items: center;
   background-color: #314675;
-  border: 1px solid #314675;
   color: #fff;
   border-radius: 50%;
   position: absolute;
@@ -2222,11 +2221,11 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .d
   transform: translate(0, calc(100% + 10px));
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_icon:hover {
+  background-color: #4dbcbc;
   transform: translate(0, calc(100% + 10px)) scale(1.05);
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_icon:disabled {
   background-color: #ddd;
-  border: 1px solid #ddd;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area .dialogue_block .dialog_box .dialog_box_icon:disabled:hover {
   transform: translate(0, calc(100% + 10px)) scale(1);
@@ -2551,15 +2550,20 @@ main .toolbar_area .btn_icon_area .btn_icon {
   margin: 0 auto;
   border-radius: 50%;
   background-color: #314675;
-  transform: scale(0.95);
 }
 main .toolbar_area .btn_icon_area .btn_icon i {
   color: #fff;
   font-size: 30px;
 }
 main .toolbar_area .btn_icon_area .btn_icon:hover {
-  transform: scale(1);
+  transform: scale(1.05);
   background-color: #4dbcbc;
+}
+main .toolbar_area .btn_icon_area .btn_icon:disabled {
+  background-color: #ddd;
+}
+main .toolbar_area .btn_icon_area .btn_icon:disabled:hover {
+  transform: scale(1);
 }
 main .toolbar_area .btn_icon_area.recording_area {
   display: flex;
