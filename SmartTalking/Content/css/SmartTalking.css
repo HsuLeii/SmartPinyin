@@ -5088,6 +5088,7 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text {
     width: 15%;
+    padding: 15px 5px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_exercise {
     width: 40%;

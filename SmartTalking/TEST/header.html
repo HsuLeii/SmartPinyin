@@ -55,7 +55,7 @@
 
                 <ul class="navbar-nav navbar-nav-language">
                     <li class="nav-item">
-                        <a href="#" class="nav-link nav-course dropdown">語言</a>
+                        <a href="#" class="nav-link nav-language dropdown">語言</a>
                         <div class="dropdown-content">
                             <a class="nav-link" href="javascript:void(0)" onclick="changeLang('zh-TW')">繁體中文</a>
                             <a class="nav-link" href="javascript:void(0)" onclick="changeLang('zh-CN')">简体中文</a>
@@ -90,7 +90,6 @@
             $(".dropdown").removeClass("show");
             $(this).addClass("show");
         }
-
 
         if ($(".nav-textbook").children(".dropdown").hasClass("show")) {
             $(this).parents(".nav-textbook").siblings(".nav-textbook").children(".dropdown").removeClass(
