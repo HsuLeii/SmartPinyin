@@ -84,12 +84,17 @@
     });
 
     $(".dropdown").click(function () {
-        $(".dropdown").removeClass("show");
-        $(this).addClass("show");
+        if ($(this).hasClass("show")) {
+            $(".dropdown").removeClass("show");
+        } else {
+            $(".dropdown").removeClass("show");
+            $(this).addClass("show");
+        }
+
 
         if ($(".nav-textbook").children(".dropdown").hasClass("show")) {
             $(this).parents(".nav-textbook").siblings(".nav-textbook").children(".dropdown").removeClass(
-            "show");
+                "show");
         }
     });
 </script>
