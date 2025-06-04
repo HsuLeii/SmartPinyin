@@ -4,12 +4,13 @@
             <img src="Content/image/logo/logo.svg" alt="SmartTalking">
         </a>
         <div class="header_right">
-            <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+            <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false">
                 <span></span>
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav navbar-nav-menu"></ul>
-                <ul class="navbar-nav navbar-nav-language">
+                <!-- <ul class="navbar-nav navbar-nav-language">
                     <li class="nav-item">
                         <a class="nav-link" href="">繁體中文</a>
                     </li>
@@ -17,6 +18,29 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../login.html">
                             <i class="fa-solid fa-arrow-right-to-bracket"></i> 登入</a>
+                    </li>
+                </ul> -->
+
+                <ul class="navbar-nav navbar-nav-language">
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="changeLang('zh-TW')">繁體中文</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="changeLang('zh-CN')">简体中文</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="changeLang('en')">English</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="changeLang('vi')">Tiếng Việt</a>
+                        <!--越南文-->
+                    </li>
+
+                    <li id="li_login" class="nav-item">
+                        <a class="nav-link" href="login.aspx">
+                            <i class="fa-solid fa-arrow-right-to-bracket"></i>登入
+                            <!--登入-->
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -27,6 +51,6 @@
 <script>
     //選單按鈕
     $(".navbar-toggler").click(function () {
-      $(this).toggleClass("open");
+        $(this).toggleClass("open");
     });
-  </script>
+</script>
