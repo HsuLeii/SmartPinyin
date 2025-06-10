@@ -1072,6 +1072,7 @@ header .navbar .container-fluid .header_right {
   align-items: center;
 }
 header .navbar .container-fluid .header_right .navbar-toggler {
+  display: block;
   position: absolute;
   right: 5%;
   cursor: pointer;
@@ -1140,10 +1141,10 @@ header .navbar .container-fluid .header_right .navbar-collapse {
   flex-grow: initial;
   right: 2.5%;
   border-radius: 15px;
+  border: 1.5px solid #314675;
   background-color: #fff;
   padding: 0 30px;
   box-shadow: 0 2px 6px rgba(85, 43, 141, 0.2509803922);
-  border: 1.5px solid #314675;
 }
 header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-item .nav-link {
   position: relative;
@@ -1226,7 +1227,7 @@ header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-
     width: 250px;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   header .navbar {
     width: 95%;
     padding: 0;
@@ -1234,17 +1235,21 @@ header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-
   header .navbar .container-fluid {
     width: 100%;
     padding: 10px 0;
+    flex-direction: column;
   }
   header .navbar .container-fluid .navbar-brand {
-    width: 230px;
+    width: 250px;
+  }
+  header .navbar .container-fluid .header_right {
+    width: 100%;
   }
   header .navbar .container-fluid .header_right .navbar-toggler {
     display: none;
   }
   header .navbar .container-fluid .header_right .navbar-collapse {
+    width: 100%;
     position: relative;
     right: auto;
-    width: auto;
     display: flex;
     align-items: center;
     flex-basis: auto;
@@ -1265,7 +1270,8 @@ header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-
     position: relative;
   }
   header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-item .nav-link {
-    padding: 5px 15px;
+    padding: 5px 8px;
+    font-size: 15px;
   }
   header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-item .nav-link.active::after {
     top: 100%;
@@ -1286,23 +1292,19 @@ header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-
     padding: 0;
   }
 }
-@media screen and (min-width: 1200px) {
-  header .navbar .container-fluid .navbar-brand {
-    width: 250px;
-  }
-  header .navbar .container-fluid .header_right {
-    width: calc(100% - 280px);
-  }
-  header .navbar .container-fluid .header_right .navbar-collapse {
-    width: 100%;
-  }
-}
 @media screen and (min-width: 1400px) {
   header .navbar .container-fluid .navbar-brand {
     width: 350px;
   }
-  header .navbar .container-fluid .header_right {
-    width: calc(100% - 350px);
+  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-item .nav-link {
+    padding: 5px 10px;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-item .nav-link {
+    padding: 5px 15px;
+    font-size: 20px;
   }
 }
 footer .footer_content {
@@ -1570,9 +1572,6 @@ main .select_page_area .select_page_btn_area .select_page_item .select_page_link
   width: 100%;
   justify-content: space-between;
 }
-main .select_page_area .select_page_btn_area .select_page_item .select_page_link .select_page_btn p {
-  font-size: 21px;
-}
 main .robot_hint {
   position: fixed;
   right: 15px;
@@ -1588,7 +1587,7 @@ main .robot_hint .robot_hint_text {
   top: 0;
   transform: translate(-110px, calc(-100% - 20px));
   background-color: #4dbcbc;
-  padding: 10px 27.2px 10px 20px;
+  padding: 10px;
   border-radius: 5px;
   min-width: 180px;
 }
@@ -1607,6 +1606,9 @@ main .robot_hint .robot_hint_text::before {
 main .robot_hint .robot_hint_text p {
   color: #fff;
   text-align: center;
+}
+main .robot_hint .robot_hint_text p, main .robot_hint .robot_hint_text a {
+  font-size: 16px;
 }
 main .robot_hint .robot_hint_text .robot_hint_link {
   display: flex;
@@ -1688,9 +1690,6 @@ main .decorate_line.decorate_left {
   main .select_page_area .select_page_btn_area .select_page_item .select_page_item_introduce .introduce_text {
     width: 90%;
     margin: 0 auto;
-  }
-  main .select_page_area .select_page_btn_area .select_page_item .select_page_link .select_page_btn p {
-    font-size: 25px;
   }
   main .robot_hint .robot_img {
     width: 120px;
@@ -3625,6 +3624,12 @@ main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item
 main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_marker.eight_swiper_marker::before {
   background-color: #d89cb6;
 }
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area:not([style="display:none"]) {
+  background-color: red;
+}
+main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area:not([style="display:none"]):nth-last-child(1) .book_swiper_marker::before {
+  bottom: 80px;
+}
 main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area:nth-last-child(1) .book_swiper_marker::before {
   bottom: 80px;
 }
@@ -4281,7 +4286,7 @@ main .page .page_container .page_header .page_tittle_area .page_tittle {
   top: 30%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-size: 25px;
+  font-size: 12px;
 }
 main .page .page_container .page_header .page_tittle_area .tittle_bg {
   max-width: 650px;
@@ -4366,7 +4371,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .page_
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 225px;
+  width: 250px;
   margin: 20px auto 40px;
 }
 main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .antenna {
@@ -4414,7 +4419,7 @@ main .page .page_container .page_body .frame_one .frame_two .page_content .page_
   margin: 0 5px;
 }
 main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
   font-weight: bold;
   margin: 0 5px;
@@ -4631,7 +4636,7 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
     top: 30%;
     transform: translate(-50%, -50%);
     color: #fff;
-    font-size: 50px;
+    font-size: 44px;
   }
   main .page .page_container .page_header .page_tittle_area .tittle_bg {
     max-width: 650px;
@@ -4803,7 +4808,7 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
     margin: 0 10px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
-    font-size: 55px;
+    font-size: 54px;
     color: #fff;
     font-weight: bold;
     margin: 0 10px;
@@ -4813,14 +4818,14 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text {
     text-align: center;
-    width: 15%;
+    width: 20%;
     padding: 15px 10px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text .wrong {
     color: #ff0200;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_exercise {
-    width: 40%;
+    width: 30%;
     border: 0px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score {
@@ -4950,6 +4955,11 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
     background-color: #fff;
   }
 }
+@media screen and (min-width: 500px) {
+  main .page .page_container .page_header .page_tittle_area .page_tittle {
+    font-size: 18px;
+  }
+}
 @media screen and (min-width: 576px) {
   main .page .page_container {
     transform: translate(0px, -35px);
@@ -4958,7 +4968,7 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
     transform: translate(0%, 70px);
   }
   main .page .page_container .page_header .page_tittle_area .page_tittle {
-    font-size: 30px;
+    font-size: 21px;
   }
   main .page .page_container .page_header .frame_one,
   main .page .page_container .page_header .frame_two {
@@ -4977,7 +4987,7 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
     margin: 5px 8px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo {
-    width: 300px;
+    width: 366px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content {
     padding: 15px;
@@ -4997,7 +5007,7 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
 }
 @media screen and (min-width: 650px) {
   main .page .page_container .page_header .page_tittle_area .page_tittle {
-    font-size: 40px;
+    font-size: 25px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -5008,7 +5018,7 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
     transform: translate(0%, 100px);
   }
   main .page .page_container .page_header .page_tittle_area .page_tittle {
-    font-size: 50px;
+    font-size: 31px;
   }
   main .page .page_container .page_header .frame_one,
   main .page .page_container .page_header .frame_two {
@@ -5070,7 +5080,7 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
     font-size: 22px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
-    font-size: 36px;
+    font-size: 35px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table thead {
     top: 50px;
@@ -5087,11 +5097,11 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
     font-size: 50px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text {
-    width: 15%;
+    width: 20%;
     padding: 15px 5px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_exercise {
-    width: 40%;
+    width: 30%;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score {
     width: 30%;
@@ -5169,7 +5179,7 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
     top: 30%;
     transform: translate(-50%, -50%);
     color: #fff;
-    font-size: 50px;
+    font-size: 44px;
   }
   main .page .page_container .page_header .page_tittle_area .tittle_bg {
     max-width: 650px;
@@ -5339,7 +5349,7 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
     margin: 0 10px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .page_score_logo .page_score_area .page_score_content p .page_num {
-    font-size: 55px;
+    font-size: 54px;
     color: #fff;
     font-weight: bold;
     margin: 0 10px;
@@ -5349,14 +5359,14 @@ main .page .page_container .page_body .frame_one .frame_two .report_selector_tex
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text {
     text-align: center;
-    width: 15%;
+    width: 20%;
     padding: 15px 10px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text .wrong {
     color: #ff0200;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_exercise {
-    width: 40%;
+    width: 30%;
     border: 0px;
   }
   main .page .page_container .page_body .frame_one .frame_two .page_content .speaking_result_table_area .speaking_result_table .speaking_table_text.table_score {

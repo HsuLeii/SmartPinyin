@@ -43,7 +43,7 @@ main {
                         top: 30%;
                         transform: translate(-50%, -50%);
                         color: $white;
-                        font-size: 25px;
+                        font-size: 12px;
                     }
 
                     .tittle_bg {
@@ -138,7 +138,7 @@ main {
                                 display: flex;
                                 flex-direction: column;
                                 align-items: center;
-                                width: 225px;
+                                width: 250px;
                                 margin: 20px auto 40px;
 
                                 .antenna {
@@ -192,7 +192,7 @@ main {
                                             }
 
                                             .page_num {
-                                                font-size: 20px;
+                                                font-size: 18px;
                                                 color: $white;
                                                 font-weight: bold;
                                                 margin: 0 5px;
@@ -496,7 +496,7 @@ main {
                             top: 30%;
                             transform: translate(-50%, -50%);
                             color: $white;
-                            font-size: 50px;
+                            font-size: 44px;
                         }
 
                         .tittle_bg {
@@ -689,7 +689,7 @@ main {
                                                 }
 
                                                 .page_num {
-                                                    font-size: 55px;
+                                                    font-size: 54px;
                                                     color: $white;
                                                     font-weight: bold;
                                                     margin: 0 10px;
@@ -708,7 +708,7 @@ main {
 
                                         .speaking_table_text {
                                             text-align: center;
-                                            width: 15%;
+                                            width: 20%;
                                             padding: 15px 10px;
 
                                             .wrong {
@@ -716,7 +716,7 @@ main {
                                             }
 
                                             &.table_exercise {
-                                                width: 40%;
+                                                width: 30%;
                                                 border: 0px;
                                             }
 
@@ -894,6 +894,22 @@ main {
     
 }
 
+@media screen and (min-width: 500px){
+    main {
+    .page {
+        .page_container{
+            .page_header{
+                .page_tittle_area{
+                    .page_tittle{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
 @media screen and (min-width: 576px) {
     main {
         .page {
@@ -905,7 +921,7 @@ main {
                         transform: translate(0%, 70px);
 
                         .page_tittle {
-                            font-size: 30px;
+                            font-size: 21px;
                         }
                     }
 
@@ -939,7 +955,7 @@ main {
 
                             .page_content {
                                 .page_score_logo {
-                                    width: 300px;
+                                    width: 366px;
 
                                     .page_score_area {
 
@@ -990,7 +1006,7 @@ main {
                 .page_header {
                     .page_tittle_area {
                         .page_tittle {
-                            font-size: 40px;
+                            font-size: 25px;
                         }
                     }
                 }
@@ -1010,7 +1026,7 @@ main {
                         transform: translate(0%, 100px);
 
                         .page_tittle {
-                            font-size: 50px;
+                            font-size: 31px;
                         }
                     }
 
@@ -1104,7 +1120,7 @@ main {
                                                 }
 
                                                 .page_num {
-                                                    font-size: 36px;
+                                                    font-size: 35px;
                                                 }
                                             }
 
@@ -1167,11 +1183,11 @@ main {
                                     .speaking_result_table {
 
                                         .speaking_table_text {
-                                            width: 15%;
+                                            width: 20%;
                                             padding: 15px 5px;
 
                                             &.table_exercise {
-                                                width: 40%;
+                                                width: 30%;
                                             }
 
                                             &.table_score {
@@ -1280,7 +1296,7 @@ main {
                             top: 30%;
                             transform: translate(-50%, -50%);
                             color: $white;
-                            font-size: 50px;
+                            font-size: 44px;
                         }
 
                         .tittle_bg {
@@ -1471,7 +1487,7 @@ main {
                                                 }
 
                                                 .page_num {
-                                                    font-size: 55px;
+                                                    font-size: 54px;
                                                     color: $white;
                                                     font-weight: bold;
                                                     margin: 0 10px;
@@ -1490,7 +1506,7 @@ main {
 
                                         .speaking_table_text {
                                             text-align: center;
-                                            width: 15%;
+                                            width: 20%;
                                             padding: 15px 10px;
 
                                             .wrong {
@@ -1498,7 +1514,7 @@ main {
                                             }
 
                                             &.table_exercise {
-                                                width: 40%;
+                                                width: 30%;
                                                 border: 0px;
                                             }
 
@@ -1580,7 +1596,6 @@ main {
                                                 }
                                             }
                                         }
-
 
                                     }
                                 }

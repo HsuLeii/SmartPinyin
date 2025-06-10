@@ -26,6 +26,7 @@ header {
                 align-items: center;
 
                 .navbar-toggler {
+                    display: block;
                     position: absolute;
                     right: 5%;
                     cursor: pointer;
@@ -112,10 +113,10 @@ header {
                     flex-grow: initial;
                     right: 2.5%;
                     border-radius: 15px;
+                    border: 1.5px solid $main_color;
                     background-color: $white;
                     padding: 0 30px;
                     box-shadow: 0 2px 6px $main_color_40;
-                    border: 1.5px solid $main_color;
 
                     .navbar-nav {
 
@@ -253,7 +254,23 @@ header {
     }
 }
 
-@media screen and (min-width: 992px) {
+// @media screen and (min-width: 992px) {
+//     header {
+//         .navbar {
+
+//             .container-fluid {
+//                 .header_right {
+
+//                     .navbar-collapse {
+//                         display: none !important;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+@media screen and (min-width: 1200px) {
     header {
         .navbar {
             width: 95%;
@@ -262,20 +279,23 @@ header {
             .container-fluid {
                 width: 100%;
                 padding: 10px 0;
+                flex-direction: column;
 
                 .navbar-brand {
-                    width: 230px;
+                    width: 250px;
                 }
 
                 .header_right {
+                    width: 100%;
                     .navbar-toggler {
                         display: none;
                     }
 
                     .navbar-collapse {
+                        width: 100%;
                         position: relative;
                         right: auto;
-                        width: auto;
+                        // width: auto;
                         display: flex;
                         align-items: center;
                         flex-basis: auto;
@@ -297,7 +317,8 @@ header {
                             .nav-item {
                                 position: relative;
                                 .nav-link {
-                                    padding: 5px 15px;
+                                    padding: 5px 8px;
+                                    font-size: 15px;
 
                                     &.active {
                                         &::after {
@@ -332,26 +353,26 @@ header {
     }
 }
 
-@media screen and (min-width: 1200px) {
-    header {
-        .navbar {
-            .container-fluid {
+// @media screen and (min-width: 1200px) {
+//     header {
+//         .navbar {
+//             .container-fluid {
 
-                .navbar-brand {
-                    width: 250px;
-                }
+//                 .navbar-brand {
+//                     width: 250px;
+//                 }
 
-                .header_right {
-                    width: calc(100% - 280px);
+//                 .header_right {
+//                     width: calc(100% - 280px);
 
-                    .navbar-collapse {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-    }
-}
+//                     .navbar-collapse {
+//                         width: 100%;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 
 @media screen and (min-width: 1400px) {
     header {
@@ -362,7 +383,40 @@ header {
                 }
 
                 .header_right {
-                    width: calc(100% - 350px);
+                    // width: calc(100% - 350px);
+
+                    .navbar-collapse{
+                        .navbar-nav{
+                            .nav-item{
+                                .nav-link{
+                                    padding: 5px 10px;
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    header {
+        .navbar {
+            .container-fluid {
+
+                .header_right {
+                    .navbar-collapse{
+                        .navbar-nav{
+                            .nav-item{
+                                .nav-link{
+                                    padding: 5px 15px;
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

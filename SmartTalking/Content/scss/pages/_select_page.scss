@@ -140,10 +140,7 @@ main {
                     margin: 20px auto;
                     .select_page_btn{
                         width: 100%;
-                        justify-content: space-between;    
-                        p{
-                            font-size: 21px
-                        }
+                        justify-content: space-between;
                     }
                 }
             }
@@ -167,7 +164,7 @@ main {
             top: 0;
             transform: translate(-110px, calc(-100% - 20px));
             background-color: $bright_main_color;
-            padding: 10px calc(16px* 1.7) 10px 20px;
+            padding: 10px;
             border-radius: 5px;
             min-width: 180px;
 
@@ -187,6 +184,10 @@ main {
             p{
                 color: $white;
                 text-align: center;
+            }
+
+            p,a{
+                font-size: 16px;
             }
 
             .robot_hint_link{
@@ -293,14 +294,6 @@ main {
                         .introduce_text{
                             width: 90%;
                             margin: 0 auto;
-                        }
-                    }
-
-                    .select_page_link{
-                        .select_page_btn{
-                            p{
-                                font-size: 25px
-                            }
                         }
                     }
                 }

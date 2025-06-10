@@ -138,6 +138,8 @@ main {
                     background-color: $white;
                     padding: 15px 20px;
 
+                    
+
                     .book_swiper_item_area{
                         display: flex;
                         .book_swiper_marker{
@@ -251,6 +253,17 @@ main {
                             }
                         }
 
+                        &:not([style='display:none']){
+                            background-color: red;
+                            &:nth-last-child(1){
+                            .book_swiper_marker{
+                                &::before{
+                                    bottom: 80px;
+                                }
+                            }
+                        }
+                        }
+
                         &:nth-last-child(1){
                             .book_swiper_marker{
                                 &::before{
@@ -258,6 +271,8 @@ main {
                                 }
                             }
                         }
+
+                        
 
                         .book_swiper_item{
                             position: relative;
