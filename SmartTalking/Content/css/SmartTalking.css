@@ -3544,7 +3544,7 @@ main .quiz_page .test_area .test_area_right .test_area_content {
   border: 0px;
   border-radius: 10px;
   background-color: #fff;
-  padding: 15px 20px;
+  padding: 15px 20px 60px;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area {
   display: flex;
@@ -3623,12 +3623,6 @@ main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item
 }
 main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area .book_swiper_marker.eight_swiper_marker::before {
   background-color: #d89cb6;
-}
-main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area:not([style="display:none"]) {
-  background-color: red;
-}
-main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area:not([style="display:none"]):nth-last-child(1) .book_swiper_marker::before {
-  bottom: 80px;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .book_swiper_item_area:nth-last-child(1) .book_swiper_marker::before {
   bottom: 80px;

@@ -136,12 +136,11 @@ main {
                     border: 0px;
                     border-radius: 10px;
                     background-color: $white;
-                    padding: 15px 20px;
-
-                    
+                    padding: 15px 20px 60px;
 
                     .book_swiper_item_area{
                         display: flex;
+
                         .book_swiper_marker{
                             position: relative;
                             padding: 40px 0 60px;
@@ -253,17 +252,6 @@ main {
                             }
                         }
 
-                        &:not([style='display:none']){
-                            background-color: red;
-                            &:nth-last-child(1){
-                            .book_swiper_marker{
-                                &::before{
-                                    bottom: 80px;
-                                }
-                            }
-                        }
-                        }
-
                         &:nth-last-child(1){
                             .book_swiper_marker{
                                 &::before{
@@ -271,8 +259,6 @@ main {
                                 }
                             }
                         }
-
-                        
 
                         .book_swiper_item{
                             position: relative;
