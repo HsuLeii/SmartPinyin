@@ -1558,8 +1558,20 @@ main {
     }
 
     .loading_robot {
-        width: 60px;
-        margin: 10px;
+        // width: 60px;
+        // margin: 10px;
+        width: 50%;
+        max-width: 190px;
+        position: fixed; /* 固定在視窗，滾動不會移動 */
+        top: 50%; /* 垂直居中 */
+        left: 50%; /* 水平居中 */
+        transform: translate(-50%, -50%); /* 用 transform 將元素中心對齊 */
+        z-index: 9999; /* 保證顯示在最上層 */
+        background-color: rgba(255, 255, 254, 0.8); /* 半透明背景，視需要調整 */
+        padding: 25px; /* 外圍留白，視需要調整 */
+        border-radius: 10px; /* 圓角效果，視需要調整 */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
+        display: none; /* 預設隱藏，必要時顯示 */
     }
 
     /* input range 主體樣式 */

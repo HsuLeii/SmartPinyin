@@ -141,7 +141,7 @@ body {
 }
 
 ::selection {
-  background: #1a263f;
+  background: rgb(26.4186746988, 37.7409638554, 63.0813253012);
   color: #fff;
 }
 
@@ -365,7 +365,7 @@ main .input_area input:read-only.solid_color {
 }
 main .input_area input:read-only.solid_color:hover {
   transform: scale(1.05);
-  background-color: #41aeae;
+  background-color: rgb(65.4959183673, 174.0040816327, 174.0040816327);
 }
 main .input_area .input-group-text {
   position: absolute;
@@ -635,7 +635,7 @@ main .button.solid_color {
 }
 main .button.solid_color:hover {
   transform: scale(1.05);
-  background-color: #41aeae;
+  background-color: rgb(65.4959183673, 174.0040816327, 174.0040816327);
 }
 main .button.line_color {
   color: #314675;
@@ -842,16 +842,16 @@ main .test_area_answer_btn:hover .icon_btn {
   transform: scale(1);
 }
 main .test_area_answer_btn:hover .icon_btn.sound_btn {
-  background-color: #ff5b23;
+  background-color: rgb(255, 91.0384615385, 34.5);
 }
 main .test_area_answer_btn:hover .icon_btn.mic_btn {
-  background-color: #c31157;
+  background-color: rgb(194.5443037975, 16.9556962025, 87.4556962025);
 }
 main .test_area_answer_btn:hover .icon_btn.play_btn {
-  background-color: #e4b40a;
+  background-color: rgb(227.8846153846, 179.8076923077, 9.6153846154);
 }
 main .test_area_answer_btn:hover .icon_btn.next_btn {
-  background-color: #268a8d;
+  background-color: rgb(37.625, 138.25, 140.875);
 }
 main .test_area_answer_btn:focus .icon_btn {
   border: 2px solid #314675;
@@ -2893,8 +2893,18 @@ main .toolbar_area.toolbar_dialogue_area .dialogue_btn_item.dialogue_btn_done bu
   color: #fff;
 }
 main .loading_robot {
-  width: 60px;
-  margin: 10px;
+  width: 50%;
+  max-width: 190px;
+  position: fixed; /* 固定在視窗，滾動不會移動 */
+  top: 50%; /* 垂直居中 */
+  left: 50%; /* 水平居中 */
+  transform: translate(-50%, -50%); /* 用 transform 將元素中心對齊 */
+  z-index: 9999; /* 保證顯示在最上層 */
+  background-color: rgba(255, 255, 254, 0.8); /* 半透明背景，視需要調整 */
+  padding: 25px; /* 外圍留白，視需要調整 */
+  border-radius: 10px; /* 圓角效果，視需要調整 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
+  display: none; /* 預設隱藏，必要時顯示 */
 }
 main input[type=range] {
   -webkit-appearance: none;
@@ -2907,7 +2917,7 @@ main input[type=range] {
   /* input range 進度條樣式 */
 }
 main input[type=range]:focus::-webkit-slider-thumb {
-  background-color: #223051;
+  background-color: rgb(33.9457831325, 48.4939759036, 81.0542168675);
 }
 main input[type=range]::-webkit-slider-thumb {
   width: 15px;
@@ -5642,7 +5652,7 @@ main .quiz_page .test_area.questionnaire_area .questionnaire_item_area .question
   color: #314675;
 }
 main .quiz_page .test_area.questionnaire_area .questionnaire_item_area .questionnaire_content .questionnaire_content_item .input_area textarea:focus {
-  background: #cfeded !important;
+  background: rgb(206.6857142857, 236.8142857143, 236.8142857143) !important;
   border-color: #314675;
   outline: none;
 }
@@ -5651,4 +5661,4 @@ main .quiz_page .test_area.questionnaire_area .questionnaire_item_area .question
   main .quiz_page .test_area.questionnaire_area .questionnaire_item_area .questionnaire_content .questionnaire_content_item .input_area .radio-inline {
     width: auto;
   }
-}/*# sourceMappingURL=SmartTalking.css.map */
+}
