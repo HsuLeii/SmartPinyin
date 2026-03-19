@@ -747,17 +747,12 @@ main .select_page_link .select_page_btn .select_page_btn_icon {
 main .select_page_link:hover, main .select_page_link:active {
   transform: scale(1);
 }
-main .select_page_link:hover .select_page_btn, main .select_page_link:active .select_page_btn {
-  color: #4dbcbc;
-}
 main .select_page_link:hover:before, main .select_page_link:active:before {
   -webkit-transform-origin: bottom center;
   transform-origin: bottom center;
   scale: 1 1;
 }
 main .select_page_link:hover .select_page_btn .select_page_btn_icon, main .select_page_link:active .select_page_btn .select_page_btn_icon {
-  background-color: transparent;
-  color: #4dbcbc;
   border: 1px solid #4dbcbc;
   transition: 0.3s;
 }
@@ -1729,9 +1724,6 @@ main .decorate_line.decorate_left {
 }
 main {
   position: relative;
-  /* input range 主體樣式 */
-  /* input range 播放樣式 */
-  /* 播放完畢時，100%進度顯示 */
 }
 main .quiz_book_bg {
   position: fixed;
@@ -1868,9 +1860,27 @@ main .quiz_page .test_area .test_area_right .test_area_right_tittle p {
   color: #314675;
 }
 main .quiz_page .test_area .test_area_right .test_area_right_nav {
+  position: relative;
   width: 90%;
   margin: 0 auto;
+  padding: 10px;
   order: 1;
+  border: 2px solid #4dbcbc;
+  border-left: 10px solid #4dbcbc;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+main .quiz_page .test_area .test_area_right .test_area_right_nav::after {
+  content: "";
+  position: absolute;
+  border-width: 8px 0px 8px 0px;
+  right: 0;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  border-right: 8px solid #4dbcbc;
+  border-bottom: 8px solid #4dbcbc;
+  border-left: 8px solid transparent;
+  border-top: 8px solid transparent;
 }
 main .quiz_page .test_area .test_area_right .test_area_right_nav ul {
   display: flex;
@@ -1878,26 +1888,26 @@ main .quiz_page .test_area .test_area_right .test_area_right_nav ul {
 }
 main .quiz_page .test_area .test_area_right .test_area_right_nav ul .test_area_right_nav_item {
   position: relative;
-  margin: 5px 10px 5px 0;
-  border: 1px solid #314675;
+  margin: 5px;
+  border: 1px solid #4dbcbc;
   border-radius: 5px;
   background-color: transparent;
 }
 main .quiz_page .test_area .test_area_right .test_area_right_nav ul .test_area_right_nav_item a {
   display: block;
   padding: 10px 10px;
-  color: #314675;
+  color: #4dbcbc;
   background: linear-gradient(currentcolor, currentcolor) 100% 100%/0 1px no-repeat;
   transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
 }
 main .quiz_page .test_area .test_area_right .test_area_right_nav ul .test_area_right_nav_item:hover {
-  background-color: #314675;
+  background-color: #4dbcbc;
 }
 main .quiz_page .test_area .test_area_right .test_area_right_nav ul .test_area_right_nav_item:hover a {
   color: #fff;
 }
 main .quiz_page .test_area .test_area_right .test_area_right_nav ul .test_area_right_nav_item.active {
-  background-color: #314675;
+  background-color: #4dbcbc;
 }
 main .quiz_page .test_area .test_area_right .test_area_right_nav ul .test_area_right_nav_item.active a {
   color: #fff;
@@ -1941,8 +1951,6 @@ main .quiz_page .test_area .test_area_right .test_area_content .course_area .cou
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_choose_caption {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 90%;
   margin: 0 auto;
   padding: 20px 0;
 }
@@ -2010,12 +2018,14 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_choose_
   border-top: 10px solid transparent;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .input_area_form {
-  width: 90%;
   margin: 0 auto;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .input_area_form .input_area {
   margin: 40px auto;
+  padding: 10px 5px;
   flex-wrap: wrap;
+  background-color: rgb(254.790513834, 243.4782608696, 202.209486166);
+  border-top: 2px dashed #fcc601;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .input_area_form .input_area.input_area_figure {
   flex-wrap: wrap;
@@ -2078,9 +2088,10 @@ main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area,
 main .quiz_page .test_area .test_area_right .test_area_content .listen_area {
   width: 90%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 40px;
   border: 1px solid #314675;
   border-radius: 5px;
+  border: 20px solid #fcc601;
 }
 main .quiz_page .test_area .test_area_right .test_area_content .dialogue_area {
   padding: 20px 20px 60px;
@@ -2906,6 +2917,9 @@ main .loading_robot {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
   display: none; /* 預設隱藏，必要時顯示 */
 }
+main {
+  /* input range 主體樣式 */
+}
 main input[type=range] {
   -webkit-appearance: none;
   width: 100%;
@@ -2913,11 +2927,12 @@ main input[type=range] {
   border-radius: 10px;
   cursor: pointer;
   /* input range 原點focus */
-  /* input range 原點樣式 */
-  /* input range 進度條樣式 */
 }
 main input[type=range]:focus::-webkit-slider-thumb {
   background-color: rgb(33.9457831325, 48.4939759036, 81.0542168675);
+}
+main input[type=range] {
+  /* input range 原點樣式 */
 }
 main input[type=range]::-webkit-slider-thumb {
   width: 15px;
@@ -2932,10 +2947,16 @@ main input[type=range]::-webkit-slider-thumb {
   transform: translate(0%, -50%);
   top: 50%;
 }
+main input[type=range] {
+  /* input range 進度條樣式 */
+}
 main input[type=range]::-webkit-slider-runnable-track {
   background-color: rgba(180, 180, 180, 0.5568627451);
   height: 5px;
   border-radius: 10px;
+}
+main {
+  /* input range 播放樣式 */
 }
 main input[name=playRange]:before {
   position: absolute;
@@ -2944,6 +2965,9 @@ main input[name=playRange]:before {
   height: 100%;
   background-color: #314675;
   border-radius: 10px;
+}
+main {
+  /* 播放完畢時，100%進度顯示 */
 }
 main input[name=playRange0]:before {
   position: absolute;
@@ -5462,12 +5486,12 @@ main .quiz_page .test_area.consent_form_area .consent_area .page_tittle {
   flex-wrap: wrap;
   margin: 40px auto;
 }
+main .quiz_page .test_area.consent_form_area .consent_area .page_tittle h4:nth-child(1) {
+  margin: 5px 10px 5px 0;
+}
 main .quiz_page .test_area.consent_form_area .consent_area .page_tittle h4 {
   color: #4dbcbc;
   margin: 5px 0;
-}
-main .quiz_page .test_area.consent_form_area .consent_area .page_tittle h4:nth-child(1) {
-  margin: 5px 10px 5px 0;
 }
 main .quiz_page .test_area.consent_form_area .consent_area .consent_content {
   max-height: calc(80vh - 65px - 90px - 55px - 45px);

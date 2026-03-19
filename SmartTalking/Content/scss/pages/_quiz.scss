@@ -191,9 +191,28 @@ main {
                 }
 
                 .test_area_right_nav {
+                    position: relative;
                     width: 90%;
                     margin: 0 auto;
+                    padding: 10px;
                     order: 1;
+                    border: 2px solid $bright_main_color;
+                    border-left: 10px solid $bright_main_color;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        border-width: 8px 0px 8px 0px;
+                        right: 0;
+                        bottom: 0;
+                        transform: translate(-50%, -50%);
+                        border-right: 8px solid #4dbcbc;
+                        border-bottom: 8px solid #4dbcbc;
+                        border-left: 8px solid transparent;
+                        border-top: 8px solid transparent;
+                    }
 
                     ul {
                         display: flex;
@@ -202,15 +221,15 @@ main {
                         .test_area_right_nav_item {
                             position: relative;
                             // padding: 5px 10px;
-                            margin: 5px 10px 5px 0;
-                            border: 1px solid $main_color;
+                            margin: 5px;
+                            border: 1px solid $bright_main_color;
                             border-radius: 5px;
                             background-color: transparent;
 
                             a {
                                 display: block;
                                 padding: 10px 10px;
-                                color: $main_color;
+                                color: $bright_main_color;
                                 background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
                                 transition: background-size var(--transition-duration) var(--transition-timing-function) 0s;
 
@@ -237,7 +256,7 @@ main {
                             // }
 
                             &:hover {
-                                background-color: $main_color;
+                                background-color: $bright_main_color;
 
                                 a {
                                     color: $white;
@@ -245,7 +264,7 @@ main {
                             }
 
                             &.active {
-                                background-color: $main_color;
+                                background-color: $bright_main_color;
 
                                 a {
                                     color: $white;
@@ -302,8 +321,6 @@ main {
                     .dialogue_choose_caption {
                         display: flex;
                         align-items: center;
-                        justify-content: center;
-                        width: 90%;
                         margin: 0 auto;
                         padding: 20px 0;
 
@@ -379,12 +396,14 @@ main {
                     }
 
                     .input_area_form {
-                        width: 90%;
                         margin: 0 auto;
 
                         .input_area {
                             margin: 40px auto;
+                            padding: 10px 5px;
                             flex-wrap: wrap;
+                            background-color: lighten($main_color_yellow, 40%);
+                            border-top: 2px dashed $main_color_yellow;
 
                             &.input_area_figure {
                                 flex-wrap: wrap;
@@ -474,9 +493,10 @@ main {
                     .listen_area {
                         width: 90%;
                         margin: 0 auto;
-                        padding: 20px;
+                        padding: 20px 40px;
                         border: 1px solid $main_color;
                         border-radius: 5px;
+                        border: 20px solid $main_color_yellow;
                     }
 
                     .dialogue_area {
