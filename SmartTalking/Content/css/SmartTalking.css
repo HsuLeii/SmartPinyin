@@ -1231,10 +1231,15 @@ header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-
   header .navbar .container-fluid {
     width: 100%;
     padding: 10px 0;
-    flex-direction: column;
+    position: relative;
   }
   header .navbar .container-fluid .navbar-brand {
     width: 250px;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
   header .navbar .container-fluid .header_right {
     width: 100%;
@@ -1252,15 +1257,38 @@ header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-
     padding: 0;
     box-shadow: none;
     border: 0;
+    flex-direction: column;
+    align-items: flex-end;
   }
   header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav {
     flex-direction: row;
   }
   header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-menu {
     margin: 0 auto;
+    order: 2;
   }
   header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language {
     margin: 0;
+    order: 1;
+  }
+  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .nav-link.nav-language {
+    background-color: #fcc601;
+    margin: 0;
+    padding: 20px 15px;
+    color: #fff;
+  }
+  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language #li_login {
+    background-color: #314675;
+  }
+  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language #li_login a {
+    margin: 0;
+    padding: 20px 15px;
+    color: #fff;
   }
   header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-item {
     position: relative;

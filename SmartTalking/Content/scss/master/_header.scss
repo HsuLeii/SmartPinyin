@@ -279,10 +279,16 @@ header {
             .container-fluid {
                 width: 100%;
                 padding: 10px 0;
-                flex-direction: column;
+                // flex-direction: column;
+                position: relative;
 
                 .navbar-brand {
                     width: 250px;
+                    position: absolute;
+                    z-index: 1;
+                    top: 10px;
+                    left: 50%;
+                    transform: translate(-50% , 0);
                 }
 
                 .header_right {
@@ -302,16 +308,46 @@ header {
                         padding: 0;
                         box-shadow: none;
                         border: 0;
+                        flex-direction: column;
+                        align-items: flex-end;
 
                         .navbar-nav {
                             flex-direction: row;
 
                             &.navbar-nav-menu {
                                 margin: 0 auto;
+                                order: 2;
                             }
 
                             &.navbar-nav-language {
                                 margin: 0;
+                                order: 1;
+                                
+
+                                .nav-item{
+                                    .nav-link{
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+
+                                        &.nav-language{
+                                            background-color: $main_color_yellow;
+                                            margin: 0;
+                                            padding: 20px 15px;
+                                            color: $white;
+                                        }
+                                    }
+                                }
+
+                                #li_login{
+                                    background-color: $main-color;
+                                    
+                                    a{
+                                        margin: 0;
+                                        padding: 20px 15px;
+                                        color: $white;
+                                    }
+                                }
                             }
 
                             .nav-item {
