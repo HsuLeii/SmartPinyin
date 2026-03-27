@@ -2395,13 +2395,16 @@ main {
             }
 
             &.toolbar_area_bottom {
-                width: 65%;
+                width: calc(70% - 33px);
                 margin: 35px 33px 0px auto;
+                justify-content: flex-start;
             }
 
             .btn_icon_area {
                 width: auto;
-                margin: 0 auto;
+                margin: 0 0 0 50%;
+                transform: translate(-50%, 0px);
+                // width: 100%;
                 // position: absolute;
                 // left: 50%;
                 // top: 50%;

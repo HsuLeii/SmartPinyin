@@ -3527,12 +3527,14 @@ main input[name=playRange0]:before {
     margin: 0 0px 20px auto;
   }
   main .toolbar_area.toolbar_area_bottom {
-    width: 65%;
+    width: calc(70% - 33px);
     margin: 35px 33px 0px auto;
+    justify-content: flex-start;
   }
   main .toolbar_area .btn_icon_area {
     width: auto;
-    margin: 0 auto;
+    margin: 0 0 0 50%;
+    transform: translate(-50%, 0px);
   }
   main .toolbar_area .btn_finish_area {
     margin: 0 0 0 auto;
