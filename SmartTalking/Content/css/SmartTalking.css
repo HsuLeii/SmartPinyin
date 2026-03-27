@@ -1134,6 +1134,7 @@ header .navbar .container-fluid .header_right .navbar-collapse {
   position: absolute;
   top: calc(100% + 20px);
   width: 95%;
+  max-width: 650px;
   flex-grow: initial;
   right: 2.5%;
   border-radius: 15px;
@@ -1141,6 +1142,77 @@ header .navbar .container-fluid .header_right .navbar-collapse {
   background-color: #fff;
   padding: 0 30px;
   box-shadow: 0 2px 6px rgba(85, 43, 141, 0.2509803922);
+}
+header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language {
+  margin: 0;
+}
+header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item {
+  z-index: 1;
+  margin: 0 0 22px;
+}
+header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .nav-link {
+  position: relative;
+  background: none;
+  overflow: hidden;
+}
+header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .nav-link.nav-language {
+  margin: 0;
+  padding: 20px 15px;
+  color: #fff;
+}
+header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .nav-link.nav-language::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+  background-color: #fcc601;
+}
+header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+  transform: translateX(-100%);
+  background-color: #4dbcbc;
+  transition: 0.3s ease-out;
+}
+header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .nav-link:hover::before {
+  transform: translateX(0px);
+}
+header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .nav-link:hover::after {
+  z-index: -2;
+}
+header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .dropdown-content .nav-link {
+  background: linear-gradient(currentcolor, currentcolor) 100% 100%/0 1px no-repeat;
+}
+header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .dropdown-content .nav-link::before {
+  background-color: transparent;
+}
+header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .dropdown-content .nav-link:hover {
+  color: #4dbcbc;
+  background-position: 0 100%;
+  background-size: 100% 1px;
+}
+header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language #li_login a {
+  margin: 0;
+  padding: 20px 15px;
+  color: #fff;
+}
+header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language #li_login a::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: -2;
+  background-color: #314675;
 }
 header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-item .nav-link {
   position: relative;
@@ -1189,6 +1261,9 @@ header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-
 header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-item .dropdown-content {
   display: none;
   border-radius: 10px;
+  border: 10px solid #fcc601;
+  padding: 5px 15px;
+  margin: 10px auto;
 }
 header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-item .dropdown-content .nav-item.dropdown {
   padding: 0 10px;
@@ -1249,6 +1324,7 @@ header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-
   }
   header .navbar .container-fluid .header_right .navbar-collapse {
     width: 100%;
+    max-width: none;
     position: relative;
     right: auto;
     display: flex;
@@ -1271,24 +1347,75 @@ header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-
     margin: 0;
     order: 1;
   }
+  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item {
+    z-index: 1;
+  }
   header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .nav-link {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: none;
+    overflow: hidden;
   }
   header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .nav-link.nav-language {
-    background-color: #fcc601;
     margin: 0;
     padding: 20px 15px;
     color: #fff;
   }
-  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language #li_login {
-    background-color: #314675;
+  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .nav-link.nav-language::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: -1;
+    background-color: #fcc601;
+  }
+  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .nav-link::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: -1;
+    transform: translateX(-100%);
+    background-color: #4dbcbc;
+    transition: 0.3s ease-out;
+  }
+  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .nav-link:hover::before {
+    transform: translateX(0px);
+  }
+  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .nav-link:hover::after {
+    z-index: -2;
+  }
+  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .dropdown-content .nav-link {
+    background: linear-gradient(currentcolor, currentcolor) 100% 100%/0 1px no-repeat;
+  }
+  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .dropdown-content .nav-link::before {
+    background-color: transparent;
+  }
+  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .dropdown-content .nav-link:hover {
+    color: #4dbcbc;
+    background-position: 0 100%;
+    background-size: 100% 1px;
   }
   header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language #li_login a {
     margin: 0;
     padding: 20px 15px;
     color: #fff;
+  }
+  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language #li_login a::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: -2;
+    background-color: #314675;
   }
   header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-item {
     position: relative;
