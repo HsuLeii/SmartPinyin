@@ -1157,7 +1157,7 @@ main {
             display: flex;
             justify-content: center;
             flex-direction: column;
-            margin: 0 auto 20px;
+            // margin: 0 auto 20px;
 
             .btn_icon {
                 width: 55px;
@@ -1207,6 +1207,7 @@ main {
             border: 1px solid $main_color;
             border-radius: 5px;
             padding: 5px 10px;
+            margin: 20px auto 0;
 
             .btn_finish_icon {
                 padding: 5px 10px;
@@ -1369,7 +1370,7 @@ main {
             ul {
                 width: 100%;
                 display: flex;
-                justify-content: space-between;
+                justify-content: flex-end;
 
                 li {
                     position: relative;
@@ -2401,10 +2402,10 @@ main {
             .btn_icon_area {
                 width: auto;
                 margin: 0 auto;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
+                // position: absolute;
+                // left: 50%;
+                // top: 50%;
+                // transform: translate(-50%, -50%);
             }
 
             .btn_finish_area {

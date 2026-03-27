@@ -1344,78 +1344,15 @@ header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-
     order: 2;
   }
   header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language {
-    margin: 0;
     order: 1;
   }
   header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item {
-    z-index: 1;
+    margin: 0;
   }
   header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .nav-link {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: none;
-    overflow: hidden;
-  }
-  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .nav-link.nav-language {
-    margin: 0;
-    padding: 20px 15px;
-    color: #fff;
-  }
-  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .nav-link.nav-language::after {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    z-index: -1;
-    background-color: #fcc601;
-  }
-  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .nav-link::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    z-index: -1;
-    transform: translateX(-100%);
-    background-color: #4dbcbc;
-    transition: 0.3s ease-out;
-  }
-  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .nav-link:hover::before {
-    transform: translateX(0px);
-  }
-  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .nav-link:hover::after {
-    z-index: -2;
-  }
-  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .dropdown-content .nav-link {
-    background: linear-gradient(currentcolor, currentcolor) 100% 100%/0 1px no-repeat;
-  }
-  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .dropdown-content .nav-link::before {
-    background-color: transparent;
-  }
-  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language .nav-item .dropdown-content .nav-link:hover {
-    color: #4dbcbc;
-    background-position: 0 100%;
-    background-size: 100% 1px;
-  }
-  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language #li_login a {
-    margin: 0;
-    padding: 20px 15px;
-    color: #fff;
-  }
-  header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav.navbar-nav-language #li_login a::after {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    z-index: -2;
-    background-color: #314675;
   }
   header .navbar .container-fluid .header_right .navbar-collapse .navbar-nav .nav-item {
     position: relative;
@@ -2732,7 +2669,6 @@ main .toolbar_area .btn_icon_area {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 0 auto 20px;
 }
 main .toolbar_area .btn_icon_area .btn_icon {
   width: 55px;
@@ -2774,6 +2710,7 @@ main .toolbar_area .btn_finish_area {
   border: 1px solid #314675;
   border-radius: 5px;
   padding: 5px 10px;
+  margin: 20px auto 0;
 }
 main .toolbar_area .btn_finish_area .btn_finish_icon {
   padding: 5px 10px;
@@ -2909,7 +2846,7 @@ main .toolbar_area .toolbar_item .toolbar_item_btn .speak_menu_container::before
 main .toolbar_area .toolbar_item ul {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 main .toolbar_area .toolbar_item ul li {
   position: relative;
@@ -3596,10 +3533,6 @@ main input[name=playRange0]:before {
   main .toolbar_area .btn_icon_area {
     width: auto;
     margin: 0 auto;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
   }
   main .toolbar_area .btn_finish_area {
     margin: 0 0 0 auto;

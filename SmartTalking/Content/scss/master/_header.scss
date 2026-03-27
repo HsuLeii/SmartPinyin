@@ -295,7 +295,6 @@ header {
                 }
             }
 
-
         }
     }
 }
@@ -384,6 +383,7 @@ header {
 
                 .header_right {
                     width: 100%;
+
                     .navbar-toggler {
                         display: none;
                     }
@@ -412,95 +412,15 @@ header {
                             }
 
                             &.navbar-nav-language {
-                                margin: 0;
                                 order: 1;
 
                                 .nav-item{
-                                    z-index: 1;
+                                    margin: 0;
 
                                     .nav-link{
-                                        position: relative;
                                         display: flex;
                                         flex-direction: column;
                                         align-items: center;
-                                        background: none;
-                                        overflow: hidden;
-
-                                        &.nav-language{
-                                            margin: 0;
-                                            padding: 20px 15px;
-                                            color: $white;
-
-                                            &::after{
-                                            content: "";
-                                            position: absolute;
-                                            top: 0px;
-                                            left: 0px;
-                                            bottom: 0px;
-                                            right: 0px;
-                                            z-index: -1;
-                                            background-color: $main_color_yellow;
-                                        }
-                                        }
-
-                                        &::before{
-                                            content: "";
-                                            position: absolute;
-                                            top: 0px;
-                                            left: 0px;
-                                            bottom: 0px;
-                                            right: 0px;
-                                            z-index: -1;
-                                            transform: translateX(-100%);
-                                            background-color: $bright_main_color;
-                                            transition: 0.3s ease-out;
-                                        }
-
-                                        &:hover{
-                                            &::before{
-                                                transform: translateX(0px);
-                                            }
-
-                                            &::after{
-                                                z-index: -2;
-                                            }
-                                        }
-                                    }
-
-                                    .dropdown-content{
-                                        .nav-link{
-                                            background: linear-gradient(currentcolor, currentcolor) 100% 100% / 0 1px no-repeat;
-                                            
-                                            &::before{
-                                                background-color: transparent;
-                                            }
-
-                                            &:hover {
-                                                color: $bright_main_color;
-                                                background-position: 0 100%;
-                                                background-size: 100% 1px;
-                                            }
-                                        }
-                                    }
-                                }
-
-                                #li_login{
-
-                                    a{
-                                        margin: 0;
-                                        padding: 20px 15px;
-                                        color: $white;
-
-                                        &::after{
-                                            content: "";
-                                            position: absolute;
-                                            top: 0px;
-                                            left: 0px;
-                                            bottom: 0px;
-                                            right: 0px;
-                                            z-index: -2;
-                                            background-color: $main-color;
-                                        }
                                     }
                                 }
                             }
